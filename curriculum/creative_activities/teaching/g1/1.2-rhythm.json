@@ -1,0 +1,184 @@
+{
+ "sub_strand": "CREA.G1.CREATI.RHYTHM",
+ "title": "Rhythm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk to a drum beat first. Body percussion: clap, tap knees, snap, stamp, one at a time.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.RHYTHM.BEAT",
+   "key_step": "The child names things that keep a steady pulse and tells a steady beat from uneven sounds.",
+   "floor": {
+    "prerequisite": "Claps along with a song (pre-primary).",
+    "question": "Clap along with me.",
+    "answer": "claps with the group"
+   },
+   "representations": [
+    "a drum",
+    "a clock that ticks",
+    "walking"
+   ],
+   "steps": [
+    "Listen to the sound.",
+    "Clap or walk with it.",
+    "Is it even? Then it is a steady beat."
+   ],
+   "contexts": [
+    "marching at assembly",
+    "a clapping song in class"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Walk and count 1, 2, 1, 2 with the drum."
+    },
+    {
+     "beat": "predict",
+     "do": "Does a clock tick like this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Yes: a clock keeps a steady beat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_RAIN",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does rain on the roof keep a steady beat?",
+     "repair": "Clap with a clock tick, then try to clap with the rain."
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_FASTER",
+     "listen_for": [
+      "yes, faster and faster"
+     ],
+     "ask": "When you keep a steady beat, does it get faster?",
+     "repair": "Walk to the drum: do your feet speed up?"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_TALK",
+     "listen_for": [
+      "people talking"
+     ],
+     "ask": "Which keeps a steady beat: a ticking clock or people talking?",
+     "repair": "Clap with talking, then with a clock."
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_LOUD",
+     "listen_for": [
+      "no, it must be loud"
+     ],
+     "ask": "Can a soft sound keep a steady beat?",
+     "repair": "Tap a steady beat softly with one finger."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does a ticking clock keep a steady beat?",
+     "answer": "yes",
+     "shows": "beat"
+    },
+    {
+     "question": "Does rain keep a steady beat?",
+     "answer": "no",
+     "shows": "uneven"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+   "key_step": "The child names clapping, tapping, snapping and stamping and the body parts that make them, and keeps the beat of a song with them.",
+   "floor": {
+    "prerequisite": "Names body parts (pre-primary).",
+    "question": "Touch your knees.",
+    "answer": "touches knees"
+   },
+   "representations": [
+    "the body",
+    "picture cards of each sound",
+    "a song"
+   ],
+   "steps": [
+    "Name the sound.",
+    "Name the body part.",
+    "Play it on the beat of the song."
+   ],
+   "contexts": [
+    "a song at assembly",
+    "a class game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Snap your fingers.",
+     "say": "What is this called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: snapping."
+    },
+    {
+     "beat": "predict",
+     "do": "What do we stamp with?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Our feet."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_SNAP_CLAP",
+     "listen_for": [
+      "clapping"
+     ],
+     "ask": "You rub your thumb and finger to make a click. What is that?",
+     "repair": "Clap, then snap, and look at the hands."
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_STAMP_HANDS",
+     "listen_for": [
+      "hands"
+     ],
+     "ask": "Which body part do you stamp with?",
+     "repair": "Stamp your feet while saying \"stamp\"."
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_INSTRUMENT",
+     "listen_for": [
+      "no, you need a drum"
+     ],
+     "ask": "Can you play percussion with only your body?",
+     "repair": "Play a song with claps and stamps only."
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_OFF_BEAT",
+     "listen_for": [
+      "whenever I want"
+     ],
+     "ask": "When you clap along to a song, when do you clap?",
+     "repair": "Walk and clap together with the song."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two body percussion sounds.",
+     "answer": "any two of: clap, tap, snap, stamp",
+     "shows": "sounds"
+    },
+    {
+     "question": "Which body part do you stamp with?",
+     "answer": "feet",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

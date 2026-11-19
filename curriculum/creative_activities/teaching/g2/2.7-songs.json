@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.SONGS",
+ "title": "Songs",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Choose songs on topics from the term (hygiene, safety). Show gestures and faces that match the words.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+   "key_step": "The child says a topical song is about one topic and says its message in their own words.",
+   "floor": {
+    "prerequisite": "Says the message of an action song (Grade 1).",
+    "question": "What does an action song about brushing teeth tell us?",
+    "answer": "brush your teeth"
+   },
+   "representations": [
+    "topical songs",
+    "topic picture cards",
+    "the words on a chart"
+   ],
+   "steps": [
+    "Sing or listen to the song.",
+    "Ask: what is it about?",
+    "Ask: what does it want us to do?"
+   ],
+   "contexts": [
+    "a hand-washing song",
+    "a road safety song at assembly"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing a road safety song.",
+     "say": "What is it about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: road safety."
+    },
+    {
+     "beat": "predict",
+     "do": "What does it want us to do?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Look both ways before crossing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_TITLE",
+     "listen_for": [
+      "it repeats the first line"
+     ],
+     "ask": "What is the message of a song about washing hands?",
+     "repair": "Ask: what does the song want us to do?"
+    },
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_TOPICAL",
+     "listen_for": [
+      "any song with a nice tune"
+     ],
+     "ask": "What is a topical song?",
+     "repair": "Sort songs by what they are about."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_TOPIC_MIX",
+     "listen_for": [
+      "looking at things"
+     ],
+     "ask": "A song says \"look right, look left, then cross\". What is its topic?",
+     "repair": "Ask: where would you do this?"
+    },
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_ONLY_FUN",
+     "listen_for": [
+      "no, songs are just for fun"
+     ],
+     "ask": "Can a song teach us something?",
+     "repair": "Sing a hygiene song and ask what it teaches."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a topical song?",
+     "answer": "a song about one topic",
+     "shows": "topical"
+    },
+    {
+     "question": "What is the message of a song about washing hands?",
+     "answer": "wash hands to keep germs away",
+     "shows": "message"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+   "key_step": "The child names the techniques of performing a song: the right tune, clear words, matching gestures and faces.",
+   "floor": {
+    "prerequisite": "Sings action songs with actions (Grade 1).",
+    "question": "Show the action for \"jump\".",
+    "answer": "jumps"
+   },
+   "representations": [
+    "a song with actions",
+    "a checklist with pictures",
+    "a mirror for faces"
+   ],
+   "steps": [
+    "Sing the right tune.",
+    "Say the words clearly.",
+    "Use gestures that match.",
+    "Show the mood on your face."
+   ],
+   "contexts": [
+    "a class song for parents",
+    "the school choir"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "I sing a sad song with a big smile.",
+     "say": "What is wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the face."
+    },
+    {
+     "beat": "predict",
+     "do": "What should my face show?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A sad face."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_LOUDEST",
+     "listen_for": [
+      "singing the loudest"
+     ],
+     "ask": "What makes a song performed well?",
+     "repair": "Compare a shouted song with a clear, well-acted one."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_FACE_MISMATCH",
+     "listen_for": [
+      "a big smile"
+     ],
+     "ask": "You sing a sad song. What should your face show?",
+     "repair": "Sing a sad line with a smile and a sad face; compare."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_MUMBLE",
+     "listen_for": [
+      "they do not need to be"
+     ],
+     "ask": "Why must words be clear when you sing?",
+     "repair": "Mumble a line and ask the class what you said."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_RANDOM_GESTURE",
+     "listen_for": [
+      "clapping"
+     ],
+     "ask": "The song says \"the sun is high\". Which gesture fits?",
+     "repair": "Act each line and ask if the action shows the words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why must words be clear?",
+     "answer": "so listeners understand",
+     "shows": "clarity"
+    },
+    {
+     "question": "Should gestures match the words?",
+     "answer": "yes",
+     "shows": "gestures"
+    }
+   ]
+  }
+ ]
+}

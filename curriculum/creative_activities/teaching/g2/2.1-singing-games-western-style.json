@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST",
+ "title": "Singing Games- Western Style",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the song first, then the formation, then props. Hold hands gently; no pulling in the ring.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES",
+   "key_step": "The child names Western singing games and their parts: song, actions, formation, props, costume and safety.",
+   "floor": {
+    "prerequisite": "Knows Kenyan singing games (Grade 1).",
+    "question": "Name a prop used in a Kenyan singing game.",
+    "answer": "any of: a stick, a scarf, a basket"
+   },
+   "representations": [
+    "the song",
+    "props: scarves, hats",
+    "a chalked ring"
+   ],
+   "steps": [
+    "Learn the song.",
+    "Stand in the formation.",
+    "Do the actions as you sing.",
+    "Use props and keep safe."
+   ],
+   "contexts": [
+    "a music festival entry",
+    "a class game at break"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Two children make an arch with their arms.",
+     "say": "Which game is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: London Bridge."
+    },
+    {
+     "beat": "predict",
+     "do": "Is it Kenyan or Western?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Western."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_NO_SONG",
+     "listen_for": [
+      "it has a ball"
+     ],
+     "ask": "What makes a game a singing game?",
+     "repair": "Play a game silently, then with its song."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_FORMATION",
+     "listen_for": [
+      "in a straight line"
+     ],
+     "ask": "In which formation is \"Here we go round the mulberry bush\" played?",
+     "repair": "Hold hands and walk round in a ring while singing."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_KENYAN",
+     "listen_for": [
+      "Kenyan"
+     ],
+     "ask": "Is \"London Bridge is falling down\" a Kenyan or a Western singing game?",
+     "repair": "Sort game cards into Kenyan and Western."
+    },
+    {
+     "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_PULL",
+     "listen_for": [
+      "tightly, pulling others along"
+     ],
+     "ask": "In a ring game, how do you hold hands?",
+     "repair": "Show how pulling makes someone fall."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a Western singing game.",
+     "answer": "any of: London Bridge, The farmer's in his den, Here we go round the mulberry bush",
+     "shows": "games"
+    },
+    {
+     "question": "Name a formation for a singing game.",
+     "answer": "any of: a ring, a line, an arch",
+     "shows": "formation"
+    }
+   ]
+  }
+ ]
+}

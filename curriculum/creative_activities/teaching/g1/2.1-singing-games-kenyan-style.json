@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY",
+ "title": "Singing Games-Kenyan Style",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Choose games from the local community. Props from local materials. Behave well: wait your turn, hold hands gently.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+   "key_step": "The child names props used in a Kenyan singing game and the parts of the game: song, actions, formation, props, safety, behaviour.",
+   "floor": {
+    "prerequisite": "Sings songs with actions (pre-primary).",
+    "question": "Sing a song you know with its actions.",
+    "answer": "sings with actions"
+   },
+   "representations": [
+    "local props: a shaker, a leso, a stick",
+    "a chalked ring",
+    "the game song"
+   ],
+   "steps": [
+    "Learn the song.",
+    "Stand in the ring or line.",
+    "Do the actions and use the props.",
+    "Wait your turn."
+   ],
+   "contexts": [
+    "a cultural day at school",
+    "a game at break"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hold up a leso used in the game.",
+     "say": "What is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: a prop."
+    },
+    {
+     "beat": "predict",
+     "do": "Can we make one?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Yes, from a piece of cloth."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_PROP_COSTUME",
+     "listen_for": [
+      "no, props are clothes"
+     ],
+     "ask": "A girl holds a shaker in a singing game. Is the shaker a prop?",
+     "repair": "Hold up a shaker and a hat: which do you hold and use?"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_BUY",
+     "listen_for": [
+      "no, you must buy it"
+     ],
+     "ask": "Can you make a prop for a singing game?",
+     "repair": "Make a shaker from a bottle and seeds."
+    },
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_NO_SONG",
+     "listen_for": [
+      "no, only play"
+     ],
+     "ask": "In a singing game, do you keep singing while you play?",
+     "repair": "Practise the song with small steps first."
+    },
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_PUSH",
+     "listen_for": [
+      "push to the front"
+     ],
+     "ask": "In a singing game, how do you get your turn?",
+     "repair": "Play the game and praise waiting."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a prop?",
+     "answer": "something you hold or use in the game",
+     "shows": "prop"
+    },
+    {
+     "question": "Do you sing while you play a singing game?",
+     "answer": "yes",
+     "shows": "game"
+    }
+   ]
+  }
+ ]
+}

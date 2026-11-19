@@ -18,6 +18,7 @@ function allCodes() {
     for (const f of readdirSync(new URL(`curriculum/${dir}/`, ROOT)).filter(f => /^g\d\.json$/.test(f))) {
       const d = J(`curriculum/${dir}/${f}`);
       for (const s of d.sub_strands) { for (const o of s.outcomes) codes.add(o.code); for (const k of s.skills || []) codes.add(k.code); }
+      for (const r of d.readiness || []) codes.add(r.code);   // pre-primary readiness skills a Grade 1 file defines (Maths, Creative Activities)
     }
   }
   return codes;

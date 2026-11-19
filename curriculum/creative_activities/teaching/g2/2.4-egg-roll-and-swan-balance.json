@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC",
+ "title": "Egg Roll and Swan Balance",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mats or soft grass. Markers from bottle tops or leaves. The teacher shows each move first.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL",
+   "key_step": "The child says an egg roll is a tight curled roll sideways, holding the shins, between markers.",
+   "floor": {
+    "prerequisite": "Knows the log roll (Grade 1).",
+    "question": "In a log roll, is the body stretched or curled?",
+    "answer": "stretched"
+   },
+   "representations": [
+    "mats",
+    "markers",
+    "a picture of an egg"
+   ],
+   "steps": [
+    "Kneel and curl up tight.",
+    "Hold the shins; tuck the chin.",
+    "Roll sideways to the marker."
+   ],
+   "contexts": [
+    "a gymnastics display",
+    "a PE lesson on the grass"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a curled child on a mat.",
+     "say": "Which way will she roll?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: sideways."
+    },
+    {
+     "beat": "predict",
+     "do": "What do her arms do?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Hold the shins."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_STRETCHED",
+     "listen_for": [
+      "stretched out"
+     ],
+     "ask": "In an egg roll, is your body stretched or curled?",
+     "repair": "Hug your knees to your chest and rock."
+    },
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_FORWARD",
+     "listen_for": [
+      "forward over the head"
+     ],
+     "ask": "Which way does an egg roll move?",
+     "repair": "Lie curled on your side and roll to the left along the mat."
+    },
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_LET_GO",
+     "listen_for": [
+      "let go and push the floor"
+     ],
+     "ask": "In an egg roll, what do your arms do?",
+     "repair": "Roll slowly while counting, holding the shins."
+    },
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_MARKER",
+     "listen_for": [
+      "to make the mat pretty"
+     ],
+     "ask": "What are the markers for in an egg roll?",
+     "repair": "Put markers at each end of the mat and roll between them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which way does an egg roll move?",
+     "answer": "sideways",
+     "shows": "direction"
+    },
+    {
+     "question": "Is the body curled or stretched in an egg roll?",
+     "answer": "curled",
+     "shows": "shape"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+   "key_step": "The child names the parts used in a swan balance: one standing leg, the other leg out behind, arms like wings, head up.",
+   "floor": {
+    "prerequisite": "Knows the T-balance (Grade 1).",
+    "question": "How many legs do you stand on in a T-balance?",
+    "answer": "one"
+   },
+   "representations": [
+    "a picture of a swan",
+    "mats",
+    "a wall to hold"
+   ],
+   "steps": [
+    "Stand on one leg.",
+    "Lean forward.",
+    "Stretch the other leg behind.",
+    "Spread the arms; head up."
+   ],
+   "contexts": [
+    "a gymnastics display",
+    "a balance game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a swan picture.",
+     "say": "Where is the tail?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: behind."
+    },
+    {
+     "beat": "predict",
+     "do": "So where does your free leg go?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Out behind."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_TWO_FEET",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "How many feet do you stand on in a swan balance?",
+     "repair": "Hold a wall, lift one leg back, then let go."
+    },
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_LEG_FRONT",
+     "listen_for": [
+      "out in front"
+     ],
+     "ask": "In a swan balance, where does the free leg go?",
+     "repair": "Look at a picture of a swan: the tail is behind."
+    },
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_ARMS_DOWN",
+     "listen_for": [
+      "stay at the sides"
+     ],
+     "ask": "What do the arms do in a swan balance?",
+     "repair": "Try to balance with arms down, then with arms spread."
+    },
+    {
+     "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_T_SAME",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is the swan balance the same as the T-balance?",
+     "repair": "Do a T-balance, then a swan, and compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a swan balance, where are your arms?",
+     "answer": "spread out like wings",
+     "shows": "arms"
+    },
+    {
+     "question": "Where does the free leg go?",
+     "answer": "straight out behind",
+     "shows": "legs"
+    }
+   ]
+  }
+ ]
+}

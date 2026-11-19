@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.MODELLING",
+ "title": "Modelling",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use clay, plasticine or dough. Wet hands a little. Pinch round and round to keep the walls even.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.MODELLING.PINCH",
+   "key_step": "The child names items made by pinching, the steps of the pinch method, and modelling materials and tools.",
+   "floor": {
+    "prerequisite": "Rolls and squeezes clay (pre-primary).",
+    "question": "Roll this clay into a ball.",
+    "answer": "rolls a ball"
+   },
+   "representations": [
+    "clay or dough",
+    "a board, a stick, water",
+    "a pinch pot"
+   ],
+   "steps": [
+    "Roll a ball.",
+    "Push the thumb into the middle.",
+    "Pinch the sides round and round.",
+    "Smooth the top."
+   ],
+   "contexts": [
+    "small pots made by local potters",
+    "a cup for a play kitchen"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a clay ball.",
+     "say": "What do we do first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: push the thumb in."
+    },
+    {
+     "beat": "predict",
+     "do": "Then?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Pinch round and round."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_SQUASH",
+     "listen_for": [
+      "squash the ball flat"
+     ],
+     "ask": "How do you start a pinch pot?",
+     "repair": "Push a thumb into a ball and turn it."
+    },
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_ONE_PLACE",
+     "listen_for": [
+      "in one place"
+     ],
+     "ask": "How do you pinch the sides of the pot?",
+     "repair": "Turn the pot a little after every pinch."
+    },
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_TOOL_MATERIAL",
+     "listen_for": [
+      "a material"
+     ],
+     "ask": "Is the board a tool or a material for modelling?",
+     "repair": "Sort: what becomes the pot (clay) and what helps (board, stick)."
+    },
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_DRY_SOIL",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What do you add to soil to model with it?",
+     "repair": "Try to make a ball from dry soil, then from wet soil."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item made by pinching.",
+     "answer": "any of: a small pot, a cup, a bowl",
+     "shows": "items"
+    },
+    {
+     "question": "Name a modelling material.",
+     "answer": "any of: clay, plasticine, dough",
+     "shows": "materials"
+    }
+   ]
+  }
+ ]
+}

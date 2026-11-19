@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G1.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use short tunes of three or four notes. The teacher sings, the class listens, then echoes.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+   "key_step": "The child says a melodic sound has a tune and sorts sounds into melodic and non-melodic.",
+   "floor": {
+    "prerequisite": "Names familiar sounds (pre-primary).",
+    "question": "What makes this sound: moo?",
+    "answer": "a cow"
+   },
+   "representations": [
+    "a flute or a sung tune",
+    "a drum and clapping",
+    "sound picture cards"
+   ],
+   "steps": [
+    "Listen.",
+    "Can you hum it?",
+    "Yes: melodic. No: non-melodic."
+   ],
+   "contexts": [
+    "music at assembly",
+    "sounds on the way home"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hum a tune, then bang the desk.",
+     "say": "Which has a tune?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the hum."
+    },
+    {
+     "beat": "predict",
+     "do": "Is the bang melodic?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: non-melodic."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_DRUM",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does a drum make a sound with a tune you can hum?",
+     "repair": "Hum along with a flute, then try with a drum."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_BIRD",
+     "listen_for": [
+      "no, only people sing"
+     ],
+     "ask": "Is a bird singing a melodic sound?",
+     "repair": "Whistle back a bird's tune."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_LOUD",
+     "listen_for": [
+      "yes, it is loud"
+     ],
+     "ask": "A door bangs loudly. Is it melodic?",
+     "repair": "Hum softly, then bang a desk; which has a tune?"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_CLAP",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is clapping a melodic sound?",
+     "repair": "Try to clap a tune: can you make it go up and down?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a flute melodic or non-melodic?",
+     "answer": "melodic",
+     "shows": "melodic"
+    },
+    {
+     "question": "Is a door banging melodic or non-melodic?",
+     "answer": "non-melodic",
+     "shows": "non-melodic"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+   "key_step": "The child hears two short parts of a melody and says like (same tune) or unlike (different tune).",
+   "floor": {
+    "prerequisite": "Knows what a tune is.",
+    "question": "Can you hum this?",
+    "answer": "hums"
+   },
+   "representations": [
+    "short tunes",
+    "like and unlike cards",
+    "humming"
+   ],
+   "steps": [
+    "Listen to part 1.",
+    "Listen to part 2.",
+    "Hum both.",
+    "Same tune: like. Different: unlike."
+   ],
+   "contexts": [
+    "a song the class knows",
+    "a game song"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing two parts with the same tune."
+    },
+    {
+     "beat": "predict",
+     "do": "Like or unlike?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Like."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_WORDS",
+     "listen_for": [
+      "unlike"
+     ],
+     "ask": "Two parts have the same tune and different words. Like or unlike?",
+     "repair": "Hum both parts with no words."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_SAME_START",
+     "listen_for": [
+      "yes, they start the same"
+     ],
+     "ask": "Two tunes start the same but end differently. Are they like?",
+     "repair": "Listen to the end of each tune."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_LOUD",
+     "listen_for": [
+      "unlike"
+     ],
+     "ask": "The same tune is sung loudly. Is it like or unlike?",
+     "repair": "Sing the tune soft and loud; are the notes the same?"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_SINGER",
+     "listen_for": [
+      "unlike"
+     ],
+     "ask": "A boy and a girl sing the same tune. Like or unlike?",
+     "repair": "Two children sing the same line; hum it together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Same tune, new words: like or unlike?",
+     "answer": "like",
+     "shows": "like"
+    },
+    {
+     "question": "Do you listen to the words or the tune?",
+     "answer": "the tune",
+     "shows": "listening"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.CREATI.MELODY.ECHO",
+   "key_step": "The child says to echo is to listen first, then sing back the same tune at the same speed and loudness.",
+   "floor": {
+    "prerequisite": "Hears when two tunes are the same.",
+    "question": "Are these the same tune?",
+    "answer": "yes or no, as sung"
+   },
+   "representations": [
+    "short tunes",
+    "a hand signal",
+    "humming"
+   ],
+   "steps": [
+    "Listen to the leader.",
+    "Wait until the end.",
+    "Sing back the same tune.",
+    "Same speed, same loudness."
+   ],
+   "contexts": [
+    "an echo song at assembly",
+    "a class warm-up"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "I sing a short tune.",
+     "say": "When do you sing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: after you finish."
+    },
+    {
+     "beat": "predict",
+     "do": "Which tune do you sing?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The same tune."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_TOGETHER",
+     "listen_for": [
+      "at the same time as the leader"
+     ],
+     "ask": "When do you sing in an echo?",
+     "repair": "Hold up a hand while the leader sings; drop it to echo."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_NEW_TUNE",
+     "listen_for": [
+      "any tune"
+     ],
+     "ask": "In an echo, what tune do you sing?",
+     "repair": "Listen, hum it in your head, then sing."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_LOUDER",
+     "listen_for": [
+      "loudly"
+     ],
+     "ask": "The leader sings softly. How do you echo?",
+     "repair": "Play an echo game in a quiet voice."
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_FASTER",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Should an echo be faster than the leader?",
+     "repair": "Echo while the teacher taps the speed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When do you sing in an echo?",
+     "answer": "after the leader finishes",
+     "shows": "echo"
+    },
+    {
+     "question": "Do you sing a new tune or the same tune?",
+     "answer": "the same tune",
+     "shows": "copy"
+    }
+   ]
+  }
+ ]
+}

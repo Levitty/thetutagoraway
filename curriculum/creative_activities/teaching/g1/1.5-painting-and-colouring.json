@@ -1,0 +1,187 @@
+{
+ "sub_strand": "CREA.G1.CREATI.PAINTING_AND_COLOURING",
+ "title": "Painting and Colouring",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Put out paper, crayons, paints, brushes and sponges; children sort them. Wash hands and tools after painting.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+   "key_step": "The child sorts painting materials from tools, names them, and colours things as they look.",
+   "floor": {
+    "prerequisite": "Names basic colours (pre-primary).",
+    "question": "What colour is this leaf?",
+    "answer": "green"
+   },
+   "representations": [
+    "paper, cloth, paints, crayons",
+    "brushes, sponges, a palette",
+    "a sorting mat"
+   ],
+   "steps": [
+    "Pick up the item.",
+    "Is it used up? Material.",
+    "Do we use it again? Tool.",
+    "Name it."
+   ],
+   "contexts": [
+    "colouring a picture of home",
+    "painting a cloth for a play"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hold up a sponge.",
+     "say": "Tool or material?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: tool."
+    },
+    {
+     "beat": "predict",
+     "do": "And paint?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Material."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_BRUSH_MATERIAL",
+     "listen_for": [
+      "a material"
+     ],
+     "ask": "Is a brush a tool or a material?",
+     "repair": "Sort: what is used up (paint, paper) and what we use again (brush, sponge)."
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_SKY_GREEN",
+     "listen_for": [
+      "green"
+     ],
+     "ask": "Which colour is the sky on a clear day?",
+     "repair": "Go outside and name the colour of the sky and the grass."
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_PALETTE",
+     "listen_for": [
+      "a kind of paint"
+     ],
+     "ask": "What is a palette?",
+     "repair": "Show a palette with paint on it, or a plastic lid used as one."
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_FABRIC",
+     "listen_for": [
+      "no, only paper"
+     ],
+     "ask": "Can you paint on fabric?",
+     "repair": "Show a painted piece of cloth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a sponge a tool or a material?",
+     "answer": "a tool",
+     "shows": "tools"
+    },
+    {
+     "question": "What colour do you use for leaves?",
+     "answer": "green",
+     "shows": "colour"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+   "key_step": "The child says how to paint with a brush, a finger and a sponge, and washes hands and tools after.",
+   "floor": {
+    "prerequisite": "Knows painting tools.",
+    "question": "Name a painting tool.",
+    "answer": "any of: brush, sponge, palette"
+   },
+   "representations": [
+    "brushes, sponges, paint",
+    "paper",
+    "water to wash"
+   ],
+   "steps": [
+    "Brush: dip the tip and stroke.",
+    "Finger: dip one finger and dab.",
+    "Sponge: dip, press and lift.",
+    "Wash up."
+   ],
+   "contexts": [
+    "a class painting day",
+    "decorating a card"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a sponge print.",
+     "say": "How was it made?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: press and lift."
+    },
+    {
+     "beat": "predict",
+     "do": "What do we do after?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Wash hands and tools."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_SPONGE_RUB",
+     "listen_for": [
+      "rub it hard across the paper"
+     ],
+     "ask": "How do you paint with a sponge?",
+     "repair": "Press and lift a sponge to make a soft patch."
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_WHOLE_HAND",
+     "listen_for": [
+      "the whole hand"
+     ],
+     "ask": "For finger painting, what do you dip?",
+     "repair": "Dip one finger and make a row of dots."
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_NO_WASH",
+     "listen_for": [
+      "go to eat"
+     ],
+     "ask": "What do you do after finger painting?",
+     "repair": "Talk about why paint must not go in the mouth."
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_BRUSH_HARD",
+     "listen_for": [
+      "press it down hard"
+     ],
+     "ask": "How do you hold the brush on the paper?",
+     "repair": "Paint one line pressing hard and one gently."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How do you paint with a sponge?",
+     "answer": "dip, press and lift",
+     "shows": "sponge"
+    },
+    {
+     "question": "What do you dip for finger painting?",
+     "answer": "one finger",
+     "shows": "finger"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G1.CREATI.PATTERN_MAKING",
+ "title": "Pattern Making",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use letter and numeral cards the class knows. Say the pattern aloud before continuing it.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+   "key_step": "The child finds the part that repeats in a pattern of letters or numerals and says what comes next.",
+   "floor": {
+    "prerequisite": "Copies a two-part pattern (pre-primary Maths).",
+    "question": "Red, blue, red, blue. What comes next?",
+    "answer": "red"
+   },
+   "representations": [
+    "letter and numeral cards",
+    "chalk on the floor",
+    "beads"
+   ],
+   "steps": [
+    "Say the pattern aloud.",
+    "Find the part that repeats.",
+    "Say what comes next."
+   ],
+   "contexts": [
+    "a border for a picture",
+    "a numeral pattern on a classroom chart"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: o x o x o."
+    },
+    {
+     "beat": "predict",
+     "do": "What comes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for x."
+    },
+    {
+     "beat": "reveal",
+     "do": "x."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_COUNT_ON",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "1 2 1 2 1 2. What comes next?",
+     "repair": "Say the pattern aloud and clap on each 1."
+    },
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_LAST_AGAIN",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "a b a b a. What comes next?",
+     "repair": "Point and say: a b, a b, a..."
+    },
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_UNIT_THREE",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "3 3 4 3 3 4 3 3. What comes next?",
+     "repair": "Put a ring round each repeating part: 3 3 4."
+    },
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_NO_ORDER",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is \"a m z k\" a pattern?",
+     "repair": "Look for a part that comes again."
+    }
+   ],
+   "checks": [
+    {
+     "question": "1 2 1 2 1. What comes next?",
+     "answer": "2",
+     "shows": "numerals"
+    },
+    {
+     "question": "b c b c b. What comes next?",
+     "answer": "c",
+     "shows": "letters"
+    }
+   ]
+  }
+ ]
+}

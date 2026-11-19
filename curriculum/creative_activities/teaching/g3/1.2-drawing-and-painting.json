@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G3.CREATI.DRAWING_AND_PAINTING",
+ "title": "Drawing and Painting",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use three primaries only and let the children find the secondaries. Spray and blow outside or over newspaper; wash hands and brushes after.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING",
+   "key_step": "The child names the colour each pair of primaries makes and says how spraying and blowing mix colours.",
+   "floor": {
+    "prerequisite": "Paints with a brush (Grade 2).",
+    "question": "What do you do with your brush before you take a new colour?",
+    "answer": "wash it"
+   },
+   "representations": [
+    "three primary paints",
+    "straws and old brushes",
+    "a colour mixing chart"
+   ],
+   "steps": [
+    "Take two primary colours.",
+    "Mix a little of one into the other.",
+    "Name the new colour.",
+    "Wash the brush and hands."
+   ],
+   "contexts": [
+    "painting a sunset in class",
+    "colouring a kanga pattern"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show red paint and yellow paint.",
+     "say": "What colour will they make?"
+    },
+    {
+     "beat": "predict",
+     "do": "Children say their guess."
+    },
+    {
+     "beat": "pause",
+     "do": "Mix them slowly."
+    },
+    {
+     "beat": "reveal",
+     "do": "Orange."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING.M_CAC3_CM_BLUE_YELLOW",
+     "listen_for": [
+      "purple"
+     ],
+     "ask": "What colour do blue and yellow make when mixed?",
+     "repair": "Mix one drop of blue into yellow in front of the class."
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING.M_CAC3_CM_RED_YELLOW_PINK",
+     "listen_for": [
+      "pink"
+     ],
+     "ask": "What colour do red and yellow make?",
+     "repair": "Mix red and yellow, then mix red and white, and compare the two."
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING.M_CAC3_CM_MORE_COLOURS",
+     "listen_for": [
+      "a bright rainbow colour"
+     ],
+     "ask": "Ama mixes red, blue, yellow and green together. What colour will she get?",
+     "repair": "Let the children mix all the colours in one cup and look."
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING.M_CAC3_CM_BLOW_HARD",
+     "listen_for": [
+      "a thick lump of paint"
+     ],
+     "ask": "For the blowing technique, what kind of paint do you use?",
+     "repair": "Try blowing a thick blob and a watery drop with a straw."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What colour do red and blue make?",
+     "answer": "purple",
+     "shows": "mixing"
+    },
+    {
+     "question": "In blowing, what do you blow the paint with?",
+     "answer": "a straw or a biro tube",
+     "shows": "technique"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE",
+   "key_step": "The child tells regular shapes (circle, square, triangle, rectangle) from irregular ones in a picture.",
+   "floor": {
+    "prerequisite": "Names the basic shapes (Grade 3 Maths).",
+    "question": "How many sides does a triangle have?",
+    "answer": "three"
+   },
+   "representations": [
+    "a simple picture of a home",
+    "shape cards",
+    "leaves and stones"
+   ],
+   "steps": [
+    "Look for shapes with a fixed form.",
+    "Name them.",
+    "Find shapes with no fixed form.",
+    "Call them irregular."
+   ],
+   "contexts": [
+    "drawing a homestead",
+    "a picture of a market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a house with a tree beside it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Children circle the regular shapes."
+    },
+    {
+     "beat": "predict",
+     "do": "Is the tree top regular?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No, it is irregular."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE.M_CAC3_SP_LEAF_REGULAR",
+     "listen_for": [
+      "regular"
+     ],
+     "ask": "Is a leaf a regular shape or an irregular shape?",
+     "repair": "Draw a leaf and a square: does the leaf have a fixed form like the square?"
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE.M_CAC3_SP_TILTED_SQUARE",
+     "listen_for": [
+      "no, it is a diamond"
+     ],
+     "ask": "A square is turned so it stands on one corner. Is it still a square?",
+     "repair": "Turn a paper square slowly and count its equal sides each time."
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE.M_CAC3_SP_RECT_SQUARE",
+     "listen_for": [
+      "a square"
+     ],
+     "ask": "A door has two long sides and two short sides. Which shape is it?",
+     "repair": "Measure the sides of a door and of a square tile with string."
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE.M_CAC3_SP_CLOUD_CIRCLE",
+     "listen_for": [
+      "a circle"
+     ],
+     "ask": "Which shape is a cloud usually: a circle or an irregular shape?",
+     "repair": "Go outside and trace the edge of a cloud or a stone with a finger."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a stone a regular or an irregular shape?",
+     "answer": "irregular",
+     "shows": "irregular"
+    },
+    {
+     "question": "Name a regular shape in a window.",
+     "answer": "a square or a rectangle",
+     "shows": "regular"
+    }
+   ]
+  }
+ ]
+}

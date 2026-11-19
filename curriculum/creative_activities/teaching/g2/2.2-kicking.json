@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.KICKING",
+ "title": "Kicking",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use soft or improvised balls on grass. Kick to a partner, not at faces.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.KICKING.KICK",
+   "key_step": "The child names the parts of the leg used to kick, the inside-of-foot kick, and the directions of a kick.",
+   "floor": {
+    "prerequisite": "Throws and catches a ball (Grade 1).",
+    "question": "What do you watch when catching a ball?",
+    "answer": "the ball"
+   },
+   "representations": [
+    "a soft or improvised ball",
+    "bottle-top markers",
+    "a picture of a leg"
+   ],
+   "steps": [
+    "Stand beside the ball.",
+    "Watch the ball.",
+    "Kick with the inside of the foot.",
+    "Kick in the named direction."
+   ],
+   "contexts": [
+    "a football game at break",
+    "a PE lesson on the field"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point to the inside of your foot."
+    },
+    {
+     "beat": "predict",
+     "do": "Is this good for a short pass?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Yes, it gives an accurate kick."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_TOES",
+     "listen_for": [
+      "the toes"
+     ],
+     "ask": "Which part of the foot gives a short, accurate kick?",
+     "repair": "Kick to a partner with the toes and then with the inside of the foot."
+    },
+    {
+     "code": "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_STANDING_FOOT",
+     "listen_for": [
+      "far behind the ball"
+     ],
+     "ask": "Where do you put your standing foot when you kick?",
+     "repair": "Put a bottle top beside the ball for the standing foot."
+    },
+    {
+     "code": "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_ARM",
+     "listen_for": [
+      "the arm"
+     ],
+     "ask": "Which of these is used to kick a ball: the arm or the knee?",
+     "repair": "Point to the thigh, knee, lower leg and foot while kicking slowly."
+    },
+    {
+     "code": "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_LOOK_UP",
+     "listen_for": [
+      "at the goal"
+     ],
+     "ask": "Where do your eyes look as your foot touches the ball?",
+     "repair": "Kick while looking away, then while watching the ball."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two parts of the leg used to kick.",
+     "answer": "any two of: thigh, knee, lower leg, foot",
+     "shows": "parts"
+    },
+    {
+     "question": "Where does your standing foot go?",
+     "answer": "beside the ball",
+     "shows": "standing foot"
+    }
+   ]
+  }
+ ]
+}

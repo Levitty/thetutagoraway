@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN",
+ "title": "String Musical Instruments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Show real instruments or clear pictures. The teacher prepares the wire or string and the bow for improvised instruments.",
+ "skills": [
+  {
+   "skill": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR",
+   "key_step": "The child names indigenous string instruments (orutu, wandindi, ground bow, mouth bow) and says they are played by bowing, striking or plucking.",
+   "floor": {
+    "prerequisite": "Names indigenous wind instruments (Grade 2).",
+    "question": "How do you play a flute?",
+    "answer": "by blowing"
+   },
+   "representations": [
+    "pictures or real instruments",
+    "rubber bands on a tin",
+    "a recording"
+   ],
+   "steps": [
+    "Look for the string.",
+    "Say how it is played: bow, strike or pluck.",
+    "Name the instrument and community."
+   ],
+   "contexts": [
+    "a cultural day at school",
+    "a music festival performance"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show the orutu.",
+     "say": "Where does the sound come from?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the string."
+    },
+    {
+     "beat": "predict",
+     "do": "How is it played?"
+    },
+    {
+     "beat": "reveal",
+     "do": "With a bow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR.M_CAC3_SI_ORUTU_DRUM",
+     "listen_for": [
+      "a drum"
+     ],
+     "ask": "The orutu has a string and a bow. What kind of instrument is it?",
+     "repair": "Bow the string and listen: the string makes the sound."
+    },
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR.M_CAC3_SI_BOW_PLUCK",
+     "listen_for": [
+      "by plucking"
+     ],
+     "ask": "How is a fiddle such as the wandindi played?",
+     "repair": "Rub a bow across a string and then pluck it."
+    },
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR.M_CAC3_SI_WIND",
+     "listen_for": [
+      "yes, because it uses the mouth"
+     ],
+     "ask": "A mouth bow is held near the mouth and its string is plucked. Is it a wind instrument?",
+     "repair": "Pluck the string with the mouth closed, then open, and hear the change."
+    },
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR.M_CAC3_SI_STRING_TIGHT",
+     "listen_for": [
+      "a loose one"
+     ],
+     "ask": "Which string makes a clear sound: a loose one or a tight one?",
+     "repair": "Pluck a rubber band loose, then stretched."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an indigenous string instrument.",
+     "answer": "any of: orutu, wandindi, ground bow, mouth bow",
+     "shows": "names"
+    },
+    {
+     "question": "Name one way of playing a string instrument.",
+     "answer": "any of: bowing, striking, plucking",
+     "shows": "methods"
+    }
+   ]
+  }
+ ]
+}

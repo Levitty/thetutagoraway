@@ -1,0 +1,1382 @@
+{
+ "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_TWO_FEET": {
+  "skill": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+  "error": "Calls a two-footed jump a hop.",
+  "example": {
+   "question": "Wanjiru takes off on two feet and lands on two feet. Is that a hop?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, it is a jump"
+  },
+  "cause": "In daily speech \"hop\" is used for any small jump.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Lift one foot and hop, then jump on two feet, and compare.",
+  "feedback": "A hop is on one foot. Two feet make a jump.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_CHANGE_FOOT": {
+  "skill": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+  "error": "Lands on the other foot and calls it a hop.",
+  "example": {
+   "question": "In a hop, which foot do you land on?",
+   "wrong_answer": "the other foot",
+   "correct_answer": "the same foot you took off from"
+  },
+  "cause": "Running changes feet, so the child does the same.",
+  "reveals": "Offer \"the other foot\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a bean bag on the hopping knee and keep that foot.",
+  "feedback": "In a hop you land on the same foot you took off from.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_LEFT_RIGHT": {
+  "skill": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+  "error": "Hops to their left when told 'right'.",
+  "example": {
+   "question": "Hop to your right. Which side do you go to?",
+   "wrong_answer": "my left side",
+   "correct_answer": "my right side"
+  },
+  "cause": "Right and left are still being learnt.",
+  "reveals": "Offer \"my left side\" next to the right answer and ask the question again in a new context.",
+  "help": "Tie a ribbon on the right wrist and hop that way.",
+  "feedback": "Your right is the side of your ribbon hand.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_ZIGZAG": {
+  "skill": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+  "error": "Calls a wavy line a zigzag.",
+  "example": {
+   "question": "A line bends like a river with no corners. Is it a zigzag?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, it is curved"
+  },
+  "cause": "Both lines change direction.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Chalk a zigzag with sharp corners beside a curve.",
+  "feedback": "A zigzag has sharp corners. A curved line has none.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_COLOUR": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE",
+  "error": "Names a colour when asked for a texture.",
+  "example": {
+   "question": "What is the texture of tree bark?",
+   "wrong_answer": "brown",
+   "correct_answer": "rough"
+  },
+  "cause": "Colour is what the child notices first.",
+  "reveals": "Offer \"brown\" next to the right answer and ask the question again in a new context.",
+  "help": "Close your eyes and touch the bark: what does it feel like?",
+  "feedback": "Texture is how it feels. Bark feels rough.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_SHINY_SMOOTH": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE",
+  "error": "Thinks only shiny things can be smooth.",
+  "example": {
+   "question": "Is a plastic plate rough or smooth?",
+   "wrong_answer": "rough, because it is not shiny",
+   "correct_answer": "smooth"
+  },
+  "cause": "The child links smooth with shiny glass and metal.",
+  "reveals": "Offer \"rough, because it is not shiny\" next to the right answer and ask the question again in a new context.",
+  "help": "Rub fingers over a matt plastic plate and a stone.",
+  "feedback": "A plate feels smooth even when it is not shiny.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_RUB_TIP": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE",
+  "error": "Rubs with the point of the crayon and gets only lines.",
+  "example": {
+   "question": "Which part of the crayon do you use for a rubbing?",
+   "wrong_answer": "the point",
+   "correct_answer": "the long side"
+  },
+  "cause": "The child uses crayons only for drawing with the point.",
+  "reveals": "Offer \"the point\" next to the right answer and ask the question again in a new context.",
+  "help": "Peel a crayon and rub with its side over a leaf.",
+  "feedback": "Use the side of the crayon to show the texture.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_THICK_PAPER": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE",
+  "error": "Uses thick card for a rubbing.",
+  "example": {
+   "question": "Which paper is best for a rubbing?",
+   "wrong_answer": "thick card",
+   "correct_answer": "thin paper"
+  },
+  "cause": "Thick card seems stronger and better to the child.",
+  "reveals": "Offer \"thick card\" next to the right answer and ask the question again in a new context.",
+  "help": "Rub the same coin under card and under thin paper.",
+  "feedback": "Thin paper lets the texture show through.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_DIP_DEEP": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+  "error": "Dips the whole brush into the pot up to the handle.",
+  "example": {
+   "question": "How much of the brush do you dip into the paint?",
+   "wrong_answer": "all of it, up to the handle",
+   "correct_answer": "only the tip"
+  },
+  "cause": "More paint seems better to the child.",
+  "reveals": "Offer \"all of it, up to the handle\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a dripping brush and a brush dipped at the tip.",
+  "feedback": "Dip only the tip, then wipe the extra on the edge of the pot.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_NO_WASH": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+  "error": "Takes a new colour without washing the brush.",
+  "example": {
+   "question": "You finish with red and want yellow. What do you do first?",
+   "wrong_answer": "dip straight into yellow",
+   "correct_answer": "wash the brush"
+  },
+  "cause": "The child does not see the yellow being spoilt.",
+  "reveals": "Offer \"dip straight into yellow\" next to the right answer and ask the question again in a new context.",
+  "help": "Put a red brush in yellow and watch it turn orange.",
+  "feedback": "Wash the brush before taking a new colour.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_TRIANGLE_SIDES": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+  "error": "Paints a triangle with four sides.",
+  "example": {
+   "question": "How many sides does a triangle have?",
+   "wrong_answer": "four",
+   "correct_answer": "three"
+  },
+  "cause": "The child mixes the triangle with the square.",
+  "reveals": "Offer \"four\" next to the right answer and ask the question again in a new context.",
+  "help": "Count the sides of a triangle with a finger: one, two, three.",
+  "feedback": "A triangle has three sides.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_SCRUB": {
+  "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+  "error": "Scrubs the brush back and forth over the paper.",
+  "example": {
+   "question": "How do you move the brush to paint a shape neatly?",
+   "wrong_answer": "scrub it back and forth hard",
+   "correct_answer": "stroke it gently in one direction inside the outline"
+  },
+  "cause": "Scrubbing is how the child cleans things.",
+  "reveals": "Offer \"scrub it back and forth hard\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a scrubbed shape (torn paper) next to a smooth one.",
+  "feedback": "Stroke gently in one direction to paint neatly.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_ONLY_DRUM": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS",
+  "error": "Thinks rhythm can only be made with a drum.",
+  "example": {
+   "question": "Can you make rhythm without a drum?",
+   "wrong_answer": "no",
+   "correct_answer": "yes, by clapping, tapping, stamping, humming or reciting"
+  },
+  "cause": "Drums are the instrument the child links with rhythm.",
+  "reveals": "Offer \"no\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a rhythm with claps and stamps only.",
+  "feedback": "You can make rhythm with your body and voice too.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_HUM_SING": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS",
+  "error": "Thinks humming is the same as singing the words.",
+  "example": {
+   "question": "What is humming?",
+   "wrong_answer": "singing the words loudly",
+   "correct_answer": "making the tune with the mouth closed"
+  },
+  "cause": "Both use the voice.",
+  "reveals": "Offer \"singing the words loudly\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a line, then hum it with lips closed.",
+  "feedback": "Humming makes the sound with your mouth closed, without words.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_RECITE": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS",
+  "error": "Thinks reciting is not a way of making rhythm because there is no tune.",
+  "example": {
+   "question": "Children say a rhyme together in a steady beat. Are they making rhythm?",
+   "wrong_answer": "no, they are not singing",
+   "correct_answer": "yes, reciting makes rhythm"
+  },
+  "cause": "The child links rhythm only with music and tunes.",
+  "reveals": "Offer \"no, they are not singing\" next to the right answer and ask the question again in a new context.",
+  "help": "Recite a rhyme and clap the beat with it.",
+  "feedback": "Reciting words in a beat makes rhythm.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_FAST_ONLY": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS",
+  "error": "Thinks rhythm means playing as fast as possible.",
+  "example": {
+   "question": "Is rhythm just playing as fast as you can?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; it is a pattern of sounds in time"
+  },
+  "cause": "Exciting drumming is fast.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap a slow pattern and a fast pattern; both are rhythms.",
+  "feedback": "Rhythm is a pattern of long and short sounds. It can be slow or fast.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_ONE_CLAP": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM",
+  "error": "Gives one clap for a whole word.",
+  "example": {
+   "question": "How many claps for \"ba-na-na\"?",
+   "wrong_answer": "one",
+   "correct_answer": "three"
+  },
+  "cause": "The child claps for whole words as in counting words.",
+  "reveals": "Offer \"one\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the word slowly and clap each part.",
+  "feedback": "Ba-na-na has three parts, so three claps.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_LETTERS": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM",
+  "error": "Claps once for each letter.",
+  "example": {
+   "question": "How many claps for \"cat\"?",
+   "wrong_answer": "three, one for each letter",
+   "correct_answer": "one"
+  },
+  "cause": "Letters are counted in reading lessons.",
+  "reveals": "Offer \"three, one for each letter\" next to the right answer and ask the question again in a new context.",
+  "help": "Say \"cat\" and feel your chin drop once.",
+  "feedback": "Clap for each part you say, not each letter. Cat is one clap.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_NAME_LONG": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM",
+  "error": "Thinks long names get more claps because they look long.",
+  "example": {
+   "question": "How many claps for \"Ann\"?",
+   "wrong_answer": "three, it has three letters",
+   "correct_answer": "one"
+  },
+  "cause": "The child judges by the written length.",
+  "reveals": "Offer \"three, it has three letters\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap your name and a friend's name and compare.",
+  "feedback": "Ann is one part, so it is one clap.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_UNEVEN": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM",
+  "error": "Rushes the claps so the pattern does not match the word.",
+  "example": {
+   "question": "Clap \"Nai-ro-bi\". How should the claps sound?",
+   "wrong_answer": "as fast as possible",
+   "correct_answer": "even, one for each part as you say it"
+  },
+  "cause": "The child races to finish.",
+  "reveals": "Offer \"as fast as possible\" next to the right answer and ask the question again in a new context.",
+  "help": "Say and clap together slowly, then at normal speed.",
+  "feedback": "Say each part as you clap it.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_NEXT_SAME": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN",
+  "error": "Repeats the last shape instead of continuing the pattern.",
+  "example": {
+   "question": "Circle, square, circle, square, circle. What comes next?",
+   "wrong_answer": "circle",
+   "correct_answer": "square"
+  },
+  "cause": "The child copies the shape just seen.",
+  "reveals": "Offer \"circle\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the pattern aloud and point: circle, square...",
+  "feedback": "The pattern goes circle, square. After a circle comes a square.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_COLOUR_SHAPE": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN",
+  "error": "Continues by colour when the pattern is by shape.",
+  "example": {
+   "question": "A red circle, a red triangle, a red circle. What comes next?",
+   "wrong_answer": "a blue circle",
+   "correct_answer": "a red triangle"
+  },
+  "cause": "Colour catches the eye first.",
+  "reveals": "Offer \"a blue circle\" next to the right answer and ask the question again in a new context.",
+  "help": "Cover the colours and look only at the shapes.",
+  "feedback": "The shapes repeat circle, triangle. Next is a triangle.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_UNIT_TWO": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN",
+  "error": "Misses a repeating part of two of the same shape.",
+  "example": {
+   "question": "Circle, circle, triangle, circle, circle. What comes next?",
+   "wrong_answer": "circle",
+   "correct_answer": "triangle"
+  },
+  "cause": "The child expects every pattern to swap one by one.",
+  "reveals": "Offer \"circle\" next to the right answer and ask the question again in a new context.",
+  "help": "Put a ring round each repeating part: circle, circle, triangle.",
+  "feedback": "The part that repeats is circle, circle, triangle. Next is a triangle.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_PRINT_SMUDGE": {
+  "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN",
+  "error": "Slides the printing block across the paper.",
+  "example": {
+   "question": "How do you print a shape so it is clear?",
+   "wrong_answer": "slide the block across the paper",
+   "correct_answer": "press it straight down and lift it straight up"
+  },
+  "cause": "The child drags as with a crayon.",
+  "reveals": "Offer \"slide the block across the paper\" next to the right answer and ask the question again in a new context.",
+  "help": "Print once by pressing and once by sliding; compare.",
+  "feedback": "Press straight down and lift straight up for a clear print.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_HALF_SIDE": {
+  "skill": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+  "error": "Thinks a half turn ends facing the side.",
+  "example": {
+   "question": "You face the board and make a half turn. Where do you face?",
+   "wrong_answer": "the window at the side",
+   "correct_answer": "the back of the room"
+  },
+  "cause": "The child mixes a half turn with a quarter turn.",
+  "reveals": "Offer \"the window at the side\" next to the right answer and ask the question again in a new context.",
+  "help": "Face the board, turn slowly and stop when you see the back wall.",
+  "feedback": "A half turn ends facing the back.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_FULL_BACK": {
+  "skill": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+  "error": "Thinks a full turn ends facing the back.",
+  "example": {
+   "question": "You face the board and make a full turn. Where do you face?",
+   "wrong_answer": "the back of the room",
+   "correct_answer": "the board again"
+  },
+  "cause": "\"Full\" sounds like as far as you can go.",
+  "reveals": "Offer \"the back of the room\" next to the right answer and ask the question again in a new context.",
+  "help": "Turn all the way round until you see the board again.",
+  "feedback": "A full turn goes all the way round and ends where you started.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_LEFT_RIGHT": {
+  "skill": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+  "error": "Turns right when told to turn left.",
+  "example": {
+   "question": "Turn to your left. Which shoulder goes back?",
+   "wrong_answer": "the left shoulder goes forward",
+   "correct_answer": "the left shoulder goes back as you turn left"
+  },
+  "cause": "Left and right are still mixed up.",
+  "reveals": "Offer \"the left shoulder goes forward\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold up the left hand in an L shape before turning.",
+  "feedback": "To turn left, turn towards your left hand.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_TWO_HALVES": {
+  "skill": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+  "error": "Thinks two half turns leave you facing the back.",
+  "example": {
+   "question": "You make two half turns. Where do you face?",
+   "wrong_answer": "the back",
+   "correct_answer": "the front again"
+  },
+  "cause": "The child counts only the last turn.",
+  "reveals": "Offer \"the back\" next to the right answer and ask the question again in a new context.",
+  "help": "Make one half turn, say where you face, then another.",
+  "feedback": "Two half turns make a full turn. You face the front again.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_PAINTING": {
+  "skill": "CREA.G2.CREATI.MOSAIC.MOSAIC",
+  "error": "Calls a painted picture a mosaic.",
+  "example": {
+   "question": "Which picture is a mosaic?",
+   "wrong_answer": "a picture painted with a brush",
+   "correct_answer": "a picture made of many small pieces stuck close together"
+  },
+  "cause": "All finished pictures look alike to the child.",
+  "reveals": "Offer \"a picture painted with a brush\" next to the right answer and ask the question again in a new context.",
+  "help": "Touch a mosaic and feel the small pieces.",
+  "feedback": "A mosaic is made of many small pieces stuck close together.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_BIG_PIECES": {
+  "skill": "CREA.G2.CREATI.MOSAIC.MOSAIC",
+  "error": "Uses a few big pieces and calls it a mosaic.",
+  "example": {
+   "question": "Do you make a mosaic with big pieces or small pieces?",
+   "wrong_answer": "big pieces",
+   "correct_answer": "many small pieces"
+  },
+  "cause": "Big pieces finish the picture faster.",
+  "reveals": "Offer \"big pieces\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a picture of three big pieces with one of many small pieces.",
+  "feedback": "A mosaic uses many small pieces.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_OVERLAP": {
+  "skill": "CREA.G2.CREATI.MOSAIC.MOSAIC",
+  "error": "Piles the pieces on top of each other.",
+  "example": {
+   "question": "How do you place the pieces in a mosaic?",
+   "wrong_answer": "on top of each other",
+   "correct_answer": "side by side with small gaps"
+  },
+  "cause": "The child wants to cover every bit of paper.",
+  "reveals": "Offer \"on top of each other\" next to the right answer and ask the question again in a new context.",
+  "help": "Place pieces side by side and point to the small gaps.",
+  "feedback": "Place the pieces side by side with small gaps between them.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_TOOL_MATERIAL": {
+  "skill": "CREA.G2.CREATI.MOSAIC.MOSAIC",
+  "error": "Calls scissors a material for a mosaic.",
+  "example": {
+   "question": "Are scissors a material or a tool in mosaic making?",
+   "wrong_answer": "a material",
+   "correct_answer": "a tool"
+  },
+  "cause": "The child has not yet sorted things used up from things used to work.",
+  "reveals": "Offer \"a material\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort cards: what is used up (paper, seeds) and what helps you work (scissors, brush).",
+  "feedback": "Scissors are a tool. Paper and seeds are materials.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_WORDS": {
+  "skill": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT",
+  "error": "Says two tunes are different because the words differ.",
+  "example": {
+   "question": "Two lines have the same tune but different words. Are the tunes the same?",
+   "wrong_answer": "no, different",
+   "correct_answer": "yes, the same"
+  },
+  "cause": "The child listens to the words, not the tune.",
+  "reveals": "Offer \"no, different\" next to the right answer and ask the question again in a new context.",
+  "help": "Hum both lines without words.",
+  "feedback": "The tunes are the same. Only the words are different.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_SHAPE_SAME": {
+  "skill": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT",
+  "error": "Gives every line a new shape even when the tune comes back.",
+  "example": {
+   "question": "The first tune comes back again. Which shape do you draw?",
+   "wrong_answer": "a new shape",
+   "correct_answer": "the same shape as before"
+  },
+  "cause": "The child thinks each line needs its own shape.",
+  "reveals": "Offer \"a new shape\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing the song and point to the shape each time the first tune returns.",
+  "feedback": "When a tune comes back, use the same shape again.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_LOUD_DIFF": {
+  "skill": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT",
+  "error": "Says a tune is different when it is only louder.",
+  "example": {
+   "question": "The same tune is sung louder. Is it a different tune?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, it is the same tune sung louder"
+  },
+  "cause": "Loudness changes the feel, so the child thinks the tune changed.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing it softly and loudly; ask if the notes moved.",
+  "feedback": "It is the same tune. Only the volume changed.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_SHAPE_MEANING": {
+  "skill": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT",
+  "error": "Thinks a circle always means a happy tune.",
+  "example": {
+   "question": "In our song we drew a circle, a triangle, then a circle. What does the second circle show?",
+   "wrong_answer": "a happy part",
+   "correct_answer": "the first tune coming back"
+  },
+  "cause": "The child gives shapes their own meaning.",
+  "reveals": "Offer \"a happy part\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: the shape only tells same or different.",
+  "feedback": "A shape shows which tune it is. The same shape means the same tune.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_CHANGE_TUNE": {
+  "skill": "CREA.G2.CREATI.MELODY.NEW_WORDS",
+  "error": "Changes the tune when singing new words.",
+  "example": {
+   "question": "You put new words to a song you know. What happens to the tune?",
+   "wrong_answer": "it changes too",
+   "correct_answer": "it stays the same"
+  },
+  "cause": "New words feel like a new song.",
+  "reveals": "Offer \"it changes too\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing the old words, then the new words, while humming partners keep the tune.",
+  "feedback": "The tune stays the same. Only the words change.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_TOO_MANY": {
+  "skill": "CREA.G2.CREATI.MELODY.NEW_WORDS",
+  "error": "Squeezes too many words into a line.",
+  "example": {
+   "question": "The line has four notes. How many word parts fit?",
+   "wrong_answer": "as many as you like",
+   "correct_answer": "about four, one for each note"
+  },
+  "cause": "The child does not match words to notes.",
+  "reveals": "Offer \"as many as you like\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap the notes, then clap the new words, and compare.",
+  "feedback": "Fit one word part to each note.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_NO_SENSE": {
+  "skill": "CREA.G2.CREATI.MELODY.NEW_WORDS",
+  "error": "Puts any words in, even if they make no sense together.",
+  "example": {
+   "question": "Do the new words of a song need to make sense?",
+   "wrong_answer": "no, any words will do",
+   "correct_answer": "yes, they should say something about one idea"
+  },
+  "cause": "The child focuses on fitting the beat only.",
+  "reveals": "Offer \"no, any words will do\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a nonsense line and a sensible one; ask which tells us something.",
+  "feedback": "New words should make sense and tell one idea.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_NEW_SONG_NAME": {
+  "skill": "CREA.G2.CREATI.MELODY.NEW_WORDS",
+  "error": "Thinks you cannot use a song someone else wrote for new words.",
+  "example": {
+   "question": "Can you sing new words about washing hands to a tune you already know?",
+   "wrong_answer": "no, songs cannot change",
+   "correct_answer": "yes"
+  },
+  "cause": "The child sees songs as fixed.",
+  "reveals": "Offer \"no, songs cannot change\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a hand-washing verse to a tune the class knows.",
+  "feedback": "Yes. You can put new words to a tune you know.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_NO_SONG": {
+  "skill": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES",
+  "error": "Thinks a singing game is a game with no song.",
+  "example": {
+   "question": "What makes a game a singing game?",
+   "wrong_answer": "it has a ball",
+   "correct_answer": "the players sing a song while they play"
+  },
+  "cause": "The child knows games mostly from ball games.",
+  "reveals": "Offer \"it has a ball\" next to the right answer and ask the question again in a new context.",
+  "help": "Play a game silently, then with its song.",
+  "feedback": "In a singing game the players sing while they play.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_FORMATION": {
+  "skill": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES",
+  "error": "Thinks every singing game is played in a line.",
+  "example": {
+   "question": "In which formation is \"Here we go round the mulberry bush\" played?",
+   "wrong_answer": "in a straight line",
+   "correct_answer": "in a ring (circle)"
+  },
+  "cause": "Lines are the formation the child knows from assembly.",
+  "reveals": "Offer \"in a straight line\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold hands and walk round in a ring while singing.",
+  "feedback": "This game is played in a ring.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_KENYAN": {
+  "skill": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES",
+  "error": "Calls a Kenyan singing game a Western one.",
+  "example": {
+   "question": "Is \"London Bridge is falling down\" a Kenyan or a Western singing game?",
+   "wrong_answer": "Kenyan",
+   "correct_answer": "Western"
+  },
+  "cause": "All singing games learnt at school seem the same.",
+  "reveals": "Offer \"Kenyan\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort game cards into Kenyan and Western.",
+  "feedback": "London Bridge is a Western singing game.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES.M_CAC2_SG_PULL": {
+  "skill": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES",
+  "error": "Pulls hard on hands in a ring game to win.",
+  "example": {
+   "question": "In a ring game, how do you hold hands?",
+   "wrong_answer": "tightly, pulling others along",
+   "correct_answer": "gently, keeping the ring"
+  },
+  "cause": "The child thinks every game is a contest.",
+  "reveals": "Offer \"tightly, pulling others along\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how pulling makes someone fall.",
+  "feedback": "Hold hands gently so no one falls.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_TOES": {
+  "skill": "CREA.G2.PERFOR.KICKING.KICK",
+  "error": "Thinks the toes give the best, most accurate kick.",
+  "example": {
+   "question": "Which part of the foot gives a short, accurate kick?",
+   "wrong_answer": "the toes",
+   "correct_answer": "the inside of the foot"
+  },
+  "cause": "Toe-poking is what young children do first.",
+  "reveals": "Offer \"the toes\" next to the right answer and ask the question again in a new context.",
+  "help": "Kick to a partner with the toes and then with the inside of the foot.",
+  "feedback": "The inside of the foot gives a short, accurate kick.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_STANDING_FOOT": {
+  "skill": "CREA.G2.PERFOR.KICKING.KICK",
+  "error": "Puts the standing foot far behind the ball.",
+  "example": {
+   "question": "Where do you put your standing foot when you kick?",
+   "wrong_answer": "far behind the ball",
+   "correct_answer": "beside the ball"
+  },
+  "cause": "The child takes a big run and stops early.",
+  "reveals": "Offer \"far behind the ball\" next to the right answer and ask the question again in a new context.",
+  "help": "Put a bottle top beside the ball for the standing foot.",
+  "feedback": "Put your standing foot beside the ball.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_ARM": {
+  "skill": "CREA.G2.PERFOR.KICKING.KICK",
+  "error": "Names the arm as a part used in kicking.",
+  "example": {
+   "question": "Which of these is used to kick a ball: the arm or the knee?",
+   "wrong_answer": "the arm",
+   "correct_answer": "the knee"
+  },
+  "cause": "The arms swing when kicking, so the child names them.",
+  "reveals": "Offer \"the arm\" next to the right answer and ask the question again in a new context.",
+  "help": "Point to the thigh, knee, lower leg and foot while kicking slowly.",
+  "feedback": "The leg kicks: thigh, knee, lower leg and foot.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.KICKING.KICK.M_CAC2_KI_LOOK_UP": {
+  "skill": "CREA.G2.PERFOR.KICKING.KICK",
+  "error": "Looks at the goal instead of the ball when kicking.",
+  "example": {
+   "question": "Where do your eyes look as your foot touches the ball?",
+   "wrong_answer": "at the goal",
+   "correct_answer": "at the ball"
+  },
+  "cause": "The child wants to see where the ball will go.",
+  "reveals": "Offer \"at the goal\" next to the right answer and ask the question again in a new context.",
+  "help": "Kick while looking away, then while watching the ball.",
+  "feedback": "Watch the ball when you kick it.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_TWO_STRANDS": {
+  "skill": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+  "error": "Tries to plait with two strands.",
+  "example": {
+   "question": "How many strands do you need for a simple plait?",
+   "wrong_answer": "two",
+   "correct_answer": "three"
+  },
+  "cause": "Two strands are easier to hold.",
+  "reveals": "Offer \"two\" next to the right answer and ask the question again in a new context.",
+  "help": "Try to plait two strands; then add a third.",
+  "feedback": "A simple plait needs three strands.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_SAME_SIDE": {
+  "skill": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+  "error": "Keeps crossing from the same side.",
+  "example": {
+   "question": "You crossed the right strand over the middle. Which strand crosses next?",
+   "wrong_answer": "the right strand again",
+   "correct_answer": "the left strand"
+  },
+  "cause": "The child repeats the last move.",
+  "reveals": "Offer \"the right strand again\" next to the right answer and ask the question again in a new context.",
+  "help": "Say \"right over middle, left over middle\" with each cross.",
+  "feedback": "Cross from the right, then from the left, and repeat.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_NO_TIE": {
+  "skill": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+  "error": "Starts plaiting without tying the top.",
+  "example": {
+   "question": "What do you do before you start to plait?",
+   "wrong_answer": "start plaiting straight away",
+   "correct_answer": "tie the three strands together at the top"
+  },
+  "cause": "The child is eager to start.",
+  "reveals": "Offer \"start plaiting straight away\" next to the right answer and ask the question again in a new context.",
+  "help": "Try plaiting loose strands; they slip apart.",
+  "feedback": "Tie the strands at the top first so they hold.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_MATERIAL": {
+  "skill": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+  "error": "Thinks only wool or thread can be plaited.",
+  "example": {
+   "question": "Can you plait a bracelet from banana fibre?",
+   "wrong_answer": "no, only thread",
+   "correct_answer": "yes"
+  },
+  "cause": "The child has seen plaiting only with wool or hair.",
+  "reveals": "Offer \"no, only thread\" next to the right answer and ask the question again in a new context.",
+  "help": "Show banana fibre, sisal and polythene strips plaited.",
+  "feedback": "Banana fibre, sisal and polythene strips can be plaited too.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_STRETCHED": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL",
+  "error": "Rolls with the body stretched out and calls it an egg roll.",
+  "example": {
+   "question": "In an egg roll, is your body stretched or curled?",
+   "wrong_answer": "stretched out",
+   "correct_answer": "curled up tight like an egg"
+  },
+  "cause": "The log roll of Grade 1 was stretched.",
+  "reveals": "Offer \"stretched out\" next to the right answer and ask the question again in a new context.",
+  "help": "Hug your knees to your chest and rock.",
+  "feedback": "In an egg roll you curl up tight like an egg.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_FORWARD": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL",
+  "error": "Thinks the egg roll goes forward over the head.",
+  "example": {
+   "question": "Which way does an egg roll move?",
+   "wrong_answer": "forward over the head",
+   "correct_answer": "sideways, to the left or right"
+  },
+  "cause": "Forward rolls are the roll seen most often.",
+  "reveals": "Offer \"forward over the head\" next to the right answer and ask the question again in a new context.",
+  "help": "Lie curled on your side and roll to the left along the mat.",
+  "feedback": "An egg roll moves sideways, to the left or the right.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_LET_GO": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL",
+  "error": "Lets go of the shins in the middle of the roll.",
+  "example": {
+   "question": "In an egg roll, what do your arms do?",
+   "wrong_answer": "let go and push the floor",
+   "correct_answer": "hold the shins all the way"
+  },
+  "cause": "The child reaches out to stop rolling.",
+  "reveals": "Offer \"let go and push the floor\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll slowly while counting, holding the shins.",
+  "feedback": "Keep holding your shins so you stay curled.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL.M_CAC2_ER_MARKER": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL",
+  "error": "Thinks markers are for decoration.",
+  "example": {
+   "question": "What are the markers for in an egg roll?",
+   "wrong_answer": "to make the mat pretty",
+   "correct_answer": "to show where to start and stop"
+  },
+  "cause": "The child sees markers as coloured objects.",
+  "reveals": "Offer \"to make the mat pretty\" next to the right answer and ask the question again in a new context.",
+  "help": "Put markers at each end of the mat and roll between them.",
+  "feedback": "Markers show where to start and stop.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_TWO_FEET": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+  "error": "Stands on two feet in a swan balance.",
+  "example": {
+   "question": "How many feet do you stand on in a swan balance?",
+   "wrong_answer": "two",
+   "correct_answer": "one"
+  },
+  "cause": "The child is afraid of falling.",
+  "reveals": "Offer \"two\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a wall, lift one leg back, then let go.",
+  "feedback": "In a swan balance you stand on one foot.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_LEG_FRONT": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+  "error": "Lifts the free leg in front.",
+  "example": {
+   "question": "In a swan balance, where does the free leg go?",
+   "wrong_answer": "out in front",
+   "correct_answer": "straight out behind"
+  },
+  "cause": "Lifting a knee in front is easier.",
+  "reveals": "Offer \"out in front\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at a picture of a swan: the tail is behind.",
+  "feedback": "Stretch the free leg out behind, like a tail.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_ARMS_DOWN": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+  "error": "Keeps the arms at the sides.",
+  "example": {
+   "question": "What do the arms do in a swan balance?",
+   "wrong_answer": "stay at the sides",
+   "correct_answer": "spread out like wings"
+  },
+  "cause": "The child does not see the arms as part of the balance.",
+  "reveals": "Offer \"stay at the sides\" next to the right answer and ask the question again in a new context.",
+  "help": "Try to balance with arms down, then with arms spread.",
+  "feedback": "Spread your arms like wings. It helps you balance.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN.M_CAC2_SW_T_SAME": {
+  "skill": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+  "error": "Thinks the swan balance is the same as the T-balance.",
+  "example": {
+   "question": "Is the swan balance the same as the T-balance?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; in the swan the body leans forward with the head up and arms like wings"
+  },
+  "cause": "Both balances are on one leg.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Do a T-balance, then a swan, and compare.",
+  "feedback": "The swan leans forward with the head up and arms like wings.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_DRUM": {
+  "skill": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND",
+  "error": "Calls a drum a wind instrument because you can blow on it.",
+  "example": {
+   "question": "Is a drum a wind instrument?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, it is a percussion instrument; you hit it"
+  },
+  "cause": "The child knows \"wind\" as blowing air at anything.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Blow on a drum: no sound. Hit it: sound.",
+  "feedback": "A drum is hit, so it is percussion. Wind instruments are blown.",
+  "source": "To confirm by a CBC Creative Activities teacher: names of indigenous flutes and horns and their communities vary by source; check against the Grade 2 learner book and local musicians.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_BLOW_HARD": {
+  "skill": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND",
+  "error": "Blows as hard as possible into a flute.",
+  "example": {
+   "question": "How do you blow a flute?",
+   "wrong_answer": "as hard as you can",
+   "correct_answer": "gently and steadily"
+  },
+  "cause": "Hard blowing seems to give a bigger sound.",
+  "reveals": "Offer \"as hard as you can\" next to the right answer and ask the question again in a new context.",
+  "help": "Blow hard (a squeak) and gently (a clear note).",
+  "feedback": "Blow gently and steadily for a clear note.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_HOLES": {
+  "skill": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND",
+  "error": "Thinks the holes on a flute are only decoration.",
+  "example": {
+   "question": "What are the holes on a flute for?",
+   "wrong_answer": "decoration",
+   "correct_answer": "covering them with fingers changes the note"
+  },
+  "cause": "The child has not seen a flute played.",
+  "reveals": "Offer \"decoration\" next to the right answer and ask the question again in a new context.",
+  "help": "Cover and uncover a hole while blowing.",
+  "feedback": "Covering the holes with your fingers changes the note.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_SHARE": {
+  "skill": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND",
+  "error": "Shares a flute without cleaning it.",
+  "example": {
+   "question": "Your friend wants to play your flute. What do you do first?",
+   "wrong_answer": "give it straight away",
+   "correct_answer": "clean the mouthpiece first"
+  },
+  "cause": "The child does not link sharing mouthpieces with germs.",
+  "reveals": "Offer \"give it straight away\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how to wipe the mouthpiece with a clean cloth.",
+  "feedback": "Clean the mouthpiece before someone else plays.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_THICK_THIN": {
+  "skill": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+  "error": "Rolls coils that are thick in one place and thin in another.",
+  "example": {
+   "question": "How should the coils for a pot be?",
+   "wrong_answer": "any thickness",
+   "correct_answer": "the same thickness all along"
+  },
+  "cause": "The child presses harder at one end.",
+  "reveals": "Offer \"any thickness\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll with flat palms moving out from the middle.",
+  "feedback": "Make coils the same thickness all along.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_NO_JOIN": {
+  "skill": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+  "error": "Stacks coils without joining them.",
+  "example": {
+   "question": "After placing a coil on top of another, what do you do?",
+   "wrong_answer": "nothing",
+   "correct_answer": "press and smooth it onto the coil below"
+  },
+  "cause": "The child thinks the coils stay because they look in place.",
+  "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Lift a pot with unjoined coils: it falls apart.",
+  "feedback": "Press and smooth each coil onto the one below.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_NO_BASE": {
+  "skill": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+  "error": "Starts coiling without a flat base.",
+  "example": {
+   "question": "What do you make first for a coil pot?",
+   "wrong_answer": "the top",
+   "correct_answer": "a flat base"
+  },
+  "cause": "The child starts with the walls they can see.",
+  "reveals": "Offer \"the top\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a flat round base and wind the first coil round it.",
+  "feedback": "Make a flat base first, then build the coils on it.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_PINCH": {
+  "skill": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+  "error": "Says a coil pot is made by pinching.",
+  "example": {
+   "question": "How is a coil pot made?",
+   "wrong_answer": "by pinching a ball of clay",
+   "correct_answer": "by rolling long coils and winding them round"
+  },
+  "cause": "The pinch method was learnt in Grade 1.",
+  "reveals": "Offer \"by pinching a ball of clay\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a pinch pot and a coil pot side by side.",
+  "feedback": "A coil pot is made from long rolled coils wound round.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_TITLE": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+  "error": "Gives the first line of the song as its message.",
+  "example": {
+   "question": "What is the message of a song about washing hands?",
+   "wrong_answer": "it repeats the first line",
+   "correct_answer": "wash your hands to keep germs away"
+  },
+  "cause": "Repeating words is easier than saying the idea.",
+  "reveals": "Offer \"it repeats the first line\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what does the song want us to do?",
+  "feedback": "The message is what the song wants us to know or do.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_TOPICAL": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+  "error": "Thinks a topical song is any song with a nice tune.",
+  "example": {
+   "question": "What is a topical song?",
+   "wrong_answer": "any song with a nice tune",
+   "correct_answer": "a song about one topic, such as road safety"
+  },
+  "cause": "The child does not know the word \"topic\".",
+  "reveals": "Offer \"any song with a nice tune\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort songs by what they are about.",
+  "feedback": "A topical song is about one topic.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_TOPIC_MIX": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+  "error": "Takes the most repeated word in a song as its topic (\"looking\" instead of road safety).",
+  "example": {
+   "question": "A song says \"look right, look left, then cross\". What is its topic?",
+   "wrong_answer": "looking at things",
+   "correct_answer": "road safety"
+  },
+  "cause": "The child picks the most repeated word.",
+  "reveals": "Offer \"looking at things\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: where would you do this?",
+  "feedback": "The topic is road safety.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_MESSAGE.M_CAC2_SM_ONLY_FUN": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+  "error": "Thinks songs are only for fun and have no message.",
+  "example": {
+   "question": "Can a song teach us something?",
+   "wrong_answer": "no, songs are just for fun",
+   "correct_answer": "yes, songs carry messages"
+  },
+  "cause": "The child sings for play.",
+  "reveals": "Offer \"no, songs are just for fun\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a hygiene song and ask what it teaches.",
+  "feedback": "Songs can teach us, like how to keep clean.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_LOUDEST": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+  "error": "Thinks singing loudest is the best technique.",
+  "example": {
+   "question": "What makes a song performed well?",
+   "wrong_answer": "singing the loudest",
+   "correct_answer": "the right tune, clear words, matching gestures and faces"
+  },
+  "cause": "The loudest singer is noticed most.",
+  "reveals": "Offer \"singing the loudest\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a shouted song with a clear, well-acted one.",
+  "feedback": "A good performance has the right tune, clear words and matching actions.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_FACE_MISMATCH": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+  "error": "Smiles while singing a sad song.",
+  "example": {
+   "question": "You sing a sad song. What should your face show?",
+   "wrong_answer": "a big smile",
+   "correct_answer": "a sad face"
+  },
+  "cause": "Children are told to smile when performing.",
+  "reveals": "Offer \"a big smile\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a sad line with a smile and a sad face; compare.",
+  "feedback": "Your face should match the mood of the song.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_MUMBLE": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+  "error": "Thinks words do not need to be clear if the tune is right.",
+  "example": {
+   "question": "Why must words be clear when you sing?",
+   "wrong_answer": "they do not need to be",
+   "correct_answer": "so the listeners understand the message"
+  },
+  "cause": "The child focuses on the tune.",
+  "reveals": "Offer \"they do not need to be\" next to the right answer and ask the question again in a new context.",
+  "help": "Mumble a line and ask the class what you said.",
+  "feedback": "Clear words help listeners get the message.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES.M_CAC2_ST_RANDOM_GESTURE": {
+  "skill": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+  "error": "Makes any gesture, not one that matches the words.",
+  "example": {
+   "question": "The song says \"the sun is high\". Which gesture fits?",
+   "wrong_answer": "clapping",
+   "correct_answer": "pointing up high"
+  },
+  "cause": "Any movement feels like a gesture.",
+  "reveals": "Offer \"clapping\" next to the right answer and ask the question again in a new context.",
+  "help": "Act each line and ask if the action shows the words.",
+  "feedback": "Gestures should show what the words say.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_PROP_COSTUME": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS",
+  "error": "Calls a hat worn by the farmer a prop.",
+  "example": {
+   "question": "In \"The farmer's in his den\", the farmer wears a hat. Is the hat a costume or a prop?",
+   "wrong_answer": "a prop",
+   "correct_answer": "a costume, because it is worn"
+  },
+  "cause": "The child has not yet sorted worn things from held things.",
+  "reveals": "Offer \"a prop\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort cards: things worn (costume) and things held or used (props).",
+  "feedback": "Things you wear are costumes. Things you hold or use are props.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_AUDIENCE": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS",
+  "error": "Counts the audience as participants.",
+  "example": {
+   "question": "Who are the participants in a singing game?",
+   "wrong_answer": "everyone watching",
+   "correct_answer": "the children playing and singing in the game"
+  },
+  "cause": "Everyone present seems part of it.",
+  "reveals": "Offer \"everyone watching\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: who is singing and moving?",
+  "feedback": "Participants are the ones playing and singing.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_NO_PROPS": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS",
+  "error": "Thinks a singing game must always have props.",
+  "example": {
+   "question": "Can a singing game be played without props?",
+   "wrong_answer": "no",
+   "correct_answer": "yes; props are used in some games"
+  },
+  "cause": "The class game used props.",
+  "reveals": "Offer \"no\" next to the right answer and ask the question again in a new context.",
+  "help": "Play a ring game with no props.",
+  "feedback": "Some singing games use props and some do not.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_BRIDGE": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS",
+  "error": "Thinks everyone in London Bridge makes the bridge.",
+  "example": {
+   "question": "In \"London Bridge\", who makes the bridge?",
+   "wrong_answer": "all the children",
+   "correct_answer": "two children joining hands up high"
+  },
+  "cause": "The child focuses on the whole group.",
+  "reveals": "Offer \"all the children\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch the game: count who holds the arch.",
+  "feedback": "Two children make the bridge; the others walk under it.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_ACTIONS": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE",
+  "error": "Describes the actions when asked for the message.",
+  "example": {
+   "question": "What is the message of \"Here we go round the mulberry bush\"?",
+   "wrong_answer": "we walk round in a ring",
+   "correct_answer": "the jobs we do every day, like washing and sweeping"
+  },
+  "cause": "The actions are easier to describe than the idea.",
+  "reveals": "Offer \"we walk round in a ring\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what jobs does each verse show?",
+  "feedback": "The game is about the jobs we do every day.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_REAL_BRIDGE": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE",
+  "error": "Thinks London Bridge is about a bridge in Kenya.",
+  "example": {
+   "question": "Where is London Bridge in the song?",
+   "wrong_answer": "in our town",
+   "correct_answer": "in London, in England, far away"
+  },
+  "cause": "The child places songs in their own world.",
+  "reveals": "Offer \"in our town\" next to the right answer and ask the question again in a new context.",
+  "help": "Show London on a map.",
+  "feedback": "London Bridge is in England. The game is about building and mending it.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_NO_LESSON": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE",
+  "error": "Thinks singing games teach nothing.",
+  "example": {
+   "question": "What can a singing game teach?",
+   "wrong_answer": "nothing, it is only play",
+   "correct_answer": "to work together and take turns"
+  },
+  "cause": "Games feel only like fun.",
+  "reveals": "Offer \"nothing, it is only play\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens if one child does not take turns.",
+  "feedback": "Singing games teach us to work together and take turns.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_FARMER": {
+  "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE",
+  "error": "Thinks \"The farmer's in his den\" is about a wild animal's den.",
+  "example": {
+   "question": "What is \"The farmer's in his den\" about?",
+   "wrong_answer": "a lion in its den",
+   "correct_answer": "a farmer choosing a family and animals"
+  },
+  "cause": "The child knows \"den\" as an animal's home.",
+  "reveals": "Offer \"a lion in its den\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing the verses: the farmer wants a wife, a child, a dog.",
+  "feedback": "It is about a farmer choosing his family and animals.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_ONLY_RIVER": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS",
+  "error": "Thinks a school has no water points if there is no river.",
+  "example": {
+   "question": "Name a water point in a school.",
+   "wrong_answer": "there are none",
+   "correct_answer": "a tap, a tank or a well"
+  },
+  "cause": "The child thinks of water points as rivers and lakes.",
+  "reveals": "Offer \"there are none\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk round the school and count the taps and tanks.",
+  "feedback": "Taps, tanks and wells are water points at school.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_TRENCH": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS",
+  "error": "Thinks a trench full of rain water is not a water point.",
+  "example": {
+   "question": "After rain, a trench fills with water. Is it a water point to be careful at?",
+   "wrong_answer": "no, it is only a trench",
+   "correct_answer": "yes"
+  },
+  "cause": "The trench is dry most of the time.",
+  "reveals": "Offer \"no, it is only a trench\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at the trench after rain.",
+  "feedback": "A trench full of water can be dangerous too.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_TAP_SAFE": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS",
+  "error": "Thinks taps can never be dangerous.",
+  "example": {
+   "question": "How can the area round a tap be dangerous?",
+   "wrong_answer": "it cannot",
+   "correct_answer": "the floor gets wet and slippery"
+  },
+  "cause": "A tap seems small and safe.",
+  "reveals": "Offer \"it cannot\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour water on a smooth floor and walk carefully on it.",
+  "feedback": "Wet floors near taps are slippery.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_TANK_CLIMB": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS",
+  "error": "Thinks climbing a water tank is a good game.",
+  "example": {
+   "question": "Is it safe to climb on a water tank?",
+   "wrong_answer": "yes, it is fun",
+   "correct_answer": "no, you could fall or fall in"
+  },
+  "cause": "Tanks look like a climbing frame.",
+  "reveals": "Offer \"yes, it is fun\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at how high and open a tank top is.",
+  "feedback": "Never climb a water tank. You could fall.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_TAP_OPEN": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL",
+  "error": "Leaves the tap running after use.",
+  "example": {
+   "question": "You finish washing your hands. What do you do?",
+   "wrong_answer": "leave the tap running for the next child",
+   "correct_answer": "close the tap"
+  },
+  "cause": "The child wants to help the next person.",
+  "reveals": "Offer \"leave the tap running for the next child\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the puddle a running tap makes.",
+  "feedback": "Close the tap after use. It saves water and keeps the floor dry.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_RUN_WET": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL",
+  "error": "Runs across a wet floor.",
+  "example": {
+   "question": "The floor near the tap is wet. What do you do?",
+   "wrong_answer": "run across quickly",
+   "correct_answer": "walk slowly or go round it"
+  },
+  "cause": "Running seems quicker and safer.",
+  "reveals": "Offer \"run across quickly\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch a toy slide on a wet surface.",
+  "feedback": "Walk slowly or go round a wet floor.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_TELL": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL",
+  "error": "Keeps quiet about an open tank.",
+  "example": {
+   "question": "You see a tank with its lid off. What do you do?",
+   "wrong_answer": "nothing",
+   "correct_answer": "tell a teacher"
+  },
+  "cause": "The child thinks it is not their job.",
+  "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Role play telling a teacher.",
+  "feedback": "Tell a teacher at once about an open tank or well.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_SPLASH": {
+  "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL",
+  "error": "Thinks splashing friends at the tap is harmless.",
+  "example": {
+   "question": "Is it all right to splash friends at the tap?",
+   "wrong_answer": "yes, it is play",
+   "correct_answer": "no, it wastes water and makes the floor slippery"
+  },
+  "cause": "Splashing is fun.",
+  "reveals": "Offer \"yes, it is play\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what happens to the floor and the water?",
+  "feedback": "Do not splash at the tap. The floor gets slippery.",
+  "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

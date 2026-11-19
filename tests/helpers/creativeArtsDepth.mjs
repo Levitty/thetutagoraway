@@ -10,11 +10,12 @@ import { scienceDepthTests } from './scienceDepth.mjs';
 export const CREATIVE_NOT_TESTED = /^(appreciate|enjoy|value|acknowledge|realise|recognise|show interest|participate)/i;
 
 export function creativeArtsDepthTests(opts) {
-  const { grade } = opts;
-  scienceDepthTests({ dir: 'creative_arts', subject: 'creativearts', notTested: CREATIVE_NOT_TESTED, ...opts });
-  const source = JSON.parse(readFileSync(new URL(`../../curriculum/creative_arts/g${grade}.json`, import.meta.url), 'utf8'));
+  // dir and subject default to Creative Arts G4-9; Creative Activities G1-3 pass dir 'creative_activities', subject 'creativeactivities' (19 Nov 2026).
+  const { grade, dir = 'creative_arts', subject = 'creativearts' } = opts;
+  scienceDepthTests({ notTested: CREATIVE_NOT_TESTED, ...opts, dir, subject });
+  const source = JSON.parse(readFileSync(new URL(`../../curriculum/${dir}/g${grade}.json`, import.meta.url), 'utf8'));
   const indicators = new Set(source.rubrics.flatMap(r => r.indicators.map(i => i.code)));
-  test(`creativearts Grade ${grade}: practical outcomes go to the teacher's KICD rubric through a knowledge skill, never a phone question`, () => {
+  test(`${subject} Grade ${grade}: practical outcomes go to the teacher's KICD rubric through a knowledge skill, never a phone question`, () => {
     let n = 0;
     for (const s of source.sub_strands) for (const k of s.skills) {
       if (!k.teacher_rubric) continue;

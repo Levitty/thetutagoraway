@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.SONGS",
+ "title": "Songs",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Choose action songs on topics the class is learning. Sing in unison; actions show the words.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+   "key_step": "The child says what an action song is about and what it tells us to do, and names how to perform it: tune, clear words, actions, face.",
+   "floor": {
+    "prerequisite": "Sings songs with actions (pre-primary).",
+    "question": "Show me the action for \"wash your face\".",
+    "answer": "does the action"
+   },
+   "representations": [
+    "action songs",
+    "picture cards of the topic",
+    "a mirror"
+   ],
+   "steps": [
+    "Sing the song together.",
+    "Do the actions the words say.",
+    "Ask: what does it tell us to do?"
+   ],
+   "contexts": [
+    "a hand-washing song before lunch",
+    "a song at assembly"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing \"this is the way we wash our hands\".",
+     "say": "What does it tell us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: wash our hands."
+    },
+    {
+     "beat": "predict",
+     "do": "What action goes with it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Rubbing the hands."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_MESSAGE_ACTIONS",
+     "listen_for": [
+      "we move our hands up and down"
+     ],
+     "ask": "What is the message of a song about brushing teeth?",
+     "repair": "Ask: what does the song want us to do every day?"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_RANDOM_ACTION",
+     "listen_for": [
+      "jump"
+     ],
+     "ask": "The song says \"clap your hands\". What action do you do?",
+     "repair": "Do each action as you sing its words."
+    },
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_UNISON",
+     "listen_for": [
+      "each child sings their own song"
+     ],
+     "ask": "What does singing in unison mean?",
+     "repair": "Sing together; then each child sings alone."
+    },
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_SHOUT",
+     "listen_for": [
+      "shout it loudly"
+     ],
+     "ask": "How do you sing an action song well?",
+     "repair": "Compare a shouted line with a clear one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a song about brushing teeth tell us?",
+     "answer": "brush your teeth",
+     "shows": "message"
+    },
+    {
+     "question": "What does unison mean?",
+     "answer": "everyone sings together",
+     "shows": "unison"
+    }
+   ]
+  }
+ ]
+}

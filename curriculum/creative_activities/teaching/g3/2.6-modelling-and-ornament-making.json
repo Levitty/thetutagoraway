@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M",
+ "title": "Modelling and Ornament Making.",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use clay, paper pulp or salt dough. Pierce while soft; dry in the shade; paint when dry.",
+ "skills": [
+  {
+   "skill": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS",
+   "key_step": "The child orders bead making by the pellet technique: roll a ball, pierce while soft, dry in shade, paint, thread.",
+   "floor": {
+    "prerequisite": "Models an item by coiling (Grade 2).",
+    "question": "What do you roll to make a coil pot?",
+    "answer": "long rolls of clay"
+   },
+   "representations": [
+    "clay or paper pulp",
+    "sticks for piercing",
+    "a beaded necklace"
+   ],
+   "steps": [
+    "Roll a small ball.",
+    "Pierce a hole while soft.",
+    "Dry in the shade.",
+    "Paint, then thread."
+   ],
+   "contexts": [
+    "beadwork sold in a local market",
+    "a bracelet for Mother's Day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a soft clay ball.",
+     "say": "What do we do next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: make a hole."
+    },
+    {
+     "beat": "predict",
+     "do": "Why now and not later?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Dry clay cracks when pierced."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS.M_CAC3_BD_HOLE_DRY",
+     "listen_for": [
+      "after it dries"
+     ],
+     "ask": "When do you make the hole in a clay bead?",
+     "repair": "Try to push a stick through a dry bead and a soft bead."
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS.M_CAC3_BD_PELLET_COIL",
+     "listen_for": [
+      "a long coil"
+     ],
+     "ask": "In the pellet technique, what shape do you roll?",
+     "repair": "Roll between flat palms in circles, not back and forth."
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS.M_CAC3_BD_PAINT_WET",
+     "listen_for": [
+      "straight away, while wet"
+     ],
+     "ask": "When do you paint clay beads?",
+     "repair": "Paint one wet bead and one dry bead and compare."
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS.M_CAC3_BD_SUN_DRY",
+     "listen_for": [
+      "in hot sun"
+     ],
+     "ask": "Where do you dry clay beads?",
+     "repair": "Dry two beads, one in hot sun and one in shade; look for cracks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a pellet?",
+     "answer": "a small ball of clay rolled between the palms",
+     "shows": "pellet"
+    },
+    {
+     "question": "When do you paint the beads?",
+     "answer": "after they are dry",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

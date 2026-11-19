@@ -3,15 +3,15 @@
  "subject_key": "creative_activities",
  "grade": 1,
  "source": "KICD Creative Activities, First Published in 2021; Revised in 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 19 Nov 2026, depth pass: two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_activities/teaching/g1; pre-primary readiness skills under readiness), awaiting a CBC Creative Activities teacher's review",
  "totals": {
   "strands": 3,
   "sub_strands": 16,
   "outcomes": 68,
   "lessons": 210,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 24,
+  "prerequisites": 48,
+  "misconceptions": 96
  },
  "sub_strands": [
   {
@@ -88,8 +88,120 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+     "name": "Name ways of jumping and how to jump safely",
+     "outcomes": [
+      "CREA.G1.CREATI.JUMPING.a"
+     ],
+     "mastery": "The child names ways of jumping (for height, for distance, forward, backward, to the right, to the left, over a rope or a line), says a jump takes off and lands on two feet with bent knees, and names one safety rule (land softly, jump on soft ground, leave space between children). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: b) improvise objects to be used for jumping; c) jump in different ways for coordination; d) sing songs while jumping for fun.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.MOVE_BASIC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Jumping on two feet in play (pre-primary) comes before naming ways and directions of jumping. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Comparing longer and shorter (Grade 1 Maths) is used to tell a jump for distance. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.JUMPING.b",
+       "CREA.G1.CREATI.JUMPING.c",
+       "CREA.G1.CREATI.JUMPING.d"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_ONE_FOOT",
+     "skill": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+     "error": "Calls hopping on one foot a jump.",
+     "example": {
+      "question": "Is hopping on one foot the same as jumping on two feet?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, a jump uses two feet"
+     },
+     "cause": "Young children use \"jump\" for every bounce.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Jump on two feet, then hop on one, and look at the feet.",
+     "feedback": "A jump takes off and lands on two feet.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_STIFF_LEGS",
+     "skill": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+     "error": "Lands with straight, stiff legs.",
+     "example": {
+      "question": "How should your knees be when you land from a jump?",
+      "wrong_answer": "straight and stiff",
+      "correct_answer": "bent, so you land softly"
+     },
+     "cause": "The child does not feel the jolt as a danger.",
+     "reveals": "Offer \"straight and stiff\" next to the right answer and ask the question again in a new context.",
+     "help": "Land like a cat, quietly, with bent knees.",
+     "feedback": "Bend your knees and land softly.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_HEIGHT_DIST",
+     "skill": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+     "error": "Mixes up jumping for height and jumping for distance.",
+     "example": {
+      "question": "You jump as far forward as you can. Is that a jump for height or for distance?",
+      "wrong_answer": "for height",
+      "correct_answer": "for distance"
+     },
+     "cause": "The child has not linked the words to the movement.",
+     "reveals": "Offer \"for height\" next to the right answer and ask the question again in a new context.",
+     "help": "Jump up to touch a leaf (height), then jump to a line far away (distance).",
+     "feedback": "Jumping far forward is a jump for distance.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_CLOSE",
+     "skill": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+     "error": "Jumps very close to other children.",
+     "example": {
+      "question": "Where should you stand when many children jump?",
+      "wrong_answer": "close to my friends",
+      "correct_answer": "with space around me"
+     },
+     "cause": "The child likes to stay near friends.",
+     "reveals": "Offer \"close to my friends\" next to the right answer and ask the question again in a new context.",
+     "help": "Stretch arms out: no one should be inside your space.",
+     "feedback": "Leave space around you so no one gets hurt.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -163,8 +275,226 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT",
+     "name": "Identify things that keep a steady beat",
+     "outcomes": [
+      "CREA.G1.CREATI.RHYTHM.a"
+     ],
+     "mastery": "The child names things that keep a steady pulse (a clock ticking, walking feet, a heartbeat, a drum played evenly), tells a steady beat from sounds that come at uneven times (rain, people talking), and says a steady beat goes on evenly like walking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: b) play a steady beat on a percussion instrument while singing.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.CLAP_ALONG",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Clapping along with a song (pre-primary) comes before naming what keeps a steady beat. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.LISTEN_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming familiar sounds (pre-primary) is needed to say which keep a steady beat. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.RHYTHM.b"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+     "name": "Name the body percussion sounds",
+     "outcomes": [
+      "CREA.G1.CREATI.RHYTHM.c"
+     ],
+     "mastery": "The child names the body percussion sounds (clapping hands, tapping knees or the chest, snapping fingers, stamping feet) and says which body parts make each, and that body percussion can accompany a song by keeping its beat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: c) create a rhythmic accompaniment to a song using body percussion.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.BODY_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming body parts (pre-primary) is needed to say which part makes each sound. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G1.CREATI.RHYTHM.BEAT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Feeling a steady beat comes before keeping it with body percussion. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.RHYTHM.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_RAIN",
+     "skill": "CREA.G1.CREATI.RHYTHM.BEAT",
+     "error": "Says rain on the roof keeps a steady beat.",
+     "example": {
+      "question": "Does rain on the roof keep a steady beat?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, the drops come at uneven times"
+     },
+     "cause": "Rain makes a repeated sound, so the child hears it as a beat.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap with a clock tick, then try to clap with the rain.",
+     "feedback": "A steady beat is even like a clock. Rain drops come unevenly.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_FASTER",
+     "skill": "CREA.G1.CREATI.RHYTHM.BEAT",
+     "error": "Gets faster and faster while keeping a beat.",
+     "example": {
+      "question": "When you keep a steady beat, does it get faster?",
+      "wrong_answer": "yes, faster and faster",
+      "correct_answer": "no, it stays even"
+     },
+     "cause": "Excitement makes the child speed up.",
+     "reveals": "Offer \"yes, faster and faster\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk to the drum: do your feet speed up?",
+     "feedback": "A steady beat stays even, like walking.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_TALK",
+     "skill": "CREA.G1.CREATI.RHYTHM.BEAT",
+     "error": "Says people talking keep a steady beat.",
+     "example": {
+      "question": "Which keeps a steady beat: a ticking clock or people talking?",
+      "wrong_answer": "people talking",
+      "correct_answer": "a ticking clock"
+     },
+     "cause": "Talking is a sound the child hears all the time.",
+     "reveals": "Offer \"people talking\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap with talking, then with a clock.",
+     "feedback": "A ticking clock keeps a steady beat.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BEAT.M_CAC1_BT_LOUD",
+     "skill": "CREA.G1.CREATI.RHYTHM.BEAT",
+     "error": "Thinks a steady beat must be loud.",
+     "example": {
+      "question": "Can a soft sound keep a steady beat?",
+      "wrong_answer": "no, it must be loud",
+      "correct_answer": "yes"
+     },
+     "cause": "Drums are loud, so the child links beat with loudness.",
+     "reveals": "Offer \"no, it must be loud\" next to the right answer and ask the question again in a new context.",
+     "help": "Tap a steady beat softly with one finger.",
+     "feedback": "A soft sound can keep a steady beat too.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_SNAP_CLAP",
+     "skill": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+     "error": "Calls snapping fingers clapping.",
+     "example": {
+      "question": "You rub your thumb and finger to make a click. What is that?",
+      "wrong_answer": "clapping",
+      "correct_answer": "snapping"
+     },
+     "cause": "Both make a short sound with the hands.",
+     "reveals": "Offer \"clapping\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap, then snap, and look at the hands.",
+     "feedback": "A click with the thumb and finger is a snap.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_STAMP_HANDS",
+     "skill": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+     "error": "Says stamping is done with the hands.",
+     "example": {
+      "question": "Which body part do you stamp with?",
+      "wrong_answer": "hands",
+      "correct_answer": "feet"
+     },
+     "cause": "The child mixes the new words.",
+     "reveals": "Offer \"hands\" next to the right answer and ask the question again in a new context.",
+     "help": "Stamp your feet while saying \"stamp\".",
+     "feedback": "You stamp with your feet.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_INSTRUMENT",
+     "skill": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+     "error": "Thinks you need an instrument to play percussion.",
+     "example": {
+      "question": "Can you play percussion with only your body?",
+      "wrong_answer": "no, you need a drum",
+      "correct_answer": "yes, by clapping, tapping, snapping and stamping"
+     },
+     "cause": "Percussion was shown with drums.",
+     "reveals": "Offer \"no, you need a drum\" next to the right answer and ask the question again in a new context.",
+     "help": "Play a song with claps and stamps only.",
+     "feedback": "Your body can play percussion.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION.M_CAC1_BP_OFF_BEAT",
+     "skill": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+     "error": "Claps whenever they like during a song.",
+     "example": {
+      "question": "When you clap along to a song, when do you clap?",
+      "wrong_answer": "whenever I want",
+      "correct_answer": "on the beat, evenly with the song"
+     },
+     "cause": "The child claps for fun, not in time.",
+     "reveals": "Offer \"whenever I want\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk and clap together with the song.",
+     "feedback": "Clap evenly on the beat of the song.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -237,8 +567,119 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES",
+     "name": "Identify kinds of lines and their directions",
+     "outcomes": [
+      "CREA.G1.CREATI.DRAWING.a"
+     ],
+     "mastery": "The child names straight, wavy, zigzag and curved lines, says the direction of a straight line (standing up: vertical; lying down: horizontal; slanting: diagonal), and finds each kind of line in objects around them (a door edge, a road, a snake, a fence). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: b) draw lines in different directions; c) draw patterns using lines in different directions.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Telling straight from curved lines (Grade 1 Maths) is the start of naming wavy and zigzag lines. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.HOLD_CRAYON",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Holding a crayon and making marks (pre-primary) comes before drawing lines in named directions. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.DRAWING.b",
+       "CREA.G1.CREATI.DRAWING.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_WAVY_ZIGZAG",
+     "skill": "CREA.G1.CREATI.DRAWING.LINES",
+     "error": "Calls a wavy line a zigzag.",
+     "example": {
+      "question": "A line goes up and down smoothly like water. Is it a zigzag?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, it is wavy"
+     },
+     "cause": "Both lines go up and down.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw both: the zigzag has sharp points, the wavy line is smooth.",
+     "feedback": "A zigzag has sharp points. A wavy line is smooth.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_VERTICAL",
+     "skill": "CREA.G1.CREATI.DRAWING.LINES",
+     "error": "Calls a line lying down vertical.",
+     "example": {
+      "question": "A line lies flat like the floor. What is it?",
+      "wrong_answer": "vertical",
+      "correct_answer": "horizontal"
+     },
+     "cause": "The new words are easily swapped.",
+     "reveals": "Offer \"vertical\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand up straight (vertical), then lie down flat (horizontal).",
+     "feedback": "A line lying down flat is horizontal.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_DIAGONAL",
+     "skill": "CREA.G1.CREATI.DRAWING.LINES",
+     "error": "Calls a slanting line straight up.",
+     "example": {
+      "question": "A line slants like a ladder against a wall. What is it?",
+      "wrong_answer": "vertical",
+      "correct_answer": "diagonal"
+     },
+     "cause": "It goes upwards, so the child calls it standing up.",
+     "reveals": "Offer \"vertical\" next to the right answer and ask the question again in a new context.",
+     "help": "Lean a ruler against a box and compare with a ruler standing up.",
+     "feedback": "A slanting line is diagonal.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_CURVED_STRAIGHT",
+     "skill": "CREA.G1.CREATI.DRAWING.LINES",
+     "error": "Says a bent stick drawing is a straight line because it is a line.",
+     "example": {
+      "question": "Is the edge of a ball a straight line or a curved line?",
+      "wrong_answer": "straight",
+      "correct_answer": "curved"
+     },
+     "cause": "All lines seem straight to the child.",
+     "reveals": "Offer \"straight\" next to the right answer and ask the question again in a new context.",
+     "help": "Run a finger round a ball and along a ruler.",
+     "feedback": "The edge of a ball is curved.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -304,8 +745,118 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH",
+     "name": "Name the body parts and directions of stretching",
+     "outcomes": [
+      "CREA.G1.CREATI.STRETCHING.a"
+     ],
+     "mastery": "The child names the body parts that stretch (arms, legs, back, neck, fingers), the directions of a stretch (upwards, forward, backwards, sideways) and the positions (standing, sitting, kneeling, lying), and says a stretch is slow and held without bouncing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: b) perform stretching in different directions for flexibility.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.BODY_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming the main body parts (pre-primary) comes before naming the parts that stretch. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.MOVE_BASIC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Moving and standing still on request (pre-primary) is needed to hold a stretch. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.STRETCHING.b"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_BOUNCE",
+     "skill": "CREA.G1.CREATI.STRETCHING.STRETCH",
+     "error": "Bounces up and down to stretch further.",
+     "example": {
+      "question": "How do you stretch your legs safely?",
+      "wrong_answer": "bounce up and down",
+      "correct_answer": "reach slowly and hold still"
+     },
+     "cause": "Bouncing looks like trying harder.",
+     "reveals": "Offer \"bounce up and down\" next to the right answer and ask the question again in a new context.",
+     "help": "Reach slowly, count to five and hold.",
+     "feedback": "Stretch slowly and hold. Do not bounce.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_SIDEWAYS",
+     "skill": "CREA.G1.CREATI.STRETCHING.STRETCH",
+     "error": "Stretches forward when asked to stretch sideways.",
+     "example": {
+      "question": "Stretch sideways. Which way do your arms go?",
+      "wrong_answer": "in front of me",
+      "correct_answer": "out to the sides"
+     },
+     "cause": "The word \"sideways\" is new.",
+     "reveals": "Offer \"in front of me\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand between two friends and reach towards each.",
+     "feedback": "Sideways means out to the sides.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_STANDING_ONLY",
+     "skill": "CREA.G1.CREATI.STRETCHING.STRETCH",
+     "error": "Thinks you can only stretch standing up.",
+     "example": {
+      "question": "Can you stretch while sitting or lying down?",
+      "wrong_answer": "no, only standing",
+      "correct_answer": "yes"
+     },
+     "cause": "Stretches seen at assembly are standing.",
+     "reveals": "Offer \"no, only standing\" next to the right answer and ask the question again in a new context.",
+     "help": "Do one stretch in each position.",
+     "feedback": "You can stretch standing, sitting, kneeling or lying down.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_HURT",
+     "skill": "CREA.G1.CREATI.STRETCHING.STRETCH",
+     "error": "Thinks a stretch should hurt to work.",
+     "example": {
+      "question": "Should a stretch hurt?",
+      "wrong_answer": "yes, it must hurt",
+      "correct_answer": "no; you feel a gentle pull, not pain"
+     },
+     "cause": "Children hear that exercise is hard.",
+     "reveals": "Offer \"yes, it must hurt\" next to the right answer and ask the question again in a new context.",
+     "help": "Stretch until you feel a gentle pull, then stop.",
+     "feedback": "A stretch feels like a gentle pull. Stop if it hurts.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -391,8 +942,228 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+     "name": "Identify materials and tools for painting and colouring",
+     "outcomes": [
+      "CREA.G1.CREATI.PAINTING_AND_COLOURING.a"
+     ],
+     "mastery": "The child sorts what is used up (materials: paper, fabric, paints, crayons) from what helps them work (tools: brushes, sponges, a palette), names each, and names the colours of things around them to colour them as they look (green leaves, a blue sky, brown soil). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: b) colour a picture to immitate the environment.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.COLOUR_NAMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming the basic colours (pre-primary) is needed to colour things as they look. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.HOLD_CRAYON",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Holding a crayon or brush (pre-primary) comes before naming materials and tools. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.PAINTING_AND_COLOURING.b"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+     "name": "Say how to paint with a brush, fingers and a sponge",
+     "outcomes": [
+      "CREA.G1.CREATI.PAINTING_AND_COLOURING.c"
+     ],
+     "mastery": "The child says how each way of painting is done (a brush: dip the tip and stroke; fingers: dip one finger and dab or drag; a sponge: dip, press and lift) and which mark each makes (lines, dots, soft patches), and says hands and tools are washed afterwards. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: c) paint shapes using a brush; d) paint using fingers on a surface; e) paint using a sponge on a surface.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the tools comes before saying how each is used. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.HOLD_CRAYON",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Making marks with a crayon or brush (pre-primary) comes before painting shapes. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.PAINTING_AND_COLOURING.c",
+       "CREA.G1.CREATI.PAINTING_AND_COLOURING.d",
+       "CREA.G1.CREATI.PAINTING_AND_COLOURING.e"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_BRUSH_MATERIAL",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+     "error": "Calls a brush a material.",
+     "example": {
+      "question": "Is a brush a tool or a material?",
+      "wrong_answer": "a material",
+      "correct_answer": "a tool"
+     },
+     "cause": "The child has not sorted used-up things from working things.",
+     "reveals": "Offer \"a material\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort: what is used up (paint, paper) and what we use again (brush, sponge).",
+     "feedback": "A brush is a tool. Paint and paper are materials.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_SKY_GREEN",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+     "error": "Colours the sky green and the grass blue.",
+     "example": {
+      "question": "Which colour is the sky on a clear day?",
+      "wrong_answer": "green",
+      "correct_answer": "blue"
+     },
+     "cause": "The child picks the nearest crayon or mixes up colour names.",
+     "reveals": "Offer \"green\" next to the right answer and ask the question again in a new context.",
+     "help": "Go outside and name the colour of the sky and the grass.",
+     "feedback": "The sky is blue and the grass is green.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_PALETTE",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+     "error": "Thinks a palette is a kind of paint.",
+     "example": {
+      "question": "What is a palette?",
+      "wrong_answer": "a kind of paint",
+      "correct_answer": "a flat board or plate to hold and mix paint"
+     },
+     "cause": "The word is new.",
+     "reveals": "Offer \"a kind of paint\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a palette with paint on it, or a plastic lid used as one.",
+     "feedback": "A palette holds the paint while you work.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS.M_CAC1_PT_FABRIC",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+     "error": "Thinks you can only paint on paper.",
+     "example": {
+      "question": "Can you paint on fabric?",
+      "wrong_answer": "no, only paper",
+      "correct_answer": "yes"
+     },
+     "cause": "Paper is the only surface used so far.",
+     "reveals": "Offer \"no, only paper\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a painted piece of cloth.",
+     "feedback": "You can paint on fabric as well as paper.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_SPONGE_RUB",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+     "error": "Rubs the sponge hard across the paper.",
+     "example": {
+      "question": "How do you paint with a sponge?",
+      "wrong_answer": "rub it hard across the paper",
+      "correct_answer": "dip it, press it down and lift it"
+     },
+     "cause": "Sponges are used to wash and scrub at home.",
+     "reveals": "Offer \"rub it hard across the paper\" next to the right answer and ask the question again in a new context.",
+     "help": "Press and lift a sponge to make a soft patch.",
+     "feedback": "Press the sponge down and lift it up.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_WHOLE_HAND",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+     "error": "Dips the whole hand into the paint for finger painting.",
+     "example": {
+      "question": "For finger painting, what do you dip?",
+      "wrong_answer": "the whole hand",
+      "correct_answer": "one finger"
+     },
+     "cause": "The child enjoys the feel of paint.",
+     "reveals": "Offer \"the whole hand\" next to the right answer and ask the question again in a new context.",
+     "help": "Dip one finger and make a row of dots.",
+     "feedback": "Dip one finger to paint with your finger.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_NO_WASH",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+     "error": "Thinks hands do not need washing after painting.",
+     "example": {
+      "question": "What do you do after finger painting?",
+      "wrong_answer": "go to eat",
+      "correct_answer": "wash my hands"
+     },
+     "cause": "The child does not link paint with being unsafe to eat.",
+     "reveals": "Offer \"go to eat\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about why paint must not go in the mouth.",
+     "feedback": "Wash your hands after painting.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS.M_CAC1_PW_BRUSH_HARD",
+     "skill": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+     "error": "Presses the brush down so hard the bristles spread.",
+     "example": {
+      "question": "How do you hold the brush on the paper?",
+      "wrong_answer": "press it down hard",
+      "correct_answer": "stroke it gently"
+     },
+     "cause": "More pressure seems to give more colour.",
+     "reveals": "Offer \"press it down hard\" next to the right answer and ask the question again in a new context.",
+     "help": "Paint one line pressing hard and one gently.",
+     "feedback": "Stroke gently with the brush.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -461,8 +1232,316 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+     "name": "Tell melodic from non-melodic sounds",
+     "outcomes": [
+      "CREA.G1.CREATI.MELODY.a"
+     ],
+     "mastery": "The child says a melodic sound has a tune that can be sung or hummed (a song, a flute, a bird singing) and a non-melodic sound has no tune (a door banging, clapping, a drum, a hammer), and sorts sounds into the two. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.LISTEN_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming familiar sounds (pre-primary) comes before sorting them as melodic or not. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.SING_RHYMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Singing songs (pre-primary) gives the child the feel of a tune. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+     "name": "Recognise like and unlike passages in short melodies",
+     "outcomes": [
+      "CREA.G1.CREATI.MELODY.b"
+     ],
+     "mastery": "The child hears two short parts of a melody and says if they are like (the same tune) or unlike (a different tune), and listens to the tune, not only the words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing what a tune is comes before telling two tunes apart. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.SORT_ONE_ATTRIBUTE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Sorting by one attribute (pre-primary Maths) is the same thinking as sorting tunes into same and different. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO",
+     "name": "Say how to echo a melodic pattern",
+     "outcomes": [
+      "CREA.G1.CREATI.MELODY.c"
+     ],
+     "mastery": "The child says to echo is to listen first and then sing or hum back exactly the same short tune, the same speed and the same loudness, and waits until the leader has finished before echoing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: c) echo simple melodic patterns by singing or humming for aural skill development.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Hearing when two tunes are the same is how an echo is checked. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.SING_RHYMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Singing simple songs (pre-primary) comes before singing back a tune. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.MELODY.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_DRUM",
+     "skill": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+     "error": "Says a drum makes a melodic sound.",
+     "example": {
+      "question": "Does a drum make a sound with a tune you can hum?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, it is non-melodic"
+     },
+     "cause": "Drums are in music, so the child thinks they make tunes.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Hum along with a flute, then try with a drum.",
+     "feedback": "A drum has no tune. It is non-melodic.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_BIRD",
+     "skill": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+     "error": "Says a bird singing is non-melodic because it is not a person.",
+     "example": {
+      "question": "Is a bird singing a melodic sound?",
+      "wrong_answer": "no, only people sing",
+      "correct_answer": "yes, it has a tune"
+     },
+     "cause": "The child links tunes only with people.",
+     "reveals": "Offer \"no, only people sing\" next to the right answer and ask the question again in a new context.",
+     "help": "Whistle back a bird's tune.",
+     "feedback": "A bird's song has a tune, so it is melodic.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_LOUD",
+     "skill": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+     "error": "Thinks loud sounds are melodic and soft ones are not.",
+     "example": {
+      "question": "A door bangs loudly. Is it melodic?",
+      "wrong_answer": "yes, it is loud",
+      "correct_answer": "no, it has no tune"
+     },
+     "cause": "Loudness catches the child's attention.",
+     "reveals": "Offer \"yes, it is loud\" next to the right answer and ask the question again in a new context.",
+     "help": "Hum softly, then bang a desk; which has a tune?",
+     "feedback": "Melodic means it has a tune. Loud or soft does not matter.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS.M_CAC1_MS_CLAP",
+     "skill": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+     "error": "Says clapping is melodic because it is used in songs.",
+     "example": {
+      "question": "Is clapping a melodic sound?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, it has no tune"
+     },
+     "cause": "Clapping goes with songs.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to clap a tune: can you make it go up and down?",
+     "feedback": "Clapping has no tune. It is non-melodic.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_WORDS",
+     "skill": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+     "error": "Says two parts are unlike because the words are different.",
+     "example": {
+      "question": "Two parts have the same tune and different words. Like or unlike?",
+      "wrong_answer": "unlike",
+      "correct_answer": "like"
+     },
+     "cause": "The child listens to the words.",
+     "reveals": "Offer \"unlike\" next to the right answer and ask the question again in a new context.",
+     "help": "Hum both parts with no words.",
+     "feedback": "The tune is the same, so they are like.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_SAME_START",
+     "skill": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+     "error": "Says two tunes are alike because they start the same.",
+     "example": {
+      "question": "Two tunes start the same but end differently. Are they like?",
+      "wrong_answer": "yes, they start the same",
+      "correct_answer": "no, they are unlike"
+     },
+     "cause": "The child stops listening after the start.",
+     "reveals": "Offer \"yes, they start the same\" next to the right answer and ask the question again in a new context.",
+     "help": "Listen to the end of each tune.",
+     "feedback": "Listen to the whole tune. These end differently, so they are unlike.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_LOUD",
+     "skill": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+     "error": "Says a tune sung louder is unlike.",
+     "example": {
+      "question": "The same tune is sung loudly. Is it like or unlike?",
+      "wrong_answer": "unlike",
+      "correct_answer": "like"
+     },
+     "cause": "Loudness changes the feel.",
+     "reveals": "Offer \"unlike\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing the tune soft and loud; are the notes the same?",
+     "feedback": "It is the same tune, just louder. It is like.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE.M_CAC1_LU_SINGER",
+     "skill": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+     "error": "Says a tune is unlike because a different person sings it.",
+     "example": {
+      "question": "A boy and a girl sing the same tune. Like or unlike?",
+      "wrong_answer": "unlike",
+      "correct_answer": "like"
+     },
+     "cause": "Different voices sound different.",
+     "reveals": "Offer \"unlike\" next to the right answer and ask the question again in a new context.",
+     "help": "Two children sing the same line; hum it together.",
+     "feedback": "The tune is the same, so it is like.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_TOGETHER",
+     "skill": "CREA.G1.CREATI.MELODY.ECHO",
+     "error": "Sings along with the leader instead of after.",
+     "example": {
+      "question": "When do you sing in an echo?",
+      "wrong_answer": "at the same time as the leader",
+      "correct_answer": "after the leader has finished"
+     },
+     "cause": "The child is used to singing together.",
+     "reveals": "Offer \"at the same time as the leader\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold up a hand while the leader sings; drop it to echo.",
+     "feedback": "Wait for the leader to finish, then sing it back.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_NEW_TUNE",
+     "skill": "CREA.G1.CREATI.MELODY.ECHO",
+     "error": "Sings a different tune back.",
+     "example": {
+      "question": "In an echo, what tune do you sing?",
+      "wrong_answer": "any tune",
+      "correct_answer": "exactly the same tune"
+     },
+     "cause": "The child likes to make up their own tune.",
+     "reveals": "Offer \"any tune\" next to the right answer and ask the question again in a new context.",
+     "help": "Listen, hum it in your head, then sing.",
+     "feedback": "An echo copies exactly the same tune.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_LOUDER",
+     "skill": "CREA.G1.CREATI.MELODY.ECHO",
+     "error": "Echoes much louder than the leader.",
+     "example": {
+      "question": "The leader sings softly. How do you echo?",
+      "wrong_answer": "loudly",
+      "correct_answer": "softly, the same as the leader"
+     },
+     "cause": "The child thinks louder is better.",
+     "reveals": "Offer \"loudly\" next to the right answer and ask the question again in a new context.",
+     "help": "Play an echo game in a quiet voice.",
+     "feedback": "Echo the same loudness as the leader.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.MELODY.ECHO.M_CAC1_EC_FASTER",
+     "skill": "CREA.G1.CREATI.MELODY.ECHO",
+     "error": "Rushes the echo faster than the leader.",
+     "example": {
+      "question": "Should an echo be faster than the leader?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, the same speed"
+     },
+     "cause": "The child hurries to finish.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Echo while the teacher taps the speed.",
+     "feedback": "An echo is the same speed as the leader.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -531,8 +1610,119 @@
      "indicator": "CREA.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+     "name": "Recognise and continue patterns of letters and numerals",
+     "outcomes": [
+      "CREA.G1.CREATI.PATTERN_MAKING.a"
+     ],
+     "mastery": "The child says a pattern is something that repeats in the same order, finds the part that repeats in a pattern of letters (a b a b, or o x o x) or numerals (1 2 1 2, or 3 3 4 3 3 4) and says what comes next. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.1.1), never as a phone question: b) create patterns using letters; c) make a pattern using numerals.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.COPY_AB_PATTERN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Copying a two-part pattern (pre-primary Maths) comes before patterns of letters and numerals. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading numerals (Grade 1 Maths) is needed to make numeral patterns. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.CREATI.PATTERN_MAKING.b",
+       "CREA.G1.CREATI.PATTERN_MAKING.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_COUNT_ON",
+     "skill": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+     "error": "Counts on instead of repeating: says 3 after 1 2 1 2.",
+     "example": {
+      "question": "1 2 1 2 1 2. What comes next?",
+      "wrong_answer": "3",
+      "correct_answer": "1"
+     },
+     "cause": "Numbers usually go on counting, so the child counts on.",
+     "reveals": "Offer \"3\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the pattern aloud and clap on each 1.",
+     "feedback": "The pattern repeats 1 2. Next is 1.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_LAST_AGAIN",
+     "skill": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+     "error": "Repeats the last item.",
+     "example": {
+      "question": "a b a b a. What comes next?",
+      "wrong_answer": "a",
+      "correct_answer": "b"
+     },
+     "cause": "The child copies what was seen last.",
+     "reveals": "Offer \"a\" next to the right answer and ask the question again in a new context.",
+     "help": "Point and say: a b, a b, a...",
+     "feedback": "After a comes b.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_UNIT_THREE",
+     "skill": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+     "error": "Misses a pattern of three, treating it as two.",
+     "example": {
+      "question": "3 3 4 3 3 4 3 3. What comes next?",
+      "wrong_answer": "3",
+      "correct_answer": "4"
+     },
+     "cause": "The child expects every pattern to swap one by one.",
+     "reveals": "Offer \"3\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a ring round each repeating part: 3 3 4.",
+     "feedback": "The part that repeats is 3 3 4. Next is 4.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS.M_CAC1_PM_NO_ORDER",
+     "skill": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+     "error": "Thinks any row of letters is a pattern.",
+     "example": {
+      "question": "Is \"a m z k\" a pattern?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, nothing repeats"
+     },
+     "cause": "Any row seems like a pattern to the child.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Look for a part that comes again.",
+     "feedback": "A pattern has a part that repeats.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.1.1"
    ]
@@ -604,8 +1794,119 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+     "name": "Identify props and parts of a Kenyan singing game",
+     "outcomes": [
+      "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.a"
+     ],
+     "mastery": "The child names props used in a singing game from a Kenyan community (a stick, a shaker, a scarf or leso, a basket, leaves, a fly whisk), says what each is used for in the game, and names the parts of a singing game: the song, the game actions, the formation (a ring or a line), the props, safety and good behaviour. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: b) improvise a simple prop for use in performing a singing game; c) perform singing games drawn from local cultures in Kenyan for enjoyment.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.SING_RHYMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Singing songs with actions (pre-primary) comes before a singing game. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.MOVE_BASIC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Moving and stopping on a signal (pre-primary) is needed to play a game safely. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.b",
+       "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_PROP_COSTUME",
+     "skill": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+     "error": "Calls the clothes the players wear props.",
+     "example": {
+      "question": "A girl holds a shaker in a singing game. Is the shaker a prop?",
+      "wrong_answer": "no, props are clothes",
+      "correct_answer": "yes, a prop is something held or used in the game"
+     },
+     "cause": "The child has not learnt the word \"prop\".",
+     "reveals": "Offer \"no, props are clothes\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold up a shaker and a hat: which do you hold and use?",
+     "feedback": "A prop is something you hold or use, like a shaker.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_BUY",
+     "skill": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+     "error": "Thinks props must be bought.",
+     "example": {
+      "question": "Can you make a prop for a singing game?",
+      "wrong_answer": "no, you must buy it",
+      "correct_answer": "yes, from local materials like a bottle and seeds"
+     },
+     "cause": "Toys and props in shops are bought.",
+     "reveals": "Offer \"no, you must buy it\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a shaker from a bottle and seeds.",
+     "feedback": "You can make props from things around you.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_NO_SONG",
+     "skill": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+     "error": "Stops singing while doing the actions.",
+     "example": {
+      "question": "In a singing game, do you keep singing while you play?",
+      "wrong_answer": "no, only play",
+      "correct_answer": "yes, sing and play together"
+     },
+     "cause": "Doing two things at once is hard.",
+     "reveals": "Offer \"no, only play\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise the song with small steps first.",
+     "feedback": "In a singing game you sing while you play.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES.M_CAC1_KG_PUSH",
+     "skill": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+     "error": "Pushes to the front to get a turn.",
+     "example": {
+      "question": "In a singing game, how do you get your turn?",
+      "wrong_answer": "push to the front",
+      "correct_answer": "wait for my turn"
+     },
+     "cause": "The child is eager to play.",
+     "reveals": "Offer \"push to the front\" next to the right answer and ask the question again in a new context.",
+     "help": "Play the game and praise waiting.",
+     "feedback": "Wait for your turn. Pushing can hurt others.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -677,8 +1978,226 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+     "name": "Identify materials to improvise a ball",
+     "outcomes": [
+      "CREA.G1.PERFOR.THROWING_AND_CATCHING.a"
+     ],
+     "mastery": "The child names locally available materials for making a ball (old paper, polythene bags, old cloth or socks, banana fibre, string to tie it) and says a good ball is round, firm and soft enough not to hurt. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: b) improvise a ball from locally available materials.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.HANDLE_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Tearing, rolling and squeezing materials (pre-primary) is how a ball is made. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Knowing a circle (Grade 1 Maths) helps the child say a ball should be round. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.THROWING_AND_CATCHING.b"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+     "name": "Say how to throw and catch a ball",
+     "outcomes": [
+      "CREA.G1.PERFOR.THROWING_AND_CATCHING.c"
+     ],
+     "mastery": "The child says how to throw (look at the partner, swing the arm and let go towards them, gently and underarm for a short throw) and how to catch (eyes on the ball, hands ready like a cup, pull the ball in to the chest). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: c) perform throwing and catching activities for skill acquisition.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.BALL_PLAY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Rolling and tossing a big ball (pre-primary) comes before throwing and catching. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A soft improvised ball is the ball used to practise. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.THROWING_AND_CATCHING.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_STONE",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+     "error": "Names stones as a material for a ball.",
+     "example": {
+      "question": "Which can you use to make a ball?",
+      "wrong_answer": "stones",
+      "correct_answer": "old paper or polythene bags"
+     },
+     "cause": "Stones are round, so the child thinks of them.",
+     "reveals": "Offer \"stones\" next to the right answer and ask the question again in a new context.",
+     "help": "Feel a stone and a paper ball: which is safe to catch?",
+     "feedback": "Use soft things like paper and polythene. Stones can hurt.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_NO_TIE",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+     "error": "Forgets to tie the ball, so it falls apart.",
+     "example": {
+      "question": "What do you do after rolling paper into a ball?",
+      "wrong_answer": "nothing",
+      "correct_answer": "tie it with string"
+     },
+     "cause": "The ball looks finished once rolled.",
+     "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Throw an untied ball: it opens.",
+     "feedback": "Tie the ball with string so it holds.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_FLAT",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+     "error": "Makes a flat ball.",
+     "example": {
+      "question": "What shape should your ball be?",
+      "wrong_answer": "flat",
+      "correct_answer": "round"
+     },
+     "cause": "The child squashes the paper flat.",
+     "reveals": "Offer \"flat\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll the paper between your hands.",
+     "feedback": "A ball should be round.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_HARD",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+     "error": "Makes the ball as hard as possible.",
+     "example": {
+      "question": "Should your ball be very hard or firm but soft?",
+      "wrong_answer": "very hard",
+      "correct_answer": "firm but soft"
+     },
+     "cause": "Hard seems strong to the child.",
+     "reveals": "Offer \"very hard\" next to the right answer and ask the question again in a new context.",
+     "help": "Catch a hard ball and a soft ball.",
+     "feedback": "Make it firm but soft so it does not hurt.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_EYES_CLOSED",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+     "error": "Closes the eyes or turns away when the ball comes.",
+     "example": {
+      "question": "When a ball comes to you, where do you look?",
+      "wrong_answer": "I close my eyes",
+      "correct_answer": "at the ball"
+     },
+     "cause": "The child is afraid of being hit.",
+     "reveals": "Offer \"I close my eyes\" next to the right answer and ask the question again in a new context.",
+     "help": "Use a soft ball and count as it comes.",
+     "feedback": "Keep your eyes on the ball.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_FLAT_HANDS",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+     "error": "Holds the hands flat and stiff to catch.",
+     "example": {
+      "question": "How do you hold your hands to catch?",
+      "wrong_answer": "flat and stiff",
+      "correct_answer": "ready like a cup"
+     },
+     "cause": "The child stretches the hands out straight.",
+     "reveals": "Offer \"flat and stiff\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a cup with your hands and catch a bean bag.",
+     "feedback": "Make your hands like a cup to catch.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_HARD_THROW",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+     "error": "Throws as hard as possible to a near partner.",
+     "example": {
+      "question": "Your partner is close. How do you throw?",
+      "wrong_answer": "as hard as I can",
+      "correct_answer": "gently, underarm"
+     },
+     "cause": "Throwing hard feels strong.",
+     "reveals": "Offer \"as hard as I can\" next to the right answer and ask the question again in a new context.",
+     "help": "Throw gently underarm to a partner two steps away.",
+     "feedback": "Throw gently to a partner who is close.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_LOOK_AWAY",
+     "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+     "error": "Throws without looking at the partner.",
+     "example": {
+      "question": "Before you throw, where do you look?",
+      "wrong_answer": "anywhere",
+      "correct_answer": "at my partner"
+     },
+     "cause": "The child looks at the ball in their hand.",
+     "reveals": "Offer \"anywhere\" next to the right answer and ask the question again in a new context.",
+     "help": "Say your partner's name and look at them, then throw.",
+     "feedback": "Look at your partner before you throw.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -750,8 +2269,120 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+     "name": "Identify items made by paper craft and the pleating and folding techniques",
+     "outcomes": [
+      "CREA.G1.PERFOR.PAPER_CRAFT.a"
+     ],
+     "mastery": "The child names items made by paper craft (a fan, a paper boat, a hat, a flower, a paper chain), says pleating is folding forward and back again and again like a fan, and folding is creasing paper over to make a shape such as a boat or a hat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: b) make paper items using the pleating technique; c) make paper items using the folding technique; d) play using the paper items for enjoyment.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.HANDLE_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Folding a sheet of paper in half (pre-primary) comes before pleating and folding items. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.BASIC_SHAPES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Naming basic shapes (pre-primary Maths) helps fold paper into squares and triangles. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.PAPER_CRAFT.b",
+       "CREA.G1.PERFOR.PAPER_CRAFT.c",
+       "CREA.G1.PERFOR.PAPER_CRAFT.d"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_PLEAT_ROLL",
+     "skill": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+     "error": "Rolls the paper when asked to pleat it.",
+     "example": {
+      "question": "How do you pleat paper?",
+      "wrong_answer": "roll it into a tube",
+      "correct_answer": "fold it forward and back again and again"
+     },
+     "cause": "Rolling is the paper skill the child knows.",
+     "reveals": "Offer \"roll it into a tube\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a paper fan by folding forward and back.",
+     "feedback": "Pleating is folding forward and back, like a fan.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_CREASE",
+     "skill": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+     "error": "Does not press the folds, so the shape opens.",
+     "example": {
+      "question": "After you fold paper, what do you do?",
+      "wrong_answer": "nothing",
+      "correct_answer": "press the fold flat with a finger"
+     },
+     "cause": "The child thinks the fold will stay by itself.",
+     "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Fold without pressing, then with pressing, and compare.",
+     "feedback": "Press each fold flat so it stays.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_TEAR",
+     "skill": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+     "error": "Thinks paper craft means tearing paper.",
+     "example": {
+      "question": "Is a paper boat made by tearing or by folding?",
+      "wrong_answer": "by tearing",
+      "correct_answer": "by folding"
+     },
+     "cause": "Tearing is a paper activity done before.",
+     "reveals": "Offer \"by tearing\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a boat by folding only.",
+     "feedback": "A paper boat is made by folding.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_FAN_FOLD",
+     "skill": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+     "error": "Calls a folded boat pleated.",
+     "example": {
+      "question": "A fan is made by pleating. Is a paper boat made by pleating?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, by folding"
+     },
+     "cause": "All folding seems the same.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a fan and a boat side by side and look at the folds.",
+     "feedback": "A fan is pleated. A boat is folded.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -833,8 +2464,120 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+     "name": "Identify the log roll and the T-balance",
+     "outcomes": [
+      "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.a"
+     ],
+     "mastery": "The child says in a log roll the body lies stretched straight like a log with arms above the head and rolls sideways along the mat, and in a T-balance the child stands on one leg, leans forward and lifts the other leg straight back with arms out so the body makes a T; names the markers that show where to start. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: b) make markers for use during log rolls and T-balance performance; c) perform a log roll for coordination; d) perform the T-balance for flexibility.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.BODY_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming body parts (pre-primary) is needed to say which parts lie straight and which lift. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.MOVE_BASIC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Standing still on request (pre-primary) comes before holding a balance. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.b",
+       "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.c",
+       "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.d"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_LR_CURLED",
+     "skill": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+     "error": "Rolls curled up when asked for a log roll.",
+     "example": {
+      "question": "In a log roll, is your body straight or curled?",
+      "wrong_answer": "curled up",
+      "correct_answer": "straight like a log"
+     },
+     "cause": "Children roll curled up in play.",
+     "reveals": "Offer \"curled up\" next to the right answer and ask the question again in a new context.",
+     "help": "Lie straight like a log and roll.",
+     "feedback": "In a log roll your body is straight like a log.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_LR_FORWARD",
+     "skill": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+     "error": "Thinks a log roll goes forward over the head.",
+     "example": {
+      "question": "Which way does a log roll go?",
+      "wrong_answer": "forward over the head",
+      "correct_answer": "sideways along the mat"
+     },
+     "cause": "The child has seen forward rolls.",
+     "reveals": "Offer \"forward over the head\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll a real log or a bottle along the floor.",
+     "feedback": "A log roll goes sideways.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_TB_TWO_FEET",
+     "skill": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+     "error": "Stands on two feet in a T-balance.",
+     "example": {
+      "question": "In a T-balance, how many feet are on the ground?",
+      "wrong_answer": "two",
+      "correct_answer": "one"
+     },
+     "cause": "The child is afraid of falling.",
+     "reveals": "Offer \"two\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a wall and lift one leg back.",
+     "feedback": "In a T-balance you stand on one foot.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_TB_ARMS_UP",
+     "skill": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+     "error": "Holds the arms up above the head in a T-balance.",
+     "example": {
+      "question": "In a T-balance, where are your arms?",
+      "wrong_answer": "up above my head",
+      "correct_answer": "out to the sides"
+     },
+     "cause": "The child copies the arms of a log roll.",
+     "reveals": "Offer \"up above my head\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a letter T with your arms out.",
+     "feedback": "Your arms go out to the sides, like the top of a T.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -900,8 +2643,118 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+     "name": "Describe the message of an action song and how to perform it",
+     "outcomes": [
+      "CREA.G1.PERFOR.SONGS.a"
+     ],
+     "mastery": "The child says what an action song they know is about (brushing teeth, washing hands, animals, parts of the body) and what it tells us to do, and says the performance techniques: the right tune and rhythm, clear words, actions and gestures that show the words, a face that shows the mood. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: b) sing action songs in unison applying performance techniques.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.SING_RHYMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Singing simple songs and rhymes with actions (pre-primary) comes before saying their message and performing them. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Cleaning the body (Grade 1 Environmental Activities) is the topic of many action songs. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.SONGS.b"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_MESSAGE_ACTIONS",
+     "skill": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+     "error": "Describes the actions when asked for the message.",
+     "example": {
+      "question": "What is the message of a song about brushing teeth?",
+      "wrong_answer": "we move our hands up and down",
+      "correct_answer": "brush your teeth to keep them clean"
+     },
+     "cause": "The actions are easier to describe.",
+     "reveals": "Offer \"we move our hands up and down\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: what does the song want us to do every day?",
+     "feedback": "The message is what the song tells us to do: brush your teeth.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_RANDOM_ACTION",
+     "skill": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+     "error": "Does any action, not one that shows the words.",
+     "example": {
+      "question": "The song says \"clap your hands\". What action do you do?",
+      "wrong_answer": "jump",
+      "correct_answer": "clap"
+     },
+     "cause": "The child likes to move in any way.",
+     "reveals": "Offer \"jump\" next to the right answer and ask the question again in a new context.",
+     "help": "Do each action as you sing its words.",
+     "feedback": "Do the action the words say.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_UNISON",
+     "skill": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+     "error": "Thinks singing in unison means each child sings a different song.",
+     "example": {
+      "question": "What does singing in unison mean?",
+      "wrong_answer": "each child sings their own song",
+      "correct_answer": "everyone sings the same song together"
+     },
+     "cause": "The word is new.",
+     "reveals": "Offer \"each child sings their own song\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing together; then each child sings alone.",
+     "feedback": "Unison means everyone sings together.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.SONGS.ACTION_SONG.M_CAC1_AS_SHOUT",
+     "skill": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+     "error": "Shouts the song to sing it well.",
+     "example": {
+      "question": "How do you sing an action song well?",
+      "wrong_answer": "shout it loudly",
+      "correct_answer": "sing the tune with clear words"
+     },
+     "cause": "Loud voices are noticed most.",
+     "reveals": "Offer \"shout it loudly\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a shouted line with a clear one.",
+     "feedback": "Sing the tune with clear words. Do not shout.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -972,8 +2825,119 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH",
+     "name": "Identify items made by pinching and the materials and tools of modelling",
+     "outcomes": [
+      "CREA.G1.PERFOR.MODELLING.a",
+      "CREA.G1.PERFOR.MODELLING.b"
+     ],
+     "mastery": "The child names items made by the pinch method (small pots, cups, bowls) and how it is done (roll a ball, push the thumb into the middle, pinch the sides round and round), and names modelling materials (clay, plasticine, dough, soil mixed with water) and tools (a board, a stick for marking, water). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: c) model items using the pinch method.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.PP2.READINESS.HANDLE_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Rolling and squeezing clay or dough (pre-primary) comes before modelling by pinching. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.NATURA.SOIL.c",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Modelling objects using soil (Grade 1 Environmental Activities) is learnt in the same year. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.MODELLING.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_SQUASH",
+     "skill": "CREA.G1.PERFOR.MODELLING.PINCH",
+     "error": "Squashes the ball flat instead of pinching a hollow.",
+     "example": {
+      "question": "How do you start a pinch pot?",
+      "wrong_answer": "squash the ball flat",
+      "correct_answer": "push the thumb into the middle of the ball"
+     },
+     "cause": "Squashing is the first thing children do with clay.",
+     "reveals": "Offer \"squash the ball flat\" next to the right answer and ask the question again in a new context.",
+     "help": "Push a thumb into a ball and turn it.",
+     "feedback": "Push your thumb into the middle, then pinch the sides.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_ONE_PLACE",
+     "skill": "CREA.G1.PERFOR.MODELLING.PINCH",
+     "error": "Pinches only one side, so the wall is thin there.",
+     "example": {
+      "question": "How do you pinch the sides of the pot?",
+      "wrong_answer": "in one place",
+      "correct_answer": "round and round, turning the pot"
+     },
+     "cause": "The child keeps working the same spot.",
+     "reveals": "Offer \"in one place\" next to the right answer and ask the question again in a new context.",
+     "help": "Turn the pot a little after every pinch.",
+     "feedback": "Pinch round and round so the sides are even.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_TOOL_MATERIAL",
+     "skill": "CREA.G1.PERFOR.MODELLING.PINCH",
+     "error": "Calls the board a modelling material.",
+     "example": {
+      "question": "Is the board a tool or a material for modelling?",
+      "wrong_answer": "a material",
+      "correct_answer": "a tool"
+     },
+     "cause": "The child has not sorted used-up from working things.",
+     "reveals": "Offer \"a material\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort: what becomes the pot (clay) and what helps (board, stick).",
+     "feedback": "The board is a tool. Clay is the material.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.MODELLING.PINCH.M_CAC1_PI_DRY_SOIL",
+     "skill": "CREA.G1.PERFOR.MODELLING.PINCH",
+     "error": "Tries to model with dry soil.",
+     "example": {
+      "question": "What do you add to soil to model with it?",
+      "wrong_answer": "nothing",
+      "correct_answer": "water"
+     },
+     "cause": "The child has not felt how dry soil falls apart.",
+     "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to make a ball from dry soil, then from wet soil.",
+     "feedback": "Add water to soil so it holds its shape.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -1047,8 +3011,119 @@
      "indicator": "CREA.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+     "name": "Identify percussion instruments and how they are played",
+     "outcomes": [
+      "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.a"
+     ],
+     "mastery": "The child names percussion instruments from Kenyan communities (drums, shakers, jingles, rattles), says they are played by hitting, shaking or scraping, and which way suits each (a drum: hit; a shaker: shake; a scraper: scrape). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.2.1), never as a phone question: b) improvise a percussion musical instrument using locally available materials; c) play a percussion musical instrument for enjoyment.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Body percussion (clap, tap, stamp) comes before percussion instruments played by hitting and shaking. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.LISTEN_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming familiar sounds (pre-primary) comes before naming the instruments that make them. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.b",
+       "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_SHAKE_DRUM",
+     "skill": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+     "error": "Says a drum is played by shaking.",
+     "example": {
+      "question": "How is a drum played?",
+      "wrong_answer": "by shaking it",
+      "correct_answer": "by hitting it"
+     },
+     "cause": "Shakers were shown first.",
+     "reveals": "Offer \"by shaking it\" next to the right answer and ask the question again in a new context.",
+     "help": "Shake a drum (no sound), then hit it.",
+     "feedback": "A drum is played by hitting it.",
+     "source": "To confirm by a CBC Creative Activities teacher: names of percussion instruments and their communities vary by source; check against the Grade 1 learner book.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_FLUTE",
+     "skill": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+     "error": "Calls a flute a percussion instrument.",
+     "example": {
+      "question": "Is a flute a percussion instrument?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, you blow it"
+     },
+     "cause": "All instruments seem the same group.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort instruments: hit or shake, and blow.",
+     "feedback": "A flute is blown. Percussion is hit, shaken or scraped.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_EMPTY_SHAKER",
+     "skill": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+     "error": "Makes a shaker with nothing inside.",
+     "example": {
+      "question": "What do you put inside a bottle to make a shaker?",
+      "wrong_answer": "nothing",
+      "correct_answer": "seeds or small stones"
+     },
+     "cause": "The child does not know what makes the sound.",
+     "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Shake an empty bottle and a bottle of seeds.",
+     "feedback": "Seeds or small stones inside make the sound.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_SCRAPE",
+     "skill": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+     "error": "Thinks scraping is not a way of playing.",
+     "example": {
+      "question": "Can an instrument be played by scraping?",
+      "wrong_answer": "no",
+      "correct_answer": "yes, like rubbing a stick along a ridged gourd"
+     },
+     "cause": "Hitting and shaking are better known.",
+     "reveals": "Offer \"no\" next to the right answer and ask the question again in a new context.",
+     "help": "Scrape a stick along a ridged bottle.",
+     "feedback": "Some instruments are played by scraping.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.2.1"
    ]
@@ -1129,8 +3204,316 @@
      "indicator": "CREA.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+     "name": "Identify sounds in the local environment and their sources",
+     "outcomes": [
+      "CREA.G1.APPREC.MUSICAL_SOUNDS.a"
+     ],
+     "mastery": "The child names the source of a sound in the local environment (birds, animals, people, objects such as a car, a bell, a hammer, rain on the roof) and sorts sounds by their source. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.3.1), never as a phone question: c) respond to sounds in the environment for self-expression.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.NATURA.SOUND.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Identifying sounds in the immediate environment (Grade 1 Environmental Activities) is learnt alongside. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.LISTEN_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming familiar sounds (pre-primary) comes before sorting sounds by their source. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.APPREC.MUSICAL_SOUNDS.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+     "name": "Describe volume, speed and pitch in a song",
+     "outcomes": [
+      "CREA.G1.APPREC.MUSICAL_SOUNDS.b"
+     ],
+     "mastery": "The child tells loud from soft (volume), fast from slow (speed) and high from low (pitch) in a song, and does not mix them up (a loud sound is not always high, a fast song is not always loud). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.SIZE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Using opposite words such as big and small (pre-primary Maths) prepares loud and soft, fast and slow, high and low. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.LISTEN_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying if a sound is loud or soft (pre-primary) is the first element of music. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+     "name": "Describe the mood of a song",
+     "outcomes": [
+      "CREA.G1.APPREC.MUSICAL_SOUNDS.d"
+     ],
+     "mastery": "The child says if a song sounds happy, sad, calm or exciting, and gives a reason from the music (fast and bouncy, slow and soft) or the words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Fast or slow and loud or soft are the reasons given for a mood. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.SING_RHYMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Singing songs (pre-primary) gives the child songs to talk about. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_HUMAN",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+     "error": "Says a person whistling is a bird.",
+     "example": {
+      "question": "Juma whistles a tune. What is the source of the sound?",
+      "wrong_answer": "a bird",
+      "correct_answer": "a person"
+     },
+     "cause": "Whistling sounds like a bird.",
+     "reveals": "Offer \"a bird\" next to the right answer and ask the question again in a new context.",
+     "help": "Whistle and then play a bird call.",
+     "feedback": "The source is a person whistling.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_OBJECT_ANIMAL",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+     "error": "Puts a car hooter with animal sounds.",
+     "example": {
+      "question": "Is a car hooter the sound of an animal or an object?",
+      "wrong_answer": "an animal",
+      "correct_answer": "an object"
+     },
+     "cause": "Loud sounds outside seem like animals.",
+     "reveals": "Offer \"an animal\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort picture cards into animals, people and objects.",
+     "feedback": "A car hooter is an object.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_RAIN",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+     "error": "Thinks rain on the roof is the roof making a sound by itself.",
+     "example": {
+      "question": "What makes the sound when it rains on the roof?",
+      "wrong_answer": "the roof by itself",
+      "correct_answer": "raindrops hitting the roof"
+     },
+     "cause": "The child hears the sound from the roof.",
+     "reveals": "Offer \"the roof by itself\" next to the right answer and ask the question again in a new context.",
+     "help": "Drop water on a tin and listen.",
+     "feedback": "The raindrops hitting the roof make the sound.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_ONE_SOURCE",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+     "error": "Names only one source in a busy place.",
+     "example": {
+      "question": "In a market, how many sources of sound can you hear?",
+      "wrong_answer": "one",
+      "correct_answer": "many: people, animals, vehicles, radios"
+     },
+     "cause": "The child attends to the loudest sound.",
+     "reveals": "Offer \"one\" next to the right answer and ask the question again in a new context.",
+     "help": "Close your eyes and count the sounds you hear.",
+     "feedback": "In a busy place there are many sources of sound.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_LOUD_HIGH",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+     "error": "Calls a loud sound high.",
+     "example": {
+      "question": "A man sings a low note loudly. Is it high or low?",
+      "wrong_answer": "high, because it is loud",
+      "correct_answer": "low"
+     },
+     "cause": "In daily speech \"high volume\" and \"high note\" use the same word.",
+     "reveals": "Offer \"high, because it is loud\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing a low note loudly and a high note softly.",
+     "feedback": "Loud is volume. High and low is pitch. A loud note can be low.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_FAST_LOUD",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+     "error": "Calls a fast song loud.",
+     "example": {
+      "question": "A song is sung quickly and softly. Is it loud?",
+      "wrong_answer": "yes, it is fast",
+      "correct_answer": "no, it is soft"
+     },
+     "cause": "Fast songs often feel loud.",
+     "reveals": "Offer \"yes, it is fast\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing fast and soft, like a whisper race.",
+     "feedback": "Fast is speed. It can still be soft.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_BIG_LOW",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+     "error": "Thinks big animals make high sounds.",
+     "example": {
+      "question": "Which makes a lower sound: a cow or a chick?",
+      "wrong_answer": "a chick",
+      "correct_answer": "a cow"
+     },
+     "cause": "The child mixes up high and low.",
+     "reveals": "Offer \"a chick\" next to the right answer and ask the question again in a new context.",
+     "help": "Moo low and cheep high.",
+     "feedback": "A cow makes a low sound. A chick makes a high sound.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_SLOW_SOFT",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+     "error": "Calls a slow song soft.",
+     "example": {
+      "question": "A song is slow and loud. Is it soft?",
+      "wrong_answer": "yes, because it is slow",
+      "correct_answer": "no, it is loud"
+     },
+     "cause": "Slow songs are often lullabies.",
+     "reveals": "Offer \"yes, because it is slow\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing slowly but strongly.",
+     "feedback": "Slow is speed. It can still be loud.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_FAST_ANGRY",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+     "error": "Says every fast song is angry.",
+     "example": {
+      "question": "A fast, bouncy song is about playing. What mood is it?",
+      "wrong_answer": "angry",
+      "correct_answer": "happy"
+     },
+     "cause": "Fast movement can look like anger to the child.",
+     "reveals": "Offer \"angry\" next to the right answer and ask the question again in a new context.",
+     "help": "Dance to the song: does it feel angry or happy?",
+     "feedback": "A fast, bouncy song often feels happy.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_WORDS_ONLY",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+     "error": "Judges the mood only from one word.",
+     "example": {
+      "question": "A slow, soft song has the word \"sun\" in it. Is it exciting?",
+      "wrong_answer": "yes, the sun is fun",
+      "correct_answer": "no, it sounds calm"
+     },
+     "cause": "The child picks out one known word.",
+     "reveals": "Offer \"yes, the sun is fun\" next to the right answer and ask the question again in a new context.",
+     "help": "Listen with eyes closed: how does the music make you feel?",
+     "feedback": "Listen to the music too. Slow and soft sounds calm.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_SLOW_SAD",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+     "error": "Says every slow song is sad.",
+     "example": {
+      "question": "A slow, soft lullaby. Is it sad or calm?",
+      "wrong_answer": "sad",
+      "correct_answer": "calm"
+     },
+     "cause": "Slow and sad are linked for the child.",
+     "reveals": "Offer \"sad\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing a lullaby to a baby doll and ask how it feels.",
+     "feedback": "A slow, soft song can be calm, not sad.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_NO_REASON",
+     "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+     "error": "Names a mood but cannot say why.",
+     "example": {
+      "question": "Why does this song sound happy?",
+      "wrong_answer": "because",
+      "correct_answer": "it is fast and bouncy"
+     },
+     "cause": "The child is not asked for reasons at home.",
+     "reveals": "Offer \"because\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: is it fast or slow? loud or soft?",
+     "feedback": "Say why: fast and bouncy songs sound happy.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.3.1"
    ]
@@ -1213,8 +3596,218 @@
      "indicator": "CREA.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+     "name": "Recognise water points at home and their dangers",
+     "outcomes": [
+      "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.a",
+      "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.b"
+     ],
+     "mastery": "The child names water points around the home (a tap, a water tank, a drum or jerrican of water, a basin or bucket, a well, a pond nearby) and the dangers each holds (drowning, even in a bucket for a small child; slipping on a wet floor; falling into a well). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G1.RUBRIC.3.1), never as a phone question: c) make a montage of water points around the home environment.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.RESOUR.WATER.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Sources of water in the immediate environment (Grade 1 Environmental Activities) name the water points at home. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.PP2.READINESS.STAY_WITH_ADULT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing to stay near a trusted adult (pre-primary) is the first safety idea around water. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.c"
+      ],
+      "indicators": [
+       "CREA.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+     "name": "Say how to keep safe around water points at home",
+     "outcomes": [
+      "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.d"
+     ],
+     "mastery": "The child names ways to keep safe around water at home (never play in or near water without an adult, keep buckets, drums and wells covered, empty basins after use, walk on wet floors, call an adult if a little child goes near water). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "spot the mistake in a friend's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the water points and their dangers comes before naming how to keep safe. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Common accidents at home (Grade 1 Environmental Activities) include accidents with water. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_BUCKET_SAFE",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+     "error": "Thinks a bucket of water cannot be dangerous.",
+     "example": {
+      "question": "Can a baby be in danger near a bucket of water?",
+      "wrong_answer": "no, it is too small",
+      "correct_answer": "yes, a baby can fall in and drown"
+     },
+     "cause": "Danger is linked only with rivers and the sea.",
+     "reveals": "Offer \"no, it is too small\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about why a baby must never be left near a bucket.",
+     "feedback": "Even a bucket can be dangerous for a baby.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_NOT_POINT",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+     "error": "Thinks a jerrican or drum of water is not a water point.",
+     "example": {
+      "question": "Is a drum full of water at home a water point?",
+      "wrong_answer": "no, only rivers are",
+      "correct_answer": "yes"
+     },
+     "cause": "The child thinks water points are outside places.",
+     "reveals": "Offer \"no, only rivers are\" next to the right answer and ask the question again in a new context.",
+     "help": "Count all the places water is kept at home.",
+     "feedback": "A drum, a tank, a tap and a basin are water points at home.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_WET_FLOOR",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+     "error": "Does not see a wet floor as a danger.",
+     "example": {
+      "question": "Water is spilt on the kitchen floor. What is the danger?",
+      "wrong_answer": "there is none",
+      "correct_answer": "someone can slip and fall"
+     },
+     "cause": "Spilt water seems harmless.",
+     "reveals": "Offer \"there is none\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk carefully on a wet floor in role play.",
+     "feedback": "A wet floor is slippery. Someone can fall.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_WELL_OPEN",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+     "error": "Thinks an open well is safe if you can see the water.",
+     "example": {
+      "question": "Is an open well safe to play near?",
+      "wrong_answer": "yes, I can see the water",
+      "correct_answer": "no, a child can fall in"
+     },
+     "cause": "Seeing the water feels like being in control.",
+     "reveals": "Offer \"yes, I can see the water\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a picture of a covered and an open well.",
+     "feedback": "An open well is dangerous. Do not play near it.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_PLAY_ALONE",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+     "error": "Thinks it is fine to play in a basin of water alone.",
+     "example": {
+      "question": "Can a small child play in water without an adult?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, always with an adult near"
+     },
+     "cause": "Water play is fun and seems safe.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Role play asking an adult before water play.",
+     "feedback": "Always play in water with an adult near.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_UNCOVERED",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+     "error": "Leaves the lid off the water drum.",
+     "example": {
+      "question": "You take water from the drum. What do you do after?",
+      "wrong_answer": "leave the lid off",
+      "correct_answer": "put the lid back on"
+     },
+     "cause": "The child does not see a danger in an open drum.",
+     "reveals": "Offer \"leave the lid off\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: who could fall in or what could get in?",
+     "feedback": "Put the lid back on after taking water.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_RUN",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+     "error": "Runs on a wet floor.",
+     "example": {
+      "question": "The bathroom floor is wet. How do you walk?",
+      "wrong_answer": "run quickly",
+      "correct_answer": "walk slowly and carefully"
+     },
+     "cause": "Running feels quicker.",
+     "reveals": "Offer \"run quickly\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch a toy slide on a wet tray.",
+     "feedback": "Walk slowly on a wet floor.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_TELL",
+     "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+     "error": "Does not tell an adult when a baby goes near water.",
+     "example": {
+      "question": "Your baby brother crawls to a basin of water. What do you do?",
+      "wrong_answer": "nothing",
+      "correct_answer": "call an adult at once"
+     },
+     "cause": "The child thinks the baby is only playing.",
+     "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Role play calling an adult.",
+     "feedback": "Call an adult at once.",
+     "source": "To confirm by a CBC Creative Activities teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G1.RUBRIC.3.1"
    ]
@@ -1302,6 +3895,68 @@
      "status": "kicd_verified"
     }
    ]
+  }
+ ],
+ "readiness": [
+  {
+   "code": "CREA.PP2.READINESS.MOVE_BASIC",
+   "name": "Move the body in basic ways",
+   "what": "Walks, runs, jumps on two feet and stands still on request in a play area, and stops on a signal (a whistle or a clap).",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.BODY_PARTS",
+   "name": "Name the main body parts",
+   "what": "Names and points to the head, neck, shoulders, arms, hands, back, tummy, legs, knees and feet.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.CLAP_ALONG",
+   "name": "Clap along with a song",
+   "what": "Claps or taps along with a familiar song or rhyme, roughly in time with the group.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.SING_RHYMES",
+   "name": "Sing simple songs and rhymes with actions",
+   "what": "Sings simple songs and rhymes with the group and does the actions that go with them.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.LISTEN_SOUNDS",
+   "name": "Name familiar sounds",
+   "what": "Names familiar sounds (a cow, a dog, a car hooter, a bell, a baby crying) and says if a sound is loud or soft.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.COLOUR_NAMES",
+   "name": "Name the basic colours",
+   "what": "Names and points to red, yellow, blue, green, black and white in objects around them.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.HOLD_CRAYON",
+   "name": "Hold a crayon and make marks",
+   "what": "Holds a crayon, pencil or brush and makes marks, scribbles and simple lines on paper.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.HANDLE_MATERIALS",
+   "name": "Handle soft materials",
+   "what": "Tears paper, rolls and squeezes clay or dough, and folds a sheet of paper in half.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.BALL_PLAY",
+   "name": "Play with a big ball",
+   "what": "Rolls and tosses a big soft ball to a partner and stops a ball rolled to them.",
+   "status": "proposed"
+  },
+  {
+   "code": "CREA.PP2.READINESS.STAY_WITH_ADULT",
+   "name": "Stay near a trusted adult",
+   "what": "Knows to stay near a trusted adult at home and to call an adult when hurt, lost or afraid.",
+   "status": "proposed"
   }
  ]
 }

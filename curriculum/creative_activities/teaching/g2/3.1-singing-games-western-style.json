@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST",
+ "title": "Singing Games-Western Style",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Watch a class or recorded performance of a Western singing game and talk about it.",
+ "skills": [
+  {
+   "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS",
+   "key_step": "The child names the participants, costumes and props of a Western singing game and tells a costume from a prop.",
+   "floor": {
+    "prerequisite": "Names Western singing games.",
+    "question": "Name one Western singing game.",
+    "answer": "any of: London Bridge, The farmer's in his den"
+   },
+   "representations": [
+    "a performance to watch",
+    "costume and prop cards",
+    "a sorting chart"
+   ],
+   "steps": [
+    "Watch the game.",
+    "Who is playing?",
+    "What do they wear?",
+    "What do they hold or use?"
+   ],
+   "contexts": [
+    "a music festival performance",
+    "a class game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a child holding a scarf.",
+     "say": "Costume or prop?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: prop."
+    },
+    {
+     "beat": "predict",
+     "do": "A hat on the head?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Costume."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_PROP_COSTUME",
+     "listen_for": [
+      "a prop"
+     ],
+     "ask": "In \"The farmer's in his den\", the farmer wears a hat. Is the hat a costume or a prop?",
+     "repair": "Sort cards: things worn (costume) and things held or used (props)."
+    },
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_AUDIENCE",
+     "listen_for": [
+      "everyone watching"
+     ],
+     "ask": "Who are the participants in a singing game?",
+     "repair": "Ask: who is singing and moving?"
+    },
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_NO_PROPS",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Can a singing game be played without props?",
+     "repair": "Play a ring game with no props."
+    },
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS.M_CAC2_GP_BRIDGE",
+     "listen_for": [
+      "all the children"
+     ],
+     "ask": "In \"London Bridge\", who makes the bridge?",
+     "repair": "Watch the game: count who holds the arch."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a hat worn in a game a costume or a prop?",
+     "answer": "a costume",
+     "shows": "costume"
+    },
+    {
+     "question": "Who are the participants?",
+     "answer": "the children playing and singing",
+     "shows": "participants"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE",
+   "key_step": "The child says what a singing game is about and what it teaches.",
+   "floor": {
+    "prerequisite": "Knows a Western singing game.",
+    "question": "What do you do in London Bridge?",
+    "answer": "walk under a bridge of arms"
+   },
+   "representations": [
+    "the words of the game song",
+    "pictures of each verse",
+    "role play"
+   ],
+   "steps": [
+    "Sing the song.",
+    "Ask: what is it about?",
+    "Ask: what does it teach?"
+   ],
+   "contexts": [
+    "a game at break",
+    "a performance at a school event"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing a verse: \"this is the way we wash our clothes\".",
+     "say": "What job is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: washing."
+    },
+    {
+     "beat": "predict",
+     "do": "What is the whole game about?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The jobs we do every day."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_ACTIONS",
+     "listen_for": [
+      "we walk round in a ring"
+     ],
+     "ask": "What is the message of \"Here we go round the mulberry bush\"?",
+     "repair": "Ask: what jobs does each verse show?"
+    },
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_REAL_BRIDGE",
+     "listen_for": [
+      "in our town"
+     ],
+     "ask": "Where is London Bridge in the song?",
+     "repair": "Show London on a map."
+    },
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_NO_LESSON",
+     "listen_for": [
+      "nothing, it is only play"
+     ],
+     "ask": "What can a singing game teach?",
+     "repair": "Ask what happens if one child does not take turns."
+    },
+    {
+     "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE.M_CAC2_GM_FARMER",
+     "listen_for": [
+      "a lion in its den"
+     ],
+     "ask": "What is \"The farmer's in his den\" about?",
+     "repair": "Sing the verses: the farmer wants a wife, a child, a dog."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is \"Here we go round the mulberry bush\" about?",
+     "answer": "the jobs we do every day",
+     "shows": "message"
+    },
+    {
+     "question": "Name one thing a singing game teaches.",
+     "answer": "any of: working together, taking turns",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "outcomes": {
+  "CREA.G3.CREATI.PUSHING_AND_PULLING.a": "identify pushing and pulling in physical activities for space and body awareness",
+  "CREA.G3.CREATI.PUSHING_AND_PULLING.b": "perform pulling and pushing activities for flexibility",
+  "CREA.G3.CREATI.PUSHING_AND_PULLING.c": "enjoy pushing and pulling for strength and flexibility",
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.a": "identify colour mixing for familiarity",
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.b": "mix colours using spraying and blowing techniques",
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.c": "draw a picture using regular and irregular shapes",
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.d": "create a painting for self-expression",
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.e": "value drawing and painting for expression",
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.a": "identify different sound durations in simple songs",
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.b": "create a simple rhythmic pattern using long and short sounds",
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.c": "improvise rhythmic accompaniment to simple songs using long and short sounds",
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.d": "make a random repeat pattern using found objects",
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.e": "appreciate creating rhythms and patterns",
+  "CREA.G3.CREATI.SKIPPING.a": "identify different ways of skipping in different directions",
+  "CREA.G3.CREATI.SKIPPING.b": "skip in different directions for skill acquisition",
+  "CREA.G3.CREATI.SKIPPING.c": "make patterns while skipping in different ways",
+  "CREA.G3.CREATI.SKIPPING.d": "appreciate skipping in different directions for balance and strength",
+  "CREA.G3.CREATI.COLLAGE.a": "identify a collage for familiarity",
+  "CREA.G3.CREATI.COLLAGE.b": "prepare materials for making the collage",
+  "CREA.G3.CREATI.COLLAGE.c": "create a collage for self-expression",
+  "CREA.G3.CREATI.COLLAGE.d": "appreciate using collage as an art of self-expression",
+  "CREA.G3.CREATI.MELODY.a": "identify variations in a simple melodic pattern for aural skill development",
+  "CREA.G3.CREATI.MELODY.b": "create melodic patterns using improvised percussions",
+  "CREA.G3.CREATI.MELODY.c": "apply performance directions in performing simple songs",
+  "CREA.G3.CREATI.MELODY.d": "enjoy creating melodies using the variation technique",
+  "CREA.G3.CREATI.WEAVING.a": "identify a plain paper weave for familiarity",
+  "CREA.G3.CREATI.WEAVING.b": "create a plain paper weave to make",
+  "CREA.G3.CREATI.WEAVING.c": "enjoy making paper mat using weaving",
+  "CREA.G3.PERFOR.ROUNDS.a": "aurally identify a round performance",
+  "CREA.G3.PERFOR.ROUNDS.b": "sing own part in a round applying appropriate performance techniques",
+  "CREA.G3.PERFOR.ROUNDS.c": "describe the message in a round",
+  "CREA.G3.PERFOR.ROUNDS.d": "enjoy singing in a round",
+  "CREA.G3.PERFOR.GALLOPING.a": "identify different directions of galloping for agility and coordination",
+  "CREA.G3.PERFOR.GALLOPING.b": "perform galloping movement in different directions for skill acquisition",
+  "CREA.G3.PERFOR.GALLOPING.c": "enjoy playing galloping games while moving in different directions",
+  "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.a": "identify toys made by assemblage",
+  "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.b": "make toys using assemblage",
+  "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.c": "enjoy making and playing with the toys",
+  "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.a": "identify body parts used for performing forward roll and V-balance in gymnastics",
+  "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.b": "make markers for use during forward roll and V-balance performance in gymnastics",
+  "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.c": "perform forward roll for skill acquisition",
+  "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.d": "perform V-balance for skill acquisition",
+  "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.e": "enjoy performing forward roll and V-balance for flexibility and balance. 105 105",
+  "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a": "identify Indigenous string musical instruments from Kenyan communities",
+  "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.b": "improvise a string musical instrument using available materials",
+  "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.c": "play an improvised string instrument for enjoyment",
+  "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.d": "value Indigenous string instruments from Kenyan communities",
+  "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.a": "identify modelled beads for familiarity",
+  "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.b": "model beads using the pellet technique",
+  "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.c": "decorate the beads by painting",
+  "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.d": "make an ornament using beads",
+  "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.e": "appreciate making beads using the pellet technique",
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.a": "identify the text of the first stanza of the Kenya National Anthem in Kiswahili",
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.b": "describe the message in the Kenya National anthem",
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.c": "identify occasions when the Kenya National Flag is raised",
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.d": "sing the Kenya National Anthem observing the anthem’s etiquette",
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.e": "appreciate the performance of the Kenya National Anthem for patriotism. 112 112",
+  "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.a": "identify different water points and water bodies in the locality",
+  "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b": "explain water dangers arising from water points and water bodies in the locality",
+  "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.c": "narrate ways of observing safety around water points and water bodies in the locality",
+  "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.d": "appreciate water safety in the locality for life skills"
+ },
+ "skills": {
+  "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says pushing moves something away from the body (a wheelbarrow, a door, a friend's back in a pushing game) and pulling brings it towards the body (a rope in tug of war, a bucket from a well), sorts everyday and game actions into the two, and says why players keep their own space and push or pull without jerking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: b) perform pulling and pushing activities for flexibility."
+  },
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the secondary colour each pair of primaries makes (red and yellow make orange, blue and yellow make green, red and blue make purple), says that in spraying paint is flicked from an old brush and in blowing a drop of thin paint is blown with a straw so the colours run into each other, and says why brushes and hands are washed after painting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: b) mix colours using spraying and blowing techniques; d) create a painting for self-expression."
+  },
+  "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the regular shapes (circle, square, triangle, rectangle) in a picture, says that irregular shapes have no fixed form (a leaf, a cloud, a stone, a puddle), and points out both kinds in a simple drawing such as a house with a tree. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: c) draw a picture using regular and irregular shapes."
+  },
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says how long each French rhythm name lasts (ta-te is two short sounds in one beat, taa one beat, taa-aa two beats, taa-aa-aa-aa four beats), picks the longer and the shorter of two sounds in a known song, and matches clapped words to their rhythm names (Ke-nya is ta-te; the held 'sun' of a song is taa-aa). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: b) create a simple rhythmic pattern using long and short sounds; c) improvise rhythmic accompaniment to simple songs using long and short sounds."
+  },
+  "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says a random repeat pattern repeats the same print (a leaf, a bottle top, a cut potato) many times placed anywhere on the paper, unlike a regular pattern in straight rows, and names found objects that make good prints. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: d) make a random repeat pattern using found objects."
+  },
+  "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the directions of skipping (forward, backward, to the right, to the left), tells right from left by their own hands, and names the floor patterns a skipper can make (a straight line, a curve, a circle, a zigzag). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: b) skip in different directions for skill acquisition; c) make patterns while skipping in different ways."
+  },
+  "CREA.G3.CREATI.COLLAGE.COLLAGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says a collage is a picture made by pasting pieces of different materials (coloured paper, cloth, seeds, leaves, feathers) onto a surface, says how materials are prepared (collect, clean and dry, cut or tear, sort by colour, make a flour or cassava paste), and tells a collage from a drawing or a painting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: c) create a collage for self-expression."
+  },
+  "CREA.G3.CREATI.MELODY.MELODY_VARIATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child hears a familiar tune sung again with one change and says what changed: faster or slower (tempo), louder or softer (volume), higher or lower (pitch), a new rhythm or new words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says what each performance direction asks (slow, fast, loud, soft), that loud is not shouting and soft is not whispering out of tune, and follows the teacher's hand signs (hands wide for loud, close for soft) when told of them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: b) create melodic patterns using improvised percussions; c) apply performance directions in performing simple songs."
+  },
+  "CREA.G3.CREATI.WEAVING.PAPER_WEAVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says a plain paper weave is made by passing paper strips (the weft) over one and under one of the strips or slits of a base paper (the warp), that each new row starts the opposite way so a chequered pattern forms, and that two colours make the pattern show. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.1.1), never as a phone question: b) create a plain paper weave to make."
+  },
+  "CREA.G3.PERFOR.ROUNDS.ROUND": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says that in a round every group sings the same song but starts at a different time, in two or three parts, and each group keeps to its own part; tells a round from a song sung all together (unison); says the message of a round they sing; and names the performance techniques (good posture, the right tune, clear words, starting on time). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.2.1), never as a phone question: b) sing own part in a round applying appropriate performance techniques."
+  },
+  "CREA.G3.PERFOR.GALLOPING.GALLOP": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says galloping is a step with the leading foot and a quick close of the back foot behind it, the same foot always leading, like a horse; names the directions (forward, to the left, to the right) and floor patterns (straight, curved, circular, zigzag), and tells a gallop from a hop and a skip. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.2.1), never as a phone question: b) perform galloping movement in different directions for skill acquisition."
+  },
+  "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says a toy made by assemblage is put together from found and recycled objects (boxes, bottle tops, sticks, wire, bottles) joined with glue, string, wire or rubber bands, names a toy made this way (a wire car, a bottle-top lorry, a box robot), and says sharp edges are covered and cans are washed first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.2.1), never as a phone question: b) make toys using assemblage."
+  },
+  "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says that in a forward roll the hands go flat on the mat, the chin is tucked to the chest and the body rolls on the back of the shoulders with a round back (never on the top of the head), and that in a V-balance the child sits on the bottom with legs and upper body lifted to make a V and the arms out; names the markers that show where to start. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.2.1), never as a phone question: b) make markers for use during forward roll and V-balance performance in gymnastics; c) perform forward roll for skill acquisition; d) perform V-balance for skill acquisition."
+  },
+  "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names indigenous string instruments from Kenyan communities (the orutu and wandindi fiddles, the ground bow, the mouth bow), says the sound comes from a string that vibrates, and names the three ways of playing: bowing (a fiddle), striking (a ground bow) and plucking (a mouth bow). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.2.1), never as a phone question: b) improvise a string musical instrument using available materials; c) play an improvised string instrument for enjoyment."
+  },
+  "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child orders bead making by the pellet technique: take a small lump of clay or paper pulp, roll it into a ball (a pellet) between the palms, pierce a hole through it with a stick while it is soft, dry it, paint it, and thread the beads into an ornament (a necklace or a bracelet). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.2.1), never as a phone question: b) model beads using the pellet technique; c) decorate the beads by painting; d) make an ornament using beads."
+  },
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child puts the lines of the first stanza in order (Ee Mungu nguvu yetu, Ilete baraka kwetu, Haki iwe ngao na mlinzi, Natukae na undugu, Amani na uhuru, Raha tupate na ustawi) and says the stanza is a prayer to God asking for blessings, justice, living together as brothers and sisters, peace, freedom and plenty. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names occasions when the Kenya National Flag is raised (national holidays such as Madaraka, Mashujaa and Jamhuri Day, school assemblies, visits of the head of state, national meetings) and the etiquette of the anthem (stand still and upright, face the flag, hands at the sides, no talking, hats off). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G3.RUBRIC.3.1), never as a phone question: d) sing the Kenya National Anthem observing the anthem’s etiquette."
+  },
+  "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names water points and water bodies in the locality (a river, a dam, a pond, a lake, a well, a borehole, a water tank, a swimming pool) and the dangers each holds (drowning, slipping, falling into an open well, dirty water that causes disease, a river that rises quickly after rain). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names ways to keep safe (never go near water without an adult, keep away from open wells and fast or flooded rivers, keep tanks and wells covered, never push others near water) and says that if someone falls in, a child shouts for an adult and throws something that floats instead of jumping in. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  }
+ }
+}

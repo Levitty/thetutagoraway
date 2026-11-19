@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.PERFOR.GALLOPING",
+ "title": "Galloping",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Gallop to a drum beat. Change the leading foot only when the teacher says.",
+ "skills": [
+  {
+   "skill": "CREA.G3.PERFOR.GALLOPING.GALLOP",
+   "key_step": "The child describes a gallop (one foot leads, the other closes behind), its directions and its floor patterns.",
+   "floor": {
+    "prerequisite": "Names the directions of hopping (Grade 2).",
+    "question": "Can you hop backward?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a drum",
+    "chalked patterns",
+    "a ribbon for the leading foot"
+   ],
+   "steps": [
+    "Step with the leading foot.",
+    "Close the back foot behind it.",
+    "Keep the same foot leading.",
+    "Follow the pattern on the ground."
+   ],
+   "contexts": [
+    "a horse-riding game",
+    "a PE warm-up"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Watch my feet as I gallop.",
+     "say": "Which foot leads?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the same one each time."
+    },
+    {
+     "beat": "predict",
+     "do": "To go left, which foot leads?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The left foot."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.GALLOP.M_CAC3_GA_HOP",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is galloping the same as hopping?",
+     "repair": "Hop on one foot, then gallop, and watch the feet."
+    },
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.GALLOP.M_CAC3_GA_SWAP",
+     "listen_for": [
+      "the feet take turns"
+     ],
+     "ask": "In a gallop, which foot leads?",
+     "repair": "Put a ribbon on the leading foot and keep it in front."
+    },
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.GALLOP.M_CAC3_GA_SKIP",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Step-hop, step-hop, changing feet. Is that a gallop?",
+     "repair": "Do a gallop and a skip to the same drum and compare."
+    },
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.GALLOP.M_CAC3_GA_SIDE",
+     "listen_for": [
+      "no, only forward"
+     ],
+     "ask": "Can you gallop to the left?",
+     "repair": "Face the board and gallop to the left, left foot leading."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In galloping, does the leading foot change every step?",
+     "answer": "no",
+     "shows": "leading foot"
+    },
+    {
+     "question": "Name a direction you can gallop in.",
+     "answer": "any of: forward, left, right",
+     "shows": "directions"
+    }
+   ]
+  }
+ ]
+}

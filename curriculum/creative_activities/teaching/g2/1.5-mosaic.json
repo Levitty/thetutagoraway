@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G2.CREATI.MOSAIC",
+ "title": "Mosaic",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Pre-cut paper squares and collect seeds and eggshells. Draw the outline first; fill with pieces leaving small gaps.",
+ "skills": [
+  {
+   "skill": "CREA.G2.CREATI.MOSAIC.MOSAIC",
+   "key_step": "The child says a mosaic is a picture of many small pieces placed close with small gaps, and names its materials and tools.",
+   "floor": {
+    "prerequisite": "Knows art materials and tools (Grade 1).",
+    "question": "Name a tool for painting.",
+    "answer": "any of: brush, sponge"
+   },
+   "representations": [
+    "paper squares, seeds, eggshells",
+    "scissors and paste",
+    "a finished mosaic"
+   ],
+   "steps": [
+    "Draw the outline.",
+    "Cut small pieces.",
+    "Paste them side by side with small gaps.",
+    "Fill the whole shape."
+   ],
+   "contexts": [
+    "a mosaic of a fish for the class wall",
+    "a seed mosaic of a flower"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a mosaic close up.",
+     "say": "What is it made of?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: small pieces."
+    },
+    {
+     "beat": "predict",
+     "do": "Do the pieces overlap?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: they sit side by side with small gaps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_PAINTING",
+     "listen_for": [
+      "a picture painted with a brush"
+     ],
+     "ask": "Which picture is a mosaic?",
+     "repair": "Touch a mosaic and feel the small pieces."
+    },
+    {
+     "code": "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_BIG_PIECES",
+     "listen_for": [
+      "big pieces"
+     ],
+     "ask": "Do you make a mosaic with big pieces or small pieces?",
+     "repair": "Compare a picture of three big pieces with one of many small pieces."
+    },
+    {
+     "code": "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_OVERLAP",
+     "listen_for": [
+      "on top of each other"
+     ],
+     "ask": "How do you place the pieces in a mosaic?",
+     "repair": "Place pieces side by side and point to the small gaps."
+    },
+    {
+     "code": "CREA.G2.CREATI.MOSAIC.MOSAIC.M_CAC2_MO_TOOL_MATERIAL",
+     "listen_for": [
+      "a material"
+     ],
+     "ask": "Are scissors a material or a tool in mosaic making?",
+     "repair": "Sort cards: what is used up (paper, seeds) and what helps you work (scissors, brush)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a mosaic?",
+     "answer": "a picture made of many small pieces stuck close together",
+     "shows": "mosaic"
+    },
+    {
+     "question": "Name a material for a mosaic.",
+     "answer": "any of: paper, seeds, eggshells, bottle tops",
+     "shows": "materials"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G2.CREATI.HOPPING",
+ "title": "Hopping",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Hop on soft ground. Chalk the four floor patterns. Let the children rest the hopping leg often.",
+ "skills": [
+  {
+   "skill": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+   "key_step": "The child says a hop takes off and lands on the same foot, and names its directions and floor patterns.",
+   "floor": {
+    "prerequisite": "Jumps in different ways (Grade 1).",
+    "question": "How many feet do you land on in a jump?",
+    "answer": "two"
+   },
+   "representations": [
+    "chalked lines",
+    "ribbons for right hands",
+    "a drum"
+   ],
+   "steps": [
+    "Lift one foot.",
+    "Take off and land on the same foot.",
+    "Go in the named direction.",
+    "Follow the line on the ground."
+   ],
+   "contexts": [
+    "hopscotch at break",
+    "a PE warm-up"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Watch my feet: am I hopping or jumping?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "predict",
+     "do": "Which foot will I land on?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The same foot."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_TWO_FEET",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Wanjiru takes off on two feet and lands on two feet. Is that a hop?",
+     "repair": "Lift one foot and hop, then jump on two feet, and compare."
+    },
+    {
+     "code": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_CHANGE_FOOT",
+     "listen_for": [
+      "the other foot"
+     ],
+     "ask": "In a hop, which foot do you land on?",
+     "repair": "Hold a bean bag on the hopping knee and keep that foot."
+    },
+    {
+     "code": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_LEFT_RIGHT",
+     "listen_for": [
+      "my left side"
+     ],
+     "ask": "Hop to your right. Which side do you go to?",
+     "repair": "Tie a ribbon on the right wrist and hop that way."
+    },
+    {
+     "code": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS.M_CAC2_HO_ZIGZAG",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A line bends like a river with no corners. Is it a zigzag?",
+     "repair": "Chalk a zigzag with sharp corners beside a curve."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many feet do you hop on?",
+     "answer": "one",
+     "shows": "hop"
+    },
+    {
+     "question": "Name a floor pattern for hopping.",
+     "answer": "any of: straight, curved, circular, zigzag",
+     "shows": "patterns"
+    }
+   ]
+  }
+ ]
+}

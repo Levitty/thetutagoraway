@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.CREATI.COLLAGE",
+ "title": "Collage",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Collect materials from home and the compound a week before. Make paste from flour or cassava and water.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.COLLAGE.COLLAGE",
+   "key_step": "The child says a collage is a picture made by pasting pieces of different materials, and how the materials are prepared.",
+   "floor": {
+    "prerequisite": "Says what a mosaic is (Grade 2).",
+    "question": "How is a mosaic made?",
+    "answer": "by pasting small pieces close together"
+   },
+   "representations": [
+    "paper, cloth, seeds, leaves",
+    "flour paste",
+    "a finished collage"
+   ],
+   "steps": [
+    "Collect materials.",
+    "Clean, dry and sort them.",
+    "Cut or tear the pieces.",
+    "Paste them to make a picture."
+   ],
+   "contexts": [
+    "a class wall picture of a market",
+    "a card for a parent"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a collage and a crayon drawing.",
+     "say": "Which one has pieces stuck on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Let children touch both."
+    },
+    {
+     "beat": "predict",
+     "do": "Which is the collage?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The one with pasted pieces."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.COLLAGE.M_CAC3_CO_DRAWING",
+     "listen_for": [
+      "a picture coloured with crayons"
+     ],
+     "ask": "Which picture is a collage?",
+     "repair": "Touch a collage: feel the pieces stuck on."
+    },
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.COLLAGE.M_CAC3_CO_ONE_MATERIAL",
+     "listen_for": [
+      "no, only one material"
+     ],
+     "ask": "Can a collage use paper, cloth and seeds together?",
+     "repair": "Show a collage with paper, cloth and feathers."
+    },
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.COLLAGE.M_CAC3_CO_WET_LEAVES",
+     "listen_for": [
+      "paste them straight away"
+     ],
+     "ask": "What do you do to leaves before you paste them in a collage?",
+     "repair": "Paste one wet leaf and one dry leaf and check the next day."
+    },
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.COLLAGE.M_CAC3_CO_GLUE_ONLY",
+     "listen_for": [
+      "nothing, you cannot make it"
+     ],
+     "ask": "You have no glue. What can you use to paste a collage?",
+     "repair": "Mix flour and water together and test it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a collage?",
+     "answer": "a picture made by pasting pieces onto a surface",
+     "shows": "collage"
+    },
+    {
+     "question": "What must you do to leaves before pasting?",
+     "answer": "clean and dry them",
+     "shows": "prepare"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS",
+ "title": "Water safety Awareness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk round the school and point out the water points; songs and games on water safety stay away from real water.",
+ "skills": [
+  {
+   "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS",
+   "key_step": "The child names the water points at school and which can be dangerous.",
+   "floor": {
+    "prerequisite": "Names water points at home (Grade 1).",
+    "question": "Name a water point at home.",
+    "answer": "any of: a tap, a tank, a basin, a well"
+   },
+   "representations": [
+    "a walk round the school",
+    "pictures",
+    "a school map"
+   ],
+   "steps": [
+    "Look round the school.",
+    "Name each water point.",
+    "Say what could be dangerous there."
+   ],
+   "contexts": [
+    "the taps at lunch time",
+    "the tank behind the classrooms"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the school tank.",
+     "say": "Is it a water point?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: yes."
+    },
+    {
+     "beat": "predict",
+     "do": "What is the danger?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Climbing or falling in."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_ONLY_RIVER",
+     "listen_for": [
+      "there are none"
+     ],
+     "ask": "Name a water point in a school.",
+     "repair": "Walk round the school and count the taps and tanks."
+    },
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_TRENCH",
+     "listen_for": [
+      "no, it is only a trench"
+     ],
+     "ask": "After rain, a trench fills with water. Is it a water point to be careful at?",
+     "repair": "Look at the trench after rain."
+    },
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_TAP_SAFE",
+     "listen_for": [
+      "it cannot"
+     ],
+     "ask": "How can the area round a tap be dangerous?",
+     "repair": "Pour water on a smooth floor and walk carefully on it."
+    },
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS.M_CAC2_WP_TANK_CLIMB",
+     "listen_for": [
+      "yes, it is fun"
+     ],
+     "ask": "Is it safe to climb on a water tank?",
+     "repair": "Look at how high and open a tank top is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a water point at school.",
+     "answer": "any of: a tap, a tank, a well, a borehole",
+     "shows": "points"
+    },
+    {
+     "question": "Why can a tap area be dangerous?",
+     "answer": "the floor gets wet and slippery",
+     "shows": "danger"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL",
+   "key_step": "The child names water safety rules at school and tells a teacher about dangers.",
+   "floor": {
+    "prerequisite": "Names water points at school.",
+    "question": "Where is the tank in our school?",
+    "answer": "the place named"
+   },
+   "representations": [
+    "rule cards",
+    "role play",
+    "a water safety song"
+   ],
+   "steps": [
+    "Close taps.",
+    "Walk on wet floors.",
+    "Keep away from tanks and ponds.",
+    "Tell a teacher."
+   ],
+   "contexts": [
+    "washing hands before lunch",
+    "break time near the tank"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "A tank lid is open.",
+     "say": "What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: tell a teacher."
+    },
+    {
+     "beat": "predict",
+     "do": "Should you climb up and close it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: tell a teacher."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_TAP_OPEN",
+     "listen_for": [
+      "leave the tap running for the next child"
+     ],
+     "ask": "You finish washing your hands. What do you do?",
+     "repair": "Show the puddle a running tap makes."
+    },
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_RUN_WET",
+     "listen_for": [
+      "run across quickly"
+     ],
+     "ask": "The floor near the tap is wet. What do you do?",
+     "repair": "Watch a toy slide on a wet surface."
+    },
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_TELL",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "You see a tank with its lid off. What do you do?",
+     "repair": "Role play telling a teacher."
+    },
+    {
+     "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL.M_CAC2_SS_SPLASH",
+     "listen_for": [
+      "yes, it is play"
+     ],
+     "ask": "Is it all right to splash friends at the tap?",
+     "repair": "Ask: what happens to the floor and the water?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you do after washing your hands?",
+     "answer": "close the tap",
+     "shows": "tap"
+    },
+    {
+     "question": "What do you do if you see an open tank?",
+     "answer": "tell a teacher",
+     "shows": "report"
+    }
+   ]
+  }
+ ]
+}
