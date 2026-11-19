@@ -144,7 +144,8 @@ export const SUBS = [
     key: 'NATURA.HISTORIC_BUILT_ENVIRONME',
     packNotes: 'Use photos of places the class may know: Fort Jesus, Gede Ruins, the Nairobi National Museum, Bomas of Kenya, a local cultural centre or a memorial in the county town. A visit or a visitor beats any picture.',
     pre: {
-      HB_KINDS: [[`${E3}SOCIAL.CULTURAL_EVENTS.b`, 'Seeing that cultural events keep a community together (Grade 3) is the root of why places that keep culture matter.', 'helpful']],
+      HB_KINDS: [[`${E3}SOCIAL.CULTURAL_EVENTS.b`, 'Seeing that cultural events keep a community together (Grade 3) is the root of why places that keep culture matter.', 'helpful'],
+        ['ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES', 'Naming the features between home and school (Grade 1), buildings among them, is the first look at places people built.', 'helpful']],
       HB_IMPORTANCE: [[`${E3}SOCIAL.CULTURAL_EVENTS.c`, 'Sorting events by how they help a community (Grade 3) is the same thinking applied to places.']],
     },
     mis: [
@@ -221,7 +222,8 @@ export const SUBS = [
     key: 'SOCIAL.ASPECTS_OF_TRADITIONAL_C',
     packNotes: 'Ask learners to bring or describe an object, food or song from home. Treat every community\'s culture with respect and never rank them.',
     pre: {
-      TC_ASPECTS: [[`${E3}SOCIAL.CULTURAL_EVENTS.c`, 'Grade 3 classified cultural events; Grade 4 sorts the wider aspects of culture.', 'helpful']],
+      TC_ASPECTS: [[`${E3}SOCIAL.CULTURAL_EVENTS.c`, 'Grade 3 classified cultural events; Grade 4 sorts the wider aspects of culture.', 'helpful'],
+        ['ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS', 'Food, clothing and shelter, the basic needs of Grade 1, are three aspects of traditional culture: traditional food, dressing and housing.', 'helpful']],
     },
     mis: [
       ['TC_ASPECTS', 'M_TC_BAD_OLD', 'Thinks traditional culture is backward and should all be dropped.', 'A learner says all traditional culture is backward. What is a good reply?', 'Yes, it should all be stopped', 'No: much of it, like songs, food and respect for elders, is still good today', 'The child has heard harmful customs criticised and puts all culture with them.', 'List good parts of culture the class still enjoys: food, songs, games, respect for elders.', 'Many parts of traditional culture are good and alive today. Only harmful customs should stop.'],

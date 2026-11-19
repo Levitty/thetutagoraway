@@ -104,8 +104,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Describing how people express feelings (Grade 3) is the start of self-awareness. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -178,8 +178,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Labelling emotions (Grade 3) comes before managing them. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"

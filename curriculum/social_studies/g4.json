@@ -90,8 +90,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Watching where the sun is in the morning and evening (Grade 1) is how the child finds east and west. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -136,8 +136,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming features between home and school (Grade 1) is the first map of real places the child gives directions on. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -367,15 +367,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing the community around home (Grade 3) is the smallest piece the child fits inside a ward and a sub-county. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Locating the local market (Grade 2) is the child's first sense that places sit inside a bigger area. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -418,8 +418,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Using features on the way to the market (Grade 2) is the first time the child says where one place is from another. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -753,15 +753,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 named the features between home and school; Grade 4 sorts them into kinds. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Naming features on the way to market (Grade 2) gives the child real hills and rivers to sort. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -799,8 +799,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.RESOUR.WATER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing sources of water (Grade 1) is the root of \"rivers and lakes give water\". Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1042,15 +1042,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.NATURA.WEATHER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.NATURA.WEATHER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Telling the weather at different times of day (Grade 2) comes before seeing a season as many weeks of weather. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1088,8 +1088,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.WEATHER.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Responding to bad weather (Grade 3) is the child's first link between weather and what people do. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1125,15 +1125,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.ROAD_SIGNS",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.WEATHER.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The dangers of bad weather (Grade 3) lead straight into rain on roads. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1434,17 +1434,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS",
+       "kind": "skill",
+       "reason": "Seeing that cultural events keep a community together (Grade 3) is the root of why places that keep culture matter. Proposed, to confirm by a CBC Social Studies teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+       "kind": "skill",
        "strength": "helpful",
-       "reason": "Seeing that cultural events keep a community together (Grade 3) is the root of why places that keep culture matter. Proposed, to confirm by a CBC Social Studies teacher.",
+       "reason": "Naming the features between home and school (Grade 1), buildings among them, is the first look at places people built. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1480,8 +1480,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sorting events by how they help a community (Grade 3) is the same thinking applied to places. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1720,15 +1720,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The roles of people in a market (Grade 1) are the first ways the child sees people depend on each other. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Places where family needs are met (Grade 2) show that the family gets its needs from others. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1766,8 +1766,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "How emotional needs are met by others (Grade 3) is one benefit of depending on each other beyond money. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -1999,8 +1999,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sorting places as safe and unsafe (Grade 3) is one reason people settle in some places and avoid others. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -2162,17 +2162,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS",
+       "kind": "skill",
+       "reason": "Grade 3 classified cultural events; Grade 4 sorts the wider aspects of culture. Proposed, to confirm by a CBC Social Studies teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+       "kind": "skill",
        "strength": "helpful",
-       "reason": "Grade 3 classified cultural events; Grade 4 sorts the wider aspects of culture. Proposed, to confirm by a CBC Social Studies teacher.",
+       "reason": "Food, clothing and shelter, the basic needs of Grade 1, are three aspects of traditional culture: traditional food, dressing and housing. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2337,15 +2337,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Rights and responsibilities at school (Grade 2) are where the child first meets doing right by others. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Keeping the school clean (Grade 2) is the child's lived example of the value of cleanliness and responsibility. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -2526,8 +2526,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.ANIMALS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The importance of domestic animals (Grade 3) is the first resource the child sees earning a living (milk, eggs). Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -2567,8 +2567,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Making money from waste (Grade 3) shows that an activity gives income, not only food. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -2805,8 +2805,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.ANIMALS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Relating food items to the animals they come from (Grade 2) is the root of raw material and product. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -2843,8 +2843,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Making income from waste (Grade 3) shows that making things gives jobs and money. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -2887,8 +2887,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Locating the market with features (Grade 2) is the first time the child places a building on the land. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3183,8 +3183,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.EDIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making a kitchen garden (Grade 3) is a school project the child has already done. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3220,8 +3220,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Carrying out responsibilities at school (Grade 2) is the root of shared, honest work. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3452,8 +3452,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Child rights and responsibilities at school (Grade 2) are the base of good school citizenship. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3621,8 +3621,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Labelling the emotions of self and others (Grade 3) comes before listening and calming a quarrel. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3658,8 +3658,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Saying how people express feelings (Grade 3) is what the child does when talking a quarrel through. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3900,15 +3900,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Child rights (Grade 2) come before knowing when those rights are broken. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3944,8 +3944,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Ways of keeping safe in the community (Grade 3) are the other side of knowing what puts a child in danger. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -3982,8 +3982,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "How emotional needs are met (Grade 3) helps the child see that abuse hurts feelings as well as bodies. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -4285,8 +4285,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing a child has rights at school (Grade 2) includes the right to be heard, the root of voting. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -4324,8 +4324,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Seeing how shared events bring a community together (Grade 3) is the same idea as shared decisions. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -4568,8 +4568,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The rights of children at school (Grade 2) are what the Children's Government speaks for. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -4605,8 +4605,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Ways of keeping the school clean (Grade 2) are one job the Children's Government organises. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -4847,8 +4847,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Ways of keeping safe in the community (Grade 3) show the child the people who keep order there. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -4895,8 +4895,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Rights and responsibilities (Grade 2) are what a good leader protects. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -5180,8 +5180,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Naming national events (Grade 2) is the child's first idea of a national level above the county. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"

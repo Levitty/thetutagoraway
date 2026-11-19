@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/socialstudies-g7-skills.mjs';
 import { SUBS as DEPTH } from './data/socialstudies-depth/g7.mjs';
 import { applyDepth } from './science-depth.mjs';
+import { relinkLowerOutcomes } from './lib/lower-grade.mjs';
 
 const path = new URL('../curriculum/social_studies/g7.json', import.meta.url);
 const g7 = JSON.parse(readFileSync(path, 'utf8'));
@@ -66,6 +67,9 @@ g7.status = "outcomes from KICD's text, word for word; skills, prerequisites and
 // Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g7.mjs adds prerequisites, misconceptions to four per skill (with a real
 // cause for each first-pass one) and the teaching pack in curriculum/social_studies/teaching/g7/, through scripts/science-depth.mjs.
 const depth = applyDepth(g7, DEPTH, { dir: 'social_studies', grade: 7, prefix: P, derive: true });
+// Grade 1-3 outcome prerequisites name the Grade 1-3 skill that carries them (19 Nov 2026, scripts/lib/lower-grade.mjs).
+const relink = relinkLowerOutcomes(g7, { root: new URL('..', import.meta.url).pathname, label: 'Social Studies Grade 7' });
+console.log(`social studies g7: ${relink.moved} Grade 1-3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
 g7.status = g7.status.replace(/; depth pass 18 Nov 2026.*$/, '') + '; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g7)';
 writeFileSync(path, JSON.stringify(g7, null, 1) + '\n');
 console.log(`social studies g7: ${g7.totals.skills} skills, ${g7.totals.prerequisites} prerequisites, ${g7.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);
