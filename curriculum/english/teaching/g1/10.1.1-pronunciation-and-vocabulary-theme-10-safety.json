@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 10: Safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (a, or, ee, oo, oi, ay), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"pool\" start like \"pull\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "safety on the road",
+    "a boy at the zebra crossing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: pool, pull."
+    },
+    {
+     "beat": "point",
+     "do": "Say pool.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write pool and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS.M1_VS_POOL_PULL",
+     "listen_for": [
+      "pull"
+     ],
+     "ask": "Long?",
+     "repair": "Pool."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS.M1_VS_EE_I",
+     "listen_for": [
+      "sit"
+     ],
+     "ask": "Long smile?",
+     "repair": "Seat."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS.M1_VS_OI_O",
+     "listen_for": [
+      "top"
+     ],
+     "ask": "Slide o-ee?",
+     "repair": "Toy."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS.M1_VS_AY_E",
+     "listen_for": [
+      "pen"
+     ],
+     "ask": "Slide?",
+     "repair": "Play."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has the sound in \"boy\": toy, top, tea?",
+     "answer": "toy",
+     "shows": "oi"
+    },
+    {
+     "question": "Which word has the sound in \"day\": play, pen, pan?",
+     "answer": "play",
+     "shows": "ay"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+ ]
+}

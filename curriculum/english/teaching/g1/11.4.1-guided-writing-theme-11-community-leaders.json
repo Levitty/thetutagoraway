@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T11_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 11: Community leaders)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK",
+   "assessed_by": "questions",
+   "key_step": "The child says who is in the picture and what is happening, in one sentence.",
+   "floor": {
+    "prerequisite": "Names objects in pictures.",
+    "question": "What is this? (a hat)",
+    "answer": "a hat"
+   },
+   "steps": [
+    "Look at the picture.",
+    "Name who is in it.",
+    "Say what they are doing.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "community leaders",
+    "living together"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Show a picture of a chief and people."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chief.",
+     "say": "What is he doing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child points to each person while talking."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK.M1_PT_ONE_THING",
+     "listen_for": [
+      "a hat"
+     ],
+     "ask": "What is happening?",
+     "repair": "The chief is talking."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK.M1_PT_OWN_STORY",
+     "listen_for": [
+      "We went to Mombasa."
+     ],
+     "ask": "Can you see that?",
+     "repair": "Only what you see."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK.M1_PT_WRONG_ACTION",
+     "listen_for": [
+      "crying"
+     ],
+     "ask": "Look at her face.",
+     "repair": "Laughing."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK.M1_PT_HOME_WORD",
+     "listen_for": [
+      "soko"
+     ],
+     "ask": "In English?",
+     "repair": "A market."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Picture: children sharing food. What is happening?",
+     "answer": "The children are sharing food.",
+     "shows": "picture"
+    },
+    {
+     "question": "Picture: a girl laughing. How does she feel?",
+     "answer": "happy",
+     "shows": "feeling"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES",
+   "assessed_by": "composition",
+   "key_step": "The child says the sentence, then writes it with a capital, finger spaces and a full stop.",
+   "floor": {
+    "prerequisite": "Spells short words.",
+    "question": "Write: cat",
+    "answer": "cat"
+   },
+   "steps": [
+    "Say the sentence.",
+    "Count the words.",
+    "Write with finger spaces.",
+    "Check marks."
+   ],
+   "contexts": [
+    "my school",
+    "numbers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a line for each word: _ _ _ _."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first line.",
+     "say": "I like my school: one word on each line."
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence of his or her own."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES.M1_WS_NO_SPACES",
+     "listen_for": [
+      "Ilikemyschool."
+     ],
+     "ask": "Finger spaces?",
+     "repair": "After each word."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES.M1_WS_NO_VERB",
+     "listen_for": [
+      "My friend Amina."
+     ],
+     "ask": "Is there a doing or being word?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES.M1_WS_NO_MARKS",
+     "listen_for": [
+      "we play ball"
+     ],
+     "ask": "Capital and full stop?",
+     "repair": "Add them."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES.M1_WS_COPY",
+     "listen_for": [
+      "copies the teacher's sentence"
+     ],
+     "ask": "Is it your own?",
+     "repair": "Change a word."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a sentence about your friend.",
+     "answer": "own sentence, capital, spaces, full stop",
+     "shows": "composition"
+    },
+    {
+     "question": "Fix: welikeball",
+     "answer": "We like ball.",
+     "shows": "spaces"
+    }
+   ]
+  }
+ ]
+}

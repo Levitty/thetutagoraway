@@ -35,7 +35,7 @@ export const PRE = {
   READ_ACCURATELY: [['G1o:READIN.T8_FLU.b', 'Grade 1 read a grade-appropriate text with minimal hesitations.'], ['G1o:READIN.T7_WORD.b', 'Grade 1 read decodable and non-decodable words.'], ['BL_SP_SC_SK_CK', 'Decoding blends.']],
   READ_WITH_FEELING: [['READ_ACCURATELY', 'The words right first.'], ['G1o:READIN.T8_FLU.c', 'Grade 1 displayed feelings when reading.'], ['G1o:WRITIN.T10_.a', 'Grade 1 recognised question marks.']],
   PHRASE_READING: [['READ_ACCURATELY', 'Reading each word right.'], ['G1o:READIN.T11_FLU.b', 'Grade 1 read sentences at the right speed.']],
-  PREDICT: [['G1o:READIN.T11_COM.a', 'Grade 1 made predictions about a story.'], ['G1o:READIN.T13_COM.a', 'Grade 1 used the title and pictures to predict.']],
+  PREDICT: [['G1o:READIN.T11_COM.a', 'Grade 1 made predictions about a story.'], ['G1o:READIN.T13_COM.a', 'Grade 1 used the title and pictures to predict.'], ['G1o:WRITIN.T11_.a', 'Grade 1 said what pictures are about.']],
   WORD_FROM_CONTEXT: [['G1o:READIN.T13_COM.b', 'Grade 1 used context clues.'], ['THEME_WORDS', 'Knowing the words around the new one.']],
   DIRECT_QUESTIONS: [['G1o:READIN.T11_COM.b', 'Grade 1 answered direct questions.'], ['READ_ACCURATELY', 'Reading the text right.']],
   INDIRECT_QUESTIONS: [['DIRECT_QUESTIONS', 'Finding what is stated first.'], ['G1o:READIN.T12_COM.c', 'Grade 1 answered indirect questions.']],

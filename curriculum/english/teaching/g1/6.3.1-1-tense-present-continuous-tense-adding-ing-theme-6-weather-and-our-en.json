@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT",
+ "title": "1 Tense: Present Continuous Tense (Adding -ing) (Theme 6: Weather and our environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.PRESENT_CONTINUOUS",
+   "assessed_by": "questions",
+   "key_step": "The child says what is happening now with am, is or are and -ing.",
+   "floor": {
+    "prerequisite": "Uses am, is and are.",
+    "question": "I ___ a boy.",
+    "answer": "am"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "weather now",
+    "activities in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Look! The dog ___ running."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "is or nothing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: The dog is running."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.PRESENT_CONTINUOUS.M1_PC_NO_BE",
+     "listen_for": [
+      "(nothing): The dog running."
+     ],
+     "ask": "What comes before -ing?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.PRESENT_CONTINUOUS.M1_PC_NO_ING",
+     "listen_for": [
+      "cook"
+     ],
+     "ask": "Is + ?",
+     "repair": "Cooking."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.PRESENT_CONTINUOUS.M1_PC_SPELL",
+     "listen_for": [
+      "runing"
+     ],
+     "ask": "Double?",
+     "repair": "Running."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.PRESENT_CONTINUOUS.M1_PC_WRONG_BE",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "I takes?",
+     "repair": "Am."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She is ___ (cook).",
+     "answer": "cooking",
+     "shows": "-ing"
+    },
+    {
+     "question": "I ___ writing.",
+     "answer": "am",
+     "shows": "am"
+    }
+   ]
+  }
+ ]
+}

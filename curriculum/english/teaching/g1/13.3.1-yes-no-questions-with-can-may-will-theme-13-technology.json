@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT",
+ "title": "Yes/ No questions (with can, may, will) (Theme 13: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child puts can, may or will first to ask, and answers with yes or no and the same word.",
+   "floor": {
+    "prerequisite": "Uses do in questions.",
+    "question": "Do you like tea?",
+    "answer": "Yes, I do."
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "technology: phones and radios",
+    "asking to go out"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Can you swim?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "How do you answer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Yes, I can. (or No, I cannot.)"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS.M1_YN_ONE_WORD",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "Can you say more?",
+     "repair": "Yes, I can."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS.M1_YN_CAN_ING",
+     "listen_for": [
+      "coming"
+     ],
+     "ask": "After can?",
+     "repair": "Come."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS.M1_YN_ORDER",
+     "listen_for": [
+      "You can swim?"
+     ],
+     "ask": "Where does can go?",
+     "repair": "First."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS.M1_YN_WRONG_HELPER",
+     "listen_for": [
+      "Yes, I can."
+     ],
+     "ask": "Which word was in the question?",
+     "repair": "Will."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ask: (you, ride, can, a bicycle)",
+     "answer": "Can you ride a bicycle?",
+     "shows": "order"
+    },
+    {
+     "question": "Will you come? Answer.",
+     "answer": "Yes, I will.",
+     "shows": "helper"
+    }
+   ]
+  }
+ ]
+}

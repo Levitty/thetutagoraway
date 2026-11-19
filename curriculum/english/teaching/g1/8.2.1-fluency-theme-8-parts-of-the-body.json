@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T8_FLUENCY",
+ "title": "Fluency (Theme 8: Parts of the body)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD",
+   "assessed_by": "voice",
+   "key_step": "The child points under each word, blends new words, reads sight words at a glance, and keeps going.",
+   "floor": {
+    "prerequisite": "Reads short words.",
+    "question": "Read: hen",
+    "answer": "hen"
+   },
+   "steps": [
+    "Read to the child.",
+    "Read together.",
+    "Child reads alone.",
+    "Read again more smoothly."
+   ],
+   "contexts": [
+    "my friends",
+    "safety at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The hen is in the hut."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hut.",
+     "say": "Say the sounds with me, then read it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child traces under the word while reading."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD.M1_RA_GUESS",
+     "listen_for": [
+      "The hen is in the house."
+     ],
+     "ask": "Read every letter.",
+     "repair": "Hut."
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD.M1_RA_SKIP",
+     "listen_for": [
+      "I go school."
+     ],
+     "ask": "Touch every word.",
+     "repair": "Read again."
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD.M1_RA_LONG_STOPS",
+     "listen_for": [
+      "long stop after each word"
+     ],
+     "ask": "Read it again smoother.",
+     "repair": "Second time."
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD.M1_RA_LOST_PLACE",
+     "listen_for": [
+      "reads line one twice"
+     ],
+     "ask": "Where is your finger?",
+     "repair": "Under the line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: I go to school.",
+     "answer": "every word read",
+     "shows": "accuracy"
+    },
+    {
+     "question": "Read: My cat is big.",
+     "answer": "smooth, few stops",
+     "shows": "fluency"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.READIN.T8_FLUENCY.READ_WITH_FEELING",
+   "assessed_by": "voice",
+   "key_step": "The child thinks how the character feels and says the words that way.",
+   "floor": {
+    "prerequisite": "Reads short sentences.",
+    "question": "Read: I am happy.",
+    "answer": "I am happy."
+   },
+   "steps": [
+    "Read flat, then with feeling.",
+    "Ask how the character feels.",
+    "Child reads.",
+    "Act it out."
+   ],
+   "contexts": [
+    "a story about friends",
+    "a surprise"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"I am so happy!\" said Ali."
+    },
+    {
+     "beat": "point",
+     "do": "Point at happy.",
+     "say": "Say the sounds with me, then read it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child traces under the word while reading."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_WITH_FEELING.M1_RF_FLAT",
+     "listen_for": [
+      "flat voice"
+     ],
+     "ask": "How does Ali feel?",
+     "repair": "Say it happily."
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_WITH_FEELING.M1_RF_QUESTION",
+     "listen_for": [
+      "voice falls"
+     ],
+     "ask": "Question mark?",
+     "repair": "Lift."
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_WITH_FEELING.M1_RF_LOUD_ALL",
+     "listen_for": [
+      "shouts it"
+     ],
+     "ask": "Loud or soft?",
+     "repair": "Soft for the baby."
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.READ_WITH_FEELING.M1_RF_NO_STOP",
+     "listen_for": [
+      "I ran I fell."
+     ],
+     "ask": "A dot?",
+     "repair": "Stop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: Is it hot?",
+     "answer": "voice rises",
+     "shows": "question"
+    },
+    {
+     "question": "Read: \"Oh no!\" said Mama.",
+     "answer": "worried voice",
+     "shows": "feeling"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W"
+ ]
+}

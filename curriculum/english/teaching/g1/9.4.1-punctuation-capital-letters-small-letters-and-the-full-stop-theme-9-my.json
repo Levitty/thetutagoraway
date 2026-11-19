@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_",
+ "title": "Punctuation (capital letters, small letters and the full stop) (Theme 9: My friends)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP",
+   "assessed_by": "questions",
+   "key_step": "The child checks each sentence: capital first, full stop last, nothing in between.",
+   "floor": {
+    "prerequisite": "Knows capital letters.",
+    "question": "Show me capital M.",
+    "answer": "M"
+   },
+   "steps": [
+    "Show sentences with and without marks.",
+    "Find capitals and full stops.",
+    "Correct sentences.",
+    "Write own sentence."
+   ],
+   "contexts": [
+    "my friends",
+    "my family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: my dog is big"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "What is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP.M1_CF_NO_STOP",
+     "listen_for": [
+      "I can run"
+     ],
+     "ask": "How does it end?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP.M1_CF_SMALL_START",
+     "listen_for": [
+      "my dog is big."
+     ],
+     "ask": "How does it start?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP.M1_CF_LINE_END",
+     "listen_for": [
+      "at the end of each line"
+     ],
+     "ask": "Where does the idea end?",
+     "repair": "Full stop there."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP.M1_CF_CAPS_ALL",
+     "listen_for": [
+      "My Dog Is Big."
+     ],
+     "ask": "Names only?",
+     "repair": "Small letters."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: we go home",
+     "answer": "We go home.",
+     "shows": "marks"
+    },
+    {
+     "question": "Which is right: My Dog or My dog?",
+     "answer": "My dog",
+     "shows": "no extra capitals"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS"
+ ]
+}

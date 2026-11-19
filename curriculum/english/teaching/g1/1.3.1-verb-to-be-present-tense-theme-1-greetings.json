@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T",
+ "title": "Verb ‘to be’- Present Tense (Theme 1: Greetings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT",
+   "assessed_by": "questions",
+   "key_step": "The child says who first, then am, is or are: I am, he is, you are.",
+   "floor": {
+    "prerequisite": "Greets people.",
+    "question": "Say good morning.",
+    "answer": "Good morning."
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "introducing a friend",
+    "greetings at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: I ___ Amina."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "am or is?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: I am Amina."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT.M1_BE_I_IS",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "I takes?",
+     "repair": "Am."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT.M1_BE_HE_ARE",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "One person?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT.M1_BE_DROP",
+     "listen_for": [
+      "(nothing): I Juma."
+     ],
+     "ask": "Where is am?",
+     "repair": "I am Juma."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT.M1_BE_YOU_IS",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "You takes?",
+     "repair": "Are."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She ___ my sister.",
+     "answer": "is",
+     "shows": "is"
+    },
+    {
+     "question": "You ___ my teacher.",
+     "answer": "are",
+     "shows": "are"
+    }
+   ]
+  }
+ ]
+}

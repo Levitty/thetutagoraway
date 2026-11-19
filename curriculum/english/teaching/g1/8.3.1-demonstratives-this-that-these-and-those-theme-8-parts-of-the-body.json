@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_",
+ "title": "Demonstratives: this, that, these and those (Theme 8: Parts of the body)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.DEMONSTRATIVES",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Near or far? One or many?\"",
+   "floor": {
+    "prerequisite": "Makes plurals.",
+    "question": "One shoe, two ___",
+    "answer": "shoes"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "parts of the body",
+    "shoes and socks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: ___ are my shoes. (near)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "This or These?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: These are my shoes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.DEMONSTRATIVES.M1_DM_THIS_MANY",
+     "listen_for": [
+      "This"
+     ],
+     "ask": "Many?",
+     "repair": "These."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.DEMONSTRATIVES.M1_DM_NEAR_FAR",
+     "listen_for": [
+      "This"
+     ],
+     "ask": "Far?",
+     "repair": "That."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.DEMONSTRATIVES.M1_DM_THESE_ONE",
+     "listen_for": [
+      "These"
+     ],
+     "ask": "One?",
+     "repair": "This."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.DEMONSTRATIVES.M1_DM_THEM",
+     "listen_for": [
+      "them"
+     ],
+     "ask": "Them or those?",
+     "repair": "Those."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ is a bird far away.",
+     "answer": "That",
+     "shows": "far one"
+    },
+    {
+     "question": "Look at ___ cows (far).",
+     "answer": "those",
+     "shows": "far many"
+    }
+   ]
+  }
+ ]
+}

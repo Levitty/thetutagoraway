@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO",
+ "title": "Nouns: Common and proper nouns (Theme 9: My friends)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Does it name a person, thing or place? Is it a special name?\" and gives special names capitals.",
+   "floor": {
+    "prerequisite": "Names things.",
+    "question": "What is this place? (school)",
+    "answer": "school"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "my friends",
+    "places in our village"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: juma lives in nakuru."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which names need capitals?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Juma lives in Nakuru."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS.M1_NN_PROPER_SMALL",
+     "listen_for": [
+      "juma lives in nakuru."
+     ],
+     "ask": "Special name?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS.M1_NN_COMMON_CAPITAL",
+     "listen_for": [
+      "I have a Dog."
+     ],
+     "ask": "Special or general?",
+     "repair": "Small letter."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS.M1_NN_ACTION",
+     "listen_for": [
+      "run"
+     ],
+     "ask": "Can you touch it?",
+     "repair": "Ball."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS.M1_NN_PEOPLE_ONLY",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Is school a place?",
+     "repair": "Yes: a noun."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word names a thing: run, ball, big?",
+     "answer": "ball",
+     "shows": "noun"
+    },
+    {
+     "question": "Is \"girl\" or \"Wanjiru\" a special name?",
+     "answer": "Wanjiru",
+     "shows": "proper"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS",
+ "title": "Singular and plurals (adding -s and -es) (Theme 4: Home)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES",
+   "assessed_by": "questions",
+   "key_step": "The child counts: one, no -s; more, -s, or -es after s, x, ch, sh.",
+   "floor": {
+    "prerequisite": "Names things.",
+    "question": "What is this? (a cup)",
+    "answer": "a cup"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "things at home",
+    "dishes and boxes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: One box, two ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "boxs or boxes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: two boxes"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES.M1_PL_S_FOR_ES",
+     "listen_for": [
+      "boxs"
+     ],
+     "ask": "Ends in x?",
+     "repair": "-es."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES.M1_PL_NUMBER_NO_S",
+     "listen_for": [
+      "cup"
+     ],
+     "ask": "Two: one or many?",
+     "repair": "Cups."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES.M1_PL_ES_ALL",
+     "listen_for": [
+      "cupes"
+     ],
+     "ask": "Ends in s, x, ch or sh?",
+     "repair": "No: -s."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES.M1_PL_A_CUPS",
+     "listen_for": [
+      "cups"
+     ],
+     "ask": "A means?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One cup, three ___",
+     "answer": "cups",
+     "shows": "-s"
+    },
+    {
+     "question": "One dish, two ___",
+     "answer": "dishes",
+     "shows": "-es"
+    }
+   ]
+  }
+ ]
+}

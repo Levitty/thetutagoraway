@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H",
+ "title": "Possessives: (my, our, her, his, their, its) (Theme 12: Living together)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.POSSESSIVES",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Whose?\" and puts my, our, his, her or their before the noun.",
+   "floor": {
+    "prerequisite": "Uses he and she.",
+    "question": "Juma: he. Amina: ___",
+    "answer": "she"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "living together",
+    "our home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Amina has a pen. It is ___ pen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "his or her?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: It is her pen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.POSSESSIVES.M1_PO_HIS_HER",
+     "listen_for": [
+      "his"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "Her."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.POSSESSIVES.M1_PO_ME",
+     "listen_for": [
+      "me"
+     ],
+     "ask": "Before a noun?",
+     "repair": "My."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.POSSESSIVES.M1_PO_US",
+     "listen_for": [
+      "us"
+     ],
+     "ask": "Our or us?",
+     "repair": "Our."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.POSSESSIVES.M1_PO_THEY",
+     "listen_for": [
+      "they"
+     ],
+     "ask": "Their or they?",
+     "repair": "Their."
+    }
+   ],
+   "checks": [
+    {
+     "question": "This is ___ bag (me).",
+     "answer": "my",
+     "shows": "my"
+    },
+    {
+     "question": "That is ___ house (they).",
+     "answer": "their",
+     "shows": "their"
+    }
+   ]
+  }
+ ]
+}

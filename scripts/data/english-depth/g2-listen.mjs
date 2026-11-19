@@ -60,7 +60,7 @@ export const PRE = {
   SAY_VOWEL_SOUNDS: [['NG_EE_ST_GL', 'Hearing the long e first.'], ['G1o:LISTEN.T10_.b', 'Grade 1 pronounced the vowel sounds of Theme 10.'], ['G1o:LISTEN.T2_.b', 'Grade 1 articulated /iː/ and /ɪ/.']],
   THEME_WORDS: [['G1o:LISTEN.T1_.c', 'Grade 1 used words for greetings.'], ['G1o:LISTEN.T9_.c', 'Grade 1 used theme vocabulary in oral sentences.']],
   USE_WORDS_SENTENCES: [['THEME_WORDS', 'Knowing the word.'], ['G1o:LISTEN.T2_.c', 'Grade 1 made sentences with theme words.'], ['G1o:LISTEN.T7_.c', 'Grade 1 used words in short sentences.']],
-  FOLLOW_TWO_STEP: [['G1o:LISTEN.T3_.c', 'Grade 1 responded to one-step instructions.'], ['G1o:LISTEN.T6_.c', 'Grade 1 responded to one-step instructions with new words.']],
+  FOLLOW_TWO_STEP: [['G1o:LISTEN.T3_.c', 'Grade 1 responded to one-step instructions.'], ['G1o:LISTEN.T6_.c', 'Grade 1 responded to one-step instructions with new words.'], ['G1o:LANGUA.T10_.b', 'Grade 1 used position words in instructions.']],
 };
 export const MIS = [
   ['BL_SP_SC_SK_CK', 'M2_SC_SK_DIFFERENT', 'Thinks sc and sk say different sounds.', 'Which two words start with the same sound: scarf, skirt, shirt?', 'scarf and shirt', 'scarf and skirt', 'The letters look different, so the child expects different sounds.', 'Sc and sk both say s-k: scarf, skirt.'],

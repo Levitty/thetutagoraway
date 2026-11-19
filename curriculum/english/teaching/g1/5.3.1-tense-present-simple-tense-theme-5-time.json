@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE",
+ "title": "Tense: Present Simple Tense (Theme 5: Time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE",
+   "assessed_by": "questions",
+   "key_step": "The child uses the plain verb for every day, with -s or -es after he and she.",
+   "floor": {
+    "prerequisite": "Uses do and does.",
+    "question": "She ___ her work.",
+    "answer": "does"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "my day",
+    "time: morning and evening"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Every day Mama ___ water. (fetch)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "fetch or fetches?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Mama fetches water."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE.M1_PS_HE_NO_S",
+     "listen_for": [
+      "fetch"
+     ],
+     "ask": "He or she?",
+     "repair": "Add -es."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE.M1_PS_I_S",
+     "listen_for": [
+      "brushes"
+     ],
+     "ask": "I?",
+     "repair": "No -s."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE.M1_PS_ING_ROUTINE",
+     "listen_for": [
+      "am going"
+     ],
+     "ask": "Every day or now?",
+     "repair": "I go."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE.M1_PS_ES_SPELL",
+     "listen_for": [
+      "washs"
+     ],
+     "ask": "Ends in sh?",
+     "repair": "Washes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I ___ my teeth every day. (brush)",
+     "answer": "brush",
+     "shows": "I"
+    },
+    {
+     "question": "Every day I ___ to school.",
+     "answer": "go",
+     "shows": "routine"
+    }
+   ]
+  }
+ ]
+}

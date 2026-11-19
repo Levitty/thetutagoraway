@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_",
+ "title": "Punctuation - Capital letters - Question marks (Theme 10: Safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.QUESTION_MARK",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Telling or asking?\" and puts a full stop or a question mark.",
+   "floor": {
+    "prerequisite": "Uses full stops.",
+    "question": "Fix: I ran",
+    "answer": "I ran."
+   },
+   "steps": [
+    "Say sentences: telling or asking?",
+    "Show the question mark.",
+    "Choose marks.",
+    "Write a question."
+   ],
+   "contexts": [
+    "safety questions",
+    "asking permission"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Can you swim"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which mark goes at the end?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.QUESTION_MARK.M1_QM_FULL_STOP",
+     "listen_for": [
+      "."
+     ],
+     "ask": "Asking?",
+     "repair": "?"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.QUESTION_MARK.M1_QM_STATEMENT",
+     "listen_for": [
+      "?"
+     ],
+     "ask": "Telling?",
+     "repair": "."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.QUESTION_MARK.M1_QM_BACKWARD",
+     "listen_for": [
+      "a backwards question mark"
+     ],
+     "ask": "Which way does the hook open?",
+     "repair": "Left."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.QUESTION_MARK.M1_QM_NO_CAPITAL",
+     "listen_for": [
+      "may I go out?"
+     ],
+     "ask": "Start?",
+     "repair": "Capital."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which mark: Is it hot",
+     "answer": "?",
+     "shows": "question"
+    },
+    {
+     "question": "Which mark: It is hot",
+     "answer": ".",
+     "shows": "statement"
+    }
+   ]
+  }
+ ]
+}

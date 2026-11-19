@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 8: Parts of the body)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (k, d, w), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"wet\" start like \"vet\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "parts of the body",
+    "a doll with a hand"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: wet, vet."
+    },
+    {
+     "beat": "point",
+     "do": "Say wet.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write wet and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W.M1_KD_K_G",
+     "listen_for": [
+      "gap"
+     ],
+     "ask": "Buzz?",
+     "repair": "No: cap."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W.M1_KD_D_T",
+     "listen_for": [
+      "t"
+     ],
+     "ask": "Buzz?",
+     "repair": "Yes: doll."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W.M1_KD_W_V",
+     "listen_for": [
+      "vet"
+     ],
+     "ask": "Round lips?",
+     "repair": "Wet."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W.M1_KD_C_K_DIFFERENT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Same sound?",
+     "repair": "Yes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with d: doll, toll, ball?",
+     "answer": "doll",
+     "shows": "d"
+    },
+    {
+     "question": "Do \"cat\" and \"kite\" start the same?",
+     "answer": "yes",
+     "shows": "k"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says what the word means and tests it in a sentence.",
+   "floor": {
+    "prerequisite": "Names objects in English.",
+    "question": "What is this? (a tap)",
+    "answer": "a tap"
+   },
+   "steps": [
+    "Show the picture or thing.",
+    "Say the word.",
+    "Use it in a sentence.",
+    "Match words and pictures."
+   ],
+   "contexts": [
+    "parts of the body",
+    "community leaders"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a face."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the eyes.",
+     "say": "What do we see with?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for eyes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the ears."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS.M1_TW_SAME_GROUP",
+     "listen_for": [
+      "ears"
+     ],
+     "ask": "What do we do with it?",
+     "repair": "See: eyes."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS.M1_TW_HOME_WORD",
+     "listen_for": [
+      "mzee"
+     ],
+     "ask": "In English?",
+     "repair": "Chief."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS.M1_TW_PICTURE_NEAR",
+     "listen_for": [
+      "girl"
+     ],
+     "ask": "What is in her hand?",
+     "repair": "A phone."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS.M1_TW_SOUND_ALIKE",
+     "listen_for": [
+      "top"
+     ],
+     "ask": "Does it make sense?",
+     "repair": "Tap."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We hear with our ...",
+     "answer": "ears",
+     "shows": "body"
+    },
+    {
+     "question": "The person who leads our location is the ...",
+     "answer": "chief",
+     "shows": "leaders"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS"
+ ]
+}

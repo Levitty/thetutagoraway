@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T12_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 12: Living together)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS",
+   "assessed_by": "questions",
+   "key_step": "The child reads the whole sentence with each choice in the gap and picks the one that makes sense.",
+   "floor": {
+    "prerequisite": "Reads short sentences.",
+    "question": "Read: I see a cat.",
+    "answer": "I see a cat."
+   },
+   "steps": [
+    "Read the sentence.",
+    "Try each word.",
+    "Choose.",
+    "Read it again."
+   ],
+   "contexts": [
+    "living together",
+    "technology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I drink tea from a ___ (cup, cap)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which word fits?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS.M1_FG_SOUND_ALIKE",
+     "listen_for": [
+      "cap"
+     ],
+     "ask": "Read it with cap: does it make sense?",
+     "repair": "Cup."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS.M1_FG_WRONG_KIND",
+     "listen_for": [
+      "run"
+     ],
+     "ask": "Does it make sense?",
+     "repair": "Dog."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS.M1_FG_FIRST",
+     "listen_for": [
+      "eat"
+     ],
+     "ask": "Did you try both?",
+     "repair": "Walk."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS.M1_FG_A_PLURAL",
+     "listen_for": [
+      "cats"
+     ],
+     "ask": "A means?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We ___ to school. (walk, eat)",
+     "answer": "walk",
+     "shows": "meaning"
+    },
+    {
+     "question": "I have a ___ (cat, cats).",
+     "answer": "cat",
+     "shows": "form"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK"
+ ]
+}

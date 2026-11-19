@@ -21,7 +21,8 @@ export function lowerGradeTests(grade, { skills, outcomes }) {
   });
 
   test(`Grade ${grade} English prerequisites name real skills or outcomes, of this grade or the grade below`, async () => {
-    const here = new Set(all.map(k => k.code));
+    const here = new Set([...all.map(k => k.code), ...(doc.readiness || []).map(r => r.code)]);   // Grade 1: pre-primary readiness skills
+    if (grade === 1) assert.ok((doc.readiness || []).length >= 8 && doc.readiness.every(r => r.code.startsWith('ENGL.PP2.READINESS.') && r.name && r.what), 'Grade 1 defines its readiness skills');
     const below = grade > 1 ? load(grade - 1) : null;
     const belowSkills = new Set(below ? below.sub_strands.flatMap(s => s.skills || []).map(k => k.code) : []);
     const belowOut = new Set(below ? below.sub_strands.flatMap(s => s.outcomes).map(o => o.code) : []);

@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T15_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 15: Conserving resources)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.DESCRIBING_SENTENCES",
+   "assessed_by": "composition",
+   "key_step": "The child names the thing, chooses a describing word that fits, and puts it before the noun.",
+   "floor": {
+    "prerequisite": "Uses describing words.",
+    "question": "The sky is ___ (blue).",
+    "answer": "blue"
+   },
+   "steps": [
+    "Look at the picture.",
+    "List describing words.",
+    "Put one in a sentence.",
+    "Write it."
+   ],
+   "contexts": [
+    "conserving water and trees"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I see a ___ tree."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "What is the tree like?"
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence about the river."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.DESCRIBING_SENTENCES.M1_DS_NONE",
+     "listen_for": [
+      "I see a tree."
+     ],
+     "ask": "What is it like?",
+     "repair": "Add a describing word."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.DESCRIBING_SENTENCES.M1_DS_AFTER",
+     "listen_for": [
+      "a leaf green"
+     ],
+     "ask": "Where does green go?",
+     "repair": "Before leaf."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.DESCRIBING_SENTENCES.M1_DS_LIST",
+     "listen_for": [
+      "clean, cold, nice"
+     ],
+     "ask": "Can you make a sentence?",
+     "repair": "The water is clean."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.DESCRIBING_SENTENCES.M1_DS_NICE",
+     "listen_for": [
+      "The river is nice."
+     ],
+     "ask": "A sharper word?",
+     "repair": "Clean, wide."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a sentence about clean water.",
+     "answer": "a sentence with a describing word",
+     "shows": "describing"
+    },
+    {
+     "question": "Fix: a leaf green",
+     "answer": "a green leaf",
+     "shows": "order"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES"
+ ]
+}

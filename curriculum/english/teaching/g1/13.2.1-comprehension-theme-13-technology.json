@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T13_COMPREHENSION",
+ "title": "Comprehension (Theme 13: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T13_COMPREHENSION.WORD_FROM_CONTEXT",
+   "assessed_by": "questions",
+   "key_step": "The child uses the picture and the other words to say what the new word means.",
+   "floor": {
+    "prerequisite": "Answers questions on a text.",
+    "question": "Where is the baby? (in the cot)",
+    "answer": "in the cot"
+   },
+   "steps": [
+    "Read the sentence.",
+    "Look at the picture.",
+    "Say what fits.",
+    "Check in the sentence."
+   ],
+   "contexts": [
+    "technology",
+    "conserving resources"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The hen sat on her nest."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture and words.",
+     "say": "What is a nest?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child points to the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: a bird's home"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.WORD_FROM_CONTEXT.M1_WC_LOOKS_LIKE",
+     "listen_for": [
+      "a cat"
+     ],
+     "ask": "Does it fit?",
+     "repair": "Read it again."
+    },
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.WORD_FROM_CONTEXT.M1_WC_GIVE_UP",
+     "listen_for": [
+      "I do not know."
+     ],
+     "ask": "What do the picture and words show?",
+     "repair": "A bird's home."
+    },
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.WORD_FROM_CONTEXT.M1_WC_PICTURE_ONLY",
+     "listen_for": [
+      "water"
+     ],
+     "ask": "What do the words say?",
+     "repair": "Not running."
+    },
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.WORD_FROM_CONTEXT.M1_WC_USUAL_MEANING",
+     "listen_for": [
+      "a stick for hitting a ball"
+     ],
+     "ask": "Which meaning fits?",
+     "repair": "The animal."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The baby is in the cot. A cot is ...",
+     "answer": "a bed for a baby",
+     "shows": "clue"
+    },
+    {
+     "question": "The bat hung in the cave. A bat is ...",
+     "answer": "an animal",
+     "shows": "meaning here"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT",
+  "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS"
+ ]
+}

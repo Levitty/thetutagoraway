@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_",
+ "title": "Simple prepositions (in, on, under, between, behind, in front, inside, outside) (Theme 10: Safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS",
+   "assessed_by": "questions",
+   "key_step": "The child places a real object and says where it is.",
+   "floor": {
+    "prerequisite": "Follows position instructions.",
+    "question": "Put the pen on the book.",
+    "answer": "does it"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "safety at home",
+    "a classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: The cup is ___ the table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "in or on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: The cup is on the table."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS.M1_PP_IN_ON",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "On top?",
+     "repair": "On."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS.M1_PP_UNDER_BEHIND",
+     "listen_for": [
+      "under"
+     ],
+     "ask": "At the back?",
+     "repair": "Behind."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS.M1_PP_BETWEEN_ONE",
+     "listen_for": [
+      "between"
+     ],
+     "ask": "Two things?",
+     "repair": "Beside."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS.M1_PP_IN_INSIDE",
+     "listen_for": [
+      "outside"
+     ],
+     "ask": "Rain?",
+     "repair": "Inside."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The ball is ___ the two boxes.",
+     "answer": "between",
+     "shows": "between"
+    },
+    {
+     "question": "It is raining. Play ___.",
+     "answer": "inside",
+     "shows": "inside"
+    }
+   ]
+  }
+ ]
+}

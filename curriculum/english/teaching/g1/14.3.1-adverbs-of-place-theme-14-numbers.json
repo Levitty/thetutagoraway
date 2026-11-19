@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE",
+ "title": "Adverbs of Place (Theme 14: Numbers)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.ADVERBS_PLACE",
+   "assessed_by": "questions",
+   "key_step": "The child points and says where: here, there, inside, outside, up, down, near, far.",
+   "floor": {
+    "prerequisite": "Uses position words.",
+    "question": "The cup is ___ the table.",
+    "answer": "on"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "numbers: two goats outside",
+    "the shop is far"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Come ___ and sit by me."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "here or there?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Come here."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.ADVERBS_PLACE.M1_AP_HERE_THERE",
+     "listen_for": [
+      "there"
+     ],
+     "ask": "Near me?",
+     "repair": "Here."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.ADVERBS_PLACE.M1_AP_INSIDE_OUTSIDE",
+     "listen_for": [
+      "outside"
+     ],
+     "ask": "In the shed?",
+     "repair": "Inside."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.ADVERBS_PLACE.M1_AP_UP_DOWN",
+     "listen_for": [
+      "down"
+     ],
+     "ask": "Climb which way?",
+     "repair": "Up."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.ADVERBS_PLACE.M1_AP_NEAR_FAR",
+     "listen_for": [
+      "near"
+     ],
+     "ask": "A long walk?",
+     "repair": "Far."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The goats sleep ___ the shed.",
+     "answer": "inside",
+     "shows": "inside"
+    },
+    {
+     "question": "The cat climbed ___ the tree.",
+     "answer": "up",
+     "shows": "up"
+    }
+   ]
+  }
+ ]
+}

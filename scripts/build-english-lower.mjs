@@ -21,6 +21,17 @@ const file = (g) => new URL(`../curriculum/english/g${g}.json`, import.meta.url)
 const doc = JSON.parse(readFileSync(file(GRADE), 'utf8'));
 for (const s of doc.sub_strands) { s.skills = []; s.misconceptions = []; }
 const counts = await applyDepth(GRADE, doc, { families: [] });
+// Grade 1: the pre-primary readiness skills its prerequisites name (PP:ID), from scripts/data/english-depth/g1-*.mjs (READY).
+if (GRADE === 1) {
+  const { readdirSync } = await import('node:fs');
+  const dir = new URL('./data/english-depth/', import.meta.url);
+  const READY = [];
+  for (const f of readdirSync(dir).filter(f => /^g1-.*\.mjs$/.test(f)).sort()) READY.push(...((await import(new URL(f, dir).href)).READY || []));
+  doc.readiness = READY.map(([id, name, what]) => ({ code: `ENGL.PP2.READINESS.${id}`, name, what, status: 'proposed' }));
+  const known = new Set(doc.readiness.map(r => r.code));
+  const missing = [...new Set(doc.sub_strands.flatMap(s => s.skills.flatMap(k => k.prerequisites.map(p => p.requires))).filter(c => c.startsWith('ENGL.PP2.') && !known.has(c)))];
+  if (missing.length) throw new Error(`readiness skills named but not defined: ${missing.join(', ')}`);
+}
 if (!counts) { console.error(`no depth data for Grade ${GRADE} (scripts/data/english-depth/g${GRADE}-*.mjs)`); process.exit(1); }
 
 // Outcome prerequisites of the grade below -> the skill of that grade that covers the outcome (first one listed).
@@ -45,6 +56,6 @@ if (GRADE > 1) {
   doc.totals.prerequisites = all.reduce((n, s) => n + s.skills.reduce((m, k) => m + k.prerequisites.length, 0), 0);
 }
 writeFileSync(file(GRADE), JSON.stringify(doc, null, 1) + '\n');
-console.log(`english g${GRADE}: ${doc.totals.skills} skills, ${doc.totals.prerequisites} prerequisites (${moved} moved from Grade ${GRADE - 1} outcomes onto its skills), ${doc.totals.misconceptions} misconceptions`);
+console.log(`english g${GRADE}: ${doc.totals.skills} skills, ${doc.totals.prerequisites} prerequisites${GRADE > 1 ? ` (${moved} moved from Grade ${GRADE - 1} outcomes onto its skills)` : ` (${doc.readiness.length} pre-primary readiness skills defined under readiness)`}, ${doc.totals.misconceptions} misconceptions`);
 const r = spawnSync('node', ['scripts/build-subject-map.mjs', 'english', String(GRADE), '--dir', 'english', '--title', 'English'], { stdio: 'inherit', cwd: new URL('..', import.meta.url).pathname });
 process.exit(r.status || 0);

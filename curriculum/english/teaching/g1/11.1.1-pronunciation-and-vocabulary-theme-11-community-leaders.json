@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 11: Community leaders)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (sh, ch, th), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"chair\" start like \"share\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "community leaders: the chief",
+    "thank you"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: chair, share."
+    },
+    {
+     "beat": "point",
+     "do": "Say chair.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write chair and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH.M1_SC_SH_S",
+     "listen_for": [
+      "sare"
+     ],
+     "ask": "Round lips?",
+     "repair": "Share."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH.M1_SC_CH_SH",
+     "listen_for": [
+      "share"
+     ],
+     "ask": "Stop first?",
+     "repair": "Chair."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH.M1_SC_TH_T",
+     "listen_for": [
+      "tin"
+     ],
+     "ask": "Tongue out?",
+     "repair": "Thin."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH.M1_SC_THV_D",
+     "listen_for": [
+      "dis"
+     ],
+     "ask": "Tongue out with buzz?",
+     "repair": "This."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with sh: ship, sip, chip?",
+     "answer": "ship",
+     "shows": "sh"
+    },
+    {
+     "question": "The teacher says \"thin\". Thin or tin?",
+     "answer": "thin",
+     "shows": "th"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}
