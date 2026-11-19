@@ -6,6 +6,7 @@ import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.cre
 import { FAMILIES as A } from '../families/cre_g7_a.js';
 import { FAMILIES as B } from '../families/cre_g7_b.js';
 import { FAMILIES as C } from '../families/cre_g7_c.js';
+import { FAMILIES as D } from '../families/cre_g7_d.js';
 import { SIGNED } from '../families/cre_g7_signed.js';
 import { AWAITING } from '../families/cre_g7_awaiting.js';
 
@@ -14,8 +15,8 @@ export default {
   name: 'Christian Religious Education', shortName: 'Christian Religious Education', icon: 'book',
   description: 'Grade 7 Christian Religious Education from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...A, ...B, ...C],                          // add each family file you write: [...A, ...B]
-  familyFiles: ['cre_g7_a.js', 'cre_g7_b.js', 'cre_g7_c.js'],              // the same files by name (a phone build drops them while nothing is signed)
+  families: [...A, ...B, ...C, ...D],                          // add each family file you write: [...A, ...B]
+  familyFiles: ['cre_g7_a.js', 'cre_g7_b.js', 'cre_g7_c.js', 'cre_g7_d.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'cre_g7_signed.js',
   awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -24,6 +25,6 @@ export default {
   bank: false,                               // true only to also list the families in the shared bank (FAMILIES): Science G5 only
   curriculumDir: 'cre',                   // curriculum/<dir>/g<N>.json
   misconceptionsFile: 'engine/data/curriculum/cre.g7.misconceptions.json',
-  reviewDoc: 'docs/qa/cre-g7-review-2026-11-13.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  reviewDoc: 'docs/qa/cre-g7-review-2026-11-19.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
   precheckLabel: 'Christian Religious Education 7',
 };
