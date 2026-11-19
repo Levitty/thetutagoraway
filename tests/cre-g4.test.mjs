@@ -12,6 +12,10 @@ import { SIGNED } from '../src/ai-tutor/content/families/cre_g4_signed.js';
 const source = JSON.parse(readFileSync(new URL('../curriculum/cre/g4.json', import.meta.url), 'utf8'));
 const subs = source.sub_strands;
 const entry = entryFor('cre', 4);
+// Grade 1-3 CRE (mapped 19 Nov 2026): Grade 4 prerequisites name its skills, or its outcomes where no skill carries one (attitudes).
+const LOWER = [1, 2, 3].map(g => JSON.parse(readFileSync(new URL(`../curriculum/cre/g${g}.json`, import.meta.url), 'utf8')));
+const LOWER_SKILLS = new Set(LOWER.flatMap(j => j.sub_strands.flatMap(s => (s.skills || []).map(k => k.code))));
+const LOWER_OUTCOMES = new Set(LOWER.flatMap(j => j.sub_strands.flatMap(s => s.outcomes.map(o => o.code))));
 
 test('the map is generated from the file HOREB owns, the official outcomes and KICD rubrics are untouched', () => {
   assert.equal(Object.keys(OUTCOMES).length, 158);
@@ -20,7 +24,7 @@ test('the map is generated from the file HOREB owns, the official outcomes and K
   assert.equal(Object.keys(MIS_FEEDBACK).length, 156);
   assert.equal(source.totals.skills, 39);
   assert.equal(source.totals.misconceptions, 156);
-  assert.equal(source.totals.prerequisites, 97);
+  assert.equal(source.totals.prerequisites, 89);   // 97 until 19 Nov 2026: Grade 2-3 outcomes carried by one skill became one prerequisite
   for (const s of subs) for (const o of s.outcomes) assert.ok(/^kicd_(verified|read)$/.test(o.status), `${o.code}: outcome status changed`);
   assert.equal(source.rubrics.length, 6);
   assert.ok(source.rubrics.every(r => r.indicators.length && r.indicators.every(i => i.levels && i.levels.EE && i.levels.BE)));
@@ -33,7 +37,7 @@ test('skills are proposed and the library is draft, with the fields a reviewer n
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
       assert.ok(/at least four of the last five/.test(k.mastery), `${k.code}: evidence rule`);
-      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || /^CRE\.G[23]\./.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);   // Grade 2 and 3 outcomes since the depth pass
+      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || (p.kind === 'skill' ? LOWER_SKILLS.has(p.requires) : LOWER_OUTCOMES.has(p.requires)), `${k.code}: unknown prerequisite ${p.requires}`);   // Grade 1-3 skills (19 Nov 2026), and the Grade 2-3 attitude outcomes no skill carries
     }
     for (const m of s.misconceptions) {
       assert.equal(m.status, 'draft');
