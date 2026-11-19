@@ -15,6 +15,7 @@ import { spawnSync } from 'node:child_process';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { applyAgricultureDepth } from './agriculture-depth.mjs';
+import { relinkLowerOutcomes } from './lib/lower-grade.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const GRADE = Number(process.argv[2]);
@@ -43,6 +44,9 @@ const g = JSON.parse(readFileSync(FILE, 'utf8'));
 if (GRADE === 9) for (const s of g.sub_strands) { s.skills = []; s.misconceptions = []; }
 const { SUBS } = await import(`./data/agriculture-depth/g${GRADE}.mjs`);
 const r = applyAgricultureDepth(g, SUBS, { grade: GRADE });
+// Grade 1-3 outcome prerequisites name the Grade 1-3 skill that carries them (19 Nov 2026, scripts/lib/lower-grade.mjs).
+const relink = relinkLowerOutcomes(g, { root: ROOT, label: `Agriculture Grade ${GRADE}` });
+console.log(`agriculture g${GRADE}: ${relink.moved} Grade 1-3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
 const DEPTH = '; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g' + GRADE + ')';
 g.status = (GRADE === 9 ? "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 18 Nov 2026), awaiting an Agriculture teacher's review" : g.status.replace(/; depth pass 18 Nov 2026.*$/, '')) + DEPTH;
 writeFileSync(FILE, JSON.stringify(g, null, 1) + '\n');

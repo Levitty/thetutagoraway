@@ -92,8 +92,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.SOIL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.SOIL.SOIL_TYPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 listed the characteristics of soils; poor soil is read from them. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1058,8 +1058,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 plant care (watering and shading) is what a nursery needs. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1102,8 +1102,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 watering and protecting plants, done now for transplants. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1661,8 +1661,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 named the common foods of the area, among them maize, beans and sorghum. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -3723,8 +3723,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.EDIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 made a kitchen garden from local materials; innovative gardens build on it. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
