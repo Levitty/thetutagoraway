@@ -31,3 +31,8 @@ export const RULE = ' Evidence rule: at least four of the last five fresh questi
 // pause for the child, then reveal; or a full beat list [[beat, do, say?], ...].
 export const B = (write, point, ask, wait, end) => [['write', write], ['point', point, ask], ['pause', wait], ['reveal', end]];
 export const P = (key_step, floor, reps, steps, contexts, board, checks) => ({ key_step, floor, reps, steps, contexts, board, checks });
+
+// Grades 1-3 (19 Nov 2026): the faith and value attitudes alone. A practical or habit outcome (recite, dramatise, draw, practise,
+// demonstrate, obey, take part, use postures, stay safe) may instead go to the teacher's KICD rubric through a knowledge skill
+// (rubric: [...] on a NEW skill; scripts/lib/lower-grade.mjs); an attitude never does.
+export const CRE_NOT_TESTED_ATTITUDE = /^(appreciate|desire|acknowledge|respect|value|have faith|trust|depend|embrace|uphold|exercise)\b/i;

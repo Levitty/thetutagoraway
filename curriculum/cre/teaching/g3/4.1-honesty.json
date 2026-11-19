@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.CHRIST.HONESTY",
+ "title": "Honesty",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Ananias and Sapphira is taught for honesty before God; do not dwell on the deaths with young children (FAITH).",
+ "skills": [
+  {
+   "skill": "CRES.G3.CHRIST.HONESTY.ANANIAS",
+   "key_step": "The child narrates Ananias and Sapphira (Acts 5:1-11) and explains why we respect other people's property.",
+   "floor": {
+    "prerequisite": "Knows reasons for telling the truth.",
+    "question": "Why should we always tell the truth?",
+    "answer": "Lying is wrong and breaks trust"
+   },
+   "representations": [
+    "picture cards of Acts 5",
+    "a lost-and-found box",
+    "honest or dishonest cards"
+   ],
+   "steps": [
+    "Read the story.",
+    "Say what they did wrong.",
+    "Explain why we respect property.",
+    "Practise asking and returning."
+   ],
+   "contexts": [
+    "finding money on the way",
+    "borrowing a rubber",
+    "giving an offering at church"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: sold land, kept some, said \"this is all\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"said this is all\".",
+     "say": "Was this true?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, it was a lie."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: be honest; respect what belongs to others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CHRIST.HONESTY.ANANIAS.M_C3_ANA_KEPT_WRONG",
+     "listen_for": [
+      "Keeping some money"
+     ],
+     "ask": "What was the wrong thing Ananias and Sapphira did?",
+     "repair": "Read Acts 5:4. Peter said the money was theirs; the wrong was the lie."
+    },
+    {
+     "code": "CRES.G3.CHRIST.HONESTY.ANANIAS.M_C3_ANA_LIE_PEOPLE",
+     "listen_for": [
+      "Only to Peter"
+     ],
+     "ask": "Who did Peter say Ananias lied to?",
+     "repair": "Read Acts 5:4. God knows even when no one else does."
+    },
+    {
+     "code": "CRES.G3.CHRIST.HONESTY.ANANIAS.M_C3_ANA_PICK_FOUND",
+     "listen_for": [
+      "Mine, I found it"
+     ],
+     "ask": "You find a pen under a desk. Whose is it?",
+     "repair": "Role-play returning a found item. Say how the owner feels."
+    },
+    {
+     "code": "CRES.G3.CHRIST.HONESTY.ANANIAS.M_C3_ANA_BORROW_KEEP",
+     "listen_for": [
+      "Yes, if I give it back"
+     ],
+     "ask": "Can you take a friend's crayon without asking?",
+     "repair": "Practise asking: \"May I use your crayon?\""
+    }
+   ],
+   "checks": [
+    {
+     "question": "What wrong did Ananias and Sapphira do?",
+     "answer": "They lied about the money",
+     "shows": "narrate"
+    },
+    {
+     "question": "Why should we respect other people's property?",
+     "answer": "It belongs to them; taking it is stealing",
+     "shows": "explains"
+    }
+   ]
+  }
+ ]
+}

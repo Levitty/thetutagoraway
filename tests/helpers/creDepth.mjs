@@ -7,12 +7,19 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { scienceDepthTests } from './scienceDepth.mjs';
-import { CRE_NOT_TESTED } from '../../scripts/data/cre-depth/common.mjs';
+import { CRE_NOT_TESTED, CRE_NOT_TESTED_ATTITUDE } from '../../scripts/data/cre-depth/common.mjs';
+import { lowerGradeTests } from './environmentalDepth.mjs';
 
 const read = (p) => readFileSync(new URL(`../../${p}`, import.meta.url), 'utf8');
 
-export async function creDepthTests({ grade, outcomes, minDown = 0.5 }) {
+export async function creDepthTests({ grade, outcomes, minDown = 0.5, totals }) {
   const { AWAITING } = await import(`../../src/ai-tutor/content/families/cre_g${grade}_awaiting.js`);
+  if (grade <= 3) {   // Grades 1-3 (19 Nov 2026): outcomes only before, no families and no subject entry; teacher's rubric for practicals
+    scienceDepthTests({ dir: 'cre', subject: 'cre', grade, outcomes, noFamilies: AWAITING, minDown, notTested: CRE_NOT_TESTED, families: false });
+    lowerGradeTests({ label: `cre Grade ${grade}`, file: `curriculum/cre/g${grade}.json`, sql: `supabase/migrations/20261126_cre_g${grade}_skills_misconceptions.sql`,
+      attitude: CRE_NOT_TESTED_ATTITUDE, totals, awaiting: AWAITING, readinessPrefix: 'CRE.PP2.READINESS.' });
+    return;
+  }
   scienceDepthTests({ dir: 'cre', subject: 'cre', grade, outcomes, noFamilies: AWAITING, minDown, notTested: CRE_NOT_TESTED });
   const source = JSON.parse(read(`curriculum/cre/g${grade}.json`));
   const label = `cre Grade ${grade}`;

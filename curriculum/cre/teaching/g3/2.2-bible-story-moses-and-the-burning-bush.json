@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH",
+ "title": "Bible Story: Moses and the Burning Bush",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH",
+   "key_step": "The child retells Moses and the burning bush (Exodus 3:1-6) and names lessons: God speaks, respect holy places, obey God.",
+   "floor": {
+    "prerequisite": "Knows the call of Samuel.",
+    "question": "What did Samuel say when he knew God was calling?",
+    "answer": "Speak, for your servant is listening"
+   },
+   "representations": [
+    "picture cards of Exodus 3:1-6",
+    "a drawn bush with flames and green leaves",
+    "a lessons chart"
+   ],
+   "steps": [
+    "Picture-read Exodus 3:1-6.",
+    "Retell the story in order.",
+    "Say why Moses removed his sandals.",
+    "Name three lessons."
+   ],
+   "contexts": [
+    "entering a church quietly",
+    "answering when a parent calls",
+    "a shepherd in the hills"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bush on fire, not burnt."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bush.",
+     "say": "What did God tell Moses to do here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say take off his sandals."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: holy ground; lessons: respect, obey."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH.M_C3_MOS_BUSH_BURNT",
+     "listen_for": [
+      "It burnt to ashes"
+     ],
+     "ask": "What was strange about the burning bush?",
+     "repair": "Read Exodus 3:2 and ask what is strange. Draw a bush with flames but green leaves."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH.M_C3_MOS_SHOES_DIRTY",
+     "listen_for": [
+      "They were dirty"
+     ],
+     "ask": "Why did God tell Moses to take off his sandals?",
+     "repair": "Read Exodus 3:5. Talk about showing respect in a holy place."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH.M_C3_MOS_COWS",
+     "listen_for": [
+      "His own cows"
+     ],
+     "ask": "Whose flock was Moses looking after?",
+     "repair": "Read Exodus 3:1 and draw sheep and goats."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH.M_C3_MOS_RAN_AWAY",
+     "listen_for": [
+      "He ran away"
+     ],
+     "ask": "What did Moses answer when God called him?",
+     "repair": "Read Exodus 3:4. Compare with Samuel's \"Speak, for your servant is listening\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was strange about the bush?",
+     "answer": "It burnt but did not burn up",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "Obey God (respect holy places)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

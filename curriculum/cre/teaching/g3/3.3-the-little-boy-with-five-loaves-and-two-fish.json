@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE",
+ "title": "The Little Boy with five loaves and two fish",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH",
+   "key_step": "The child retells the five loaves and two fish (John 6:1-14) and states lessons: share, God provides, give thanks, do not waste.",
+   "floor": {
+    "prerequisite": "Knows the widow of Zarephath.",
+    "question": "What did God provide for the widow?",
+    "answer": "Flour and oil that did not run out"
+   },
+   "representations": [
+    "five paper loaves and two paper fish",
+    "twelve baskets drawn",
+    "picture cards of John 6"
+   ],
+   "steps": [
+    "Picture-read John 6:1-14.",
+    "Count the loaves, fish and baskets.",
+    "Retell in order.",
+    "State lessons."
+   ],
+   "contexts": [
+    "sharing a snack at break",
+    "a church harvest",
+    "leftover food at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 5 loaves, 2 fish, 5000 people."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 12 baskets drawing.",
+     "say": "What were these for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the leftovers."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH.M_C3_LOAF_NUMBERS",
+     "listen_for": [
+      "Two loaves and five fish"
+     ],
+     "ask": "What did the boy have?",
+     "repair": "Hold up five fingers for loaves and two for fish while saying it."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH.M_C3_LOAF_DISCIPLES_FOOD",
+     "listen_for": [
+      "The disciples"
+     ],
+     "ask": "Who gave the loaves and fish?",
+     "repair": "Read John 6:9. Andrew found the boy."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH.M_C3_LOAF_NO_LEFT",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "How much food was left over?",
+     "repair": "Read John 6:13 and count twelve baskets."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH.M_C3_LOAF_THANKS",
+     "listen_for": [
+      "He shared it at once"
+     ],
+     "ask": "What did Jesus do before sharing the food?",
+     "repair": "Read John 6:11. Practise saying grace before snack."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many loaves did the boy have?",
+     "answer": "Five",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a lesson from the miracle.",
+     "answer": "Share what we have (God provides)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

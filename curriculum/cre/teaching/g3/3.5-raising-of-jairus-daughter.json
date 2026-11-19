@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT",
+ "title": "Raising of Jairus’ Daughter",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.JAIRUS",
+   "key_step": "The child retells the raising of Jairus' daughter (Mark 5:35-43), lists lessons and says Jesus has power over life and death.",
+   "floor": {
+    "prerequisite": "Knows Jesus healed the sick.",
+    "question": "Name a person Jesus healed.",
+    "answer": "The man with a withered hand"
+   },
+   "representations": [
+    "Mark 5:41 in a speech bubble",
+    "three disciple name cards",
+    "picture cards of the story"
+   ],
+   "steps": [
+    "Read Mark 5:35-43.",
+    "Retell in order.",
+    "Say what \"Talitha koum\" means.",
+    "List four lessons."
+   ],
+   "contexts": [
+    "a sick child in hospital",
+    "a family praying for a relative",
+    "waiting with faith"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Talitha koum\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "What do these words mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say little girl, get up."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons and \"power over life and death\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.JAIRUS.M_C3_JAI_SICK_ONLY",
+     "listen_for": [
+      "She was a little sick"
+     ],
+     "ask": "What had happened to Jairus' daughter when Jesus arrived?",
+     "repair": "Read Mark 5:35. Say gently: she had died, and Jesus brought her back to life."
+    },
+    {
+     "code": "CRES.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.JAIRUS.M_C3_JAI_AGE",
+     "listen_for": [
+      "A baby"
+     ],
+     "ask": "How old was Jairus' daughter?",
+     "repair": "Read Mark 5:42 and write 12 on the board."
+    },
+    {
+     "code": "CRES.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.JAIRUS.M_C3_JAI_ALL_DISCIPLES",
+     "listen_for": [
+      "All twelve"
+     ],
+     "ask": "Which disciples did Jesus take with him?",
+     "repair": "Read Mark 5:37 and hold up three name cards."
+    },
+    {
+     "code": "CRES.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.JAIRUS.M_C3_JAI_GIVE_UP",
+     "listen_for": [
+      "Go home, it is too late"
+     ],
+     "ask": "What did Jesus tell Jairus when the messengers came?",
+     "repair": "Read Mark 5:36. Faith keeps trusting."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Jesus tell Jairus?",
+     "answer": "Don't be afraid; just believe",
+     "shows": "retell"
+    },
+    {
+     "question": "What power did Jesus show?",
+     "answer": "Power over life and death",
+     "shows": "recognises"
+    }
+   ]
+  }
+ ]
+}

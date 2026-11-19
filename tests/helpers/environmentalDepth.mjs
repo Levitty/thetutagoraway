@@ -45,7 +45,9 @@ export function lowerGradeTests({ label, file, sql: sqlFile, attitude, totals, a
       assert.ok(r.outcomes.length && r.outcomes.every(c => s.outcomes.some(o => o.code === c)), `${k.code}: rubric outcome outside its sub-strand`);
       for (const c of r.outcomes) assert.ok(!attitude.test(s.outcomes.find(o => o.code === c).text.trim()), `${c}: an attitude is not a practical`);
       for (const c of r.outcomes) assert.ok(!k.outcomes.includes(c), `${c}: both asked and marked`);
-      assert.ok(r.indicators.length && r.indicators.every(i => indicators.has(i)), `${k.code}: unknown KICD rubric indicator`);
+      const inFile = (source.rubrics || []).some(x => x.covers.includes(s.code)) || (s.rubric_indicators || []).length;
+      if (inFile) assert.ok(r.indicators.length && r.indicators.every(i => indicators.has(i)), `${k.code}: unknown KICD rubric indicator`);
+      else assert.ok(!r.indicators.length && /not in the file/.test(r.note), `${k.code}: the strand has no rubric in the file; say so`);
       assert.match(k.mastery, /marked by the teacher with the KICD rubric/);
     }
   });

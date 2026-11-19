@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS",
+ "title": "The Birth of Jesus Christ",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.WISE_MEN",
+   "key_step": "The child retells the wise men (Matthew 2:1-12) and names Nazareth as Jesus' hometown, Bethlehem as his birthplace.",
+   "floor": {
+    "prerequisite": "Knows the gifts of the wise men.",
+    "question": "Name one gift the wise men gave Jesus.",
+    "answer": "Gold (frankincense, myrrh)"
+   },
+   "representations": [
+    "a star cut-out",
+    "a simple map with Bethlehem and Nazareth",
+    "picture cards of Matthew 2"
+   ],
+   "steps": [
+    "Read Matthew 2:1-2.",
+    "Retell the journey.",
+    "Say where they found Jesus.",
+    "Name his hometown."
+   ],
+   "contexts": [
+    "a Christmas play",
+    "following directions to a new place",
+    "a family moving to a new town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two towns: Bethlehem, Nazareth."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Nazareth.",
+     "say": "What happened in this town?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Jesus grew up there."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: born in Bethlehem, grew up in Nazareth."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.WISE_MEN.M_C3_WISE_HOMETOWN_BETH",
+     "listen_for": [
+      "Bethlehem"
+     ],
+     "ask": "Which town was Jesus' hometown, where he grew up?",
+     "repair": "Show two towns on a map: born in Bethlehem, grew up in Nazareth (Matthew 2:23)."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.WISE_MEN.M_C3_WISE_STABLE",
+     "listen_for": [
+      "In the stable on the night he was born"
+     ],
+     "ask": "Where did the wise men find Jesus, according to Matthew 2:11?",
+     "repair": "Read Matthew 2:11: they came to the house. Shepherds came on the birth night (Luke 2)."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.WISE_MEN.M_C3_WISE_THREE_KNOWN",
+     "listen_for": [
+      "Yes, three, and gives their names"
+     ],
+     "ask": "Does Matthew say how many wise men came?",
+     "repair": "Read Matthew 2:1, 11 and count the gifts, not the men."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.WISE_MEN.M_C3_WISE_HEROD_HELP",
+     "listen_for": [
+      "Herod wanted to worship Jesus"
+     ],
+     "ask": "Why did the wise men go home another way?",
+     "repair": "Read Matthew 2:12. Herod did not mean what he said."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What led the wise men?",
+     "answer": "A star",
+     "shows": "retell"
+    },
+    {
+     "question": "What was Jesus' hometown?",
+     "answer": "Nazareth",
+     "shows": "hometown"
+    }
+   ]
+  }
+ ]
+}

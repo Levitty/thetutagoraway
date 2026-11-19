@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA",
+ "title": "Jesus Christ walks on water",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER",
+   "key_step": "The child narrates Jesus walking on water (Matthew 14:22-33) and lists lessons: faith, call on Jesus when afraid, power over nature.",
+   "floor": {
+    "prerequisite": "Knows Jesus calmed the storm.",
+    "question": "What did Jesus do to the storm?",
+    "answer": "He calmed it"
+   },
+   "representations": [
+    "picture sequence of Matthew 14",
+    "a blue cloth for the lake",
+    "Peter's words on a card: \"Lord, save me!\""
+   ],
+   "steps": [
+    "Picture-read the passage.",
+    "Narrate in order.",
+    "Say why Peter sank.",
+    "List lessons."
+   ],
+   "contexts": [
+    "a child afraid of the dark",
+    "a boat on Lake Victoria",
+    "a hard test at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Lord, save me!\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "Who said this and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Peter, because he was sinking."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER.M_C3_WAT_GHOST",
+     "listen_for": [
+      "Happy"
+     ],
+     "ask": "How did the disciples feel when they saw Jesus walking on the water?",
+     "repair": "Read Matthew 14:26 and act out fright at a shape in the dark."
+    },
+    {
+     "code": "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER.M_C3_WAT_PETER_SANK_START",
+     "listen_for": [
+      "At once"
+     ],
+     "ask": "When did Peter begin to sink?",
+     "repair": "Read Matthew 14:29-30: he walked, then looked at the wind."
+    },
+    {
+     "code": "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER.M_C3_WAT_STORM_CALMS",
+     "listen_for": [
+      "Asleep in the boat"
+     ],
+     "ask": "Where was Jesus when the disciples were in the boat at night?",
+     "repair": "Put the two story pictures side by side and spot differences."
+    },
+    {
+     "code": "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER.M_C3_WAT_LESSON_SWIM",
+     "listen_for": [
+      "Do not go on boats"
+     ],
+     "ask": "What is a lesson from Jesus walking on water?",
+     "repair": "Ask what Peter cried out and what Jesus said about faith."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the disciples think Jesus was?",
+     "answer": "A ghost",
+     "shows": "narrate"
+    },
+    {
+     "question": "Why did Peter begin to sink?",
+     "answer": "He saw the wind and was afraid",
+     "shows": "narrate"
+    }
+   ]
+  }
+ ]
+}

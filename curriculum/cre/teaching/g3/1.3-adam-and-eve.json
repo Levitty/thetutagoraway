@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G3.CREATI.ADAM_AND_EVE",
+ "title": "Adam and Eve",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE",
+   "key_step": "The child says God made Adam from dust and Eve from Adam's rib, gave one command, and tells how they disobeyed (Genesis 2:7, 21-22, 16-17; 3:6).",
+   "floor": {
+    "prerequisite": "Knows God created the sky and everything.",
+    "question": "Who created the sun, moon and stars?",
+    "answer": "God"
+   },
+   "representations": [
+    "picture cards of Genesis 2-3",
+    "a story sequence strip",
+    "Genesis 2:7 written large"
+   ],
+   "steps": [
+    "Picture-read Genesis 2:7 and 2:21-22.",
+    "Say God's one command.",
+    "Tell what the serpent did.",
+    "Put the pictures in order."
+   ],
+   "contexts": [
+    "the Garden of Eden picture",
+    "a parent's rule at home",
+    "a class rule broken"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: dust, breath, rib, one tree."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"one tree\".",
+     "say": "What did God say about this tree?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say do not eat from it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order the story cards on the board."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE.M_C3_AE_APPLE",
+     "listen_for": [
+      "It was an apple"
+     ],
+     "ask": "What does Genesis say about the fruit Adam and Eve ate?",
+     "repair": "Read Genesis 2:17 and 3:6. The tree is named, not the kind of fruit."
+    },
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE.M_C3_AE_ADAM_FIRST_ATE",
+     "listen_for": [
+      "Adam"
+     ],
+     "ask": "Who ate the fruit first?",
+     "repair": "Act out Genesis 3:6 in order with two children."
+    },
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE.M_C3_AE_EVE_FROM_DUST",
+     "listen_for": [
+      "Dust"
+     ],
+     "ask": "What did God use to make Eve?",
+     "repair": "Read Genesis 2:21-22 with a picture."
+    },
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE.M_C3_AE_GOD_ALLOWED",
+     "listen_for": [
+      "None, they could eat from all"
+     ],
+     "ask": "Which tree did God tell Adam not to eat from?",
+     "repair": "Read Genesis 2:16-17: every tree except one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did God use to form Adam?",
+     "answer": "Dust of the ground",
+     "shows": "creation"
+    },
+    {
+     "question": "Who ate the fruit first?",
+     "answer": "Eve",
+     "shows": "disobedience"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G3.CREATI.ADAM_AND_EVE.DISOBEY_RESULTS",
+   "key_step": "The child states results of Adam's disobedience: shame and hiding, hard work for food, pain, death, sent out of Eden (Genesis 3:16-23).",
+   "floor": {
+    "prerequisite": "Knows how Adam and Eve disobeyed.",
+    "question": "Which tree did God tell them not to eat from?",
+    "answer": "The tree of the knowledge of good and evil"
+   },
+   "representations": [
+    "Genesis 3:17, 19, 23 on cards",
+    "a picture of the garden gate",
+    "result cards"
+   ],
+   "steps": [
+    "Recall the disobedience.",
+    "Read the result verses.",
+    "List four results.",
+    "Say why obedience matters."
+   ],
+   "contexts": [
+    "a child who breaks a rule and feels ashamed",
+    "farming with a jembe",
+    "leaving home after doing wrong in a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: disobeyed, then..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty list.",
+     "say": "What happened after they disobeyed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name a result."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write four results."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.DISOBEY_RESULTS.M_C3_AE_NO_RESULT",
+     "listen_for": [
+      "Nothing, God forgave them"
+     ],
+     "ask": "What happened to Adam and Eve after they disobeyed?",
+     "repair": "Read Genesis 3:23. God still cared (he made them clothes), but there were results."
+    },
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.DISOBEY_RESULTS.M_C3_AE_ANIMALS_CURSE",
+     "listen_for": [
+      "Easily, the ground was blessed"
+     ],
+     "ask": "After the disobedience, how would man get food?",
+     "repair": "Read Genesis 3:17-19 and act out hard digging."
+    },
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.DISOBEY_RESULTS.M_C3_AE_HID_PLAY",
+     "listen_for": [
+      "They were playing hide and seek"
+     ],
+     "ask": "Why did Adam and Eve hide from God?",
+     "repair": "Ask how a child feels after breaking a rule. Link with Genesis 3:8-10."
+    },
+    {
+     "code": "CRES.G3.CREATI.ADAM_AND_EVE.DISOBEY_RESULTS.M_C3_AE_GARDEN_STAY",
+     "listen_for": [
+      "Still in the Garden of Eden"
+     ],
+     "ask": "Where did Adam and Eve live after they disobeyed?",
+     "repair": "Draw the garden with a gate and Adam and Eve outside (Genesis 3:23-24)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a result of Adam's disobedience.",
+     "answer": "They were sent out of the Garden of Eden (hard work, death)",
+     "shows": "results"
+    },
+    {
+     "question": "Why did they hide?",
+     "answer": "They were afraid and ashamed",
+     "shows": "results"
+    }
+   ]
+  }
+ ]
+}

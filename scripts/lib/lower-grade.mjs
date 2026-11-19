@@ -76,9 +76,10 @@ export function applyRubrics(cur, NEW, { subPrefix, skillPrefix, attitude }) {
     for (const o of outs) if (attitude.test(o.text.trim())) fail(`${o.code} is an attitude, not a practical outcome`);
     for (const o of outs) if (k.outcomes.includes(o.code)) fail(`${o.code} is both asked and marked by the teacher`);
     const indicators = s.rubric_indicators && s.rubric_indicators.length ? s.rubric_indicators : (cur.rubrics || []).filter(r => r.covers.includes(s.code)).flatMap(r => r.indicators.map(i => i.code));
-    if (!indicators.length) fail(`${s.code}: no KICD rubric indicators to mark with`);
-    k.teacher_rubric = { outcomes: outs.map(o => o.code), indicators, by: 'teacher' };
-    k.mastery = `${k.mastery} Practical, marked by the teacher with the KICD rubric (${indicators.join(', ')}), never as a phone question: ${outs.map(o => `${o.letter}) ${o.text.trim()}`).join('; ')}.`;
+    // CRE Grade 3 strands 4 and 5 have no rubric in the file (the text layer did not carry it): the teacher marks with the KICD
+    // design's rubric for the strand, named as missing so a reviewer adds its codes.
+    k.teacher_rubric = { outcomes: outs.map(o => o.code), indicators, by: 'teacher', ...(indicators.length ? {} : { note: 'the KICD rubric for this strand is not in the file; the teacher uses the printed design' }) };
+    k.mastery = `${k.mastery} Practical, marked by the teacher with the KICD rubric (${indicators.length ? indicators.join(', ') : 'the strand\'s rubric in the printed KICD design; not in this file'}), never as a phone question: ${outs.map(o => `${o.letter}) ${o.text.trim()}`).join('; ')}.`;
     n += outs.length;
   }
   return n;
