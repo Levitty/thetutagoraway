@@ -6,6 +6,7 @@ import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.eng
 import { FAMILIES as LANG } from '../families/english_g8_lang.js';
 import { FAMILIES as WRITE } from '../families/english_g8_write.js';
 import { FAMILIES as READ } from '../families/english_g8_reading.js';
+import { FAMILIES as MORE } from '../families/english_g8_a.js';
 import { SIGNED } from '../families/english_g8_signed.js';
 
 export default {
@@ -13,8 +14,8 @@ export default {
   name: 'English', shortName: 'English', icon: 'book',
   description: 'Grade 8 English from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...LANG, ...WRITE, ...READ],                          // add each family file you write: [...A, ...B]
-  familyFiles: ['english_g8_lang.js', 'english_g8_write.js', 'english_g8_reading.js'],              // the same files by name (a phone build drops them while nothing is signed)
+  families: [...LANG, ...WRITE, ...READ, ...MORE],                          // add each family file you write: [...A, ...B]
+  familyFiles: ['english_g8_lang.js', 'english_g8_write.js', 'english_g8_reading.js', 'english_g8_a.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'english_g8_signed.js',
   checks: 'text',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'english8.',          // every family id starts with this
@@ -22,6 +23,6 @@ export default {
   bank: false,                               // true only to also list the families in the shared bank (FAMILIES): Science G5 only
   curriculumDir: 'english',                   // curriculum/<dir>/g<N>.json
   misconceptionsFile: 'engine/data/curriculum/english.g8.misconceptions.json',
-  reviewDoc: 'docs/qa/english-g8-review-2026-11-13.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  reviewDoc: 'docs/qa/english-g8-review-2026-11-19.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
   precheckLabel: 'English 8',
 };

@@ -59,6 +59,7 @@ export default {
   'english_g7_reading.js': 'english_g7_signed.js',
   'english_g7_vocab.js': 'english_g7_signed.js',
   'english_g7_write.js': 'english_g7_signed.js',
+  'english_g8_a.js': 'english_g8_signed.js',
   'english_g8_lang.js': 'english_g8_signed.js',
   'english_g8_reading.js': 'english_g8_signed.js',
   'english_g8_write.js': 'english_g8_signed.js',

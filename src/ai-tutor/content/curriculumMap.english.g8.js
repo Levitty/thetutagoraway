@@ -1742,8 +1742,7 @@ export const SKILLS = {
    "M8_X_TE_DEMAND_PERSON",
    "M8_X_TE_NO_MESSAGE",
    "M8_X_TE_HANG_UP"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING": {
   "name": "Identify interesting texts and read a range of fiction and non-fiction",
@@ -2034,8 +2033,7 @@ export const SKILLS = {
    "M8_X_PC_FINALLY_FIRST",
    "M8_X_PC_MISS_CONNECTOR",
    "M8_X_PC_ORDER_IGNORED"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING": {
   "name": "Write well-sequenced paragraphs, including one on characters",
@@ -2106,8 +2104,7 @@ export const SKILLS = {
    "M8_X_RSTR_SKIM_SCAN",
    "M8_X_RSTR_NO_PREVIEW",
    "M8_X_RSTR_NO_REREAD"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE": {
   "name": "Write sentences in the simple present and the simple past",
@@ -2193,8 +2190,7 @@ export const SKILLS = {
    "M8_X_RU_INDEX_CONTENTS",
    "M8_X_RU_UNRELIABLE_SITE",
    "M8_X_RU_WRONG_BOOK"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES": {
   "name": "Tell gradable adjectives from non-gradable ones and use them correctly",
@@ -2228,8 +2224,7 @@ export const SKILLS = {
    "M8_X_DR_REPETITION_ERROR",
    "M8_X_DR_NO_PURPOSE",
    "M8_X_DR_ONE_REPEAT"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER": {
   "name": "List the parts of an apology letter and write one",
@@ -2262,8 +2257,7 @@ export const SKILLS = {
    "M8_X_DP_NO_REASON",
    "M8_X_DP_SHOUT",
    "M8_X_DP_AGREE_ANYWAY"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY": {
   "name": "Read texts fast, accurately and with expression using fluency strategies",
@@ -2389,8 +2383,7 @@ export const SKILLS = {
    "M8_X_RV_KEY_IGNORED",
    "M8_X_RV_NO_LINK",
    "M8_X_RV_TREND"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE": {
   "name": "Use indefinite and reflexive pronouns",
@@ -2427,8 +2420,7 @@ export const SKILLS = {
    "M8_X_CR_RELATION_WRONG",
    "M8_X_CR_STATIC",
    "M8_X_CR_MINOR_MAIN"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS": {
   "name": "Identify the steps of the writing process and the process for a dialogue",
@@ -2444,8 +2436,7 @@ export const SKILLS = {
    "M8_X_WP_REVISE_EDIT",
    "M8_X_WP_SKIP_PREWRITE",
    "M8_X_WP_PUBLISH"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING": {
   "name": "Write a dialogue on a given topic correctly",
@@ -2481,8 +2472,7 @@ export const SKILLS = {
    "M8_X_MY_ORDER",
    "M8_X_MY_LITERAL_LESSON",
    "M8_X_MY_CHARACTER_TYPE"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME": {
   "name": "Use prepositions of position, time and place",
@@ -2516,8 +2506,7 @@ export const SKILLS = {
    "M8_X_IC_LITERAL",
    "M8_X_IC_TRAIT_WRONG",
    "M8_X_IC_MISSES"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING": {
   "name": "Identify errors in an essay and assess it with suggested corrections",
@@ -2684,8 +2673,7 @@ export const SKILLS = {
    "M8_X_IP_NO_THANKS",
    "M8_X_IP_BLUNT",
    "M8_X_IP_NO_FOLLOW_UP"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION": {
   "name": "Form adverbs from adjectives",
@@ -2833,8 +2821,7 @@ export const SKILLS = {
    "M8_X_IC2_OPPOSITE",
    "M8_X_IC2_WRONG_FIT",
    "M8_X_IC2_CHANGED"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS": {
   "name": "Tell the silent consonant letters in words",
