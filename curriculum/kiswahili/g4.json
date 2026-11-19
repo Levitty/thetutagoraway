@@ -303,8 +303,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -354,16 +354,16 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -895,8 +895,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -1286,8 +1286,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -1983,16 +1983,16 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.NAFSI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.VIONYESHI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -2544,8 +2544,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -3448,8 +3448,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T9_YA_JUU_YA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T9_YA_JUU_YA.VIHUSISHI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -4574,8 +4574,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -8429,8 +8429,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
@@ -9945,8 +9945,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
