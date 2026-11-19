@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G1.THE_HO.THE_WORD_OF_GOD",
+ "title": "The Word of God",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+   "key_step": "The child names ways of handling the Bible with respect.",
+   "floor": {
+    "prerequisite": "Knows the Bible is God's book.",
+    "question": "Whose book is the Bible?",
+    "answer": "God's"
+   },
+   "representations": [
+    "a Bible",
+    "right and wrong pictures",
+    "a Bible shelf"
+   ],
+   "steps": [
+    "Say why the Bible is special.",
+    "Show how to hold and open it.",
+    "Sort right and wrong pictures.",
+    "Choose its place."
+   ],
+   "contexts": [
+    "family Bible at home",
+    "Sunday school",
+    "class Bible corner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a child sitting on a book."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the book.",
+     "say": "Is this how we treat the Bible?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "List five ways to handle the Bible."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_DRAW",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Can you draw in the Bible?",
+     "repair": "Show a clean Bible and a scribbled book. Agree how we treat God's book."
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_FLOOR",
+     "listen_for": [
+      "On the floor"
+     ],
+     "ask": "Where should you keep the Bible?",
+     "repair": "Choose a special shelf in class for the Bible."
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_DIRTY_HANDS",
+     "listen_for": [
+      "Any way"
+     ],
+     "ask": "What should your hands be like when you hold the Bible?",
+     "repair": "Wash hands before Bible time."
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_THROW",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Can you throw the Bible to your friend?",
+     "repair": "Practise passing the Bible with two hands."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way to handle the Bible.",
+     "answer": "With clean hands (open it gently)",
+     "shows": "handling"
+    },
+    {
+     "question": "Can you write in the Bible?",
+     "answer": "No",
+     "shows": "handling"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+   "key_step": "The child names the two divisions of the Bible and the first two New Testament books.",
+   "floor": {
+    "prerequisite": "Handles the Bible with respect.",
+    "question": "How do you hold the Bible?",
+    "answer": "With clean hands, gently"
+   },
+   "representations": [
+    "a Bible with a ribbon",
+    "flashcards: Old, New, Matthew, Mark",
+    "a song"
+   ],
+   "steps": [
+    "Find the two parts.",
+    "Say their names.",
+    "Find Matthew and Mark.",
+    "Sing them."
+   ],
+   "contexts": [
+    "Sunday school",
+    "family Bible reading",
+    "class Bible corner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a Bible with two parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second part.",
+     "say": "What is this part called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the New Testament."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Matthew, Mark at its start."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_THREE",
+     "listen_for": [
+      "Many"
+     ],
+     "ask": "How many divisions does the Bible have?",
+     "repair": "Show a Bible with a ribbon between the two parts."
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_GENESIS",
+     "listen_for": [
+      "Genesis"
+     ],
+     "ask": "What is the first book of the New Testament?",
+     "repair": "Open at the ribbon: the New Testament starts with Matthew."
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_NAMES",
+     "listen_for": [
+      "A newer copy of the Bible"
+     ],
+     "ask": "What does \"New Testament\" mean?",
+     "repair": "Show both parts in one Bible."
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_ORDER",
+     "listen_for": [
+      "Mark"
+     ],
+     "ask": "Which comes first: Matthew or Mark?",
+     "repair": "Clap \"Mat-thew, Mark\" in order."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the two divisions of the Bible.",
+     "answer": "Old Testament and New Testament",
+     "shows": "divisions"
+    },
+    {
+     "question": "Name the first book of the New Testament.",
+     "answer": "Matthew",
+     "shows": "books"
+    }
+   ]
+  }
+ ]
+}

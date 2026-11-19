@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I",
+ "title": "Healing Simon’s mother-in-law",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+   "key_step": "The child retells the healing of Simon's mother-in-law (Luke 4:38-39) and says she showed thanks by serving.",
+   "floor": {
+    "prerequisite": "Says thank you.",
+    "question": "What do you say when someone helps you?",
+    "answer": "Thank you"
+   },
+   "representations": [
+    "picture cards of Luke 4",
+    "a sequence strip",
+    "role-play props"
+   ],
+   "steps": [
+    "Picture-read Luke 4:38-39.",
+    "Arrange pictures in order.",
+    "Retell.",
+    "Say how she showed thanks."
+   ],
+   "contexts": [
+    "a sick relative",
+    "helping a classmate in need",
+    "thanking a nurse"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a woman in bed with a fever."
+    },
+    {
+     "beat": "point",
+     "do": "Point at her.",
+     "say": "What did she do after Jesus healed her?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say she served them."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: fever left; she served."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_LEG",
+     "listen_for": [
+      "A broken leg"
+     ],
+     "ask": "What was wrong with Simon's mother-in-law?",
+     "repair": "Touch a forehead: hot means fever."
+    },
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_MEDICINE",
+     "listen_for": [
+      "Gave her medicine"
+     ],
+     "ask": "How did Jesus heal her?",
+     "repair": "Read Luke 4:39."
+    },
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_SLEPT",
+     "listen_for": [
+      "Went back to sleep"
+     ],
+     "ask": "What did she do after she was healed?",
+     "repair": "Act out getting up and serving food."
+    },
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_MOTHER",
+     "listen_for": [
+      "Jesus'"
+     ],
+     "ask": "Whose mother-in-law was she?",
+     "repair": "Explain: the mother of Simon's wife."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was wrong with Simon's mother-in-law?",
+     "answer": "A high fever",
+     "shows": "retell"
+    },
+    {
+     "question": "What did she do after she was healed?",
+     "answer": "She served them",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

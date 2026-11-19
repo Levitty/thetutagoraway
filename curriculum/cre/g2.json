@@ -94,8 +94,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CREATI.SELF_AWARENESS.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing one is unique as God made one, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -269,8 +269,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CREATI.MY_FAMILY.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming members of their family, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -305,15 +305,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CREATI.MY_FAMILY.c",
-       "kind": "outcome",
+       "requires": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Items shared at home, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.CHRIST.SHARING.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Items shared at home as a family. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -573,15 +573,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Plants and animals God created, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_HO.THE_WORD_OF_GOD.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The two divisions of the Bible, where Genesis begins. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -629,8 +629,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_HO.THE_WORD_OF_GOD.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Handling the Bible with respect, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -871,8 +871,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_HO.THE_WORD_OF_GOD.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The two divisions of the Bible, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1041,15 +1041,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Ways of having a good relationship with God, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.CHRIST.OBEDIENCE.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The importance of obeying parents. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1225,8 +1225,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying simple prayers at different times of the day. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1398,15 +1398,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CHRIST.SHARING.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The value of sharing, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus changing water into wine: God providing. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1566,8 +1566,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The birth of Jesus, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1608,8 +1608,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus in the temple at twelve, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1841,8 +1841,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Retelling the birth of Jesus. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2016,15 +2016,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus changing water into wine: a first miracle. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus' power to heal. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2192,8 +2192,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Obeying instructions as at Cana. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2350,8 +2350,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus healing Simon's mother-in-law, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2531,15 +2531,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The birth of Jesus, celebrated at Christmas. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_CH.A_HOUSE_OF_GOD.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The church as a place of worship. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2706,8 +2706,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.CHRIST.SHARING.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Items they share at home, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2887,8 +2887,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CHRIST.OBEDIENCE.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The importance of obeying parents, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3083,8 +3083,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CHRIST.HONESTY.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reasons for telling the truth, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3269,8 +3269,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CHRIST.THANKFULNESS.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Ways of thanking parents, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3454,15 +3454,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CHRIST.OBEDIENCE.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Obeying parents, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.c",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Values for living peacefully in a family. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3640,8 +3640,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.CHRIST.HONESTY.c",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Punctuality at school and home. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3830,8 +3830,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.CHRIST.OBEDIENCE.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Obedience at home. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -4009,8 +4009,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.a",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Simple thanksgiving prayers, from Grade 1. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -4195,8 +4195,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.b",
-       "kind": "outcome",
+       "requires": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The baptism of Jesus, where the Spirit came like a dove. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"

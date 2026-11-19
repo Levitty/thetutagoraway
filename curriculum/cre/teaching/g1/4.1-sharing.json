@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G1.CHRIST.SHARING",
+ "title": "Sharing",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+   "key_step": "The child names items shared at home and says sharing shows love.",
+   "floor": {
+    "prerequisite": "Takes turns.",
+    "question": "Whose turn is it after yours?",
+    "answer": "The next child's"
+   },
+   "representations": [
+    "picture cards",
+    "two baskets",
+    "a family meal role-play"
+   ],
+   "steps": [
+    "Name items shared at home.",
+    "Sort shared and personal.",
+    "Say why we share.",
+    "Act out sharing a meal."
+   ],
+   "contexts": [
+    "supper",
+    "watching TV",
+    "sharing a bed with a sibling"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a table, a toothbrush and a pot."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the toothbrush.",
+     "say": "Shared or personal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say personal."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the shared items."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_TOWEL",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a bathing towel shared?",
+     "repair": "Two baskets: shared and personal."
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_GREEDY",
+     "listen_for": [
+      "Whoever grabs first"
+     ],
+     "ask": "Food is on the table. Who should get it first?",
+     "repair": "Role-play serving fairly."
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_TV_MINE",
+     "listen_for": [
+      "Only me"
+     ],
+     "ask": "Who uses the TV at home?",
+     "repair": "Take turns choosing in role-play."
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_WHY",
+     "listen_for": [
+      "Because they must"
+     ],
+     "ask": "Why do families share?",
+     "repair": "Ask how it feels when someone shares with you."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item a family shares.",
+     "answer": "Food (chairs, water)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Why do families share?",
+     "answer": "To show love",
+     "shows": "reason"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G1.CHRIST.SHARING.BOY_LOAVES",
+   "key_step": "The child retells the little boy with five loaves and two fish (John 6:1-14).",
+   "floor": {
+    "prerequisite": "Shares at home.",
+    "question": "Name something you share at home.",
+    "answer": "Food"
+   },
+   "representations": [
+    "five paper loaves and two fish",
+    "twelve baskets",
+    "picture cards"
+   ],
+   "steps": [
+    "Listen to John 6:1-14.",
+    "Count loaves, fish, baskets.",
+    "Retell.",
+    "Act it out."
+   ],
+   "contexts": [
+    "sharing lunch",
+    "a church meal",
+    "leftover food"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw five loaves and two fish."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the basket.",
+     "say": "What did the boy do with it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say gave it to Jesus."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: shared, everyone ate, nothing wasted."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_NUMBERS",
+     "listen_for": [
+      "Two"
+     ],
+     "ask": "How many loaves did the boy have?",
+     "repair": "Show five fingers for loaves, two for fish."
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_KEPT",
+     "listen_for": [
+      "Ate it himself"
+     ],
+     "ask": "What did the boy do with his food?",
+     "repair": "Act out giving the basket."
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_WASTE",
+     "listen_for": [
+      "Thrown away"
+     ],
+     "ask": "What happened to the leftover food?",
+     "repair": "Read John 6:12-13."
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_FEW",
+     "listen_for": [
+      "A few"
+     ],
+     "ask": "How many people ate?",
+     "repair": "Show a crowd picture."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the boy have?",
+     "answer": "Five loaves and two fish",
+     "shows": "retell"
+    },
+    {
+     "question": "What happened to the leftovers?",
+     "answer": "They were gathered (twelve baskets)",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

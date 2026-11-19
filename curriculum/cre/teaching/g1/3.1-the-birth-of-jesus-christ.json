@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS",
+ "title": "The Birth of Jesus Christ",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+   "key_step": "The child retells the birth of Jesus (Luke 2:4-13): Bethlehem, no room, manger, angels and shepherds.",
+   "floor": {
+    "prerequisite": "Knows Christmas is about Jesus' birth.",
+    "question": "Whose birth do we celebrate at Christmas?",
+    "answer": "Jesus'"
+   },
+   "representations": [
+    "picture cards of Luke 2",
+    "a manger model",
+    "a Christmas carol"
+   ],
+   "steps": [
+    "Picture-read Luke 2:4-13.",
+    "Order the pictures.",
+    "Retell the story.",
+    "Sing a carol."
+   ],
+   "contexts": [
+    "Christmas at church",
+    "a nativity play",
+    "a new baby at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a manger with a baby."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the manger.",
+     "say": "Who was laid here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say baby Jesus."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: Bethlehem, manger, angels, shepherds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_HOSPITAL",
+     "listen_for": [
+      "In a hospital bed"
+     ],
+     "ask": "Where was baby Jesus laid after he was born?",
+     "repair": "Show a manger: a feeding box for animals."
+    },
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_NAZARETH",
+     "listen_for": [
+      "Nazareth"
+     ],
+     "ask": "In which town was Jesus born?",
+     "repair": "Draw the journey from Nazareth to Bethlehem."
+    },
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_WISE_ANGEL",
+     "listen_for": [
+      "The wise men"
+     ],
+     "ask": "Who told the shepherds about baby Jesus?",
+     "repair": "Show an angel appearing to shepherds at night."
+    },
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_INN_ROOM",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Was there room for Mary and Joseph in the inn?",
+     "repair": "Read Luke 2:7 and act knocking at a full inn."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was Jesus born?",
+     "answer": "Bethlehem",
+     "shows": "retell"
+    },
+    {
+     "question": "Where was baby Jesus laid?",
+     "answer": "In a manger",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

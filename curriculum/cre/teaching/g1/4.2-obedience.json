@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.CHRIST.OBEDIENCE",
+ "title": "Obedience",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Obedience is taught with its limit: a child never obeys anyone, even a known adult, who asks for something unsafe or secret; tell a trusted adult (SAFE).",
+ "skills": [
+  {
+   "skill": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+   "key_step": "The child lists why children obey parents (Ephesians 6:1-3) and knows not to obey unsafe requests.",
+   "floor": {
+    "prerequisite": "Follows simple instructions.",
+    "question": "Please pick up the pencil.",
+    "answer": "Picks it up"
+   },
+   "representations": [
+    "Ephesians 6:1 on a card",
+    "situation pictures",
+    "a role-play"
+   ],
+   "steps": [
+    "Read Ephesians 6:1-3.",
+    "List reasons to obey.",
+    "Practise obeying at once.",
+    "Practise saying no to a stranger."
+   ],
+   "contexts": [
+    "being called for supper",
+    "going to bed on time",
+    "a stranger at the gate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Ephesians 6:1."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"for this is right\".",
+     "say": "Why should we obey parents?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God says it is right."
+    },
+    {
+     "beat": "reveal",
+     "do": "List reasons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_FEAR",
+     "listen_for": [
+      "So we are not beaten"
+     ],
+     "ask": "Why should children obey parents?",
+     "repair": "Read Ephesians 6:1-3 simply."
+    },
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_LATER",
+     "listen_for": [
+      "After my game"
+     ],
+     "ask": "Mother says \"come and eat\". When should you come?",
+     "repair": "Play a game: obey at once when called."
+    },
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_MOTHER_ONLY",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Should you obey your father too?",
+     "repair": "Read \"honour your father and mother\"."
+    },
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_ANY_ADULT",
+     "listen_for": [
+      "Yes, obey adults"
+     ],
+     "ask": "A grown-up you do not know tells you to come with him. Should you obey?",
+     "repair": "Say: we obey parents and teachers. If anyone asks for something unsafe or secret, say no and tell."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a reason to obey parents.",
+     "answer": "God says it is right (it keeps us safe)",
+     "shows": "importance"
+    },
+    {
+     "question": "A stranger says come with me. Do you obey?",
+     "answer": "No, tell a trusted adult",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}
