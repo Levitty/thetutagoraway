@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 8: Usalama wangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (gha-fla), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: ghafla, ng'ombe, ghala",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Ng'ombe alitokea ghafla barabarani."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "usalama wangu barabarani",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "gha-fla"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M2_SAU_NEAR_T8",
+     "listen_for": [
+      "gafla"
+     ],
+     "ask": "Ulisikia /gh/ au /g/?",
+     "repair": "Sikiliza: \"ghafla\" ina sauti /gh/, si /g/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M2_SAU_NEAR2_T8",
+     "listen_for": [
+      "ngombe"
+     ],
+     "ask": "Ulisikia /ng'/ au /ng/?",
+     "repair": "\"ng'ombe\" ina sauti /ng'/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M2_SAU_SYLL_T8",
+     "listen_for": [
+      "g-h-a-f-l-a"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: gha-fla."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M2_SAU_PICK_T8",
+     "listen_for": [
+      "taa"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"ng'ombe\" ina sauti lengwa; \"taa\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"ghala\" kwa silabi.",
+     "answer": "gha-la",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: ng'ombe au taa?",
+     "answer": "ng'ombe",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 10: Teknolojia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (mba-li), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: mbali, nzuri, twiga",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Simu nzuri hutusaidia kuzungumza na watu walio mbali."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "teknolojia: simu na redio",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mba-li"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M3_SAU_NEAR_T10",
+     "listen_for": [
+      "nsuri"
+     ],
+     "ask": "Ulisikia /nz/ au /ns/?",
+     "repair": "Sikiliza: \"nzuri\" ina sauti /nz/, si /ns/."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M3_SAU_VOWEL_T10",
+     "listen_for": [
+      "tuwiga"
+     ],
+     "ask": "Unapiga makofi mangapi kwa neno hili?",
+     "repair": "\"twiga\" ina silabi twi-ga; hakuna irabu ya ziada."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M3_SAU_DROP_T10",
+     "listen_for": [
+      "bali"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"mbali\"?",
+     "repair": "Sikiliza tena: \"mbali\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M3_SAU_SYLL_T10",
+     "listen_for": [
+      "m-b-a-l-i"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: mba-li."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M3_SAU_PICK_T10",
+     "listen_for": [
+      "redio"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"nzuri\" ina sauti lengwa; \"redio\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"twiga\" kwa silabi.",
+     "answer": "twi-ga",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: nzuri au redio?",
+     "answer": "nzuri",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

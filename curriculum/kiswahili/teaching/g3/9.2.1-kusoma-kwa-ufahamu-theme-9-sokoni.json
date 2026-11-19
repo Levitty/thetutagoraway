@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa ufahamu (Theme 9: Sokoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "the picture beside the passage",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "sokoni",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bi. Neema huuza matunda sokoni. Ana maembe, machungwa na mananasi. Wateja wengi hununua matunda yake kwa sababu ni safi na matamu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_WORD_T9",
+     "listen_for": [
+      "watoto"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"wateja\" ni watu wanaonunua bidhaa."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_MSG_T9",
+     "listen_for": [
+      "Bi. Neema ana maembe."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tukiuza bidhaa safi tunapata wateja wengi."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_GUESS_T9",
+     "listen_for": [
+      "Jua kali litawaka."
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za picha na za kifungu: Mvua itanyesha na wauzaji watafunika bidhaa zao."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_LESSON_T9",
+     "listen_for": [
+      "Bi. Neema huuza matunda."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tunapaswa kuwa safi na waaminifu katika kazi zetu."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_OWN_T9",
+     "listen_for": [
+      "Mama yangu huuza sukumawiki."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: matunda"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"wateja\" ni nini?",
+     "answer": "watu wanaonunua bidhaa",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tunapaswa kuwa safi na waaminifu katika kazi zetu.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

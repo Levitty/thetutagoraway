@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y",
+ "title": "Matumizi ya Maneno Yule na Wale (Theme 3: Miezi ya mwaka)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.VIONYESHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on miezi ya mwaka using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "miezi ya mwaka",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Yule ni mwalimu wetu; wale ni wazazi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"yule\".",
+     "say": "Mwalimu yuko karibu au mbali?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.VIONYESHI.M3_SAR_CLASSDEM_T3",
+     "listen_for": [
+      "yule"
+     ],
+     "ask": "Ni mtu au ni kitu?",
+     "repair": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (kile)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.VIONYESHI.M3_SAR_NUMDEM_T3",
+     "listen_for": [
+      "yule"
+     ],
+     "ask": "Ni mmoja au ni wengi?",
+     "repair": "Watoto ni wengi: watoto hawa. (wale)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.VIONYESHI.M3_SAR_DIST_T3",
+     "listen_for": [
+      "yule"
+     ],
+     "ask": "Yuko karibu nawe au mbali?",
+     "repair": "Huyu ni karibu nami; yule ni mbali. (huyu)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T3_MATUMIZI_YA_MANENO_Y.VIONYESHI.M3_SAR_HII_T3",
+     "listen_for": [
+      "hii"
+     ],
+     "ask": "Neno hili la kuonyesha linakubaliana na nomino?",
+     "repair": "Kitabu hiki; mtoto huyu; nyumba hii. (yule)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Wageni ___ (walio mbali) wamefika.",
+     "answer": "wale",
+     "shows": "wale"
+    },
+    {
+     "question": "Jaza: Mzee ___ (aliye mbali) ni babu yangu.",
+     "answer": "yule",
+     "shows": "yule"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_",
+ "title": "Matumizi ya Huyu na Hawa (Theme 3: Tarakimu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on tarakimu using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "tarakimu",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Huyu ni mwalimu; hawa ni wanafunzi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"hawa\".",
+     "say": "Ni mtu mmoja au wengi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_CLASSDEM_T3",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Ni mtu au ni kitu?",
+     "repair": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (hiki)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_NUMDEM_T3",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Ni mmoja au ni wengi?",
+     "repair": "Watoto ni wengi: watoto hawa. (hawa)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_HII_T3",
+     "listen_for": [
+      "hii"
+     ],
+     "ask": "Neno hili la kuonyesha linakubaliana na nomino?",
+     "repair": "Kitabu hiki; mtoto huyu; nyumba hii. (huyu)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_REVERSE_T3",
+     "listen_for": [
+      "hawa"
+     ],
+     "ask": "Ni kimoja au ni vingi?",
+     "repair": "Kimoja ni kitabu; vingi ni vitabu. (huyu)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: ___ ni mama yangu.",
+     "answer": "Huyu",
+     "shows": "one"
+    },
+    {
+     "question": "Jaza: Kuku ___ ni watano.",
+     "answer": "hawa",
+     "shows": "many"
+    }
+   ]
+  }
+ ]
+}

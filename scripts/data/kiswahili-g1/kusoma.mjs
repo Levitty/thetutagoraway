@@ -1,0 +1,67 @@
+// Kiswahili Grade 1, Kusoma (18 Nov 2026, offline). The file had KICD outcomes only; every skill is new.
+import { m, p, s, E, H } from '../kiswahili-depth-lib.mjs';
+import { ufahamu, ufasaha } from '../kiswahili-kinds-lower.mjs';
+const G = 1;
+const UF = (t) => `KUSOMA.${t}.UFAHAMU`, FS = (t) => `KUSOMA.${t}.KUSOMA_KWA_SAUTI`, MAT = (t) => `KUSIKI.${t}.MATAMSHI`;
+const SHORT = ['DECODE', 'WORD', 'MSG', 'OWN'];
+
+export const NEW = [
+  s('KUSOMA.T1_USOMAJI_MWAFAKA', 'USOMAJI_MWAFAKA', 'Keti vizuri, shika kitabu ipasavyo na usome kutoka kushoto kwenda kulia, juu hadi chini', ['a', 'b', 'c'],
+    'Sits upright with the book on the desk at a fitting distance, holds it the right way up with the pages flat, and moves his eyes (and finger) from left to right and from the top line to the bottom, in 8 of 10 new items (the teacher also watches it in class).',
+    ['chagua picha ya mkao bora', 'chagua mahali pa kuanzia kusoma', 'onyesha (mwalimu anaangalia)'], ['application'], {
+      pre: [['PP:PICTURE_TALK', E, 'Handling a picture book the right way up in pre-primary comes first.'], ['PP:PENCIL_PATTERNS', H, 'Left-to-right patterns in pre-primary prepare the eyes for reading direction.']],
+      mis: [
+        m('M1_USM_RIGHT_T1', 'Starts reading from the right or from the bottom of the page.', ['Unaanza kusoma ukurasa kutoka wapi?', 'chini upande wa kulia', 'juu upande wa kushoto'], 'Some children have seen other scripts read from the right, or simply start where the picture is.', 'Put a green dot at the top left of each page: start at the green dot.', 'Tunaanza juu, upande wa kushoto.', 'Kitone cha kijani kiko wapi?'),
+        m('M1_USM_UPSIDE_T1', 'Holds the book upside down or back to front.', ['Kitabu kiko sawa lini?', 'picha zikiwa juu chini', 'picha na maandishi yakiwa wima, jalada mbele'], 'The child has handled few books and does not check the picture before reading.', 'Before opening, find the front cover and check that the people in the picture stand up.', 'Shika kitabu wima: jalada mbele, picha zimesimama.', 'Watu walio kwenye picha wamesimama au wamepinduka?'),
+        m('M1_USM_POSTURE_T1', 'Reads lying on the desk with his face almost on the page, or leaning back far from it.', ['Mkao upi ni bora unaposoma?', 'kulala juu ya meza uso karibu na kitabu', 'kuketi wima, kitabu mezani umbali wa mkono'], 'The child is tired or cannot see well; nobody has shown the reading position.', 'Show the "elbow distance": the book is as far as from the elbow to the hand. If the child still leans in, tell the parent to check the eyes.', 'Keti wima, kitabu kiwe umbali wa kiwiko hadi kiganja.', 'Kitabu kiko mbali kiasi gani na macho yako?'),
+        m('M1_USM_SKIPLINE_T1', 'Loses the line and jumps to another line or back to the start.', ['Unapomaliza mstari wa kwanza, unaenda wapi?', 'popote ninapoona neno ninalolijua', 'mwanzo wa mstari wa pili, upande wa kushoto'], 'The eye sweep back to the next line is new; without a finger guide the child lands anywhere.', 'Move a finger or a card under the line; at the end, slide back to the left and down one line.', 'Mwisho wa mstari, rudi kushoto kwenye mstari unaofuata.', 'Kidole chako kiko kwenye mstari gani?'),
+      ],
+      pack: p('The child sits upright, checks the book is the right way up, and starts at the top left with a finger under the line.',
+        ['Turns the pages of a picture book one at a time.', 'Fungua ukurasa unaofuata.', 'the child turns one page'],
+        ['a green dot at the top left of each page', 'a reading card to slide under the line', 'pictures of good and poor reading positions'],
+        ['Sit up straight.', 'Check the book is the right way up.', 'Put a finger at the green dot.', 'Read left to right, then go down a line.'],
+        ['darasani: the class library corner', 'reading with a parent at home', 'a big book read together'],
+        ['Mama ana kuku.', ['Point at "Mama".', 'Tunaanza kusoma wapi?'], 'The child shows where to start and moves his finger along the line.'],
+        [['Tunasoma kutoka upande gani kwenda upande gani?', 'kushoto kwenda kulia', 'direction'], ['Kitabu kiwe umbali gani na macho?', 'umbali wa kiwiko hadi kiganja', 'posture']]),
+    }),
+  ufasaha({ G, sub: 'KUSOMA.T2_KUSOMA_KWA_UFASAHA', tag: 'T2', letters: ['a', 'b', 'c', 'd'], theme: 'familia', wpm: 5,
+    sounds: ['m', 'a', 'u', 'k', 't', 'l'], read: ['kuku', 'guku'], sentence: 'Mama ana kuku.', question: 'Je, kaka yuko?',
+    pre: [[MAT('T2_MATAMSHI_BORA'), E, 'Saying the sounds m, a, u, k, t, l and their syllables comes before reading them.'], ['KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA', E, 'Holding the book and reading left to right comes first.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T3_KUSOMA_KWA_UFAHAMU', tag: 'T3', letters: ['a', 'b'], theme: 'tarakimu', parts: SHORT,
+    passage: 'Juma ana kuku watano. Kuku wawili ni weupe. Kuku watatu ni weusi. Juma anawapenda kuku wake.',
+    word: ['watano', 'watoto', 'idadi ya tano'], msg: ['Kuku wawili ni weupe.', 'Juma ana kuku watano na anawapenda.'],
+    own: ['Juma ana kuku wangapi?', 'Sisi tuna kuku kumi.', 'watano'], about: 'Kifungu kinahusu kuku wa Juma.',
+    pre: [[FS('T2_KUSOMA_KWA_UFASAHA'), E, 'Reading the words of a short passage comes before saying what it means.'], ['PP:STORY_WHO_WHAT', E, 'Saying who and what about a story heard in pre-primary.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T4_KUSOMA_KWA_UFASAHA', tag: 'T4', letters: ['a', 'b', 'c', 'd'], theme: 'siku za wiki', wpm: 15,
+    sounds: ['n', 'o', 'w', 'e', 'i', 'h'], read: ['wewe', 'wiwi'], sentence: 'Leo ni siku ya Jumanne.', question: 'Je, wewe uko nyumbani?',
+    pre: [[MAT('T4_MATAMSHI_BORA_SAUTI_'), E, 'Saying n, o, w, e, i, h comes before reading them.'], [FS('T2_KUSOMA_KWA_UFASAHA'), H, 'Reading aloud with the first sounds (Theme 2).']] }),
+  ufahamu({ G, sub: 'KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K', tag: 'T5', letters: ['a', 'b'], theme: 'mimi na wenzangu', parts: SHORT,
+    passage: 'Mimi ni Akinyi. Nina rafiki anayeitwa Wanjiku. Tunacheza pamoja shuleni. Tunasaidiana kila siku.',
+    word: ['tunasaidiana', 'tunasalimiana', 'kila mmoja anamsaidia mwenzake'], msg: ['Akinyi yuko shuleni.', 'Marafiki hucheza pamoja na kusaidiana.'],
+    own: ['Rafiki wa Akinyi anaitwa nani?', 'Rafiki yangu ni Otieno.', 'Wanjiku'], about: 'Kifungu kinahusu Akinyi na rafiki yake Wanjiku.',
+    pre: [[UF('T3_KUSOMA_KWA_UFAHAMU'), E, 'The vocabulary and message questions of Theme 3 come first.'], [FS('T4_KUSOMA_KWA_UFASAHA'), H, 'Reading the words of the passage.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T6_KUSOMA_KWA_UFASAHA_S', tag: 'T6', letters: ['a', 'b', 'c', 'd', 'e', 'f'], theme: 'mwili wangu', wpm: 20,
+    sounds: ['s', 'b', 'y', 'z', 'g', 'd'], read: ['damu', 'tamu'], sentence: 'Baba ana sikio na bega.', question: 'Je, goti lako linauma?',
+    pre: [[MAT('T6_MATAMSHI_BORA'), E, 'Saying s, b, y, z, g, d comes before reading them.'], [FS('T4_KUSOMA_KWA_UFASAHA'), H, 'Reading aloud with the sounds of Theme 4.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T7_KUSOMA_KWA_UFAHAMU', tag: 'T7', letters: ['a', 'b', 'c', 'd'], theme: 'usafi wa mwili', picture: true,
+    passage: 'Kila asubuhi Baraka huoga kwa maji na sabuni. Yeye husugua meno na kuchana nywele. Baraka huwa safi.',
+    word: ['husugua', 'husahau', 'husafisha kwa kusugua'], msg: ['Baraka huchana nywele.', 'Tuoge na kusafisha mwili kila siku.'],
+    guess: ['Picha inaonyesha mikono michafu ya Baraka kabla ya chakula. Atafanya nini?', 'Atakula moja kwa moja.', 'Ataosha mikono kwa sabuni.'],
+    lesson: ['Baraka huoga asubuhi.', 'Tunapaswa kuweka miili yetu safi.'],
+    own: ['Baraka huoga kwa nini?', 'Mimi huoga kwa maji moto.', 'maji na sabuni'],
+    pre: [[UF('T5_KUSOMA_KWA_UFAHAMU_K'), E, 'The vocabulary and message of a short passage (Theme 5) come first.'], ['PP:PICTURE_TALK', E, 'Saying what is happening in a picture is the base for predicting from it.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T8_KUSOMA_KWA_UFASAHA', tag: 'T8', letters: ['a', 'b', 'c', 'd', 'e'], theme: 'vyakula vyetu', wpm: 25,
+    sounds: ['j', 'r', 'p', 'f', 'v', 'sh'], read: ['viazi', 'fiazi'], sentence: 'Tunakula viazi na papai.', question: 'Je, umekunywa uji?',
+    pre: [[MAT('T8_MATAMSHI_BORA'), E, 'Saying j, r, p, f, v, sh comes before reading them.'], [FS('T6_KUSOMA_KWA_UFASAHA_S'), H, 'Reading aloud with the sounds of Theme 6.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T9_KUSOMA_KWA_UFAHAMU', tag: 'T9', letters: ['a', 'b', 'c', 'd'], theme: 'jikoni', picture: true,
+    passage: 'Mama yuko jikoni. Anapika ugali na sukumawiki. Dada anaosha sufuria. Chakula kiko tayari.',
+    word: ['sufuria', 'sufu', 'chombo cha kupikia'], msg: ['Dada anaosha sufuria.', 'Familia hushirikiana kupika chakula.'],
+    guess: ['Picha inaonyesha meza yenye sahani. Familia itafanya nini?', 'Italala.', 'Itakula chakula pamoja.'],
+    lesson: ['Mama anapika ugali.', 'Tunapaswa kuwasaidia wazazi kazi za jikoni.'],
+    own: ['Mama anapika nini?', 'Mama yangu anapika wali.', 'ugali na sukumawiki'],
+    pre: [[UF('T7_KUSOMA_KWA_UFAHAMU'), E, 'The four comprehension questions of Theme 7 come first.'], [FS('T8_KUSOMA_KWA_UFASAHA'), H, 'Reading the passage aloud.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T10_KUSOMA_KWA_UFASAHA', tag: 'T10', letters: ['a', 'b', 'c', 'd', 'e'], theme: 'michezo', wpm: 30,
+    sounds: ['ny', 'dh', 'th', 'ch', 'gh', 'ng', "ng'"], read: ['chenga', 'shenga'], sentence: 'Tunacheza ngoma uwanjani.', question: 'Je, umeona nyota?',
+    pre: [[MAT('T10_MATAMSHI_BORA'), E, 'Saying the two-letter sounds comes before reading them.'], [FS('T8_KUSOMA_KWA_UFASAHA'), H, 'Reading aloud with the sounds of Theme 8.']] }),
+];
+export const ADD = [];

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUANDI.T5_UAKIFISHI",
+ "title": "Uakifishi: (Theme 5: Mnyama nimpendaye)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA",
+   "key_step": "The child reads each sentence aloud and asks: does it want an answer? Then he puts ? or . and starts the next one big.",
+   "floor": {
+    "prerequisite": "Writes a short sentence with a capital at the start.",
+    "question": "Andika: Baba analima.",
+    "answer": "Baba analima."
+   },
+   "representations": [
+    "a question card and a statement card",
+    "the marks . and ? cut out to place",
+    "a passage with the marks missing"
+   ],
+   "steps": [
+    "Read the sentence aloud.",
+    "Ask: does it ask or tell?",
+    "Put the mark.",
+    "Start the next sentence with a capital."
+   ],
+   "contexts": [
+    "mnyama nimpendaye",
+    "writing questions for a class interview",
+    "a note home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, sungura anakula nini?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end of the sentence.",
+     "say": "Sentensi hii inaishia kwa alama gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one question and one statement about the theme with their marks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA.M2_ALA_STOPQ_T5",
+     "listen_for": [
+      "Unaenda wapi."
+     ],
+     "ask": "Sentensi hii inauliza au inaeleza?",
+     "repair": "Swali huishia kwa kiulizi (?)."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA.M2_ALA_QST_T5",
+     "listen_for": [
+      "Mimi ninaenda sokoni?"
+     ],
+     "ask": "Sentensi hii inataka jibu?",
+     "repair": "Sentensi ya kueleza huishia kwa kikomo (.)."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA.M2_ALA_REPORTED_T5",
+     "listen_for": [
+      "Mama aliniuliza ninaenda wapi?"
+     ],
+     "ask": "Ni nani anauliza sasa hivi?",
+     "repair": "Sentensi hii inaeleza kwamba swali liliulizwa; huishia kwa kikomo."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA.M2_ALA_MANY_T5",
+     "listen_for": [
+      "Je, sungura anakula nini???"
+     ],
+     "ask": "Kiulizi kimoja kinatosha?",
+     "repair": "Swali moja, kiulizi kimoja."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA.M2_ALA_CAP_T5",
+     "listen_for": [
+      "Sungura anakula majani. mama alifurahi."
+     ],
+     "ask": "Neno linalofuata kikomo linaanza kwa herufi gani?",
+     "repair": "Baada ya kikomo, herufi kubwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Weka alama: Je, sungura anakula nini",
+     "answer": "Je, sungura anakula nini?",
+     "shows": "kiulizi"
+    },
+    {
+     "question": "Weka alama: Sungura anakula majani",
+     "answer": "Sungura anakula majani.",
+     "shows": "kikomo"
+    }
+   ]
+  }
+ ]
+}

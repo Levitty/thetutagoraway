@@ -42,7 +42,8 @@ test('the bank holds the science families (as before) and not the English ones; 
 test('every entry is complete and every family sits in its own entry', async () => {
   const ids = new Set();
   for (const e of SUBJECT_GRADES) {
-    assert.ok(e.families.length > 0, `${e.subject} g${e.grade} has families`);
+    // a subject-grade mapped before any family is written (Kiswahili Grades 1-3, 18 Nov 2026) lists every skill as awaiting
+    assert.ok(e.families.length > 0 || (e.awaiting?.length && e.awaiting.length === Object.keys(e.map.skills).length), `${e.subject} g${e.grade} has families, or lists every skill as awaiting`);
     for (const f of e.families) {
       assert.ok(!ids.has(f.id), `duplicate family id ${f.id}`);
       ids.add(f.id);

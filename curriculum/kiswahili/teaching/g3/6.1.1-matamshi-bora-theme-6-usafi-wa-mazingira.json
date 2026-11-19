@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 6: Usafi wa mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (dha-ha-bu), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: dhahabu, thelathini, chupa",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Tuliokota chupa thelathini tukasafisha mazingira."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "usafi wa mazingira",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "dha-ha-bu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M3_SAU_NEAR_T6",
+     "listen_for": [
+      "zahabu"
+     ],
+     "ask": "Ulisikia /dh/ au /z/?",
+     "repair": "Sikiliza: \"dhahabu\" ina sauti /dh/, si /z/."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M3_SAU_NEAR2_T6",
+     "listen_for": [
+      "shai"
+     ],
+     "ask": "Ulisikia /ch/ au /sh/?",
+     "repair": "\"chai\" ina sauti /ch/."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M3_SAU_DROP_T6",
+     "listen_for": [
+      "telatini"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"thelathini\"?",
+     "repair": "Sikiliza tena: \"thelathini\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M3_SAU_SYLL_T6",
+     "listen_for": [
+      "d-h-a-h-a-b-u"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: dha-ha-bu."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M3_SAU_PICK_T6",
+     "listen_for": [
+      "mama"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"thelathini\" ina sauti lengwa; \"mama\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"chupa\" kwa silabi.",
+     "answer": "chu-pa",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: thelathini au mama?",
+     "answer": "thelathini",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

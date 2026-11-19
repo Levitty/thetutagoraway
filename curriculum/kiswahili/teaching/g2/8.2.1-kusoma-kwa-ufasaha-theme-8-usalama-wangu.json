@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA",
+ "title": "Kusoma kwa ufasaha (Theme 8: Usalama wangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+   "key_step": "The child finds the target words first, then reads phrase by phrase, letting the marks set the pauses and the voice.",
+   "floor": {
+    "prerequisite": "Reads short words with every sound clear.",
+    "question": "Soma: \"Baba anakula.\"",
+    "answer": "Baba anakula."
+   },
+   "representations": [
+    "the passage with phrase slashes",
+    "the target words on cards",
+    "the marks . , ? circled in colour"
+   ],
+   "steps": [
+    "Find the target sounds.",
+    "Read silently first.",
+    "Read aloud phrase by phrase.",
+    "Ask a listener one question about it."
+   ],
+   "contexts": [
+    "usalama wangu",
+    "reading at the school assembly",
+    "reading to a younger brother or sister"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, umeangalia kulia na kushoto?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kiulizi.",
+     "say": "Sauti yako inafanya nini hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the line twice: once as a statement and once as the question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M2_UFS_SOUND_T8",
+     "listen_for": [
+      "ngambo"
+     ],
+     "ask": "Sauti lengwa katika neno hili ni ipi?",
+     "repair": "Soma \"ng'ambo\" kama lilivyoandikwa."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M2_UFS_WORD_T8",
+     "listen_for": [
+      "Tunavuka ... barabara ... kwa ... uangalifu."
+     ],
+     "ask": "Ukisoma neno moja moja, mwenzako anaelewa?",
+     "repair": "Soma maneno kwa pamoja kama unavyozungumza."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M2_UFS_QUIET_T8",
+     "listen_for": [
+      "ya chini ili nisikosee mbele ya wenzangu"
+     ],
+     "ask": "Mwenzako aliye nyuma anakusikia?",
+     "repair": "Soma kwa sauti inayosikika na wote, bila kupiga kelele."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M2_UFS_PACE_T8",
+     "listen_for": [
+      "haraka iwezekanavyo"
+     ],
+     "ask": "Wasikilizaji waliweza kuelewa uliposoma haraka hivyo?",
+     "repair": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M2_UFS_MARK_T8",
+     "listen_for": [
+      "kwa sauti ileile ya sentensi ya kawaida"
+     ],
+     "ask": "Alama iliyo mwishoni mwa sentensi hii ni ipi?",
+     "repair": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Soma neno: ng'ambo",
+     "answer": "ng'ambo",
+     "shows": "target sound"
+    },
+    {
+     "question": "Kasi ifaayo ya kusoma ni ipi?",
+     "answer": "kasi ya kuzungumza",
+     "shows": "pace"
+    }
+   ]
+  }
+ ]
+}

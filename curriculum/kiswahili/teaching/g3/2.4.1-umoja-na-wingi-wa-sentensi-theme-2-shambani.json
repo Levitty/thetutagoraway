@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE",
+ "title": "Umoja na Wingi wa Sentensi (Theme 2: Shambani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on shambani using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "shambani",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kiatu kimechafuka. Viatu vimechafuka."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"vimechafuka\".",
+     "say": "Kwa nini kitendo kimebadilika pia?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_WRONGCLASS_T2",
+     "listen_for": [
+      "Wiatu wamechafuka."
+     ],
+     "ask": "Neno hili ni la ngeli gani?",
+     "repair": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (Viatu vimechafuka.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_AGREE_T2",
+     "listen_for": [
+      "Miti umeanguka."
+     ],
+     "ask": "Kitendo kinakubaliana na nomino?",
+     "repair": "Sentensi nzima hubadilika: Vitabu vimeanguka. (Miti imeanguka.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_NUMWORD_T2",
+     "listen_for": [
+      "jembe mbili"
+     ],
+     "ask": "Nomino inabadilikaje ikiwa zaidi ya moja?",
+     "repair": "Nomino hubadilika pia: vitabu viwili. (majembe mawili)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_NCLASS_T2",
+     "listen_for": [
+      "Mang'ombe wanakula nyasi."
+     ],
+     "ask": "Neno hili linabadilikaje katika wingi?",
+     "repair": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (Ng'ombe wanakula nyasi.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_REVERSE_T2",
+     "listen_for": [
+      "Miti imeota."
+     ],
+     "ask": "Ni kimoja au ni vingi?",
+     "repair": "Kimoja ni kitabu; vingi ni vitabu. (Mti umeota.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika kwa wingi: Kiti kimevunjika.",
+     "answer": "Viti vimevunjika.",
+     "shows": "ki-vi"
+    },
+    {
+     "question": "Andika kwa umoja: Miti imeota.",
+     "answer": "Mti umeota.",
+     "shows": "m-mi"
+    }
+   ]
+  }
+ ]
+}

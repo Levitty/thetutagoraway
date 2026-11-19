@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N",
+ "title": "Matumizi ya Vizuri na Vibaya, Polepole na Haraka. (Theme 9: Hospitalini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.VIELEZI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on hospitalini using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "hospitalini",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Gari la wagonjwa lilikuja haraka."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"haraka\".",
+     "say": "Gari lilikujaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.VIELEZI.M2_SAR_ADVADJ_T9",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Unaeleza kitendo au mtu?",
+     "repair": "Kitendo hufanywa vizuri: anaimba vizuri. (vizuri)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.VIELEZI.M2_SAR_ADVOPP_T9",
+     "listen_for": [
+      "haraka"
+     ],
+     "ask": "Kitendo kinafanywa kwa namna gani?",
+     "repair": "Angalia kitendo tena na uchague neno linalofaa. (polepole)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.VIELEZI.M2_SAR_ADVKI_T9",
+     "listen_for": [
+      "kizuri"
+     ],
+     "ask": "Neno hili linaeleza kitendo kilivyofanywa?",
+     "repair": "Tunasema \"vizuri\" na \"vibaya\". (vizuri)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.VIELEZI.M2_SAR_ADVTHING_T9",
+     "listen_for": [
+      "Dawa hii ni vizuri."
+     ],
+     "ask": "Unaeleza kitu au jinsi kitendo kilivyofanywa?",
+     "repair": "Kitu kizuri: chakula ni kizuri; kitendo kizuri: anapika vizuri. (Dawa hii ni nzuri.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Tunavuka barabara ___ (kwa uangalifu, bila kukimbia).",
+     "answer": "polepole",
+     "shows": "manner"
+    },
+    {
+     "question": "Jaza: Amina aliandika ___ (-zuri).",
+     "answer": "vizuri",
+     "shows": "manner"
+    }
+   ]
+  }
+ ]
+}

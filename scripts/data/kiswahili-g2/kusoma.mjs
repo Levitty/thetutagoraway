@@ -1,0 +1,67 @@
+// Kiswahili Grade 2, Kusoma (18 Nov 2026, offline). The file had KICD outcomes only; every skill is new.
+// Every Grade 2 comprehension sub-strand predicts from a picture (outcome b); the passages name the picture in the question.
+import { E, H } from '../kiswahili-depth-lib.mjs';
+import { ufahamu, ufasaha, down } from '../kiswahili-kinds-lower.mjs';
+const D = (k) => down(1, k);
+const G = 2;
+const UF = (t) => `KUSOMA.${t}.UFAHAMU`, FS = (t) => `KUSOMA.${t}.KUSOMA_KWA_SAUTI`, MAT = (t) => `KUSIKI.${t}.MATAMSHI`;
+const ABCD = ['a', 'b', 'c', 'd'], ABCDE = ['a', 'b', 'c', 'd', 'e'];
+
+export const NEW = [
+  ufahamu({ G, sub: 'KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM', tag: 'T1', letters: ABCD, theme: 'shuleni', picture: true,
+    passage: 'Leo ni siku ya kwanza ya Neema shuleni. Mwalimu alimkaribisha darasani kwa tabasamu. Neema alipata rafiki mpya anayeitwa Amani.',
+    word: ['kukaribisha', 'kukasirisha', 'kumpokea mtu kwa furaha'],
+    msg: ['Neema alipata rafiki.', 'Shule ni mahali pazuri pa kupata marafiki na kujifunza.'],
+    guess: ['Picha inaonyesha kengele ikilia na watoto wakitoka nje. Nini kitatokea?', 'Watalala darasani.', 'Wataenda kucheza wakati wa mapumziko.'],
+    lesson: ['Mwalimu alitabasamu.', 'Tunapaswa kuwakaribisha wanafunzi wapya kwa upendo.'],
+    own: ['Rafiki mpya wa Neema anaitwa nani?', 'Rafiki yangu anaitwa Juma.', 'Amani'],
+    pre: [[D('KUSOMA.T3_KUSOMA_KWA_UFAHAMU.b'), E, 'Answering questions about a very short passage in Grade 1 comes first.'], [D('KUSOMA.T1_USOMAJI_MWAFAKA.b'), H, 'Reading readiness of Grade 1: holding the book and reading left to right.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T2_KUSOMA_KWA_UFASAHA', tag: 'T2', letters: ABCDE, theme: 'haki zangu', wpm: 33,
+    sounds: ['mw', 'nj'], read: ['mwanafunzi', 'muwanafunzi'], sentence: 'Kila mtoto ana haki ya chakula.', question: 'Je, una nguo safi?',
+    pre: [[MAT('T2_MATAMSHI_BORA'), E, 'Saying the syllables of mw and nj comes before reading them in a passage.'], [D('KUSOMA.T2_KUSOMA_KWA_UFASAHA.b'), E, 'Reading short sentences with target sounds in Grade 1.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K', tag: 'T3', letters: ABCD, theme: 'lishe bora', picture: true,
+    passage: 'Kila asubuhi, Baraka hula uji na ndizi. Mchana hula wali, maharagwe na mboga. Mama husema chakula bora hutupa nguvu na afya.',
+    word: ['afya', 'nyanya', 'hali ya mwili kuwa mzima bila ugonjwa'],
+    msg: ['Baraka hula uji asubuhi.', 'Tule chakula bora ili tuwe na nguvu na afya.'],
+    guess: ['Picha inaonyesha Baraka akikataa mboga. Mama atafanya nini?', 'Atampa pipi.', 'Atamweleza umuhimu wa kula mboga.'],
+    lesson: ['Baraka hula wali mchana.', 'Tunapaswa kula vyakula vya aina mbalimbali.'],
+    own: ['Baraka hula nini asubuhi?', 'Mimi hunywa chai.', 'uji na ndizi'],
+    pre: [[UF('T1_KUSOMA_UFAHAMU_KUSOM'), E, 'The comprehension questions of Theme 1 come back here.'], [D('KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.b'), E, 'Answering about a short read passage in Grade 1.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T4_KUSOMA_KWA_UFASAHA_S', tag: 'T4', letters: ABCDE, theme: 'usafiri', wpm: 36,
+    sounds: ['ch', 'dh'], read: ['dhahabu', 'zahabu'], sentence: 'Basi linabeba abiria wengi.', question: 'Je, dereva amefunga mkanda?',
+    pre: [[MAT('T4_MATAMSHI_BORA_SAUTI_'), E, 'Saying ch and dh comes before reading them aloud.'], [FS('T2_KUSOMA_KWA_UFASAHA'), H, 'Reading aloud at a fitting pace and volume, from Theme 2.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T5_KUSOMA_KWA_UFAHAMU', tag: 'T5', letters: ABCD, theme: 'mnyama nimpendaye', picture: true,
+    passage: 'Kiprono ana mbwa anayeitwa Simba. Kila siku humpa chakula na maji. Usiku, Simba hulinda nyumba dhidi ya wezi.',
+    word: ['hulinda', 'hulima', 'huangalia ili pasiwe na hatari'],
+    msg: ['Mbwa anaitwa Simba.', 'Tukiwatunza wanyama wetu, nao hutusaidia.'],
+    guess: ['Picha inaonyesha mtu asiyejulikana langoni usiku. Simba atafanya nini?', 'Atalala.', 'Atabweka ili kuwaamsha watu.'],
+    lesson: ['Kiprono humpa mbwa maji.', 'Tunapaswa kuwatunza wanyama wetu.'],
+    own: ['Mbwa wa Kiprono anaitwa nani?', 'Mbwa wetu anaitwa Bobi.', 'Simba'],
+    pre: [[UF('T3_KUSOMA_KWA_UFAHAMU_K'), E, 'The comprehension questions of Theme 3 come first.'], [D('KUSOMA.T7_KUSOMA_KWA_UFAHAMU.b'), E, 'Answering about a short read passage in Grade 1.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T6_KUSOMA_KWA_UFASAHA', tag: 'T6', letters: ABCDE, theme: 'ukoo', wpm: 39,
+    sounds: ['ny', 'ng'], read: ['nyumba', 'numba'], sentence: 'Babu na bibi wanaishi kijijini.', question: 'Je, umemtembelea nyanya?',
+    pre: [[MAT('T6_MATAMSHI_BORA'), E, 'Saying ny and ng comes before reading them aloud.'], [D('KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.b'), H, 'Reading short sentences aloud in Grade 1.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K', tag: 'T7', letters: ABCD, theme: 'sebuleni', picture: true,
+    passage: 'Sebuleni kwetu kuna viti vinne, meza na runinga. Kila Jumamosi, mimi na dada yangu hupangusa vumbi na kufagia sakafu. Sebule huwa safi na nadhifu.',
+    word: ['sakafu', 'safari', 'sehemu ya chini ya chumba tunayoikanyaga'],
+    msg: ['Kuna viti vinne.', 'Tushirikiane kuweka nyumba yetu safi.'],
+    guess: ['Picha inaonyesha wageni wakibisha mlango. Watoto watafanya nini?', 'Watajificha.', 'Watawakaribisha wageni sebuleni.'],
+    lesson: ['Kuna runinga sebuleni.', 'Tunapaswa kusaidia kazi za nyumbani.'],
+    own: ['Watoto husafisha sebule siku gani?', 'Sisi husafisha Jumapili.', 'Jumamosi'],
+    pre: [[UF('T5_KUSOMA_KWA_UFAHAMU'), E, 'The comprehension questions of Theme 5 come first.'], [D('KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b'), H, 'Answering about a short read passage in Grade 1.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T8_KUSOMA_KWA_UFASAHA', tag: 'T8', letters: ABCDE, theme: 'usalama wangu', wpm: 42,
+    sounds: ['gh', "ng'"], read: ["ng'ambo", 'ngambo'], sentence: 'Tunavuka barabara kwa uangalifu.', question: 'Je, umeangalia kulia na kushoto?',
+    pre: [[MAT('T8_MATAMSHI_BORA'), E, "Saying gh and ng' comes before reading them aloud."], [D('KUSOMA.T8_KUSOMA_KWA_UFASAHA.b'), H, 'Reading short sentences aloud in Grade 1.']] }),
+  ufahamu({ G, sub: 'KUSOMA.T9_KUSOMA_KWA_UFAHAMU', tag: 'T9', letters: ABCD, theme: 'hospitalini', picture: true,
+    passage: 'Amina alikuwa na homa. Mama alimpeleka hospitalini. Daktari alimpima na kumpa dawa. Baada ya siku tatu, Amina alipona.',
+    word: ['homa', 'hema', 'ugonjwa wa mwili kuwa na joto jingi'],
+    msg: ['Amina alienda hospitalini.', 'Tukiugua twende hospitalini mapema tupate matibabu.'],
+    guess: ['Picha inaonyesha Amina akibeba begi la shule asubuhi. Atafanya nini?', 'Atarudi hospitalini.', 'Atarudi shuleni.'],
+    lesson: ['Daktari alimpima Amina.', 'Tunapaswa kumeza dawa kama daktari anavyoagiza.'],
+    own: ['Amina alipona baada ya siku ngapi?', 'Mimi nilipona baada ya wiki moja.', 'siku tatu'],
+    pre: [[UF('T7_KUSOMA_KWA_UFAHAMU_K'), E, 'The comprehension questions of Theme 7 come first.'], ['KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA', H, 'Saying the message of a heard story is the same work.']] }),
+  ufasaha({ G, sub: 'KUSOMA.T10_KUSOMA_KWA_UFASAHA', tag: 'T10', letters: ABCDE, theme: 'hali ya anga', wpm: 45,
+    sounds: ['r', 'l'], read: ['radi', 'ladi'], sentence: 'Mvua kubwa ilinyesha jana usiku.', question: 'Je, leo kuna jua?',
+    pre: [[MAT('T10_MATAMSHI_BORA'), E, 'Saying the sounds of the alphabet, r and l among them, comes before reading them aloud.'], [D('KUSOMA.T10_KUSOMA_KWA_UFASAHA.b'), H, 'Reading short sentences aloud in Grade 1.']] }),
+];
+export const ADD = [];

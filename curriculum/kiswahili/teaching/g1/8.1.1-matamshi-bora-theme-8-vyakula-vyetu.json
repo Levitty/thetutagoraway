@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA",
+ "title": "Matamshi bora (Theme 8: Vyakula vyetu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (vi-a-zi), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: viazi, papai, shamba",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Tulikula viazi na papai."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "vyakula vyetu",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "vi-a-zi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T8",
+     "listen_for": [
+      "fiazi"
+     ],
+     "ask": "Ulisikia /v/ au /f/?",
+     "repair": "Sikiliza: \"viazi\" ina sauti /v/, si /f/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T8",
+     "listen_for": [
+      "samba"
+     ],
+     "ask": "Ulisikia /sh/ au /s/?",
+     "repair": "\"shamba\" ina sauti /sh/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T8",
+     "listen_for": [
+      "v-i-a-z-i"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: vi-a-zi."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_NAME_T8",
+     "listen_for": [
+      "jei"
+     ],
+     "ask": "Ni jina la herufi au ni sauti yake?",
+     "repair": "Kwa Kiswahili tunatamka sauti: /j/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T8",
+     "listen_for": [
+      "ugali"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"papai\" ina sauti lengwa; \"ugali\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"shamba\" kwa silabi.",
+     "answer": "sha-mba",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: papai au ugali?",
+     "answer": "papai",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

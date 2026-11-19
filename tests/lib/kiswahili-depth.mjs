@@ -16,6 +16,7 @@ export function depthTests(grade) {
   const subs = source.sub_strands;
   const skills = subs.flatMap(s => s.skills);
   const lib = json(`engine/data/curriculum/kiswahili.g${grade}.misconceptions.json`);
+  const ready = new Set((source.readiness || []).map(r => r.code));   // Grade 1 only: KISW.PP2.READINESS.*, for a teacher to confirm
   const below = {};
   for (let g = 1; g < grade; g++) {
     const j = json(`curriculum/kiswahili/g${g}.json`);
@@ -43,6 +44,7 @@ export function depthTests(grade) {
       assert.equal(new Set(k.prerequisites.map(x => x.requires)).size, k.prerequisites.length, `${k.code}: a prerequisite twice`);
       for (const x of k.prerequisites) {
         assert.ok(x.status === 'proposed' && x.reason.length > 10, `${k.code}: prerequisite ${x.requires}`);
+        if (ready.has(x.requires)) { assert.equal(x.kind, 'skill'); continue; }   // Grade 1: a pre-primary readiness skill g1.json defines
         const g = Number(/^KISW\.G(\d)\./.exec(x.requires)[1]);
         if (g === grade) assert.ok(skills.some(y => y.code === x.requires) && x.kind === 'skill', `${k.code}: unknown prerequisite ${x.requires}`);
         else assert.ok(g < grade && below[g]?.has(x.requires), `${k.code}: unknown prerequisite ${x.requires}`);

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ",
+ "title": "Ufahamu wa Kusikiliza Kifungu (Theme 5: Mimi na wenzangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+   "key_step": "The child listens for three things: who, what happened in order, and what the passage teaches; then says them in his own words.",
+   "floor": {
+    "prerequisite": "Answers a who-question about a sentence he hears.",
+    "question": "Sikiliza: \"Mama alipika ugali.\" Nani alipika?",
+    "answer": "Mama"
+   },
+   "representations": [
+    "three picture cards of the events",
+    "the new word on a card with its sentence",
+    "a listening chart: Nani? Nini? Funzo?"
+   ],
+   "steps": [
+    "Listen to the whole passage.",
+    "Say who was in it.",
+    "Put the events in order.",
+    "Say the message and use the new word."
+   ],
+   "contexts": [
+    "mimi na wenzangu",
+    "a story told by the teacher",
+    "a radio or phone recording"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kamau alisahau chakula, Otieno alimgawia, walikula pamoja"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first picture.",
+     "say": "Nini kilitokea kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child retells the passage with kwanza, kisha, mwishowe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_DETAIL_T5",
+     "listen_for": [
+      "Kamau alisahau chakula."
+     ],
+     "ask": "Kifungu kinataka tujifunze nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tushiriki tulicho nacho na wenzetu."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_WORD_T5",
+     "listen_for": [
+      "kushinda"
+     ],
+     "ask": "Sentensi ilisema nini kabla na baada ya neno hilo?",
+     "repair": "Katika kifungu, \"kushiriki\" ni kugawana kitu na mwenzako."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_SENT_T5",
+     "listen_for": [
+      "Kushiriki ni kushiriki."
+     ],
+     "ask": "Sentensi yako inamwambia mwenzako nini kuhusu neno hili?",
+     "repair": "Sentensi nzuri inaonyesha maana ya neno."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_ORDER_T5",
+     "listen_for": [
+      "Walikula pamoja, Kamau alisahau chakula, Otieno alimgawia"
+     ],
+     "ask": "Ni nini kilitokea kwanza kabisa?",
+     "repair": "Matukio yalifuatana hivi: Kamau alisahau chakula, Otieno alimgawia, walikula pamoja."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_ADD_T5",
+     "listen_for": [
+      "ndiyo, ili hadithi iwe tamu"
+     ],
+     "ask": "Je, jambo hilo lilikuwa kwenye kifungu?",
+     "repair": "Kusimulia upya ni kusema yaliyokuwa kwenye kifungu tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"kushiriki\" ni nini?",
+     "answer": "kugawana kitu na mwenzako",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Kifungu kinatufundisha nini?",
+     "answer": "Tushiriki tulicho nacho na wenzetu.",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

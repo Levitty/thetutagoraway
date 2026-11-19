@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T8_MATUMIZI_YA_MANENO_H",
+ "title": "Matumizi ya Maneno Hili na Haya (Theme 8: Ndege nimpendaye)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T8_MATUMIZI_YA_MANENO_H.VIONYESHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on ndege nimpendaye using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "ndege nimpendaye",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bawa hili - mabawa haya."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"haya\".",
+     "say": "Ni bawa moja au mengi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T8_MATUMIZI_YA_MANENO_H.VIONYESHI.M3_SAR_CLASSDEM_T8",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Ni mtu au ni kitu?",
+     "repair": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (hili)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T8_MATUMIZI_YA_MANENO_H.VIONYESHI.M3_SAR_NUMDEM_T8",
+     "listen_for": [
+      "hili"
+     ],
+     "ask": "Ni mmoja au ni wengi?",
+     "repair": "Watoto ni wengi: watoto hawa. (haya)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T8_MATUMIZI_YA_MANENO_H.VIONYESHI.M3_SAR_NCLASS_T8",
+     "listen_for": [
+      "majicho haya"
+     ],
+     "ask": "Neno hili linabadilikaje katika wingi?",
+     "repair": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (macho haya)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T8_MATUMIZI_YA_MANENO_H.VIONYESHI.M3_SAR_HII_T8",
+     "listen_for": [
+      "hii"
+     ],
+     "ask": "Neno hili la kuonyesha linakubaliana na nomino?",
+     "repair": "Kitabu hiki; mtoto huyu; nyumba hii. (hili)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Tunda ___ ni tamu.",
+     "answer": "hili",
+     "shows": "singular"
+    },
+    {
+     "question": "Jaza: Manyoya ___ ni laini.",
+     "answer": "haya",
+     "shows": "plural"
+    }
+   ]
+  }
+ ]
+}

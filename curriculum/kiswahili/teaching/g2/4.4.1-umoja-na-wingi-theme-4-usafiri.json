@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI",
+ "title": "Umoja na Wingi: (Theme 4: Usafiri)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on usafiri using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "usafiri",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "basi kubwa - mabasi makubwa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"makubwa\".",
+     "say": "Kwa nini \"kubwa\" imebadilika?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI.M2_SAR_WRONGCLASS_T4",
+     "listen_for": [
+      "miendeshaji"
+     ],
+     "ask": "Neno hili ni la ngeli gani?",
+     "repair": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (waendeshaji)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI.M2_SAR_NCLASS_T4",
+     "listen_for": [
+      "mandege mawili"
+     ],
+     "ask": "Neno hili linabadilikaje katika wingi?",
+     "repair": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (ndege mbili)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI.M2_SAR_NUMWORD_T4",
+     "listen_for": [
+      "gari mbili"
+     ],
+     "ask": "Nomino inabadilikaje ikiwa zaidi ya moja?",
+     "repair": "Nomino hubadilika pia: vitabu viwili. (magari mawili)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI.M2_SAR_REVERSE_T4",
+     "listen_for": [
+      "magari"
+     ],
+     "ask": "Ni kimoja au ni vingi?",
+     "repair": "Kimoja ni kitabu; vingi ni vitabu. (gari)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI.M2_SAR_PLADJ_T4",
+     "listen_for": [
+      "mabasi kubwa"
+     ],
+     "ask": "Nomino imebadilika; kivumishi je?",
+     "repair": "Watoto wazuri: vyote hubadilika. (mabasi makubwa)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Wingi wa \"gari jekundu\" ni?",
+     "answer": "magari mekundu",
+     "shows": "li-ma"
+    },
+    {
+     "question": "Wingi wa \"baiskeli moja\" ni?",
+     "answer": "baiskeli mbili",
+     "shows": "n-n"
+    }
+   ]
+  }
+ ]
+}

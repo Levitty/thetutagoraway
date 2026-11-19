@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_",
+ "title": "Matamshi Bora Sauti; /ch/ na /dh/ (Theme 4: Usafiri)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (cho-mbo), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: chombo, dhoruba, chai",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Chombo kilisimama baharini kwa sababu ya dhoruba."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "usafiri",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "cho-mbo"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M2_SAU_NEAR_T4",
+     "listen_for": [
+      "zoruba"
+     ],
+     "ask": "Ulisikia /dh/ au /z/?",
+     "repair": "Sikiliza: \"dhoruba\" ina sauti /dh/, si /z/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M2_SAU_NEAR2_T4",
+     "listen_for": [
+      "shombo"
+     ],
+     "ask": "Ulisikia /ch/ au /sh/?",
+     "repair": "\"chombo\" ina sauti /ch/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M2_SAU_DROP_T4",
+     "listen_for": [
+      "dahabu"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"dhahabu\"?",
+     "repair": "Sikiliza tena: \"dhahabu\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M2_SAU_SYLL_T4",
+     "listen_for": [
+      "c-h-o-m-b-o"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: cho-mbo."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M2_SAU_PICK_T4",
+     "listen_for": [
+      "basi"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"dhoruba\" ina sauti lengwa; \"basi\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"chai\" kwa silabi.",
+     "answer": "cha-i",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: dhoruba au basi?",
+     "answer": "dhoruba",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

@@ -1,7 +1,8 @@
 // Kiswahili Grade 4, Kusoma: depth layer (18 Nov 2026, offline).
 import { m, p, x, E, H } from '../kiswahili-depth-lib.mjs';
 import { ufasaha, mapana, kidijitali } from '../kiswahili-kinds.mjs';
-const G3 = (k) => `G3o:${k}`;
+import { down } from "../kiswahili-kinds-lower.mjs";
+const G3 = (k) => down(3, k);   // a Grade 3 outcome names the Grade 3 skill that carries it (Grade 3 mapped 18 Nov 2026)
 const UF = 'KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE', DIG = 'KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI';
 export const NEW = [
   ufasaha({ G: 4, sub: 'KUSOMA.T3_KUSOMA_KWA_UFASAHA', tag: 'T3', letters: ['b', 'c', 'd', 'e'], theme: 'mavazi (clothes)',

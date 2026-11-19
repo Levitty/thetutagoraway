@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ",
+ "title": "Ufahamu wa Kusikiliza (Theme 5: Usalama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+   "key_step": "The child listens for three things: who, what happened in order, and what the passage teaches; then says them in his own words.",
+   "floor": {
+    "prerequisite": "Answers a who-question about a sentence he hears.",
+    "question": "Sikiliza: \"Mama alipika ugali.\" Nani alipika?",
+    "answer": "Mama"
+   },
+   "representations": [
+    "three picture cards of the events",
+    "the new word on a card with its sentence",
+    "a listening chart: Nani? Nini? Funzo?"
+   ],
+   "steps": [
+    "Listen to the whole passage.",
+    "Say who was in it.",
+    "Put the events in order.",
+    "Say the message and use the new word."
+   ],
+   "contexts": [
+    "usalama barabarani",
+    "a story told by the teacher",
+    "a radio or phone recording"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wanjiru alienda dukani, alivuka barabara bila kuangalia, gari likasimama ghafla"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first picture.",
+     "say": "Nini kilitokea kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child retells the passage with kwanza, kisha, mwishowe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M3_SIK_DETAIL_T5",
+     "listen_for": [
+      "Wanjiru alienda dukani."
+     ],
+     "ask": "Kifungu kinataka tujifunze nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tuangalie kulia na kushoto na kuvuka kwenye kivuko ili tuwe salama."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M3_SIK_WORD_T5",
+     "listen_for": [
+      "kivuli"
+     ],
+     "ask": "Sentensi ilisema nini kabla na baada ya neno hilo?",
+     "repair": "Katika kifungu, \"kivuko\" ni mahali palipotengwa pa kuvuka barabara."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M3_SIK_SENT_T5",
+     "listen_for": [
+      "Kivuko ni kivuko."
+     ],
+     "ask": "Sentensi yako inamwambia mwenzako nini kuhusu neno hili?",
+     "repair": "Sentensi nzuri inaonyesha maana ya neno."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M3_SIK_ORDER_T5",
+     "listen_for": [
+      "Gari lilisimama ghafla, Wanjiru alienda dukani, alivuka barabara bila kuangalia"
+     ],
+     "ask": "Ni nini kilitokea kwanza kabisa?",
+     "repair": "Matukio yalifuatana hivi: Wanjiru alienda dukani, alivuka barabara bila kuangalia, gari likasimama ghafla."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M3_SIK_ADD_T5",
+     "listen_for": [
+      "ndiyo, ili hadithi iwe tamu"
+     ],
+     "ask": "Je, jambo hilo lilikuwa kwenye kifungu?",
+     "repair": "Kusimulia upya ni kusema yaliyokuwa kwenye kifungu tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"kivuko\" ni nini?",
+     "answer": "mahali palipotengwa pa kuvuka barabara",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Kifungu kinatufundisha nini?",
+     "answer": "Tuangalie kulia na kushoto na kuvuka kwenye kivuko ili tuwe salama.",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

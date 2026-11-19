@@ -112,16 +112,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSIKI.T4_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T4_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing the syllables of a target sound in Grade 3 is the base for telling two close sounds apart.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Every Kiswahili syllable ends in one of the five vowels; the child must know them to split words.",
        "status": "proposed",
@@ -615,16 +615,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUANDI.T7_UANDISHI_WA_INSHA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T7_UANDISHI_WA_INSHA.INSHA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The things to keep in mind when writing an insha were met in Grade 3.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "A Grade 3 maelezo is one of the kinds the child now sorts.",
        "status": "proposed",
@@ -667,8 +667,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUANDI.T7_UANDISHI_WA_INSHA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T7_UANDISHI_WA_INSHA.INSHA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The things to keep in mind when writing an insha were met in Grade 3.",
        "status": "proposed",
@@ -903,16 +903,16 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Changing a sentence from one to many shows which word is the name that changes.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Knowing words for people, animals and things of a theme gives the child nouns to sort.",
        "status": "proposed",
@@ -1099,8 +1099,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Making a sentence negative changes the verb, which shows the child where the verb is.",
        "status": "proposed",
@@ -1454,16 +1454,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The everyday greetings and farewells of Grade 3 come first.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Shikamoo and marahaba are words of respect met in Grade 3.",
        "status": "proposed",
@@ -1624,8 +1624,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUANDI.T8_TAHAJIA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Spelling words letter by letter is needed to look them up.",
        "status": "proposed",
@@ -1809,8 +1809,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 already told a short story in writing.",
        "status": "proposed",
@@ -2338,8 +2338,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Vocabulary of everyday things gives the child the answers to guess.",
        "status": "proposed",
@@ -2598,8 +2598,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 reading of a short passage with correct sounds is the base.",
        "status": "proposed",
@@ -2858,16 +2858,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSIKI.T7_MAAGIZO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Following simple instructions in class is how the parts are learnt.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Spacing on paper is mirrored by the space bar.",
        "status": "proposed",
@@ -2900,16 +2900,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUANDI.T2_HATI_NADHIFU.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T2_HATI_NADHIFU.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 recognised capital letters in a text.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUANDI.T5_MATUMIZI_YA_KIULIZI.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T5_MATUMIZI_YA_KIULIZI.ALAMA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 met the kiulizi.",
        "status": "proposed",
@@ -2953,8 +2953,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUANDI.T2_HATI_NADHIFU.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T2_HATI_NADHIFU.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Capital letters met in neat handwriting are typed with the shift key.",
        "status": "proposed",
@@ -3618,16 +3618,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Words of courtesy and feeling are met together in speech.",
        "status": "proposed",
        "grade": 3
       },
       {
-       "requires": "KISW.G3.KUANDI.T5_MATUMIZI_YA_KIULIZI.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T5_MATUMIZI_YA_KIULIZI.ALAMA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Knowing the marks at the end of a sentence comes before the alama ya hisi.",
        "status": "proposed",
@@ -3786,8 +3786,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Words of respect and courtesy of Grade 3 are the start of polite speech.",
        "status": "proposed",
@@ -3984,8 +3984,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSIKI.T7_MAAGIZO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Following instructions given in class is how safety rules are learnt.",
        "status": "proposed",
@@ -4279,8 +4279,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The margin and spaces of Grade 3 set out the parts of a letter on the page.",
        "status": "proposed",
@@ -4755,8 +4755,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSIKI.T9_MAZUNGUMZO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Following what a conversation is about lets the child see where a methali fits.",
        "status": "proposed",
@@ -4946,8 +4946,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading aloud clearly is needed for reading a poem with its beat.",
        "status": "proposed",
@@ -5122,8 +5122,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The parts of a describing insha were met in Grade 3.",
        "status": "proposed",
@@ -5298,8 +5298,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Singular and plural sentences are where the u-/i- change is seen.",
        "status": "proposed",
@@ -6773,8 +6773,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T2_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The ki-/vi- change is first met in singular and plural sentences.",
        "status": "proposed",
@@ -7879,8 +7879,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSIKI.T9_MAZUNGUMZO.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Following what a conversation is about comes first.",
        "status": "proposed",
@@ -9176,8 +9176,8 @@
        "status": "proposed"
       },
       {
-       "requires": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The person prefix a- / wa- is met in the third-person sentences of Grade 3.",
        "status": "proposed",
@@ -9360,8 +9360,8 @@
        "grade": 4
       },
       {
-       "requires": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.a",
-       "kind": "outcome",
+       "requires": "KISW.G3.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 listening for the message of a short passage comes first.",
        "status": "proposed",

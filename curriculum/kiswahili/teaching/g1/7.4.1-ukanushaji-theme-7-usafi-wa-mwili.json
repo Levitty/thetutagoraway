@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.SARUFI.T7_UKANUSHAJI",
+ "title": "Ukanushaji (Theme 7: Usafi wa mwili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on usafi wa mwili using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "usafi wa mwili",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ninaoga - siogi; tunaoga - hatuogi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"siogi\".",
+     "say": "Herufi ya mwisho imebadilikaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_FINALA_T7",
+     "listen_for": [
+      "Mimi sioga."
+     ],
+     "ask": "Herufi ya mwisho ya kitendo hiki ni ipi?",
+     "repair": "Katika ukanushaji wa wakati uliopo, -a inakuwa -i: hasomi. (Mimi siogi.)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_KEEPNA_T7",
+     "listen_for": [
+      "Mimi sinaoshi mikono."
+     ],
+     "ask": "Kuna -na- katika ukanushaji?",
+     "repair": "Hasomi: hakuna -na- katika ukanushaji huu. (Mimi sioshi mikono.)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_SIPLUS_T7",
+     "listen_for": [
+      "Sisi si tunachana nywele."
+     ],
+     "ask": "Ni kitendo au ni \"ni\"?",
+     "repair": "Kitendo hukanushwa kwa ha-: Yeye hasomi. (Sisi hatuchani nywele.)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_PERSNEG_T7",
+     "listen_for": [
+      "Sisi hasugui meno."
+     ],
+     "ask": "Ni nafsi gani hapa?",
+     "repair": "Wao hawasomi; mimi sisomi. (Sisi hatusugui meno.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Mimi ninacheza.",
+     "answer": "Mimi sichezi.",
+     "shows": "mimi"
+    },
+    {
+     "question": "Kanusha: Sisi tunaimba.",
+     "answer": "Sisi hatuimbi.",
+     "shows": "sisi"
+    }
+   ]
+  }
+ ]
+}

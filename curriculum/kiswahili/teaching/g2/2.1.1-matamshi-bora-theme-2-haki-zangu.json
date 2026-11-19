@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA",
+ "title": "Matamshi Bora. (Theme 2: Haki zangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (mwa-li-mu), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: mwalimu, njia, mwana",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Mwalimu wetu anatufundisha kuvuka njia salama."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "haki zangu: haki ya elimu",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mwa-li-mu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M2_SAU_NEAR_T2",
+     "listen_for": [
+      "wezi"
+     ],
+     "ask": "Ulisikia /mw/ au /w/?",
+     "repair": "Sikiliza: \"mwezi\" ina sauti /mw/, si /w/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M2_SAU_VOWEL_T2",
+     "listen_for": [
+      "muwalimu"
+     ],
+     "ask": "Unapiga makofi mangapi kwa neno hili?",
+     "repair": "\"mwalimu\" ina silabi mwa-li-mu; hakuna irabu ya ziada."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M2_SAU_DROP_T2",
+     "listen_for": [
+      "jia"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"njia\"?",
+     "repair": "Sikiliza tena: \"njia\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M2_SAU_SYLL_T2",
+     "listen_for": [
+      "m-w-a-l-i-m-u"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: mwa-li-mu."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M2_SAU_PICK_T2",
+     "listen_for": [
+      "kalamu"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"njia\" ina sauti lengwa; \"kalamu\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"mwana\" kwa silabi.",
+     "answer": "mwa-na",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: njia au kalamu?",
+     "answer": "njia",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

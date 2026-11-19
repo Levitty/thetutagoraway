@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE",
+ "title": "Umoja na Wingi wa Sentensi (Theme 4: Kazi mbalimbali)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on kazi mbalimbali using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "kazi mbalimbali",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mkulima analima. Wakulima wanalima."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Wakulima\".",
+     "say": "Kiambishi cha wingi ni kipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_WRONGCLASS_T4",
+     "listen_for": [
+      "Mialimu inafundisha."
+     ],
+     "ask": "Neno hili ni la ngeli gani?",
+     "repair": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (Walimu wanafundisha.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_AGREE_T4",
+     "listen_for": [
+      "Madaktari anatibu wagonjwa."
+     ],
+     "ask": "Kitendo kinakubaliana na nomino?",
+     "repair": "Sentensi nzima hubadilika: Vitabu vimeanguka. (Madaktari wanatibu wagonjwa.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_NCLASS_T4",
+     "listen_for": [
+      "Majino yanauma."
+     ],
+     "ask": "Neno hili linabadilikaje katika wingi?",
+     "repair": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (Meno yanauma.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T4_UMOJA_NA_WINGI_WA_SE.UMOJA_WINGI.M3_SAR_NUMWORD_T4",
+     "listen_for": [
+      "mpishi wawili"
+     ],
+     "ask": "Nomino inabadilikaje ikiwa zaidi ya moja?",
+     "repair": "Nomino hubadilika pia: vitabu viwili. (wapishi wawili)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika kwa wingi: Fundi anajenga.",
+     "answer": "Mafundi wanajenga.",
+     "shows": "li-ma people noun"
+    },
+    {
+     "question": "Andika kwa wingi: Mwalimu anafundisha.",
+     "answer": "Walimu wanafundisha.",
+     "shows": "m-wa"
+    }
+   ]
+  }
+ ]
+}

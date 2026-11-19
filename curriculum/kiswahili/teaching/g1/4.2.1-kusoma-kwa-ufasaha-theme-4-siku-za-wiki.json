@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA",
+ "title": "Kusoma kwa Ufasaha (Theme 4: Siku za wiki)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+   "key_step": "The child finds the target words first, then reads phrase by phrase, letting the marks set the pauses and the voice.",
+   "floor": {
+    "prerequisite": "Reads short words with every sound clear.",
+    "question": "Soma: \"Baba anakula.\"",
+    "answer": "Baba anakula."
+   },
+   "representations": [
+    "the passage with phrase slashes",
+    "the target words on cards",
+    "the marks . , ? circled in colour"
+   ],
+   "steps": [
+    "Find the target sounds.",
+    "Read silently first.",
+    "Read aloud phrase by phrase.",
+    "Ask a listener one question about it."
+   ],
+   "contexts": [
+    "siku za wiki",
+    "reading at the school assembly",
+    "reading to a younger brother or sister"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, wewe uko nyumbani?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kiulizi.",
+     "say": "Sauti yako inafanya nini hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the line twice: once as a statement and once as the question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_SOUND_T4",
+     "listen_for": [
+      "wiwi"
+     ],
+     "ask": "Sauti lengwa katika neno hili ni ipi?",
+     "repair": "Soma \"wewe\" kama lilivyoandikwa."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_WORD_T4",
+     "listen_for": [
+      "Leo ... ni ... siku ... ya ... Jumanne."
+     ],
+     "ask": "Ukisoma neno moja moja, mwenzako anaelewa?",
+     "repair": "Soma maneno kwa pamoja kama unavyozungumza."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_QUIET_T4",
+     "listen_for": [
+      "ya chini ili nisikosee mbele ya wenzangu"
+     ],
+     "ask": "Mwenzako aliye nyuma anakusikia?",
+     "repair": "Soma kwa sauti inayosikika na wote, bila kupiga kelele."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_PACE_T4",
+     "listen_for": [
+      "haraka iwezekanavyo"
+     ],
+     "ask": "Wasikilizaji waliweza kuelewa uliposoma haraka hivyo?",
+     "repair": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_MARK_T4",
+     "listen_for": [
+      "kwa sauti ileile ya sentensi ya kawaida"
+     ],
+     "ask": "Alama iliyo mwishoni mwa sentensi hii ni ipi?",
+     "repair": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Soma neno: wewe",
+     "answer": "wewe",
+     "shows": "target sound"
+    },
+    {
+     "question": "Kasi ifaayo ya kusoma ni ipi?",
+     "answer": "kasi ya kuzungumza",
+     "shows": "pace"
+    }
+   ]
+  }
+ ]
+}

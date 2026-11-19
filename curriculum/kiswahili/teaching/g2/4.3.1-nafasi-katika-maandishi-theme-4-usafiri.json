@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI",
+ "title": "Nafasi katika maandishi. (Theme 4: Usafiri)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO",
+   "key_step": "The child counts the words aloud before writing, then writes each word whole with one finger space after it.",
+   "floor": {
+    "prerequisite": "Writes single words neatly.",
+    "question": "Andika: basi",
+    "answer": "basi"
+   },
+   "representations": [
+    "a finger or lolly stick as a space measure",
+    "word cards to lay out with gaps",
+    "a sentence strip to cut into words"
+   ],
+   "steps": [
+    "Say the sentence.",
+    "Count the words.",
+    "Write each word whole.",
+    "Put a finger space after each word."
+   ],
+   "contexts": [
+    "usafiri: a sentence about the bus",
+    "copying from the board",
+    "labelling a picture"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Basi limefika mapema."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each gap.",
+     "say": "Kuna maneno mangapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two sentences with a finger space after every word."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO.M2_NAF_NONE_T4",
+     "listen_for": [
+      "Basilimefikamapema."
+     ],
+     "ask": "Sentensi hii ina maneno mangapi?",
+     "repair": "Acha nafasi ya kidole kati ya neno na neno."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO.M2_NAF_SPLIT_T4",
+     "listen_for": [
+      "Mimi ni na kwenda sokoni."
+     ],
+     "ask": "Neno hili linasema kitendo kimoja?",
+     "repair": "Kitendo ni neno moja: ninakwenda."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO.M2_NAF_INSIDE_T4",
+     "listen_for": [
+      "Ga ri ni jekundu."
+     ],
+     "ask": "Ga ri ni neno moja au mawili?",
+     "repair": "Silabi za neno moja hukaa pamoja: gari."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO.M2_NAF_UNEVEN_T4",
+     "listen_for": [
+      "yoyote, kubwa au ndogo"
+     ],
+     "ask": "Nafasi zako zina ukubwa sawa?",
+     "repair": "Kila nafasi iwe sawa na kidole kimoja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sentensi \"Gari limesimama.\" ina maneno mangapi?",
+     "answer": "mawili",
+     "shows": "counting words"
+    },
+    {
+     "question": "Ni ipi sahihi: \"ninakwenda\" au \"ni na kwenda\"?",
+     "answer": "ninakwenda",
+     "shows": "verb as one word"
+    }
+   ]
+  }
+ ]
+}

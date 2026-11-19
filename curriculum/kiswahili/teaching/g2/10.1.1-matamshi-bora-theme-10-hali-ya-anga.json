@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 10: Hali ya anga)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (ra-di), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: radi, baridi, leo",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Leo kuna baridi na radi."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "hali ya anga",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "ra-di"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M2_SAU_NEAR_T10",
+     "listen_for": [
+      "ladi"
+     ],
+     "ask": "Ulisikia /r/ au /l/?",
+     "repair": "Sikiliza: \"radi\" ina sauti /r/, si /l/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M2_SAU_NEAR2_T10",
+     "listen_for": [
+      "reo"
+     ],
+     "ask": "Ulisikia /l/ au /r/?",
+     "repair": "\"leo\" ina sauti /l/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M2_SAU_SYLL_T10",
+     "listen_for": [
+      "r-a-d-i"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: ra-di."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M2_SAU_PICK_T10",
+     "listen_for": [
+      "jua"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"baridi\" ina sauti lengwa; \"jua\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"leo\" kwa silabi.",
+     "answer": "le-o",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: baridi au jua?",
+     "answer": "baridi",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

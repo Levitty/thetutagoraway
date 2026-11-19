@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K",
+ "title": "Mazungumzo ya papo kwa hapo. (Theme 9: Hospitalini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO",
+   "key_step": "The child keeps to the topic, waits for his turn, and says each sentence in clear Kiswahili with a matching face and hand.",
+   "floor": {
+    "prerequisite": "Answers a simple question about himself in a full sentence.",
+    "question": "Unapenda kula nini?",
+    "answer": "Ninapenda kula ndizi."
+   },
+   "representations": [
+    "a topic picture in the middle of the group",
+    "a talking ball",
+    "a word wall of Kiswahili words"
+   ],
+   "steps": [
+    "Look at the topic.",
+    "Wait for the ball.",
+    "Say one sentence on the topic.",
+    "Pass the ball and listen."
+   ],
+   "contexts": [
+    "hospitalini",
+    "kumtembelea daktari",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Daktari alinidunga sindano."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the topic picture.",
+     "say": "Sentensi hii inahusu mada yetu?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says two sentences on the topic, waiting for his turn."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO.M2_MAZ_TOPIC_T9",
+     "listen_for": [
+      "Jana nilitazama katuni nzuri."
+     ],
+     "ask": "Mada yetu ni nini?",
+     "repair": "Tunazungumza kuhusu kumtembelea daktari; sema jambo kuhusu hilo."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO.M2_MAZ_TURN_T9",
+     "listen_for": [
+      "ninaanza kuzungumza pia"
+     ],
+     "ask": "Ni nani ana zamu ya kuzungumza sasa?",
+     "repair": "Subiri zamu yako; msikilize mwenzako kwanza."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO.M2_MAZ_MIX_T9",
+     "listen_for": [
+      "Daktari alinipa injection."
+     ],
+     "ask": "Neno hilo kwa Kiswahili ni lipi?",
+     "repair": "Kwa Kiswahili tunasema: Daktari alinidunga sindano."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO.M2_MAZ_GEST_T9",
+     "listen_for": [
+      "tabasamu kubwa"
+     ],
+     "ask": "Ujumbe wako ni wa furaha au wa huzuni?",
+     "repair": "Ishara zako zifuate ujumbe wako."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO.M2_MAZ_LR_T9",
+     "listen_for": [
+      "lafiki"
+     ],
+     "ask": "Ulimi wako unafanya nini unaposema /r/?",
+     "repair": "Tamka \"rafiki\" kwa /r/: ulimi unagonga mara moja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Daktari alinipa injection. Sema kwa Kiswahili.",
+     "answer": "Daktari alinidunga sindano.",
+     "shows": "Kiswahili words"
+    },
+    {
+     "question": "Mwenzako anazungumza. Unafanya nini?",
+     "answer": "ninasikiliza mpaka amalize",
+     "shows": "turn taking"
+    }
+   ]
+  }
+ ]
+}

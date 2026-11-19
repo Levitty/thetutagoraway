@@ -1,6 +1,7 @@
 // Kiswahili Grade 4, Sarufi: the depth layer for the 19 first-pass grammar skills (18 Nov 2026, offline).
 import { m, p, x, E, H, ENG, MT } from '../kiswahili-depth-lib.mjs';
-const G3 = (k) => `G3o:${k}`;
+import { down } from "../kiswahili-kinds-lower.mjs";
+const G3 = (k) => down(3, k);   // a Grade 3 outcome names the Grade 3 skill that carries it (Grade 3 mapped 18 Nov 2026)
 export const NEW = [];
 export const ADD = [
   x('SARUFI.T1_NOMINO.NOMINO', {

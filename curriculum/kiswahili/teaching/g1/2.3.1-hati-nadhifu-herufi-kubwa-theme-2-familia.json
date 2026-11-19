@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_",
+ "title": "Hati nadhifu - Herufi kubwa (Theme 2: Familia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+   "key_step": "The child forms each letter from the right starting point, sits it on the line, leaves a finger space after each word, and checks before the clean copy.",
+   "floor": {
+    "prerequisite": "Holds the pencil well and writes his own name.",
+    "question": "Andika jina lako.",
+    "answer": "the child writes his name"
+   },
+   "representations": [
+    "three-line paper",
+    "letter shapes traced in sand or air",
+    "a model passage on the board"
+   ],
+   "steps": [
+    "Look at the model.",
+    "Write each letter on the line.",
+    "Leave a space after each word.",
+    "Check and write the clean copy."
+   ],
+   "contexts": [
+    "familia",
+    "copying the date from the board",
+    "writing a note to a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama na Baba wako nyumbani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter.",
+     "say": "Herufi hii inaanzaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the line neatly and reads it back."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_CAPSTART_T2",
+     "listen_for": [
+      "mama na baba wako nyumbani."
+     ],
+     "ask": "Sentensi hii inaanza kwa herufi gani?",
+     "repair": "Sentensi na jina la mtu au mahali huanza kwa herufi kubwa."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_CAPMID_T2",
+     "listen_for": [
+      "JuMa ANakula"
+     ],
+     "ask": "Kwa nini herufi hii ni kubwa katikati ya neno?",
+     "repair": "Herufi kubwa iko mwanzoni tu; nyingine ni ndogo."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_SPACE_T2",
+     "listen_for": [
+      "Mamaanapikachakula."
+     ],
+     "ask": "Kuna maneno mangapi hapa?",
+     "repair": "Acha nafasi ya kidole kati ya neno na neno."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_TURN_T2",
+     "listen_for": [
+      "bada"
+     ],
+     "ask": "Herufi hii inaangalia upande gani?",
+     "repair": "Herufi d huanza kama c, kisha mstari mrefu."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_LINE_T2",
+     "listen_for": [
+      "popote kwenye ukurasa"
+     ],
+     "ask": "Herufi zako zinakaa wapi?",
+     "repair": "Kila herufi ikae juu ya mstari."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: Mama na Baba wako nyumbani.",
+     "answer": "Mama na Baba wako nyumbani.",
+     "shows": "neat writing"
+    },
+    {
+     "question": "Unaacha nini kati ya maneno?",
+     "answer": "nafasi",
+     "shows": "spacing"
+    }
+   ]
+  }
+ ]
+}

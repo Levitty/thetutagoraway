@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.KUANDI.T1_UANDISHI_BORA",
+ "title": "Uandishi Bora (Theme 1: Darasani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA",
+   "key_step": "Before writing the child checks posture and grip, then starts at the left of the line and moves right.",
+   "floor": {
+    "prerequisite": "Draws a line and a circle with a crayon.",
+    "question": "Chora mstari kutoka kushoto kwenda kulia.",
+    "answer": "the child draws a straight line"
+   },
+   "representations": [
+    "pictures of good and poor writing positions",
+    "a pencil grip marked with a band",
+    "a green start line on each line"
+   ],
+   "steps": [
+    "Sit up, feet down.",
+    "Straighten the book.",
+    "Hold the pencil with three fingers.",
+    "Start at the green line and go right."
+   ],
+   "contexts": [
+    "darasani: the first writing lesson",
+    "writing at home at the table",
+    "copying a pattern from the board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "a a a a"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the green start line.",
+     "say": "Unaanza kuandika wapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a row of a from left to right with the right grip."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_FIST_T1",
+     "listen_for": [
+      "kwa ngumi nzima"
+     ],
+     "ask": "Vidole vipi vinashika kalamu?",
+     "repair": "Shika kalamu kwa vidole vitatu, si kwa ngumi."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_SLUMP_T1",
+     "listen_for": [
+      "kichwa juu ya meza"
+     ],
+     "ask": "Mgongo wako umenyooka?",
+     "repair": "Keti wima na unyooshe daftari kabla ya kuandika."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_RTL_T1",
+     "listen_for": [
+      "upande wa kulia"
+     ],
+     "ask": "Mstari wa kijani uko upande gani?",
+     "repair": "Tunaandika kutoka kushoto kwenda kulia."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_PRESS_T1",
+     "listen_for": [
+      "kwa nguvu sana mpaka karatasi ikatike"
+     ],
+     "ask": "Ukurasa unaofuata una alama za kalamu yako?",
+     "repair": "Andika kwa upole: kalamu iteleze."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kalamu inashikwa kwa vidole vingapi?",
+     "answer": "vitatu",
+     "shows": "grip"
+    },
+    {
+     "question": "Unaandika kutoka upande gani?",
+     "answer": "kushoto kwenda kulia",
+     "shows": "direction"
+    }
+   ]
+  }
+ ]
+}

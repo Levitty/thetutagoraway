@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB",
+ "title": "Matumizi ya -refu, - kubwa, - tamu (Theme 6: Ukoo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on ukoo using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "ukoo",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Shangazi ana nyumba kubwa."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kubwa\".",
+     "say": "Nyumba ni ngeli gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI.M2_SAR_CONCADJ_T6",
+     "listen_for": [
+      "mkubwa"
+     ],
+     "ask": "Kiti ni ngeli gani?",
+     "repair": "Kivumishi hufuata ngeli: kiti kizuri. (kikubwa)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI.M2_SAR_NADJ_T6",
+     "listen_for": [
+      "mrefu"
+     ],
+     "ask": "Nomino hii inabadilika katika wingi?",
+     "repair": "Nyumba nzuri; nguo nyeupe. (ndefu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI.M2_SAR_ORDERADJ_T6",
+     "listen_for": [
+      "mrefu babu"
+     ],
+     "ask": "Neno lipi linaanza?",
+     "repair": "Nomino kwanza: mtoto mzuri. (babu mrefu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI.M2_SAR_PLADJ_T6",
+     "listen_for": [
+      "mrefu"
+     ],
+     "ask": "Nomino imebadilika; kivumishi je?",
+     "repair": "Watoto wazuri: vyote hubadilika. (warefu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI.M2_SAR_OPPADJ_T6",
+     "listen_for": [
+      "mrefu"
+     ],
+     "ask": "Picha inaonyesha nini?",
+     "repair": "Angalia picha tena na uchague neno linalofaa. (mfupi)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Embe ___ (-tamu).",
+     "answer": "tamu",
+     "shows": "li-ma"
+    },
+    {
+     "question": "Jaza: Kikombe ___ (-kubwa).",
+     "answer": "kikubwa",
+     "shows": "ki-vi"
+    }
+   ]
+  }
+ ]
+}

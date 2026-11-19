@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.KUANDI.T4_HATI_NADHIFU",
+ "title": "Hati Nadhifu (Theme 4: Siku za wiki)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI",
+   "key_step": "The child claps the word, writes one syllable per clap in order, close together, and reads the word back.",
+   "floor": {
+    "prerequisite": "Writes a single syllable (ma, ka).",
+    "question": "Andika silabi: ma",
+    "answer": "ma"
+   },
+   "representations": [
+    "syllable cards to lay side by side",
+    "claps for each syllable",
+    "three-line paper"
+   ],
+   "steps": [
+    "Say the word.",
+    "Clap the syllables.",
+    "Write each syllable close to the last.",
+    "Read the word back."
+   ],
+   "contexts": [
+    "siku za wiki: names of the days",
+    "labelling a picture of the family",
+    "writing his own name"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "ma + ma = mama"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two syllables.",
+     "say": "Tukiziunganisha tunapata neno gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child joins ka + ka and ta + tu and reads them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_GAPS_T4",
+     "listen_for": [
+      "m a m a"
+     ],
+     "ask": "Herufi hizi ni neno moja?",
+     "repair": "Herufi za neno moja hukaa karibu: mama."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_ORDER_T4",
+     "listen_for": [
+      "tuta"
+     ],
+     "ask": "Silabi ya kwanza unayoisikia ni ipi?",
+     "repair": "Andika silabi kwa mpangilio unaozisikia: ta-tu."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_DROP_T4",
+     "listen_for": [
+      "kk"
+     ],
+     "ask": "Silabi \"ka\" inaishia kwa herufi gani?",
+     "repair": "Kila silabi huishia kwa irabu: ka-ka."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_LINES_T4",
+     "listen_for": [
+      "ba juu, ba chini"
+     ],
+     "ask": "Neno lako liko kwenye mstari mmoja?",
+     "repair": "Silabi za neno moja hukaa kwenye mstari mmoja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unganisha: ba + ba",
+     "answer": "baba",
+     "shows": "joining"
+    },
+    {
+     "question": "Unganisha: ki + ti",
+     "answer": "kiti",
+     "shows": "joining"
+    }
+   ]
+  }
+ ]
+}

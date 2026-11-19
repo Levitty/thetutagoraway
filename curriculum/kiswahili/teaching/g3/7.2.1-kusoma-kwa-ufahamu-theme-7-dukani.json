@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 7: Dukani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "a picture of the theme",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "dukani",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama alimpa Otieno shilingi mia moja. Otieno alinunua mkate wa shilingi sitini na maziwa ya shilingi thelathini. Muuzaji alimrudishia chenji."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_WORD_T7",
+     "listen_for": [
+      "chupa"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"chenji\" ni pesa zinazorudishwa baada ya kulipa zaidi."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_MSG_T7",
+     "listen_for": [
+      "Otieno alinunua mkate."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tunapaswa kuhesabu pesa vizuri tunaponunua bidhaa."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_GUESS_T7",
+     "listen_for": [
+      "pipi"
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za kifungu: mkate, maziwa na chenji ya shilingi kumi"
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_LESSON_T7",
+     "listen_for": [
+      "Otieno alienda dukani."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tuwe waaminifu na tumrudishie mzazi chenji."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_OWN_T7",
+     "listen_for": [
+      "Mimi hupewa shilingi hamsini."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: shilingi mia moja"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"chenji\" ni nini?",
+     "answer": "pesa zinazorudishwa baada ya kulipa zaidi",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tuwe waaminifu na tumrudishie mzazi chenji.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

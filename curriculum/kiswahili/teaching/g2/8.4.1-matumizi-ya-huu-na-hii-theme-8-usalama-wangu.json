@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H",
+ "title": "Matumizi ya huu na hii (Theme 8: Usalama wangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.VIONYESHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on usalama wangu using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "usalama wangu",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mti huu - miti hii."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"huu\".",
+     "say": "Ni mti mmoja au mingi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.VIONYESHI.M2_SAR_CLASSDEM_T8",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Ni mtu au ni kitu?",
+     "repair": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (huu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.VIONYESHI.M2_SAR_NUMDEM_T8",
+     "listen_for": [
+      "huu"
+     ],
+     "ask": "Ni mmoja au ni wengi?",
+     "repair": "Watoto ni wengi: watoto hawa. (hii)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.VIONYESHI.M2_SAR_HII_T8",
+     "listen_for": [
+      "hii"
+     ],
+     "ask": "Neno hili la kuonyesha linakubaliana na nomino?",
+     "repair": "Kitabu hiki; mtoto huyu; nyumba hii. (huu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.VIONYESHI.M2_SAR_DIST_T8",
+     "listen_for": [
+      "huu"
+     ],
+     "ask": "Yuko karibu nawe au mbali?",
+     "repair": "Huyu ni karibu nami; yule ni mbali. (ule)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mto ___ una maji mengi.",
+     "answer": "huu",
+     "shows": "singular"
+    },
+    {
+     "question": "Jaza: Mikoba ___ ni mizito.",
+     "answer": "hii",
+     "shows": "plural"
+    }
+   ]
+  }
+ ]
+}

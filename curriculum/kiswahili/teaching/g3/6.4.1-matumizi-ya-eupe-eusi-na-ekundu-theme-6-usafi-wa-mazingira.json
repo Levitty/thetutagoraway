@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS",
+ "title": "Matumizi ya -eupe, - eusi na - ekundu (Theme 6: Usafi wa mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on usafi wa mazingira using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "usafi wa mazingira",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Tunatupa taka katika pipa jekundu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"jekundu\".",
+     "say": "Pipa ni ngeli gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI.M3_SAR_VOWELADJ_T6",
+     "listen_for": [
+      "kieupe"
+     ],
+     "ask": "Kiambishi kinaungana vipi na -eupe?",
+     "repair": "Kiti cheupe; nguo nyeupe; mtoto mweusi. (cheupe)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI.M3_SAR_NADJ_T6",
+     "listen_for": [
+      "mweusi"
+     ],
+     "ask": "Nomino hii inabadilika katika wingi?",
+     "repair": "Nyumba nzuri; nguo nyeupe. (nyeusi)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI.M3_SAR_CONCADJ_T6",
+     "listen_for": [
+      "mwekundu"
+     ],
+     "ask": "Kiti ni ngeli gani?",
+     "repair": "Kivumishi hufuata ngeli: kiti kizuri. (chekundu)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI.M3_SAR_ORDERADJ_T6",
+     "listen_for": [
+      "nyeupe karatasi"
+     ],
+     "ask": "Neno lipi linaanza?",
+     "repair": "Nomino kwanza: mtoto mzuri. (karatasi nyeupe)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T6_MATUMIZI_YA_EUPE_EUS.VIVUMISHI.M3_SAR_PLADJ_T6",
+     "listen_for": [
+      "mweusi"
+     ],
+     "ask": "Nomino imebadilika; kivumishi je?",
+     "repair": "Watoto wazuri: vyote hubadilika. (myeusi)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kitambaa ___ (-eupe).",
+     "answer": "cheupe",
+     "shows": "ki-vi"
+    },
+    {
+     "question": "Jaza: Nguo ___ (-ekundu).",
+     "answer": "nyekundu",
+     "shows": "n-n"
+    }
+   ]
+  }
+ ]
+}

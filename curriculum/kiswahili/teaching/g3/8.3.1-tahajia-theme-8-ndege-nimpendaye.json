@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUANDI.T8_TAHAJIA",
+ "title": "Tahajia (Theme 8: Ndege nimpendaye)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA",
+   "key_step": "The child says the word slowly, listens for the hard part (the sound, the nasal, the long vowel), writes it and reads it back.",
+   "floor": {
+    "prerequisite": "Writes simple open-syllable words (mama, baba, kaka).",
+    "question": "Andika: kaka",
+    "answer": "kaka"
+   },
+   "representations": [
+    "a list of hard pairs",
+    "syllable claps",
+    "a word wall of the theme words"
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Say it slowly.",
+    "Write it syllable by syllable.",
+    "Read it back and check."
+   ],
+   "contexts": [
+    "ndege nimpendaye",
+    "a weekly spelling test",
+    "writing a shopping list"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mba-wa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the nasal.",
+     "say": "Unasikia nini mwanzoni?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes three theme words read by the teacher and checks them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA.M3_TAH_MT_T8",
+     "listen_for": [
+      "langi"
+     ],
+     "ask": "Unasikia sauti gani hapa?",
+     "repair": "Andika \"rangi\" kama linavyotamkwa kwa Kiswahili sanifu."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA.M3_TAH_NASAL_T8",
+     "listen_for": [
+      "bawa"
+     ],
+     "ask": "Unasikia sauti ya pua?",
+     "repair": "\"mbawa\" lina sauti ya pua mwanzoni."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA.M3_TAH_VOWEL_T8",
+     "listen_for": [
+      "pa"
+     ],
+     "ask": "Irabu ngapi unasikia?",
+     "repair": "\"paa\" lina irabu mbili zinazofuatana."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA.M3_TAH_NGAPOS_T8",
+     "listen_for": [
+      "ngombe"
+     ],
+     "ask": "Unasikia /g/ katika neno hili?",
+     "repair": "Ng'ombe huandikwa na kibainishi: ng'."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T8_TAHAJIA.TAHAJIA.M3_TAH_JOIN_T8",
+     "listen_for": [
+      "Nilichelewa kwasababu ya mvua."
+     ],
+     "ask": "Ni maneno mangapi hapa?",
+     "repair": "\"Kwa sababu\" ni maneno mawili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika: rangi",
+     "answer": "rangi",
+     "shows": "sound"
+    },
+    {
+     "question": "Andika: mbawa",
+     "answer": "mbawa",
+     "shows": "nasal"
+    }
+   ]
+  }
+ ]
+}

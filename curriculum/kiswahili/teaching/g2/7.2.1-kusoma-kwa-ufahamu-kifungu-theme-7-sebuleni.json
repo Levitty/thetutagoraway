@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K",
+ "title": "Kusoma Kwa Ufahamu: Kifungu (Theme 7: Sebuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "the picture beside the passage",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "sebuleni",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sebuleni kwetu kuna viti vinne, meza na runinga. Kila Jumamosi, mimi na dada yangu hupangusa vumbi na kufagia sakafu. Sebule huwa safi na nadhifu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M2_UFM_WORD_T7",
+     "listen_for": [
+      "safari"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"sakafu\" ni sehemu ya chini ya chumba tunayoikanyaga."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M2_UFM_MSG_T7",
+     "listen_for": [
+      "Kuna viti vinne."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tushirikiane kuweka nyumba yetu safi."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M2_UFM_GUESS_T7",
+     "listen_for": [
+      "Watajificha."
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za picha na za kifungu: Watawakaribisha wageni sebuleni."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M2_UFM_LESSON_T7",
+     "listen_for": [
+      "Kuna runinga sebuleni."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tunapaswa kusaidia kazi za nyumbani."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M2_UFM_OWN_T7",
+     "listen_for": [
+      "Sisi husafisha Jumapili."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: Jumamosi"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"sakafu\" ni nini?",
+     "answer": "sehemu ya chini ya chumba tunayoikanyaga",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tunapaswa kusaidia kazi za nyumbani.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

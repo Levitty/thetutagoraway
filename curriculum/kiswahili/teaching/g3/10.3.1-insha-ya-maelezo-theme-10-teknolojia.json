@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO",
+ "title": "Insha ya Maelezo (Theme 10: Teknolojia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA",
+   "key_step": "The child plans in three boxes, writes one idea per sentence in one tense with Kiswahili words, then reads it back and corrects it.",
+   "floor": {
+    "prerequisite": "Writes a sentence with a capital and a kikomo.",
+    "question": "Andika sentensi kuhusu shule yako.",
+    "answer": "Shule yangu ni nzuri."
+   },
+   "representations": [
+    "a three-box plan",
+    "a word bank of theme words and kwanza, kisha, mwishowe",
+    "a model insha on the board"
+   ],
+   "steps": [
+    "Plan: who, where, what happened, end.",
+    "Write the title.",
+    "Write one idea per sentence.",
+    "Read it back and correct."
+   ],
+   "contexts": [
+    "teknolojia",
+    "a class story wall",
+    "a story to read to a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Simu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii itahusu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the first two sentences of the insha and reads them aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA.M3_INS_STORY_T10",
+     "listen_for": [
+      "Siku moja nilienda mjini..."
+     ],
+     "ask": "Unaeleza kitu au unasimulia tukio?",
+     "repair": "Insha ya maelezo inaeleza kitu kilivyo na kazi yake."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA.M3_INS_TITLE_T10",
+     "listen_for": [
+      "Insha"
+     ],
+     "ask": "Insha yako inahusu nini?",
+     "repair": "Kichwa kinasema insha inahusu nini: Simu."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA.M3_INS_HALAFU_T10",
+     "listen_for": [
+      "Tuliamka na halafu tukaoga na halafu tukaenda sokoni."
+     ],
+     "ask": "Unaweza kuweka kikomo wapi hapa?",
+     "repair": "Tumia kikomo na maneno kama kisha, baadaye."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA.M3_INS_TENSE_T10",
+     "listen_for": [
+      "Simu hutumika kuwasiliana. Iliwasaidia watu kuzungumza."
+     ],
+     "ask": "Kitendo hiki kilitokea lini?",
+     "repair": "Tumia wakati mmoja katika insha nzima."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T10_INSHA_YA_MAELEZO.INSHA.M3_INS_MIX_T10",
+     "listen_for": [
+      "Simu ina screen na battery."
+     ],
+     "ask": "Neno hilo ni la lugha gani?",
+     "repair": "Kwa Kiswahili: Simu ina skrini na betri."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kichwa kifaacho insha kuhusu teknolojia ni?",
+     "answer": "Simu",
+     "shows": "title"
+    },
+    {
+     "question": "Sahihisha: Simu hutumika kuwasiliana. Iliwasaidia watu kuzungumza.",
+     "answer": "Simu hutumika kuwasiliana. Huwasaidia watu kuzungumza.",
+     "shows": "tense"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,508 @@
+{
+ "outcomes": {
+  "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.a": "kutambua maamkuzi na maagano ya nyakati za siku",
+  "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.b": "kuamkua na kuitikia maamkuzi na maagano ya nyakati za siku",
+  "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.c": "kufurahia kuamkua na kuagana ili kujenga mshikamano wa kijamii",
+  "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.a": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.b": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+  "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.c": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.d": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.e": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+  "KISW.G2.KUANDI.T1_HATI_NADHIFU.a": "kutambua hati nadhifu katika sentensi",
+  "KISW.G2.KUANDI.T1_HATI_NADHIFU.b": "kuandika sentensi akizingatia hati nadhifu",
+  "KISW.G2.KUANDI.T1_HATI_NADHIFU.c": "kufurahia kuandika akizingatia hati nadhifu",
+  "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.a": "kutambua wewe na nyinyi katika sentensi",
+  "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.b": "kutumia wewe na nyinyi ipasavyo katika sentensi",
+  "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.c": "kufurahia kutumia wewe na nyinyi katika mawasiliano",
+  "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.a": "kutambua silabi za sauti lengwa katika maandishi",
+  "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.b": "kutamka ipasavyo silabi za sauti lengwa katika maandishi",
+  "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.c": "kutamka maneno mepesi yanayotokana na sauti lengwa katika maandishi",
+  "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.d": "kusoma ipasavyo sentensi nyepesi zenye sauti lengwa kwa matamshi bora",
+  "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.e": "kuchangamkia usomaji bora wa maneno yanayotumia sauti lengwa katika mawasiliano",
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.a": "kutambua maneno yenye sauti lengwa katika kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.e": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.f": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+  "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.a": "kutambua mpangilio ufaao wa herufi kubwa katika matini",
+  "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.b": "kuandika herufi kubwa ipasavyo katika maneno na sentensi",
+  "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.c": "kufurahia kutumia herufi kubwa ipasavyo katika maneno na sentensi ili kuboresha mawasiliano",
+  "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.a": "kutambua vifungu vya maneno mawili katika umoja na wingi",
+  "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.b": "kuandika vifungu vya maneno mawili katika umoja na wingi",
+  "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.c": "kuchangamkia kutumia vifungu vya maneno katika umoja na wingi",
+  "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.a": "kutambua maneno ya heshima na adabu yanayotumiwa katika jamii",
+  "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.b": "kutumia ipasavyo maneno ya heshima na adabu katika mawasiliano akiambatanisha na hisia zifaazo",
+  "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.c": "kuthamini matumizi ya maneno ya heshima na adabu katika mawasiliano ya kila siku",
+  "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.a": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.b": "kutabiri yatakayotokea katika kifungu chepesi cha hadithi kwa kuzingatia picha",
+  "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.c": "kueleza ujumbe wa kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.d": "kueleza mafunzo yanayotokana na kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.e": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+  "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.a": "kutambua mpangilio ufaao wa herufi ndogo katika maandishi",
+  "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.b": "kuandika kifungu akizingatia mpangilio ufaao wa herufi ndogo",
+  "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.c": "kuchangamkia kuandika vifungu kuhusu suala lengwa kwa kuzingatia mpangilio ufaao wa herufi ndogo ili kufanikisha mawasiliano",
+  "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.a": "kutambua matumizi ya huyo na hao katika kifungu",
+  "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.b": "kutumia huyo na hao katika sentensi kwa usahihi",
+  "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.c": "kuchangamkia matumizi ya huyo na hao katika mawasiliano ya kila siku",
+  "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.a": "kutambua silabi za sauti lengwa katika maneno",
+  "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.b": "kutamka maneno yenye silabi za sauti lengwa kwa ufasaha",
+  "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.c": "kusoma kifungu kifupi chenye maneno ya sauti lengwa akizingatia matamshi bora",
+  "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.d": "kufurahia matamshi bora katika mawasiliano",
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.a": "kutambua sauti lengwa katika matini mbalimbali",
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.b": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.c": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.d": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.e": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.f": "kufurahia kusoma kifungu ipasvyo ili kufanikisha mawasiliano",
+  "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.a": "kutambua nafasi kati ya maneno katika sentensi",
+  "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.b": "kuandika sentensi akizingatia nafasi kati ya maneno katika sentensi kwa maandishi",
+  "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.c": "kufurahia kuandika akizingatia nafasi kati ya maneno katika sentensi",
+  "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.a": "kutambua vifungu vya maneno katika umoja na wingi",
+  "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.b": "kusoma vifungu vya maneno katika umoja na wingi",
+  "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.c": "kuandika umoja na wingi wa vifungu vya maneno",
+  "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.d": "kuchangamkia kutumia vifungu vya maneno katika umoja na wingi",
+  "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.a": "kutambua picha kuhusu suala lengwa",
+  "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.b": "kutambua msamiati wa suala lengwa uliotumiwa katika hadithi aliyoisikiliza",
+  "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.c": "kujibu maswali kuhusu hadithi aliyoisikiliza",
+  "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.d": "kueleza ujumbe wa hadithi aliyoisikiliza",
+  "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.e": "kufurahia ufahamu wa kusikiliza",
+  "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+  "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.e": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+  "KISW.G2.KUANDI.T5_UAKIFISHI.a": "kutambua kiulizi katika maandishi",
+  "KISW.G2.KUANDI.T5_UAKIFISHI.b": "kuandika kiulizi ipasavyo akizingatia umbo lake",
+  "KISW.G2.KUANDI.T5_UAKIFISHI.c": "kutumia kiulizi ipasavyo katika sentensi",
+  "KISW.G2.KUANDI.T5_UAKIFISHI.d": "kufurahia kutumia kiulizi katika maandishi ya kila siku",
+  "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.a": "kutambua matumizi yafaayo ya -ako na -enu katika kifungu",
+  "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.b": "kutumia -ako na - enu ipasavyo katika sentensi",
+  "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.c": "kuthamini matumizi ya - ako na -enu katika mawasiliano ya kila siku",
+  "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.a": "kutambua silabi za sauti lengwa ipasavyo katika maneno na sentensi",
+  "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.b": "kutamka maneno na sentensi zenye silabi za sauti lengwa kwa ufasaha",
+  "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.c": "kufurahia matamshi bora katika mawasiliano",
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.a": "kutambua sauti lengwa katika kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.e": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.f": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+  "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.a": "kutambua maneno mepesi ya silabi tatu kwenye maandishi kwa kuzingatia sauti lengwa",
+  "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.b": "kuandika maneno mepesi ya imla ya silabi tatu kwa kuzingatia silabi za sauti lengwa",
+  "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.c": "kuandika sentensi sahili kwa kuzingatia silabi za sauti lengwa",
+  "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.d": "kufurahia kuandika ipasavyo maneno na sentensi kutokana na imla",
+  "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.a": "kutambua matumizi ya -refu, -kubwa na - tamu katika sentensi",
+  "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.b": "kutumia-refu, - kubwa na-tamu katika sentensi ili kuimarisha mawasiliano",
+  "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.c": "kufurahia kutumia-refu, -kubwa na - tamu – katika sentensi",
+  "KISW.G2.KUSIKI.T7_MAAGIZO.a": "kutambua maagizo mepesi ya hatua mbili yanapotolewa katika miktadha mbalimbali",
+  "KISW.G2.KUSIKI.T7_MAAGIZO.b": "kutoa na kufuata maagizo mepesi ya hatua mbili yanayotumiwa katika miktadha mbalimbali",
+  "KISW.G2.KUSIKI.T7_MAAGIZO.c": "kuchangamkia maagizo katika maisha ya kila siku",
+  "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.a": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.b": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+  "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.c": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.d": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.e": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+  "KISW.G2.KUANDI.T7_UHARIRI.a": "kutambua vipengele vya kuhariri katika maandishi",
+  "KISW.G2.KUANDI.T7_UHARIRI.b": "kuhariri maandishi yake baada ya kuyaandika",
+  "KISW.G2.KUANDI.T7_UHARIRI.c": "kufurahia kuhariri maandishi baada ya kuyaandika ili kuimarisha mawasiliano",
+  "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.a": "kutambua ukanusho wa nafsi ya pili, umoja na wingi katika sentensi",
+  "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.b": "kutumia ukanusho wa nafsi ya pili, umoja na wingi katika sentensi kwa usahihi",
+  "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.c": "kuchangamkia matumizi ya ukanusho wa nafsi ya pili, umoja na wingi, katika mawasiliano ya kila siku",
+  "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.a": "kutambua maneno na sentensi zenye sauti lengwa",
+  "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.b": "kutamka maneno na sentensi za sauti lengwa kwa ufasaha",
+  "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.c": "kufurahia matamshi bora katika mawasiliano",
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.a": "kutambua sauti lengwa katika kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.e": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.f": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+  "KISW.G2.KUANDI.T8_TAHAJIA.a": "kutambua tahajia sahihi za maneno katika sentensi",
+  "KISW.G2.KUANDI.T8_TAHAJIA.b": "kuandika sentensi akizingatia tahajia sahihi za maneno",
+  "KISW.G2.KUANDI.T8_TAHAJIA.c": "kufurahia kutumia tahajia sahihi katika maandishi",
+  "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.a": "kutambua huu na hii katika vifungu",
+  "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.a_2": "kutumia huu na hii kutajia vitu katika mazingira yake",
+  "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.b": "kuchangamkia matumizi ya huu na hii katika mawasiliano",
+  "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.a": "kuonyesha ufahamu wa suala linalozungumziwa",
+  "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.b": "kuzingatia matamshi bora anapozungumza",
+  "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.c": "kujieleza kwa ufasaha wakati wa kuzungumza, kutumia viziada lugha ipasavyo wakati wa kuzungumza",
+  "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.d": "kufurahia kutoa mazungumzo ya papo kwa hapo ili kujenga ufasaha wa kuzungumza",
+  "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+  "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+  "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.e": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+  "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.a": "kutambua suala la kuandikia kifungu",
+  "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.b": "kuandika kifungu kifupi kutokana na mazingira yake",
+  "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.c": "kufurahia kuandika kifungu ili kujieleza",
+  "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.a": "kutambua matumizi yafaayo ya vizuri na vibaya, polepole na haraka katika kifungu",
+  "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.b": "kutumia vizuri na vibaya, polepole na haraka katika sentensi",
+  "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.c": "kuchangamkia matumizi ya vizuri na vibaya katika kuimarisha mawasiliano",
+  "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.a": "kutambua sauti mbalimbali za alfabeti ya Kiswahili",
+  "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.b": "kutamka maneno yenye silabi za sauti mbalimbali za Kiswahili kwa ufasaha",
+  "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.c": "kufurahia matamshi bora katika mawasiliano",
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.a": "kutambua sauti mbalimbali za alfabeti ya Kiswahili katika kifungu chepesi cha hadithi",
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu chepesi cha hadithi kwa kuzingatia matamshi bora",
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu chepesi cha hadithi kwa kuzingatia sauti inayosikika",
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu chepesi cha hadithi kwa kuzingatia kasi ifaayo",
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.e": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.f": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+  "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.a": "kutambua maneno mepesi ya silabi tatu kwenye matini mbalimbali",
+  "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.b": "kuandika maneno mepesi ya imla ya silabi tatu yanayohusu suala lengwa",
+  "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.c": "kuandika sentensi fupi zinazohusu suala lengwa",
+  "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.d": "kufurahia kuandika ipasavyo maneno na sentensi kutokana na imla",
+  "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.a": "kutambua vinyume vya vitendo katika sentensi mbalimbali",
+  "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.b": "kutumia majina ya vinyume vya vitendo katika sentensi",
+  "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.c": "kuchangamkia kutumia majina ya vinyume vya vitendo katika mawasiliano ya kila siku"
+ },
+ "skills": {
+  "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI": {
+   "forms": [
+    "chagua salamu ifaayo",
+    "chagua jibu la salamu",
+    "igiza salamu (mwalimu anasikiliza)"
+   ],
+   "mastery": "Chooses the greeting or farewell that fits who is met (a friend, an elder, a group), the time of day and whether arriving or leaving, and gives the right reply (Hujambo? Sijambo; Shikamoo, Marahaba; Hamjambo? Hatujambo), in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU": {
+   "forms": [
+    "chagua maana ya neno",
+    "chagua ujumbe",
+    "tabiri kitakachotokea",
+    "chagua funzo"
+   ],
+   "mastery": "Reads a short passage on shuleni, gives the meaning of a theme word from the sentence around it, says the message, predicts what happens next from the clues in the picture and says the lesson, answering from the passage and not from his own life, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T1_HATI_NADHIFU.HATI_NADHIFU": {
+   "forms": [
+    "chagua maandishi nadhifu",
+    "tambua kosa",
+    "andika kifungu (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes a passage of about 15 words in neat handwriting: letters well formed and on the line, space between words, through the steps to a clean copy, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.NAFSI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Uses wewe to speak to one person and nyinyi to many, with the matching subject marker (wewe u-, nyinyi m-), answers a wewe-question with mimi, and puts -ku- inside the verb for \"you\" as object (nitakupa), in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI": {
+   "forms": [
+    "chagua neno lenye sauti",
+    "gawa neno kwa silabi",
+    "chagua matamshi sahihi",
+    "tamka neno (mwalimu anasikiliza)"
+   ],
+   "mastery": "Hears and says the target sounds /mw/, /nj/ in syllables and words (mwalimu, njia, mwana), splits a word into its syllables, and picks or uses a word that carries the sound, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "tambua sauti lengwa",
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Finds the target sounds /mw/, /nj/ in a short story, reads it aloud with every sound clear, loud enough for the class, at about 33 words a minute, pausing at the koma and kikomo and raising the voice for a question; in the app picks the better reading of a line, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU": {
+   "forms": [
+    "chagua maandishi nadhifu",
+    "tambua kosa",
+    "andika kifungu (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes a passage of about 15 words in neat handwriting: letters well formed and on the line, capitals only at the start of a sentence or name, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Turns a two-word group from singular to plural and back (chakula changu - vyakula vyetu, kitanda changu - vitanda vyetu), changing the noun by its ngeli and the word that goes with it, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA": {
+   "forms": [
+    "chagua neno la adabu",
+    "kamilisha mazungumzo",
+    "igiza hali (mwalimu anasikiliza)"
+   ],
+   "mastery": "Picks and uses the polite word that fits the situation (tafadhali or naomba to ask, asante to thank, karibu to answer asante, samahani to apologise, pole to sympathise) and addresses an adult with a title, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.UFAHAMU": {
+   "forms": [
+    "chagua maana ya neno",
+    "chagua ujumbe",
+    "tabiri kitakachotokea",
+    "chagua funzo"
+   ],
+   "mastery": "Reads a short passage on lishe bora, gives the meaning of a theme word from the sentence around it, says the message, predicts what happens next from the clues in the picture and says the lesson, answering from the passage and not from his own life, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.HATI_NADHIFU": {
+   "forms": [
+    "chagua maandishi nadhifu",
+    "tambua kosa",
+    "andika kifungu (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes a passage of about 20 words in neat handwriting: letters well formed and on the line, small letters of the right height, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Uses huyo for one person near the listener and hao for many, tells them from huyu/hawa (near the speaker), and uses hicho/hivyo, not huyo, for ki-vi things, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI": {
+   "forms": [
+    "chagua neno lenye sauti",
+    "gawa neno kwa silabi",
+    "chagua matamshi sahihi",
+    "tamka neno (mwalimu anasikiliza)"
+   ],
+   "mastery": "Hears and says the target sounds /ch/, /dh/ in syllables and words (chombo, dhoruba, chai), splits a word into its syllables, and picks or uses a word that carries the sound, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "tambua sauti lengwa",
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Finds the target sounds /ch/, /dh/ in a short story, reads it aloud with every sound clear, loud enough for the class, at about 36 words a minute, pausing at the koma and kikomo and raising the voice for a question; in the app picks the better reading of a line, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO": {
+   "forms": [
+    "chagua sentensi iliyoandikwa vizuri",
+    "hesabu maneno",
+    "andika sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes sentences with one finger space between words, none inside a word, keeps the verb and its parts as one word (ninakwenda, not ni na kwenda) and does not run on into the next sentence, in 8 of 10 new items (the teacher also checks it in the exercise book)."
+  },
+  "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Reads and writes word groups about transport in singular and plural: li-ma nouns take ma- (basi - mabasi, gari - magari), people take wa- (mwendeshaji - waendeshaji), n-n nouns stay the same (ndege - ndege) and the describing word agrees, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA": {
+   "forms": [
+    "chagua ujumbe",
+    "chagua maana ya neno",
+    "panga matukio",
+    "simulia upya (mwalimu anasikiliza)"
+   ],
+   "mastery": "After hearing a short passage (Sungura mjanja alimdanganya fisi akaokoa chakula chake), says its message, gives the meaning of a new word from it, uses the word in a sentence of his own and retells the events in order, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU": {
+   "forms": [
+    "chagua maana ya neno",
+    "chagua ujumbe",
+    "tabiri kitakachotokea",
+    "chagua funzo"
+   ],
+   "mastery": "Reads a short passage on mnyama nimpendaye, gives the meaning of a theme word from the sentence around it, says the message, predicts what happens next from the clues in the picture and says the lesson, answering from the passage and not from his own life, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA": {
+   "forms": [
+    "weka alama sahihi",
+    "chagua sentensi iliyoakifishwa vizuri",
+    "andika kifungu (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells a question from a statement, ends each with its mark (? or .), starts the next sentence with a capital, and writes a passage of about 20 words with the marks in place, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Uses -ako for something owned by one person spoken to and -enu for many, with the prefix of the thing owned (mbwa wako, vikombe vyako, madaftari yenu), placed after the noun, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI": {
+   "forms": [
+    "chagua neno lenye sauti",
+    "gawa neno kwa silabi",
+    "chagua matamshi sahihi",
+    "tamka neno (mwalimu anasikiliza)"
+   ],
+   "mastery": "Hears and says the target sounds /ny/, /ng/ in syllables and words (nyanya, ngoma, nyama), splits a word into its syllables, and picks or uses a word that carries the sound, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "tambua sauti lengwa",
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Finds the target sounds /ny/, /ng/ in a short story, reads it aloud with every sound clear, loud enough for the class, at about 39 words a minute, pausing at the koma and kikomo and raising the voice for a question; in the app picks the better reading of a line, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.IMLA": {
+   "forms": [
+    "chagua tahajia sahihi",
+    "sahihisha neno",
+    "imla (mwalimu anasoma)"
+   ],
+   "mastery": "Writes the words the teacher reads (about 10 words) with the right letters: the Kiswahili sound and not the home sound, the nasal kept (nd, mb, ng), long vowels doubled and ng' with its apostrophe, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Uses -refu, -kubwa and -tamu after the noun with the right prefix (babu mrefu, kiti kikubwa, nyumba ndefu, wajomba warefu) and picks the right member of a pair (mrefu or mfupi), in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T7_MAAGIZO.MAAGIZO": {
+   "forms": [
+    "chagua kitendo sahihi",
+    "panga hatua",
+    "toa agizo (mwalimu anasikiliza)"
+   ],
+   "mastery": "Follows a one- or two-step instruction in the right order, reads the direction and action words in it (simama, keti, kulia, kushoto, juu, chini), and gives a clear, polite instruction that names what to do and to what, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU": {
+   "forms": [
+    "chagua maana ya neno",
+    "chagua ujumbe",
+    "tabiri kitakachotokea",
+    "chagua funzo"
+   ],
+   "mastery": "Reads a short passage on sebuleni, gives the meaning of a theme word from the sentence around it, says the message, predicts what happens next from the clues in the picture and says the lesson, answering from the passage and not from his own life, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI": {
+   "forms": [
+    "tambua kosa",
+    "sahihisha sentensi",
+    "hariri kifungu (mwalimu anasahihisha)"
+   ],
+   "mastery": "Reads his own writing back and corrects it: a capital at the start, a kikomo or kiulizi at the end, no word left out, words spelt right, then makes a clean copy, in 8 of 10 new items (the teacher also checks the before and after copies)."
+  },
+  "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.UKANUSHAJI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Makes the negative of a present-tense sentence in the second person: wewe unasoma - wewe husomi, nyinyi mnasoma - nyinyi hamsomi (hu-/ham-, no -na-, final -a to -i), in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI": {
+   "forms": [
+    "chagua neno lenye sauti",
+    "gawa neno kwa silabi",
+    "chagua matamshi sahihi",
+    "tamka neno (mwalimu anasikiliza)"
+   ],
+   "mastery": "Hears and says the target sounds /gh/, /ng'/ in syllables and words (ghafla, ng'ombe, ghala), splits a word into its syllables, and picks or uses a word that carries the sound, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "tambua sauti lengwa",
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Finds the target sounds /gh/, /ng'/ in a short story, reads it aloud with every sound clear, loud enough for the class, at about 42 words a minute, pausing at the koma and kikomo and raising the voice for a question; in the app picks the better reading of a line, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T8_TAHAJIA.TAHAJIA": {
+   "forms": [
+    "chagua tahajia sahihi",
+    "sahihisha neno",
+    "andika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes the words of his own writing (about 20 words) with the right letters: the Kiswahili sound and not the home sound, the nasal kept (nd, mb, ng), long vowels doubled and ng' with its apostrophe, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.VIONYESHI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Uses huu with a near m-mi noun in the singular and hii in the plural (mti huu - miti hii, mlango huu - milango hii), and ule for one far away, not huyu or hii for everything, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO": {
+   "forms": [
+    "chagua jibu linalofaa mada",
+    "tambua kosa la mazungumzo",
+    "zungumza (mwalimu anasikiliza)"
+   ],
+   "mastery": "Takes part in a short conversation about kumtembelea daktari: keeps to the topic, waits for his turn, speaks Kiswahili without English or Sheng words, says sounds clearly and uses gestures that match the words, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU": {
+   "forms": [
+    "chagua maana ya neno",
+    "chagua ujumbe",
+    "tabiri kitakachotokea",
+    "chagua funzo"
+   ],
+   "mastery": "Reads a short passage on hospitalini, gives the meaning of a theme word from the sentence around it, says the message, predicts what happens next from the clues in the picture and says the lesson, answering from the passage and not from his own life, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.KIFUNGU": {
+   "forms": [
+    "chagua kichwa kifaacho",
+    "panga sentensi",
+    "tambua kosa",
+    "andika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes a short paragraph about a picture on hospitalini: a title that fits, sentences in order, one tense, Kiswahili words only, capitals and kikomo in place, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.VIELEZI": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Says how an action is done with vizuri, vibaya, polepole and haraka after the verb (anatembea polepole), tells them from describing words for things (chakula kizuri), and picks the right word of a pair, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI": {
+   "forms": [
+    "chagua neno lenye sauti",
+    "gawa neno kwa silabi",
+    "chagua matamshi sahihi",
+    "tamka neno (mwalimu anasikiliza)"
+   ],
+   "mastery": "Hears and says the target sounds /r/, /l/ in syllables and words (radi, baridi, leo), splits a word into its syllables, and picks or uses a word that carries the sound, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "tambua sauti lengwa",
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Finds the target sounds /r/, /l/ in a short story, reads it aloud with every sound clear, loud enough for the class, at about 45 words a minute, pausing at the koma and kikomo and raising the voice for a question; in the app picks the better reading of a line, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA": {
+   "forms": [
+    "chagua tahajia sahihi",
+    "sahihisha neno",
+    "andika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Writes the words of his own writing (about 20 words) with the right letters: the Kiswahili sound and not the home sound, the nasal kept (nd, mb, ng), long vowels doubled and ng' with its apostrophe, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  },
+  "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME": {
+   "forms": [
+    "chagua neno sahihi",
+    "jaza pengo",
+    "sahihisha sentensi",
+    "tunga sentensi (mwalimu anasahihisha)"
+   ],
+   "mastery": "Gives and uses the opposite action of a verb (fungua - funga, panda - shuka, anza - maliza, keti - simama), not its negative, a word of the same meaning, or a place word, in 8 of 10 new items (the teacher also hears it in class, with the KICD rubric)."
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 8: Ndege nimpendaye)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (mbwe-ha), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: mbweha, ndege, nyumba",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Ndege mdogo ametua juu ya nyumba ya mbwa."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "ndege nimpendaye",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mbwe-ha"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M3_SAU_NEAR_T8",
+     "listen_for": [
+      "nama"
+     ],
+     "ask": "Ulisikia /ny/ au /n/?",
+     "repair": "Sikiliza: \"nyama\" ina sauti /ny/, si /n/."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M3_SAU_VOWEL_T8",
+     "listen_for": [
+      "mubwa"
+     ],
+     "ask": "Unapiga makofi mangapi kwa neno hili?",
+     "repair": "\"mbwa\" ina silabi mbwa; hakuna irabu ya ziada."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M3_SAU_DROP_T8",
+     "listen_for": [
+      "dege"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"ndege\"?",
+     "repair": "Sikiliza tena: \"ndege\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M3_SAU_SYLL_T8",
+     "listen_for": [
+      "m-b-w-e-h-a"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: mbwe-ha."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M3_SAU_PICK_T8",
+     "listen_for": [
+      "kuku"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"ndege\" ina sauti lengwa; \"kuku\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"nyumba\" kwa silabi.",
+     "answer": "nyu-mba",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: ndege au kuku?",
+     "answer": "ndege",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

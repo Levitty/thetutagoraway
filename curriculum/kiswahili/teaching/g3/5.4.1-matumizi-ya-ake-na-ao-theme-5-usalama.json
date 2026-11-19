@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T5_MATUMIZI_YA_AKE_NA_A",
+ "title": "Matumizi ya -ake na ao. (Theme 5: Usalama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T5_MATUMIZI_YA_AKE_NA_A.VIMILIKISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on usalama using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "usalama",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Juma amevaa kofia yake; watoto wamevaa kofia zao."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"zao\".",
+     "say": "Wenye kofia ni wangapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T5_MATUMIZI_YA_AKE_NA_A.VIMILIKISHI.M3_SAR_CONCPOSS_T5",
+     "listen_for": [
+      "yake"
+     ],
+     "ask": "Nomino ni ya ngeli gani?",
+     "repair": "Kitabu changu; kiti chake: kimilikishi hufuata ngeli. (chake)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T5_MATUMIZI_YA_AKE_NA_A.VIMILIKISHI.M3_SAR_NUMPOSS_T5",
+     "listen_for": [
+      "chake"
+     ],
+     "ask": "Vitabu ni vingi; kimilikishi kimebadilika?",
+     "repair": "Vitabu vyangu: vyote viwili hubadilika. (vyake)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T5_MATUMIZI_YA_AKE_NA_A.VIMILIKISHI.M3_SAR_OWNER_T5",
+     "listen_for": [
+      "wake"
+     ],
+     "ask": "Kitu hiki ni cha nani?",
+     "repair": "Mwenye kitu ni nani? Mimi: changu; yeye: chake; wao: chao. (wao)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T5_MATUMIZI_YA_AKE_NA_A.VIMILIKISHI.M3_SAR_ORDERPOSS_T5",
+     "listen_for": [
+      "yake kofia"
+     ],
+     "ask": "Neno lipi linaanza?",
+     "repair": "Nomino kwanza, kimilikishi baadaye: kalamu yangu. (kofia yake)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Wanafunzi walibeba vitabu ___.",
+     "answer": "vyao",
+     "shows": "many owners"
+    },
+    {
+     "question": "Jaza: Amina alivaa kofia ___.",
+     "answer": "yake",
+     "shows": "one owner"
+    }
+   ]
+  }
+ ]
+}

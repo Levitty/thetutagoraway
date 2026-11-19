@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ",
+ "title": "Ufahamu wa Kusikiliza Hadithi (Theme 5: Mnyama nimpendaye)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+   "key_step": "The child listens for three things: who, what happened in order, and what the passage teaches; then says them in his own words.",
+   "floor": {
+    "prerequisite": "Answers a who-question about a sentence he hears.",
+    "question": "Sikiliza: \"Mama alipika ugali.\" Nani alipika?",
+    "answer": "Mama"
+   },
+   "representations": [
+    "three picture cards of the events",
+    "the new word on a card with its sentence",
+    "a listening chart: Nani? Nini? Funzo?"
+   ],
+   "steps": [
+    "Listen to the whole passage.",
+    "Say who was in it.",
+    "Put the events in order.",
+    "Say the message and use the new word."
+   ],
+   "contexts": [
+    "mnyama nimpendaye",
+    "a story told by the teacher",
+    "a radio or phone recording"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Fisi alimkuta sungura, sungura alimdanganya fisi, sungura akatoroka"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first picture.",
+     "say": "Nini kilitokea kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child retells the passage with kwanza, kisha, mwishowe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M2_SIK_DETAIL_T5",
+     "listen_for": [
+      "Sungura alikuwa na chakula."
+     ],
+     "ask": "Kifungu kinataka tujifunze nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Akili hutusaidia kujiokoa tukiwa hatarini."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M2_SIK_WORD_T5",
+     "listen_for": [
+      "mjinga"
+     ],
+     "ask": "Sentensi ilisema nini kabla na baada ya neno hilo?",
+     "repair": "Katika kifungu, \"mjanja\" ni mwenye akili ya kutafuta njia."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M2_SIK_SENT_T5",
+     "listen_for": [
+      "Mjanja ni mjanja."
+     ],
+     "ask": "Sentensi yako inamwambia mwenzako nini kuhusu neno hili?",
+     "repair": "Sentensi nzuri inaonyesha maana ya neno."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M2_SIK_ORDER_T5",
+     "listen_for": [
+      "Sungura alitoroka, fisi alimkuta sungura, sungura alimdanganya fisi"
+     ],
+     "ask": "Ni nini kilitokea kwanza kabisa?",
+     "repair": "Matukio yalifuatana hivi: Fisi alimkuta sungura, sungura alimdanganya fisi, sungura akatoroka."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M2_SIK_ADD_T5",
+     "listen_for": [
+      "ndiyo, ili hadithi iwe tamu"
+     ],
+     "ask": "Je, jambo hilo lilikuwa kwenye kifungu?",
+     "repair": "Kusimulia upya ni kusema yaliyokuwa kwenye kifungu tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"mjanja\" ni nini?",
+     "answer": "mwenye akili ya kutafuta njia",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Kifungu kinatufundisha nini?",
+     "answer": "Akili hutusaidia kujiokoa tukiwa hatarini.",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_",
+ "title": "Matumizi ya -angu na -etu (Theme 5: Mimi na wenzangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on mimi na wenzangu using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "mimi na wenzangu",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpira wangu; mpira wetu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wetu\".",
+     "say": "Ni wangu peke yangu au ni wetu sote?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_CONCPOSS_T5",
+     "listen_for": [
+      "yangu"
+     ],
+     "ask": "Nomino ni ya ngeli gani?",
+     "repair": "Kitabu changu; kiti chake: kimilikishi hufuata ngeli. (changu)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_NUMPOSS_T5",
+     "listen_for": [
+      "changu"
+     ],
+     "ask": "Vitabu ni vingi; kimilikishi kimebadilika?",
+     "repair": "Vitabu vyangu: vyote viwili hubadilika. (vyangu)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_OWNER_T5",
+     "listen_for": [
+      "langu"
+     ],
+     "ask": "Kitu hiki ni cha nani?",
+     "repair": "Mwenye kitu ni nani? Mimi: changu; yeye: chake; wao: chao. (letu)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_ORDERPOSS_T5",
+     "listen_for": [
+      "yangu kalamu"
+     ],
+     "ask": "Neno lipi linaanza?",
+     "repair": "Nomino kwanza, kimilikishi baadaye: kalamu yangu. (kalamu yangu)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Hii ni shule ___ (sisi sote).",
+     "answer": "yetu",
+     "shows": "shared"
+    },
+    {
+     "question": "Jaza: Kiti ___ (mimi) kimevunjika.",
+     "answer": "changu",
+     "shows": "own"
+    }
+   ]
+  }
+ ]
+}

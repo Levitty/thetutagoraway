@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO",
+ "title": "Vinyume vya Vitendo (Theme 10: Teknolojia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on teknolojia using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "teknolojia",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Washa simu - zima simu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"zima\".",
+     "say": "Ni kitendo gani kinapingana na washa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M3_SAR_NEGATE_T10",
+     "listen_for": [
+      "usiwashe"
+     ],
+     "ask": "Ni kitendo gani kinarudisha hali ilivyokuwa?",
+     "repair": "Kinyume cha kitendo ni kitendo kingine: fungua - funga. (zima)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M3_SAR_ADDUA_T10",
+     "listen_for": [
+      "ketua"
+     ],
+     "ask": "Je, \"ketua\" ni neno la Kiswahili?",
+     "repair": "Kinyume cha keti ni simama. (simama)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M3_SAR_SAME_T10",
+     "listen_for": [
+      "inuka"
+     ],
+     "ask": "Vitendo hivi vinafanana au vinapingana?",
+     "repair": "Kinyume ni kitendo kinachopingana. (keti)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M3_SAR_NOUNOPP_T10",
+     "listen_for": [
+      "nje"
+     ],
+     "ask": "Jibu lako ni kitendo?",
+     "repair": "Kinyume cha ingia ni toka. (toka)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"fungua\" ni?",
+     "answer": "funga",
+     "shows": "reversive"
+    },
+    {
+     "question": "Kinyume cha \"twika\" ni?",
+     "answer": "tua",
+     "shows": "different word"
+    }
+   ]
+  }
+ ]
+}

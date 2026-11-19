@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA",
+ "title": "Usomaji Mwafaka (Theme 1: Darasani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA",
+   "key_step": "The child sits upright, checks the book is the right way up, and starts at the top left with a finger under the line.",
+   "floor": {
+    "prerequisite": "Turns the pages of a picture book one at a time.",
+    "question": "Fungua ukurasa unaofuata.",
+    "answer": "the child turns one page"
+   },
+   "representations": [
+    "a green dot at the top left of each page",
+    "a reading card to slide under the line",
+    "pictures of good and poor reading positions"
+   ],
+   "steps": [
+    "Sit up straight.",
+    "Check the book is the right way up.",
+    "Put a finger at the green dot.",
+    "Read left to right, then go down a line."
+   ],
+   "contexts": [
+    "darasani: the class library corner",
+    "reading with a parent at home",
+    "a big book read together"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama ana kuku."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mama\".",
+     "say": "Tunaanza kusoma wapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows where to start and moves his finger along the line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_RIGHT_T1",
+     "listen_for": [
+      "chini upande wa kulia"
+     ],
+     "ask": "Kitone cha kijani kiko wapi?",
+     "repair": "Tunaanza juu, upande wa kushoto."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_UPSIDE_T1",
+     "listen_for": [
+      "picha zikiwa juu chini"
+     ],
+     "ask": "Watu walio kwenye picha wamesimama au wamepinduka?",
+     "repair": "Shika kitabu wima: jalada mbele, picha zimesimama."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_POSTURE_T1",
+     "listen_for": [
+      "kulala juu ya meza uso karibu na kitabu"
+     ],
+     "ask": "Kitabu kiko mbali kiasi gani na macho yako?",
+     "repair": "Keti wima, kitabu kiwe umbali wa kiwiko hadi kiganja."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_SKIPLINE_T1",
+     "listen_for": [
+      "popote ninapoona neno ninalolijua"
+     ],
+     "ask": "Kidole chako kiko kwenye mstari gani?",
+     "repair": "Mwisho wa mstari, rudi kushoto kwenye mstari unaofuata."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tunasoma kutoka upande gani kwenda upande gani?",
+     "answer": "kushoto kwenda kulia",
+     "shows": "direction"
+    },
+    {
+     "question": "Kitabu kiwe umbali gani na macho?",
+     "answer": "umbali wa kiwiko hadi kiganja",
+     "shows": "posture"
+    }
+   ]
+  }
+ ]
+}
