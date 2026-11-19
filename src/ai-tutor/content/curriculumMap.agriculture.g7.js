@@ -351,8 +351,7 @@ export const SKILLS = {
    "M_AG7_RB_BANK",
    "M_AG7_RB_CROP",
    "M_AG7_RB_SILT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP": {
   "name": "Name ways of keeping vitamins and minerals in vegetables",
@@ -400,8 +399,7 @@ export const SKILLS = {
    "M_AG7_TP_SITE",
    "M_AG7_TP_ONCE",
    "M_AG7_TP_TYPE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH": {
   "name": "Match the tilth to the planting material",
@@ -433,8 +431,7 @@ export const SKILLS = {
    "M_AG7_TP_WET",
    "M_AG7_TP_ROOTS",
    "M_AG7_TP_TOOL"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES": {
   "name": "Name management practices for crops and what each does",
@@ -468,8 +465,7 @@ export const SKILLS = {
    "M_AG7_PS_THINWEAK",
    "M_AG7_PS_THINDRY",
    "M_AG7_PS_DEEPWEED"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS": {
   "name": "Say how animal products are prepared safely",
@@ -503,8 +499,7 @@ export const SKILLS = {
    "M_AG7_EH_POINT",
    "M_AG7_EH_WATER",
    "M_AG7_EH_OPEN"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
   "name": "Name methods of cooking and the food each suits",
@@ -538,8 +533,7 @@ export const SKILLS = {
    "M_AG7_CPR_TURN",
    "M_AG7_CPR_RAW",
    "M_AG7_CPR_SLEEVE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE": {
   "name": "Name hygiene practices in rearing animals",
@@ -573,8 +567,7 @@ export const SKILLS = {
    "M_AG7_HC_FEEDER",
    "M_AG7_HC_NOGLOVES",
    "M_AG7_HC_ORDER"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS": {
   "name": "Say how to launder a loose-coloured article",
@@ -606,8 +599,7 @@ export const SKILLS = {
    "M_AG7_CS_HOT",
    "M_AG7_CS_RUB",
    "M_AG7_CS_FOLDWET"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING": {
   "name": "Name the stitches and tools used in knitting",
@@ -639,8 +631,7 @@ export const SKILLS = {
    "M_AG7_KA_TIGHT",
    "M_AG7_KA_ENDS",
    "M_AG7_KA_COUNT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN": {
   "name": "Describe a framed suspended garden and its advantages",
@@ -674,8 +665,7 @@ export const SKILLS = {
    "M_AG7_FB_SHADE",
    "M_AG7_FB_POSTS",
    "M_AG7_FB_NOPLAN"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION": {
   "name": "Name ways of adding value to crop produce",
@@ -709,8 +699,7 @@ export const SKILLS = {
    "M_AG7_VS_THICK",
    "M_AG7_VS_LABEL",
    "M_AG7_VS_SPOILT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS": {
   "name": "Name the forms of soap used at home",
@@ -742,8 +731,7 @@ export const SKILLS = {
    "M_AG7_SM_CURE",
    "M_AG7_SM_POT",
    "M_AG7_SM_SALT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  }
 };
 export const MIS_FEEDBACK = {

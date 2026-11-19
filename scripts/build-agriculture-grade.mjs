@@ -44,6 +44,9 @@ const g = JSON.parse(readFileSync(FILE, 'utf8'));
 if (GRADE === 9) for (const s of g.sub_strands) { s.skills = []; s.misconceptions = []; }
 const { SUBS } = await import(`./data/agriculture-depth/g${GRADE}.mjs`);
 const r = applyAgricultureDepth(g, SUBS, { grade: GRADE });
+// A depth-pass skill that has since been given question families (19 Nov 2026, HOREB_QUESTIONS_PLAN.md) is no longer no_family.
+const USED = new Set(existsSync(ENTRY) ? (await import(ENTRY)).default.families.map(f => f.cskill) : []);
+for (const s of g.sub_strands) for (const k of s.skills) if (USED.has(k.code)) delete k.no_family;
 // Grade 1-3 outcome prerequisites name the Grade 1-3 skill that carries them (19 Nov 2026, scripts/lib/lower-grade.mjs).
 const relink = relinkLowerOutcomes(g, { root: ROOT, label: `Agriculture Grade ${GRADE}` });
 console.log(`agriculture g${GRADE}: ${relink.moved} Grade 1-3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
