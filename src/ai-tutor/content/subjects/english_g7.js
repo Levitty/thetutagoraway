@@ -7,6 +7,7 @@ import { FAMILIES as LANG } from '../families/english_g7_lang.js';
 import { FAMILIES as WRITE } from '../families/english_g7_write.js';
 import { FAMILIES as VOCAB } from '../families/english_g7_vocab.js';
 import { FAMILIES as READING } from '../families/english_g7_reading.js';
+import { FAMILIES as MORE } from '../families/english_g7_a.js';
 import { SIGNED } from '../families/english_g7_signed.js';
 
 export default {
@@ -14,8 +15,8 @@ export default {
   name: 'English', shortName: 'English', icon: 'book',
   description: 'Grade 7 English from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...LANG, ...WRITE, ...VOCAB, ...READING],
-  familyFiles: ['english_g7_lang.js', 'english_g7_write.js', 'english_g7_vocab.js', 'english_g7_reading.js'],
+  families: [...LANG, ...WRITE, ...VOCAB, ...READING, ...MORE],
+  familyFiles: ['english_g7_lang.js', 'english_g7_write.js', 'english_g7_vocab.js', 'english_g7_reading.js', 'english_g7_a.js'],
   signed: SIGNED, signedFile: 'english_g7_signed.js',
   checks: 'text',
   idPrefix: 'english7.',          // every family id starts with this
@@ -23,6 +24,6 @@ export default {
   bank: false,                               // true only to also list the families in the shared bank (FAMILIES): Science G5 only
   curriculumDir: 'english',                   // curriculum/<dir>/g<N>.json
   misconceptionsFile: 'engine/data/curriculum/english.g7.misconceptions.json',
-  reviewDoc: 'docs/qa/english-g7-review-2026-11-13.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  reviewDoc: 'docs/qa/english-g7-review-2026-11-19.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
   precheckLabel: 'English 7',
 };

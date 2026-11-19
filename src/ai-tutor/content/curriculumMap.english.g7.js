@@ -1952,8 +1952,7 @@ export const SKILLS = {
    "M7_X_AS_PLACE_ONLY",
    "M7_X_AS_NO_CLUES",
    "M7_X_AS_CHARACTER_AUTHOR"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS": {
   "name": "Use the full stop, question mark and exclamation mark",
