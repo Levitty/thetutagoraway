@@ -93,8 +93,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_HOME.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Personal and common items at home: bedding is a personal item. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -284,8 +284,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Needs and wants come before the emotional needs of a family. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -326,8 +326,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sorting needs from wants comes before naming emotional needs. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -562,8 +562,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.RESOUR.ANIMALS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Food items from animals: most are body-building foods. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -754,8 +754,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Common accidents at school come before dangers in the wider community. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -796,8 +796,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Features on the way to the market, including the road and its parts. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1032,8 +1032,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Responsibilities at home and school grow into taking part in the community. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1208,8 +1208,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.NATURA.WEATHER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming weather conditions comes before knowing which are dangerous. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1373,8 +1373,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.NATURA.SOIL.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.SOIL.SOIL_KINDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Classifying soils in Grade 2 comes before listing their characteristics. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1556,8 +1556,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.NATURA.LIGHT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sources of light: many of them also give heat (the sun, fire). Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1738,8 +1738,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.RESOUR.WATER.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.WATER.WATER_STORAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Why water must be kept safe comes before how it gets dirty. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1924,8 +1924,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Caring for plants: the child handles plants and tools. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1966,8 +1966,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Caring for plants grown at home and school. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -2210,8 +2210,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.RESOUR.ANIMALS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Caring for animals in the locality, practised in Grade 2. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -2392,15 +2392,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Keeping the school clean: collecting and sorting litter. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Needs, wants and money: the start of financial literacy. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"

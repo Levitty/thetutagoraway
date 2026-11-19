@@ -3,6 +3,7 @@
 // The lower-primary files had KICD outcomes only: no first pass, no question families, no subject entry. Every skill is NEW
 // (scripts/lib/subject-depth.mjs, the general pass), and this adds what Grades 1 to 3 need on top of it:
 //   - prerequisites written 'G2o:SUB.KEY.a' (an outcome of the grade below) name the grade below's SKILL once that grade is built
+//     (the skill that asks it, or whose teacher's rubric marks it)
 //     (rebuild the higher grade after the lower one); two outcomes taken by one skill stay one prerequisite, the other keeps its
 //     outcome ('G2o!:' forces the outcome);
 //   - Grade 1 may name pre-primary readiness skills, 'PP:NAME', that HOREB defines (KICD's PP1-PP2 design is not in this
@@ -21,7 +22,7 @@ const fail = (m) => { throw new Error(m); };
 // data.NEW pre lists, rewritten so a lower-grade outcome becomes that grade's skill where one covers it (deduplicated).
 //   lower(g) -> the grade-g JSON or null; outcomePrefix(g) -> 'ENVI.G2.' / 'CRE.G2.'
 export function switchLowerRefs(NEW, { lower, outcomePrefix }) {
-  const cover = (g, code) => { const j = lower(g); if (!j) return null; for (const s of j.sub_strands) for (const k of s.skills || []) if (k.outcomes.includes(code)) return k.code; return null; };
+  const cover = (g, code) => { const j = lower(g); if (!j) return null; for (const s of j.sub_strands) for (const k of s.skills || []) if (k.outcomes.includes(code) || (k.teacher_rubric?.outcomes || []).includes(code)) return k.code; return null; };
   let switched = 0, kept = 0;
   for (const n of NEW) {
     const seen = new Set();

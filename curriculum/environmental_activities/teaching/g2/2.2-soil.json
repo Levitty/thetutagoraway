@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.NATURA.SOIL",
+ "title": "Soil",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.NATURA.SOIL.SOIL_KINDS",
+   "key_step": "The child identifies sand, clay and loam and classifies them by the ribbon test and particle size.",
+   "floor": {
+    "prerequisite": "Has played with soil.",
+    "question": "What happens to soil when you add water?",
+    "answer": "It becomes wet and soft (mud)"
+   },
+   "representations": [
+    "three soil samples",
+    "water for the ribbon test",
+    "a hand lens"
+   ],
+   "steps": [
+    "Feel each soil.",
+    "Wet and roll a ribbon.",
+    "Compare the ribbons.",
+    "Sort by particle size."
+   ],
+   "contexts": [
+    "a potter's clay pit",
+    "a sandy river bed",
+    "the school garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three ribbons: long, short, broken."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the long ribbon.",
+     "say": "Which soil made this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say clay."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label each ribbon with its soil."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.NATURA.SOIL.SOIL_KINDS.M_E2_SOIL_COLOUR_TYPE",
+     "listen_for": [
+      "By colour only"
+     ],
+     "ask": "How can you tell clay from sand?",
+     "repair": "Give two soils of the same colour that feel different. Do the ribbon test."
+    },
+    {
+     "code": "ENVI.G2.NATURA.SOIL.SOIL_KINDS.M_E2_SOIL_RIBBON_SAND",
+     "listen_for": [
+      "Sand"
+     ],
+     "ask": "Which soil makes the longest ribbon?",
+     "repair": "Roll wet sand and wet clay. Sand breaks; clay stretches."
+    },
+    {
+     "code": "ENVI.G2.NATURA.SOIL.SOIL_KINDS.M_E2_SOIL_PARTICLE_BIG",
+     "listen_for": [
+      "Clay, it is in big lumps"
+     ],
+     "ask": "Which soil has the biggest particles?",
+     "repair": "Rub each soil between the fingers and look with a hand lens. Sand grains are big and seen."
+    },
+    {
+     "code": "ENVI.G2.NATURA.SOIL.SOIL_KINDS.M_E2_SOIL_TWO_TYPES",
+     "listen_for": [
+      "Sand and mud"
+     ],
+     "ask": "Name three types of soil.",
+     "repair": "Show three samples side by side and name each. Mud is wet soil of any type."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which soil falls apart and makes no ribbon?",
+     "answer": "Sand",
+     "shows": "classifies"
+    },
+    {
+     "question": "Name the three types of soil.",
+     "answer": "Sand, clay and loam",
+     "shows": "identifies"
+    }
+   ]
+  }
+ ]
+}

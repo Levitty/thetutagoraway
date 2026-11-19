@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G2.SOCIAL.OUR_SCHOOL",
+ "title": "Our School",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Accidents are taught with the safe action first; a child who is hurt tells a teacher at once (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN",
+   "key_step": "The child names ways of keeping the school clean and knows it is everyone's duty.",
+   "floor": {
+    "prerequisite": "Knows cleaning activities at home.",
+    "question": "What do we use to sweep the floor?",
+    "answer": "A broom"
+   },
+   "representations": [
+    "brooms, dusters and a litter bin",
+    "a class duty rota",
+    "pictures of a clean and a dirty compound"
+   ],
+   "steps": [
+    "Name places at school that need cleaning.",
+    "Say how each is cleaned.",
+    "Make a duty rota.",
+    "Clean the class together."
+   ],
+   "contexts": [
+    "the classroom after break",
+    "the school toilets",
+    "the compound after sports day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a classroom with litter on the floor."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the litter.",
+     "say": "What should we do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say pick it and put it in the bin."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: bin, sweep, dust, wash hands."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN.M_E2_CLEAN_WORKER_JOB",
+     "listen_for": [
+      "Only the cleaner"
+     ],
+     "ask": "Who should keep our classroom clean?",
+     "repair": "Make a class duty rota. Everyone keeps the class clean."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN.M_E2_CLEAN_LITTER_GROUND",
+     "listen_for": [
+      "On the ground, it is small"
+     ],
+     "ask": "Where should a sweet paper go?",
+     "repair": "Drop one paper each for the class: count how many. Small litter adds up."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN.M_E2_CLEAN_SWEEP_DUST",
+     "listen_for": [
+      "Sweep quickly"
+     ],
+     "ask": "Before sweeping a dusty floor, what should you do?",
+     "repair": "Sweep a dusty corner dry and wet. See the dust cloud. Dust makes us cough."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN.M_E2_CLEAN_TOILET_HANDS",
+     "listen_for": [
+      "Only when they look dirty"
+     ],
+     "ask": "When must you wash your hands at school?",
+     "repair": "Use glitter as \"germs\" on hands and see how they spread. Wash with soap."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does litter go?",
+     "answer": "In the bin (litter pit)",
+     "shows": "ways to keep clean"
+    },
+    {
+     "question": "Who keeps the school clean?",
+     "answer": "Everyone",
+     "shows": "shared duty"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS",
+   "key_step": "The child names common accidents at school, says how each can be prevented and what to do when hurt.",
+   "floor": {
+    "prerequisite": "Knows accidents at home.",
+    "question": "Name one accident that can happen at home.",
+    "answer": "Burns (cuts, falls)"
+   },
+   "representations": [
+    "a walk around school to find danger spots",
+    "accident picture cards",
+    "a \"tell a teacher\" rule card"
+   ],
+   "steps": [
+    "Walk and find dangerous places.",
+    "Name the accident that could happen.",
+    "Say how to prevent it.",
+    "Say what to do if hurt."
+   ],
+   "contexts": [
+    "the playground swings",
+    "the school kitchen",
+    "a wet corridor on a rainy day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a corridor with a wet floor and a running child."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wet floor.",
+     "say": "What could happen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he could slip and fall."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: walk, keep floors dry, tell a teacher."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS.M_E2_ACC_LUCK",
+     "listen_for": [
+      "No, accidents just happen"
+     ],
+     "ask": "Can we prevent falls in the classroom?",
+     "repair": "For each accident card, ask: what could we do first so it does not happen?"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS.M_E2_ACC_HIDE_HURT",
+     "listen_for": [
+      "Hide it so I am not punished"
+     ],
+     "ask": "You cut your hand on a broken window. What do you do?",
+     "repair": "Say clearly: when you are hurt, always tell a teacher. You will be helped."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS.M_E2_ACC_GLASS_PICK",
+     "listen_for": [
+      "Pick it up with my hands"
+     ],
+     "ask": "You see broken glass on the path. What do you do?",
+     "repair": "Role-play: stand near, warn friends, call a teacher. Adults pick up glass."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS.M_E2_ACC_RUN_SAFE",
+     "listen_for": [
+      "Yes, if I am careful"
+     ],
+     "ask": "Is it safe to run in the corridor?",
+     "repair": "Show how a corner hides someone coming. Practise walking in corridors."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a common accident at school.",
+     "answer": "Falling (cuts, burns)",
+     "shows": "identifies"
+    },
+    {
+     "question": "What do you do if you get hurt?",
+     "answer": "Tell a teacher",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

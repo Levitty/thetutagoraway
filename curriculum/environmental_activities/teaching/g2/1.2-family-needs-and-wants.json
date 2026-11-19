@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS",
+ "title": "Family Needs and Wants",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS",
+   "key_step": "The child tells needs from wants, sorts family items into needs and wants, and chooses needs first when money is little.",
+   "floor": {
+    "prerequisite": "Names basic needs.",
+    "question": "Name a basic need of a family.",
+    "answer": "Food (water, shelter, clothing)"
+   },
+   "representations": [
+    "picture cards of needs and wants",
+    "play money and a pretend shop",
+    "a two-column chart"
+   ],
+   "steps": [
+    "Ask: can we live well without it?",
+    "Sort cards into needs and wants.",
+    "Shop with little money: needs first.",
+    "Say why."
+   ],
+   "contexts": [
+    "shopping at the market",
+    "a birthday wish",
+    "a family with little money this month"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a shop shelf with flour, soda, a toy and soap."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the toy.",
+     "say": "Need or want?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say want and why."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the needs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS.M_E2_NEED_WANT_LIKE",
+     "listen_for": [
+      "A need, I like sweets"
+     ],
+     "ask": "Is a sweet a need or a want?",
+     "repair": "Ask: can we live well without it? Sort sweets, water, a toy and a blanket."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS.M_E2_NEED_EXPENSIVE",
+     "listen_for": [
+      "The television, it costs more"
+     ],
+     "ask": "Which is a need: a television or a bag of maize flour?",
+     "repair": "Compare prices and ask which we need to eat today. Price does not decide."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS.M_E2_NEED_WANT_FIRST",
+     "listen_for": [
+      "Soda"
+     ],
+     "ask": "Mother has 100 shillings. Should she buy soda or vegetables for supper?",
+     "repair": "Role-play shopping with play money: needs first, then a want if money is left."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS.M_E2_NEED_SCHOOL_WANT",
+     "listen_for": [
+      "A want"
+     ],
+     "ask": "Is going to school a need or a want?",
+     "repair": "Say: every child needs to learn, it is a child's right too. Link with Child Rights."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is water a need or a want?",
+     "answer": "A need",
+     "shows": "differentiates"
+    },
+    {
+     "question": "You have little money. Do you buy bread or a toy?",
+     "answer": "Bread",
+     "shows": "prioritises"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES",
+   "key_step": "The child matches family needs to the places in the locality where they are met, and knows one place can meet several needs.",
+   "floor": {
+    "prerequisite": "Tells needs from wants.",
+    "question": "Is medicine a need or a want?",
+    "answer": "A need"
+   },
+   "representations": [
+    "picture cards of local places",
+    "a simple local map",
+    "need cards"
+   ],
+   "steps": [
+    "Name places near school.",
+    "Match each need to a place.",
+    "Find places that meet many needs.",
+    "Draw one place."
+   ],
+   "contexts": [
+    "the local shopping centre",
+    "a village with a borehole",
+    "a town hospital"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a market, a clinic, a school and a borehole."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the clinic.",
+     "say": "Which need is met here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say health care."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw lines from needs to places."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES.M_E2_PLACE_SHOP_ALL",
+     "listen_for": [
+      "A shop, to buy medicine"
+     ],
+     "ask": "Where does a sick child go to get treated?",
+     "repair": "Match cards: clinic and nurse, school and teacher, shop and food. A nurse checks the child first."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES.M_E2_PLACE_FOOD_SHOP",
+     "listen_for": [
+      "Nowhere, only the shop"
+     ],
+     "ask": "Where else can a family get sukuma wiki apart from the shop?",
+     "repair": "Show a kitchen garden and a farm. Food grows first, then reaches the shop."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES.M_E2_PLACE_ONE_NEED",
+     "listen_for": [
+      "Only food"
+     ],
+     "ask": "Which needs can a market meet?",
+     "repair": "Walk through a picture of a market: food, clothes, utensils. One place, many needs."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES.M_E2_PLACE_WATER_TAP",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name a place apart from a tap where families get water.",
+     "repair": "Show pictures of a borehole, a well, a river and a roof tank."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where do we get water apart from a tap?",
+     "answer": "A borehole (well, river, tank)",
+     "shows": "places"
+    },
+    {
+     "question": "Name a place where a sick person is treated.",
+     "answer": "A hospital (clinic)",
+     "shows": "matches need and place"
+    }
+   ]
+  }
+ ]
+}

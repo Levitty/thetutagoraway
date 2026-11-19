@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.SOCIAL.OUR_HOME",
+ "title": "Our Home",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS",
+   "key_step": "The child tells personal items from common items at home, says personal items are not shared, and names cleaning materials for each.",
+   "floor": {
+    "prerequisite": "Knows materials for cleaning the body.",
+    "question": "What do we use to clean our teeth?",
+    "answer": "A toothbrush and toothpaste (or a chewing stick)"
+   },
+   "representations": [
+    "real items: toothbrush, comb, plate, cup, broom",
+    "two boxes: personal and common",
+    "soap, ash, a brush and a cloth"
+   ],
+   "steps": [
+    "Name items at home.",
+    "Sort them into personal and common.",
+    "Say which must not be shared.",
+    "Match each to a cleaning material."
+   ],
+   "contexts": [
+    "a family of six sharing a house",
+    "boarding school lockers",
+    "washing up after supper"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a toothbrush, a comb, a table and a broom."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the comb.",
+     "say": "Personal or common?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say personal and why."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write P or C under each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS.M_E2_HOME_SHARE_BRUSH",
+     "listen_for": [
+      "Yes, if we rinse it"
+     ],
+     "ask": "Can you share your toothbrush with your sister?",
+     "repair": "Sort items into \"mine only\" and \"for everyone\". Say: some things carry germs from one mouth to another."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS.M_E2_HOME_COMMON_MINE",
+     "listen_for": [
+      "Personal, I sit on it"
+     ],
+     "ask": "Is the sofa at home a personal item or a common item?",
+     "repair": "Ask: who else uses it? If many people use it, it is common."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS.M_E2_HOME_WATER_ONLY",
+     "listen_for": [
+      "Only water"
+     ],
+     "ask": "What do you need to clean an oily plate?",
+     "repair": "Wash one oily plate with water only and one with soap. Feel both."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS.M_E2_HOME_TOWEL_COMMON",
+     "listen_for": [
+      "Common, it hangs where everyone bathes"
+     ],
+     "ask": "Is your bathing towel a personal or common item?",
+     "repair": "Ask what the towel touches: your body. Items that touch the body are personal."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a comb personal or common?",
+     "answer": "Personal",
+     "shows": "differentiates"
+    },
+    {
+     "question": "What do we use to clean a dirty pot?",
+     "answer": "Water and soap (ash, sand)",
+     "shows": "cleaning materials"
+    }
+   ]
+  }
+ ]
+}

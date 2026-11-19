@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.NATURA.LIGHT",
+ "title": "Light",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES",
+   "key_step": "The child identifies natural and man-made sources of light, knows the moon reflects light, and names ways of conserving light.",
+   "floor": {
+    "prerequisite": "Knows the sky by day and night.",
+    "question": "What do we see in the sky during the day?",
+    "answer": "The sun (clouds)"
+   },
+   "representations": [
+    "a torch, candle and mirror",
+    "pictures of sources of light",
+    "a ball and torch for the moon"
+   ],
+   "steps": [
+    "Name things that give light.",
+    "Sort into natural and made by people.",
+    "Test the mirror and the moon ball.",
+    "Say ways to save light."
+   ],
+   "contexts": [
+    "a home with a solar lamp",
+    "a classroom on a sunny day",
+    "a night with a full moon"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the sun, the moon, a bulb and a mirror."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the moon.",
+     "say": "Does it make its own light?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and explain."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the real sources of light."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES.M_E2_LIGHT_MOON",
+     "listen_for": [
+      "Yes, it shines at night"
+     ],
+     "ask": "Does the moon make its own light?",
+     "repair": "Shine a torch on a ball in a dark room. The ball looks bright but makes no light."
+    },
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES.M_E2_LIGHT_MIRROR",
+     "listen_for": [
+      "Yes, it shines"
+     ],
+     "ask": "Is a mirror a source of light?",
+     "repair": "Put a mirror in a dark box. Does it give light? Then add a torch."
+    },
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES.M_E2_LIGHT_DAY_ON",
+     "listen_for": [
+      "Yes, it is brighter"
+     ],
+     "ask": "It is a sunny day. Should the classroom lights be on?",
+     "repair": "Switch the lights off and open windows. Can we still see? Say: saving electricity saves money."
+    },
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES.M_E2_LIGHT_SUN_ONLY",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name a source of light apart from the sun.",
+     "repair": "Darken the room and light a candle and a torch."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a candle a source of light?",
+     "answer": "Yes",
+     "shows": "identifies"
+    },
+    {
+     "question": "Name one way to conserve light.",
+     "answer": "Switch off lights when not in use",
+     "shows": "conservation"
+    }
+   ]
+  }
+ ]
+}
