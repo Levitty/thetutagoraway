@@ -137,3 +137,23 @@ export const PRE2 = {
   PREP_POSITION: [['G3o:LANGUA.T10_.a', 'Identifying prepositions.']],
 };
 for (const [k, v] of Object.entries(PRE2)) PRE[k] = [...(PRE[k] || []), ...v];
+
+// 19 Nov 2026: once Grade 3 outcome prerequisites name the Grade 3 skill that covers them (scripts/lib/lower-grade.mjs), two
+// outcomes taken by one Grade 3 skill become one prerequisite. These skills get a second, different Grade 3 skill to keep two.
+export const PRE3 = {
+  DICTIONARY_USE: [['G3:WORD_FROM_CONTEXT', 'Working out a word\'s meaning from the words around it is how the child picks the dictionary meaning that fits.']],
+  CONTEXT_CLUES: [['G3:INDIRECT_QUESTIONS', 'Answering questions from clues the text shows but does not state is the same reading for clues.']],
+  PLURALS_REGULAR: [['G3:VERB_TO_BE', 'Choosing is or are for one or many is where the child first hears singular and plural.']],
+  HANDWRITING: [['G3:LETTERS_ON_LINE', 'Sitting letters on the line and keeping to the margin comes before neat print.']],
+  NUTRITION_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  INTERNET_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  FARM_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  HYGIENE_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  SPORTS_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  ENVIRONMENT_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  MONEY_WORDS: [['G3:USE_WORDS_SPEAKING', 'Using new words in spoken sentences comes before using the theme words of Grade 4.']],
+  PICTURE_SEQUENCE: [['G3:SEQUENCE_EVENTS', 'Putting the events of a text in the order they happened is the same ordering, done with pictures.']],
+  CONJUNCTIONS: [['G3:WRITE_THEME_SENTENCES', 'Writing simple sentences gives the child the two ideas a conjunction joins.']],
+  PREP_POSITION: [['G3:FOLLOW_INSTRUCTIONS', 'Carrying out spoken instructions (put the book on the desk) uses position words in action.']],
+};
+for (const [k, v] of Object.entries(PRE3)) PRE[k] = [...(PRE[k] || []), ...v];

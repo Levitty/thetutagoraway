@@ -31,6 +31,7 @@ for (const s of g4.sub_strands) { s.skills = []; s.misconceptions = []; }
 const byKey = new Map();   // 'SARUFI.T1_NOMINO.NOMINO' -> full code
 for (const k of SKILLS) byKey.set(`${k.sub}.${k.id}`, codeOf(subOf(k.sub), k.id));
 const resolvePre = (r) => {
+  // A Grade 3 outcome here; scripts/build-kiswahili-grade.mjs 4 then names the Grade 3 skill that carries it (19 Nov 2026).
   if (r.startsWith('G3:')) {
     const code = `KISW.G3.${r.slice(3)}`;
     if (!G3_OUTCOMES.has(code)) throw new Error(`unknown Grade 3 outcome ${code}`);

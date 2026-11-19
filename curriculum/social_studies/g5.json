@@ -5855,8 +5855,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The meaning of the flag colours was first met in Grade 2 Environmental Activities. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
@@ -6134,8 +6134,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Child rights and responsibilities (Grade 2) are the first rights the child met. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"

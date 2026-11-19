@@ -75,6 +75,14 @@ if (SUBJECT_DIR === 'mathematics' && GRADE <= 4 && !nOutcomePre) out.push(`DELET
 for (const s of done) for (const m of s.misconceptions) {
   out.push(`INSERT INTO public.curriculum_misconceptions (code, skill_code, error, example, cause, reveals, help, status) VALUES (${q(m.code)}, ${q(m.skill)}, ${q(m.error)}, ${js(m.example)}, ${q(m.cause)}, ${q(m.reveals)}, ${q(m.help)}, 'draft') ON CONFLICT (code) DO UPDATE SET error = EXCLUDED.error, example = EXCLUDED.example, cause = EXCLUDED.cause, reveals = EXCLUDED.reveals, help = EXCLUDED.help, updated_at = now() WHERE public.curriculum_misconceptions.status = 'draft';`);
 }
+// Grades 4 and up of the other subjects (19 Nov 2026): Grade 1-3 outcome prerequisites now name the Grade 1-3 skills
+// (scripts/lib/lower-grade.mjs relinkLowerOutcomes), so drop the proposed outcome prerequisites an earlier run wrote and this
+// build no longer writes (the ones still written, attitudes no Grade 1-3 skill carries, are kept).
+if (SUBJECT_DIR !== 'mathematics' && GRADE >= 4 && done.length) {
+  const keep = done.flatMap(s => s.skills.flatMap(k => k.prerequisites.filter(p => p.kind === 'outcome').map(p => q(`${k.code}|${p.requires}`))));
+  const like = `${done[0].skills[0].code.split('.').slice(0, 2).join('.')}.%`;
+  out.push(`DELETE FROM public.curriculum_prerequisites WHERE skill_code LIKE ${q(like)} AND requires_kind = 'outcome' AND status = 'proposed'${keep.length ? ` AND (skill_code || '|' || requires_code) <> ALL (ARRAY[${keep.join(', ')}]::text[])` : ''};`);
+}
 out.push('COMMIT;');
 const file = new URL(`../supabase/migrations/${RUN.file}`, import.meta.url);
 writeFileSync(file, out.join('\n') + '\n');

@@ -21,6 +21,7 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { packSlug, packEntries, packFileText } from './maths-teaching-pack-file.mjs';
 import { curriculumSql } from './lib/curriculum-sql.mjs';
+import { relinkLowerOutcomes, withOutcomeCleanup } from './lib/lower-grade.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const GRADE = Number(process.argv[2]);
@@ -131,6 +132,13 @@ for (const { k, s, d } of work) {
   (packs.get(s.code) || packs.set(s.code, {}).get(s.code))[suffix] = { ...d.pack, mis };
 }
 
+// Grades 4 to 9 (19 Nov 2026): Grade 1-3 outcome prerequisites (the Grade 4 first pass named Grade 3 outcomes) name the Grade 1-3
+// skill that carries them, now that Grades 1-3 have skills (scripts/lib/lower-grade.mjs). Two outcomes of one skill stay one.
+if (!LOWER) {
+  const relink = relinkLowerOutcomes(cur, { root: ROOT, label: `Kiswahili Grade ${GRADE}` });
+  console.log(`kiswahili g${GRADE}: ${relink.moved} Grade 1-3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
+}
+
 // ---- 3. the standard
 const covered = new Set(cur.sub_strands.flatMap(s => s.skills.flatMap(k => k.outcomes)));   // a skill may carry an outcome of another sub-strand (the same kind of insha in two themes)
 for (const s of cur.sub_strands) {
@@ -170,7 +178,7 @@ const sql = curriculumSql(cur, {
   why: LOWER ? `Kiswahili Grade ${GRADE} had KICD outcomes only (curriculum/kiswahili/g${GRADE}.json: no skills, no families); on 18 Nov 2026 it was mapped to the Grade 5 Maths standard (a skill for every testable outcome, two prerequisites and four misconceptions per skill, a teaching pack)${GRADE === 1 ? '; prerequisites below Grade 1 name pre-primary readiness skills defined in g1.json (readiness), for a teacher to confirm' : ''}.` : `Kiswahili Grade ${GRADE} had a first-pass map in the repository (curriculum/kiswahili/g${GRADE}.json) that no migration loaded; on 18 Nov 2026 it was brought to the Grade 5 Maths standard (a skill for every sub-strand, two prerequisites and four misconceptions per skill, a teaching pack).`,
   generator: `scripts/build-kiswahili-grade.mjs ${GRADE}`, source: `curriculum/kiswahili/g${GRADE}.json`,
 });
-writeFileSync(join(ROOT, 'supabase/migrations', MIG), sql.text);
+writeFileSync(join(ROOT, 'supabase/migrations', MIG), LOWER ? sql.text : withOutcomeCleanup(sql.text, cur, `KISW.G${GRADE}.%`));   // drop outcome prerequisites an earlier run wrote
 const WS = join(homedir(), 'Desktop', 'Tuta Workspace');
 if (existsSync(WS)) copyFileSync(join(ROOT, 'supabase/migrations', MIG), join(WS, `HOREB_SQL_Kiswahili_G${GRADE}.sql`));
 console.log(`SQL: ${MIG} (${sql.skills} skills, ${sql.prerequisites} prerequisites, ${sql.misconceptions} misconceptions)${existsSync(WS) ? `, copied to Tuta Workspace/HOREB_SQL_Kiswahili_G${GRADE}.sql` : ''}`);

@@ -101,15 +101,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 pronounced words with target letter-sounds. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Telling the sounds apart comes before saying them. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -139,8 +139,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using new words to communicate. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -179,15 +179,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.d",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Following three-step spoken instructions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.d",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Answering direct questions on a text. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -506,18 +506,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.READIN.T1_FLUENCY.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Recognising the letters and sounds that start a word. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Recognising the letters and sounds that start a word. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Working out a word's meaning from the words around it is how the child picks the dictionary meaning that fits. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -555,8 +555,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying what a text is for. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -786,16 +786,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing whether a word starts with a vowel sound. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -998,15 +998,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing names from prompts. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing what what, when and where ask for. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1269,15 +1269,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Distinguishing words with target letter-sounds. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Recognising words with a target sound. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1453,16 +1453,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.d",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Following the sequence of events in a text. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1504,8 +1504,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.d",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -1536,18 +1536,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Inferring meanings of new words from context. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T11_COMPREHENSION.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Inferring meanings of new words from context. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Answering questions from clues the text shows but does not state is the same reading for clues. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -1885,18 +1885,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Singular and plural forms of nouns. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Singular and plural forms of nouns. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Choosing is or are for one or many is where the child first hears singular and plural. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -1933,8 +1933,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -2182,8 +2182,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing a short narrative. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2352,16 +2352,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Taking part in conversations. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2591,8 +2591,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -2758,17 +2758,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T3_HANDWRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Clear and legible handwriting. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Ascenders and descenders. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Sitting letters on the line and keeping to the margin comes before neat print. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -2928,16 +2928,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using context to infer a word's meaning. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -3375,16 +3375,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "I am, he is, they are. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -3424,8 +3424,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -3653,8 +3653,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -4033,18 +4033,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -4321,8 +4321,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T1_FLUENCY.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reading a text accurately. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4360,8 +4360,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The topic and purpose of a text. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4399,8 +4399,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T1_FLUENCY.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reading a text accurately. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4692,16 +4692,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T9_OPPOSITES.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Opposites are mostly describing words (big, small). Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4739,8 +4739,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using adjectives in sentences. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4970,16 +4970,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Characters and settings in a story. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5008,16 +5008,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T12_PARAGRAPHS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T12_PARAGRAPHS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing sentences in sequence to form a paragraph. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5358,18 +5358,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -5405,8 +5405,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using WH questions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5695,8 +5695,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T8_QUANTIFIERS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -5744,8 +5744,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T8_QUANTIFIERS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sentences that contain quantifiers. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5962,18 +5962,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Writing from picture prompts. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Writing from picture prompts. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Putting the events of a text in the order they happened is the same ordering, done with pictures. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -6244,16 +6244,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Had is the past of have. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -6583,16 +6583,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T6_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Spelling the -ing form. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -6852,16 +6852,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T10_PUNCTUATION.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T12_PARAGRAPHS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing where a sentence ends. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7046,18 +7046,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -7216,8 +7216,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.READIN.T1_FLUENCY.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reading accurately at the right speed. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7385,16 +7385,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Don't and doesn't come from do and does. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7433,8 +7433,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -7737,8 +7737,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Engaging in conversations. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7966,16 +7966,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Words for place and position. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8140,8 +8140,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -8180,8 +8180,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -8424,18 +8424,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -8767,18 +8767,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Identifying but and and. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Writing simple sentences gives the child the two ideas a conjunction joins. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -9261,18 +9261,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -9309,8 +9309,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using clues to infer meaning. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -9607,16 +9607,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Am, is and are move to the front in a question. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -9790,16 +9790,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T7_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T6_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Spelling words with target letter-sounds. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -9966,18 +9966,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -10146,8 +10146,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.READIN.T12_COMPREHENSION.d",
-       "kind": "outcome",
+       "requires": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -10334,8 +10334,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -10589,8 +10589,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -10873,18 +10873,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.READIN.T2_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Using new words in spoken sentences comes before using the theme words of Grade 4. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -10912,8 +10912,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
@@ -11316,18 +11316,18 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "reason": "Identifying prepositions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Identifying prepositions. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Carrying out spoken instructions (put the book on the desk) uses position words in action. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -11364,8 +11364,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifying prepositions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -11590,16 +11590,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G3.WRITIN.T8_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD",
+       "kind": "skill",
        "grade": 3,
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G3.WRITIN.T6_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Spelling words with target letter-sounds. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"

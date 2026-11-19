@@ -10,7 +10,7 @@
   "outcomes": 39,
   "lessons": 120,
   "skills": 28,
-  "prerequisites": 72,
+  "prerequisites": 71,
   "misconceptions": 112
  },
  "sub_strands": [
@@ -93,15 +93,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 picked out waste materials that can be reused; compost reuses the ones that rot. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.SOIL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.SOIL.SOIL_TYPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing what good soil is like tells the child what compost adds to it. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -153,8 +153,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.SOIL.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.SOIL.SOIL_TYPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 soil conservation activities lead into adding compost to the soil. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -444,8 +444,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.WATER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.WATER.WATER_STORAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 named ways of storing water; the drip container is one of them. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -686,8 +686,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.HEAT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 listed sources of heat; fuels are the ones burnt at home. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -730,8 +730,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.HEAT.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 conserved heat; covering a pot does the same. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1005,8 +1005,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 cared for plants with local materials; a scarecrow is built from them. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1236,8 +1236,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.EDIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 made a kitchen garden; now the child names crops sown straight into it. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1285,15 +1285,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.SOIL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.SOIL.SOIL_TYPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Telling fine soil from lumpy soil comes from describing soils in Grade 3. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 plant-care activities: watering and protecting young plants. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1523,15 +1523,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.EDIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 sorted plants into edible and non-edible; fruits are edible plants. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 sorted market food into fruits and vegetables. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1567,8 +1567,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 plant care (watering, protecting) is what a young fruit tree needs. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1805,8 +1805,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.RESOUR.ANIMALS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 named the domestic animals in the immediate environment. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -1847,15 +1847,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.ANIMALS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 related food items to the animals that give them. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.ANIMALS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 explained why domestic animals matter to people. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -2088,15 +2088,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 classified food into three groups; a balanced meal has all three. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.d",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 selected food for a healthy body. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -2137,8 +2137,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 started the three food groups; Grade 4 names them by their job. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -2568,8 +2568,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 named common accidents at home; burns and scalds are among them. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -2859,8 +2859,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 named materials used to clean the body. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -2908,8 +2908,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 washed hands, face and feet with local materials. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -3134,15 +3134,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 named materials for cleaning a home. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_HOME.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 named the materials for cleaning personal and common items. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -3183,8 +3183,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 1 cleaned the home; Grade 4 puts the jobs in order. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -3407,15 +3407,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 named common accidents at school; protective clothing prevents some of them. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 3 safety when handling plants: thorns and sap call for gloves. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
@@ -3451,15 +3451,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.SOCIAL.OUR_HOME.c",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Grade 2 cleaned personal and common items with local materials. Proposed, to confirm by a CBC Agriculture teacher.",
-       "status": "proposed"
-      },
-      {
-       "requires": "ENVI.G2.SOCIAL.OUR_HOME.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Telling personal items from common ones explains why masks and gloves are not shared. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"

@@ -10,7 +10,7 @@
   "outcomes": 115,
   "lessons": 94,
   "skills": 35,
-  "prerequisites": 100,
+  "prerequisites": 99,
   "misconceptions": 140
  },
  "sub_strands": [
@@ -410,8 +410,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.CREATI.ADAM_AND_EVE.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -690,8 +690,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.CREATI.ADAM_AND_EVE.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -2425,8 +2425,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The burning bush story introduced Moses. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2607,8 +2607,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -3131,8 +3131,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -3314,10 +3314,10 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "Lessons from the feeding of the five thousand. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
@@ -3325,13 +3325,6 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Ways of helping the needy, met in Grade 4. Proposed, to confirm by a CRE teacher.",
-       "status": "proposed"
-      },
-      {
-       "requires": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.b",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Lessons from the feeding of the five thousand. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -4200,8 +4193,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.THE_CH.PRAYER.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -4557,8 +4550,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.THE_LI.EASTER.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_LI.EASTER.EASTER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The importance of Easter, which the Lord's Supper looks towards. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -4735,8 +4728,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G3.THE_CH.THE_HOLY_SPIRIT.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -4907,8 +4900,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G3.THE_CH.PRAYER.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
@@ -5456,8 +5449,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G3.CREATI.ADAM_AND_EVE.a",
-       "kind": "outcome",
+       "requires": "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"

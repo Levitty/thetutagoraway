@@ -61,7 +61,8 @@ export const DEPTH = {
       [['Is an aunt in the nuclear or the extended family?', 'extended', 'sorting'], ['What promise comes with honouring parents in Ephesians 6:3?', 'That it may go well with you and you may live long', 'promise']]),
   },
   PROTECTION: {
-    pre: [['G3o:CHRIST.TRUST.a', 'The child names people he or she can trust before learning whom to tell.'], ['G3o:CHRIST.TRUST.c', 'Grade 3 began reporting people who touch a child wrongly.']],
+    pre: [['G3o:CHRIST.TRUST.a', 'The child names people he or she can trust before learning whom to tell.'], ['G3o:CHRIST.TRUST.c', 'Grade 3 began reporting people who touch a child wrongly.'],
+      ['G3:COPE_FEELINGS', 'Coping with sad and frightened feelings (Grade 3) lets the child name the bad feeling a wrong touch brings and act on it.', 'helpful']],
     mis: [['M_C4_PRO_ONCE_ONLY', 'Thinks a child need not tell if the wrong touch happened only once or the person said sorry.', 'A person touched you wrongly once and said sorry. Should you still tell a trusted adult?', 'No, it was only once', 'Yes, always tell a trusted adult', 'The child wants to keep the peace and thinks one time is too small to report.', 'Repeat the rule with no exceptions: say no, go away, tell. Name three trusted adults the child could tell.', 'Always tell a trusted adult, even if it happened once and even if the person said sorry.', FAITH]],
     fix: {},
     pack: P('The child says NO, goes away and tells a trusted adult if touched wrongly; knows it is never the child\'s fault, that a secret about touching must be told, and that people a child knows can also do wrong.',
@@ -98,7 +99,8 @@ export const DEPTH = {
       [['Is Acts in the Old or the New Testament?', 'New Testament', 'sorting'], ['Which is the first book of the Bible?', 'Genesis', 'first book']]),
   },
   ZACCHAEUS: {
-    pre: [['G3o:CHRIST.HONESTY.c', 'Grade 3 learnt to respect other people\'s property; Zacchaeus paid back what he had taken.'], ['G3o:CHRIST.HONESTY.a', 'The story of Ananias and Sapphira showed the cost of dishonesty with money.']],
+    pre: [['G3o:CHRIST.HONESTY.c', 'Grade 3 learnt to respect other people\'s property; Zacchaeus paid back what he had taken.'], ['G3o:CHRIST.HONESTY.a', 'The story of Ananias and Sapphira showed the cost of dishonesty with money.'],
+      ['G2:PRODIGAL_SON', 'The prodigal son (Grade 2) is the first story of someone turning back from wrong, as Zacchaeus does when he repents.', 'helpful']],
     mis: [['M_C4_ZAC_TREE_WHY', 'Thinks Zacchaeus climbed the tree to hide from Jesus.', 'Why did Zacchaeus climb the sycamore-fig tree (Luke 19:3-4)?', 'To hide from Jesus', 'He was short and wanted to see Jesus over the crowd', 'The child knows Zacchaeus was a sinner and expects him to hide.', 'Read Luke 19:3-4 aloud and act it: a short child behind a crowd cannot see. Zacchaeus wanted to see Jesus.', 'He was not hiding. He was short and wanted to see Jesus, so he climbed the tree.']],
     fix: {},
     pack: P('The child retells Luke 19:2-10: a rich chief tax collector climbs a tree to see Jesus, Jesus goes to his house, the people grumble, Zacchaeus gives half to the poor and pays back four times what he cheated; repenting means turning from wrong.',

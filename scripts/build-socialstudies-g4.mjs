@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import * as D from './data/socialstudies-g4-skills.mjs';
 import { SUBS as DEPTH } from './data/socialstudies-depth/g4.mjs';
 import { applyDepth } from './science-depth.mjs';
+import { relinkLowerOutcomes } from './lib/lower-grade.mjs';
 
 const path = new URL('../curriculum/social_studies/g4.json', import.meta.url);
 const g4 = JSON.parse(readFileSync(path, 'utf8'));
@@ -52,6 +53,9 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
 }
 g4.totals = { ...g4.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
 const depth = applyDepth(g4, DEPTH, { dir: 'social_studies', grade: 4, prefix: P, derive: true });
+// Grade 1-3 outcome prerequisites name the Grade 1-3 skill that carries them (19 Nov 2026, scripts/lib/lower-grade.mjs).
+const relink = relinkLowerOutcomes(g4, { root: new URL('..', import.meta.url).pathname, label: 'Social Studies Grade 4' });
+console.log(`social studies g4: ${relink.moved} Grade 1-3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
 g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g4)";
 writeFileSync(path, JSON.stringify(g4, null, 1) + '\n');
 console.log(`social studies g4: ${g4.totals.skills} skills, ${g4.totals.prerequisites} prerequisites, ${g4.totals.misconceptions} misconceptions, ${nLead} forward links to Grade 5 skills; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.pack} teaching pack entries)`);

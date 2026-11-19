@@ -53,7 +53,8 @@ export const SUBS = [
     key: 'LIVING.ANIMALS',
     packNotes: 'Use the animals of the school compound first: hens, ants, a goat, earthworms after rain, spiders in a corner. A model backbone (cotton reels on a string) helps the child feel why it bends.',
     pre: {
-      ANIMAL_LIFE_CHARS: [[`${G3}RESOUR.ANIMALS.b`, 'Caring for domestic animals in Grade 3 shows that animals feed, grow and need shelter.']],
+      ANIMAL_LIFE_CHARS: [[`${G3}RESOUR.ANIMALS.b`, 'Caring for domestic animals in Grade 3 shows that animals feed, grow and need shelter.'],
+        ['ENVI.G1.RESOUR.ANIMALS.DOMESTIC', 'Naming the domestic animals of the locality (Grade 1) gives the child real animals whose signs of life this skill checks.', 'helpful']],
       VERTEBRATE_SORT: [[`${G2}RESOUR.ANIMALS.a`, 'Knowing the animals that give food (cow, hen, fish) gives the child a stock of animals to sort.']],
       VERTEBRATE_RULE: [['ANIMAL_LIFE_CHARS', 'The child must count insects, worms and fish as animals before sorting them by a backbone.']],
     },
@@ -114,7 +115,8 @@ export const SUBS = [
     key: 'LIVING.HUMAN_DIGESTIVE_SYSTEM',
     packNotes: 'A long string or a rope 9 m long, marked where each part ends, shows the child how long the system is and that the small intestine is the longest part. Health statements are to be confirmed by a teacher or a health worker.',
     pre: {
-      DIGESTIVE_PARTS: [[`${G3}SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b`, 'Sorting foods into groups in Grade 3 gives the child the food whose journey this skill follows.']],
+      DIGESTIVE_PARTS: [[`${G3}SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b`, 'Sorting foods into groups in Grade 3 gives the child the food whose journey this skill follows.'],
+        ['ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES', 'Food from plants and food from animals eaten at home (Grade 1) is the food the child follows from the mouth to the stomach.', 'helpful']],
       DIGESTIVE_ORDER: [[`${G3}SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a`, 'The child needs a real food (a piece of ugali) whose path to follow.']],
     },
     mis: [
@@ -218,7 +220,8 @@ export const SUBS = [
     key: 'MATTER.MANAGEMENT_OF_SOLID_WAST',
     packNotes: 'A waste audit of the classroom bin is the anchor: the child sorts real (clean) waste into decomposable and non-decomposable. A buried-items trial (a banana peel and a polythene bag buried for four weeks) shows the difference.',
     pre: {
-      WASTE_CLASSIFY: [[`${G3}RESOUR.WASTE_MATERIALS.c`, 'Managing waste materials in Grade 3 gives the child real waste to sort.']],
+      WASTE_CLASSIFY: [[`${G3}RESOUR.WASTE_MATERIALS.c`, 'Managing waste materials in Grade 3 gives the child real waste to sort.'],
+        ['ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN', 'Keeping the school clean in Grade 2 means picking up litter: peels, paper and plastic, the waste this skill sorts.', 'helpful']],
       WASTE_DANGERS: [],
       WASTE_MANAGE: [],
     },
@@ -461,7 +464,7 @@ export const SUBS = [
     key: 'FORCE_.HEAT',
     packNotes: 'Heat work is done with the teacher: a jiko or a kettle is handled only by an adult. The child feels warmth from the Sun on a dark and a white cloth, and rubs hands to feel friction heat. First-aid statements are to be confirmed by a teacher or a health worker.',
     pre: {
-      HEAT_SOURCES: [],
+      HEAT_SOURCES: [['ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY', 'The sun seen in the sky by day (Grade 1) is the main source of heat in nature.', 'helpful']],
       HEAT_USES: [],
       HEAT_SAFETY: [[`${G3}SOCIAL.OUR_COMMUNITY.a`, 'Keeping safe in the community (Grade 3) is the habit this skill applies to heat.']],
     },

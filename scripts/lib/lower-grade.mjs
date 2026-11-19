@@ -14,7 +14,7 @@
 //   - every skill goes in the awaiting list (no families yet), and the SQL deletes outcome prerequisites a first run left behind.
 // Used by scripts/build-cre-grade.mjs 1|2|3 and scripts/build-environmental-grade.mjs 1|2|3.
 // ============================================================================
-import { writeFileSync, existsSync } from 'node:fs';
+import { writeFileSync, existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const fail = (m) => { throw new Error(m); };
@@ -105,3 +105,59 @@ export function withOutcomeCleanup(sqlText, cur, skillLike) {
 }
 
 export const exists = existsSync;
+
+// GRADES 4 AND UP (19 Nov 2026): the Grade 4-7 maps were built before Grades 1-3 had skills, so their prerequisites named
+// Grade 1-3 OUTCOMES. Now those grades are built, each such outcome becomes the Grade 1-3 skill that asks it (the first listed),
+// or else the skill whose teacher's rubric marks it. Outcomes no Grade 1-3 skill carries (attitudes) stay outcomes.
+// Run on the finished grade JSON, after every prerequisite is in, by the grade's builder:
+//   scripts/build-science-g4.mjs, build-socialstudies-g4|g5|g7.mjs, build-agriculture-grade.mjs, build-cre-grade.mjs,
+//   build-english-g4.mjs, build-kiswahili-grade.mjs.
+// A moved outcome whose skill the skill already names is dropped (one prerequisite, not two); every skill must keep two or more.
+// The SQL deletes the outcome prerequisites an earlier run wrote (withOutcomeCleanup, or build-maths-sql-grade.mjs).
+const LOWER_INDEX = new Map();   // root -> Map(outcome code -> [skills that ask it..., skills whose rubric marks it...])
+function lowerIndex(root) {
+  if (LOWER_INDEX.has(root)) return LOWER_INDEX.get(root);
+  const asks = new Map(), marks = new Map();
+  const dir = join(root, 'curriculum');
+  for (const subject of readdirSync(dir)) for (const g of [1, 2, 3]) {
+    const f = join(dir, subject, `g${g}.json`);
+    if (!existsSync(f)) continue;
+    for (const s of JSON.parse(readFileSync(f, 'utf8')).sub_strands || []) for (const k of s.skills || []) {
+      for (const o of k.outcomes || []) (asks.get(o) || asks.set(o, []).get(o)).push(k.code);
+      for (const o of k.teacher_rubric?.outcomes || []) (marks.get(o) || marks.set(o, []).get(o)).push(k.code);
+    }
+  }
+  const idx = new Map([...marks, ...asks].map(([o]) => [o, [...(asks.get(o) || []), ...(marks.get(o) || [])]]));
+  LOWER_INDEX.set(root, idx);
+  return idx;
+}
+
+export function relinkLowerOutcomes(cur, { root, label }) {
+  const idx = lowerIndex(root);
+  let moved = 0, merged = 0;
+  const kept = [], short = [];
+  for (const s of cur.sub_strands) for (const k of s.skills || []) {
+    const next = [];
+    for (const p of k.prerequisites) {
+      const lower = p.kind === 'outcome' && /^[A-Z]+\.G[123]\./.test(p.requires);
+      const skill = lower ? (idx.get(p.requires) || [])[0] : null;
+      if (lower && !skill) kept.push(p.requires);
+      const q = skill ? { ...p, requires: skill, kind: 'skill' } : p;
+      if (skill) moved++;
+      const twin = next.find(x => x.requires === q.requires);
+      if (twin) {   // two outcomes carried by one skill: one prerequisite, with the fuller reason and the stronger strength
+        merged++;
+        if (q.reason.length > twin.reason.length) twin.reason = q.reason;
+        if (q.strength === 'essential') twin.strength = 'essential';
+        continue;
+      }
+      next.push(q);
+    }
+    k.prerequisites = next;
+    if (new Set(next.map(p => p.requires)).size < 2) short.push(k.code);
+  }
+  if (short.length) fail(`${label}: fewer than two prerequisites once Grade 1-3 outcomes name their skills (add another): ${short.join(', ')}`);
+  const all = cur.sub_strands.flatMap(s => s.skills || []);
+  cur.totals = { ...cur.totals, prerequisites: all.reduce((n, k) => n + k.prerequisites.length, 0) };
+  return { moved, merged, kept };
+}

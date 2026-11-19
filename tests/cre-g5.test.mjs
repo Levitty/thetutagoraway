@@ -16,7 +16,7 @@ test('the map is generated from the file HOREB owns, the official outcomes and K
   assert.equal(Object.keys(OUTCOMES).length, 115);
   assert.equal(Object.keys(SKILLS).length, 35);
   assert.equal(Object.keys(MIS_FEEDBACK).length, 140);
-  assert.deepEqual([source.totals.skills, source.totals.prerequisites, source.totals.misconceptions], [35, 100, 140]);
+  assert.deepEqual([source.totals.skills, source.totals.prerequisites, source.totals.misconceptions], [35, 99, 140]);   // 100 until 19 Nov 2026: two Grade 3 outcomes carried by one skill became one prerequisite
   for (const s of subs) for (const o of s.outcomes) assert.ok(/^kicd_(verified|read)$/.test(o.status), `${o.code}: outcome status changed`);
   assert.ok(source.rubrics.length && source.rubrics.every(r => r.indicators.length));
 });
