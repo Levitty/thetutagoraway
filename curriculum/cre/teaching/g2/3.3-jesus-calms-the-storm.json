@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM",
+ "title": "Jesus calms the Storm",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM",
+   "key_step": "The child narrates Jesus calming the storm (Matthew 8:23-27) and lists lessons: trust Jesus, call on him, his power over nature.",
+   "floor": {
+    "prerequisite": "Knows Jesus did miracles.",
+    "question": "Name a miracle of Jesus.",
+    "answer": "Changing water into wine (healing Simon's mother-in-law)"
+   },
+   "representations": [
+    "picture cards of Matthew 8",
+    "a blue cloth for waves",
+    "the disciples' words on a card"
+   ],
+   "steps": [
+    "Picture-read the passage.",
+    "Act out the storm and the calm.",
+    "Narrate in order.",
+    "List lessons."
+   ],
+   "contexts": [
+    "a thunderstorm at night",
+    "a child facing a hard problem",
+    "fishermen on a lake"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Lord, save us!\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "What did Jesus do next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he calmed the storm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_AWAKE",
+     "listen_for": [
+      "Steering the boat"
+     ],
+     "ask": "What was Jesus doing when the storm began?",
+     "repair": "Read Matthew 8:24."
+    },
+    {
+     "code": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_SWAM",
+     "listen_for": [
+      "They swam to shore"
+     ],
+     "ask": "How did the storm end?",
+     "repair": "Read Matthew 8:26."
+    },
+    {
+     "code": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_PETER",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "In the calming of the storm, did Peter walk on water?",
+     "repair": "Compare the two pictures."
+    },
+    {
+     "code": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_FEAR_BAD",
+     "listen_for": [
+      "Hide it, fear is bad"
+     ],
+     "ask": "What should we do when we are afraid?",
+     "repair": "Say: the disciples called on Jesus and he helped. We can too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was Jesus doing in the storm?",
+     "answer": "Sleeping",
+     "shows": "narrate"
+    },
+    {
+     "question": "Name a lesson from the miracle.",
+     "answer": "Trust Jesus in trouble",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W",
+ "title": "Healing the Man with a Withered Hand",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Children who are abled differently are included and never pointed at; prayer for healing is shared only if a child wishes.",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+   "key_step": "The child retells the healing of the man with a withered hand (Matthew 12:9-13) and says we should show compassion.",
+   "floor": {
+    "prerequisite": "Knows Jesus healed Simon's mother-in-law.",
+    "question": "What illness did Simon's mother-in-law have?",
+    "answer": "A high fever"
+   },
+   "representations": [
+    "picture cards of Matthew 12",
+    "a drawing of a sheep in a pit",
+    "role-play of caring for someone"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Retell in order.",
+    "Say why it was right to heal.",
+    "Say how we show compassion."
+   ],
+   "contexts": [
+    "a classmate who is abled differently",
+    "visiting the sick",
+    "helping on a rest day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Stretch out your hand.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "What happened when the man obeyed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say his hand was healed."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: do good always."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_LEG",
+     "listen_for": [
+      "He was blind"
+     ],
+     "ask": "What was wrong with the man?",
+     "repair": "Show a picture and read Matthew 12:10."
+    },
+    {
+     "code": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_MARKET",
+     "listen_for": [
+      "In the market"
+     ],
+     "ask": "Where was the man healed?",
+     "repair": "Read Matthew 12:9."
+    },
+    {
+     "code": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_SABBATH_WRONG",
+     "listen_for": [
+      "No, it broke the rule"
+     ],
+     "ask": "Was it right for Jesus to heal on the Sabbath?",
+     "repair": "Read Matthew 12:11-12: the sheep in a pit."
+    },
+    {
+     "code": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_TOUCH",
+     "listen_for": [
+      "With medicine"
+     ],
+     "ask": "How did Jesus heal the hand?",
+     "repair": "Read Matthew 12:13 and act it out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was the man healed?",
+     "answer": "In the synagogue",
+     "shows": "retell"
+    },
+    {
+     "question": "What did Jesus tell the man?",
+     "answer": "Stretch out your hand",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

@@ -98,15 +98,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CREATI.SELF_AWARENESS.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying what one likes about oneself comes before seeing oneself as God made one. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "God as the creator of everything, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -140,8 +140,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CREATI.SELF_AWARENESS.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing what one likes about oneself. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -373,8 +373,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CREATI.MY_FAMILY.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming family members, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -560,8 +560,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "God as the creator of the sky, sun, moon and stars comes before the creation of people. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -602,8 +602,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CHRIST.OBEDIENCE.b",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reasons for obeying, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -834,8 +834,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The Bible's Old Testament, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -870,8 +870,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The number of books in the Old Testament. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1101,8 +1101,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The call of Samuel: another time God called a person by name. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1432,8 +1432,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus healing the man with a withered hand: God heals. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1598,8 +1598,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Daniel in the den of lions: another story of God protecting the faithful. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1765,8 +1765,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CHRIST.OBEDIENCE.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Obeying teachers and leaders: respect for elders. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -1933,15 +1933,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The three gifts of the wise men, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The shepherds at the birth of Jesus. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2109,8 +2109,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CHRIST.SHARING.b",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Showing kindness by sharing. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2275,15 +2275,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The widow of Zarephath: God provides food. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CHRIST.SHARING.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Items we share, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2442,8 +2442,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus calming the storm: power over wind and waves. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2609,8 +2609,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jesus healing the sick, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2778,8 +2778,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_EA.EASTER.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.EASTER.EASTER_LOVE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The death of Jesus as a sign of love, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -2952,8 +2952,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CHRIST.HONESTY.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reasons for telling the truth, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3119,8 +3119,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CHRIST.THANKFULNESS.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The importance of thanking others, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3277,8 +3277,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CHRIST.FORGIVENESS.b",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The prodigal son: a father who forgives, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3442,15 +3442,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.b",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Refusing gifts from strangers, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CHRIST.HONESTY.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Telling the truth to adults. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3615,15 +3615,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.CHRIST.WORK.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.WORK.HELP_PARENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "How children help parents at home, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CHRIST.RESPONSIBILITY.b",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Taking care of items used at school. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3781,8 +3781,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_CH.PRAYER.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The first four lines of the Lord's Prayer, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3956,8 +3956,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CRE.G2.THE_CH.THE_HOLY_SPIRIT.a",
-       "kind": "outcome",
+       "requires": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The promise Jesus gave his disciples, from Grade 2. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
@@ -3998,8 +3998,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CRE.G2.CHRIST.SHARING.b",
-       "kind": "outcome",
+       "requires": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Kindness by sharing, a fruit of the Spirit. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.SHARING",
+ "title": "Sharing",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+   "key_step": "The child names items shared at school and says sharing shows kindness, while personal items are kept for health.",
+   "floor": {
+    "prerequisite": "Knows items shared and not shared at home.",
+    "question": "Should a toothbrush be shared?",
+    "answer": "No"
+   },
+   "representations": [
+    "class items",
+    "a share/do not share chart",
+    "a role-play"
+   ],
+   "steps": [
+    "Name items shared at school.",
+    "Say why we share.",
+    "Practise offering and asking.",
+    "Name items we do not share."
+   ],
+   "contexts": [
+    "art lesson with crayons",
+    "break time with a ball",
+    "a new pupil"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: books, ball, crayons, toothbrush."
+    },
+    {
+     "beat": "point",
+     "do": "Point at toothbrush.",
+     "say": "Is this shared at school?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the shared items."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_NONE",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "Name something shared at school.",
+     "repair": "Walk around the class naming shared things."
+    },
+    {
+     "code": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_GRAB",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is taking a friend's crayon without asking sharing?",
+     "repair": "Role-play asking and offering."
+    },
+    {
+     "code": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_FRIENDS_ONLY",
+     "listen_for": [
+      "No, only with my friends"
+     ],
+     "ask": "Should you share with a new pupil?",
+     "repair": "Talk about how a new pupil feels. Share with all."
+    },
+    {
+     "code": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_BOTTLE",
+     "listen_for": [
+      "Yes, it is sharing"
+     ],
+     "ask": "Should you drink from your friend's water bottle?",
+     "repair": "Show pouring into a cup instead."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item shared at school.",
+     "answer": "Books (desks, balls)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Why do we share?",
+     "answer": "To show kindness and love",
+     "shows": "reason"
+    }
+   ]
+  }
+ ]
+}

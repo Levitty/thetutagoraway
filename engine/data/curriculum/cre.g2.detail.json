@@ -1,0 +1,280 @@
+{
+ "outcomes": {
+  "CRE.G2.CREATI.SELF_AWARENESS.a": "state what they like about themselves",
+  "CRE.G2.CREATI.SELF_AWARENESS.b": "list five different chores they do at home",
+  "CRE.G2.CREATI.SELF_AWARENESS.c": "appreciate their physical appearance. Specific learning outcomes Suggested learning experiences Suggested",
+  "CRE.G2.CREATI.MY_FAMILY.a": "name family members to promote a sense of belonging",
+  "CRE.G2.CREATI.MY_FAMILY.b": "state items shared at home to foster family unity",
+  "CRE.G2.CREATI.MY_FAMILY.c": "identify four items that should not be shared at home for healthy living",
+  "CRE.G2.CREATI.MY_FAMILY.d": "appreciate members of the extended family for harmonious co-existence",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.a": "recognise God as the creator of the sky, sun, moon, and stars",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.b": "draw the sun, moon, and stars to appreciate God’s creation",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.c": "respect God as the creator of everything. Suggested learning experiences Suggested Key The learner is guided to",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.x4": "in groups, list the importance of reading the Bible",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.x5": "list the number of times they read the Bible as a family",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.x6": "watch a video clip of children reading the Bible",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.x7": "in groups sing a song about the Bible, ‘My Bible and I, ooh..........’",
+  "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.x8": "read and recite Psalms 119:105",
+  "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.a": "state the number of books in the Old Testament",
+  "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.b": "identify the first two books in the Old Testament",
+  "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.c": "appreciate the Bible as the word of God by reading it always",
+  "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.a": "retell the call of Samuel as guided by the scriptures",
+  "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.b": "mention the lesson learnt from the call of Samuel",
+  "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.c": "desire to obey God’s commandments",
+  "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.a": "retell the story of Daniel as guided by the Bible text",
+  "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.b": "list four lessons learnt from the story of Daniel",
+  "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.c": "apply lessons learnt in day-to-day life",
+  "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.d": "desire to depend on God’s protection",
+  "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.a": "retell the story of the widow of Zarephath",
+  "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.b": "identify lessons learnt from the miracle",
+  "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.c": "desire to depend on God’s provision",
+  "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a": "relate the joy of the shepherds as guided by the scriptures",
+  "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.b": "describe the dedication of baby Jesus",
+  "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.c": "appreciate the birth of Jesus Christ our Saviour by obeying Him",
+  "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.a": "list three gifts given to baby Jesus by the wise men",
+  "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.b": "demonstrate assertiveness by refusing gifts from strangers",
+  "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.c": "appreciate Jesus Christ as a gift from God",
+  "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM.a": "narrate the miracle of calming the storm",
+  "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM.b": "list lessons learnt from the miracle of calming the storm",
+  "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM.c": "desire to trust God when faced with challenging situations",
+  "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.a": "retell the story of the miraculous catch of fish",
+  "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.b": "mention three lessons learnt from the miraculous catch of fish",
+  "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.c": "desire to trust in God as portrayed by the fishermen",
+  "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.a": "retell the healing of the man with a withered hand",
+  "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.b": "mention occasions they prayed to God for healing",
+  "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.c": "desire to show compassion to others",
+  "CRE.G2.THE_EA.EASTER.a": "recognise the death of Jesus as a sign of total love for humankind",
+  "CRE.G2.THE_EA.EASTER.b": "list four activities they do in church during Easter celebrations",
+  "CRE.G2.THE_EA.EASTER.c": "appreciate Jesus Christ’s death and resurrection as the way to salvation",
+  "CRE.G2.CHRIST.SHARING.a": "identify five items shared at school",
+  "CRE.G2.CHRIST.SHARING.b": "demonstrate kindness by sharing items with others",
+  "CRE.G2.CHRIST.SHARING.c": "desire to share items to promote harmonious living",
+  "CRE.G2.CHRIST.OBEDIENCE.a": "list five ways they obey teachers and the children’s government",
+  "CRE.G2.CHRIST.OBEDIENCE.b": "discuss reasons for obeying teachers and the children’s government",
+  "CRE.G2.CHRIST.OBEDIENCE.c": "practise obedience in their day-to-day lives",
+  "CRE.G2.CHRIST.HONESTY.a": "tell reasons for telling the truth in their interaction with others",
+  "CRE.G2.CHRIST.HONESTY.b": "demonstrate responsibility by completing their homework on time",
+  "CRE.G2.CHRIST.HONESTY.c": "practise honesty by taking lost and found items to the teacher or parent",
+  "CRE.G2.CHRIST.HONESTY.d": "desire to be honest by not copying other pupils’ work",
+  "CRE.G2.CHRIST.THANKFULNESS.a": "list the importance of thanking others",
+  "CRE.G2.CHRIST.THANKFULNESS.b": "demonstrate thankfulness in day-to-day life",
+  "CRE.G2.CHRIST.THANKFULNESS.c": "appreciate God by thanking Him always",
+  "CRE.G2.CHRIST.FORGIVENESS.a": "practise forgiveness to foster harmonious living",
+  "CRE.G2.CHRIST.FORGIVENESS.b": "dramatise the story of the prodigal son",
+  "CRE.G2.CHRIST.FORGIVENESS.c": "desire to forgive others in their day-to-day lives",
+  "CRE.G2.CHRIST.RESPONSIBILITY.a": "mention items they carry to school",
+  "CRE.G2.CHRIST.RESPONSIBILITY.b": "take care of the items they use in school",
+  "CRE.G2.CHRIST.RESPONSIBILITY.c": "desire to be responsible by taking care of their items",
+  "CRE.G2.CHRIST.WORK.a": "mention how they help parents at home",
+  "CRE.G2.CHRIST.WORK.b": "take part in doing simple chores at school and in Church",
+  "CRE.G2.CHRIST.WORK.c": "appreciate work by doing simple chores",
+  "CRE.G2.THE_CH.PRAYER.a": "recite the first four lines of the Lord’s prayer",
+  "CRE.G2.THE_CH.PRAYER.b": "retell the story of a friend at midnight",
+  "CRE.G2.THE_CH.PRAYER.c": "desire to develop a relationship with God through prayers",
+  "CRE.G2.THE_CH.THE_HOLY_SPIRIT.a": "state the promise Jesus gave to His disciples",
+  "CRE.G2.THE_CH.THE_HOLY_SPIRIT.b": "mention three roles of the Holy Spirit in the life of a Christian",
+  "CRE.G2.THE_CH.THE_HOLY_SPIRIT.c": "appreciate the work of the Holy Spirit in their day-to-day lives"
+ },
+ "skills": {
+  "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES": {
+   "forms": [
+    "a good thing about yourself",
+    "what Psalm 139:13 says",
+    "name a chore"
+   ],
+   "mastery": "States good things about himself or herself (my eyes, my voice, I can run, I help others) as made by God (Psalm 139:13: you knit me together in my mother's womb), and lists five chores done at home (sweeping, washing utensils, fetching water, making the bed, feeding animals). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY": {
+   "forms": [
+    "who is this person to you",
+    "is this family",
+    "nuclear or extended"
+   ],
+   "mastery": "Names family members (father, mother, brothers, sisters) and the extended family (grandparents, uncles, aunts, cousins), says belonging to a family gives love and help, and that Cornelius and all his family worshipped God together (Acts 10:2). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS": {
+   "forms": [
+    "shared or not shared",
+    "why not share it",
+    "name an item we share"
+   ],
+   "mastery": "States items a family shares (food, utensils in turn after washing, chairs, the table, water, books, a radio or TV) to foster unity, and four items that should not be shared for health (toothbrush, towel, comb, underwear, handkerchief, razor blade), because they carry germs from one person to another. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION": {
+   "forms": [
+    "who made the sun",
+    "on which day",
+    "what each light does"
+   ],
+   "mastery": "Says God made the lights in the sky on the fourth day (Genesis 1:14-19): the sun to rule the day, the moon to rule the night, and the stars; they mark days, seasons and years; God saw that it was good. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.1.1, CRE.G2.RUBRIC.1.2, CRE.G2.RUBRIC.1.3, CRE.G2.RUBRIC.1.4, CRE.G2.RUBRIC.1.5, CRE.G2.RUBRIC.1.6), never as a phone question: b) draw the sun, moon, and stars to appreciate God’s creation."
+  },
+  "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE": {
+   "forms": [
+    "why read the Bible",
+    "what Psalm 119:105 says",
+    "when to read it"
+   ],
+   "mastery": "Lists why Christians read the Bible: it is God's word, it guides how to live (Psalm 119:105: your word is a lamp for my feet, a light on my path), it teaches about God and Jesus, it comforts and helps us pray; and says families can read it together. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.1.1, CRE.G2.RUBRIC.1.2, CRE.G2.RUBRIC.1.3, CRE.G2.RUBRIC.1.4, CRE.G2.RUBRIC.1.5, CRE.G2.RUBRIC.1.6), never as a phone question: e) list the number of times they read the Bible as a family; f) watch a video clip of children reading the Bible; g) in groups sing a song about the Bible, ‘My Bible and I, ooh..........’; h) read and recite Psalms 119:105."
+  },
+  "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT": {
+   "forms": [
+    "how many books",
+    "first book",
+    "second book"
+   ],
+   "mastery": "States the Old Testament has 39 books, names Genesis and Exodus as its first two books, and knows the Bible has two divisions (Old and New Testament). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL": {
+   "forms": [
+    "who called Samuel",
+    "whom Samuel ran to",
+    "what Samuel finally said"
+   ],
+   "mastery": "Retells 1 Samuel 3:3-10: the boy Samuel was sleeping in the house of the Lord; the Lord called \"Samuel!\"; three times he ran to Eli thinking Eli called; Eli understood it was the Lord and told him to answer; the Lord called again and Samuel said \"Speak, for your servant is listening.\" Lesson: listen to God and obey, and answer when called. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL": {
+   "forms": [
+    "why Daniel was thrown to the lions",
+    "how many times he prayed",
+    "who shut the lions' mouths"
+   ],
+   "mastery": "Retells Daniel 6: officials tricked King Darius into a law that no one should pray to anyone but the king for thirty days; Daniel still prayed three times a day at his open window towards Jerusalem; he was thrown into the den of lions; God sent his angel and shut the lions' mouths; in the morning Daniel was unharmed and the king praised God. Lessons: pray always, trust God, God protects, be faithful even when it is hard. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.2.1, CRE.G2.RUBRIC.2.2, CRE.G2.RUBRIC.2.3, CRE.G2.RUBRIC.2.4, CRE.G2.RUBRIC.2.5, CRE.G2.RUBRIC.2.6), never as a phone question: c) apply lessons learnt in day-to-day life."
+  },
+  "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH": {
+   "forms": [
+    "what the widow had",
+    "what Elijah asked",
+    "what happened to the flour and oil"
+   ],
+   "mastery": "Retells 1 Kings 17:7-16: in a drought the brook dried up and God sent Elijah to Zarephath; a widow was gathering sticks to cook a last meal from a handful of flour and a little oil for herself and her son; Elijah asked her to make him a small loaf first, promising God would keep the flour and oil from running out; she obeyed, and the flour and oil did not run out until the rain came. Lessons: God provides, share even when we have little, trust and obey God's word. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS": {
+   "forms": [
+    "what the shepherds did",
+    "how they felt",
+    "where they found Jesus"
+   ],
+   "mastery": "Relates Luke 2:15-20: after the angels left, the shepherds hurried to Bethlehem and found Mary, Joseph and the baby lying in a manger; they spread the word about the child; they returned glorifying and praising God for all they had heard and seen. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION": {
+   "forms": [
+    "where Jesus was taken",
+    "what was offered",
+    "who held him"
+   ],
+   "mastery": "Describes Luke 2:22-38: Mary and Joseph took baby Jesus to the temple in Jerusalem to present him to the Lord; they offered a pair of doves or two young pigeons; Simeon took Jesus in his arms and praised God; Anna the prophetess thanked God and spoke about the child. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS": {
+   "forms": [
+    "name a gift",
+    "gift from a wise man or a shepherd",
+    "what to say to a stranger's gift"
+   ],
+   "mastery": "Lists the three gifts (gold, frankincense and myrrh, Matthew 2:11), says the wise men gave them out of love and worship, and knows the safety rule for children: politely refuse gifts from strangers and tell a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.3.1, CRE.G2.RUBRIC.3.2, CRE.G2.RUBRIC.3.3, CRE.G2.RUBRIC.3.4, CRE.G2.RUBRIC.3.5, CRE.G2.RUBRIC.3.6), never as a phone question: b) demonstrate assertiveness by refusing gifts from strangers."
+  },
+  "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM": {
+   "forms": [
+    "where Jesus was",
+    "what the disciples said",
+    "what Jesus did"
+   ],
+   "mastery": "Narrates Matthew 8:23-27: Jesus and his disciples were in a boat; a furious storm came and waves swept over the boat; Jesus was sleeping; the disciples woke him, \"Lord, save us! We're going to drown!\"; he asked why they were afraid, rebuked the winds and waves, and it was completely calm; they were amazed. Lessons: trust Jesus in trouble, call on him, he has power over nature. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH": {
+   "forms": [
+    "what Jesus told Simon",
+    "how many fish",
+    "what Simon said"
+   ],
+   "mastery": "Retells Luke 5:3-9: Jesus taught from Simon's boat; he told Simon to go into deep water and let down the nets; Simon said they had worked all night and caught nothing, but because Jesus said so he would; they caught so many fish the nets began to break and two boats were so full they began to sink; Simon fell at Jesus' knees. Lessons: obey Jesus, trust him, do not give up, Jesus provides. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND": {
+   "forms": [
+    "where Jesus was",
+    "what Jesus told the man",
+    "what happened"
+   ],
+   "mastery": "Retells Matthew 12:9-13: in the synagogue on the Sabbath there was a man with a shrivelled hand; the Pharisees asked if it was lawful to heal on the Sabbath; Jesus said a person would lift a sheep out of a pit on the Sabbath, and it is lawful to do good; he told the man \"Stretch out your hand\" and it was completely restored. Lesson: show compassion and do good to others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.3.1, CRE.G2.RUBRIC.3.2, CRE.G2.RUBRIC.3.3, CRE.G2.RUBRIC.3.4, CRE.G2.RUBRIC.3.5, CRE.G2.RUBRIC.3.6), never as a phone question: b) mention occasions they prayed to God for healing."
+  },
+  "CRES.G2.THE_EA.EASTER.EASTER_LOVE": {
+   "forms": [
+    "why Jesus died",
+    "what happened on the third day",
+    "an Easter church activity"
+   ],
+   "mastery": "Says Jesus died on the cross on Good Friday as a sign of God's great love (John 3:16), was buried and was raised on the third day (1 Corinthians 15:3-4), and lists activities done in church at Easter: special services, prayers, singing, Bible reading, Palm Sunday processions, sharing with the needy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING": {
+   "forms": [
+    "shared at school or not",
+    "name an item we share",
+    "why share"
+   ],
+   "mastery": "Names items shared at school (books, desks, crayons, balls and play equipment, the library, water, toilets, classroom, food at a party) and says sharing shows kindness and love, and that personal items (toothbrush, handkerchief, water bottle mouthpiece) are not shared for health. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: b) demonstrate kindness by sharing items with others."
+  },
+  "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS": {
+   "forms": [
+    "a way of obeying",
+    "why obey",
+    "obedient or not"
+   ],
+   "mastery": "Lists ways of obeying teachers and the children's government (prefects, class monitors): follow class rules, listen, do homework, keep time, do duties, keep the class clean; and reasons: they guide and care for us, there is order and safety, God tells us to obey leaders (Hebrews 13:17). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: c) practise obedience in their day-to-day lives."
+  },
+  "CRES.G2.CHRIST.HONESTY.TELL_TRUTH": {
+   "forms": [
+    "why tell the truth",
+    "honest or not",
+    "what Proverbs says"
+   ],
+   "mastery": "Gives reasons for telling the truth: God wants us to be truthful (Proverbs 12:17, 19: truthful lips endure forever), people trust us, lies lead to more lies and trouble, it keeps friendships; and recognises honest acts (owning up, returning lost items, not copying). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: b) demonstrate responsibility by completing their homework on time; c) practise honesty by taking lost and found items to the teacher or parent."
+  },
+  "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS": {
+   "forms": [
+    "why say thank you",
+    "when to say thank you",
+    "thankful or not"
+   ],
+   "mastery": "Lists why we thank others: it shows we appreciate them, makes them happy, encourages them to help again, builds friendship, and God tells us to give thanks in all circumstances (1 Thessalonians 5:18); and says when to thank (when given something, helped, served food, taught). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: b) demonstrate thankfulness in day-to-day life."
+  },
+  "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON": {
+   "forms": [
+    "what the younger son did",
+    "what the father did",
+    "what is the lesson"
+   ],
+   "mastery": "Tells the story of Luke 15:11-24 in order for a drama: the younger son asked for his share, went to a distant country and wasted it; a famine came and he fed pigs; he came to his senses and went home to say sorry; his father ran to him, hugged him, gave him the best robe, a ring and sandals and held a feast. Lesson: God forgives, and we forgive others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: a) practise forgiveness to foster harmonious living."
+  },
+  "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS": {
+   "forms": [
+    "name an item you carry to school",
+    "how to care for it",
+    "responsible or careless"
+   ],
+   "mastery": "Names items carried to school (books, pencils, rubber, ruler, crayons, school bag, water bottle, lunch box, sweater) and how a responsible child cares for them: cover books, keep them in the bag, label them, not lend carelessly, bring them back home; doing it well as for the Lord (Colossians 3:23). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: b) take care of the items they use in school."
+  },
+  "CRES.G2.CHRIST.WORK.HELP_PARENTS": {
+   "forms": [
+    "a way to help at home",
+    "helpful or not",
+    "why help"
+   ],
+   "mastery": "Mentions ways children help parents at home (sweeping, washing utensils, fetching water, feeding animals, caring for younger siblings, making the bed, picking litter) and says helping shows love and that work is good. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.4.1, CRE.G2.RUBRIC.4.2, CRE.G2.RUBRIC.4.3, CRE.G2.RUBRIC.4.4, CRE.G2.RUBRIC.4.5, CRE.G2.RUBRIC.4.6, CRE.G2.RUBRIC.4.7, CRE.G2.RUBRIC.4.8, CRE.G2.RUBRIC.4.9), never as a phone question: b) take part in doing simple chores at school and in Church."
+  },
+  "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT": {
+   "forms": [
+    "what the man asked for",
+    "why the friend got up",
+    "the lesson about prayer"
+   ],
+   "mastery": "Retells Luke 11:5-10: a man went to a friend at midnight asking for three loaves because a traveller had arrived and he had nothing to give; the friend said the door was locked and his children were in bed; because the man kept asking, the friend got up and gave him what he needed; Jesus said \"Ask and it will be given to you\". Lesson: keep praying. Also knows the first lines of the Lord's Prayer (Our Father in heaven, hallowed be your name, your kingdom come, your will be done). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G2.RUBRIC.5.1, CRE.G2.RUBRIC.5.2, CRE.G2.RUBRIC.5.3, CRE.G2.RUBRIC.5.4), never as a phone question: a) recite the first four lines of the Lord’s prayer."
+  },
+  "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE": {
+   "forms": [
+    "what Jesus promised",
+    "a role of the Holy Spirit",
+    "where to wait"
+   ],
+   "mastery": "States that Jesus promised his disciples the Holy Spirit and told them to wait in Jerusalem for the gift the Father promised (Acts 1:4), and mentions roles of the Holy Spirit in a Christian's life: he strengthens (gives power, Luke 24:49), teaches and reminds (John 14:26), guides and comforts. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_",
+ "title": "Creation of the sky, sun, moon, and stars",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes d to h in this file belong to a reading-the-Bible sub-strand folded in by the text layer; a reviewer should check them against the printed KICD design.",
+ "skills": [
+  {
+   "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+   "key_step": "The child says God created the sun, moon and stars on the fourth day (Genesis 1:14-19) and what each does.",
+   "floor": {
+    "prerequisite": "Knows God created plants and animals.",
+    "question": "Who created plants and animals?",
+    "answer": "God"
+   },
+   "representations": [
+    "pictures of the sun, moon and stars",
+    "a seven-day creation strip",
+    "Genesis 1:16 on a card"
+   ],
+   "steps": [
+    "Observe the sky.",
+    "Read Genesis 1:14-19.",
+    "Say who made the lights and on which day.",
+    "Draw and colour them."
+   ],
+   "contexts": [
+    "a sunny morning",
+    "a starry night in the village",
+    "a full moon"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the days 1 to 7."
+    },
+    {
+     "beat": "point",
+     "do": "Point at day 4.",
+     "say": "What did God make on this day?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the sun, moon and stars."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw them under day 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_PEOPLE",
+     "listen_for": [
+      "People"
+     ],
+     "ask": "Who created the sun, moon and stars?",
+     "repair": "Read Genesis 1:16. People make bulbs; God made the sun."
+    },
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_DAY_ONE",
+     "listen_for": [
+      "The first day"
+     ],
+     "ask": "On which day did God make the sun, moon and stars?",
+     "repair": "Count the days of creation on fingers to four."
+    },
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_SUN_NIGHT",
+     "listen_for": [
+      "The sun"
+     ],
+     "ask": "Which light rules the night?",
+     "repair": "Draw a day sky and a night sky and place each light."
+    },
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_STARS_FEW",
+     "listen_for": [
+      "Only to look nice"
+     ],
+     "ask": "What are the lights in the sky for, says Genesis 1:14?",
+     "repair": "Read Genesis 1:14 and link with days and seasons."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who created the sun?",
+     "answer": "God",
+     "shows": "creator"
+    },
+    {
+     "question": "Which light rules the night?",
+     "answer": "The moon",
+     "shows": "creation"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE",
+   "key_step": "The child lists why Christians read the Bible and says Psalm 119:105.",
+   "floor": {
+    "prerequisite": "Knows how to handle the Bible with respect.",
+    "question": "How should we handle the Bible?",
+    "answer": "With care and respect"
+   },
+   "representations": [
+    "Psalm 119:105 on a card",
+    "a torch for the lamp picture",
+    "a verse-of-the-day chart"
+   ],
+   "steps": [
+    "Read Psalm 119:105.",
+    "Talk about the lamp.",
+    "List reasons to read the Bible.",
+    "Plan family reading."
+   ],
+   "contexts": [
+    "family devotion",
+    "Sunday school",
+    "a child choosing right over wrong"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Psalm 119:105."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"lamp\".",
+     "say": "How is God's word like a lamp?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it shows the way."
+    },
+    {
+     "beat": "reveal",
+     "do": "List reasons to read the Bible."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_PASTOR",
+     "listen_for": [
+      "No, only pastors"
+     ],
+     "ask": "Can children read the Bible too?",
+     "repair": "Show a children's Bible and read a verse together."
+    },
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_LAMP_REAL",
+     "listen_for": [
+      "The Bible glows"
+     ],
+     "ask": "What does \"your word is a lamp for my feet\" mean?",
+     "repair": "Walk a dark path with a torch: it shows where to step. God's word shows how to live."
+    },
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_STORIES",
+     "listen_for": [
+      "For fun stories only"
+     ],
+     "ask": "Why do Christians read the Bible?",
+     "repair": "Name a story and its lesson for life."
+    },
+    {
+     "code": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_SUNDAY",
+     "listen_for": [
+      "Only on Sunday"
+     ],
+     "ask": "When can a family read the Bible?",
+     "repair": "Make a \"verse of the day\" chart for the week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a reason to read the Bible.",
+     "answer": "It guides us (teaches about God)",
+     "shows": "importance"
+    },
+    {
+     "question": "Complete: your word is a lamp...",
+     "answer": "for my feet, a light on my path",
+     "shows": "source"
+    }
+   ]
+  }
+ ]
+}

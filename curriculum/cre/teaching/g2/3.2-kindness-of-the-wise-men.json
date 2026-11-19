@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN",
+ "title": "Kindness of the Wise Men",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Refusing gifts from strangers is child protection: practise saying no and telling a trusted adult; never frighten (SAFE).",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+   "key_step": "The child lists the wise men's three gifts and knows to refuse gifts from strangers and tell a trusted adult.",
+   "floor": {
+    "prerequisite": "Knows the birth story.",
+    "question": "Who came to see baby Jesus in the manger?",
+    "answer": "The shepherds"
+   },
+   "representations": [
+    "three gift boxes",
+    "Matthew 2:11 on a card",
+    "a role-play: saying no to a stranger"
+   ],
+   "steps": [
+    "Read Matthew 2:11.",
+    "Name the three gifts.",
+    "Practise saying no to a stranger's gift.",
+    "Name a trusted adult."
+   ],
+   "contexts": [
+    "Christmas",
+    "a stranger at the school gate",
+    "a birthday party"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three boxes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty boxes.",
+     "say": "What did the wise men give?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name the gifts."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the gifts, then: no to strangers' gifts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_MONEY",
+     "listen_for": [
+      "Money and toys"
+     ],
+     "ask": "Which gifts did the wise men give Jesus?",
+     "repair": "Show three boxes labelled with the gifts."
+    },
+    {
+     "code": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_STRANGER_OK",
+     "listen_for": [
+      "Take it, like baby Jesus got gifts"
+     ],
+     "ask": "A stranger offers you a gift on the way home. What do you do?",
+     "repair": "Separate the story from the rule. Practise \"No, thank you\" and telling a trusted adult."
+    },
+    {
+     "code": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_FOUR",
+     "listen_for": [
+      "Two"
+     ],
+     "ask": "How many kinds of gifts did the wise men bring?",
+     "repair": "Count on three fingers."
+    },
+    {
+     "code": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_SHEPHERDS",
+     "listen_for": [
+      "The shepherds"
+     ],
+     "ask": "Who gave gold to Jesus?",
+     "repair": "Match visitors to what they did."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a gift of the wise men.",
+     "answer": "Gold (frankincense, myrrh)",
+     "shows": "gifts"
+    },
+    {
+     "question": "A stranger offers sweets. What do you do?",
+     "answer": "Say no and tell a trusted adult",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

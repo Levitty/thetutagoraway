@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.WORK",
+ "title": "Work",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.WORK.HELP_PARENTS",
+   "key_step": "The child mentions safe ways of helping parents at home and says work is good.",
+   "floor": {
+    "prerequisite": "Lists chores done at home.",
+    "question": "Name a chore you do.",
+    "answer": "Sweeping (fetching water)"
+   },
+   "representations": [
+    "chore pictures",
+    "a poem on hard work",
+    "a helping chart"
+   ],
+   "steps": [
+    "Say how you help at home.",
+    "Sort safe jobs for children.",
+    "Say why helping is good.",
+    "Keep a helping chart."
+   ],
+   "contexts": [
+    "weekend at home",
+    "harvest time",
+    "a sick parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two columns: children can help, adults only."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"cooking on the jiko\".",
+     "say": "Which column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say adults only."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill the columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_PLAY",
+     "listen_for": [
+      "Playing with a ball"
+     ],
+     "ask": "Which helps your parents: washing cups or playing with a ball?",
+     "repair": "Sort cards into helping and playing."
+    },
+    {
+     "code": "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_HEAVY",
+     "listen_for": [
+      "Yes, to help"
+     ],
+     "ask": "Is it safe for a seven-year-old to cook alone on the jiko?",
+     "repair": "List safe jobs for a child and jobs for adults."
+    },
+    {
+     "code": "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_GIRLS",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Can boys wash utensils?",
+     "repair": "List jobs: everyone can do them."
+    },
+    {
+     "code": "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_LAZY_OK",
+     "listen_for": [
+      "A punishment"
+     ],
+     "ask": "Is work good or a punishment?",
+     "repair": "Read Colossians 3:23. Praise children who help."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way you help your parents.",
+     "answer": "Sweeping (washing utensils)",
+     "shows": "mentions"
+    },
+    {
+     "question": "Is work good or a punishment?",
+     "answer": "Good",
+     "shows": "value"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CREATI.SELF_AWARENESS",
+ "title": "Self-Awareness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+   "key_step": "The child states good things about himself or herself as God's creation (Psalm 139:13) and lists chores done at home.",
+   "floor": {
+    "prerequisite": "Knows each person is unique.",
+    "question": "Are any two people exactly the same?",
+    "answer": "No"
+   },
+   "representations": [
+    "Psalm 139:13 on a card",
+    "a mirror",
+    "chore picture cards"
+   ],
+   "steps": [
+    "Read Psalm 139:13.",
+    "Say one thing you like about yourself.",
+    "List chores you do.",
+    "Draw yourself doing a chore."
+   ],
+   "contexts": [
+    "a class sharing circle",
+    "Saturday chores",
+    "a new baby in the family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Psalm 139:13."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"you knit me together\".",
+     "say": "Who made you?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write one good thing each child says."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_NOTHING",
+     "listen_for": [
+      "Nothing, I am not the best"
+     ],
+     "ask": "Name one thing you like about yourself.",
+     "repair": "Read Psalm 139:13-14. Let each child say one good thing about a classmate, then about himself."
+    },
+    {
+     "code": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_LOOKS_ONLY",
+     "listen_for": [
+      "No, only how I look counts"
+     ],
+     "ask": "Is being kind something to like about yourself?",
+     "repair": "List good things we cannot see: kind, brave, helpful."
+    },
+    {
+     "code": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_CHORE_PLAY",
+     "listen_for": [
+      "Watching TV"
+     ],
+     "ask": "Which is a chore: sweeping or watching TV?",
+     "repair": "A chore is a job that helps at home. Sort cards into chores and play."
+    },
+    {
+     "code": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_PROUD",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does liking yourself mean you are better than others?",
+     "repair": "Say: God made each person special; liking yourself and others go together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a chore you do at home.",
+     "answer": "Sweeping (washing utensils)",
+     "shows": "chores"
+    },
+    {
+     "question": "Who knit you together, says Psalm 139:13?",
+     "answer": "God",
+     "shows": "source"
+    }
+   ]
+  }
+ ]
+}

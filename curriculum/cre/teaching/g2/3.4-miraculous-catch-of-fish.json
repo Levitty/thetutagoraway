@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH",
+ "title": "Miraculous Catch of Fish",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH",
+   "key_step": "The child retells the miraculous catch of fish (Luke 5:3-9) and names lessons: obey and trust Jesus, do not give up.",
+   "floor": {
+    "prerequisite": "Knows Jesus calmed the storm.",
+    "question": "What did Jesus do to the storm?",
+    "answer": "He calmed it"
+   },
+   "representations": [
+    "a net and paper fish",
+    "picture cards of Luke 5",
+    "Simon's words on a card"
+   ],
+   "steps": [
+    "Picture-read the passage.",
+    "Act out the catch.",
+    "Retell in order.",
+    "Name three lessons."
+   ],
+   "contexts": [
+    "trying again after failing a test",
+    "fishermen on Lake Victoria",
+    "obeying a parent's instruction"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: all night, nothing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"nothing\".",
+     "say": "What happened when Simon obeyed Jesus?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say they caught many fish."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_CAUGHT_NIGHT",
+     "listen_for": [
+      "Many"
+     ],
+     "ask": "How many fish had Simon caught during the night?",
+     "repair": "Read Luke 5:5."
+    },
+    {
+     "code": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_SHALLOW",
+     "listen_for": [
+      "Near the shore"
+     ],
+     "ask": "Where did Jesus tell Simon to let down the nets?",
+     "repair": "Read Luke 5:4."
+    },
+    {
+     "code": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_ONE_BOAT",
+     "listen_for": [
+      "A small basket"
+     ],
+     "ask": "How many fish did they catch?",
+     "repair": "Read Luke 5:6-7 and draw two overloaded boats."
+    },
+    {
+     "code": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_REFUSED",
+     "listen_for": [
+      "Refused, he was tired"
+     ],
+     "ask": "What did Simon do when Jesus told him to fish again?",
+     "repair": "Read Luke 5:5 together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Simon catch in the night?",
+     "answer": "Nothing",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "Obey Jesus (do not give up)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}
