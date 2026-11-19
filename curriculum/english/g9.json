@@ -118,8 +118,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE",
@@ -1108,8 +1107,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.PERFORM_ORAL",
@@ -4599,8 +4597,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -4955,8 +4952,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -5409,8 +5405,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -6353,8 +6348,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -6867,8 +6861,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION",
@@ -8965,8 +8958,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -9483,8 +9475,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -11381,8 +11372,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -11556,8 +11546,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -12594,8 +12583,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
