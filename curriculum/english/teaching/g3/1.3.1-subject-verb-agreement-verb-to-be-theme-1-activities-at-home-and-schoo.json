@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME",
+ "title": "Subject-verb agreement – Verb ‘to be’ (Theme 1: Activities at home and school)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"One or more? Now or past?\" and chooses the form.",
+   "floor": {
+    "prerequisite": "Knows the pronouns I, he, she, we, they.",
+    "question": "Which word means more than one person: he or they?",
+    "answer": "they"
+   },
+   "steps": [
+    "Show a table: I am, he is, they are; I was, they were.",
+    "Point at the subject.",
+    "Ask one or more, now or past.",
+    "Choose the form."
+   ],
+   "contexts": [
+    "activities at home",
+    "a day at school",
+    "yesterday at the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The children ___ in class now."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? is or are?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: The children are in class now."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE.M3_BE_CHILDREN_IS",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "One child or many?",
+     "repair": "Many: are."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE.M3_BE_WE_WAS",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "We is one or more?",
+     "repair": "More: were."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE.M3_BE_TIME",
+     "listen_for": [
+      "am"
+     ],
+     "ask": "Now or yesterday?",
+     "repair": "Yesterday: was."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE.M3_BE_DROPPED",
+     "listen_for": [
+      "(nothing): My mother a teacher."
+     ],
+     "ask": "Where is the verb?",
+     "repair": "My mother is a teacher."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We ___ at home yesterday.",
+     "answer": "were",
+     "shows": "past plural"
+    },
+    {
+     "question": "I ___ in Grade 3.",
+     "answer": "am",
+     "shows": "I"
+    }
+   ]
+  }
+ ]
+}

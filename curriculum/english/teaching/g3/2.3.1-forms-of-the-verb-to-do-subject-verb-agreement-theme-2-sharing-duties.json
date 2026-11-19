@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO",
+ "title": "Forms of the verb ‘to do’ Subject- verb agreement (Theme 2: Sharing duties and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO",
+   "assessed_by": "questions",
+   "key_step": "The child chooses does for he, she, it; do for the rest; did for the past, and keeps the next verb plain.",
+   "floor": {
+    "prerequisite": "Uses am, is and are.",
+    "question": "He ___ a boy.",
+    "answer": "is"
+   },
+   "steps": [
+    "Show: I do, she does, we did.",
+    "Point at the subject.",
+    "Check the time.",
+    "Keep the verb plain after did."
+   ],
+   "contexts": [
+    "sharing duties at home",
+    "helping at school",
+    "last weekend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Did you ___ the plates? (wash)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? wash or washed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Did you wash the plates?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO.M3_DO_HE_DO",
+     "listen_for": [
+      "do"
+     ],
+     "ask": "He, she or it?",
+     "repair": "Does."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO.M3_DO_DID_ED",
+     "listen_for": [
+      "washed"
+     ],
+     "ask": "Did already says past.",
+     "repair": "Wash."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO.M3_DO_DOES_PAST",
+     "listen_for": [
+      "does"
+     ],
+     "ask": "Now or last week?",
+     "repair": "Did."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO.M3_DO_I_DOES",
+     "listen_for": [
+      "does"
+     ],
+     "ask": "I takes ...?",
+     "repair": "Do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mama ___ the cooking.",
+     "answer": "does",
+     "shows": "she"
+    },
+    {
+     "question": "Yesterday they ___ their homework.",
+     "answer": "did",
+     "shows": "past"
+    }
+   ]
+  }
+ ]
+}

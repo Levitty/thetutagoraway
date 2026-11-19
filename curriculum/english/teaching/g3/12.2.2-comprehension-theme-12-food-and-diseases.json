@@ -1,0 +1,14 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T12_COMPREHENSION",
+ "title": "Comprehension (Theme 12: Food and diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [],
+ "also_taught_by": [
+  "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT",
+  "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS",
+  "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+  "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+  "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

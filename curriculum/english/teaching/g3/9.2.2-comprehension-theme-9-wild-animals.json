@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T9_COMPREHENSION",
+ "title": "Comprehension (Theme 9: Wild animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T9_COMPREHENSION.VISUALISE",
+   "assessed_by": "questions",
+   "key_step": "The child lists every describing word, then pictures or draws each one.",
+   "floor": {
+    "prerequisite": "Names characters and setting.",
+    "question": "Who and where?",
+    "answer": "a man on a road"
+   },
+   "steps": [
+    "Read the description.",
+    "Underline describing words.",
+    "Close eyes and picture it.",
+    "Draw it; check every word."
+   ],
+   "contexts": [
+    "a text about wild animals in a park",
+    "a festival at night",
+    "a market morning"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A tall, thin man in a red hat walked on a dusty road at night."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What would you see?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: a tall thin man, red hat, dusty road, dark sky"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T9_COMPREHENSION.VISUALISE.M3_VI_ONE_DETAIL",
+     "listen_for": [
+      "a short, fat man in a red hat"
+     ],
+     "ask": "Did you check every word?",
+     "repair": "Tall, thin, red hat."
+    },
+    {
+     "code": "ENGL.G3.READIN.T9_COMPREHENSION.VISUALISE.M3_VI_OWN_DETAIL",
+     "listen_for": [
+      "rejects the blue-door picture because the house is not like Amina's in real life"
+     ],
+     "ask": "Did the text say that?",
+     "repair": "Only what the words say."
+    },
+    {
+     "code": "ENGL.G3.READIN.T9_COMPREHENSION.VISUALISE.M3_VI_TIME",
+     "listen_for": [
+      "children dancing in the sun"
+     ],
+     "ask": "What does moon tell you?",
+     "repair": "Night."
+    },
+    {
+     "code": "ENGL.G3.READIN.T9_COMPREHENSION.VISUALISE.M3_VI_WHO_DOES",
+     "listen_for": [
+      "a big cat chasing a small dog"
+     ],
+     "ask": "Who is chasing?",
+     "repair": "The small dog."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The small dog chased the big cat. Who is running away?",
+     "answer": "the big cat",
+     "shows": "who does"
+    },
+    {
+     "question": "Under the bright moon, the children danced. Day or night?",
+     "answer": "night",
+     "shows": "time"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT",
+  "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+  "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

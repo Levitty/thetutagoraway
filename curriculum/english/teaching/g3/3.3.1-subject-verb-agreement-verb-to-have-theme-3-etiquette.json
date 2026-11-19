@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME",
+ "title": "Subject-verb agreement – verb ‘to have’ (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE",
+   "assessed_by": "questions",
+   "key_step": "The child uses has for he, she, it; have for the rest; had for the past.",
+   "floor": {
+    "prerequisite": "Uses does and do.",
+    "question": "She ___ her work. (do)",
+    "answer": "does"
+   },
+   "steps": [
+    "Show: I have, she has, we had.",
+    "Point at the subject.",
+    "Check the time.",
+    "Say it aloud."
+   ],
+   "contexts": [
+    "good manners at a meal",
+    "what we own",
+    "a visit last week"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Akinyi ___ two sisters."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? have or has?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Akinyi has two sisters."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE.M3_HV_SHE_HAVE",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "She takes ...?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE.M3_HV_HAVING",
+     "listen_for": [
+      "am having"
+     ],
+     "ask": "Do you own them?",
+     "repair": "I have."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE.M3_HV_I_HAS",
+     "listen_for": [
+      "has"
+     ],
+     "ask": "We takes ...?",
+     "repair": "Have."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE.M3_HV_PAST",
+     "listen_for": [
+      "has"
+     ],
+     "ask": "Now or yesterday?",
+     "repair": "Had."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We ___ a new teacher.",
+     "answer": "have",
+     "shows": "we"
+    },
+    {
+     "question": "Yesterday Ali ___ a cold.",
+     "answer": "had",
+     "shows": "past"
+    }
+   ]
+  }
+ ]
+}

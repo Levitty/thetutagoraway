@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T8_SPELLING",
+ "title": "Spelling (Theme 8: Domestic animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter for every sound in the blend, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the blend.",
+    "question": "Which word did you hear: gift or gif?",
+    "answer": "gift"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the blend letters first.",
+    "Look, cover, write, check.",
+    "Use the word in a sentence."
+   ],
+   "contexts": [
+    "theme words: gift, insect, belt, bird"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: gif / gift"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD.M3_SP_DROP_LAST",
+     "listen_for": [
+      "gif"
+     ],
+     "ask": "What is the last sound?",
+     "repair": "T."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD.M3_SP_CT_CK",
+     "listen_for": [
+      "inseck"
+     ],
+     "ask": "C or k before t?",
+     "repair": "Insect."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD.M3_SP_END_VOWEL",
+     "listen_for": [
+      "belti"
+     ],
+     "ask": "Any vowel at the end?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD.M3_SP_RD_RT",
+     "listen_for": [
+      "birt"
+     ],
+     "ask": "D or t?",
+     "repair": "Bird."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: card, cart, car (for a birthday)",
+     "answer": "card",
+     "shows": "rd"
+    },
+    {
+     "question": "Fill: be__ (around your waist)",
+     "answer": "lt",
+     "shows": "lt"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE"
+ ]
+}

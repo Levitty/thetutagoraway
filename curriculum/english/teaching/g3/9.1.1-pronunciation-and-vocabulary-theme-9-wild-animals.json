@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 9: Wild animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (-lk, -lf, -lm, -mp), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"lamp\" start like \"lamb\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a wolf in the forest",
+    "elephants walking",
+    "a lamp in the camp"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: lamp, lamb."
+    },
+    {
+     "beat": "point",
+     "do": "Say lamp.",
+     "say": "Listen: mp or mb?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the mp in lamp."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP.M3_LK_SILENT_L",
+     "listen_for": [
+      "walk"
+     ],
+     "ask": "Do you hear l in walk?",
+     "repair": "No: silent."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP.M3_LF_DROP_F",
+     "listen_for": [
+      "shell"
+     ],
+     "ask": "What was the last sound?",
+     "repair": "F: shelf."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP.M3_LM_EXTRA_VOWEL",
+     "listen_for": [
+      "2 (fi-lim)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: film."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP.M3_MP_MB",
+     "listen_for": [
+      "lamb"
+     ],
+     "ask": "Puff at the end?",
+     "repair": "Yes: lamp."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which word do you hear l: silk or talk?",
+     "answer": "silk",
+     "shows": "lk"
+    },
+    {
+     "question": "Which word ends with lf: shell, shelf, self?",
+     "answer": "shelf and self",
+     "shows": "lf"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+ ]
+}

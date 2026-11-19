@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS",
+ "title": "Interjections of Displeasure (Theme 15: Environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.DISPLEASURE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child names the feeling (bad news, disgust, sadness) and chooses the word that fits, then an exclamation mark.",
+   "floor": {
+    "prerequisite": "Uses interjections of joy.",
+    "question": "We won! ___",
+    "answer": "Hurray!"
+   },
+   "steps": [
+    "Act faces for each word.",
+    "Match words to pictures.",
+    "Fill gaps.",
+    "Write two sentences."
+   ],
+   "contexts": [
+    "litter in the river",
+    "a spoilt meal",
+    "rain on washing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The milk smells bad. \"___\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? Yuck! or Hurray!?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: \"Yuck!\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.DISPLEASURE_WORDS.M3_DS_HAPPY_WORD",
+     "listen_for": [
+      "Hurray!"
+     ],
+     "ask": "Is it good or bad news?",
+     "repair": "Oh no!"
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.DISPLEASURE_WORDS.M3_DS_PAIN_DISGUST",
+     "listen_for": [
+      "Ouch"
+     ],
+     "ask": "Pain or nasty?",
+     "repair": "Yuck."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.DISPLEASURE_WORDS.M3_DS_NO_MARK",
+     "listen_for": [
+      "Ugh I missed the bus."
+     ],
+     "ask": "What follows the word?",
+     "repair": "An exclamation mark."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.DISPLEASURE_WORDS.M3_DS_HOME_WORD",
+     "listen_for": [
+      "Wueh! I lost my money."
+     ],
+     "ask": "Which English word fits?",
+     "repair": "Oh no!"
+    }
+   ],
+   "checks": [
+    {
+     "question": "We missed the bus. \"___\"",
+     "answer": "Oh no!",
+     "shows": "bad news"
+    },
+    {
+     "question": "Write: Ugh it is raining again",
+     "answer": "Ugh! It is raining again.",
+     "shows": "mark"
+    }
+   ]
+  }
+ ]
+}

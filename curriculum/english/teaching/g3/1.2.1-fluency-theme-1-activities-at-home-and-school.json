@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T1_FLUENCY",
+ "title": "Fluency (Theme 1: Activities at home and school)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY",
+   "assessed_by": "voice",
+   "key_step": "The child points under each word, reads every letter left to right, and sounds out a hard word instead of guessing.",
+   "floor": {
+    "prerequisite": "Reads simple words with blends.",
+    "question": "Read: clap",
+    "answer": "clap"
+   },
+   "steps": [
+    "Read the text to the child first.",
+    "Read together.",
+    "The child reads alone, pointing.",
+    "Read again a little faster."
+   ],
+   "contexts": [
+    "a story about duties at home",
+    "a notice about safety on the road",
+    "a text about festivals"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wanjiru sweeps the house before school."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sweeps.",
+     "say": "Read with me, then on your own."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the word he or she found hard."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together once more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY.M3_RA_GUESS_FIRST",
+     "listen_for": [
+      "The cow is in the horse."
+     ],
+     "ask": "Look at all the letters: does it say horse?",
+     "repair": "h-ou-se: house."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY.M3_RA_B_D",
+     "listen_for": [
+      "The deb is dig."
+     ],
+     "ask": "Which way does the belly face?",
+     "repair": "Make the bed with your fists."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY.M3_RA_SKIP_SMALL",
+     "listen_for": [
+      "Cup tea is on table."
+     ],
+     "ask": "Did your finger touch every word?",
+     "repair": "Read it again pointing."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY.M3_RA_WORD_BY_WORD",
+     "listen_for": [
+      "Wanjiru. Sweeps. The. Classroom. Every. Morning."
+     ],
+     "ask": "Can you scoop the words together?",
+     "repair": "Wanjiru sweeps the classroom / every morning."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: Brian brought a black brush.",
+     "answer": "all words right, bl and br read",
+     "shows": "accuracy"
+    },
+    {
+     "question": "Read: The bird sat on the bed.",
+     "answer": "bird and bed with b, not d",
+     "shows": "b and d"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH"
+ ]
+}

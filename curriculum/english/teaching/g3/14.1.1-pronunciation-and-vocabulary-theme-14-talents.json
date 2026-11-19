@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 14: Talents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (spr, str), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"string\" start like \"spring\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a strong singer",
+    "spraying flowers",
+    "a string for a guitar"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: string, spring."
+    },
+    {
+     "beat": "point",
+     "do": "Say string.",
+     "say": "Listen: str or spr?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the str in string."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR.M3_STR_EXTRA_VOWELS",
+     "listen_for": [
+      "3 (si-ti-reet)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: street."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR.M3_SPR_SPL",
+     "listen_for": [
+      "spling"
+     ],
+     "ask": "Curled?",
+     "repair": "Yes: spring."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR.M3_STR_SPR_SWAP",
+     "listen_for": [
+      "spring"
+     ],
+     "ask": "Middle sound t or p?",
+     "repair": "T: string."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR.M3_STR_DROP_R",
+     "listen_for": [
+      "stay"
+     ],
+     "ask": "Did you hear r?",
+     "repair": "St-r-ay."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with spr: spray, stray, pray?",
+     "answer": "spray",
+     "shows": "spr"
+    },
+    {
+     "question": "The teacher says \"stray\". Stray or stay?",
+     "answer": "stray",
+     "shows": "str"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

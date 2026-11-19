@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T3_HANDWRITING",
+ "title": "Handwriting (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE",
+   "assessed_by": "questions",
+   "key_step": "The child checks each letter: feet on the floor, tails under it, start at the margin.",
+   "floor": {
+    "prerequisite": "Knows tail letters.",
+    "question": "Which letter has a tail: y or n?",
+    "answer": "y"
+   },
+   "steps": [
+    "Show the line as the floor.",
+    "Trace on the line.",
+    "Spot mistakes.",
+    "Copy a short text."
+   ],
+   "contexts": [
+    "a letter about child rights",
+    "a class poster"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: yes go (written floating)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which letters are not on the floor?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE.M3_LL_FLOAT",
+     "listen_for": [
+      "letters above the line"
+     ],
+     "ask": "Is it standing on the line?",
+     "repair": "Feet on the floor."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE.M3_LL_SLOPE",
+     "listen_for": [
+      "a line that rises to the right"
+     ],
+     "ask": "Is the writing climbing?",
+     "repair": "Check the line."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE.M3_LL_TAIL_UP",
+     "listen_for": [
+      "y sitting on the line with its tail up"
+     ],
+     "ask": "Which way does the tail go?",
+     "repair": "Down."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE.M3_LL_MARGIN",
+     "listen_for": [
+      "in the margin"
+     ],
+     "ask": "Where is the red line?",
+     "repair": "Start beside it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does the first word go?",
+     "answer": "next to the margin",
+     "shows": "margin"
+    },
+    {
+     "question": "Which part of g goes below the line?",
+     "answer": "the tail",
+     "shows": "tails"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE"
+ ]
+}

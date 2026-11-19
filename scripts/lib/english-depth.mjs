@@ -132,7 +132,8 @@ export async function applyDepth(grade, doc, { families = null } = {}) {
   }
   // ---- misconceptions
   const allShort = new Set();
-  for (let g = 4; g <= 9; g++) if (g !== grade) for (const s of load(g).sub_strands) for (const m of s.misconceptions || []) allShort.add(m.code.split('.').pop());
+  for (let g = 1; g <= 9; g++) if (g !== grade)   // Grades 1-3 joined on 18 Nov 2026 (no first pass: every skill is new)
+    for (const s of load(g).sub_strands) for (const m of s.misconceptions || []) allShort.add(m.code.split('.').pop());
   for (const s of doc.sub_strands) for (const m of s.misconceptions || []) allShort.add(m.code.split('.').pop());
   for (const [id, short, error, question, wrong, right, cause, help] of D.MIS) {
     const [k, s] = get(id, 'MIS');

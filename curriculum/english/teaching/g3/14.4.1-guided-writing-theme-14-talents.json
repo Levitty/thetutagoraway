@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T14_GUIDED_WRITING",
+ "title": "Guided writing (Theme 14: Talents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS",
+   "assessed_by": "questions",
+   "key_step": "The child names the five steps in order and says what happens at each: think, write, improve, fix, share.",
+   "floor": {
+    "prerequisite": "Writes a paragraph.",
+    "question": "Write two sentences about your talent.",
+    "answer": "two sentences"
+   },
+   "steps": [
+    "Show the five steps.",
+    "Act each step.",
+    "Order the cards.",
+    "Use the steps for a story."
+   ],
+   "contexts": [
+    "writing about talents",
+    "a class book"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: draft, publish, plan, edit, revise"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Put the steps in order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS.M3_PRC_SKIP_PLAN",
+     "listen_for": [
+      "start writing the story"
+     ],
+     "ask": "What comes before writing?",
+     "repair": "Plan."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS.M3_PRC_REVISE_EDIT",
+     "listen_for": [
+      "revising"
+     ],
+     "ask": "Ideas or spelling?",
+     "repair": "Spelling: edit."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS.M3_PRC_ORDER",
+     "listen_for": [
+      "draft, plan, revise, edit, publish"
+     ],
+     "ask": "Think, write, improve, fix, share.",
+     "repair": "Plan, draft, revise, edit, publish."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS.M3_PRC_DRAFT_FINAL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a draft finished?",
+     "repair": "No: a first try."
+    }
+   ],
+   "checks": [
+    {
+     "question": "At which step do we fix spelling?",
+     "answer": "editing",
+     "shows": "edit"
+    },
+    {
+     "question": "What do we do when we revise?",
+     "answer": "make the ideas better",
+     "shows": "revise"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE",
+   "assessed_by": "composition",
+   "key_step": "The child plans who, where, problem and ending, then drafts, revises, edits and publishes.",
+   "floor": {
+    "prerequisite": "Knows the writing steps.",
+    "question": "What is the first step?",
+    "answer": "planning"
+   },
+   "steps": [
+    "Plan with a story map.",
+    "Draft.",
+    "Revise with a partner.",
+    "Edit and publish."
+   ],
+   "contexts": [
+    "a talent show",
+    "a school concert"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a story map: Who? Where? Problem? End?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Problem.",
+     "say": "What goes wrong in your story?"
+    },
+    {
+     "beat": "pause",
+     "do": "The child plans and drafts."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills in the map."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE.M3_NA_NO_END",
+     "listen_for": [
+      "Ali went on stage. He started singing."
+     ],
+     "ask": "How did it end?",
+     "repair": "Add an ending."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE.M3_NA_TENSE_MIX",
+     "listen_for": [
+      "Ali goes on stage and he sang."
+     ],
+     "ask": "Now or past?",
+     "repair": "Past: went."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE.M3_NA_NO_WHO",
+     "listen_for": [
+      "He went there and did it."
+     ],
+     "ask": "Who and where?",
+     "repair": "First sentence."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE.M3_NA_DAY_LIST",
+     "listen_for": [
+      "I woke up. I ate. I went to school. I slept."
+     ],
+     "ask": "What went wrong?",
+     "repair": "Add a problem."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Plan and write a story about a talent show.",
+     "answer": "characters, setting, problem, ending, past tense",
+     "shows": "narrative"
+    },
+    {
+     "question": "Fix: Ali goes on stage and he sang.",
+     "answer": "Ali went on stage and he sang.",
+     "shows": "tense"
+    }
+   ]
+  }
+ ]
+}

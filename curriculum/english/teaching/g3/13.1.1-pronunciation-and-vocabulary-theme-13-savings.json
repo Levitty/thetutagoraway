@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 13: Savings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (-lf, -rf, spl-), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"splash\" start like \"sprash\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "saving coins in a box on the shelf",
+    "a scarf bought with savings",
+    "a splash of water"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: splash, sprash."
+    },
+    {
+     "beat": "point",
+     "do": "Say splash.",
+     "say": "Listen: spl or spr?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the spl in splash."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL.M3_SPL_SPR",
+     "listen_for": [
+      "sprash"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Up: splash."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL.M3_LF_RF_SWAP",
+     "listen_for": [
+      "-rf"
+     ],
+     "ask": "Up before f?",
+     "repair": "Yes: self."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL.M3_SPL_EXTRA_VOWELS",
+     "listen_for": [
+      "3 (si-pu-lash)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: splash."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL.M3_LF_SILENT_L",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do you hear l in half?",
+     "repair": "No: silent."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with spl: split, spit, sit?",
+     "answer": "split",
+     "shows": "spl"
+    },
+    {
+     "question": "In \"calf\", do you hear l?",
+     "answer": "no",
+     "shows": "lf"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING"
+ ]
+}

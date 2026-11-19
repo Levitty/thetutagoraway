@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T11_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 11: Play time and sports)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child points at the object, says its English name, then writes it with look, cover, write, check.",
+   "floor": {
+    "prerequisite": "Knows the theme words.",
+    "question": "What do we kick in football?",
+    "answer": "a ball"
+   },
+   "steps": [
+    "Show pictures.",
+    "Say the names.",
+    "Write them.",
+    "Check spellings."
+   ],
+   "contexts": [
+    "play time and sports",
+    "a sports day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: (picture of a net) ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "What is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS.M3_PW_SOUND_SPELL",
+     "listen_for": [
+      "futbol"
+     ],
+     "ask": "Look at the word: how is it spelt?",
+     "repair": "Football."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS.M3_PW_NEAR_THING",
+     "listen_for": [
+      "goal"
+     ],
+     "ask": "Which thing did I point at?",
+     "repair": "The net."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS.M3_PW_PLURAL",
+     "listen_for": [
+      "whistles"
+     ],
+     "ask": "One or many?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS.M3_PW_HOME_WORD",
+     "listen_for": [
+      "mpira"
+     ],
+     "ask": "What is it in English?",
+     "repair": "Ball."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the name: (picture of a whistle)",
+     "answer": "whistle",
+     "shows": "picture word"
+    },
+    {
+     "question": "Write the name: (picture of a skipping rope)",
+     "answer": "skipping rope",
+     "shows": "picture word"
+    }
+   ]
+  }
+ ]
+}

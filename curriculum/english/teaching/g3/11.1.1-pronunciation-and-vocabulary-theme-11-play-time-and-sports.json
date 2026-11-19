@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 11: Play time and sports)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.BLENDS_NKL_PT_NTH_ND",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (-nkl-, -pt, -nth, -nd), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"tenth\" start like \"tent\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a twisted ankle at play",
+    "the tenth runner",
+    "a pond near the field"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: tenth, tent."
+    },
+    {
+     "beat": "point",
+     "do": "Say tenth.",
+     "say": "Listen: nth or nt?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the nth in tenth."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.BLENDS_NKL_PT_NTH_ND.M3_NKL_NGL",
+     "listen_for": [
+      "angle"
+     ],
+     "ask": "Click of k?",
+     "repair": "Yes: ankle."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.BLENDS_NKL_PT_NTH_ND.M3_PT_DROP_T",
+     "listen_for": [
+      "keep"
+     ],
+     "ask": "P then what?",
+     "repair": "T: kept."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.BLENDS_NKL_PT_NTH_ND.M3_NTH_NT",
+     "listen_for": [
+      "tent"
+     ],
+     "ask": "Tongue between the teeth?",
+     "repair": "Yes: tenth."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.BLENDS_NKL_PT_NTH_ND.M3_ND_NG",
+     "listen_for": [
+      "sang"
+     ],
+     "ask": "Tongue tip up?",
+     "repair": "Yes: sand."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word ends with pt: kept, keep, cat?",
+     "answer": "kept",
+     "shows": "pt"
+    },
+    {
+     "question": "Which word has nkl: angle, ankle, apple?",
+     "answer": "ankle",
+     "shows": "nkl"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

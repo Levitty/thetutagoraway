@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T12_PARAGRAPHS",
+ "title": "Paragraphs (Theme 12: Food and diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA",
+   "assessed_by": "questions",
+   "key_step": "The child reads every sentence and finds what most of them share.",
+   "floor": {
+    "prerequisite": "Finds the main idea of a text.",
+    "question": "What is a text about washing hands about?",
+    "answer": "washing hands"
+   },
+   "steps": [
+    "Read the strips.",
+    "Underline the shared word.",
+    "Say the idea.",
+    "Remove the odd one."
+   ],
+   "contexts": [
+    "food and diseases",
+    "healthy eating"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Boil water. Wash fruit. My uncle has a car. Cover food."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "What are they about? Which does not belong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA.M3_JM_FIRST",
+     "listen_for": [
+      "resting under trees"
+     ],
+     "ask": "Have you read them all?",
+     "repair": "Find what most share."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA.M3_JM_DETAIL",
+     "listen_for": [
+      "boiling water"
+     ],
+     "ask": "Does it cover all?",
+     "repair": "Keeping away diseases."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA.M3_JM_ODD_ONE",
+     "listen_for": [
+      "Boil water."
+     ],
+     "ask": "Does it fit the idea?",
+     "repair": "The car does not."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA.M3_JM_TOO_WIDE",
+     "listen_for": [
+      "Water"
+     ],
+     "ask": "All and only these?",
+     "repair": "Narrow it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What are these about: \"Eat fruit.\" \"Drink clean water.\" \"Wash your hands.\"?",
+     "answer": "keeping healthy",
+     "shows": "idea"
+    },
+    {
+     "question": "Which does not belong: \"Cover food.\" \"Cats sleep a lot.\" \"Boil water.\"?",
+     "answer": "Cats sleep a lot.",
+     "shows": "odd one"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES",
+   "assessed_by": "questions",
+   "key_step": "The child finds the first sentence by its clue (a name, First), links each next one, and writes them as one block.",
+   "floor": {
+    "prerequisite": "Puts events in order.",
+    "question": "What comes first: eat or cook?",
+    "answer": "cook"
+   },
+   "steps": [
+    "Read the strips.",
+    "Find the first one.",
+    "Link the rest.",
+    "Write as a paragraph."
+   ],
+   "contexts": [
+    "preparing a meal",
+    "a visit to the clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Then she cooked. / First Amina washed her hands. / Finally she ate."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES.M3_OS_AS_GIVEN",
+     "listen_for": [
+      "Then she cooked. First Amina washed... Finally she ate."
+     ],
+     "ask": "Which has First?",
+     "repair": "Start with it."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES.M3_OS_END_FIRST",
+     "listen_for": [
+      "Finally she ate."
+     ],
+     "ask": "Where does Finally go?",
+     "repair": "Last."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES.M3_OS_PRONOUN_FIRST",
+     "listen_for": [
+      "She washed the plates."
+     ],
+     "ask": "Who is she?",
+     "repair": "The name first."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES.M3_OS_ONE_PER_LINE",
+     "listen_for": [
+      "one sentence on each line, like a list"
+     ],
+     "ask": "Paragraph or list?",
+     "repair": "Same line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which comes first: \"He put on his shoes.\" or \"Juma woke up early.\"?",
+     "answer": "Juma woke up early.",
+     "shows": "name first"
+    },
+    {
+     "question": "Order: Finally we ate. First we washed. Then we cooked.",
+     "answer": "First we washed. Then we cooked. Finally we ate.",
+     "shows": "time words"
+    }
+   ]
+  }
+ ]
+}

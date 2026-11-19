@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (cr, pl, st, sn), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"crown\" start like \"clown\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "greeting visitors politely",
+    "a plate of food",
+    "a snake in the grass"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: crown, clown."
+    },
+    {
+     "beat": "point",
+     "do": "Say crown.",
+     "say": "Listen: cr or cl?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the cr in crown."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN.M3_PL_BL_VOICE",
+     "listen_for": [
+      "blade"
+     ],
+     "ask": "Did it puff?",
+     "repair": "Puff: plate."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN.M3_CR_CL_SWAP",
+     "listen_for": [
+      "clown"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Curled: crown."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN.M3_SN_SM",
+     "listen_for": [
+      "smell"
+     ],
+     "ask": "Did the lips close?",
+     "repair": "Open: snake."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN.M3_ST_TWO_BEATS",
+     "listen_for": [
+      "2 (si-tone)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: stone."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with st: stone, sun, tone?",
+     "answer": "stone",
+     "shows": "st"
+    },
+    {
+     "question": "Which word starts with pl: blade, plate, late?",
+     "answer": "plate",
+     "shows": "pl"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+ ]
+}

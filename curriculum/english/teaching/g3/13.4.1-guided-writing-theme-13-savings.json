@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T13_GUIDED_WRITING",
+ "title": "Guided writing (Theme 13: Savings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH",
+   "assessed_by": "composition",
+   "key_step": "The child writes a first sentence on the topic, adds three to five on the same idea, and joins them with full stops and time words.",
+   "floor": {
+    "prerequisite": "Orders sentences.",
+    "question": "Order three sentences about saving.",
+    "answer": "in order"
+   },
+   "steps": [
+    "Choose the topic.",
+    "List three ideas.",
+    "Write them as one paragraph.",
+    "Check each sentence fits."
+   ],
+   "contexts": [
+    "saving money",
+    "a savings club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the topic: How I save."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the topic.",
+     "say": "Is each sentence about this?"
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes four sentences."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child ticks each sentence that fits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH.M3_WP_AND_THEN",
+     "listen_for": [
+      "I got money and then I put it in a tin and then ..."
+     ],
+     "ask": "Can you stop and start a new sentence?",
+     "repair": "Use a full stop."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH.M3_WP_OFF_TOPIC",
+     "listen_for": [
+      "I save money. My cat is black. I like chapati."
+     ],
+     "ask": "Is it about saving?",
+     "repair": "Take it out."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH.M3_WP_SAME_START",
+     "listen_for": [
+      "I save. I put. I count. I buy."
+     ],
+     "ask": "Can you start differently?",
+     "repair": "Every Friday, ..."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH.M3_WP_LIST_LINES",
+     "listen_for": [
+      "four short lines like a list"
+     ],
+     "ask": "Paragraph or list?",
+     "repair": "Same line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write four sentences about saving.",
+     "answer": "one paragraph on topic",
+     "shows": "paragraph"
+    },
+    {
+     "question": "Fix: I saved and then I counted and then I bought a ball.",
+     "answer": "I saved. Then I counted. At last I bought a ball.",
+     "shows": "joining"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

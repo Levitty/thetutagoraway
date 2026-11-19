@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T2_COMPREHENSION",
+ "title": "Comprehension (Theme 2: Sharing duties and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds two clues, joins them, and says the answer with \"because\".",
+   "floor": {
+    "prerequisite": "Answers stated questions.",
+    "question": "Akinyi cried. What did Akinyi do?",
+    "answer": "She cried."
+   },
+   "steps": [
+    "Read the text.",
+    "Ask a why or how question.",
+    "Find the clues.",
+    "Join them: because ..."
+   ],
+   "contexts": [
+    "a story about a lost goat",
+    "a story about winning a race",
+    "a story about saving"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Akinyi sat alone and cried when her goat got lost."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "How did Akinyi feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: sad, because she cried"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M3_IQ_NOT_THERE",
+     "listen_for": [
+      "It does not say."
+     ],
+     "ask": "What does crying show?",
+     "repair": "Sad."
+    },
+    {
+     "code": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M3_IQ_FEELING_GUESS",
+     "listen_for": [
+      "tired"
+     ],
+     "ask": "Which clue tells you?",
+     "repair": "Jumping shows happy."
+    },
+    {
+     "code": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M3_IQ_TOO_FAR",
+     "listen_for": [
+      "There will be an earthquake."
+     ],
+     "ask": "Do the clues show that?",
+     "repair": "Dark sky and wind: rain."
+    },
+    {
+     "code": "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M3_IQ_COPY_LINE",
+     "listen_for": [
+      "Mama took an umbrella."
+     ],
+     "ask": "Which sentence gives the reason?",
+     "repair": "The heavy clouds."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Baraka jumped and shouted when he scored. How did he feel?",
+     "answer": "happy or excited",
+     "shows": "feeling"
+    },
+    {
+     "question": "The ground was wet and there were puddles. What happened in the night?",
+     "answer": "It rained.",
+     "shows": "inference"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT",
+  "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT"
+ ]
+}

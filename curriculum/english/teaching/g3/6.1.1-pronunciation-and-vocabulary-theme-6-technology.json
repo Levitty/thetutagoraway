@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 6: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (dr, gr, shr), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"shrink\" start like \"sink\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "driving a car",
+    "a phone growing hot",
+    "a shrub near the house"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: shrink, sink."
+    },
+    {
+     "beat": "point",
+     "do": "Say shrink.",
+     "say": "Listen: shr or s?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the shr in shrink."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR.M3_SHR_S",
+     "listen_for": [
+      "sink"
+     ],
+     "ask": "Were the lips round?",
+     "repair": "Sh-r: shrink."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR.M3_GR_GL",
+     "listen_for": [
+      "glass"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Curled: grass."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR.M3_DR_TR_VOICE",
+     "listen_for": [
+      "train"
+     ],
+     "ask": "Did it buzz?",
+     "repair": "Buzz: drain."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR.M3_GR_TWO_BEATS",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: grow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with gr: glass, grass, rass?",
+     "answer": "grass",
+     "shows": "gr"
+    },
+    {
+     "question": "Which word starts with dr: train, drain, rain?",
+     "answer": "drain",
+     "shows": "dr"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+ ]
+}

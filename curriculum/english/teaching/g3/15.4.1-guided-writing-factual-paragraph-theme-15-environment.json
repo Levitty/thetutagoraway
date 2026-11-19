@@ -1,0 +1,271 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU",
+ "title": "Guided Writing - Factual Paragraph (Theme 15: Environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Can everyone check it, and is it true in real life?\"",
+   "floor": {
+    "prerequisite": "Finds the main idea of a text.",
+    "question": "Is a text about planting trees a story or facts?",
+    "answer": "facts"
+   },
+   "steps": [
+    "Sort sentences into fact, opinion, story.",
+    "Underline opinion words.",
+    "Find facts in a text.",
+    "Write two facts."
+   ],
+   "contexts": [
+    "the environment",
+    "trees and water"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Trees give us shade. / Trees are beautiful."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which is a fact?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES.M3_FA_OPINION",
+     "listen_for": [
+      "Trees are the most beautiful plants."
+     ],
+     "ask": "Can everyone check it?",
+     "repair": "No: opinion."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES.M3_FA_STORY",
+     "listen_for": [
+      "One day a tree talked to a bird."
+     ],
+     "ask": "True in real life?",
+     "repair": "No: story."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES.M3_FA_NO_I_THINK",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is ugly a feeling word?",
+     "repair": "Opinion."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES.M3_FA_FALSE",
+     "listen_for": [
+      "Trees grow in one day."
+     ],
+     "ask": "Is it true?",
+     "repair": "Not a fact."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fact or opinion: Litter blocks drains.",
+     "answer": "fact",
+     "shows": "fact"
+    },
+    {
+     "question": "Fact or opinion: Litter is ugly.",
+     "answer": "opinion",
+     "shows": "opinion"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS",
+   "assessed_by": "questions",
+   "key_step": "The child checks each step: can it happen after the one before?",
+   "floor": {
+    "prerequisite": "Tells facts from opinions.",
+    "question": "Is \"Trees need water\" a fact?",
+    "answer": "yes"
+   },
+   "steps": [
+    "List the steps of a process.",
+    "Order them.",
+    "Check each step follows.",
+    "Find a missing step."
+   ],
+   "contexts": [
+    "planting a tree",
+    "cleaning the compound"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: dig a hole, cover the roots, water it"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which step is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS.M3_OF_SKIP",
+     "listen_for": [
+      "dig a hole, cover the roots, water it"
+     ],
+     "ask": "Can that step happen yet?",
+     "repair": "Add the missing one."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS.M3_OF_LAST_FIRST",
+     "listen_for": [
+      "water it"
+     ],
+     "ask": "What must happen first?",
+     "repair": "Dig."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS.M3_OF_INTEREST",
+     "listen_for": [
+      "throw it in the bin, collect litter, put on gloves"
+     ],
+     "ask": "What has to be done first?",
+     "repair": "Gloves."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS.M3_OF_TIME_WORDS",
+     "listen_for": [
+      "Next, plant."
+     ],
+     "ask": "What does finally mean?",
+     "repair": "Last."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First step to plant a tree?",
+     "answer": "dig a hole",
+     "shows": "first"
+    },
+    {
+     "question": "Order: water it, dig a hole, plant the seedling",
+     "answer": "dig a hole, plant the seedling, water it",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACTUAL_PARAGRAPH",
+   "assessed_by": "composition",
+   "key_step": "The child writes an opening sentence, then the facts in order with first, next and finally, and checks for any opinion or story.",
+   "floor": {
+    "prerequisite": "Orders facts.",
+    "question": "Order the steps to plant a tree.",
+    "answer": "dig, plant, cover, water"
+   },
+   "steps": [
+    "Choose a process.",
+    "List and order the facts.",
+    "Write an opening sentence.",
+    "Write the paragraph."
+   ],
+   "contexts": [
+    "planting trees",
+    "saving water"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We can plant a tree in four steps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the opening.",
+     "say": "What comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes the steps."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles first, next, finally."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACTUAL_PARAGRAPH.M3_FP_STORY",
+     "listen_for": [
+      "One day I planted a tree and it talked."
+     ],
+     "ask": "Characters or facts?",
+     "repair": "Facts only."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACTUAL_PARAGRAPH.M3_FP_OPINION",
+     "listen_for": [
+      "Litter is ugly. I hate litter."
+     ],
+     "ask": "Can it be checked?",
+     "repair": "Take it out."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACTUAL_PARAGRAPH.M3_FP_NO_ORDER",
+     "listen_for": [
+      "Water it. Dig a hole. Cover it."
+     ],
+     "ask": "Did you number the steps?",
+     "repair": "First, next, finally."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACTUAL_PARAGRAPH.M3_FP_NO_OPENING",
+     "listen_for": [
+      "Turn the tap off."
+     ],
+     "ask": "What is the paragraph about?",
+     "repair": "Say it first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a paragraph of facts on how to plant a tree.",
+     "answer": "opening, ordered facts, no opinion",
+     "shows": "factual"
+    },
+    {
+     "question": "Which does not belong in a factual paragraph: \"Trees are lovely.\"?",
+     "answer": "yes, it is an opinion",
+     "shows": "no opinion"
+    }
+   ]
+  }
+ ]
+}
