@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS",
+ "title": "Water Safety Awareness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Talk about the water points the children really pass. Never take children to deep water for this lesson; use pictures.",
+ "skills": [
+  {
+   "skill": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS",
+   "key_step": "The child names water points and water bodies in the locality and the dangers of each.",
+   "floor": {
+    "prerequisite": "Names water points at school (Grade 2).",
+    "question": "Name a water point at school.",
+    "answer": "any of: a tap, a tank, a well"
+   },
+   "representations": [
+    "pictures of local water points",
+    "a map of the area",
+    "danger cards"
+   ],
+   "steps": [
+    "Name the water point.",
+    "Say what could go wrong there.",
+    "Say who could be hurt."
+   ],
+   "contexts": [
+    "walking past a dam on the way home",
+    "fetching water from a well"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a picture of an open well.",
+     "say": "What is the danger?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: falling in."
+    },
+    {
+     "beat": "predict",
+     "do": "And a river after rain?"
+    },
+    {
+     "beat": "reveal",
+     "do": "It can rise and flow fast."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS.M_CAC3_WD_SHALLOW_SAFE",
+     "listen_for": [
+      "no, it is too shallow"
+     ],
+     "ask": "Can a small child drown in shallow water?",
+     "repair": "Talk about a basin, a puddle and a pond: a face in water is dangerous anywhere."
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS.M_CAC3_WD_TANK_NOT",
+     "listen_for": [
+      "no, only rivers are"
+     ],
+     "ask": "Is a water tank at home a water point?",
+     "repair": "List all the places water is kept at home and in school."
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS.M_CAC3_WD_CLEAR_CLEAN",
+     "listen_for": [
+      "yes, it looks clean"
+     ],
+     "ask": "River water looks clear. Is it safe to drink without boiling?",
+     "repair": "Look at a drop of pond water under a hand lens, or show a picture."
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS.M_CAC3_WD_RAIN_RIVER",
+     "listen_for": [
+      "yes, the rain has stopped"
+     ],
+     "ask": "It rained heavily upstream. Is the river safe to cross now?",
+     "repair": "Show how water poured at one end of a gutter reaches the other end later."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a water body in the locality.",
+     "answer": "any of: river, dam, pond, lake",
+     "shows": "water points"
+    },
+    {
+     "question": "Can shallow water be dangerous?",
+     "answer": "yes",
+     "shows": "danger"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY",
+   "key_step": "The child names how to keep safe around water and what to do if someone falls in: shout for an adult, throw something that floats.",
+   "floor": {
+    "prerequisite": "Names water dangers.",
+    "question": "Why is an open well dangerous?",
+    "answer": "someone can fall in"
+   },
+   "representations": [
+    "role play",
+    "a jerrican or a ball that floats",
+    "safety rule cards"
+   ],
+   "steps": [
+    "Never go near water without an adult.",
+    "Keep wells and tanks covered.",
+    "If someone falls in: shout and throw a float.",
+    "Never jump in."
+   ],
+   "contexts": [
+    "playing near a river",
+    "helping at the borehole"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Role play: a friend falls into a dam.",
+     "say": "What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Let children answer."
+    },
+    {
+     "beat": "predict",
+     "do": "Should you jump in?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: shout for an adult and throw something that floats."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY.M_CAC3_WS_JUMP_IN",
+     "listen_for": [
+      "jump in and pull them out"
+     ],
+     "ask": "Your friend falls into a dam. What should you do?",
+     "repair": "Role play: shout, find an adult, throw a jerrican or a stick."
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY.M_CAC3_WS_ALONE_SWIM",
+     "listen_for": [
+      "yes, if they can swim"
+     ],
+     "ask": "Can a child who can swim go into a river alone?",
+     "repair": "Talk about strong currents and hidden rocks."
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY.M_CAC3_WS_PUSH_GAME",
+     "listen_for": [
+      "yes, it is a game"
+     ],
+     "ask": "Is it all right to push a friend near a well as a joke?",
+     "repair": "Ask: what could happen next?"
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY.M_CAC3_WS_OPEN_WELL",
+     "listen_for": [
+      "leave it open for the next person"
+     ],
+     "ask": "You finish drawing water from a well. What do you do?",
+     "repair": "Ask: who else might walk past an open well?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you do if a friend falls into water?",
+     "answer": "shout for an adult and throw something that floats",
+     "shows": "rescue"
+    },
+    {
+     "question": "What do you do after drawing water from a well?",
+     "answer": "cover it",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+ "title": "Rhythm and pattern making",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Say and clap the French rhythm names; do not ask a Grade 3 child to read staff notation. Print outside with found objects.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION",
+   "key_step": "The child tells long sounds from short sounds and matches taa, ta-te, taa-aa and taa-aa-aa-aa to their length.",
+   "floor": {
+    "prerequisite": "Claps the rhythm of simple words (Grade 2).",
+    "question": "Clap \"ma-ma\".",
+    "answer": "two claps"
+   },
+   "representations": [
+    "clapping and stepping",
+    "rhythm name cards",
+    "a drum or a tin"
+   ],
+   "steps": [
+    "Listen to the sound.",
+    "Count the beats it lasts.",
+    "Say its rhythm name.",
+    "Clap it back."
+   ],
+   "contexts": [
+    "a song sung at assembly",
+    "a clapping game in the field"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Clap and count: taa (1), taa-aa (1, 2)."
+    },
+    {
+     "beat": "predict",
+     "do": "How many beats for taa-aa-aa-aa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for four."
+    },
+    {
+     "beat": "reveal",
+     "do": "Four beats."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION.M_CAC3_SD_TATE_LONG",
+     "listen_for": [
+      "ta-te"
+     ],
+     "ask": "Which takes longer: ta-te or taa?",
+     "repair": "Walk one step to taa and one step to ta-te while clapping."
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION.M_CAC3_SD_LOUD_LONG",
+     "listen_for": [
+      "yes, because it is loud"
+     ],
+     "ask": "A drum is hit very hard once and stops quickly. Is it a long sound?",
+     "repair": "Play one loud short sound and one soft long hum."
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION.M_CAC3_SD_TAAAA_TWO",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "How many beats is taa-aa-aa-aa?",
+     "repair": "Tap your knee for each \"aa\" while holding the sound."
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION.M_CAC3_SD_WORD_RHYTHM",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "How many claps for \"Ke-nya\"?",
+     "repair": "Say the word slowly and clap each part: Ke, nya."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is longer: taa or taa-aa?",
+     "answer": "taa-aa",
+     "shows": "long and short"
+    },
+    {
+     "question": "How many beats does ta-te take?",
+     "answer": "one",
+     "shows": "ta-te"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT",
+   "key_step": "The child says a random repeat pattern prints the same found object many times, anywhere on the paper.",
+   "floor": {
+    "prerequisite": "Prints shape patterns (Grade 2).",
+    "question": "What do you put on a shape before you print?",
+    "answer": "paint"
+   },
+   "representations": [
+    "leaves, bottle tops, cut potatoes",
+    "paint on a sponge",
+    "a regular pattern to compare"
+   ],
+   "steps": [
+    "Choose one found object.",
+    "Put paint on it.",
+    "Press it many times anywhere on the paper.",
+    "Compare with a pattern in rows."
+   ],
+   "contexts": [
+    "wrapping paper for a gift",
+    "a printed cloth in the market"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a page of bottle-top prints scattered everywhere.",
+     "say": "What repeats?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the bottle top."
+    },
+    {
+     "beat": "predict",
+     "do": "Are they in rows?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: it is a random repeat pattern."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT.M_CAC3_RR_ROWS",
+     "listen_for": [
+      "in straight rows only"
+     ],
+     "ask": "In a random repeat pattern, where do you place the prints?",
+     "repair": "Show a row pattern and a random repeat side by side."
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT.M_CAC3_RR_DIFFERENT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Juma prints a leaf, then a bottle top, then a coin, all different. Is it a repeat pattern?",
+     "repair": "Ask: which print repeats? If none, it is not a repeat pattern."
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT.M_CAC3_RR_DRY_PRINT",
+     "listen_for": [
+      "nothing, just press it"
+     ],
+     "ask": "What must you do to a leaf before you print with it?",
+     "repair": "Press a dry leaf, then a painted leaf, and compare."
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT.M_CAC3_RR_FOUND",
+     "listen_for": [
+      "only a stamp from a shop"
+     ],
+     "ask": "Which can you use to print a pattern?",
+     "repair": "Collect objects from the school compound and test them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Must a random repeat pattern be in rows?",
+     "answer": "no",
+     "shows": "random"
+    },
+    {
+     "question": "Name a found object you can print with.",
+     "answer": "any of: a leaf, a bottle top, a cut potato",
+     "shows": "found objects"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G3.CREATI.SKIPPING",
+ "title": "Skipping",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use ropes on a flat, soft surface. Chalk the floor patterns first.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS",
+   "key_step": "The child names the four directions of skipping and the floor patterns: straight, curved, circular, zigzag.",
+   "floor": {
+    "prerequisite": "Names the directions of hopping (Grade 2).",
+    "question": "Name a direction you can hop in.",
+    "answer": "any of: forward, backward, right, left"
+   },
+   "representations": [
+    "skipping ropes",
+    "chalked lines",
+    "arrow cards"
+   ],
+   "steps": [
+    "Face the front.",
+    "Point the way you will go.",
+    "Name the direction.",
+    "Name the pattern on the floor."
+   ],
+   "contexts": [
+    "skipping games at break",
+    "a PE lesson on the field"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Chalk a zigzag line."
+    },
+    {
+     "beat": "predict",
+     "do": "What pattern is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for zigzag."
+    },
+    {
+     "beat": "reveal",
+     "do": "Zigzag: it has sharp corners."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS.M_CAC3_SK_LEFT_RIGHT",
+     "listen_for": [
+      "my left hand"
+     ],
+     "ask": "Face the board and skip to your right. Which hand points the way?",
+     "repair": "Stand with your back to the class and point right, then let children copy."
+    },
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS.M_CAC3_SK_ZIGZAG_CURVE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A path goes like a snake, smooth and bending. Is it a zigzag?",
+     "repair": "Chalk a zigzag with sharp corners and a curve with none."
+    },
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS.M_CAC3_SK_BACKWARD_TURN",
+     "listen_for": [
+      "turn round and skip forward"
+     ],
+     "ask": "What does skipping backward mean?",
+     "repair": "Put a mark in front and keep your eyes on it while moving back."
+    },
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS.M_CAC3_SK_CIRCLE_SPIN",
+     "listen_for": [
+      "spin round on the spot"
+     ],
+     "ask": "Skip in a circular pattern. What do you do?",
+     "repair": "Draw a big circle and skip along its edge."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the four directions of skipping.",
+     "answer": "forward, backward, right, left",
+     "shows": "directions"
+    },
+    {
+     "question": "Which pattern has sharp corners?",
+     "answer": "zigzag",
+     "shows": "patterns"
+    }
+   ]
+  }
+ ]
+}

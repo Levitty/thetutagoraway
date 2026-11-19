@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.CREATI.PUSHING_AND_PULLING",
+ "title": "Pushing and Pulling",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outside, in pairs and small teams, on soft ground. Counting while pushing and pulling links to Mathematics.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL",
+   "key_step": "The child tells pushing (away from the body) from pulling (towards the body) in games and at home, and pushes and pulls safely.",
+   "floor": {
+    "prerequisite": "Moves the body in named directions (Grade 2).",
+    "question": "Turn to your right. Which way did you turn?",
+    "answer": "to the right"
+   },
+   "representations": [
+    "a rope",
+    "a chair or a box to move",
+    "picture cards of home jobs"
+   ],
+   "steps": [
+    "Watch the object move.",
+    "Is it coming towards you or going away?",
+    "Towards: pulling. Away: pushing.",
+    "Say one safety rule for the game."
+   ],
+   "contexts": [
+    "tug of war at games time",
+    "fetching water and moving a wheelbarrow at home"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Pull a chair towards you.",
+     "say": "Is the chair coming to me or going away?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: coming to you."
+    },
+    {
+     "beat": "predict",
+     "do": "So is it a push or a pull?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A pull."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL.M_CAC3_PP_TOWARDS_PUSH",
+     "listen_for": [
+      "pushing"
+     ],
+     "ask": "A girl brings a bucket of water up from a well with a rope. Is she pushing or pulling?",
+     "repair": "Ask: is the bucket coming towards her or going away from her?"
+    },
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL.M_CAC3_PP_WHEELBARROW",
+     "listen_for": [
+      "pulling"
+     ],
+     "ask": "A boy moves a wheelbarrow in front of him. Is he pushing or pulling?",
+     "repair": "Push a chair across the floor, then pull it, and say where the chair is each time."
+    },
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL.M_CAC3_PP_TUG_PUSH",
+     "listen_for": [
+      "push it"
+     ],
+     "ask": "In tug of war, what do the two teams do with the rope?",
+     "repair": "Hold a rope with a partner and pull it gently towards yourself."
+    },
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL.M_CAC3_PP_JERK_SAFE",
+     "listen_for": [
+      "jerk the rope suddenly"
+     ],
+     "ask": "In a pulling game, what is the safe way to pull?",
+     "repair": "Show how a sudden jerk makes a partner fall, using a soft toy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A girl closes a door by moving it away from her. Push or pull?",
+     "answer": "push",
+     "shows": "push"
+    },
+    {
+     "question": "Which game is a pulling game: tug of war or wheelbarrow race?",
+     "answer": "tug of war",
+     "shows": "pull"
+    }
+   ]
+  }
+ ]
+}

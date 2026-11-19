@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE",
+ "title": "Sculpture (Toy Assemblage)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Collect clean recycled materials. The teacher cuts tins and wire; children join with glue, string and rubber bands.",
+ "skills": [
+  {
+   "skill": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE",
+   "key_step": "The child says an assemblage toy is built by joining found objects, names the joining materials and keeps safe with sharp edges.",
+   "floor": {
+    "prerequisite": "Models an item by coiling (Grade 2).",
+    "question": "What do you join to make a coil pot?",
+    "answer": "rolls of clay"
+   },
+   "representations": [
+    "boxes, bottle tops, sticks, wire",
+    "string and rubber bands",
+    "a wire car"
+   ],
+   "steps": [
+    "Plan the toy.",
+    "Choose clean found objects.",
+    "Join them with glue, string or wire.",
+    "Check for sharp edges."
+   ],
+   "contexts": [
+    "wire cars made by children in the village",
+    "a box lorry for class play"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a bottle-top car.",
+     "say": "What is it made of?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the parts."
+    },
+    {
+     "beat": "predict",
+     "do": "How were the wheels joined?"
+    },
+    {
+     "beat": "reveal",
+     "do": "With a stick and glue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE.M_CAC3_TA_BOUGHT",
+     "listen_for": [
+      "no, toys come from shops"
+     ],
+     "ask": "Can you make a toy car from bottle tops and a box?",
+     "repair": "Show a wire car made in the community."
+    },
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE.M_CAC3_TA_DRAWN",
+     "listen_for": [
+      "a drawing of a toy"
+     ],
+     "ask": "What is a toy made by assemblage?",
+     "repair": "Hold an assemblage toy and turn it round."
+    },
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE.M_CAC3_TA_SHARP",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What do you do with the sharp edge of a tin before using it?",
+     "repair": "Show how tape covers a tin edge."
+    },
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE.M_CAC3_TA_ONE_JOIN",
+     "listen_for": [
+      "you cannot"
+     ],
+     "ask": "You have no glue. How else can you join the wheels to a box car?",
+     "repair": "Join two boxes with string, then with a rubber band."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a toy made by assemblage?",
+     "answer": "a toy made by joining found objects",
+     "shows": "assemblage"
+    },
+    {
+     "question": "Name one way to join parts without glue.",
+     "answer": "any of: string, wire, rubber bands",
+     "shows": "joining"
+    }
+   ]
+  }
+ ]
+}

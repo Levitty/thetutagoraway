@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G3.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sing a short tune the class knows; change one thing at a time. Improvised percussion: tins, bottles of water, sticks.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.MELODY.MELODY_VARIATION",
+   "key_step": "The child hears a familiar tune sung with one change and says what changed: tempo, volume, pitch, rhythm or words.",
+   "floor": {
+    "prerequisite": "Tells similar from different tunes (Grade 2).",
+    "question": "Are these two tunes the same or different?",
+    "answer": "the same or different, as heard"
+   },
+   "representations": [
+    "a song the class knows",
+    "cards: fast/slow, loud/soft, high/low, new words",
+    "improvised percussion"
+   ],
+   "steps": [
+    "Listen to the tune.",
+    "Listen to it again with a change.",
+    "Pick the card for what changed."
+   ],
+   "contexts": [
+    "a song sung at assembly",
+    "a game song in the field"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing a line normally, then louder."
+    },
+    {
+     "beat": "predict",
+     "do": "What changed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: louder."
+    },
+    {
+     "beat": "reveal",
+     "do": "Volume: it got louder."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.MELODY.MELODY_VARIATION.M_CAC3_MV_LOUD_HIGH",
+     "listen_for": [
+      "it got higher"
+     ],
+     "ask": "The class sings a song again, louder but on the same notes. What changed?",
+     "repair": "Sing the same note softly then loudly; then a low note and a high note."
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.MELODY_VARIATION.M_CAC3_MV_FAST_HIGH",
+     "listen_for": [
+      "the pitch went higher"
+     ],
+     "ask": "A song is sung again more quickly. What changed?",
+     "repair": "Sing a low tune quickly and a high tune slowly."
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.MELODY_VARIATION.M_CAC3_MV_NEW_SONG",
+     "listen_for": [
+      "yes, a new tune"
+     ],
+     "ask": "The tune stays the same but the words change. Is it a new tune?",
+     "repair": "Hum the tune without words, then sing both versions."
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.MELODY_VARIATION.M_CAC3_MV_NO_CHANGE",
+     "listen_for": [
+      "no, it is the same song"
+     ],
+     "ask": "The song was sung slowly, then fast. Did anything change?",
+     "repair": "March to the song slowly and then fast."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A tune is sung again more slowly. What changed?",
+     "answer": "the tempo",
+     "shows": "tempo"
+    },
+    {
+     "question": "A tune keeps its notes but gets new words. Is it a new tune?",
+     "answer": "no",
+     "shows": "words"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS",
+   "key_step": "The child says what slow, fast, loud and soft ask and follows them in a song.",
+   "floor": {
+    "prerequisite": "Hears tempo and volume change in a tune.",
+    "question": "Was that sung fast or slow?",
+    "answer": "fast or slow, as sung"
+   },
+   "representations": [
+    "hand signs",
+    "direction cards",
+    "a drum for the beat"
+   ],
+   "steps": [
+    "Look at the direction.",
+    "Say what it asks.",
+    "Change only that.",
+    "Keep the tune."
+   ],
+   "contexts": [
+    "the school choir",
+    "a class song for parents"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hold hands wide apart.",
+     "say": "What does this mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for loud."
+    },
+    {
+     "beat": "predict",
+     "do": "Hands close together?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Soft."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS.M_CAC3_PD_LOUD_SHOUT",
+     "listen_for": [
+      "shout as hard as you can"
+     ],
+     "ask": "The teacher says \"loud\". How do you sing?",
+     "repair": "Sing loud, then shout, and listen for which keeps the tune."
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS.M_CAC3_PD_SOFT_SLOW",
+     "listen_for": [
+      "we sing slower"
+     ],
+     "ask": "The teacher says \"soft\". What changes?",
+     "repair": "Clap a steady beat and sing softly over it without slowing."
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS.M_CAC3_PD_FAST_LOUD",
+     "listen_for": [
+      "we sing louder"
+     ],
+     "ask": "The teacher says \"fast\". What changes?",
+     "repair": "Sing fast and soft, like a whisper race."
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS.M_CAC3_PD_HAND_SIGN",
+     "listen_for": [
+      "sing loud"
+     ],
+     "ask": "The teacher holds her hands close together. What does it mean?",
+     "repair": "Open the hands wide and sing big; close them and sing small."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does \"soft\" ask you to do?",
+     "answer": "sing quietly",
+     "shows": "soft"
+    },
+    {
+     "question": "Does \"fast\" mean you sing louder?",
+     "answer": "no, only quicker",
+     "shows": "fast"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN",
+ "title": "Forward Roll and V-balance",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mats or soft grass only. The teacher demonstrates and spots every roll. Markers: bottle tops or bean bags at the start line.",
+ "skills": [
+  {
+   "skill": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE",
+   "key_step": "The child names the body parts used in a forward roll (hands, tucked chin, back of the shoulders, round back) and a V-balance (the bottom, lifted legs and chest).",
+   "floor": {
+    "prerequisite": "Performs an egg roll with a tucked body (Grade 2).",
+    "question": "In an egg roll, is your body tucked or stretched?",
+    "answer": "tucked"
+   },
+   "representations": [
+    "mats",
+    "markers",
+    "a picture of a V"
+   ],
+   "steps": [
+    "Squat with hands flat on the mat.",
+    "Tuck the chin.",
+    "Roll on the back of the shoulders.",
+    "For the V, sit and lift legs and chest."
+   ],
+   "contexts": [
+    "a gymnastics display on sports day",
+    "a PE lesson on the grass"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a picture of a child rolling.",
+     "say": "Where is the chin?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: tucked to the chest."
+    },
+    {
+     "beat": "predict",
+     "do": "Which part touches the mat?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The back of the shoulders."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE.M_CAC3_FR_HEAD_TOP",
+     "listen_for": [
+      "the top of the head"
+     ],
+     "ask": "In a forward roll, which part touches the mat first after the hands?",
+     "repair": "Tuck the chin onto a bean bag held at the chest."
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE.M_CAC3_FR_STRAIGHT_BACK",
+     "listen_for": [
+      "straight and flat"
+     ],
+     "ask": "What shape is your back in a forward roll?",
+     "repair": "Rock on the back like a rocking chair first."
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE.M_CAC3_VB_FEET_DOWN",
+     "listen_for": [
+      "on the floor"
+     ],
+     "ask": "In a V-balance, where are your feet?",
+     "repair": "Lift one leg, then both, holding the knees first."
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE.M_CAC3_VB_LYING",
+     "listen_for": [
+      "the whole back, lying flat"
+     ],
+     "ask": "What part of the body do you balance on in a V-balance?",
+     "repair": "Sit and lift legs and chest together, arms out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a forward roll, where is your chin?",
+     "answer": "tucked to the chest",
+     "shows": "roll"
+    },
+    {
+     "question": "In a V-balance, what do you balance on?",
+     "answer": "the bottom",
+     "shows": "balance"
+    }
+   ]
+  }
+ ]
+}

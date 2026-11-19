@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE",
+ "title": "The Kenya National Anthem",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The anthem text is Kiswahili; questions give the lines in Kiswahili and ask for order and meaning in English. Practise standing at attention at assembly.",
+ "skills": [
+  {
+   "skill": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT",
+   "key_step": "The child orders the lines of the first stanza of the anthem in Kiswahili and says it is a prayer for blessings, justice, unity, peace and freedom.",
+   "floor": {
+    "prerequisite": "Names events where the anthem is sung (Grade 2).",
+    "question": "When do we sing the national anthem at school?",
+    "answer": "at assembly"
+   },
+   "representations": [
+    "the first stanza on a chart",
+    "line cards",
+    "a recording"
+   ],
+   "steps": [
+    "Sing the stanza.",
+    "Number the lines.",
+    "Say what each line asks for.",
+    "Say the whole message."
+   ],
+   "contexts": [
+    "Monday assembly",
+    "a national holiday celebration"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the six lines on the board, mixed up."
+    },
+    {
+     "beat": "predict",
+     "do": "Which line comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"Ee Mungu nguvu yetu\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Number it 1."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT.M_CAC3_NA_FIRST_LINE",
+     "listen_for": [
+      "Amani na uhuru"
+     ],
+     "ask": "Which line starts the first stanza of the Kenya National Anthem?",
+     "repair": "Sing the stanza line by line and number the lines."
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT.M_CAC3_NA_MESSAGE_WAR",
+     "listen_for": [
+      "fighting a war"
+     ],
+     "ask": "What is the first stanza of the anthem about?",
+     "repair": "Read the meaning of each line: baraka is blessing, amani is peace."
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT.M_CAC3_NA_UNDUGU",
+     "listen_for": [
+      "live only with our own family"
+     ],
+     "ask": "In the anthem, \"Natukae na undugu\" asks us to...",
+     "repair": "Ask: in the anthem, who are our brothers and sisters?"
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT.M_CAC3_NA_BARAKA",
+     "listen_for": [
+      "strength"
+     ],
+     "ask": "What does \"baraka\" mean in \"Ilete baraka kwetu\"?",
+     "repair": "Say each line and its meaning slowly, one at a time."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which line begins the first stanza?",
+     "answer": "Ee Mungu nguvu yetu",
+     "shows": "text"
+    },
+    {
+     "question": "What is the first stanza about?",
+     "answer": "a prayer for blessings, peace and unity",
+     "shows": "message"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS",
+   "key_step": "The child names occasions when the flag is raised and the etiquette of the anthem.",
+   "floor": {
+    "prerequisite": "Knows flag etiquette (Grade 2).",
+    "question": "What do you do when the flag is raised?",
+    "answer": "stand still and face it"
+   },
+   "representations": [
+    "a picture of a flag raising",
+    "occasion cards",
+    "role play"
+   ],
+   "steps": [
+    "Name the occasion.",
+    "Stand still and upright.",
+    "Face the flag, hands at the sides.",
+    "No talking; caps off."
+   ],
+   "contexts": [
+    "Jamhuri Day",
+    "Monday school assembly"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a picture of Mashujaa Day.",
+     "say": "Is the flag raised?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: yes."
+    },
+    {
+     "beat": "predict",
+     "do": "What do the people do?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Stand still and sing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS.M_CAC3_NA_SIT",
+     "listen_for": [
+      "keep walking to class"
+     ],
+     "ask": "What do you do while the national anthem is sung?",
+     "repair": "Practise stopping and standing still as soon as the anthem begins."
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS.M_CAC3_NA_ONLY_SCHOOL",
+     "listen_for": [
+      "there is none"
+     ],
+     "ask": "Name an occasion other than school assembly when the flag is raised.",
+     "repair": "Look at pictures of Jamhuri Day celebrations."
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS.M_CAC3_NA_HAT_ON",
+     "listen_for": [
+      "keep it on"
+     ],
+     "ask": "A boy is wearing a cap when the anthem starts. What should he do?",
+     "repair": "Show the class how to remove a cap and hold it at the side."
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS.M_CAC3_NA_MADARAKA_BIRTHDAY",
+     "listen_for": [
+      "a birthday party"
+     ],
+     "ask": "Which is a day when the national flag is raised?",
+     "repair": "Sort celebration cards into family and national."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a national holiday when the flag is raised.",
+     "answer": "any of: Madaraka, Mashujaa, Jamhuri Day",
+     "shows": "occasions"
+    },
+    {
+     "question": "What do you do with your cap during the anthem?",
+     "answer": "take it off",
+     "shows": "etiquette"
+    }
+   ]
+  }
+ ]
+}

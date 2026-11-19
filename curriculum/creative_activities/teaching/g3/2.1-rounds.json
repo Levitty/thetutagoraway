@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.PERFOR.ROUNDS",
+ "title": "Rounds",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the whole song in unison first. Groups stand apart; the teacher brings each group in.",
+ "skills": [
+  {
+   "skill": "CREA.G3.PERFOR.ROUNDS.ROUND",
+   "key_step": "The child says a round is the same song sung by groups starting at different times, each keeping to its own part, and says its message.",
+   "floor": {
+    "prerequisite": "Performs a song with clear words (Grade 2).",
+    "question": "Why should words be clear when singing?",
+    "answer": "so listeners understand the message"
+   },
+   "representations": [
+    "a two-part round the class knows",
+    "group signs",
+    "the words on the board"
+   ],
+   "steps": [
+    "Learn the song together.",
+    "Split into groups.",
+    "Group 1 starts; group 2 starts a line later.",
+    "Each group keeps its own part."
+   ],
+   "contexts": [
+    "a round at a music festival",
+    "a class round at assembly"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Group 1 starts singing.",
+     "say": "When does group 2 start?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: after the first line."
+    },
+    {
+     "beat": "predict",
+     "do": "What does group 2 sing?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The same song."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.ROUND.M_CAC3_RO_DIFFERENT_SONGS",
+     "listen_for": [
+      "different songs"
+     ],
+     "ask": "In a round, what do the groups sing?",
+     "repair": "Sing the round slowly with two groups, then each group alone."
+    },
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.ROUND.M_CAC3_RO_TOGETHER",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do all groups start a round together?",
+     "repair": "Point to group 1 to start; point to group 2 after one line."
+    },
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.ROUND.M_CAC3_RO_JOIN_OTHER",
+     "listen_for": [
+      "join their line"
+     ],
+     "ask": "In a round you hear the other group singing a different line. What do you do?",
+     "repair": "Practise with a hand over one ear, keeping your own words."
+    },
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.ROUND.M_CAC3_RO_UNISON",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "The whole class sings the same words at the same time. Is that a round?",
+     "repair": "Sing a song in unison, then as a round, and compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do groups in a round sing the same song?",
+     "answer": "yes",
+     "shows": "round"
+    },
+    {
+     "question": "What is singing all together at the same time called?",
+     "answer": "unison",
+     "shows": "unison"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G3.CREATI.WEAVING",
+ "title": "Weaving",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Fold the base paper and cut slits for the warp. Use two colours so the over-under shows.",
+ "skills": [
+  {
+   "skill": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE",
+   "key_step": "The child says a plain paper weave goes over one, under one, with each row starting the opposite way.",
+   "floor": {
+    "prerequisite": "Plaits strands over and under (Grade 2).",
+    "question": "In plaiting, does a strand go over or under the next?",
+    "answer": "over, then under"
+   },
+   "representations": [
+    "two colours of paper",
+    "a base with slits",
+    "a woven mat"
+   ],
+   "steps": [
+    "Cut slits in the base, not to the edge.",
+    "Weave a strip over one, under one.",
+    "Start the next row the opposite way.",
+    "Push the rows close together."
+   ],
+   "contexts": [
+    "a sisal mat at home",
+    "a paper mat for the class table"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Row 1 starts over.",
+     "say": "How should row 2 start?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: under."
+    },
+    {
+     "beat": "predict",
+     "do": "What happens if both start over?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The strip slides out."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE.M_CAC3_WV_SAME_START",
+     "listen_for": [
+      "over, the same as row 1"
+     ],
+     "ask": "Row 1 started over. How should row 2 start?",
+     "repair": "Weave two rows the same way and lift the paper: the strip falls out."
+    },
+    {
+     "code": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE.M_CAC3_WV_OVER_TWO",
+     "listen_for": [
+      "over two, under one"
+     ],
+     "ask": "In a plain weave, how does the strip go?",
+     "repair": "Say \"over, under, over, under\" aloud with each strip."
+    },
+    {
+     "code": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE.M_CAC3_WV_CUT_EDGE",
+     "listen_for": [
+      "right to the edge"
+     ],
+     "ask": "When you cut slits in the base paper, how far do you cut?",
+     "repair": "Show a base cut to the edge falling into strips."
+    },
+    {
+     "code": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE.M_CAC3_WV_ONE_COLOUR",
+     "listen_for": [
+      "it does not matter"
+     ],
+     "ask": "Why use two colours in a paper weave?",
+     "repair": "Compare a weave in one colour with one in two colours."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How does a plain weave go?",
+     "answer": "over one, under one",
+     "shows": "plain weave"
+    },
+    {
+     "question": "Row 1 starts under. How does row 2 start?",
+     "answer": "over",
+     "shows": "alternate"
+    }
+   ]
+  }
+ ]
+}

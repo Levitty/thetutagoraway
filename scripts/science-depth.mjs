@@ -36,6 +36,7 @@ function knownCodes() {
   for (const f of FILES) {
     let d; try { d = J(f); } catch { continue; }
     for (const s of d.sub_strands) { for (const k of s.skills || []) skills.add(k.code); for (const o of s.outcomes) outcomes.add(o.code); }
+    for (const r of d.readiness || []) skills.add(r.code);   // pre-primary readiness skills a Grade 1 file defines (Maths, Creative Activities)
   }
   return { skills, outcomes };
 }
