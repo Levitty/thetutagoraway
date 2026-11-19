@@ -20,6 +20,10 @@ const g5 = JSON.parse(readFileSync(new URL('../curriculum/english/g5.json', impo
 const subs = source.sub_strands;
 const entry = entryFor('english', 4);
 const G3_OUT = new Set(g3.sub_strands.flatMap(s => s.outcomes.map(o => o.code)));
+// Since 19 Nov 2026 Grade 3 has skills: a Grade 3 outcome prerequisite names the Grade 3 skill that covers it (scripts/lib/lower-grade.mjs),
+// and stays an outcome only where no Grade 3 skill covers it (an attitude).
+const G3_SKILLS = new Set(g3.sub_strands.flatMap(s => (s.skills || []).map(k => k.code)));
+const G3_COVERED = new Set(g3.sub_strands.flatMap(s => (s.skills || []).flatMap(k => [...k.outcomes, ...(k.teacher_rubric?.outcomes || [])])));
 const G5_SKILLS = new Set(g5.sub_strands.flatMap(s => (s.skills || []).map(k => k.code)));
 
 test('the in-app map is generated from the file HOREB owns, and the official outcomes and KICD rubrics are untouched', () => {
@@ -42,7 +46,12 @@ test('skills reach back to Grade 3 English and forward to Grade 5 English, and t
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
       for (const p of k.prerequisites) {
-        if (p.kind === 'outcome') { assert.ok(G3_OUT.has(p.requires), `${k.code}: ${p.requires} is not a Grade 3 outcome`); toG3++; } else assert.ok(SKILLS[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
+        if (p.kind === 'outcome') {
+          assert.ok(G3_OUT.has(p.requires), `${k.code}: ${p.requires} is not a Grade 3 outcome`);
+          assert.ok(!G3_COVERED.has(p.requires), `${k.code}: ${p.requires} is covered by a Grade 3 skill; name the skill`);
+          toG3++;
+        } else if (G3_SKILLS.has(p.requires)) toG3++;
+        else assert.ok(SKILLS[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
       }
       for (const c of k.leads_to) { assert.ok(G5_SKILLS.has(c), `${k.code}: ${c} is not a Grade 5 skill`); toG5++; }
       assert.ok((SKILLS[k.code].mis || []).length >= 2, `${k.code}: fewer than two library entries`);

@@ -4,12 +4,14 @@
 //   node scripts/build-english-g4.mjs
 // Idempotent: skills, prerequisites, leads_to and misconceptions are rebuilt from scripts/data/english-g4-skills.mjs
 // every run; the official outcomes, sub-strand text and KICD rubrics are never touched.
-// Prerequisites reach back to Grade 3 English outcomes (kind 'outcome') and to Grade 4 skills (kind 'skill');
+// Prerequisites reach back to Grade 3 English outcomes (kind 'outcome'; since 19 Nov 2026 moved onto the Grade 3 skill that
+// covers each, kind 'skill') and to Grade 4 skills (kind 'skill');
 // leads_to names Grade 5 English skills. All skills are 'proposed' and all misconceptions 'draft' until a Kenyan English teacher reviews them.
 // Then runs scripts/build-subject-map.mjs english 4 (curriculumMap.english.g4.js and the two engine data files).
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import { applyDepth } from './lib/english-depth.mjs';
+import { relinkLowerOutcomes } from './lib/lower-grade.mjs';
 import { spawnSync } from 'node:child_process';
 import { SKILLS, MIS, ALSO } from './data/english-g4-skills.mjs';
 
@@ -82,6 +84,10 @@ g4.totals = { ...g4.totals, skills: all.reduce((n, s) => n + s.skills.length, 0)
 g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review";
 // Depth pass (18 Nov 2026): new skills, prerequisites, misconceptions and the teaching pack from scripts/data/english-depth/g4-*.mjs.
 await applyDepth(4, g4, { families: (await import('../src/ai-tutor/content/subjects/english_g4.js')).default.families });
+// Grade 3 outcome prerequisites name the Grade 3 skill that covers each one (19 Nov 2026), now that Grade 3 has skills; same rule
+// as scripts/build-english-lower.mjs, through scripts/lib/lower-grade.mjs. Two outcomes taken by one skill stay one prerequisite.
+const relink = relinkLowerOutcomes(g4, { root: new URL('..', import.meta.url).pathname, label: 'English Grade 4' });
+console.log(`english g4: ${relink.moved} Grade 3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
 writeFileSync(path, JSON.stringify(g4, null, 1) + '\n');
 console.log(`${SKILLS.length} skills, ${nPre} prerequisites, ${nLead} leads_to links, ${MIS.length} misconceptions over ${all.filter(s => s.skills.length).length} sub-strands`);
 const r = spawnSync('node', ['scripts/build-subject-map.mjs', 'english', '4', '--dir', 'english', '--title', 'English'], { stdio: 'inherit', cwd: new URL('..', import.meta.url).pathname });
