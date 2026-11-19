@@ -133,8 +133,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
@@ -191,8 +191,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing long and short sounds (Grade 3) comes before hearing whether an instrument can change pitch. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -228,8 +228,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Improvising a string instrument (Grade 3) showed that a tight, shaking part makes the sound, as the drum skin does. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -271,8 +271,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Drawing with shapes (Grade 3) comes before shading a drawing with charcoal. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -650,15 +650,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.PERFOR.GALLOPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.GALLOPING.GALLOP",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Moving in different directions (Grade 3) is what a player does to get free for a pass. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.PUSHING_AND_PULLING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.PUSHING_AND_PULLING.PUSH_PULL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Pushing (Grade 3) is the action of a chest pass. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -703,8 +703,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.WEAVING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Plain paper weaving (Grade 3) is the first craft of passing strands over and under; macramé ties them. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -954,17 +954,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING",
+       "kind": "skill",
+       "reason": "Mixing colours by spraying and blowing (Grade 3) shows which colours can be made. Proposed, to confirm by a CBC Creative Arts teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.b",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Mixing colours by spraying and blowing (Grade 3) shows which colours can be made. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Naming paints and colouring materials (Grade 1) gives the child the colours this skill sorts. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -1003,8 +1003,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifying colour mixing (Grade 3) is the first step to naming the pair. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -1045,8 +1045,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.d",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.COLOUR_MIXING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Painting a picture (Grade 3) comes before controlling light and dark in it. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -1089,17 +1089,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.CREATI.COLLAGE.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "CREA.G3.CREATI.COLLAGE.COLLAGE",
+       "kind": "skill",
+       "reason": "Making a collage (Grade 3) is the cut-and-paste skill a montage uses with pictures. Proposed, to confirm by a CBC Creative Arts teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.COLLAGE.c",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Making a collage (Grade 3) is the cut-and-paste skill a montage uses with pictures. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading the shapes in a picture (Grade 3) is how the child chooses and arranges the cut pictures. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -1486,8 +1486,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
@@ -1543,8 +1543,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making patterns of long and short sounds (Grade 3) is what the French names say aloud. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -1592,8 +1592,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Improvising a rhythm (Grade 3) comes before judging what makes one good. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2038,15 +2038,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.CREATI.MELODY.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.MELODY_VARIATION",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.MELODY.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making melodic patterns (Grade 3) is hearing that sounds go up and down. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2087,8 +2087,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.MELODY.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.MELODY_VARIATION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Hearing variations in a melody (Grade 3) comes before showing pitch with the hands. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2187,8 +2187,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Modelling beads with the pellet technique (Grade 3) is the first clay skill. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2563,15 +2563,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.PERFOR.GALLOPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.GALLOPING.GALLOP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Moving in a direction with control (Grade 3) comes before a fast start. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.SKIPPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Skipping (Grade 3) builds the push from the ball of the foot used in a sprint. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2607,8 +2607,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.SKIPPING.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.SKIPPING.SKIP_DIRECTIONS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Skipping on the balls of the feet (Grade 3) is how a sprinter runs. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2652,8 +2652,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
@@ -2966,17 +2966,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE",
+       "kind": "skill",
+       "reason": "Holding a V-balance (Grade 3) is the first held balance. Proposed, to confirm by a CBC Creative Arts teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.d",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Holding a V-balance (Grade 3) is the first held balance. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "requires": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The swan balance (Grade 2) is an earlier balance held on chosen body parts, as the crab balance is. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -3020,8 +3020,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making markers for the mat area (Grade 3) is the first safety step. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -3264,15 +3264,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.CREATI.MELODY.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.ROUNDS.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.ROUNDS.ROUND",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Describing the message in a round (Grade 3) is how song types are told apart. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -3317,8 +3317,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.MELODY.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Applying performance directions (Grade 3) is where pitch and dynamics words began. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -3354,8 +3354,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.d",
-       "kind": "outcome",
+       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Anthem etiquette (Grade 3) is the same for the EAC anthem. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4081,8 +4081,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Naming instruments and their parts (Grade 3) begins here with the recorder. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4149,15 +4149,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.CREATI.MELODY.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.MELODY_VARIATION",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.MELODY.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing higher and lower sounds (Grade 3) is needed to order B, A and G. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4208,8 +4208,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.MELODY.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.MELODY.PERF_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Performance directions (Grade 3) include playing softly, which the recorder needs. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4623,15 +4623,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFETY",
+       "kind": "skill",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing water dangers (Grade 3) is why water entry rules matter. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4682,8 +4682,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.WATER_DANGERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing the dangers of deep water (Grade 3) is why floating is the first water skill. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4727,17 +4727,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.PERFOR.GALLOPING.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "CREA.G3.PERFOR.GALLOPING.GALLOP",
+       "kind": "skill",
+       "reason": "Galloping games (Grade 3) are the movements animal games copy. Proposed, to confirm by a CBC Creative Arts teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.GALLOPING.b",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Galloping games (Grade 3) are the movements animal games copy. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "requires": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Kenyan singing games (Grade 1) are the first indigenous games with rules, players and parts. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -5116,8 +5116,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.COLLAGE.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.COLLAGE.COLLAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making artworks (Grade 3) gives the pieces a portfolio holds. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -5155,17 +5155,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.b",
-       "kind": "outcome",
-       "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_TEXT",
+       "kind": "skill",
+       "reason": "Knowing the first stanza (Grade 3) comes before analysing its message. Proposed, to confirm by a CBC Creative Arts teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Knowing the first stanza (Grade 3) comes before analysing its message. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "reason": "The occasions and etiquette of the anthem (Grade 3) are the behaviour this skill asks the child to explain. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -5206,8 +5206,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.ROUNDS.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.ROUNDS.ROUND",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Hearing parts in a round (Grade 3) is the first step to naming parts of a performance. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"

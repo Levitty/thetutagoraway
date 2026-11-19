@@ -84,10 +84,12 @@ export const SUBS = [
     packNotes: 'Mix paint on a palette in front of the class; let learners predict before mixing.',
     rubric: { VALUE: ['b'], MONTAGE: ['c'] },
     pre: {
-      COLOURS: [[`${G3}CREATI.DRAWING_AND_PAINTING.b`, 'Mixing colours by spraying and blowing (Grade 3) shows which colours can be made.']],
+      COLOURS: [[`${G3}CREATI.DRAWING_AND_PAINTING.b`, 'Mixing colours by spraying and blowing (Grade 3) shows which colours can be made.'],
+        ['CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS', 'Naming paints and colouring materials (Grade 1) gives the child the colours this skill sorts.', 'helpful']],
       MIX: [[`${G3}CREATI.DRAWING_AND_PAINTING.a`, 'Identifying colour mixing (Grade 3) is the first step to naming the pair.']],
       VALUE: [[`${G3}CREATI.DRAWING_AND_PAINTING.d`, 'Painting a picture (Grade 3) comes before controlling light and dark in it.']],
-      MONTAGE: [[`${G3}CREATI.COLLAGE.c`, 'Making a collage (Grade 3) is the cut-and-paste skill a montage uses with pictures.']],
+      MONTAGE: [[`${G3}CREATI.COLLAGE.c`, 'Making a collage (Grade 3) is the cut-and-paste skill a montage uses with pictures.'],
+        ['CREA.G3.CREATI.DRAWING_AND_PAINTING.SHAPES_PICTURE', 'Reading the shapes in a picture (Grade 3) is how the child chooses and arranges the cut pictures.', 'helpful']],
     },
     mis: [
       ['COLOURS', 'M_CA4_PM_BROWN_SECONDARY', 'Calls brown a secondary colour because it is mixed.', 'Is brown a secondary colour?', 'yes', 'no; the secondary colours are orange, green and purple', 'The child knows secondaries are mixed and thinks every mixed colour is one.', 'Show that brown needs all three primaries; a secondary is exactly two primaries.', 'A secondary colour is made from two primary colours. Brown needs more, so it is not one.'],
@@ -257,7 +259,8 @@ export const SUBS = [
     packNotes: 'Practise only on mats with a teacher watching. Questions ask about body shape and safety.',
     rubric: { BALANCES: ['b', 'c'] },
     pre: {
-      BALANCES: [[`${G3}PERFOR.FORWARD_ROLL_AND_V_BALAN.d`, 'Holding a V-balance (Grade 3) is the first held balance.']],
+      BALANCES: [[`${G3}PERFOR.FORWARD_ROLL_AND_V_BALAN.d`, 'Holding a V-balance (Grade 3) is the first held balance.'],
+        ['CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN', 'The swan balance (Grade 2) is an earlier balance held on chosen body parts, as the crab balance is.', 'helpful']],
       GYMSAFE: [[`${G3}PERFOR.FORWARD_ROLL_AND_V_BALAN.b`, 'Making markers for the mat area (Grade 3) is the first safety step.']],
     },
     mis: [
@@ -409,7 +412,8 @@ export const SUBS = [
     pre: {
       SAFETY: [[`${G3}APPREC.WATER_SAFETY_AWARENESS.b`, 'Knowing water dangers (Grade 3) is why water entry rules matter.']],
       FLOAT: [[`${G3}APPREC.WATER_SAFETY_AWARENESS.b`, 'Knowing the dangers of deep water (Grade 3) is why floating is the first water skill.']],
-      ANIMAL: [[`${G3}PERFOR.GALLOPING.b`, 'Galloping games (Grade 3) are the movements animal games copy.']],
+      ANIMAL: [[`${G3}PERFOR.GALLOPING.b`, 'Galloping games (Grade 3) are the movements animal games copy.'],
+        ['CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES', 'Kenyan singing games (Grade 1) are the first indigenous games with rules, players and parts.', 'helpful']],
     },
     fix: { M_CA4_SW_GAME_BUILDS: { error: 'Says the frog jump builds the arms, picking the body part that looks busy rather than the one that does the work.', cause: 'The arms swing in the jump, so the child thinks they are doing the work.' } },
     mis: [
@@ -446,7 +450,8 @@ export const SUBS = [
     pre: {
       CONCEPT: [['ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS', 'Saying what a story is made of (Grade 4 English) is like saying what an artwork is made of.', 'helpful']],
       PORTFOLIO: [[`${G3}CREATI.COLLAGE.c`, 'Making artworks (Grade 3) gives the pieces a portfolio holds.']],
-      ANTHEM: [[`${G3}APPREC.THE_KENYA_NATIONAL_ANTHE.a`, 'Knowing the first stanza (Grade 3) comes before analysing its message.']],
+      ANTHEM: [[`${G3}APPREC.THE_KENYA_NATIONAL_ANTHE.a`, 'Knowing the first stanza (Grade 3) comes before analysing its message.'],
+        ['CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.ANTHEM_OCCASIONS', 'The occasions and etiquette of the anthem (Grade 3) are the behaviour this skill asks the child to explain.']],
       FOLKPERF: [[`${G3}PERFOR.ROUNDS.a`, 'Hearing parts in a round (Grade 3) is the first step to naming parts of a performance.', 'helpful']],
     },
     fix: { M_CA4_AP_KNA_VERSES: { error: 'Says the anthem has five verses, counting the lines or the times it is repeated, not the three stanzas.', cause: 'At assembly only one stanza is often sung, so the child guesses the count.' } },

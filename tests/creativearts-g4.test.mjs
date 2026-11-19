@@ -15,6 +15,11 @@ creativeArtsDepthTests({ grade: 4, outcomes: 63 });
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/creative_arts/g4.json', import.meta.url), 'utf8'));
 const subs = source.sub_strands;
+// Grade 1-3 Creative Activities (mapped 19 Nov 2026): Grade 4 prerequisites name its skills, and name an outcome only where no
+// Grade 1-3 skill asks it or marks it with the rubric (attitudes); scripts/lib/lower-grade.mjs.
+const CA = [1, 2, 3].map(g => JSON.parse(readFileSync(new URL(`../curriculum/creative_activities/g${g}.json`, import.meta.url), 'utf8')));
+const CA_SKILLS = new Set(CA.flatMap(j => j.sub_strands.flatMap(s => (s.skills || []).map(k => k.code))));
+const CA_COVERED = new Set(CA.flatMap(j => j.sub_strands.flatMap(s => (s.skills || []).flatMap(k => [...k.outcomes, ...(k.teacher_rubric?.outcomes || [])]))));
 const entry = entryFor('creativearts', 4);
 
 test('the map is generated from the file HOREB owns, the official outcomes and KICD rubrics are untouched', () => {
@@ -37,7 +42,8 @@ test('skills are proposed and the library is draft, with the fields a reviewer n
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
       assert.ok(/at least four of the last five/.test(k.mastery), `${k.code}: evidence rule`);
-      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || /^(CREA\.G3\.|MATH\.G4\.|SCIE\.G4\.|SOCI\.G4\.|ENGL\.G4\.)/.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || CA_SKILLS.has(p.requires) || /^(CREA\.G3\.|MATH\.G4\.|SCIE\.G4\.|SOCI\.G4\.|ENGL\.G4\.)/.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) if (p.kind === 'outcome') assert.ok(!CA_COVERED.has(p.requires), `${k.code}: ${p.requires} is carried by a Grade 1-3 skill; name the skill`);
       for (const l of k.leads_to) assert.ok(G5_SKILLS[l.skill], `${k.code}: ${l.skill} is not a Grade 5 Creative Arts skill`);
     }
     for (const m of s.misconceptions) {
@@ -47,7 +53,7 @@ test('skills are proposed and the library is draft, with the fields a reviewer n
       assert.ok(!/—/.test(JSON.stringify(m)), `${m.code}: em dash`);
     }
   }
-  assert.ok(subs.flatMap(s => s.skills).some(k => k.prerequisites.some(p => p.kind === 'outcome' && p.requires.startsWith('CREA.G3.'))), 'some prerequisites reach Grade 3 Creative Activities');
+  assert.ok(subs.flatMap(s => s.skills).filter(k => k.prerequisites.some(p => CA_SKILLS.has(p.requires))).length >= 20, 'prerequisites reach Grade 1-3 Creative Activities skills');
   assert.ok(subs.flatMap(s => s.skills).filter(k => k.leads_to.length).length >= 20, 'most skills lead to a Grade 5 skill');
 });
 

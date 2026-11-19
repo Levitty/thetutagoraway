@@ -129,8 +129,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.STRING_INSTR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifying Kenyan string instruments (Grade 3) is extended here to how each is played. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -1087,8 +1087,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.d",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.RANDOM_REPEAT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "A random repeat pattern with found objects (Grade 3) is the first printing; a block makes a full repeat. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -1344,8 +1344,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.WEAVING.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The plain paper weave (Grade 3) is the same over-under pattern done on a loom. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -1544,8 +1544,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.ROLL_BALANCE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The forward roll (Grade 3) is part of the three-action sequence. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2523,8 +2523,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.BEADS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Decorating modelled beads (Grade 3) is the first decoration of clay. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"

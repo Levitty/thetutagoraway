@@ -12,6 +12,7 @@ import * as D from './data/creativearts-g4-skills.mjs';
 import { SUBS as DEPTH } from './data/creativearts-depth/g4.mjs';
 import { applyRubric } from './data/creativearts-depth/lib.mjs';
 import { applyDepth } from './science-depth.mjs';
+import { relinkLowerOutcomes } from './lib/lower-grade.mjs';
 
 const load = (p) => JSON.parse(readFileSync(new URL(`../curriculum/${p}.json`, import.meta.url), 'utf8'));
 const path = new URL('../curriculum/creative_arts/g4.json', import.meta.url);
@@ -58,6 +59,9 @@ for (const [, key] of D.SKILLS) if (!D.MIS.some(m => m[0] === key)) throw new Er
 g4.totals = { ...g4.totals, skills: D.SKILLS.length, prerequisites: nPre, leads_to: nLead, misconceptions: D.MIS.length };
 const nRubric = applyRubric(g4, DEPTH, P);
 const depth = applyDepth(g4, DEPTH, { dir: 'creative_arts', grade: 4, prefix: P, derive: true });
+// Grade 1-3 outcome prerequisites name the Grade 1-3 Creative Activities skill that carries them (19 Nov 2026, scripts/lib/lower-grade.mjs).
+const relink = relinkLowerOutcomes(g4, { root: new URL('..', import.meta.url).pathname, label: 'Creative Arts Grade 4' });
+console.log(`creative arts g4: ${relink.moved} Grade 1-3 outcome prerequisites now name skills (${relink.merged} merged), ${relink.kept.length} kept as outcomes`);
 g4.status = "outcomes from KICD's text, word for word; skills, prerequisites, leads_to and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g4-non-question-outcomes-2026-11-13.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g4)";
 writeFileSync(path, JSON.stringify(g4, null, 1) + '\n');
 console.log(`creative arts g4: ${g4.totals.skills} skills, ${g4.totals.prerequisites} prerequisites, ${nLead} leads_to, ${g4.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.pack} teaching pack entries, ${nRubric} practical outcomes to the teacher's rubric)`);
