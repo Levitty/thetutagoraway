@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T13_WH_QUESTIONS",
+ "title": "Wh- questions (Theme 13: Cultural activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child picks the word for the answer wanted, swaps the verb before the subject, and ends with a question mark.",
+   "floor": {
+    "prerequisite": "Answers who, what, where.",
+    "question": "Where do you live?",
+    "answer": "I live in ..."
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "a cultural dance",
+    "a wedding"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ is the dance? On Friday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Where or When?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: When is the dance?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS.M2_WH_WHERE_WHEN",
+     "listen_for": [
+      "Where"
+     ],
+     "ask": "Time or place?",
+     "repair": "When."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS.M2_WH_WHO_WHAT",
+     "listen_for": [
+      "Who"
+     ],
+     "ask": "Person or thing?",
+     "repair": "What."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS.M2_WH_ORDER",
+     "listen_for": [
+      "Where Juma is going?"
+     ],
+     "ask": "Swap the verb?",
+     "repair": "Is Juma."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS.M2_WH_NO_MARK",
+     "listen_for": [
+      "Who beat the drum."
+     ],
+     "ask": "Question ends with?",
+     "repair": "?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ beat the drum? Juma.",
+     "answer": "Who",
+     "shows": "who"
+    },
+    {
+     "question": "Order: going / where / is / Juma",
+     "answer": "Where is Juma going?",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

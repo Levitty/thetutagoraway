@@ -25,6 +25,7 @@ if (!counts) { console.error(`no depth data for Grade ${GRADE} (scripts/data/eng
 
 // Outcome prerequisites of the grade below -> the skill of that grade that covers the outcome (first one listed).
 let moved = 0;
+const short = [];
 if (GRADE > 1) {
   const below = JSON.parse(readFileSync(file(GRADE - 1), 'utf8'));
   const cov = coverage(below);
@@ -36,9 +37,10 @@ if (GRADE > 1) {
       if (skill) moved++;
       if (!next.some(x => x.requires === q.requires)) next.push(q);
     }
-    if (new Set(next.map(p => p.requires)).size < 2) throw new Error(`${k.code}: fewer than two prerequisites once Grade ${GRADE - 1} outcomes are moved onto skills; add another`);
+    if (new Set(next.map(p => p.requires)).size < 2) short.push(k.code);
     k.prerequisites = next;
   }
+  if (short.length) throw new Error(`fewer than two prerequisites once Grade ${GRADE - 1} outcomes are moved onto its skills (add another): ${short.join(', ')}`);
   const all = doc.sub_strands;
   doc.totals.prerequisites = all.reduce((n, s) => n + s.skills.reduce((m, k) => m + k.prerequisites.length, 0), 0);
 }

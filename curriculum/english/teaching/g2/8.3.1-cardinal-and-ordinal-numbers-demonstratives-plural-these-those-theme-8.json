@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL",
+ "title": "Cardinal and ordinal numbers Demonstratives-Plural (these, those) (Theme 8: Classroom)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"How many?\" (one, two) or \"Which place?\" (first, second).",
+   "floor": {
+    "prerequisite": "Counts to twenty.",
+    "question": "Count the desks.",
+    "answer": "one, two, three"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "a race",
+    "a line at the classroom door"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Akinyi was the ___ in the race. (1)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "oneth or first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Akinyi was first in the race."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL.M2_CO_ONETH",
+     "listen_for": [
+      "oneth"
+     ],
+     "ask": "Is one special?",
+     "repair": "First."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL.M2_CO_FIVETH",
+     "listen_for": [
+      "fiveth"
+     ],
+     "ask": "Five becomes?",
+     "repair": "Fifth."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL.M2_CO_POSITION_TWO",
+     "listen_for": [
+      "number two"
+     ],
+     "ask": "A place in the race?",
+     "repair": "Second."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL.M2_CO_ORDINAL_COUNT",
+     "listen_for": [
+      "second"
+     ],
+     "ask": "How many?",
+     "repair": "Two."
+    }
+   ],
+   "checks": [
+    {
+     "question": "May is the ___ month.",
+     "answer": "fifth",
+     "shows": "ordinal"
+    },
+    {
+     "question": "I have ___ pencils. (2)",
+     "answer": "two",
+     "shows": "cardinal"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"More than one? Near or far?\"",
+   "floor": {
+    "prerequisite": "Uses this and that.",
+    "question": "___ book here. (near)",
+    "answer": "This"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "things in the classroom",
+    "trees outside"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ books on my desk are new."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "This or These?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: These books are new."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE.M2_TT_THIS_PLURAL",
+     "listen_for": [
+      "This"
+     ],
+     "ask": "More than one?",
+     "repair": "These."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE.M2_TT_NEAR_FAR",
+     "listen_for": [
+      "these"
+     ],
+     "ask": "Near or far?",
+     "repair": "Those."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE.M2_TT_SINGULAR_NOUN",
+     "listen_for": [
+      "tree"
+     ],
+     "ask": "Many trees?",
+     "repair": "Trees."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE.M2_TT_THEM",
+     "listen_for": [
+      "them"
+     ],
+     "ask": "Them or those?",
+     "repair": "Those."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Look at ___ birds far away.",
+     "answer": "those",
+     "shows": "far"
+    },
+    {
+     "question": "These ___ are mine. (pen)",
+     "answer": "pens",
+     "shows": "plural noun"
+    }
+   ]
+  }
+ ]
+}

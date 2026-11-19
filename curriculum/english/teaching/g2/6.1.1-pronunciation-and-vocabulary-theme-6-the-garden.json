@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 6: The garden)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (ear, th, wh, tw) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"thin\" and \"tin\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a garden with thorns",
+    "a wheelbarrow and twigs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: thin, tin."
+    },
+    {
+     "beat": "point",
+     "do": "Say thin.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in thin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW.M2_TH_T",
+     "listen_for": [
+      "tin"
+     ],
+     "ask": "Tongue between the teeth?",
+     "repair": "Thin."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW.M2_THV_D",
+     "listen_for": [
+      "day"
+     ],
+     "ask": "Tongue between the teeth with a buzz?",
+     "repair": "They."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW.M2_WH_H",
+     "listen_for": [
+      "heel"
+     ],
+     "ask": "Is the h heard?",
+     "repair": "No: wheel says w."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW.M2_EAR_TWO_BEATS",
+     "listen_for": [
+      "2 (di-a)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: deer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts like \"wet\": wheel, heel, feel?",
+     "answer": "wheel",
+     "shows": "wh"
+    },
+    {
+     "question": "Which word starts with th: this, dish, kiss?",
+     "answer": "this",
+     "shows": "th"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+ ]
+}

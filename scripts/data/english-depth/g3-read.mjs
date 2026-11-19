@@ -37,7 +37,7 @@ export const PRE = {
   READ_ACCURATELY: [['G2o:READIN.T1_FLUENCY.b', 'Grade 2 read a grade-appropriate text at the right speed.'], ['BLENDS_BL_BR_CL_CH', 'Decoding words with the blends.']],
   READ_WITH_EXPRESSION: [['READ_ACCURATELY', 'Reading the words right first.'], ['G2o:READIN.T2_FLUENCY.c', 'Grade 2 read showing feelings.'], ['END_MARKS', 'Full stops, question marks and exclamation marks tell the voice what to do.']],
   SELF_CORRECT: [['READ_ACCURATELY', 'Sounding out a word.'], ['WORD_FROM_CONTEXT', 'Noticing a word that does not make sense.']],
-  PREDICT: [['G2o:READIN.T1_COMPREHENSION.a', 'Grade 2 made predictions in a story.'], ['G2o:READIN.T3_COMPREHENSION.a', 'Grade 2 predicted from the title and pictures.']],
+  PREDICT: [['G2o:READIN.T1_COMPREHENSION.a', 'Grade 2 made predictions in a story.'], ['G2o:READIN.T3_COMPREHENSION.a', 'Grade 2 predicted from the title and pictures.'], ['G2o:READIN.T7_COMPREHENSION.a', 'Grade 2 described characters and events, the base of a prediction.']],
   CHARACTERS_SETTING: [['G2o:READIN.T7_COMPREHENSION.a', 'Grade 2 described characters and events.'], ['G2o:READIN.T9_COMPREHENSION.b', 'Grade 2 identified the setting.']],
   WORD_FROM_CONTEXT: [['G2o:READIN.T1_COMPREHENSION.b', 'Grade 2 used contextual clues.'], ['THEME_WORDS', 'Knowing the words around the new one.']],
   DIRECT_QUESTIONS: [['G2o:READIN.T1_COMPREHENSION.c', 'Grade 2 answered direct questions.'], ['READ_ACCURATELY', 'Reading the text right.']],

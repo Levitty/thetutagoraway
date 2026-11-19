@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 8: Classroom)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (br, weak vowel, long e, a, o) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"brush\" and \"blush\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a teacher in the classroom",
+    "chalk on the board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: brush, blush."
+    },
+    {
+     "beat": "point",
+     "do": "Say brush.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in brush."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA.M2_SCHWA_FULL",
+     "listen_for": [
+      "teach"
+     ],
+     "ask": "Is that part strong or quick?",
+     "repair": "Quick uh."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA.M2_BR_BL",
+     "listen_for": [
+      "blush"
+     ],
+     "ask": "Curled?",
+     "repair": "Brush."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA.M2_EE_EA_DIFFERENT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Same sound?",
+     "repair": "Yes: long e."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA.M2_OA_OW_DIFFERENT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Same sound?",
+     "repair": "Yes: long o."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do \"boat\" and \"snow\" have the same vowel?",
+     "answer": "yes",
+     "shows": "long o"
+    },
+    {
+     "question": "Which part of \"teacher\" is weak?",
+     "answer": "er",
+     "shows": "weak vowel"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT",
+ "title": "Verbs ‘to have’ Objective pronouns-plural (Theme 3: Transport)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE",
+   "assessed_by": "questions",
+   "key_step": "The child uses has for he, she, it, have for the rest, had for the past.",
+   "floor": {
+    "prerequisite": "Uses does and do.",
+    "question": "She ___ the dishes. (do)",
+    "answer": "does"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "ways we travel",
+    "what we own"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Baraka ___ a bicycle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "have or has?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Baraka has a bicycle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE.M2_HV_HE_HAVE",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "He takes?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE.M2_HV_HAVING",
+     "listen_for": [
+      "am having"
+     ],
+     "ask": "Do you own it?",
+     "repair": "I have."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE.M2_HV_PAST",
+     "listen_for": [
+      "has"
+     ],
+     "ask": "Last year?",
+     "repair": "Had."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE.M2_HV_WE_HAS",
+     "listen_for": [
+      "has"
+     ],
+     "ask": "We takes?",
+     "repair": "Have."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We ___ a big garden.",
+     "answer": "have",
+     "shows": "we"
+    },
+    {
+     "question": "Last year we ___ a cow.",
+     "answer": "had",
+     "shows": "past"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS"
+ ]
+}

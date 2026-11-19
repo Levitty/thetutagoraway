@@ -1,0 +1,191 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 2: Activities in the home)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (ch, long o, sh, cl) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"coat\" and \"cot\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "washing dishes at home",
+    "soap and a clean shirt"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: coat, cot."
+    },
+    {
+     "beat": "point",
+     "do": "Say coat.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in coat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL.M2_CH_SH",
+     "listen_for": [
+      "shop"
+     ],
+     "ask": "Stop at the start?",
+     "repair": "t-sh: chop."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL.M2_SH_S",
+     "listen_for": [
+      "sip"
+     ],
+     "ask": "Round lips?",
+     "repair": "Ship."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL.M2_OA_SHORT_O",
+     "listen_for": [
+      "cot"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Coat slides."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL.M2_CL_CR",
+     "listen_for": [
+      "crown"
+     ],
+     "ask": "Tongue up?",
+     "repair": "Clown."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has long o: hot, home, hat?",
+     "answer": "home",
+     "shows": "long o"
+    },
+    {
+     "question": "Which word starts with sh: sip, ship, chip?",
+     "answer": "ship",
+     "shows": "sh"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child says each consonant of the blend, glues them into one beat, then says the word in a sentence.",
+   "floor": {
+    "prerequisite": "Says single letter-sounds.",
+    "question": "Say the first sound of \"lorry\".",
+    "answer": "/l/"
+   },
+   "steps": [
+    "Say each consonant alone.",
+    "Glue them with no vowel between.",
+    "Say the word.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "the lorry on the road",
+    "washing dishes",
+    "a strong rope"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: b + l = bl, blue."
+    },
+    {
+     "beat": "point",
+     "do": "Point at bl.",
+     "say": "Say b and l together. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it."
+    },
+    {
+     "beat": "count",
+     "do": "The child claps the beats: one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: blue, not bu-lu."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS.M2_SCS_EXTRA_VOWEL",
+     "listen_for": [
+      "bulu"
+     ],
+     "ask": "How many beats?",
+     "repair": "One: blue."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS.M2_SCS_L_R",
+     "listen_for": [
+      "The rorry is led."
+     ],
+     "ask": "Up or curled?",
+     "repair": "Up for l."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS.M2_SCS_TH",
+     "listen_for": [
+      "dis ting"
+     ],
+     "ask": "Tongue between the teeth?",
+     "repair": "This thing."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS.M2_SCS_SH_S",
+     "listen_for": [
+      "Se wases the dises."
+     ],
+     "ask": "Round lips?",
+     "repair": "She."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: three green trees",
+     "answer": "th, gr and tr clear",
+     "shows": "blends and th"
+    },
+    {
+     "question": "Say: She washes the dishes.",
+     "answer": "sh clear",
+     "shows": "sh"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+ ]
+}

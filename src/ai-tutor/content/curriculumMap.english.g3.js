@@ -2715,7 +2715,9 @@ export const SKILLS = {
    "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.a",
    "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS"
+  ],
   "mis": [
    "M3_CO_NONE",
    "M3_CO_AND_EVERY",

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR",
+ "title": "Nouns: Plurals of irregular nouns (Theme 5: Shopping)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS",
+   "assessed_by": "questions",
+   "key_step": "The child knows the irregular pairs by heart and never adds -s to them.",
+   "floor": {
+    "prerequisite": "Makes plurals with -s.",
+    "question": "One shop, two ___",
+    "answer": "shops"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "at the shop",
+    "a market day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: One child, two ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "childs or children?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: two children"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS.M2_PL_CHILDS",
+     "listen_for": [
+      "childs"
+     ],
+     "ask": "Regular?",
+     "repair": "Children."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS.M2_PL_FEETS",
+     "listen_for": [
+      "feets"
+     ],
+     "ask": "Already plural?",
+     "repair": "Feet."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS.M2_PL_SHEEPS",
+     "listen_for": [
+      "sheeps"
+     ],
+     "ask": "Does it change?",
+     "repair": "Sheep."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS.M2_PL_ONE_TEETH",
+     "listen_for": [
+      "teeth"
+     ],
+     "ask": "One or many?",
+     "repair": "Tooth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One foot, two ___",
+     "answer": "feet",
+     "shows": "irregular"
+    },
+    {
+     "question": "Three ___ (sheep)",
+     "answer": "sheep",
+     "shows": "no change"
+    }
+   ]
+  }
+ ]
+}

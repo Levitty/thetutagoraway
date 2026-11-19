@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T8_SPELLING",
+ "title": "Spelling (Theme 8: Classroom)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter or letter team for every sound, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the sound.",
+    "question": "Which word did you hear: board or bord?",
+    "answer": "board"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the target letters first.",
+    "Look, cover, write, check.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "theme words: brush, teacher, read, board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bord / board"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS.M2_SVT_ONE_LETTER",
+     "listen_for": [
+      "red"
+     ],
+     "ask": "One letter or a team?",
+     "repair": "Read."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS.M2_SVT_BR_BL",
+     "listen_for": [
+      "blush"
+     ],
+     "ask": "L or r?",
+     "repair": "Brush."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS.M2_SVT_ER_A",
+     "listen_for": [
+      "ticha"
+     ],
+     "ask": "English ending?",
+     "repair": "Er."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS.M2_SVT_OA_O",
+     "listen_for": [
+      "bord"
+     ],
+     "ask": "Oa?",
+     "repair": "Board."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: red, read (a book)",
+     "answer": "read",
+     "shows": "ea"
+    },
+    {
+     "question": "Choose: ticha, teacher",
+     "answer": "teacher",
+     "shows": "er"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT",
+  "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS"
+ ]
+}

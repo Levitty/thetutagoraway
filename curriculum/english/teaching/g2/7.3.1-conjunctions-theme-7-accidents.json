@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T7_CONJUNCTIONS",
+ "title": "Conjunctions (Theme 7: Accidents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR",
+   "assessed_by": "questions",
+   "key_step": "The child uses or for one of two, and answers by choosing one.",
+   "floor": {
+    "prerequisite": "Joins with and.",
+    "question": "tea ___ bread (both)",
+    "answer": "and"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "an accident: hospital or clinic",
+    "snacks at break"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Do you want tea ___ milk?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "and or or?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Do you want tea or milk?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR.M2_OR_AND",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "One or both?",
+     "repair": "One: or."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR.M2_OR_YES",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "Choose one.",
+     "repair": "I go on foot."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR.M2_OR_BOTH",
+     "listen_for": [
+      "a mango and a banana"
+     ],
+     "ask": "Pick one.",
+     "repair": "A mango."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR.M2_OR_POSITION",
+     "listen_for": [
+      "Or is it Monday Tuesday?"
+     ],
+     "ask": "Where does or go?",
+     "repair": "Between."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do you walk or ride? Answer.",
+     "answer": "I walk. (one)",
+     "shows": "answer"
+    },
+    {
+     "question": "Join: Is it red? Is it blue?",
+     "answer": "Is it red or blue?",
+     "shows": "join"
+    }
+   ]
+  }
+ ]
+}

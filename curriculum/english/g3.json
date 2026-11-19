@@ -10,7 +10,7 @@
   "outcomes": 268,
   "lessons": 150,
   "skills": 69,
-  "prerequisites": 157,
+  "prerequisites": 156,
   "misconceptions": 276
  },
  "sub_strands": [
@@ -99,15 +99,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 told apart words with bl, sp, sc, sk and ck. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised /tʃ/ and /kl/. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -153,17 +153,10 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 articulated target letter-sound combinations. Proposed, to confirm by a Kenyan English teacher.",
-       "status": "proposed"
-      },
-      {
-       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.b",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Grade 2 pronounced scr, spr, str, sw and st. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -207,17 +200,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used theme vocabulary. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.READIN.T4_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Grade 2 identified words related to the theme. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Grade 2 used new words in short sentences. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -507,8 +500,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T1_FLUENCY.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 read a grade-appropriate text at the right speed. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -701,17 +694,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 made predictions in a story. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.READIN.T3_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Grade 2 predicted from the title and pictures. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Grade 2 described characters and events, the base of a prediction. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -740,15 +733,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T7_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 described characters and events. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.SETTING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 identified the setting. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -784,8 +777,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used contextual clues. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -833,8 +826,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 answered direct questions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1193,15 +1186,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used was and were. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 knew the pronouns we, you and they. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1358,15 +1351,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T2_HANDWRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised ascenders in long words. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T1_HANDWRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised descenders. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1409,8 +1402,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T4_HANDWRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 wrote words in clear handwriting. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1651,15 +1644,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised fl. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised dr. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1694,15 +1687,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.d",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 followed two-step instructions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T10_PREPOSITIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Position words: on, under, beside. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -1932,8 +1925,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.READIN.T2_FLUENCY.c",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T2_FLUENCY.READ_WITH_FEELING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 read showing feelings. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2129,8 +2122,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.READIN.T2_COMPREHENSION.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 answered indirect questions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2293,8 +2286,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used do, does and did. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2447,8 +2440,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T4_HANDWRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised aspects of good handwriting. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2631,15 +2624,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.CR_ER_Y_AR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised cr. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.K_SN_SP_U",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised sn and sp. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2862,8 +2855,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 identified the main idea, topic or purpose. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -2943,8 +2936,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 retold events in sequence. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -3243,8 +3236,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used has, have and had. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -3403,8 +3396,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T3_HANDWRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 formed ascenders and descenders. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -3573,15 +3566,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised pr. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.TR_SM_CH_OW_U",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised sm. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -3862,8 +3855,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 pronouns. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4013,8 +4006,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T4_HANDWRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 wrote letters legibly. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4200,15 +4193,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised sw and st. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised the th sounds. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4449,8 +4442,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.c",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 retold events in own words. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4604,8 +4597,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used plurals of irregular nouns. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -4845,15 +4838,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised gr. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised /ʃ/ (sh). Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5134,8 +5127,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used the simple past for past time. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5295,8 +5288,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T6_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 spelt words with target sounds. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5466,15 +5459,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised tw. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised nk. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5758,15 +5751,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 joined ideas with or. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 built sentences from jumbled words. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5932,8 +5925,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T7_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 spelt words with nk and nd. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -5963,15 +5956,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 wrote short sentences from vocabulary. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 wrote punctuated sentences. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -6218,8 +6211,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised the endings nt and nd. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -6264,8 +6257,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 pronounced nt, nd and nk. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -6726,8 +6719,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used numbers in sentences. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7058,8 +7051,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised nd and nk at the end. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7283,8 +7276,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.READIN.T10_COMPREHENSION.d",
-       "kind": "outcome",
+       "requires": "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 created a mental picture of a text. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7445,8 +7438,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used gender opposites. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -7606,17 +7599,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used commas in lists. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.a",
-       "kind": "outcome",
+       "requires": "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Grade 2 recognised the comma. Proposed, to confirm by a Kenyan English teacher.",
+       "reason": "Ending the sentence that holds the list. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       }
      ],
@@ -7791,8 +7784,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised nt and nd. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8076,8 +8069,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T10_PREPOSITIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used beside, above, over, below and across. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8243,15 +8236,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 wrote well-punctuated sentences. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T5_SPELLING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised capitalisation in good writing. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8282,15 +8275,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used the exclamation mark. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised the punctuation marks. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8530,8 +8523,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised nd and nk. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8825,8 +8818,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used -er and -est words. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -8995,8 +8988,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 named objects in pictures. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -9173,8 +9166,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised /uː/. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -9469,8 +9462,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used mine, yours, ours, hers and his. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -9637,8 +9630,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised the order of words in a sentence. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -10202,8 +10195,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 asked what, where, when and who questions. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -10554,8 +10547,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised spr and str. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -10842,8 +10835,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.b",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used adverbs of time. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -11009,8 +11002,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.c",
-       "kind": "outcome",
+       "requires": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recounted a sequence of events in writing. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -11289,8 +11282,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 recognised scr. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -11335,8 +11328,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.c",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used new words in simple sentences. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"
@@ -11693,8 +11686,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.d",
-       "kind": "outcome",
+       "requires": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 used interjections of excitement. Proposed, to confirm by a Kenyan English teacher.",
        "status": "proposed"

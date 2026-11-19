@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 12: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (gr, pr, oi, long and short oo) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"pool\" and \"pull\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a phone and a computer",
+    "pressing a button"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: pool, pull."
+    },
+    {
+     "beat": "point",
+     "do": "Say pool.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in pool."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U.M2_OO_SHORT_LONG",
+     "listen_for": [
+      "pull"
+     ],
+     "ask": "Long or short?",
+     "repair": "Pool long, pull short."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U.M2_GR_KR",
+     "listen_for": [
+      "crow"
+     ],
+     "ask": "Buzz?",
+     "repair": "Grow."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U.M2_PR_PL",
+     "listen_for": [
+      "play"
+     ],
+     "ask": "Curled?",
+     "repair": "Pray."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U.M2_OY_IE",
+     "listen_for": [
+      "tie"
+     ],
+     "ask": "Starts with o?",
+     "repair": "Toy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has short oo: food, book, boot?",
+     "answer": "book",
+     "shows": "short oo"
+    },
+    {
+     "question": "Which word has oi: toy, tie, tea?",
+     "answer": "toy",
+     "shows": "oi"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

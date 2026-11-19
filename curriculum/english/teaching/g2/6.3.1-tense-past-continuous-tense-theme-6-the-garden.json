@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU",
+ "title": "Tense: Past Continuous Tense (Theme 6: The garden)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS",
+   "assessed_by": "questions",
+   "key_step": "The child changes am, is, are to was or were and keeps the -ing.",
+   "floor": {
+    "prerequisite": "Uses the present continuous.",
+    "question": "I ___ watering. (am)",
+    "answer": "am"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "working in the garden",
+    "what we were doing when it rained"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Yesterday at four she ___ cooking."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "is or was?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: She was cooking."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS.M2_PC_IS_ING",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "Now or yesterday?",
+     "repair": "Was."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS.M2_PC_NO_BE",
+     "listen_for": [
+      "(nothing): We digging"
+     ],
+     "ask": "What comes before -ing?",
+     "repair": "Were."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS.M2_PC_THEY_WAS",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "They takes?",
+     "repair": "Were."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS.M2_PC_ING_SPELL",
+     "listen_for": [
+      "runing"
+     ],
+     "ask": "Double?",
+     "repair": "Running."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Change: They are digging.",
+     "answer": "They were digging.",
+     "shows": "change"
+    },
+    {
+     "question": "He was ___ (run).",
+     "answer": "running",
+     "shows": "spelling"
+    }
+   ]
+  }
+ ]
+}

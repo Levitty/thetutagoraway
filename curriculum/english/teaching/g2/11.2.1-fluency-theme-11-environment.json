@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T11_FLUENCY",
+ "title": "Fluency (Theme 11: Environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING",
+   "assessed_by": "voice",
+   "key_step": "The child reads a scoop of words that go together, then the next scoop.",
+   "floor": {
+    "prerequisite": "Reads words accurately.",
+    "question": "Read: river",
+    "answer": "river"
+   },
+   "steps": [
+    "Mark scoops under a sentence.",
+    "Read scoop by scoop.",
+    "Echo read.",
+    "Read without marks."
+   ],
+   "contexts": [
+    "a walk in the forest",
+    "a text about the environment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: In the morning / we walked / to the river."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first scoop.",
+     "say": "Read with me, then on your own."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the word that was hard."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together once more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING.M2_PH_WORD_BY_WORD",
+     "listen_for": [
+      "In. The. Morning. We. Walked."
+     ],
+     "ask": "Can you scoop them?",
+     "repair": "In the morning."
+    },
+    {
+     "code": "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING.M2_PH_WRONG_SCOOP",
+     "listen_for": [
+      "The big / dog ran / away."
+     ],
+     "ask": "Do these words go together?",
+     "repair": "The big dog."
+    },
+    {
+     "code": "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING.M2_PH_TOO_FAST",
+     "listen_for": [
+      "all words run together, no pauses"
+     ],
+     "ask": "Is it a race?",
+     "repair": "Smooth with pauses."
+    },
+    {
+     "code": "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING.M2_PH_FINGER_EVERY",
+     "listen_for": [
+      "taps and stops at each word"
+     ],
+     "ask": "Can your finger slide?",
+     "repair": "Slide under the scoop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: The big dog ran away.",
+     "answer": "the big dog / ran away",
+     "shows": "phrasing"
+    },
+    {
+     "question": "Read: After school we played football.",
+     "answer": "after school / we played football",
+     "shows": "phrasing"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.FR_OW_OR_SCHWA",
+  "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY"
+ ]
+}

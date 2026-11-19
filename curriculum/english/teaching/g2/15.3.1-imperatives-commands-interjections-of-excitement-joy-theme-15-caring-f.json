@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS",
+ "title": "Imperatives (commands) Interjections of excitement/joy (Theme 15: Caring for others)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS",
+   "assessed_by": "questions",
+   "key_step": "The child starts a command with a plain verb and adds please for adults.",
+   "floor": {
+    "prerequisite": "Follows instructions.",
+    "question": "Stand up.",
+    "answer": "stands"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "caring for a sick friend",
+    "classroom rules"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: You sit down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word goes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Sit down, please."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS.M2_IM_YOU",
+     "listen_for": [
+      "You sit down."
+     ],
+     "ask": "Start with the verb?",
+     "repair": "Sit down."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS.M2_IM_ING",
+     "listen_for": [
+      "Closing the door."
+     ],
+     "ask": "Plain verb?",
+     "repair": "Close."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS.M2_IM_NO_PLEASE",
+     "listen_for": [
+      "Open the window."
+     ],
+     "ask": "To an adult?",
+     "repair": "Please."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS.M2_IM_S",
+     "listen_for": [
+      "Stands up."
+     ],
+     "ask": "Any -s?",
+     "repair": "Stand up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a command: \"She sits.\" or \"Sit down.\"?",
+     "answer": "Sit down.",
+     "shows": "identify"
+    },
+    {
+     "question": "Ask the teacher politely to open the window.",
+     "answer": "Please open the window.",
+     "shows": "polite"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child names the feeling (joy, excitement) and chooses Hurray, Wow or Yes, with an exclamation mark.",
+   "floor": {
+    "prerequisite": "Uses words of surprise.",
+    "question": "A big surprise! ___",
+    "answer": "Oh!"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "winning a race",
+    "a festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We won! \"___!\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Hurray or Oh no?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Hurray!"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS.M2_EX_SAD_WORD",
+     "listen_for": [
+      "Oh no"
+     ],
+     "ask": "Happy or sad news?",
+     "repair": "Hurray."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS.M2_EX_NO_MARK",
+     "listen_for": [
+      "Wow what a big drum."
+     ],
+     "ask": "After Wow?",
+     "repair": "!"
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS.M2_EX_HOME_WORD",
+     "listen_for": [
+      "Aii! It is nice."
+     ],
+     "ask": "In English?",
+     "repair": "Wow."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS.M2_EX_EVERY",
+     "listen_for": [
+      "Wow! We danced. Wow! We ate."
+     ],
+     "ask": "Is every sentence exciting?",
+     "repair": "Only one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write: Wow what a big cake",
+     "answer": "Wow! What a big cake!",
+     "shows": "mark"
+    },
+    {
+     "question": "Which word shows joy: Ouch, Hurray, Ugh?",
+     "answer": "Hurray",
+     "shows": "joy"
+    }
+   ]
+  }
+ ]
+}

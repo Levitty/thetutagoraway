@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T5_SPELLING",
+ "title": "Spelling (Theme 5: Shopping)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter or letter team for every sound, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the sound.",
+    "question": "Which word did you hear: money or mani?",
+    "answer": "money"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the target letters first.",
+    "Look, cover, write, check.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "theme words: money, shop, buy, garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: mani / money"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS.M2_SG_SOUND",
+     "listen_for": [
+      "mani"
+     ],
+     "ask": "Look at the word.",
+     "repair": "Money."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS.M2_SG_DROP_LETTER",
+     "listen_for": [
+      "gaden"
+     ],
+     "ask": "Every part?",
+     "repair": "Gar-den."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS.M2_SG_SWAP",
+     "listen_for": [
+      "siad"
+     ],
+     "ask": "Which comes first?",
+     "repair": "Said."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS.M2_SG_DOUBLE",
+     "listen_for": [
+      "shopp"
+     ],
+     "ask": "One p or two?",
+     "repair": "Shop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: gaden, garden",
+     "answer": "garden",
+     "shows": "letter"
+    },
+    {
+     "question": "Choose: siad, said",
+     "answer": "said",
+     "shows": "order"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS"
+ ]
+}

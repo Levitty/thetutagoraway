@@ -38,7 +38,7 @@ export function lowerGradeTests(grade, { skills, outcomes }) {
   test(`Grade ${grade} English names the early-literacy errors the plan asks for`, () => {
     const text = JSON.stringify(mis).toLowerCase();
     for (const w of ['capital', 'full stop', 'home language']) assert.ok(text.includes(w), `no misconception mentions ${w}`);
-    assert.ok(mis.some(m => /\bb and d\b|\bb for d\b|\bd for b\b/.test(m.error + m.cause)), 'no b and d reversal');
+    assert.ok(mis.some(m => /\bb and d\b|\bb (for|as) d\b|\bd (for|as) b\b/i.test(m.error + m.cause)), 'no b and d reversal');
     assert.ok(mis.some(m => /guess/i.test(m.error + m.cause)), 'no sight-word or picture guessing');
     for (const m of mis) assert.ok(!/does not understand/i.test(m.error), `${m.code}: vague error`);
   });

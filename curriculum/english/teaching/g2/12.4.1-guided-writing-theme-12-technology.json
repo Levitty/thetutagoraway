@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T12_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 12: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES",
+   "assessed_by": "questions",
+   "key_step": "The child points at the object, says the English name, then writes it.",
+   "floor": {
+    "prerequisite": "Knows theme words.",
+    "question": "What do we listen to news on?",
+    "answer": "a radio"
+   },
+   "steps": [
+    "Show pictures.",
+    "Say names.",
+    "Write them.",
+    "Check."
+   ],
+   "contexts": [
+    "technology at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: (picture of a phone) ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "What is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES.M2_PN_HOME_WORD",
+     "listen_for": [
+      "redio"
+     ],
+     "ask": "In English?",
+     "repair": "Radio."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES.M2_PN_NEAR",
+     "listen_for": [
+      "table"
+     ],
+     "ask": "Which thing did I point at?",
+     "repair": "Phone."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES.M2_PN_SOUND",
+     "listen_for": [
+      "kompyuta"
+     ],
+     "ask": "Look at the word.",
+     "repair": "Computer."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES.M2_PN_PLURAL",
+     "listen_for": [
+      "televisions"
+     ],
+     "ask": "One or many?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the name: (picture of a computer)",
+     "answer": "computer",
+     "shows": "name"
+    },
+    {
+     "question": "Write the name: (picture of a television)",
+     "answer": "television",
+     "shows": "name"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES",
+   "assessed_by": "composition",
+   "key_step": "The child names who is in the picture and what they are doing, then writes it as a sentence.",
+   "floor": {
+    "prerequisite": "Names objects.",
+    "question": "What is this? (radio)",
+    "answer": "a radio"
+   },
+   "steps": [
+    "Look at the picture.",
+    "Say who and what.",
+    "Write the sentence.",
+    "Check it matches."
+   ],
+   "contexts": [
+    "children using technology"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a boy at a computer."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boy.",
+     "say": "Who is it? What is he doing?"
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes a sentence."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines who and what."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES.M2_PS_LABEL",
+     "listen_for": [
+      "computer"
+     ],
+     "ask": "Who is doing what?",
+     "repair": "A sentence."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES.M2_PS_NOT_IN_PICTURE",
+     "listen_for": [
+      "The girl is cooking."
+     ],
+     "ask": "Can you see it?",
+     "repair": "Only what you see."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES.M2_PS_NO_ING",
+     "listen_for": [
+      "The children watching TV."
+     ],
+     "ask": "Is or are?",
+     "repair": "Are watching."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES.M2_PS_THERE_IS",
+     "listen_for": [
+      "There is a man."
+     ],
+     "ask": "What is he doing?",
+     "repair": "Fixing a phone."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a sentence about a picture of a girl listening to the radio.",
+     "answer": "The girl is listening to the radio.",
+     "shows": "picture sentence"
+    },
+    {
+     "question": "Fix: The children watching TV.",
+     "answer": "The children are watching TV.",
+     "shows": "is/are"
+    }
+   ]
+  }
+ ]
+}

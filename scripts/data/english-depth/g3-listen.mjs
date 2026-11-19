@@ -59,7 +59,7 @@ export const PRE = {
   BLENDS_SCR_QUE: [['BLENDS_SPR_STR', 'Three-consonant starts.'], ['G2o:LISTEN.T15_.a', 'Grade 2 recognised scr.']],
   PRONOUNCE_START_BLENDS: [['BLENDS_BL_BR_CL_CH', 'Hearing the blend comes before saying it.'], ['G2o:LISTEN.T2_.b', 'Grade 2 articulated target letter-sound combinations.'], ['G2o:LISTEN.T15_.b', 'Grade 2 pronounced scr, spr, str, sw and st.']],
   PRONOUNCE_END_BLENDS: [['ENDS_FT_CT_LT_RD', 'Hearing the ending first.'], ['PRONOUNCE_START_BLENDS', 'Holding consonants together with no vowel between.'], ['G2o:LISTEN.T5_.b', 'Grade 2 pronounced nt, nd and nk.']],
-  THEME_WORDS: [['G2o:LISTEN.T1_.b', 'Grade 2 used theme vocabulary.'], ['G2o:READIN.T4_COMPREHENSION.a', 'Grade 2 identified words related to the theme.']],
+  THEME_WORDS: [['G2o:LISTEN.T1_.b', 'Grade 2 used theme vocabulary.'], ['G2o:READIN.T4_COMPREHENSION.a', 'Grade 2 identified words related to the theme.'], ['G2o:LISTEN.T3_.c', 'Grade 2 used new words in short sentences.']],
   USE_WORDS_SPEAKING: [['THEME_WORDS', 'Knowing what the word means.'], ['PRONOUNCE_START_BLENDS', 'Saying the word clearly.'], ['G2o:LISTEN.T14_.c', 'Grade 2 used new words in simple sentences.']],
   FOLLOW_INSTRUCTIONS: [['G2o:LISTEN.T2_.d', 'Grade 2 followed two-step instructions.'], ['G2o:LANGUA.T10_.b', 'Position words: on, under, beside.']],
 };

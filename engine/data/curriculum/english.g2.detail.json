@@ -1,0 +1,841 @@
+{
+ "outcomes": {
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.a": "distinguish words with the target letter-sound combinations bl, sp, sc, sk, ck in conversations",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.b": "use vocabulary related to the theme to communicate in various contexts",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.c": "respond to specific simple two-directional instructions using new words in oral communication",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.d": "realise the importance of listening attentively and pronouncing words correctly for effective communication",
+  "ENGL.G2.READIN.T1_FLUENCY.a": "recognise words with the target letter-sound combinations for ease of reading",
+  "ENGL.G2.READIN.T1_FLUENCY.b": "read a grade-appropriate text with the target letter-sound combinations: bl, sp, sc, sk, ck at the right speed, expressively and accurately",
+  "ENGL.G2.READIN.T1_FLUENCY.c": "realise the importance of reading fluently in a variety of genres",
+  "ENGL.G2.READIN.T1_COMPREHENSION.a": "make predictions in a story for comprehension",
+  "ENGL.G2.READIN.T1_COMPREHENSION.b": "use contextual clues to infer the meaning of vocabulary related to the theme",
+  "ENGL.G2.READIN.T1_COMPREHENSION.c": "answer direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T1_COMPREHENSION.d": "realise the importance of reading for lifelong learning",
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a": "identify plural forms of the objective pronouns (us, you and them) and the past forms of the verb ‘to be’ (was and were) in sentences",
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.b": "use plural forms of the objective pronouns (us, you and them) and the past forms of the verb ‘to be’ (was and were) in sentences",
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.c": "appreciate the importance of correct sentence structures in communication",
+  "ENGL.G2.WRITIN.T1_HANDWRITING.a": "recognise descenders in long words in a text",
+  "ENGL.G2.WRITIN.T1_HANDWRITING.b": "form descenders correctly in long words, legibly and neatly for correct word formation",
+  "ENGL.G2.WRITIN.T1_HANDWRITING.c": "realise the importance of writing long words correctly, legibly, and neatly for different purposes",
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a": "recognise words with the target letter-sound combinations /tʃ/, /əʊ /, /ʃ/ and /kl/ accurately in various contexts",
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.b": "articulate words with target letter- sound combinations /tʃ/, /əʊ /, /ʃ/ and /kl/ for clarity in communication",
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.c": "use new words related to the theme to communicate in various contexts",
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.d": "respond to specific two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.e": "realise the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T2_FLUENCY.a": "identify words with the target letter-sound combinations /tʃ/, /əʊ /, / ʃ/ and /kl/ from a text in preparation for reading",
+  "ENGL.G2.READIN.T2_FLUENCY.b": "pronounce words with the target sounds accurately: /tʃ/, /əʊ /, / ʃ/ and /kl/",
+  "ENGL.G2.READIN.T2_FLUENCY.c": "read a text accurately at the right speed, displaying the appropriate feelings or emotions for fluency",
+  "ENGL.G2.READIN.T2_FLUENCY.d": "realise the importance of reading fluently",
+  "ENGL.G2.READIN.T2_COMPREHENSION.a": "infer meanings of new words from context",
+  "ENGL.G2.READIN.T2_COMPREHENSION.b": "answer direct and indirect questions from a text correctly",
+  "ENGL.G2.READIN.T2_COMPREHENSION.c": "make connections between a text and their daily life experiences",
+  "ENGL.G2.READIN.T2_COMPREHENSION.d": "adopt reading short narratives and informational texts for enjoyment",
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a": "identify the words we, you and they and the verb ‘to do’ (do, does and did) in a text",
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.b": "use the present and past forms of the verb ‘to do’ (do, does and did) in sentences",
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.c": "realise the importance of using tense appropriately in communication",
+  "ENGL.G2.WRITIN.T2_HANDWRITING.a": "recognise ascenders in long words in a text",
+  "ENGL.G2.WRITIN.T2_HANDWRITING.b": "write long words correctly, legibly, and neatly forming all ascenders for correct word formation",
+  "ENGL.G2.WRITIN.T2_HANDWRITING.c": "realise the importance of writing long words correctly, legibly and neatly for different purposes",
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.a": "recognise the target letter-sound combinations /s/ /l/ ‘fl’ and /eɪ / in words from an oral text",
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations /s/ /l/ ‘fl’ and /eɪ / accurately",
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.c": "use new words related to the theme in short sentences",
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.d": "respond to specific simple two-directional instructions using new words in oral communication",
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.e": "realise the importance of listening attentively and responding appropriately for effective communication",
+  "ENGL.G2.READIN.T3_FLUENCY.a": "identify words with target letter-sound combinations ‘fl’ and /eɪ/ in sentences",
+  "ENGL.G2.READIN.T3_FLUENCY.b": "read words related to the theme fluently, with accuracy and expression",
+  "ENGL.G2.READIN.T3_FLUENCY.c": "realise the correspondence between spoken words and written words for fluency in reading",
+  "ENGL.G2.READIN.T3_COMPREHENSION.a": "make predictions about a story based on the title and pictures",
+  "ENGL.G2.READIN.T3_COMPREHENSION.b": "infer the meanings of words from the context",
+  "ENGL.G2.READIN.T3_COMPREHENSION.c": "respond to direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T3_COMPREHENSION.d": "adopt reading texts for information",
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.a": "identify the forms of the verb ‘to have’ (has, have and had) and the plural objective pronouns (us, you and them) in texts",
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.b": "use the present and past forms of the verb ‘to have’ (has, have and had) and the plural objective pronouns (us, you and them) in sentences",
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.c": "realise the importance of sentence fluency in communication",
+  "ENGL.G2.WRITIN.T3_HANDWRITING.a": "recognise ascenders and descenders in long words",
+  "ENGL.G2.WRITIN.T3_HANDWRITING.b": "write long words forming all ascenders and descenders, correctly, legibly, and neatly",
+  "ENGL.G2.WRITIN.T3_HANDWRITING.c": "realise the importance of forming all ascenders and descenders appropriately in writing",
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.a": "recognise words with the target letter-sound combinations /ŋ /, / iː/, /st/ and /gl/ in oral texts",
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.b": "articulate words with the target letter-sound combinations /ŋ /, / iː/, /st/ and /gl/ for effective communication",
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.c": "pronounce the words related to the theme accurately",
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.d": "realise the importance of pronouncing words appropriately in oral communication",
+  "ENGL.G2.READIN.T4_FLUENCY.a": "identify words containing the target letter-sound /ŋ /, / iː/, /st/ and /gl-/ in preparation for reading",
+  "ENGL.G2.READIN.T4_FLUENCY.b": "read a text accurately, at the right speed, and with expression",
+  "ENGL.G2.READIN.T4_FLUENCY.c": "adopt reading simple, short narratives and informational texts in a variety of genres",
+  "ENGL.G2.READIN.T4_COMPREHENSION.a": "identify words related to the theme for comprehension",
+  "ENGL.G2.READIN.T4_COMPREHENSION.b": "use contextual clues to infer meanings of words",
+  "ENGL.G2.READIN.T4_COMPREHENSION.c": "answer direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T4_COMPREHENSION.d": "adopt retelling stories for language acquisition",
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.a": "recognise verbs in their simple past tense from texts",
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.b": "use simple past tense to discuss past activities",
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.c": "realise the use of past tense in everyday communication",
+  "ENGL.G2.WRITIN.T4_HANDWRITING.a": "recognise aspects of good handwriting for effective communication",
+  "ENGL.G2.WRITIN.T4_HANDWRITING.b": "write words in clear and legible handwriting",
+  "ENGL.G2.WRITIN.T4_HANDWRITING.c": "form words related to the theme from the target letters ‘gl’ and ‘y’",
+  "ENGL.G2.WRITIN.T4_HANDWRITING.d": "realise the importance of writing clearly and legibly for effective communication",
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a": "recognise the target letter-sound combinations nt, sl, -ar, nd and nk in oral texts",
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.b": "pronounce words with the letter-sound combinations nt, sl, -ar, nd and nk for fluency",
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.c": "use the vocabulary learnt to communicate in various contexts",
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.d": "realise the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T5_FLUENCY.a": "identify words with the target sounds (nt, sl, -ar, nd and nk) in varied texts",
+  "ENGL.G2.READIN.T5_FLUENCY.b": "pronounce words with the target sounds correctly",
+  "ENGL.G2.READIN.T5_FLUENCY.c": "read a text at the right speed, observing punctuation and displaying the right feelings, and emotions for fluency",
+  "ENGL.G2.READIN.T5_FLUENCY.d": "enjoy reading simple narratives and informational texts fluently",
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.a": "make predictions on a story for comprehension",
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.b": "use contextual clues to infer meanings of words",
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.c": "answer direct and indirect questions for comprehension",
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.d": "realise the role of reading in life-long learning",
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.a": "identify plurals of irregular nouns in texts",
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.b": "use the plurals of irregular nouns to construct sentences for effective communication",
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.c": "realise the importance of using the nouns in their correct form to show plural in communication",
+  "ENGL.G2.WRITIN.T5_SPELLING.a": "recognise aspects of good handwriting (letter formation, spacing, alignment, capitalisation) for effective communication",
+  "ENGL.G2.WRITIN.T5_SPELLING.b": "write correct spelling of grade-appropriate words clearly and legibly",
+  "ENGL.G2.WRITIN.T5_SPELLING.c": "realise the importance of correct spelling of words for effective communication",
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a": "identify words with the target letter-sound combinations /ɪə/, /θ/, /ð/, digraph wh and tw from an oral text",
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations /ɪə/, /θ/, /ð/, digraph wh, and tw in preparation for reading",
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.c": "use words related to the theme in relevant contexts",
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.d": "respond to simple specific two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.e": "realise the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T6_FLUENCY.a": "identify words with the target letter-sound combinations /ɪə/, /θ/, /ð/, wh, and tw in preparation for reading",
+  "ENGL.G2.READIN.T6_FLUENCY.b": "pronounce words accurately when reading a text",
+  "ENGL.G2.READIN.T6_FLUENCY.c": "read a grade -appropriate text accurately, at the right speed and with expression",
+  "ENGL.G2.READIN.T6_FLUENCY.d": "realise the importance of reading fluently for lifelong learning",
+  "ENGL.G2.READIN.T6_COMPREHENSION.a": "make predictions on the events of a story for comprehension",
+  "ENGL.G2.READIN.T6_COMPREHENSION.b": "use contextual clues to infer meanings of words",
+  "ENGL.G2.READIN.T6_COMPREHENSION.c": "answer direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T6_COMPREHENSION.d": "enjoy reading texts for language acquisition",
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.a": "select sentences in the past continuous tense from a text",
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.b": "change verbs from present continuous to past continuous tense in a given context",
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.c": "realise the importance of communicating ideas using the correct tense",
+  "ENGL.G2.WRITIN.T6_SPELLING.a": "spell words with the target letter-sound combinations /ɪə/, /θ/, /ð/, wh, and tw for writing fluency",
+  "ENGL.G2.WRITIN.T6_SPELLING.b": "write 3-7 letter words related to the theme correctly",
+  "ENGL.G2.WRITIN.T6_SPELLING.c": "appreciate the need for correct spelling in written communication",
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a": "recognise the target letter - sound combinations nd, nk, / eɪ/ / əʊ/ and / aɪ/ in given words",
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations nd, nk, / eɪ/ / əʊ/ and / aɪ/ in preparation for reading",
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.c": "use new words related to the theme in relevant contexts",
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.d": "respond appropriately to simple specific two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.e": "realise the importance of pronouncing and using vocabulary correctly for effective communication",
+  "ENGL.G2.READIN.T7_FLUENCY.a": "identify words with the target letter-sound combinations ‘nd’ ‘nk’ and words ending with ‘ar’ in preparation for reading",
+  "ENGL.G2.READIN.T7_FLUENCY.b": "read a text accurately, at the right speed, displaying the right emotions for fluency",
+  "ENGL.G2.READIN.T7_FLUENCY.c": "enjoy reading simple narratives and informational texts in a variety of genres",
+  "ENGL.G2.READIN.T7_COMPREHENSION.a": "describe the characters and events in a text to show comprehension",
+  "ENGL.G2.READIN.T7_COMPREHENSION.b": "make predictions about a story based on the title and picture",
+  "ENGL.G2.READIN.T7_COMPREHENSION.c": "respond to direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T7_COMPREHENSION.d": "adopt reading pictures and texts for enjoyment and information",
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.a": "pick out the conjunction ‘or’ in sentences for effective communication",
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.b": "use the conjunction ‘or’ to construct sentences related to the theme",
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.c": "adopt using the conjunctions appropriately in everyday communication",
+  "ENGL.G2.WRITIN.T7_SPELLING.a": "spell 3-6 letter words with the target letter-sound combinations: ‘nk’, ‘nd’ and ‘ar’ or effective writing",
+  "ENGL.G2.WRITIN.T7_SPELLING.b": "write vocabulary related to the theme appropriately and legibly legibility",
+  "ENGL.G2.WRITIN.T7_SPELLING.c": "adopt writing words clearly, legibly and correctly",
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.a": "recognise words with the target letter-sound combinations ‘br’, /ə/, /iː /, / eɪ/ and / əʊ/ in preparation for reading",
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.b": "pronounce new words correctly for clarity in speech",
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.c": "respond to simple specific two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.d": "realise the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T8_FLUENCY.a": "identify words with the target letter-sound combinations ‘br’, /ə/, /iː /, / eɪ/ and / əʊ/ in preparation for reading",
+  "ENGL.G2.READIN.T8_FLUENCY.b": "pronounce words with the target letter-sound combinations accurately when reading a text",
+  "ENGL.G2.READIN.T8_FLUENCY.c": "read a text accurately, at the right speed and with expression",
+  "ENGL.G2.READIN.T8_FLUENCY.d": "realise the importance of reading fluently for lifelong learning",
+  "ENGL.G2.READIN.T8_COMPREHENSION.a": "make predictions and anticipate possible outcomes in a story for comprehension",
+  "ENGL.G2.READIN.T8_COMPREHENSION.b": "use contextual clues to infer meanings of words",
+  "ENGL.G2.READIN.T8_COMPREHENSION.c": "answer direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T8_COMPREHENSION.d": "adopt reading texts for information",
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.a": "differentiate ordinal and cardinal numbers for information",
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.b": "use ordinal and cardinal numbers for effective communication",
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.c": "use plural demonstratives to talk about things that are near or far",
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.d": "value the importance of cardinal and ordinal numbers in communication",
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.e": "realise the role of demonstratives in communication",
+  "ENGL.G2.WRITIN.T8_SPELLING.a": "spell words with the target letter-sound combinations for effective writing",
+  "ENGL.G2.WRITIN.T8_SPELLING.b": "write 4-7 letter words appropriately and legibly",
+  "ENGL.G2.WRITIN.T8_SPELLING.c": "adopt writing words clearly, legibly, and correctly for effective communication",
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.a": "recognise words with the target letter-sound combinations cr, /ɜː/, /eɪ/ /aɪ/, words ending with the letter ‘ y’ pronounced as /i/, and / ə / as in words ending with ar correctly",
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations cr, /ɜː/, /eɪ/, /aɪ/, /i/ and / ə / as in words ending with ar in preparation for reading",
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.c": "use new words related to the theme in relevant contexts",
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.d": "listen to simple specific two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.e": "realise the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T9_FLUENCY.a": "identify words with the target letter-sound combinations ‘cr’, /ɜː/, / eɪ /, /aɪ/, ‘y’ pronounced as /i/ and ‘ar’ in preparation for reading",
+  "ENGL.G2.READIN.T9_FLUENCY.b": "read a grade-appropriate text accurately, at the right speed, and with expression",
+  "ENGL.G2.READIN.T9_FLUENCY.c": "realise the importance of reading fluently in lifelong learning",
+  "ENGL.G2.READIN.T9_COMPREHENSION.a": "identify the main idea, topic, or purpose of the text for understanding",
+  "ENGL.G2.READIN.T9_COMPREHENSION.b": "identify the setting of the text for comprehension",
+  "ENGL.G2.READIN.T9_COMPREHENSION.c": "retell events in a text in correct sequence using own words to check understanding",
+  "ENGL.G2.READIN.T9_COMPREHENSION.d": "appreciate retelling a story to check understanding",
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.a": "identify the gender sets of animals and people in a conversation",
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.b": "use the gender opposites to discuss animals and people at the farm",
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.c": "realise the role of gender sets and opposites in communicating ideas",
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.a": "recognise the comma in a text",
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.b": "use the comma correctly in listing items",
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.c": "adopt the use of the comma in writing",
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.a": "recognise words with the target letter-sound combinations /ɪə/, / ə /, /ɜː/, /dr /, /ɔɪ/ and /aɪ / in a text",
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations /ɪə/, / ə /, /ɜː/, /dr /, /ɔɪ/ and /aɪ in preparation for reading",
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.c": "use new words in relevant contexts to talk about position and direction",
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.d": "appreciate the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T10_FLUENCY.a": "identify words with the target sounds /ɪə/, / ə /, /ɜː/, /dr /, /ɔɪ/ and /aɪ / accurately for clarity of speech",
+  "ENGL.G2.READIN.T10_FLUENCY.b": "read a text at the right speed displaying the right facial expressions for fluency",
+  "ENGL.G2.READIN.T10_FLUENCY.c": "realise the importance of reading fluency in communication",
+  "ENGL.G2.READIN.T10_COMPREHENSION.a": "make predictions on the events of a story based on the title and pictures for comprehension",
+  "ENGL.G2.READIN.T10_COMPREHENSION.b": "use contextual clues to infer the meaning of new vocabulary items",
+  "ENGL.G2.READIN.T10_COMPREHENSION.c": "answer direct and indirect questions based on a text for information",
+  "ENGL.G2.READIN.T10_COMPREHENSION.d": "create a mental picture of events, characters, or places in a text",
+  "ENGL.G2.READIN.T10_COMPREHENSION.e": "enjoy reading pictures and texts for information",
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.a": "identify target prepositions: beside, above, over, below, across, to, at in an oral text",
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.b": "use prepositions accurately to describe the position, location and direction of things",
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.c": "appreciate the use of prepositions for clarity in communication",
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.a": "recognise the exclamation mark in a written text",
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.b": "use the exclamation mark correctly in writing",
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.c": "appreciate the use of the exclamation mark in writing",
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.a": "identify the target letter-sound combinations ‘fr’ /aʊ/, /ɔː/ and /ə/ during a conversation about the environment",
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.b": "articulate words with the target letter-sound combinations ‘fr’ /aʊ/, / ɔː/ and /ə/ correctly for effective communication",
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.c": "pronounce the vocabulary related to the theme correctly for effective communication",
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.d": "appreciate the importance of correct pronunciation in effective communication",
+  "ENGL.G2.READIN.T11_FLUENCY.a": "identify words with target letter-sound combinations ‘fr’ and /aʊ /in preparation for reading",
+  "ENGL.G2.READIN.T11_FLUENCY.b": "read a text transitioning from word-by-word reading to phrasal reading for understanding",
+  "ENGL.G2.READIN.T11_FLUENCY.c": "read a grade-appropriate text accurately, at the right speed, and with expression",
+  "ENGL.G2.READIN.T11_FLUENCY.d": "realise the importance of reading fluency for effective communication",
+  "ENGL.G2.READIN.T11_COMPREHENSION.a": "make predictions on the likely outcomes of a story related to the theme",
+  "ENGL.G2.READIN.T11_COMPREHENSION.b": "make connections between events, characters, and places in a text with real life",
+  "ENGL.G2.READIN.T11_COMPREHENSION.c": "infer the meaning of new words in a text using contextual clues",
+  "ENGL.G2.READIN.T11_COMPREHENSION.d": "answer direct and indirect questions based on a text",
+  "ENGL.G2.READIN.T11_COMPREHENSION.e": "appreciate talking about a text they have read",
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.a": "identify words that end with -er and –est in a written text",
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.b": "use words that end with -er and –est in sentences for effective communication",
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.c": "appreciate the importance of using regular comparatives and superlative adjectives to describe people, things, and places",
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.a": "recognise different words learnt in the theme in preparation for writing",
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.b": "write simple sentences using words related to the theme",
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.c": "appreciate the importance of vocabulary for language acquisition",
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a": "identify words with the target letter-sound combinations ‘gr’ ‘pr’ / ɔɪ /, / uː / and / ʊ/ in an oral text",
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.b": "articulate words with the target letter-sound combinations ‘gr’ ‘pr’ / ɔɪ /, / uː / and / ʊ/ correctly",
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.c": "recognise words related to the theme for effective communication",
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.d": "appreciate the importance of correct pronunciation in language learning",
+  "ENGL.G2.READIN.T12_FLUENCY.a": "identify words with target letter-sound combinations: ‘gr-’, ‘pr-’, /ɔɪ /, / uː/, /ʊ/ in preparation for reading",
+  "ENGL.G2.READIN.T12_FLUENCY.b": "pronounce words related to the theme accurately for information clarity",
+  "ENGL.G2.READIN.T12_FLUENCY.c": "read a text related to the theme at the right speed displaying the right emotions and feelings",
+  "ENGL.G2.READIN.T12_FLUENCY.d": "appreciate the importance of reading in lifelong learning",
+  "ENGL.G2.READIN.T12_COMPREHENSION.a": "identify the characters in a text for comprehension",
+  "ENGL.G2.READIN.T12_COMPREHENSION.b": "make predictions on the outcomes of a story based on the pictures and the title",
+  "ENGL.G2.READIN.T12_COMPREHENSION.c": "answer direct and indirect questions based on a text",
+  "ENGL.G2.READIN.T12_COMPREHENSION.d": "infer the meaning of new words as used in the text",
+  "ENGL.G2.READIN.T12_COMPREHENSION.e": "enjoy reading a variety of texts for information",
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.a": "identify the words mine, yours, ours, hers, his in a text",
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.b": "use the words mine, yours, ours, hers, and his in sentences",
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.c": "adopt the use of possessive pronouns in day-to-day communication",
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.a": "identify names of objects in pictures related to the theme in preparation for writing",
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.b": "create sentences from picture prompts for effective communication",
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.c": "appreciate the role of pictures for clarity in communication",
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.a": "identify words with the target letter-sound combinations: tr, sm, /tʃ /, /aʊ / and /jː/ in oral texts",
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.b": "articulate the words with the target letter-sound combinations, tr, sm, /tʃ /, /aʊ / and /jː/ in a conversation",
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.c": "recognise new words related to the theme correctly",
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.d": "realise the importance of the correct use of vocabulary in various contexts",
+  "ENGL.G2.READIN.T13_FLUENCY.a": "identify words with the target letter-sound combinations: ‘tr’, ‘sm’, /tʃ/, /aʊ /, /aʊ/ and /jː/ in a text",
+  "ENGL.G2.READIN.T13_FLUENCY.b": "pronounce words with the target letter-sound combinations: ‘tr’, ‘sm’, /tʃ/, /aʊ /, /aʊ/ and /jː/ accurately",
+  "ENGL.G2.READIN.T13_FLUENCY.c": "read a grade-appropriate text accurately, at the right speed, and with expression",
+  "ENGL.G2.READIN.T13_FLUENCY.d": "adopt reading varied grade-level texts",
+  "ENGL.G2.READIN.T13_COMPREHENSION.a": "predict the likely outcomes of a story related to the theme using picture cues and the title",
+  "ENGL.G2.READIN.T13_COMPREHENSION.b": "identify the characters and events in a text for comprehension",
+  "ENGL.G2.READIN.T13_COMPREHENSION.c": "infer the meaning of new words as used in the text",
+  "ENGL.G2.READIN.T13_COMPREHENSION.d": "answer simple direct and indirect questions based on a text",
+  "ENGL.G2.READIN.T13_COMPREHENSION.e": "adopt talking about a text they have read",
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.a": "recognise Wh-words (what, where, when, and who) used to ask questions from a written text",
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.b": "use Wh-words (what, where, when, and who) to ask questions related to the theme",
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.c": "adopt the use of Wh- words to seek information",
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.a": "recognise the correct order of words or phrases in a sentence",
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.b": "rearrange jumbled words or phrases into meaningful sentences",
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.c": "realise the importance of ordering words or phrases to form correct sentences",
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.a": "identify words with the target letter-sound combinations: /k/ ‘sn’ ‘sp’ /u/ in an oral text",
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations: /k/ ‘sn’ ‘sp’ /u/ accurately",
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.c": "use the new words related to the theme in simple sentences",
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.d": "respond to specific simple two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.e": "realise the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T14_FLUENCY.a": "identify words with target letter-sound combinations: ‘sn-’, ‘sp-’ /k/ and /u/ in preparation for reading",
+  "ENGL.G2.READIN.T14_FLUENCY.b": "pronounce words accurately when reading a text",
+  "ENGL.G2.READIN.T14_FLUENCY.c": "read a grade-appropriate text accurately, at the right speed, and with expression",
+  "ENGL.G2.READIN.T14_FLUENCY.d": "realise the importance of reading fluently for lifelong learning",
+  "ENGL.G2.READIN.T14_COMPREHENSION.a": "make predictions on the events of a story",
+  "ENGL.G2.READIN.T14_COMPREHENSION.b": "identify the setting of a story for comprehension",
+  "ENGL.G2.READIN.T14_COMPREHENSION.c": "infer the meanings of new words using contextual clues",
+  "ENGL.G2.READIN.T14_COMPREHENSION.d": "answer direct and indirect questions based on a text",
+  "ENGL.G2.READIN.T14_COMPREHENSION.e": "adopt talking about a text read to deepen understanding",
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.a": "identify adverbs of time: soon, late, now, today, tomorrow, early from a written text",
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.b": "use adverbs of time to construct sentences",
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.c": "realise the use of adverbs of time for self-expression",
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.a": "identify words related to the theme from a grade appropriate text",
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.b": "write short sentences based on the vocabulary for effective communication",
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.c": "recount and write a short sequence of three or four events, actions, thoughts, or feelings from a story",
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.d": "realise the importance of sequencing ideas for effective communication",
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a": "identify words with the target letter-sound combinations ‘scr-’, ‘spr-’ ‘str- ‘, ‘sw-’ and ‘st-’ in an oral text",
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.b": "pronounce words with the target letter-sound combinations ‘scr-’, ‘spr-’ ‘str- ‘, ‘sw-’ and ‘st-’ accurately in oral communication, construct sentences using",
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.c": "vocabulary related to the theme",
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.d": "respond to specific two-directional instructions in oral communication",
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.e": "appreciate the importance of listening attentively for effective communication",
+  "ENGL.G2.READIN.T15_FLUENCY.a": "identify words with the target letter-sound combinations: ‘scr-’, ‘spr-’ ‘str- ‘, ‘sw-’ and ‘st-’ in a text",
+  "ENGL.G2.READIN.T15_FLUENCY.b": "pronounce words with the target sounds accurately for clarity of speech",
+  "ENGL.G2.READIN.T15_FLUENCY.c": "read a grade-appropriate text related to the theme at the right speed displaying the right facial expressions",
+  "ENGL.G2.READIN.T15_FLUENCY.d": "adopt reading grade-level texts in a variety of genres",
+  "ENGL.G2.READIN.T15_COMPREHENSION.a": "predict the likely outcomes of a story using picture cues and the title",
+  "ENGL.G2.READIN.T15_COMPREHENSION.b": "identify the characters and events in a text for comprehension",
+  "ENGL.G2.READIN.T15_COMPREHENSION.c": "infer the meaning of new words as used in a text",
+  "ENGL.G2.READIN.T15_COMPREHENSION.d": "answer direct and indirect questions for comprehension",
+  "ENGL.G2.READIN.T15_COMPREHENSION.e": "adopt talking about a text they have read",
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.a": "identify commands in a written text",
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.b": "respond to specific commands to show understanding",
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.c": "use commands appropriately in simple sentences",
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.d": "use interjections of excitement in sentences appropriately",
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.e": "appreciate the use of imperatives and interjections in day-to-day communication",
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.a": "recognise the correct punctuation marks to be used in preparation for writing",
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.b": "write well-punctuated sentences related to the theme for effective communication",
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.c": "appreciate the importance of writing correct short sentences for communication"
+ },
+ "skills": {
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with bl, sp, sc, sk and ck (sc and sk both say /sk/) in a sentence or conversation (for example black, spoon, school, desk, duck) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS": {
+   "forms": [
+    "choose the word that fits",
+    "match the word to the picture",
+    "fill the gap"
+   ],
+   "mastery": "The child chooses the theme word that fits a sentence or picture (for example duster, sweep, matatu, July, shopkeeper, seedling, bandage, chalkboard, calf, left, litter, radio, dance, chores, sick) and does not swap it for a word of the same group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP": {
+   "forms": [
+    "do what the teacher says",
+    "Simon says with two steps",
+    "draw what you hear"
+   ],
+   "mastery": "The child listens to a two-step instruction said once (Pick up the duster and give it to Wanjiru) and does both steps in the order given. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY": {
+   "forms": [
+    "read aloud to the teacher",
+    "read a page of a graded reader",
+    "read a short passage"
+   ],
+   "mastery": "The child reads a short Grade 2 text aloud with almost every word right, sounding out new words with the letter-sounds learnt instead of guessing, at a steady speed (about 40 to 60 words a minute is a guide, to confirm by the teacher). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT": {
+   "forms": [
+    "what will happen next",
+    "which clue helps",
+    "choose the best prediction"
+   ],
+   "mastery": "The child uses the title, the pictures and what has happened so far to say what will happen next and names the clue. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT": {
+   "forms": [
+    "what does the word mean",
+    "which word could replace it",
+    "which clue helps"
+   ],
+   "mastery": "The child uses the words around a new word and the picture to choose its meaning in this sentence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS": {
+   "forms": [
+    "answer the question on the text",
+    "choose the best answer",
+    "which sentence tells you"
+   ],
+   "mastery": "The child finds the sentence that answers who, what, where or when and answers from the text, with the kind of answer the question word asks for. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child picks was and were from a text and uses was with I, he, she and it, and were with we, you and they and plural nouns: We were at school. The children were happy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child picks us, you and them from a text and uses them after a verb or a word like to and with (The teacher called us. Give them the books.), not as the subject. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS": {
+   "forms": [
+    "which letter has a tail",
+    "which word is written right",
+    "circle the tails"
+   ],
+   "mastery": "The child picks out g, j, p, q and y as letters whose tails hang below the line, in long words in a text, and spots a word where a tail sits on the line. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT": {
+   "forms": [
+    "copy the long words",
+    "write the theme words neatly",
+    "write on the lines"
+   ],
+   "mastery": "The child writes long words with every letter the right shape, tall letters reaching up, tails hanging down, small letters even, and a finger space between words. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with /tʃ/ (ch), /əʊ/ (long o, as in home, boat), /ʃ/ (sh) and cl in a sentence or conversation (for example chair, soap, dish, clean) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS": {
+   "forms": [
+    "say the word after the teacher",
+    "read the word list aloud",
+    "say the sentence"
+   ],
+   "mastery": "The child says words with consonant blends (cl, fl, st, gl, br, cr, dr, fr, gr, pr, tr, sm, sn, sp, scr, spr, str, sw) as one beat with no vowel slipped in, keeps l and r apart, and says sh, ch, th (thin) and th (this) clearly. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.READIN.T2_FLUENCY.READ_WITH_FEELING": {
+   "forms": [
+    "read a dialogue in parts",
+    "read it happily, read it sadly",
+    "read with the marks"
+   ],
+   "mastery": "The child stops at full stops, lifts the voice at a question mark, sounds excited at an exclamation mark and lets the voice and face show what a character feels. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS": {
+   "forms": [
+    "how did the character feel",
+    "why do you think",
+    "what clue tells you"
+   ],
+   "mastery": "The child answers simple how and why questions by joining two clues (Tom smiled and clapped: he was happy) and points to the clue. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE": {
+   "forms": [
+    "have you done this too",
+    "what would you do",
+    "which part is like your home"
+   ],
+   "mastery": "The child names something in the text that is like his or her own life (I also sweep the house) and something different, keeping to what the text says. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child picks we, you and they in a text and uses them as the subject (We sweep the house), not us or them, and does not repeat the subject (not My mother she cooks). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child uses does with he, she and it, do with I, you, we and they, and did for the past, with a plain verb after it: Did you sweep? She does the dishes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS": {
+   "forms": [
+    "which letter is tall",
+    "which word is written right",
+    "circle the tall letters"
+   ],
+   "mastery": "The child picks out b, d, f, h, k, l and t as letters that reach up, in long words in a text, and spots a word where a tall letter is written short. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with /s/, /l/, fl and /eɪ/ (long a, as in train, play) in a sentence or conversation (for example bus, lorry, fly, train) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES": {
+   "forms": [
+    "say a sentence with the word",
+    "tell your partner",
+    "answer in a sentence"
+   ],
+   "mastery": "The child uses a new theme word in a short spoken sentence of four or more words, with the right meaning (I travelled by matatu), not a single word. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child uses has with he, she and it, have with I, you, we and they, and had for the past: Baraka has a bicycle. We had a matatu ride. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with /ŋ/ (ng), /iː/ (long e, as in sheep), st and gl in a sentence or conversation (for example sing, week, star, glad) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS": {
+   "forms": [
+    "say the word after the teacher",
+    "say the pair: ship, sheep",
+    "read the word list aloud"
+   ],
+   "mastery": "The child says English vowel sounds so a listener hears the right word: ship and sheep, cup and cap, pull and pool, cot and coat, bird (not bad), with weak vowels short (the a in banana). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child finds past verbs in a text and uses -ed for regular verbs (played, stopped) and the right form for common irregular ones (went, ate, saw), with time words such as yesterday and last month. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS": {
+   "forms": [
+    "which writing is best",
+    "what is wrong with this writing",
+    "spot the mistake"
+   ],
+   "mastery": "The child chooses the writing with well-formed letters, finger spaces, letters sitting on the line and capitals only where needed, and says what is wrong with poor writing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS": {
+   "forms": [
+    "make a word with gl",
+    "fill in the missing letters",
+    "which word is spelt right"
+   ],
+   "mastery": "The child builds theme words with gl and y (glad, glue, July, sunny, January) from letters and spells them correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with nt, sl, -ar (said /ɑː/), nd and nk in a sentence or conversation (for example plant, slow, market, sand, bank) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child finds irregular plurals in a text and uses child and children, man and men, woman and women, foot and feet, tooth and teeth, and sheep and sheep in sentences about shopping. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS": {
+   "forms": [
+    "choose the correct spelling",
+    "fill in the missing letters",
+    "spot the wrong spelling"
+   ],
+   "mastery": "The child spells common Grade 2 words of three to seven letters (money, shop, buy, garden, water, farmer) correctly and clearly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with /ɪə/ (as in ear, deer), /θ/ (thin), /ð/ (this), wh (said /w/) and tw in a sentence or conversation (for example ear, thorn, there, wheel, twig) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child picks past continuous sentences from a text and changes the present continuous into the past: I am watering the plants becomes I was watering the plants; they are digging becomes they were digging. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR": {
+   "forms": [
+    "choose the correct spelling",
+    "fill in the missing letters",
+    "spot the wrong spelling"
+   ],
+   "mastery": "The child spells garden words with th, wh, tw and ear (thorn, there, wheel, twig, near) with th, not t or d, and wh, not w or h alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with nd, nk, /eɪ/ (cake), /əʊ/ (home) and /aɪ/ (bike) in a sentence or conversation (for example bandage, drink, pain, nose, knife) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS": {
+   "forms": [
+    "who is in the story",
+    "what happened",
+    "describe the character"
+   ],
+   "mastery": "The child names the people and animals in a story, says one thing about each (kind, brave, careless) and tells the main events. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR": {
+   "forms": [
+    "choose and or or",
+    "join with or",
+    "answer the question"
+   ],
+   "mastery": "The child picks or in a sentence and uses it to give a choice (Do you want tea or milk?), and answers an or question by choosing one, not with yes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR": {
+   "forms": [
+    "choose the correct spelling",
+    "fill in the missing letters",
+    "spot the wrong spelling"
+   ],
+   "mastery": "The child spells three- to six-letter words with nk, nd and ar (pink, hand, car, park) with both final letters and ar, not a. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with br, /ə/ (the weak sound at the start of about and the end of teacher), /iː/, /eɪ/ and /əʊ/ in a sentence or conversation (for example brush, teacher, read, table, chalk) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL": {
+   "forms": [
+    "first or one",
+    "what position",
+    "fill the gap"
+   ],
+   "mastery": "The child tells counting numbers (one, two, three) from order numbers (first, second, third) and uses each in the right place: I have two pencils; I was second in the race; first, second, third, fourth, fifth. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE": {
+   "forms": [
+    "these or those",
+    "this or these",
+    "fill the gap"
+   ],
+   "mastery": "The child uses these for more than one thing near (these books) and those for more than one thing far (those trees), with a plural noun. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS": {
+   "forms": [
+    "choose the correct spelling",
+    "fill in the missing letters",
+    "spot the wrong spelling"
+   ],
+   "mastery": "The child spells classroom words with br and vowel teams (brush, teacher, read, chalk, table, board) and does not write a long vowel with one letter (red for read). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.CR_ER_Y_AR": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with cr, /ɜː/ (bird, her), /eɪ/, /aɪ/, y said /i/ (happy) and ar in a sentence or conversation (for example cow, crop, bird, hay, sky, puppy, farmer) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.SETTING": {
+   "forms": [
+    "where does it happen",
+    "when does it happen",
+    "which picture shows the setting"
+   ],
+   "mastery": "The child names the place and time of a story (on the farm, early in the morning) from the words and pictures. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA": {
+   "forms": [
+    "what is the text about",
+    "choose the best title",
+    "why was it written"
+   ],
+   "mastery": "The child chooses what the whole text is about, not one detail, and says whether it tells a story or gives facts. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER": {
+   "forms": [
+    "tell me what happened",
+    "retell with first, next, last",
+    "tell your partner the story"
+   ],
+   "mastery": "The child retells three or four events in the order they happened, in own words, using first, next, then and last. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS": {
+   "forms": [
+    "what is the female",
+    "match the pairs",
+    "fill the gap"
+   ],
+   "mastery": "The child gives and uses gender pairs of the farm and home: cock and hen, bull and cow, ram and ewe, boy and girl, uncle and aunt, king and queen, lion and lioness. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST": {
+   "forms": [
+    "put in the commas",
+    "which sentence is right",
+    "write the list"
+   ],
+   "mastery": "The child finds commas in a text and writes a list of farm things with a comma between items and and before the last (cows, goats, hens and ducks). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with /ɪə/, /ə/, /ɜː/, dr, /ɔɪ/ (boy, coin) and /aɪ/ in a sentence or conversation (for example near, turn, drive, point, right) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE": {
+   "forms": [
+    "which picture matches",
+    "draw what you read",
+    "what would you see"
+   ],
+   "mastery": "The child uses the describing words to picture a character, place or event and chooses or draws the picture that matches every detail. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS": {
+   "forms": [
+    "where is it",
+    "choose the word",
+    "describe the picture"
+   ],
+   "mastery": "The child picks the target prepositions in an oral text and uses them to describe where things are and where they go: the bird flew over the house; the lamp is above the table; we walked across the road to the shop. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK": {
+   "forms": [
+    "which mark goes at the end",
+    "correct the sentence",
+    "where does it go"
+   ],
+   "mastery": "The child finds exclamation marks in a text and uses one at the end of a sentence that shows a strong feeling or a warning (Stop! Look out!), not after ordinary sentences. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.FR_OW_OR_SCHWA": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with fr, /aʊ/ (cow, flower), /ɔː/ (forest, warm) and /ə/ in a sentence or conversation (for example fruit, flower, forest, water) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING": {
+   "forms": [
+    "read in scoops",
+    "read the sentence smoothly",
+    "echo reading"
+   ],
+   "mastery": "The child reads groups of words together (in the morning / we went / to the forest) instead of stopping after every word. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child finds -er and -est words in a text and uses -er than for two (the river is cleaner than the pond) and the -est for more (the tallest tree), with big, bigger spelt right. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES": {
+   "forms": [
+    "write a sentence with the word",
+    "write two sentences about",
+    "finish the sentence"
+   ],
+   "mastery": "The child writes two or three short sentences about the theme, each with a capital letter, a doing word and a full stop. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with gr, pr, /ɔɪ/, /uː/ (food, computer) and /ʊ/ (book, put) in a sentence or conversation (for example grow, press, toy, phone screen, book) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child finds mine, yours, ours, hers and his in a text and uses them on their own (The phone is mine), his for a boy and hers for a girl, with no apostrophe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES": {
+   "forms": [
+    "what is in the picture",
+    "match the word to the picture",
+    "write the name"
+   ],
+   "mastery": "The child names the objects in theme pictures in English (radio, phone, computer, television) and writes each name spelt correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES": {
+   "forms": [
+    "write a sentence about the picture",
+    "what is happening",
+    "one sentence for each picture"
+   ],
+   "mastery": "The child writes one full sentence about what is happening in each picture, using the names of the things in it. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.TR_SM_CH_OW_U": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with tr, sm, /tʃ/, /aʊ/ and /juː/ (music, tune) in a sentence or conversation (for example drum, smile, church, crowd, music) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS": {
+   "forms": [
+    "choose the question word",
+    "ask the question",
+    "put the words in order"
+   ],
+   "mastery": "The child recognises what, where, when and who questions and asks them in the right order with a question mark: Where is the dance? When did they sing? Who beat the drum? Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER": {
+   "forms": [
+    "put the words in order",
+    "which sentence is right",
+    "rearrange the words"
+   ],
+   "mastery": "The child rearranges jumbled words or phrases into a sentence that makes sense, starting with the capital-letter word and ending with the word before the full stop. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.K_SN_SP_U": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with /k/ (spelt c, k or ck), sn, sp and u (as in cup and put) in a sentence or conversation (for example cook, kitchen, snack, spoon, run) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot and correct the mistake"
+   ],
+   "mastery": "The child finds the adverbs of time in a text and uses them with the right tense: Tomorrow I will help; Today I am cooking; He came late; We woke up early. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS": {
+   "forms": [
+    "write what happened",
+    "write it in order",
+    "first, next, then, last"
+   ],
+   "mastery": "The child writes three or four sentences that tell events, actions or feelings from a story in order, using first, next, then and last, in the past tense. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST": {
+   "forms": [
+    "which word has the sound",
+    "circle the words with the sound",
+    "odd one out by sound"
+   ],
+   "mastery": "The child hears and picks out words with scr, spr, str, sw and st in a sentence or conversation (for example scrub, spray, strong, sweep, stop) and tells them from words that differ by one sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS": {
+   "forms": [
+    "which sentence is a command",
+    "what should you do",
+    "give the command"
+   ],
+   "mastery": "The child picks commands in a text, does what a command says, and gives commands that start with a plain verb (Sit down. Please close the window.), politely. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS": {
+   "forms": [
+    "which word shows joy",
+    "complete with an interjection",
+    "choose the right word"
+   ],
+   "mastery": "The child uses Hurray!, Wow! and Yes! for joy and excitement, in the right place, with an exclamation mark. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES": {
+   "forms": [
+    "which mark goes here",
+    "correct the sentence",
+    "choose the right sentence"
+   ],
+   "mastery": "The child chooses and uses capital letters (sentence starts, names, I), full stops, question marks and exclamation marks correctly in sentences about caring for others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T7_SPELLING",
+ "title": "Spelling (Theme 7: Accidents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter or letter team for every sound, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the sound.",
+    "question": "Which word did you hear: hand or han?",
+    "answer": "hand"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the target letters first.",
+    "Look, cover, write, check.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "theme words: pink, hand, car, park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: han / hand"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR.M2_SNA_NK_NG",
+     "listen_for": [
+      "ping"
+     ],
+     "ask": "Ends with k?",
+     "repair": "Pink."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR.M2_SNA_ND_N",
+     "listen_for": [
+      "han"
+     ],
+     "ask": "Ends with d?",
+     "repair": "Hand."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR.M2_SNA_AR_A",
+     "listen_for": [
+      "ca"
+     ],
+     "ask": "A and r?",
+     "repair": "Car."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR.M2_SNA_AR_AA",
+     "listen_for": [
+      "paak"
+     ],
+     "ask": "How is the long a spelt?",
+     "repair": "Ar."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: ping, pink",
+     "answer": "pink",
+     "shows": "nk"
+    },
+    {
+     "question": "Choose: ca, car",
+     "answer": "car",
+     "shows": "ar"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT"
+ ]
+}

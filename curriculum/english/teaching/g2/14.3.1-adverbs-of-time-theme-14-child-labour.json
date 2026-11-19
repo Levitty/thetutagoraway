@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME",
+ "title": "Adverbs of time (Theme 14: Child labour)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME",
+   "assessed_by": "questions",
+   "key_step": "The child matches the time word to the tense: yesterday past, today now, tomorrow future.",
+   "floor": {
+    "prerequisite": "Uses the simple past.",
+    "question": "Yesterday I ___ (help).",
+    "answer": "helped"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "chores children can do",
+    "a day plan"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ I helped my father."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Tomorrow or Yesterday?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Yesterday I helped my father."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME.M2_AT_TOMORROW_PAST",
+     "listen_for": [
+      "Tomorrow"
+     ],
+     "ask": "Past or future?",
+     "repair": "Yesterday."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME.M2_AT_SOON_NOW",
+     "listen_for": [
+      "now"
+     ],
+     "ask": "This moment or a short time?",
+     "repair": "Soon."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME.M2_AT_EARLY_LATE",
+     "listen_for": [
+      "early"
+     ],
+     "ask": "Before or after the time?",
+     "repair": "Late."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME.M2_AT_TODAY_TENSE",
+     "listen_for": [
+      "helped"
+     ],
+     "ask": "Now?",
+     "repair": "Am helping."
+    }
+   ],
+   "checks": [
+    {
+     "question": "School starts at eight; Ali came at nine. He was ___",
+     "answer": "late",
+     "shows": "late"
+    },
+    {
+     "question": "The rain will come ___ (in a short time).",
+     "answer": "soon",
+     "shows": "soon"
+    }
+   ]
+  }
+ ]
+}

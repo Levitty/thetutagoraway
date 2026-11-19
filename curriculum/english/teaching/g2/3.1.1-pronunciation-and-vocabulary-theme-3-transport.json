@@ -1,0 +1,187 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 3: Transport)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (s, l, fl, long a) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"late\" and \"let\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a train ride",
+    "a lorry on the road"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: late, let."
+    },
+    {
+     "beat": "point",
+     "do": "Say late.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in late."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY.M2_AY_SHORT_E",
+     "listen_for": [
+      "let"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Late slides."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY.M2_FL_FR",
+     "listen_for": [
+      "fry"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Up: fly."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY.M2_L_R",
+     "listen_for": [
+      "r"
+     ],
+     "ask": "Tongue up?",
+     "repair": "L."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY.M2_S_SH",
+     "listen_for": [
+      "sheet"
+     ],
+     "ask": "Smile or round lips?",
+     "repair": "Smile: seat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has long a: pen, pain, pin?",
+     "answer": "pain",
+     "shows": "long a"
+    },
+    {
+     "question": "Which word starts with fl: fry, fly, lie?",
+     "answer": "fly",
+     "shows": "fl"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES",
+   "assessed_by": "voice",
+   "key_step": "The child says the word in a full sentence of four or more words.",
+   "floor": {
+    "prerequisite": "Names things in English.",
+    "question": "What is this? (a matatu)",
+    "answer": "a matatu"
+   },
+   "steps": [
+    "Model a sentence.",
+    "The child copies it.",
+    "The child makes a new one.",
+    "Talk with a partner."
+   ],
+   "contexts": [
+    "how we travel",
+    "shopping",
+    "the garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I came to school by ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Say the whole sentence."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes a sentence of his or her own."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES.M2_UW_ONE_WORD",
+     "listen_for": [
+      "Walking."
+     ],
+     "ask": "Can you say it as a sentence?",
+     "repair": "I walked to school."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES.M2_UW_OPEN_LIGHT",
+     "listen_for": [
+      "Open the radio."
+     ],
+     "ask": "What do we do to a radio?",
+     "repair": "Switch on."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES.M2_UW_WRONG_MEANING",
+     "listen_for": [
+      "I came early, the bell had rung long ago."
+     ],
+     "ask": "What does early mean?",
+     "repair": "Before the time."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES.M2_UW_ECHO",
+     "listen_for": [
+      "What is my favourite month."
+     ],
+     "ask": "Start with My ...",
+     "repair": "My favourite month is ..."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Use \"market\" in a sentence.",
+     "answer": "a full sentence with market",
+     "shows": "sentence"
+    },
+    {
+     "question": "How do you help at home?",
+     "answer": "I help ... (full sentence)",
+     "shows": "full answer"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+ ]
+}

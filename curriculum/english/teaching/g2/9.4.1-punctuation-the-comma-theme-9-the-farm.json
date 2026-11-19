@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM",
+ "title": "Punctuation (The comma) (Theme 9: The farm)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST",
+   "assessed_by": "questions",
+   "key_step": "The child writes a comma after each item except the last two, which take and.",
+   "floor": {
+    "prerequisite": "Ends sentences with full stops.",
+    "question": "Fix: I ran",
+    "answer": "I ran."
+   },
+   "steps": [
+    "Show a list.",
+    "Read with pauses.",
+    "Punctuate lists.",
+    "Write own list."
+   ],
+   "contexts": [
+    "animals on the farm",
+    "crops in the shamba"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We keep cows goats hens and ducks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Where do commas go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M2_LC_NONE",
+     "listen_for": [
+      "We keep cows goats hens and ducks."
+     ],
+     "ask": "Where do you pause?",
+     "repair": "Comma."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M2_LC_AND_EVERY",
+     "listen_for": [
+      "cows and goats and hens"
+     ],
+     "ask": "Comma instead of and?",
+     "repair": "Yes, except last."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M2_LC_FULL_STOP",
+     "listen_for": [
+      "I see a cow. a goat. and a hen."
+     ],
+     "ask": "Does it end there?",
+     "repair": "No: comma."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M2_LC_AFTER_AND",
+     "listen_for": [
+      "maize, beans and, peas"
+     ],
+     "ask": "Comma after and?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: maize beans and peas",
+     "answer": "maize, beans and peas",
+     "shows": "commas"
+    },
+    {
+     "question": "Write three farm animals as a list.",
+     "answer": "cows, goats and hens (any)",
+     "shows": "list"
+    }
+   ]
+  }
+ ]
+}

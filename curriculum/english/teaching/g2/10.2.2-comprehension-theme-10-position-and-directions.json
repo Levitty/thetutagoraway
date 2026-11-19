@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T10_COMPREHENSION",
+ "title": "Comprehension (Theme 10: Position and directions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE",
+   "assessed_by": "questions",
+   "key_step": "The child lists the describing and number words, then pictures or draws each one.",
+   "floor": {
+    "prerequisite": "Knows describing words.",
+    "question": "Which word describes: big, run, the?",
+    "answer": "big"
+   },
+   "steps": [
+    "Read the text.",
+    "Underline describing words.",
+    "Picture it.",
+    "Draw it and check."
+   ],
+   "contexts": [
+    "directions in a village",
+    "animals in a park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Three small birds sat on a long wall."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What would you see?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: three small birds on a long wall"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE.M2_MP_ONE_DETAIL",
+     "listen_for": [
+      "a big brown dog"
+     ],
+     "ask": "Every word?",
+     "repair": "Small, brown, long tail."
+    },
+    {
+     "code": "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE.M2_MP_OWN",
+     "listen_for": [
+      "the house with an iron sheet roof like mine"
+     ],
+     "ask": "What did the text say?",
+     "repair": "A red roof."
+    },
+    {
+     "code": "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE.M2_MP_WHO",
+     "listen_for": [
+      "a rat chasing a cat"
+     ],
+     "ask": "Who chases?",
+     "repair": "The cat."
+    },
+    {
+     "code": "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE.M2_MP_NUMBER",
+     "listen_for": [
+      "one bird on a wall"
+     ],
+     "ask": "How many?",
+     "repair": "Three."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The cat chased the rat. Who is running away?",
+     "answer": "the rat",
+     "shows": "who"
+    },
+    {
+     "question": "A small brown dog with a long tail. Big or small?",
+     "answer": "small",
+     "shows": "detail"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT",
+  "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+  "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+  "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

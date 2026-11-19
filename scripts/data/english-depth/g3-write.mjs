@@ -40,7 +40,7 @@ export const PRE = {
   SPELL_DW_TW_NK_SQ: [['BLENDS_DW_TW_NK_SQ', 'Hearing the blends first.'], ['SPELL_DR_GR_SHR', 'Spelling a blend with every consonant.'], ['G2o:WRITIN.T7_.a', 'Grade 2 spelt words with nk and nd.']],
   SPELL_FT_CT_LT_RD: [['ENDS_FT_CT_LT_RD', 'Hearing the ending.'], ['SPELL_DW_TW_NK_SQ', 'Nk at the end.']],
   WRITE_THEME_SENTENCES: [['G2o:WRITIN.T14_.b', 'Grade 2 wrote short sentences from vocabulary.'], ['G2o:WRITIN.T15_.b', 'Grade 2 wrote punctuated sentences.'], ['THEME_WORDS', 'The words to write with.']],
-  COMMA_LIST: [['G2o:WRITIN.T9_.b', 'Grade 2 used commas in lists.'], ['G2o:WRITIN.T9_.a', 'Grade 2 recognised the comma.']],
+  COMMA_LIST: [['G2o:WRITIN.T9_.b', 'Grade 2 used commas in lists.'], ['G2o:WRITIN.T9_.a', 'Grade 2 recognised the comma.'], ['END_MARKS', 'Ending the sentence that holds the list.']],
   CAPITAL_LETTERS: [['G2o:WRITIN.T15_.b', 'Grade 2 wrote well-punctuated sentences.'], ['G2o:WRITIN.T5_SPELLING.a', 'Grade 2 recognised capitalisation in good writing.']],
   END_MARKS: [['G2o:WRITIN.T10_.b', 'Grade 2 used the exclamation mark.'], ['G2o:WRITIN.T15_.a', 'Grade 2 recognised the punctuation marks.']],
   PICTURE_WORDS: [['THEME_WORDS', 'Knowing the word.'], ['G2o:WRITIN.T12_.a', 'Grade 2 named objects in pictures.']],

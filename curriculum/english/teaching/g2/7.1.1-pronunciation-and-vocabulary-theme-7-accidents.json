@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 7: Accidents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (nd, nk, long a, o, i) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"kite\" and \"kit\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "an accident in the playground",
+    "a bandage on the knee"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: kite, kit."
+    },
+    {
+     "beat": "point",
+     "do": "Say kite.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in kite."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE.M2_IE_SHORT_I",
+     "listen_for": [
+      "kit"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Kite."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE.M2_OE_SHORT_O",
+     "listen_for": [
+      "hop"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Hope."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE.M2_ND_DROP",
+     "listen_for": [
+      "ban"
+     ],
+     "ask": "Did you hear d?",
+     "repair": "Band."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE.M2_AY_SHORT_A",
+     "listen_for": [
+      "pan"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Pain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has long i: bit, bite, bat?",
+     "answer": "bite",
+     "shows": "long i"
+    },
+    {
+     "question": "Which word has long o: hop, hope, hip?",
+     "answer": "hope",
+     "shows": "long o"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+ ]
+}

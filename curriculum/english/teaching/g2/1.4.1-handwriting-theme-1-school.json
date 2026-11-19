@@ -1,0 +1,181 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T1_HANDWRITING",
+ "title": "Handwriting (Theme 1: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the letters with tails and checks that each tail goes below the line.",
+   "floor": {
+    "prerequisite": "Writes small letters.",
+    "question": "Write: g",
+    "answer": "g"
+   },
+   "steps": [
+    "Sort letters: tails and no tails.",
+    "Trace tails below the line.",
+    "Spot mistakes.",
+    "Write long words."
+   ],
+   "contexts": [
+    "school words: playground, library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: dog / play / yes"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which letters have tails?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS.M2_DE_ON_LINE",
+     "listen_for": [
+      "on the line"
+     ],
+     "ask": "Where does the tail go?",
+     "repair": "Below."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS.M2_DE_TALL",
+     "listen_for": [
+      "b"
+     ],
+     "ask": "Up or down?",
+     "repair": "P down."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS.M2_DE_J_I",
+     "listen_for": [
+      "a dot over a short stick on the line"
+     ],
+     "ask": "Does j have a tail?",
+     "repair": "Yes, with a hook."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS.M2_DE_CAPITAL",
+     "listen_for": [
+      "doG"
+     ],
+     "ask": "Inside a word?",
+     "repair": "Small g."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which letter has a tail: a, y, n?",
+     "answer": "y",
+     "shows": "descender"
+    },
+    {
+     "question": "Where does the tail of p go?",
+     "answer": "below the line",
+     "shows": "position"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT",
+   "assessed_by": "teacher",
+   "key_step": "The child starts each letter at the right point, keeps sizes even, tall letters up, tails down.",
+   "floor": {
+    "prerequisite": "Knows tall and tail letters.",
+    "question": "Which letters are tall in \"hat\"?",
+    "answer": "h, t"
+   },
+   "steps": [
+    "Model the strokes.",
+    "Copy a long word.",
+    "Check sizes and tails.",
+    "Copy a sentence."
+   ],
+   "contexts": [
+    "words about home",
+    "months of the year"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: playground, neatly."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the start of p.",
+     "say": "Start here; the tail goes down."
+    },
+    {
+     "beat": "pause",
+     "do": "The child copies it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the best letter."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT.M2_HN_CAPS_INSIDE",
+     "listen_for": [
+      "clAssRoom"
+     ],
+     "ask": "Is it a name?",
+     "repair": "Small letters."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT.M2_HN_SIZE",
+     "listen_for": [
+      "letters jumping up and down in size"
+     ],
+     "ask": "Are small letters even?",
+     "repair": "Half space."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT.M2_HN_OPEN",
+     "listen_for": [
+      "cl a cl"
+     ],
+     "ask": "Where does d start?",
+     "repair": "Top, round like c."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT.M2_HN_RIGHT_TO_LEFT",
+     "listen_for": [
+      "deb"
+     ],
+     "ask": "Stick or belly first?",
+     "repair": "Stick for b."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Copy: library and playground",
+     "answer": "neat letters, tails down, tall letters up",
+     "shows": "neat"
+    },
+    {
+     "question": "Copy: bed and dog",
+     "answer": "b and d the right way, closed",
+     "shows": "formation"
+    }
+   ]
+  }
+ ]
+}
