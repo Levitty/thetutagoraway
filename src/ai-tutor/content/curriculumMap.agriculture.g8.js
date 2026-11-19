@@ -315,8 +315,7 @@ export const SKILLS = {
    "M_AG8_CA_WATERWAY",
    "M_AG8_CA_STRIPS",
    "M_AG8_CA_REPAIR"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE": {
   "name": "Say how harvested water is stored safely for home use",
@@ -350,8 +349,7 @@ export const SKILLS = {
    "M_AG8_HS_GUTTER",
    "M_AG8_HS_TAP",
    "M_AG8_HS_CLEAN"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN": {
   "name": "Explain the role of a kitchen and backyard garden",
@@ -383,8 +381,7 @@ export const SKILLS = {
    "M_AG8_GS_FAR",
    "M_AG8_GS_FENCE",
    "M_AG8_GS_HERB"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD": {
   "name": "Describe a fold in poultry rearing",
@@ -416,8 +413,7 @@ export const SKILLS = {
    "M_AG8_FB_NOROOF",
    "M_AG8_FB_MESH",
    "M_AG8_FB_SIZE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING": {
   "name": "Say how poultry are reared in a fold: moving, feeding, watering, cleaning and protecting",
@@ -434,8 +430,7 @@ export const SKILLS = {
    "M_AG8_FR_STAY",
    "M_AG8_FR_WATER",
    "M_AG8_FR_SUN"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE": {
   "name": "Name pests and diseases of vegetables and how to control them",
@@ -469,8 +464,7 @@ export const SKILLS = {
    "M_AG8_PCM_SAME",
    "M_AG8_PCM_LATE",
    "M_AG8_PCM_SPRAY"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS": {
   "name": "Say why and how fresh fish is processed",
@@ -573,8 +567,7 @@ export const SKILLS = {
    "M_AG8_MPR_STYLE",
    "M_AG8_MPR_BUDGET",
    "M_AG8_MPR_SICK"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN": {
   "name": "Name routine cleaning practices in a kitchen",
@@ -606,8 +599,7 @@ export const SKILLS = {
    "M_AG8_KR_MIX",
    "M_AG8_KR_STORE",
    "M_AG8_KR_SPONGE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS": {
   "name": "Name seams used in making household items",
@@ -640,8 +632,7 @@ export const SKILLS = {
    "M_AG8_SEW_EDGE",
    "M_AG8_SEW_NEATEN",
    "M_AG8_SEW_PRESS"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS": {
   "name": "Explain the challenges of animal waterers and how an innovative one helps",
@@ -673,8 +664,7 @@ export const SKILLS = {
    "M_AG8_WD_CHEM",
    "M_AG8_WD_CLEAN",
    "M_AG8_WD_PROBLEM"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES": {
   "name": "Describe support services reached through ICT",
@@ -706,8 +696,7 @@ export const SKILLS = {
    "M_AG8_IA_CHECK",
    "M_AG8_IA_LOGOUT",
    "M_AG8_IA_STEPS"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  }
 };
 export const MIS_FEEDBACK = {

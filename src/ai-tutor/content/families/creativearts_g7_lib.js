@@ -39,7 +39,7 @@ export const T = (tag, cs, codes, h, direct, story, spots, oc) => {
   const ocOf = (i) => (o.length > 1 ? o[i] : o[0]);
   const code = (i) => codes[i] || (() => { throw new Error(`${tag}: no misconception ${i}`); })();
   const cases = (rows) => rows.map(([q, r, ...w]) => {
-    const why = w.length > 3 ? w.pop() : h[1];
+    const why = w.length > 3 && !w[w.length - 1].includes('|') ? w.pop() : h[1];
     return [q, r, w.map(x => { const [t, i] = x.split('|'); return [t, code(Number(i))]; }), why];
   });
   const spotCase = ([q, a, b, f, fix, i]) => {
