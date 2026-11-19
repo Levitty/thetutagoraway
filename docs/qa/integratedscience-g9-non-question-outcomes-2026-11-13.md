@@ -3,7 +3,7 @@
 Built from `curriculum/integrated_science/g9.json` and the registry entry. Outcome text is KICD's, word for word. **Q** means a question can test it, **W** writing (composition marking), **O** speaking or an oral check (a teacher listening), **P** a practical task, product or portfolio, **A** an attitude (teacher observation).
 
 - Outcomes: 46. By what tests them best: Q 31, W 0, O 0, P 6, A 9.
-- Outcomes with at least one question family: 34. Q outcomes with a family: 30 of 31. Q outcomes with no family: 1.
+- Outcomes with at least one question family: 36. Q outcomes with a family: 31 of 31. Q outcomes with no family: 0.
 - A non-Q outcome that has a family: the family tests the recognition half and the rest still needs the teacher or the task named below.
 - Kind is assigned from the first verb of the outcome (describe, explain, identify, outline, classify and similar are Q; draw, investigate, apply, construct and determine are P; appreciate, show interest and recognise are A). It is a first sort for the reviewer, not the KICD's own tag. Mass-number sums are small whole numbers.
 - Atom, metals, alloys, water hardness, photosynthesis, digestion, flower, mirror and wave facts are textbook level for Grade 9 and are to be confirmed by an Integrated Science teacher. No experiment is asked of a child as an action.
@@ -20,7 +20,7 @@ Built from `curriculum/integrated_science/g9.json` and the registry entry. Outco
 | MIXTUR.METALS_AND_ALLOYS.c | Q | yes | identify the uses of metals and alloys in day-to-day life | Question families. |
 | MIXTUR.METALS_AND_ALLOYS.d | Q | yes | explain the effects of rusting of metals | Question families. |
 | MIXTUR.METALS_AND_ALLOYS.e | A | no | appreciate the importance of common alloys in day-to-day life | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an interest or an attitude. |
-| MIXTUR.WATER_HARDNESS.a | Q | NO | describe the physical properties of water | Question families. |
+| MIXTUR.WATER_HARDNESS.a | Q | yes | describe the physical properties of water | Question families. |
 | MIXTUR.WATER_HARDNESS.b | Q | yes | distinguish between hard and soft water in nature | Question families. |
 | MIXTUR.WATER_HARDNESS.c | P | no | apply methods of softening hard water in day-to-day life | A practical task, diagram or investigation scored with the KICD rubric indicator: drawing electron arrangements and ray diagrams, investigating the conditions for photosynthesis, softening water, constructing food chains and webs. Anything with heat, chemicals or sharp tools needs a teacher present and the school's safety rules. Evidence is the learner's product or the teacher's mark, never a recording of the child. The knowledge half is asked by questions where a family exists. |
 | MIXTUR.WATER_HARDNESS.d | Q | yes | outline the advantages and disadvantages of hard and soft water | Question families. |
@@ -46,7 +46,7 @@ Built from `curriculum/integrated_science/g9.json` and the registry entry. Outco
 | LIVING.THE_INTERDEPENDENCE_OF_L.c | Q | yes | describe the effect of human activities on the environment | Question families. |
 | LIVING.THE_INTERDEPENDENCE_OF_L.d | A | no | appreciate the interdependence between living and non-living factors of the environment | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an interest or an attitude. |
 | FORCE_.CURVED_MIRRORS.a | Q | yes | describe types of curved mirrors | Question families. |
-| FORCE_.CURVED_MIRRORS.b | P | no | draw ray diagrams to locate images formed by concave and convex mirrors | A practical task, diagram or investigation scored with the KICD rubric indicator: drawing electron arrangements and ray diagrams, investigating the conditions for photosynthesis, softening water, constructing food chains and webs. Anything with heat, chemicals or sharp tools needs a teacher present and the school's safety rules. Evidence is the learner's product or the teacher's mark, never a recording of the child. The knowledge half is asked by questions where a family exists. |
+| FORCE_.CURVED_MIRRORS.b | P | yes (knowledge half) | draw ray diagrams to locate images formed by concave and convex mirrors | A practical task, diagram or investigation scored with the KICD rubric indicator: drawing electron arrangements and ray diagrams, investigating the conditions for photosynthesis, softening water, constructing food chains and webs. Anything with heat, chemicals or sharp tools needs a teacher present and the school's safety rules. Evidence is the learner's product or the teacher's mark, never a recording of the child. The knowledge half is asked by questions where a family exists. |
 | FORCE_.CURVED_MIRRORS.c | Q | yes | describe the characteristics of images formed by concave and convex mirrors | Question families. |
 | FORCE_.CURVED_MIRRORS.d | Q | yes | explain the uses of concave and convex mirrors in day-to-day life | Question families. |
 | FORCE_.CURVED_MIRRORS.e | A | no | appreciate the applications of curved mirrors in day-to-day life | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an interest or an attitude. |
