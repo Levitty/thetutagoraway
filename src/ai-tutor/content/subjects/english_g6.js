@@ -8,6 +8,7 @@ import { FAMILIES as WRITE } from '../families/english_g6_write.js';
 import { FAMILIES as VOCAB } from '../families/english_g6_vocab.js';
 import { FAMILIES as READING } from '../families/english_g6_reading.js';
 import { FAMILIES as LISTEN } from '../families/english_g6_listening.js';
+import { FAMILIES as MORE } from '../families/english_g6_a.js';
 import { SIGNED } from '../families/english_g6_signed.js';
 
 export default {
@@ -15,8 +16,8 @@ export default {
   name: 'English', shortName: 'English', icon: 'book',
   description: 'Grade 6 English from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...LANG, ...WRITE, ...VOCAB, ...READING, ...LISTEN],
-  familyFiles: ['english_g6_lang.js', 'english_g6_write.js', 'english_g6_vocab.js', 'english_g6_reading.js', 'english_g6_listening.js'],
+  families: [...LANG, ...WRITE, ...VOCAB, ...READING, ...LISTEN, ...MORE],
+  familyFiles: ['english_g6_lang.js', 'english_g6_write.js', 'english_g6_vocab.js', 'english_g6_reading.js', 'english_g6_listening.js', 'english_g6_a.js'],
   signed: SIGNED, signedFile: 'english_g6_signed.js',
   checks: 'text',
   idPrefix: 'english6.',          // every family id starts with this
@@ -24,6 +25,6 @@ export default {
   bank: false,                               // true only to also list the families in the shared bank (FAMILIES): Science G5 only
   curriculumDir: 'english',                   // curriculum/<dir>/g<N>.json
   misconceptionsFile: 'engine/data/curriculum/english.g6.misconceptions.json',
-  reviewDoc: 'docs/qa/english-g6-review-2026-11-12.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  reviewDoc: 'docs/qa/english-g6-review-2026-11-19.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
   precheckLabel: 'English 6',
 };

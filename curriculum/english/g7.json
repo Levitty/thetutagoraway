@@ -2076,8 +2076,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [

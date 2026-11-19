@@ -1729,8 +1729,7 @@ export const SKILLS = {
    "M9_EU_LITERAL",
    "M9_EU_OVERUSE",
    "M9_EU_INSULT"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE": {
   "name": "Conduct a debate while keeping the conventions of polite language",
@@ -1840,8 +1839,7 @@ export const SKILLS = {
    "M9_SF_TWISTER_PURPOSE",
    "M9_SF_RIDDLE_LITERAL",
    "M9_SF_OPENING"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.PERFORM_ORAL": {
   "name": "Perform short oral forms, oral poems and parts of a play",
@@ -2236,8 +2234,7 @@ export const SKILLS = {
    "M9_RR_THESAURUS_SWAP",
    "M9_RR_COPY",
    "M9_RR_WRONG_SOURCE"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
   "name": "Put adjectives in the correct order",
@@ -2274,8 +2271,7 @@ export const SKILLS = {
    "M9_PS2_NO_LINK",
    "M9_PS2_MONOLOGUE_DIALOGUE",
    "M9_PS2_IRONY"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION": {
   "name": "Name the parts of a letter of application",
@@ -2326,8 +2322,7 @@ export const SKILLS = {
    "M9_NG_NO_LISTEN",
    "M9_NG_WALK_AWAY",
    "M9_NG_HOSTILE_CUES"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.READIN.T6_READING_FLUENCY.READ_FLUENTLY": {
   "name": "Read at the right speed, accurately and with expression",
@@ -2415,8 +2410,7 @@ export const SKILLS = {
    "M9_IE_ACCEPT_ALL",
    "M9_IE_LITERAL",
    "M9_IE_OPINION_NO_REASON"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS": {
   "name": "Use relative and interrogative pronouns",
@@ -2466,8 +2460,7 @@ export const SKILLS = {
    "M9_WP_REVISE_EDIT",
    "M9_WP_ONE_DRAFT",
    "M9_WP_SKIP_PLAN"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION": {
   "name": "Write compositions, stories and poems through the writing process, using narrative elements and idioms",
@@ -2656,8 +2649,7 @@ export const SKILLS = {
    "M9_PC_MOOD_MISMATCH",
    "M9_PC_TOO_MANY",
    "M9_PC_COSTUME_ERA"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS": {
   "name": "Recognise and fill bursary and scholarship application forms",
@@ -2706,8 +2698,7 @@ export const SKILLS = {
    "M9_FN_BIOGRAPHY",
    "M9_FN_COVER",
    "M9_FN_SCIENCE_FICTION"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED": {
   "name": "Form nouns from verbs and from other nouns",
@@ -2870,8 +2861,7 @@ export const SKILLS = {
    "M9_ID_OPPOSITE",
    "M9_ID_WRONG_FIT",
    "M9_ID_CHANGED"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.QUESTION_TAGS": {
   "name": "Write and use question tags with the correct intonation",
@@ -2888,8 +2878,7 @@ export const SKILLS = {
    "M9_QT_ISNT_IT",
    "M9_QT_LETS",
    "M9_QT_TUNE"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
   "name": "Pick out the main points and organise them into a summary",
@@ -3001,8 +2990,7 @@ export const SKILLS = {
    "M9_SK_GIST_DETAIL",
    "M9_SK_STOP_UNKNOWN",
    "M9_SK_WRONG_KEYWORD"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
   "name": "Punctuate imperative and exclamatory sentences",

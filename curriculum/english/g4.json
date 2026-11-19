@@ -155,8 +155,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
@@ -3745,8 +3744,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -4089,8 +4087,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -4369,8 +4366,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING",
@@ -8480,8 +8476,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -9318,8 +9313,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -10968,8 +10962,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
