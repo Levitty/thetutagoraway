@@ -296,8 +296,7 @@ export const SKILLS = {
    "M_AG6_DS_ONCE",
    "M_AG6_DS_LIVE",
    "M_AG6_DS_SITE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS": {
   "name": "Say the routine practices in rearing rabbits and chickens",
@@ -329,8 +328,7 @@ export const SKILLS = {
    "M_AG6_RH_WETGREENS",
    "M_AG6_RH_CROWD",
    "M_AG6_RH_PARASITE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE": {
   "name": "Say how to dry and store crop produce at home",
@@ -362,8 +360,7 @@ export const SKILLS = {
    "M_AG6_DRY_UNEVEN",
    "M_AG6_DRY_NIGHT",
    "M_AG6_DRY_SOFT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
   "name": "Match a cooking method to its food and to how it cooks",
@@ -395,8 +392,7 @@ export const SKILLS = {
    "M_AG6_CP_OPEN",
    "M_AG6_CP_STEWFAST",
    "M_AG6_CP_NOSIFT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS": {
   "name": "Say the practices that keep the body clean and why",
@@ -445,8 +441,7 @@ export const SKILLS = {
    "M_AG6_SS_SCRAPE",
    "M_AG6_SS_IRON",
    "M_AG6_SS_SALT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET": {
   "name": "Name the basic crochet stitches, the tool and the articles made",
@@ -478,8 +473,7 @@ export const SKILLS = {
    "M_AG6_CS_COUNT",
    "M_AG6_CS_TIGHT",
    "M_AG6_CS_CUT"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED": {
   "name": "Say what a moist bed garden is and how it is built",

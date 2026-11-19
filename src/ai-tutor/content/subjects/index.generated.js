@@ -4,6 +4,7 @@ import agriculture_g5 from './agriculture_g5.js';
 import agriculture_g6 from './agriculture_g6.js';
 import agriculture_g7 from './agriculture_g7.js';
 import agriculture_g8 from './agriculture_g8.js';
+import agriculture_g9 from './agriculture_g9.js';
 import cre_g4 from './cre_g4.js';
 import cre_g5 from './cre_g5.js';
 import cre_g6 from './cre_g6.js';
@@ -14,6 +15,7 @@ import creativearts_g5 from './creativearts_g5.js';
 import creativearts_g6 from './creativearts_g6.js';
 import creativearts_g7 from './creativearts_g7.js';
 import creativearts_g8 from './creativearts_g8.js';
+import creativearts_g9 from './creativearts_g9.js';
 import english_g1 from './english_g1.js';
 import english_g2 from './english_g2.js';
 import english_g3 from './english_g3.js';
@@ -53,6 +55,7 @@ export const ENTRIES = [
   agriculture_g6,
   agriculture_g7,
   agriculture_g8,
+  agriculture_g9,
   cre_g4,
   cre_g5,
   cre_g6,
@@ -63,6 +66,7 @@ export const ENTRIES = [
   creativearts_g6,
   creativearts_g7,
   creativearts_g8,
+  creativearts_g9,
   english_g1,
   english_g2,
   english_g3,

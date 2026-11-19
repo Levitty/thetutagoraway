@@ -3,7 +3,7 @@
 Built from `curriculum/cre/g7.json` and the registry entry. Outcome text is KICD's, word for word. **Q** means a question can test it, **W** writing (composition marking), **O** speaking or an oral check (a teacher listening), **P** a practical task, product or portfolio, **A** an attitude (teacher observation).
 
 - Outcomes: 94. By what tests them best: Q 57, W 0, O 0, P 21, A 16.
-- Outcomes with at least one question family: 53. Q outcomes with a family: 50 of 57. Q outcomes with no family: 7.
+- Outcomes with at least one question family: 55. Q outcomes with a family: 52 of 57. Q outcomes with no family: 5.
 - A non-Q outcome that has a family: the family tests the recognition half and the rest still needs the teacher or the task named below.
 - Kind is assigned from the verb of the outcome (identify, explain, describe, discuss, outline and similar are Q; apply, practise, conserve, choose, utilise, compile, recommend, narrate are P; appreciate, value, desire, acknowledge, pray and take part are A). It is a first sort for the reviewer, not the KICD's own tag.
 - Bible facts are those of the named passages; nothing denominational is asked (no claims on how Communion works or how baptism is done). Sensitive topics (human sexuality, drugs, gambling, social media) ask for knowledge and safe responses only and always name a trusted adult. All are to be confirmed by a CRE teacher who knows the school's tradition.
@@ -93,9 +93,9 @@ Built from `curriculum/cre/g7.json` and the registry entry. Outcome text is KICD
 | CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.f | P | no | utilise values and life- skills acquired to live an alcohol, drug and substance-free life | A practical task, written plan, discussion or portfolio entry scored with the KICD rubric indicator: applying values, practising stewardship, choosing and planting a crop, recommending solutions, narrating a story aloud. Private matters (home life, personal struggles) are never asked of a child. Evidence is the product or the teacher's mark, never a recording of children. |
 | CHRIST.GAMBLING.a | Q | yes | identify types of gambling in Kenya today | Question families. |
 | CHRIST.GAMBLING.b | Q | yes | discuss five causes of gambling | Question families. |
-| CHRIST.GAMBLING.c | Q | NO | outline teachings on money and wealth from the scriptures provided | Question families. |
+| CHRIST.GAMBLING.c | Q | yes | outline teachings on money and wealth from the scriptures provided | Question families. |
 | CHRIST.GAMBLING.d | Q | yes | examine the effects of gambling on individuals and families | Question families. |
-| CHRIST.GAMBLING.e | Q | NO | outline teachings on true riches from the scriptures provided | Question families. |
+| CHRIST.GAMBLING.e | Q | yes | outline teachings on true riches from the scriptures provided | Question families. |
 | CHRIST.GAMBLING.f | P | no | utilize acquired skills and moral values to live a gambling free life | A practical task, written plan, discussion or portfolio entry scored with the KICD rubric indicator: applying values, practising stewardship, choosing and planting a crop, recommending solutions, narrating a story aloud. Private matters (home life, personal struggles) are never asked of a child. Evidence is the product or the teacher's mark, never a recording of children. |
 | CHRIST.SOCIAL_MEDIA.a | Q | yes | identify different social media platforms used by young people today | Question families. |
 | CHRIST.SOCIAL_MEDIA.b | Q | yes | describe ways of using social media responsibly | Question families. |

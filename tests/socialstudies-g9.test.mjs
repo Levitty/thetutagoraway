@@ -35,9 +35,8 @@ test('every family is a draft, nothing is signed, and the skill codes begin SOCI
 });
 
 // The Grade 5 Maths standard (depth pass, 18 Nov 2026): two or more prerequisites per skill reaching Grades 5-8, four real
-// misconceptions per skill, a teaching pack for every sub-strand. The six skills added in the depth pass have no families yet.
+// misconceptions per skill, a teaching pack for every sub-strand. The six skills added in the depth pass have families since 19 Nov 2026.
 socialStudiesDepthTests({
   grade: 9, outcomes: 86,
-  noFamilies: ['SUPPORT_CHALLENGES', 'EMOTIONS_PEACE', 'POP_PYRAMIDS', 'PLATE_TECTONICS', 'RIVER_CONDITIONS', 'CULTURE_FACTORS']
-    .map(k => subs.flatMap(s => s.skills).find(x => x.code.endsWith(`.${k}`)).code),
+  noFamilies: [],   // the six depth-pass skills got their families on 19 Nov 2026 (socialstudies_g9_c.js)
 });

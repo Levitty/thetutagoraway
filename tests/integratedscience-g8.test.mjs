@@ -6,5 +6,5 @@ import { scienceDepthTests } from './helpers/scienceDepth.mjs';
 
 scienceDepthTests({
   dir: 'integrated_science', subject: 'integratedscience', grade: 8, outcomes: 37, minDown: 0.6,
-  noFamilies: ['INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO', 'INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE'],
+  noFamilies: [],   // DIFFUSION_OSMOSIS_DEMO and MENSTRUAL_MANAGE got families on 19 Nov 2026 (integratedscience_g8_d.js)
 });
