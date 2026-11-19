@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG",
+ "title": "Our National Flag",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Colour meanings as the school teaches them (black: the people; red: the blood shed for independence; green: the land; white: peace; the shield and spears: defence of freedom).",
+ "skills": [
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS",
+   "key_step": "The child names the colours of the Kenya flag in order and says what each stands for.",
+   "floor": {
+    "prerequisite": "Knows features at school.",
+    "question": "What flies on a pole at school?",
+    "answer": "The Kenya flag"
+   },
+   "representations": [
+    "a real or printed Kenya flag",
+    "colour cards",
+    "a flag outline to colour"
+   ],
+   "steps": [
+    "Look at the flag together.",
+    "Name each colour from the top.",
+    "Say what each stands for.",
+    "Colour your own flag."
+   ],
+   "contexts": [
+    "Monday assembly",
+    "Jamhuri Day",
+    "a flag at the chief's office"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the outline of the flag."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top stripe.",
+     "say": "Which colour goes here and what does it stand for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say black, the people of Kenya."
+    },
+    {
+     "beat": "reveal",
+     "do": "Colour each stripe and write its meaning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS.M_E2_FLAG_RED_DANGER",
+     "listen_for": [
+      "Danger"
+     ],
+     "ask": "What does red stand for on the Kenya flag?",
+     "repair": "Tell the short story of the struggle for independence. Red remembers those who died."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS.M_E2_FLAG_GREEN_TREES",
+     "listen_for": [
+      "Only trees"
+     ],
+     "ask": "What does green stand for on the Kenya flag?",
+     "repair": "Show pictures of farms, forests and wildlife: all part of our land."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS.M_E2_FLAG_ORDER",
+     "listen_for": [
+      "Green"
+     ],
+     "ask": "Which colour is at the top of the Kenya flag?",
+     "repair": "Colour a flag strip by strip from the top, saying \"black, white, red, white, green\"."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS.M_E2_FLAG_WHITE_NONE",
+     "listen_for": [
+      "Nothing, they are gaps"
+     ],
+     "ask": "What do the white stripes on our flag stand for?",
+     "repair": "Point at each white stripe and say \"peace\". Ask why peace is placed between the colours."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does black stand for?",
+     "answer": "The people of Kenya",
+     "shows": "meaning"
+    },
+    {
+     "question": "What does white stand for?",
+     "answer": "Peace",
+     "shows": "meaning"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE",
+   "key_step": "The child names occasions when the anthem is sung and shows the right behaviour when the flag is raised or lowered.",
+   "floor": {
+    "prerequisite": "Knows the flag colours.",
+    "question": "Which colour stands for peace?",
+    "answer": "White"
+   },
+   "representations": [
+    "a flag and a short pole",
+    "pictures of national holidays",
+    "an assembly role-play"
+   ],
+   "steps": [
+    "Name occasions for the anthem.",
+    "Practise standing at attention.",
+    "Fold the flag off the ground.",
+    "Say why we show respect."
+   ],
+   "contexts": [
+    "Monday assembly",
+    "Mashujaa Day",
+    "opening of a sports competition"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child running while the flag goes up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child.",
+     "say": "Is this right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, stop and stand still."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: stop, face the flag, stand still."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE.M_E2_ANTHEM_ANYTIME",
+     "listen_for": [
+      "Yes, any time"
+     ],
+     "ask": "Is the national anthem sung while playing football at break?",
+     "repair": "List occasions on the board. Say: the anthem is for important moments."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE.M_E2_FLAG_KEEP_WALKING",
+     "listen_for": [
+      "Keep walking"
+     ],
+     "ask": "The flag is being raised and you are walking to class. What do you do?",
+     "repair": "Practise in the field: when the flag goes up, everyone freezes and faces it."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE.M_E2_FLAG_GROUND_OK",
+     "listen_for": [
+      "Yes, while folding it"
+     ],
+     "ask": "Can the flag touch the ground?",
+     "repair": "Fold a flag in pairs, held off the ground. Say: we show it respect."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE.M_E2_ANTHEM_CAP_ON",
+     "listen_for": [
+      "Keep it on"
+     ],
+     "ask": "What do you do with your hat when the anthem is sung?",
+     "repair": "Show a picture of an assembly with caps removed. Practise."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a day when the anthem is sung.",
+     "answer": "Jamhuri Day (Madaraka Day, Mashujaa Day, assembly)",
+     "shows": "events"
+    },
+    {
+     "question": "What do you do when the flag is raised?",
+     "answer": "Stop and stand still facing it",
+     "shows": "etiquette"
+    }
+   ]
+  }
+ ]
+}

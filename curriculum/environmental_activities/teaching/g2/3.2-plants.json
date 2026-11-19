@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.RESOUR.PLANTS",
+ "title": "Plants",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+   "key_step": "The child names ways of caring for plants with local materials: watering at the roots, manuring, mulching, weeding and fencing.",
+   "floor": {
+    "prerequisite": "Knows parts of a plant.",
+    "question": "Which part of a plant is under the soil?",
+    "answer": "The roots"
+   },
+   "representations": [
+    "a watering can and a bottle with holes",
+    "dry grass and animal manure",
+    "two potted bean plants"
+   ],
+   "steps": [
+    "Name ways of caring for plants.",
+    "Water at the roots.",
+    "Add manure and mulch.",
+    "Fence a seedling."
+   ],
+   "contexts": [
+    "the school garden in the dry season",
+    "a seedling near a footpath",
+    "a home kitchen garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plant with roots under the soil and a child with a can."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the can.",
+     "say": "Where should the water go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say on the soil near the roots."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the water at the roots and add mulch."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE.M_E2_PLANT_WATER_LEAVES",
+     "listen_for": [
+      "On the leaves"
+     ],
+     "ask": "Where should you pour water when watering a plant?",
+     "repair": "Draw the roots under the soil. Say: roots drink the water."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE.M_E2_PLANT_MORE_WATER",
+     "listen_for": [
+      "Yes, plants love water"
+     ],
+     "ask": "Is it good to pour water until the pot overflows every hour?",
+     "repair": "Watch a flooded seedling wilt. Water a little each morning or evening."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE.M_E2_PLANT_DUNG_DIRTY",
+     "listen_for": [
+      "Bad, it is dirty"
+     ],
+     "ask": "Is cow dung good or bad for plants?",
+     "repair": "Grow two bean plants, one with manure. Compare after two weeks."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE.M_E2_PLANT_MULCH_RUBBISH",
+     "listen_for": [
+      "They forgot to clear it"
+     ],
+     "ask": "Why do farmers put dry grass around plants?",
+     "repair": "Feel the soil under mulch and bare soil at noon."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one way of caring for plants.",
+     "answer": "Watering (manuring, mulching, weeding)",
+     "shows": "identifies"
+    },
+    {
+     "question": "What local material can be used as manure?",
+     "answer": "Animal dung (compost)",
+     "shows": "materials"
+    }
+   ]
+  }
+ ]
+}

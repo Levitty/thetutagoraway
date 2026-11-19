@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_",
+ "title": "Bible Story: The Call of Samuel",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL",
+   "key_step": "The child retells the call of Samuel (1 Samuel 3:3-10) and says the lesson: listen to God and obey.",
+   "floor": {
+    "prerequisite": "Knows the importance of obeying parents.",
+    "question": "Why should children obey their parents?",
+    "answer": "God commands it (it keeps us safe)"
+   },
+   "representations": [
+    "picture cards of 1 Samuel 3",
+    "Samuel's words on a card",
+    "a song about the call of Samuel"
+   ],
+   "steps": [
+    "Picture-read the passage.",
+    "Retell in order.",
+    "Say Samuel's words.",
+    "Say the lesson."
+   ],
+   "contexts": [
+    "a parent calling a child",
+    "quiet time to pray",
+    "a teacher calling a name"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Samuel!\" three times."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the third call.",
+     "say": "What did Samuel do each time?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he ran to Eli."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: Speak, for your servant is listening."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_ELI_CALLED",
+     "listen_for": [
+      "Eli"
+     ],
+     "ask": "Who was calling Samuel?",
+     "repair": "Read 1 Samuel 3:8. Eli understood it was the Lord."
+    },
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_ONCE",
+     "listen_for": [
+      "Once"
+     ],
+     "ask": "How many times did Samuel run to Eli?",
+     "repair": "Act it out with three runs."
+    },
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_WORDS",
+     "listen_for": [
+      "Who is it?"
+     ],
+     "ask": "What did Samuel say when God called the last time?",
+     "repair": "Say the words together with a hand to the ear."
+    },
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_ADULT",
+     "listen_for": [
+      "An old man"
+     ],
+     "ask": "Was Samuel a boy or an old man when God called him?",
+     "repair": "Show a picture of the boy Samuel. God speaks to children too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who called Samuel?",
+     "answer": "The Lord (God)",
+     "shows": "retell"
+    },
+    {
+     "question": "What is the lesson from the call of Samuel?",
+     "answer": "Listen to God and obey",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_CH.THE_HOLY_SPIRIT",
+ "title": "The Holy Spirit",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE",
+   "key_step": "The child states Jesus' promise of the Holy Spirit (Acts 1:4) and mentions three roles of the Holy Spirit.",
+   "floor": {
+    "prerequisite": "Knows the baptism of Jesus.",
+    "question": "Who baptised Jesus?",
+    "answer": "John the Baptist"
+   },
+   "representations": [
+    "Acts 1:4 on a card",
+    "role cards: strengthens, teaches, guides",
+    "a promise chart"
+   ],
+   "steps": [
+    "Talk about promises parents keep.",
+    "Read Acts 1:4.",
+    "Say the promise.",
+    "Name three roles."
+   ],
+   "contexts": [
+    "a parent keeping a promise",
+    "Pentecost Sunday",
+    "a child needing courage"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Wait for the gift my Father promised.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"gift\".",
+     "say": "What was the gift?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the Holy Spirit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write three roles."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_MONEY",
+     "listen_for": [
+      "Money"
+     ],
+     "ask": "What did Jesus promise his disciples in Acts 1:4?",
+     "repair": "Read Acts 1:4-5."
+    },
+    {
+     "code": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_GO_HOME",
+     "listen_for": [
+      "At their homes"
+     ],
+     "ask": "Where did Jesus tell the disciples to wait?",
+     "repair": "Read Acts 1:4."
+    },
+    {
+     "code": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_ROLE_PUNISH",
+     "listen_for": [
+      "He punishes us"
+     ],
+     "ask": "Name a role of the Holy Spirit.",
+     "repair": "Read John 14:26: the Helper."
+    },
+    {
+     "code": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_PROMISE_BROKEN",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Did Jesus keep his promise to send the Holy Spirit?",
+     "repair": "Read Acts 2:4 briefly: the promise kept."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Jesus promise his disciples?",
+     "answer": "The Holy Spirit",
+     "shows": "promise"
+    },
+    {
+     "question": "Name a role of the Holy Spirit.",
+     "answer": "He strengthens (teaches, guides)",
+     "shows": "roles"
+    }
+   ]
+  }
+ ]
+}

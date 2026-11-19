@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.CHRIST.RESPONSIBILITY",
+ "title": "Responsibility",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.CHRIST.RESPONSIBILITY.CHORES",
+   "key_step": "The child names chores and says why a responsible child does them without expecting reward, as for the Lord (Colossians 3:23).",
+   "floor": {
+    "prerequisite": "Knows how children help parents at home.",
+    "question": "Name a way you help your parents.",
+    "answer": "Sweeping (fetching water)"
+   },
+   "representations": [
+    "Colossians 3:23 on a card",
+    "a chores chart",
+    "role-play cards"
+   ],
+   "steps": [
+    "Name chores you do at home.",
+    "Say why we do them without pay.",
+    "Read Colossians 3:23.",
+    "Act out kind correction."
+   ],
+   "contexts": [
+    "Saturday morning chores",
+    "caring for a younger brother",
+    "a classroom duty rota"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Colossians 3:23: work as for the Lord."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"for the Lord\".",
+     "say": "Why do we help without asking for a reward?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say we love our family, God sees."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write chores beside the verse."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CHRIST.RESPONSIBILITY.CHORES.M_C3_RES_PAY",
+     "listen_for": [
+      "Yes, work should be paid"
+     ],
+     "ask": "Mother asks you to sweep the house. Should you ask for money first?",
+     "repair": "Read Colossians 3:23. Talk about what parents do for children without pay."
+    },
+    {
+     "code": "CRES.G3.CHRIST.RESPONSIBILITY.CHORES.M_C3_RES_GIRLS_ONLY",
+     "listen_for": [
+      "No, it is girls' work"
+     ],
+     "ask": "Can a boy wash utensils at home?",
+     "repair": "List chores and ask who can do each: everyone."
+    },
+    {
+     "code": "CRES.G3.CHRIST.RESPONSIBILITY.CHORES.M_C3_RES_TELL_TALES",
+     "listen_for": [
+      "Beat him"
+     ],
+     "ask": "A classmate is writing on the wall. What is a responsible thing to do?",
+     "repair": "Role-play kind words: \"Please stop, that is wrong.\" Then tell a teacher."
+    },
+    {
+     "code": "CRES.G3.CHRIST.RESPONSIBILITY.CHORES.M_C3_RES_ONLY_WATCHED",
+     "listen_for": [
+      "No, nobody is watching"
+     ],
+     "ask": "Your parent is away. Should you still do your chores?",
+     "repair": "Read Colossians 3:23 again: God sees."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a chore you do at home.",
+     "answer": "Sweeping (washing utensils, fetching water)",
+     "shows": "chores"
+    },
+    {
+     "question": "Should a child ask for money before helping at home?",
+     "answer": "No",
+     "shows": "responsibility"
+    }
+   ]
+  }
+ ]
+}

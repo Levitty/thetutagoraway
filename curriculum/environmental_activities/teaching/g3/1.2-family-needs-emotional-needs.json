@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N",
+ "title": "Family needs Emotional needs",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Children are never asked to say whose home lacks love. A child who says no one at home cares for him or her, or who shows fear of an adult, is listened to privately and the school safeguarding policy followed.",
+ "skills": [
+  {
+   "skill": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS",
+   "key_step": "The child names a feeling from a face, the body and the story (happy, sad, angry, afraid, surprised) and says how people show it.",
+   "floor": {
+    "prerequisite": "Knows the basic needs of a family.",
+    "question": "Name one basic need of a family.",
+    "answer": "Food (shelter, clothing)"
+   },
+   "representations": [
+    "feeling-face cards",
+    "short picture stories",
+    "a mirror for making faces"
+   ],
+   "steps": [
+    "Make a feeling face in the mirror.",
+    "Match faces to feeling words.",
+    "Look at eyes and body as well as the mouth.",
+    "Tell what made the person feel that way."
+   ],
+   "contexts": [
+    "a lost goat found again",
+    "a child left out of a game",
+    "thunder at night"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child with wide eyes and raised hands."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the eyes and hands.",
+     "say": "What is this child feeling?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to look at the whole body and answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the feeling word under the face: afraid."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS.M_E3_FEEL_BOYS_NO_CRY",
+     "listen_for": [
+      "Nothing, boys do not cry"
+     ],
+     "ask": "Otieno falls and cries. What is he feeling?",
+     "repair": "Read a story where a father cries at good news. Say: everyone has feelings, boys and girls."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS.M_E3_FEEL_TEARS_SAD",
+     "listen_for": [
+      "Sad"
+     ],
+     "ask": "Grandmother cries when her son comes home after many years. How does she feel?",
+     "repair": "Show a picture of a happy reunion with tears. Ask what made her cry, then name joy."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS.M_E3_FEEL_ANGRY_BAD",
+     "listen_for": [
+      "Yes, she is angry so she is bad"
+     ],
+     "ask": "Achieng feels angry when her book is torn. Is Achieng a bad girl?",
+     "repair": "Separate the feeling from the action: angry is fine, hitting is not. Practise calm steps: breathe, tell an adult."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.FEELINGS.M_E3_FEEL_FACE_ONLY",
+     "listen_for": [
+      "Happy, her mouth is open"
+     ],
+     "ask": "A child stands shaking with wide eyes and an open mouth while a dog barks. How does she feel?",
+     "repair": "Look at eyes, hands and body as well as the mouth. Act out afraid with the whole body."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A girl smiles and jumps up and down. How does she feel?",
+     "answer": "Happy",
+     "shows": "labels a feeling"
+    },
+    {
+     "question": "Do boys feel sad too?",
+     "answer": "Yes",
+     "shows": "all people have feelings"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS",
+   "key_step": "The child names emotional needs (love, care, comfort, praise, being listened to, safety) and says how each is met in real life.",
+   "floor": {
+    "prerequisite": "Names feelings.",
+    "question": "A child cries because her pet died. How does she feel?",
+    "answer": "Sad"
+   },
+   "representations": [
+    "situation cards",
+    "a needs chart with a new column for love and care",
+    "role-play"
+   ],
+   "steps": [
+    "Name the feeling in the story.",
+    "Say what the person needs.",
+    "Act out how to meet the need.",
+    "Say why gifts alone do not meet it."
+   ],
+   "contexts": [
+    "a new child at school with no friends",
+    "a child whose drawing is good",
+    "a family after a funeral"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child sitting alone at break time."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child.",
+     "say": "What does this child need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say a friend, someone to play with or talk to."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: friendship, being included."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS.M_E3_EMO_GIFTS",
+     "listen_for": [
+      "Give him sweets"
+     ],
+     "ask": "Baraka is sad because his grandfather is sick. What will help him most?",
+     "repair": "Role-play two ways to help a sad friend: a sweet and walking away, or listening. Ask which felt better."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS.M_E3_EMO_ONLY_FOOD",
+     "listen_for": [
+      "No, only food, clothes and a house are needs"
+     ],
+     "ask": "Is love a need?",
+     "repair": "Add a fourth column to the needs chart: love, care, praise. Say: we need these to grow well inside."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS.M_E3_EMO_ADULTS_ONLY",
+     "listen_for": [
+      "Nothing, adults do not need comfort"
+     ],
+     "ask": "Mother is tired and sad after a long day. What can a child do?",
+     "repair": "Tell a story of a child who comforts a parent. Everyone needs love, at every age."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.EMOTIONAL_NEEDS.M_E3_EMO_PRAISE_SPOIL",
+     "listen_for": [
+      "Nothing, praise makes her proud"
+     ],
+     "ask": "Akinyi sweeps the class well. What should the teacher say?",
+     "repair": "Show how praise makes a classmate want to help again. Praise the action, kindly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A new pupil has no friends. What does she need?",
+     "answer": "Someone to play with and welcome her",
+     "shows": "emotional need"
+    },
+    {
+     "question": "Is praise a way of meeting an emotional need?",
+     "answer": "Yes",
+     "shows": "how needs are met"
+    }
+   ]
+  }
+ ]
+}

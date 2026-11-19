@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE",
+ "title": "Divisions of the Bible",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+   "key_step": "The child states the Old Testament has 39 books and names Genesis and Exodus as the first two.",
+   "floor": {
+    "prerequisite": "Knows the two divisions of the Bible.",
+    "question": "Name the two divisions of the Bible.",
+    "answer": "Old Testament and New Testament"
+   },
+   "representations": [
+    "a Bible-shelf chart",
+    "flashcards Genesis and Exodus",
+    "a song on the first books"
+   ],
+   "steps": [
+    "Find the Old Testament in a Bible.",
+    "Say 39.",
+    "Name the first two books.",
+    "Sing them."
+   ],
+   "contexts": [
+    "Bible reading at home",
+    "Sunday school",
+    "a Bible quiz"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Old Testament ? books."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question mark.",
+     "say": "How many books?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say 39."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Genesis, Exodus first on the shelf."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_27",
+     "listen_for": [
+      "66"
+     ],
+     "ask": "How many books are in the Old Testament?",
+     "repair": "Write OT 39 on a long shelf drawing."
+    },
+    {
+     "code": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_MATTHEW",
+     "listen_for": [
+      "Matthew and Mark"
+     ],
+     "ask": "What are the first two books of the Old Testament?",
+     "repair": "Open the Bible at the very front: Genesis, Exodus."
+    },
+    {
+     "code": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_ORDER",
+     "listen_for": [
+      "Exodus"
+     ],
+     "ask": "Which book comes first, Genesis or Exodus?",
+     "repair": "Genesis means beginning; it tells of creation, so it comes first."
+    },
+    {
+     "code": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_THREE_PARTS",
+     "listen_for": [
+      "Three"
+     ],
+     "ask": "How many divisions does the Bible have?",
+     "repair": "Show a Bible with a ribbon between the two testaments."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many books are in the Old Testament?",
+     "answer": "39",
+     "shows": "number"
+    },
+    {
+     "question": "Name the first book of the Bible.",
+     "answer": "Genesis",
+     "shows": "books"
+    }
+   ]
+  }
+ ]
+}

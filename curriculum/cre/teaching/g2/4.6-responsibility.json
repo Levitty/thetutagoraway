@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.RESPONSIBILITY",
+ "title": "Responsibility",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS",
+   "key_step": "The child names items carried to school and how to care for them (Colossians 3:23).",
+   "floor": {
+    "prerequisite": "Knows punctuality.",
+    "question": "What time should you arrive at school?",
+    "answer": "On time (before the bell)"
+   },
+   "representations": [
+    "a school bag with items",
+    "Colossians 3:23 on a card",
+    "labels"
+   ],
+   "steps": [
+    "Read Colossians 3:23.",
+    "Display and count items carried to school.",
+    "Say how to care for each.",
+    "Label your things."
+   ],
+   "contexts": [
+    "packing the bag at night",
+    "rainy day walk to school",
+    "end of the school day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: book, pencil, ruler, bottle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the book.",
+     "say": "How do we care for this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say cover it and keep it in the bag."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a care tip beside each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_PARENTS_BUY",
+     "listen_for": [
+      "No, mother will buy another"
+     ],
+     "ask": "You lose your ruler. Does it matter?",
+     "repair": "Talk about what a ruler costs and what else that money buys."
+    },
+    {
+     "code": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_BAG_FLOOR",
+     "listen_for": [
+      "Anywhere, on the floor"
+     ],
+     "ask": "Where should you keep your books?",
+     "repair": "Practise packing a bag neatly."
+    },
+    {
+     "code": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_TEACHER_JOB",
+     "listen_for": [
+      "The teacher"
+     ],
+     "ask": "Who should take care of your books?",
+     "repair": "Read Colossians 3:23. Each one cares for his own things."
+    },
+    {
+     "code": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_LABEL",
+     "listen_for": [
+      "There is no reason"
+     ],
+     "ask": "Why write your name on your books?",
+     "repair": "Pick up an unlabelled pencil: whose is it?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item you carry to school.",
+     "answer": "A book (pencil, ruler)",
+     "shows": "items"
+    },
+    {
+     "question": "How do you care for your books?",
+     "answer": "Cover them and keep them in the bag",
+     "shows": "care"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY",
+ "title": "Weather and the Sky",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+   "key_step": "The child describes what the sky looks like by day (bright, sun, clouds) and by night (dark, moon, stars).",
+   "floor": {
+    "prerequisite": "Uses simple weather words.",
+    "question": "Is it sunny or rainy today?",
+    "answer": "Sunny (rainy)"
+   },
+   "representations": [
+    "pictures of a day and a night sky",
+    "black and blue paper for collage",
+    "a torch"
+   ],
+   "steps": [
+    "Look at the sky now and say what you see.",
+    "Say what you see at night.",
+    "Sort pictures into day and night.",
+    "Make a day and night collage."
+   ],
+   "contexts": [
+    "morning assembly",
+    "evening at home",
+    "a cloudy day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: day and night."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the night box.",
+     "say": "What do we see in the sky at night?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the moon and stars."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the sun in the day box and the moon and stars at night."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_SUN_NIGHT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Can we see the sun at night?",
+     "repair": "Draw a day sky and a night sky side by side. Put the sun only in the day sky."
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_STARS_GONE",
+     "listen_for": [
+      "They go away"
+     ],
+     "ask": "Where are the stars during the day?",
+     "repair": "Shine a small torch in a bright room and a dark room. Seen only in the dark."
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_MOON_DAY",
+     "listen_for": [
+      "No, never"
+     ],
+     "ask": "Can you sometimes see the moon in the day?",
+     "repair": "Look out on a morning when the moon shows, or show a photo of a day moon."
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_CLOUDS_NIGHT",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Can there be clouds at night?",
+     "repair": "Talk about a night when the moon was hidden. Clouds covered it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do we see in the sky at night?",
+     "answer": "The moon and stars",
+     "shows": "describes"
+    },
+    {
+     "question": "Is the sun seen at night?",
+     "answer": "No",
+     "shows": "describes"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+   "key_step": "The child names weather conditions in the locality and what people wear or do in each.",
+   "floor": {
+    "prerequisite": "Describes the sky.",
+    "question": "What do we see in the sky in the day?",
+    "answer": "The sun (clouds)"
+   },
+   "representations": [
+    "weather symbol cards",
+    "a paper doll with clothes",
+    "a class weather chart"
+   ],
+   "steps": [
+    "Look outside and name the weather.",
+    "Pick the symbol.",
+    "Dress the doll for the weather.",
+    "Record the weather on the chart."
+   ],
+   "contexts": [
+    "a rainy morning",
+    "a hot afternoon",
+    "a windy day for flying kites"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sun, a cloud, rain drops and wind lines."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wind lines.",
+     "say": "What weather is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say windy."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the weather word under each symbol."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_CLOUD_RAIN",
+     "listen_for": [
+      "Rainy"
+     ],
+     "ask": "The sky is full of grey clouds but no rain falls. What is the weather?",
+     "repair": "Show two pictures: clouds only, clouds with rain falling. Name each."
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_WIND_SEE",
+     "listen_for": [
+      "You cannot know"
+     ],
+     "ask": "How do you know it is windy?",
+     "repair": "Take a paper streamer outside. Watch it move."
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_SUN_HOT",
+     "listen_for": [
+      "No, sun is always hot"
+     ],
+     "ask": "Can a sunny morning be cold?",
+     "repair": "Talk about a cold, bright morning in July. Feel the air."
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_CLOTHES",
+     "listen_for": [
+      "A thick sweater"
+     ],
+     "ask": "It is very hot. What should you wear?",
+     "repair": "Dress a paper doll for each weather card."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What weather is it when water falls from the sky?",
+     "answer": "Rainy",
+     "shows": "identifies"
+    },
+    {
+     "question": "What do we use when it rains?",
+     "answer": "An umbrella (raincoat)",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

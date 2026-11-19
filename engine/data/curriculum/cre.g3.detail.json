@@ -1,0 +1,286 @@
+{
+ "outcomes": {
+  "CRE.G3.CREATI.SELF_AWARENESS.a": "identify themselves as male or female according to Genesis 1:27",
+  "CRE.G3.CREATI.SELF_AWARENESS.b": "describe how they cope with happy or sad feelings",
+  "CRE.G3.CREATI.SELF_AWARENESS.c": "make the right choices guided by the word of God",
+  "CRE.G3.CREATI.SELF_AWARENESS.d": "appreciate his or her gender as guided by the scriptures",
+  "CRE.G3.CREATI.MY_FAMILY.a": "name family members in the nuclear and extended family",
+  "CRE.G3.CREATI.MY_FAMILY.b": "draw the family tree to understand family relationships",
+  "CRE.G3.CREATI.MY_FAMILY.c": "desire to respect family members for harmonious living",
+  "CRE.G3.CREATI.ADAM_AND_EVE.a": "recognise God as the creator of Adam and Eve",
+  "CRE.G3.CREATI.ADAM_AND_EVE.b": "describe how Adam and Eve disobeyed God",
+  "CRE.G3.CREATI.ADAM_AND_EVE.c": "state four results of Adam’s disobedience",
+  "CRE.G3.CREATI.ADAM_AND_EVE.d": "desire to exercise obedience in day-to-day life",
+  "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.a": "differentiate the Bible from other books as guided in 2 Timothy 3:16A",
+  "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.b": "state the number of books in the New Testament",
+  "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.c": "name the four Gospel books in the New Testament",
+  "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.d": "appreciate the Bible as a guide in their daily life",
+  "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.a": "retell the story of Moses and the burning bush",
+  "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.b": "mention three lessons learnt from the story",
+  "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.c": "desire to obey God in their day-to-day lives",
+  "CRE.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH.a": "narrate the story of Jonah and the big fish",
+  "CRE.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH.b": "list the results of Jonah’s disobedience",
+  "CRE.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH.c": "desire to obey God in day-to-day life",
+  "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.a": "retell the healing of Naaman the Syrian commander",
+  "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.b": "mention three lessons learnt from the story of Naaman",
+  "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.c": "appreciate God as the healer of all diseases",
+  "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.a": "narrate the story of the three Hebrew men",
+  "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.b": "list three lessons learnt from the story",
+  "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.c": "desire to depend on God when faced with challenges",
+  "CRE.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.a": "retell the story of Elisha and the boys",
+  "CRE.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.b": "mention four lessons learnt from the story of Elisha and the boys",
+  "CRE.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.c": "desire to respect the elderly in the community",
+  "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.a": "retell the story of the wise men",
+  "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.b": "name the hometown of Jesus Christ",
+  "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.c": "desire to be led by God in day-to-day life",
+  "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.a": "narrate the story of the Good Samaritan",
+  "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.b": "list four lessons learnt from the story of the Good Samaritan",
+  "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.c": "desire to show kindness to people in need",
+  "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.a": "retell the miracle of the five loaves and two fish",
+  "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.b": "state lessons learnt from the miracle of five loaves and two fish",
+  "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.c": "desire to show kindness to those in need",
+  "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.a": "narrate the miracle of Jesus Christ walking on water",
+  "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.b": "list lessons learnt from the miracle",
+  "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.c": "appreciate Jesus’ power over nature",
+  "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.a": "retell the miracle of raising Jairus’ daughter",
+  "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.b": "list four lessons learnt from the miracle of healing Jairus’ daughter",
+  "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.c": "recognise Jesus Christ’s power over life and death",
+  "CRE.G3.THE_LI.EASTER.a": "mention the importance of celebrating Easter",
+  "CRE.G3.THE_LI.EASTER.b": "identify the events that take place during Easter celebrations",
+  "CRE.G3.THE_LI.EASTER.c": "appreciate Jesus Christ’s resurrection by taking part in Easter celebrations",
+  "CRE.G3.CHRIST.HONESTY.a": "narrate the story of Ananias and Sapphira",
+  "CRE.G3.CHRIST.HONESTY.b": "practise honesty by taking offerings given by parents to church",
+  "CRE.G3.CHRIST.HONESTY.c": "explain the importance of respecting other people’s property",
+  "CRE.G3.CHRIST.HONESTY.d": "desire to exercise honesty in day-to-day life",
+  "CRE.G3.CHRIST.THANKFULNESS.a": "list ways they thank God in day-to-day life",
+  "CRE.G3.CHRIST.THANKFULNESS.b": "state five reasons for thanking God for their family, friends, and teachers",
+  "CRE.G3.CHRIST.THANKFULNESS.c": "desire to thank God in day-to-day life",
+  "CRE.G3.CHRIST.FORGIVENESS.a": "retell the story of the unforgiving servant",
+  "CRE.G3.CHRIST.FORGIVENESS.b": "dramatise the story of the unforgiving servant",
+  "CRE.G3.CHRIST.FORGIVENESS.c": "desire to forgive others in their day-to-day lives",
+  "CRE.G3.CHRIST.TRUST.a": "identify people they can trust for their own safety",
+  "CRE.G3.CHRIST.TRUST.b": "mention three people to report to when molested or touched inappropriately",
+  "CRE.G3.CHRIST.TRUST.c": "stay safe by reporting people who molest them",
+  "CRE.G3.CHRIST.RESPONSIBILITY.a": "practise cleanliness at home and school",
+  "CRE.G3.CHRIST.RESPONSIBILITY.b": "demonstrate responsibility by correcting those in the wrong",
+  "CRE.G3.CHRIST.RESPONSIBILITY.c": "carry out chores at home without expecting a reward",
+  "CRE.G3.CHRIST.RESPONSIBILITY.d": "desire to be responsible in day-to-day life",
+  "CRE.G3.THE_CH.PRAYER.a": "recite the Lord’s prayer in Mathew 6:9-13",
+  "CRE.G3.THE_CH.PRAYER.b": "use appropriate postures during prayer",
+  "CRE.G3.THE_CH.PRAYER.c": "desire to show respect to God when praying",
+  "CRE.G3.THE_CH.THE_HOLY_SPIRIT.a": "retell the coming of the Holy Spirit on the day of Pentecost",
+  "CRE.G3.THE_CH.THE_HOLY_SPIRIT.b": "identify the work of the Holy Spirit in the life of a Christian",
+  "CRE.G3.THE_CH.THE_HOLY_SPIRIT.c": "identify five fruit of the Holy Spirit",
+  "CRE.G3.THE_CH.THE_HOLY_SPIRIT.d": "desire to be led by the Holy Spirit as they make decisions in life"
+ },
+ "skills": {
+  "CRES.G3.CREATI.SELF_AWARENESS.GENDER": {
+   "forms": [
+    "what Genesis 1:27 says",
+    "who created male and female",
+    "boy or girl"
+   ],
+   "mastery": "Says that God created people male and female in his own image (Genesis 1:27), names himself or herself as a boy (male) or a girl (female), and says both boys and girls are made by God and equally loved. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.CREATI.SELF_AWARENESS.COPE_FEELINGS": {
+   "forms": [
+    "what to do when sad",
+    "good or bad way to cope",
+    "which feeling"
+   ],
+   "mastery": "Describes good ways of coping with feelings: when happy, share joy, sing, thank God; when sad, angry or afraid, pray, talk to a parent, teacher or friend, sing, rest, play; and knows that hitting, breaking things or hiding the feeling forever do not help. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G3.RUBRIC.1.1, CRE.G3.RUBRIC.1.2, CRE.G3.RUBRIC.1.3, CRE.G3.RUBRIC.1.4, CRE.G3.RUBRIC.1.5), never as a phone question: c) make the right choices guided by the word of God."
+  },
+  "CRES.G3.CREATI.MY_FAMILY.FAMILY_MEMBERS": {
+   "forms": [
+    "nuclear or extended",
+    "who is this to you",
+    "family tree: who goes here"
+   ],
+   "mastery": "Names members of the nuclear family (father, mother, brothers, sisters) and the extended family (grandparents, uncles, aunts, cousins), says how each is related (my mother's mother is my grandmother; my father's brother is my uncle), and reads a simple family tree. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G3.RUBRIC.1.1, CRE.G3.RUBRIC.1.2, CRE.G3.RUBRIC.1.3, CRE.G3.RUBRIC.1.4, CRE.G3.RUBRIC.1.5), never as a phone question: b) draw the family tree to understand family relationships."
+  },
+  "CRES.G3.CREATI.ADAM_AND_EVE.FIRST_PEOPLE": {
+   "forms": [
+    "who made Adam and how",
+    "what God told them",
+    "what Adam and Eve did"
+   ],
+   "mastery": "Says God formed Adam from the dust of the ground and breathed life into him (Genesis 2:7), made Eve from Adam's rib (Genesis 2:21-22), told them not to eat from the tree of the knowledge of good and evil (Genesis 2:16-17), and that the serpent tempted Eve, she ate and gave to Adam, and he ate (Genesis 3:6). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.CREATI.ADAM_AND_EVE.DISOBEY_RESULTS": {
+   "forms": [
+    "what happened after they ate",
+    "true or false",
+    "which is a result"
+   ],
+   "mastery": "States results of the disobedience: they knew they were naked and hid from God, the ground was cursed so man would work hard (sweat) for food (Genesis 3:17-19), pain for the woman in childbirth (3:16), people would return to dust (die) (3:19), and they were sent out of the Garden of Eden (3:23). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.BIBLE_WORD": {
+   "forms": [
+    "how is the Bible different",
+    "what 2 Timothy 3:16 says",
+    "Bible or another book"
+   ],
+   "mastery": "Says the Bible is different from other books because all Scripture is God-breathed (inspired by God) and useful for teaching and correcting (2 Timothy 3:16), it is God's word that guides Christians, and it is handled and read with respect; other books are written by people for learning or stories. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.NEW_TESTAMENT": {
+   "forms": [
+    "how many books in the New Testament",
+    "name the Gospels in order",
+    "is this a Gospel"
+   ],
+   "mastery": "States that the New Testament has 27 books (and the Old Testament 39, 66 in all) and names the four Gospels in order: Matthew, Mark, Luke and John; knows they tell of the life of Jesus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.MOSES_BUSH": {
+   "forms": [
+    "what happened next",
+    "what God told Moses",
+    "a lesson from the story"
+   ],
+   "mastery": "Retells Exodus 3:1-6: Moses looked after the flock of Jethro his father-in-law near Horeb, the mountain of God; he saw a bush on fire that did not burn up; God called \"Moses! Moses!\" and he answered \"Here I am\"; God told him to take off his sandals because the place was holy ground; Moses hid his face. Lessons: God speaks to people, we respect holy places, we obey God, we answer when God calls. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH.JONAH": {
+   "forms": [
+    "where God sent Jonah",
+    "what happened next",
+    "a result of his disobedience"
+   ],
+   "mastery": "Narrates Jonah 1:1-4, 15, 17 and 2:10: God told Jonah to go to Nineveh; Jonah ran away and boarded a ship to Tarshish; God sent a great storm; the sailors threw Jonah into the sea and it became calm; a big fish swallowed him and he was inside three days and three nights; the fish spat him out on dry land. Results: the storm, being thrown into the sea, being swallowed by the fish. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.NAAMAN": {
+   "forms": [
+    "who told Naaman about the prophet",
+    "what Elisha told him",
+    "a lesson from the story"
+   ],
+   "mastery": "Retells 2 Kings 5:1-14: Naaman, commander of the army of the king of Aram (Syria), had leprosy; a young Israelite servant girl said a prophet in Samaria could heal him; Elisha sent a messenger telling him to wash seven times in the Jordan; Naaman was angry but his servants persuaded him; he washed and his skin became clean like a young boy's. Lessons: God heals, obey God's word, be humble, even a child can help others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.THREE_HEBREWS": {
+   "forms": [
+    "why they were thrown into the fire",
+    "what the king saw",
+    "a lesson"
+   ],
+   "mastery": "Narrates Daniel 3: King Nebuchadnezzar made a golden image and ordered all to bow; Shadrach, Meshach and Abednego refused because they worshipped only God; they were thrown into a blazing furnace; the king saw four men walking in the fire; they came out unharmed, not even smelling of smoke; the king praised their God. Lessons: worship only God, God protects those who trust him, be brave to do right. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.ELISHA_BOYS": {
+   "forms": [
+    "what the boys said",
+    "what happened",
+    "a lesson"
+   ],
+   "mastery": "Retells 2 Kings 2:23-24: as Elisha went up to Bethel, some boys came out of the town and jeered at him, \"Get out of here, baldhead!\"; Elisha called down a curse in the name of the Lord, and two bears came out of the woods and mauled forty-two of the boys. Lessons: respect the elderly, respect God's servants, do not mock or call people names, our words have results. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.WISE_MEN": {
+   "forms": [
+    "what led the wise men",
+    "where Jesus grew up",
+    "what happened next"
+   ],
+   "mastery": "Retells Matthew 2:1-11: wise men from the East saw a star and came to Jerusalem asking where the king of the Jews was born; they were sent to Bethlehem; the star led them to the house where Jesus was; they bowed, worshipped and gave gold, frankincense and myrrh; warned in a dream, they went home another way. Names Nazareth as Jesus' hometown (Matthew 2:23; Luke 2:39), though he was born in Bethlehem. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_LI.THE_GOOD_SAMARITAN.GOOD_SAMARITAN": {
+   "forms": [
+    "who passed by",
+    "what the Samaritan did",
+    "a lesson"
+   ],
+   "mastery": "Narrates Luke 10:30-37: a man going down from Jerusalem to Jericho was attacked by robbers and left half dead; a priest passed by on the other side, then a Levite; a Samaritan took pity, bandaged his wounds with oil and wine, put him on his own donkey, took him to an inn and paid the innkeeper two silver coins. Lessons: help people in need, love your neighbour, be kind to everyone, even people different from us. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.LOAVES_FISH": {
+   "forms": [
+    "what the boy had",
+    "what Jesus did",
+    "how much was left"
+   ],
+   "mastery": "Retells John 6:1-14: a large crowd followed Jesus; Andrew found a boy with five small barley loaves and two small fish; Jesus had the people sit down, gave thanks and shared the food; about five thousand men ate as much as they wanted; the disciples gathered twelve baskets of leftovers. Lessons: share what we have, God provides, give thanks before eating, do not waste food. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.WALKS_ON_WATER": {
+   "forms": [
+    "what the disciples thought they saw",
+    "what happened to Peter",
+    "a lesson"
+   ],
+   "mastery": "Narrates Matthew 14:22-33: the disciples were in a boat far from land, battered by waves; Jesus came walking on the lake; they were terrified and thought he was a ghost; he said \"Take courage! It is I. Do not be afraid\"; Peter walked on the water to him but, seeing the wind, was afraid and began to sink and cried \"Lord, save me!\"; Jesus caught him; the wind stopped and they worshipped him. Lessons: have faith, call on Jesus when afraid, Jesus has power over nature. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.JAIRUS": {
+   "forms": [
+    "what the messengers said",
+    "what Jesus said and did",
+    "a lesson"
+   ],
+   "mastery": "Retells Mark 5:35-43: messengers told Jairus his daughter had died; Jesus said \"Don't be afraid; just believe\"; he took Peter, James and John; people laughed when he said she was asleep; he took her hand and said \"Talitha koum\" (Little girl, I say to you, get up); she got up and walked; she was twelve years old; he told them to give her something to eat. Lessons: have faith, do not give up, Jesus has power over life and death, Jesus cares for children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_LI.EASTER.EASTER": {
+   "forms": [
+    "why Christians celebrate Easter",
+    "what happened on Good Friday or Easter Sunday",
+    "an Easter activity"
+   ],
+   "mastery": "Says Christians celebrate Easter to remember the death of Jesus on Good Friday and his rising from the dead on Easter Sunday (Matthew 28:1-6: the women found the tomb empty and the angel said \"He is not here; he has risen\"), and names Easter events and activities: Palm Sunday, Good Friday services, Easter Sunday services, singing, reading the Bible, prayers, a public holiday with family. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.CHRIST.HONESTY.ANANIAS": {
+   "forms": [
+    "what Ananias and Sapphira did",
+    "honest or dishonest",
+    "why respect property"
+   ],
+   "mastery": "Narrates Acts 5:1-11: Ananias and his wife Sapphira sold land, kept back part of the money and brought the rest to the apostles, pretending it was all; Peter said they had lied to God, not only to people; both died. Explains why we respect other people's property: it belongs to them, taking it is stealing, God wants honesty, and others trust us. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (the strand's rubric in the printed KICD design; not in this file), never as a phone question: b) practise honesty by taking offerings given by parents to church."
+  },
+  "CRES.G3.CHRIST.THANKFULNESS.THANK_GOD": {
+   "forms": [
+    "a way of thanking God",
+    "a reason to thank God for this person",
+    "what Psalm 136:1 says"
+   ],
+   "mastery": "Lists ways of thanking God (praying, singing praise, giving offerings, saying grace before meals, helping others, caring for creation) and reasons to thank God for family (they love and feed us), friends (they play with and help us) and teachers (they teach and guide us); says Psalm 136:1: give thanks to the Lord, for he is good; his love endures forever. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.CHRIST.FORGIVENESS.UNFORGIVING_SERVANT": {
+   "forms": [
+    "how many times to forgive",
+    "what the servant did",
+    "what the king did"
+   ],
+   "mastery": "Retells Matthew 18:21-35: Peter asked if he should forgive seven times and Jesus said seventy-seven times; a servant owed the king a huge debt, begged, and the king forgave all of it; the same servant grabbed a fellow servant who owed him a little, refused to forgive and had him thrown into prison; the king was angry and punished the unforgiving servant. Lesson: forgive others as God forgives us. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (the strand's rubric in the printed KICD design; not in this file), never as a phone question: b) dramatise the story of the unforgiving servant."
+  },
+  "CRES.G3.CHRIST.TRUST.TRUSTED_ADULTS": {
+   "forms": [
+    "who can you trust",
+    "whom would you tell",
+    "what to do if someone touches you wrongly"
+   ],
+   "mastery": "Names people a child can trust for safety (parents or guardians, the class teacher, the head teacher, a pastor, a police officer, a nurse) and three people to report to if anyone touches them in a way that is wrong or asks them to keep a secret touch (a parent or guardian, a teacher, the head teacher, the police, Childline 116); knows it is never the child's fault and that you keep telling until someone helps. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (the strand's rubric in the printed KICD design; not in this file), never as a phone question: c) stay safe by reporting people who molest them."
+  },
+  "CRES.G3.CHRIST.RESPONSIBILITY.CHORES": {
+   "forms": [
+    "why do chores without reward",
+    "responsible or not",
+    "name a chore"
+   ],
+   "mastery": "Names chores a child does at home (sweeping, washing utensils, fetching water, making the bed, feeding animals, caring for younger siblings) and says why a responsible child does them without expecting a reward: helping is part of being a family, it pleases God (Colossians 3:23: work as for the Lord), and it shows love; also says keeping clean and correcting wrong kindly are responsible acts. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (the strand's rubric in the printed KICD design; not in this file), never as a phone question: a) practise cleanliness at home and school; b) demonstrate responsibility by correcting those in the wrong."
+  },
+  "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER": {
+   "forms": [
+    "what comes next in the Lord's Prayer",
+    "a respectful posture",
+    "who taught the prayer"
+   ],
+   "mastery": "Knows that Jesus taught the Lord's Prayer (Matthew 6:9-13), puts its lines in order (Our Father in heaven, hallowed be your name; your kingdom come, your will be done; give us today our daily bread; forgive us our debts as we forgive our debtors; lead us not into temptation but deliver us from the evil one), and names respectful postures Christians use (kneeling, standing, bowing the head, closing the eyes, folding the hands), all ways of respecting God. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (the strand's rubric in the printed KICD design; not in this file), never as a phone question: a) recite the Lord’s prayer in Mathew 6:9-13."
+  },
+  "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST": {
+   "forms": [
+    "what happened at Pentecost",
+    "a work of the Holy Spirit",
+    "what the disciples saw and heard"
+   ],
+   "mastery": "Retells Acts 2:1-4: on the day of Pentecost the disciples were together in one place; a sound like a violent wind came from heaven; what looked like tongues of fire rested on each of them; they were filled with the Holy Spirit and spoke in other languages. Identifies the work of the Holy Spirit: he helps, comforts, guides, teaches, gives strength and helps Christians pray. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G3.THE_CH.THE_HOLY_SPIRIT.FRUIT_SPIRIT": {
+   "forms": [
+    "is this a fruit of the Spirit",
+    "which fruit is shown in this story",
+    "odd one out"
+   ],
+   "mastery": "Names at least five of the fruit of the Spirit (Galatians 5:22-23: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control), knows they are ways of behaving, not fruits we eat, and spots them in everyday actions (sharing is kindness, waiting your turn is patience). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.RESOUR.ANIMALS",
+ "title": "Animals",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS",
+   "key_step": "The child explains what domestic animals give and do for people and names ways of caring for them: food, water, shelter, treatment, kindness.",
+   "floor": {
+    "prerequisite": "Matches animal foods to animals.",
+    "question": "Which animal gives us eggs?",
+    "answer": "A hen"
+   },
+   "representations": [
+    "pictures of a cow, donkey, dog, cat, hen, sheep",
+    "an animal-use chart",
+    "pictures of a clean and a dirty shelter"
+   ],
+   "steps": [
+    "Name domestic animals.",
+    "Say what each gives or does.",
+    "Name ways of caring for them.",
+    "Say what is cruel and why."
+   ],
+   "contexts": [
+    "a donkey cart on the road",
+    "a hen house at home",
+    "a dairy cow"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a donkey with a very big load."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the load.",
+     "say": "Is this caring for the donkey?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, it is too heavy."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: right load, rest, water."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS.M_E3_ANI_FOOD_ONLY",
+     "listen_for": [
+      "To eat it"
+     ],
+     "ask": "Why do some families keep a donkey?",
+     "repair": "Make a chart of animals and their uses: donkey carries, dog guards, cat catches rats, ox ploughs."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS.M_E3_ANI_BEAT_WORK",
+     "listen_for": [
+      "Beat it so it moves"
+     ],
+     "ask": "A donkey stops because its load is too heavy. What should be done?",
+     "repair": "Discuss how the animal feels. Fair treatment: right load, rest, water."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS.M_E3_ANI_WATER_RAIN",
+     "listen_for": [
+      "No, it drinks rain"
+     ],
+     "ask": "Does a cow need to be given water every day?",
+     "repair": "Compare with people: we drink every day. Show a water trough."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS.M_E3_ANI_SICK_WAIT",
+     "listen_for": [
+      "Wait, it will get better"
+     ],
+     "ask": "A goat stops eating and looks weak. What should the family do?",
+     "repair": "Name the vet as the doctor for animals. A sick animal can die or spread disease."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one use of a dog.",
+     "answer": "Guarding the home",
+     "shows": "importance"
+    },
+    {
+     "question": "Name one way to care for a cow.",
+     "answer": "Give it water (food, a clean shelter)",
+     "shows": "care"
+    }
+   ]
+  }
+ ]
+}

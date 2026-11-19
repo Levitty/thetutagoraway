@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G3.CREATI.SELF_AWARENESS",
+ "title": "Self-Awareness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Gender is taught as Genesis 1:27 states it, kindly, without comparing boys and girls; a child who is sad or upset at home is listened to privately (FAITH: teacher of the school's tradition to confirm wording).",
+ "skills": [
+  {
+   "skill": "CRES.G3.CREATI.SELF_AWARENESS.GENDER",
+   "key_step": "The child says God created people male and female in his image (Genesis 1:27), and both are equally loved.",
+   "floor": {
+    "prerequisite": "Knows God created everything.",
+    "question": "Who created the sun and the moon?",
+    "answer": "God"
+   },
+   "representations": [
+    "Genesis 1:27 written large",
+    "pictures of boys and girls doing many activities",
+    "a mirror"
+   ],
+   "steps": [
+    "Read Genesis 1:27 together.",
+    "Say \"God made me a boy\" or \"a girl\".",
+    "Say both are in God's image.",
+    "Say both are loved equally."
+   ],
+   "contexts": [
+    "a class of boys and girls",
+    "a family with sons and daughters",
+    "a newborn baby"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Genesis 1:27: male and female he created them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"male and female\".",
+     "say": "Who created boys and girls?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: God made me, God loves me."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.GENDER.M_C3_GEN_BOYS_BETTER",
+     "listen_for": [
+      "Only boys"
+     ],
+     "ask": "Whom did God create in his image, according to Genesis 1:27?",
+     "repair": "Read Genesis 1:27 slowly: male and female he created them. Both in God's image."
+    },
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.GENDER.M_C3_GEN_PEOPLE_MADE_SELVES",
+     "listen_for": [
+      "Parents choose"
+     ],
+     "ask": "Who created people male and female?",
+     "repair": "Link Genesis 1:27 and Psalm 139:13: God forms each child."
+    },
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.GENDER.M_C3_GEN_ACTIVITIES",
+     "listen_for": [
+      "No, football is for boys"
+     ],
+     "ask": "Wanjiru plays football. Is she still a girl?",
+     "repair": "List activities both boys and girls do. Being a boy or girl is how God made you, not what you play."
+    },
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.GENDER.M_C3_GEN_IMAGE_LOOKS",
+     "listen_for": [
+      "We look exactly like God"
+     ],
+     "ask": "What does \"made in God's image\" teach us?",
+     "repair": "Talk about a child \"taking after\" a parent in kindness, not only looks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "According to Genesis 1:27, who created male and female?",
+     "answer": "God",
+     "shows": "source"
+    },
+    {
+     "question": "Does God love boys more than girls?",
+     "answer": "No, equally",
+     "shows": "meaning"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G3.CREATI.SELF_AWARENESS.COPE_FEELINGS",
+   "key_step": "The child describes good ways of coping with happy and sad feelings: pray, share, talk to a trusted adult, calm down.",
+   "floor": {
+    "prerequisite": "Knows himself or herself as God's creation.",
+    "question": "Who made you?",
+    "answer": "God"
+   },
+   "representations": [
+    "feeling-face cards",
+    "situation cards",
+    "a calm-down poster"
+   ],
+   "steps": [
+    "Name the feeling in the story.",
+    "Say a good way to cope.",
+    "Say a way that does not help.",
+    "Act out the good way."
+   ],
+   "contexts": [
+    "losing a game",
+    "a pet dies",
+    "a happy birthday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two columns: helps, does not help."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"hit your friend\".",
+     "say": "Does this help when you are angry?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no and give a better way."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: pray, talk, calm down."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.COPE_FEELINGS.M_C3_COPE_HIDE",
+     "listen_for": [
+      "Keep it inside and tell nobody"
+     ],
+     "ask": "You feel very sad. What can you do?",
+     "repair": "Role-play telling a trusted adult. Say: sharing a sad feeling helps."
+    },
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.COPE_FEELINGS.M_C3_COPE_HIT",
+     "listen_for": [
+      "Hit him"
+     ],
+     "ask": "A friend takes your pencil and you feel angry. What should you do?",
+     "repair": "Practise calm steps: breathe, count, speak, get help."
+    },
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.COPE_FEELINGS.M_C3_COPE_HAPPY_SHOW",
+     "listen_for": [
+      "Laugh at those who failed"
+     ],
+     "ask": "You got the best marks. What is a good way to show you are happy?",
+     "repair": "Contrast two pictures: a child laughing at others and a child thanking God and helping."
+    },
+    {
+     "code": "CRES.G3.CREATI.SELF_AWARENESS.COPE_FEELINGS.M_C3_COPE_PRAY_NOT",
+     "listen_for": [
+      "No, God is busy"
+     ],
+     "ask": "Can a child pray to God when sad about a small thing?",
+     "repair": "Read 1 Peter 5:7 (cast all your anxiety on him) in simple words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a good way to cope when sad.",
+     "answer": "Pray (talk to a parent or teacher)",
+     "shows": "coping"
+    },
+    {
+     "question": "Is hitting a good way to deal with anger?",
+     "answer": "No",
+     "shows": "coping"
+    }
+   ]
+  }
+ ]
+}

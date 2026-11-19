@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G3.RESOUR.PLANTS",
+ "title": "Plants",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Children never taste an unknown plant, berry or mushroom, even to test it (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY",
+   "key_step": "The child names safety measures when handling plants: do not eat unknown plants, use gloves or tools for thorns and nettles, wash hands, tell an adult.",
+   "floor": {
+    "prerequisite": "Knows parts of a plant.",
+    "question": "Which part of a plant has thorns?",
+    "answer": "The stem (branches)"
+   },
+   "representations": [
+    "pictures of thorny and stinging plants",
+    "gloves and garden tools",
+    "a \"never taste\" rule card"
+   ],
+   "steps": [
+    "Name plants that can hurt us.",
+    "Say what to use to handle them.",
+    "Say the rule about unknown berries.",
+    "Wash hands after the garden."
+   ],
+   "contexts": [
+    "weeding the school garden",
+    "a nature walk",
+    "playing near a hedge"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bush with red berries and a child reaching."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the berries.",
+     "say": "Should the child eat them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, ask an adult."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: never taste unknown plants."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY.M_E3_PLT_BERRY_TASTE",
+     "listen_for": [
+      "Taste one to check"
+     ],
+     "ask": "You find red berries on a bush. What should you do?",
+     "repair": "Show pictures of a safe and a poisonous berry that look alike. Rule: never taste, ask an adult."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY.M_E3_PLT_BRIGHT_SAFE",
+     "listen_for": [
+      "Yes, it smells nice"
+     ],
+     "ask": "A flower smells sweet. Is it safe to eat?",
+     "repair": "Name a pretty but poisonous plant grown near homes. Looks and smell do not tell us."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY.M_E3_PLT_NETTLE_HANDS",
+     "listen_for": [
+      "Bare hands, quickly"
+     ],
+     "ask": "You need to pull out stinging nettle in the garden. What do you use?",
+     "repair": "Show gloves and a jembe. Practise pulling weeds with gloves only."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY.M_E3_PLT_HANDS_WASH",
+     "listen_for": [
+      "Eat, plants are clean"
+     ],
+     "ask": "You have weeded the garden. What do you do before eating?",
+     "repair": "Show the soil and sap left on hands. Some plants can irritate eyes and mouths."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you wear to handle stinging nettle?",
+     "answer": "Gloves",
+     "shows": "safety measure"
+    },
+    {
+     "question": "You find a strange mushroom. Do you eat it?",
+     "answer": "No, ask an adult",
+     "shows": "safety rule"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G3.RESOUR.PLANTS.EDIBLE",
+   "key_step": "The child sorts plants in the environment into edible and non-edible, and says which part of an edible plant we eat.",
+   "floor": {
+    "prerequisite": "Knows the safety rule for unknown plants.",
+    "question": "Can you eat a berry you do not know?",
+    "answer": "No, ask an adult first"
+   },
+   "representations": [
+    "real plants or pictures",
+    "two baskets: edible and non-edible",
+    "a drawing of a maize plant"
+   ],
+   "steps": [
+    "Walk and name plants.",
+    "Sort them into edible and non-edible.",
+    "Say which part we eat.",
+    "Plan what to grow in a kitchen garden."
+   ],
+   "contexts": [
+    "a kitchen garden at home",
+    "the school compound",
+    "the market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw sukuma, grass and a rose."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the grass.",
+     "say": "Can people eat this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, it is for cows."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write edible or not edible under each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.EDIBLE.M_E3_EDI_ANIMAL_FOOD",
+     "listen_for": [
+      "Yes, cows eat it"
+     ],
+     "ask": "Cows eat grass. Is grass edible for people?",
+     "repair": "Show cow food and people food. People cannot digest grass. Sort pictures."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.EDIBLE.M_E3_EDI_GREEN_ALL",
+     "listen_for": [
+      "Yes, green leaves are vegetables"
+     ],
+     "ask": "Is every green leafy plant a vegetable?",
+     "repair": "Put sukuma, spinach and a weed side by side. Only some leaves are food."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.EDIBLE.M_E3_EDI_WHOLE_PLANT",
+     "listen_for": [
+      "Yes, every part is food"
+     ],
+     "ask": "We eat cassava roots. Can we eat cassava leaves raw and the stem?",
+     "repair": "Draw a maize plant: we eat the grains, not the stalk. A mango: the fruit, not the seed or bark."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.PLANTS.EDIBLE.M_E3_EDI_FLOWER_FOOD",
+     "listen_for": [
+      "Yes, flowers are part of plants we eat"
+     ],
+     "ask": "Is a rose flower food?",
+     "repair": "Sort a basket: food plants and plants for beauty or timber."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is sukuma wiki edible?",
+     "answer": "Yes",
+     "shows": "classifies"
+    },
+    {
+     "question": "Which part of maize do we eat?",
+     "answer": "The grains (seeds)",
+     "shows": "part eaten"
+    }
+   ]
+  }
+ ]
+}

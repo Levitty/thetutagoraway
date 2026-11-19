@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST",
+ "title": "Baptism of Jesus Christ",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "How baptism is done differs among churches; only the place and the person who baptised Jesus are asked (FAITH).",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+   "key_step": "The child names the River Jordan and John the Baptist, and says John was humble (Matthew 3:13-15).",
+   "floor": {
+    "prerequisite": "Retells a short Bible story.",
+    "question": "What happened at Jesus' birth?",
+    "answer": "He was born in Bethlehem and laid in a manger"
+   },
+   "representations": [
+    "a river picture",
+    "name card John the Baptist",
+    "picture cards of Matthew 3"
+   ],
+   "steps": [
+    "Share baptisms seen at church.",
+    "Picture-read Matthew 3:13-15.",
+    "Name the place and the person.",
+    "Say what John said."
+   ],
+   "contexts": [
+    "a baptism at church",
+    "a river near home",
+    "being humble at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a river with two people."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the river.",
+     "say": "What is this river called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the Jordan."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: River Jordan, John the Baptist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_PETER",
+     "listen_for": [
+      "Peter"
+     ],
+     "ask": "Who baptised Jesus?",
+     "repair": "Show a name card \"John the Baptist\" by a river picture."
+    },
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_CHURCH",
+     "listen_for": [
+      "In a church"
+     ],
+     "ask": "Where was Jesus baptised?",
+     "repair": "Show a river picture. Read Matthew 3:13."
+    },
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_LAKE",
+     "listen_for": [
+      "Lake Victoria"
+     ],
+     "ask": "Which river?",
+     "repair": "Say \"Jordan\" with a river action."
+    },
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_JOHN_PROUD",
+     "listen_for": [
+      "I am greater than you"
+     ],
+     "ask": "What did John say when Jesus came?",
+     "repair": "Read Matthew 3:14: John was humble."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was Jesus baptised?",
+     "answer": "In the River Jordan",
+     "shows": "place"
+    },
+    {
+     "question": "Who baptised Jesus?",
+     "answer": "John the Baptist",
+     "shows": "person"
+    }
+   ]
+  }
+ ]
+}

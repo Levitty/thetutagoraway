@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T",
+ "title": "Bible Story; Elisha and the Boys",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the lesson (respect for the elderly and for God's servants), not fear: no child is told that bears will come for rude children (FAITH: teacher to confirm wording).",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.ELISHA_BOYS",
+   "key_step": "The child retells Elisha and the boys (2 Kings 2:23-24) and names lessons: respect the elderly and God's servants, do not mock.",
+   "floor": {
+    "prerequisite": "Knows reasons for obeying elders.",
+    "question": "Why should we obey our teachers?",
+    "answer": "They guide and care for us"
+   },
+   "representations": [
+    "picture cards of 2 Kings 2:23-24",
+    "a respect chart",
+    "role-play of greeting elders"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Retell in order.",
+    "Say what the boys did wrong.",
+    "Name four lessons."
+   ],
+   "contexts": [
+    "greeting a grandparent",
+    "an old man walking slowly on the road",
+    "a pastor visiting school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Get out of here, baldhead!\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "Was this respectful?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons: respect elders, respect God's servants, no mocking."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.ELISHA_BOYS.M_C3_ELI_NAMES_FUN",
+     "listen_for": [
+      "Yes, it was just fun"
+     ],
+     "ask": "The boys called Elisha \"baldhead\". Was that right?",
+     "repair": "Ask how an old person feels when laughed at. Read the lesson: respect the elderly."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.ELISHA_BOYS.M_C3_ELI_NUMBER",
+     "listen_for": [
+      "One"
+     ],
+     "ask": "How many bears came out of the woods?",
+     "repair": "Read 2 Kings 2:24 and draw two bears and the number 42."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.ELISHA_BOYS.M_C3_ELI_BALD_BAD",
+     "listen_for": [
+      "Yes, it looks funny"
+     ],
+     "ask": "Is being bald a reason to laugh at someone?",
+     "repair": "Talk about how God made each person. Link with Psalm 139:14."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T.ELISHA_BOYS.M_C3_ELI_LESSON_BEARS",
+     "listen_for": [
+      "Beware of bears"
+     ],
+     "ask": "What is the main lesson of Elisha and the boys?",
+     "repair": "Ask: what did the boys do wrong? The lesson is about that."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the boys call Elisha?",
+     "answer": "Baldhead",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "Respect the elderly",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

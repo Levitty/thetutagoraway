@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.THANKFULNESS",
+ "title": "Thankfulness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS",
+   "key_step": "The child lists why we thank others and when, with 1 Thessalonians 5:18.",
+   "floor": {
+    "prerequisite": "Knows ways of thanking parents.",
+    "question": "How can you thank your parents?",
+    "answer": "Say thank you (help them)"
+   },
+   "representations": [
+    "1 Thessalonians 5:18 on flashcards",
+    "card-making materials",
+    "role-play situations"
+   ],
+   "steps": [
+    "Read the verse.",
+    "List reasons to thank others.",
+    "Say when we thank.",
+    "Make a thank-you card."
+   ],
+   "contexts": [
+    "receiving a gift",
+    "a friend helping with homework",
+    "lunch served at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 1 Thessalonians 5:18."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"give thanks\".",
+     "say": "Why do we thank others?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to give a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "List reasons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_BIG_GIFTS",
+     "listen_for": [
+      "No, it is small"
+     ],
+     "ask": "Should you say thank you when a friend lends you a pencil?",
+     "repair": "Practise thanking for small things all day."
+    },
+    {
+     "code": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_PARENTS_DUTY",
+     "listen_for": [
+      "No, it is her job"
+     ],
+     "ask": "Should you thank your mother for cooking?",
+     "repair": "Ask how mother feels when thanked."
+    },
+    {
+     "code": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_WORDS_ONLY",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name another way to thank someone apart from words.",
+     "repair": "Make thank-you cards."
+    },
+    {
+     "code": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_ONLY_GOD",
+     "listen_for": [
+      "No, only God"
+     ],
+     "ask": "Should we thank people as well as God?",
+     "repair": "Read 1 Thessalonians 5:18 and role-play thanking a friend."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a reason for thanking others.",
+     "answer": "It shows we appreciate them",
+     "shows": "importance"
+    },
+    {
+     "question": "When should you say thank you?",
+     "answer": "When helped or given something",
+     "shows": "importance"
+    }
+   ]
+  }
+ ]
+}

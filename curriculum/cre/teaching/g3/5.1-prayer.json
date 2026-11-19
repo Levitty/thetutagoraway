@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_CH.PRAYER",
+ "title": "Prayer",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Christians pray in different postures; all are taught as ways of showing respect to God, none as the only right one (FAITH).",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER",
+   "key_step": "The child puts the Lord's Prayer in order, says Jesus taught it, and names respectful prayer postures.",
+   "floor": {
+    "prerequisite": "Knows the first lines of the Lord's Prayer.",
+    "question": "Say the first line of the Lord's Prayer.",
+    "answer": "Our Father in heaven, hallowed be your name"
+   },
+   "representations": [
+    "the Lord's Prayer chart",
+    "line cards on a string",
+    "pictures of prayer postures"
+   ],
+   "steps": [
+    "Read the prayer from the chart.",
+    "Put line cards in order.",
+    "Name respectful postures.",
+    "Pray together."
+   ],
+   "contexts": [
+    "morning assembly prayer",
+    "grace before lunch",
+    "family prayers at night"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the first and last lines with a gap."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which line comes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the next line."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill the prayer in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER.M_C3_PRA_WHO_TAUGHT",
+     "listen_for": [
+      "The pastor"
+     ],
+     "ask": "Who taught the Lord's Prayer?",
+     "repair": "Read Matthew 6:9: \"This, then, is how you should pray.\""
+    },
+    {
+     "code": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER.M_C3_PRA_ORDER",
+     "listen_for": [
+      "Give us today our daily bread"
+     ],
+     "ask": "What are the first words of the Lord's Prayer?",
+     "repair": "Use line cards on a washing line and put them in order."
+    },
+    {
+     "code": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER.M_C3_PRA_ONE_POSTURE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is kneeling the only right way to pray?",
+     "repair": "Show pictures of people praying in different postures. Ask what they share: respect."
+    },
+    {
+     "code": "CRES.G3.THE_CH.PRAYER.LORDS_PRAYER.M_C3_PRA_PLAY_PRAY",
+     "listen_for": [
+      "Keep playing quietly"
+     ],
+     "ask": "The class is praying. What should you do?",
+     "repair": "Practise a short class prayer with a respectful posture."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who taught the Lord's Prayer?",
+     "answer": "Jesus",
+     "shows": "source"
+    },
+    {
+     "question": "Name a respectful posture for prayer.",
+     "answer": "Kneeling (bowing the head, closing the eyes)",
+     "shows": "postures"
+    }
+   ]
+  }
+ ]
+}

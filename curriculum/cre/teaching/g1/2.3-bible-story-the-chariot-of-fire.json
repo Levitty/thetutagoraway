@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_",
+ "title": "Bible Story: The chariot of fire",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+   "key_step": "The child retells Elijah and the chariot of fire (2 Kings 2:1, 11-12) and lists ways to have a good relationship with God.",
+   "floor": {
+    "prerequisite": "Says a short prayer.",
+    "question": "Say a short prayer before eating.",
+    "answer": "Thank you God for this food. Amen"
+   },
+   "representations": [
+    "picture of the chariot of fire",
+    "name cards Elijah and Elisha",
+    "a ways-to-please-God chart"
+   ],
+   "steps": [
+    "Picture-read the passage.",
+    "Retell in order.",
+    "Draw the chariot.",
+    "List ways to please God."
+   ],
+   "contexts": [
+    "family prayers",
+    "Sunday school",
+    "obeying parents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chariot with horses of fire."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chariot.",
+     "say": "Where did Elijah go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say up to heaven."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write three ways to please God."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_DIED",
+     "listen_for": [
+      "He died and was buried"
+     ],
+     "ask": "How did Elijah leave the earth?",
+     "repair": "Read 2 Kings 2:11 with a picture."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_CAR",
+     "listen_for": [
+      "A car"
+     ],
+     "ask": "What came between Elijah and Elisha?",
+     "repair": "Show a picture of a chariot pulled by horses."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_ALONE",
+     "listen_for": [
+      "Nobody"
+     ],
+     "ask": "Who was with Elijah?",
+     "repair": "Use two name cards."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_GOOD_REL",
+     "listen_for": [
+      "Ask God for toys"
+     ],
+     "ask": "Name a way to have a good relationship with God.",
+     "repair": "List: pray, read the Bible, obey, go to Sunday school."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did Elijah go to heaven?",
+     "answer": "In a whirlwind (with a chariot of fire)",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a way to have a good relationship with God.",
+     "answer": "Pray (read the Bible, obey)",
+     "shows": "ways"
+    }
+   ]
+  }
+ ]
+}

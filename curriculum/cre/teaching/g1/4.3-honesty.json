@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.CHRIST.HONESTY",
+ "title": "Honesty",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+   "key_step": "The child states reasons for telling the truth (Ephesians 4:25) and recognises honest acts.",
+   "floor": {
+    "prerequisite": "Says sorry.",
+    "question": "What do you say when you hurt someone?",
+    "answer": "Sorry"
+   },
+   "representations": [
+    "Ephesians 4:25 on a card",
+    "true/lie cards",
+    "a short story"
+   ],
+   "steps": [
+    "Read Ephesians 4:25 simply.",
+    "Say why we tell the truth.",
+    "Sort honest and dishonest acts.",
+    "Practise owning up."
+   ],
+   "contexts": [
+    "spilling milk",
+    "finding money",
+    "a broken toy"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: speak the truth."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a picture of a child blaming another.",
+     "say": "Is this honest?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write reasons to tell the truth."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_FUN_LIE",
+     "listen_for": [
+      "No, it is fun"
+     ],
+     "ask": "Is it a lie to say \"the teacher is coming\" when she is not, for fun?",
+     "repair": "Tell the story of the boy who cried wolf."
+    },
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_PICK",
+     "listen_for": [
+      "Keep it"
+     ],
+     "ask": "You find your friend's eraser. What do you do?",
+     "repair": "Role-play returning it."
+    },
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_BLAME",
+     "listen_for": [
+      "My sister did it"
+     ],
+     "ask": "You spilled the milk. What should you say?",
+     "repair": "Praise owning up with a sticker."
+    },
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_GOD_SEE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Does God know when we lie?",
+     "repair": "Talk about God knowing everything."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a reason for telling the truth.",
+     "answer": "God wants it (people trust us)",
+     "shows": "reasons"
+    },
+    {
+     "question": "You find a friend's pencil. What do you do?",
+     "answer": "Give it back",
+     "shows": "honest act"
+    }
+   ]
+  }
+ ]
+}

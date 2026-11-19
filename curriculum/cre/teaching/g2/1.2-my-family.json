@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G2.CREATI.MY_FAMILY",
+ "title": "My Family",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Families differ: a child who lives with a grandparent or guardian names the people who care for him or her.",
+ "skills": [
+  {
+   "skill": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY",
+   "key_step": "The child names members of the nuclear and extended family and says a family worships and helps together (Acts 10:2).",
+   "floor": {
+    "prerequisite": "Names family members.",
+    "question": "Name a member of your family.",
+    "answer": "My mother (father, brother)"
+   },
+   "representations": [
+    "a family tree",
+    "Acts 10:2 on a card",
+    "drawings of extended family"
+   ],
+   "steps": [
+    "Read Acts 10:2.",
+    "Name members of the extended family.",
+    "Place them on the tree.",
+    "Say how families help each other."
+   ],
+   "contexts": [
+    "a visit to grandparents",
+    "a family gathering",
+    "family prayers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a family tree with a blank for grandparents."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the blank.",
+     "say": "Who goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say grandparents."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write nuclear and extended."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_FRIENDS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is your neighbour part of your extended family?",
+     "repair": "Draw the family tree. Neighbours are not on it, though we love them."
+    },
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_GRAND_NO",
+     "listen_for": [
+      "No, she lives far"
+     ],
+     "ask": "Your grandmother lives in the village. Is she your family?",
+     "repair": "Put grandparents on the tree above parents."
+    },
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_CORNELIUS",
+     "listen_for": [
+      "Nobody"
+     ],
+     "ask": "According to Acts 10:2, who worshipped God with Cornelius?",
+     "repair": "Read Acts 10:2 together."
+    },
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_COUSIN_SIS",
+     "listen_for": [
+      "Sister"
+     ],
+     "ask": "Your uncle's daughter is your...?",
+     "repair": "Trace the line on the tree from uncle to his daughter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a member of the extended family.",
+     "answer": "A grandmother (uncle, cousin)",
+     "shows": "names"
+    },
+    {
+     "question": "Who worshipped God with Cornelius?",
+     "answer": "All his family",
+     "shows": "source"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS",
+   "key_step": "The child states items a family shares and four that should not be shared because they carry germs.",
+   "floor": {
+    "prerequisite": "Knows items shared at home.",
+    "question": "Name something your family shares.",
+    "answer": "Food (a table, chairs)"
+   },
+   "representations": [
+    "real items",
+    "two boxes: share, do not share",
+    "a germ picture"
+   ],
+   "steps": [
+    "Name items at home.",
+    "Sort into share and do not share.",
+    "Say why some are not shared.",
+    "Say how sharing brings unity."
+   ],
+   "contexts": [
+    "supper at home",
+    "getting ready for school",
+    "a boarding school dorm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two columns: share, do not share."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a toothbrush card.",
+     "say": "Which column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say do not share."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill both columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_TOOTHBRUSH",
+     "listen_for": [
+      "Yes, sharing is good"
+     ],
+     "ask": "Should brothers share one toothbrush?",
+     "repair": "Say: some things carry germs from mouth to mouth. Kindness is giving your sibling his own."
+    },
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_RAZOR",
+     "listen_for": [
+      "Yes, if it looks clean"
+     ],
+     "ask": "Can a family share one razor blade?",
+     "repair": "Show the \"never share\" list. Blood can carry diseases."
+    },
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_NOTHING",
+     "listen_for": [
+      "No, each keeps his own"
+     ],
+     "ask": "Should a family share food?",
+     "repair": "Sort into share (food, chairs) and do not share (toothbrush, towel)."
+    },
+    {
+     "code": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_TOWEL",
+     "listen_for": [
+      "Shared, it is washed"
+     ],
+     "ask": "Is a bathing towel shared or not?",
+     "repair": "A towel touches the body and can pass skin infections."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item that should not be shared.",
+     "answer": "A toothbrush (towel, comb, razor)",
+     "shows": "not shared"
+    },
+    {
+     "question": "Name an item a family shares.",
+     "answer": "Food (chairs, water)",
+     "shows": "shared"
+    }
+   ]
+  }
+ ]
+}

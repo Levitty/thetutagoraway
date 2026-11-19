@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G3.SOCIAL.OUR_COMMUNITY",
+ "title": "Our Community",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Strangers and unsafe places are taught calmly, never to frighten. Always name a trusted adult the child can tell (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+   "key_step": "The child sorts places in the community into safe and unsafe and names ways to keep safe, including telling a trusted adult.",
+   "floor": {
+    "prerequisite": "Knows common accidents at school.",
+    "question": "Name one accident that can happen at school.",
+    "answer": "Falling (cuts, burns)"
+   },
+   "representations": [
+    "picture cards of places",
+    "a two-column chart: safe and unsafe",
+    "role-play of saying no"
+   ],
+   "steps": [
+    "Name places in our community.",
+    "Sort them into safe and unsafe.",
+    "Say why a place is unsafe.",
+    "Practise saying no and telling a trusted adult."
+   ],
+   "contexts": [
+    "the walk home from school",
+    "a quarry near the village",
+    "the market on a busy day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road, a river, a school and a quarry."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the quarry.",
+     "say": "Is this a safe place to play?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say unsafe and why."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: unsafe, deep pit, falling rocks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES.M_E3_SAFE_STRANGER_KIND",
+     "listen_for": [
+      "Go with him, he is kind"
+     ],
+     "ask": "A kind stranger offers you sweets and a ride home. What should you do?",
+     "repair": "Role-play saying \"No, thank you\" and walking to a trusted adult. Kind words do not make a stranger safe."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES.M_E3_SAFE_WATER_FUN",
+     "listen_for": [
+      "Yes, if the water is not deep"
+     ],
+     "ask": "Is a dam a safe place to play without an adult?",
+     "repair": "Show a picture of a dam with a hidden deep middle. Rule: no water play without an adult."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES.M_E3_SAFE_WIRE_TOUCH",
+     "listen_for": [
+      "Pick it up and move it"
+     ],
+     "ask": "You see a wire lying on the ground after a storm. What should you do?",
+     "repair": "Say: a fallen wire can kill even when quiet. Stay far, tell an adult to call Kenya Power."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES.M_E3_SAFE_KNOWN_ALWAYS",
+     "listen_for": [
+      "Keep the secret, he is not a stranger"
+     ],
+     "ask": "A neighbour asks you to keep a secret touch from your parents. What should you do?",
+     "repair": "Teach the rule: no secret about touching, from anyone. Name trusted adults at home and school."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a dumping site safe or unsafe for play?",
+     "answer": "Unsafe",
+     "shows": "classifies places"
+    },
+    {
+     "question": "A stranger offers a ride. What do you do?",
+     "answer": "Say no and tell a trusted adult",
+     "shows": "keeps safe"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G3.SOCIAL.OUR_COMMUNITY.ROAD_SIGNS",
+   "key_step": "The child recognises basic road signs (zebra crossing, pedestrian sign, stop sign, traffic lights) and says what to do at each to stay safe.",
+   "floor": {
+    "prerequisite": "Knows features along a road.",
+    "question": "Where should people walk on a road with no pavement?",
+    "answer": "On the side, facing the oncoming cars"
+   },
+   "representations": [
+    "road sign cards",
+    "a chalk road and zebra crossing in the field",
+    "a cardboard traffic light"
+   ],
+   "steps": [
+    "Name each sign.",
+    "Say what it tells drivers and people.",
+    "Practise stop, look right, left, right.",
+    "Cross at the chalk crossing."
+   ],
+   "contexts": [
+    "crossing to school on a main road",
+    "a matatu stage",
+    "a town with traffic lights"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road with a zebra crossing and a car coming."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the car.",
+     "say": "Can we cross now?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say wait until the car stops."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: stop, look, wait, cross."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.ROAD_SIGNS.M_E3_ROAD_ZEBRA_SAFE",
+     "listen_for": [
+      "Cross at once, cars must stop"
+     ],
+     "ask": "You reach a zebra crossing. What do you do?",
+     "repair": "Practise at a chalk crossing: stop, look, wait for cars to stop, then walk."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.ROAD_SIGNS.M_E3_ROAD_GREEN_PEOPLE",
+     "listen_for": [
+      "Yes, green means go"
+     ],
+     "ask": "The traffic light for cars is green. Can you cross?",
+     "repair": "Show both lights: green for cars means cars move. People cross when the walking figure is green."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.ROAD_SIGNS.M_E3_ROAD_LOOK_ONE",
+     "listen_for": [
+      "Only left"
+     ],
+     "ask": "Before crossing a road in Kenya, which way do you look first?",
+     "repair": "Practise \"right, left, right\" aloud at a chalk road. In Kenya cars drive on the left, so the near cars come from the right."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.ROAD_SIGNS.M_E3_ROAD_STOP_PEOPLE",
+     "listen_for": [
+      "Only people walking"
+     ],
+     "ask": "Who must stop at a stop sign?",
+     "repair": "Show the stop sign at a junction from a driver's seat drawing. Drivers stop, people still look before crossing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a zebra crossing show?",
+     "answer": "A place for people to cross",
+     "shows": "sign meaning"
+    },
+    {
+     "question": "Which way do you look first before crossing?",
+     "answer": "Right",
+     "shows": "safe action"
+    }
+   ]
+  }
+ ]
+}

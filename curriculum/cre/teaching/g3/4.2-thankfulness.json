@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.CHRIST.THANKFULNESS",
+ "title": "Thankfulness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.CHRIST.THANKFULNESS.THANK_GOD",
+   "key_step": "The child lists ways of thanking God and reasons for thanking him for family, friends and teachers (Psalm 136:1).",
+   "floor": {
+    "prerequisite": "Knows why we thank others.",
+    "question": "Why do we say thank you?",
+    "answer": "To show we are grateful"
+   },
+   "representations": [
+    "Psalm 136:1 on flashcards",
+    "thank-you cards",
+    "a list of people we are thankful for"
+   ],
+   "steps": [
+    "Say the verse.",
+    "List ways of thanking God.",
+    "Give a reason for each person.",
+    "Make a thank-you card."
+   ],
+   "contexts": [
+    "saying grace at lunch",
+    "a family thanksgiving service",
+    "a teacher's birthday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Psalm 136:1."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"for he is good\".",
+     "say": "Why do we thank God?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say because he is good."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write reasons for family, friends and teachers."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CHRIST.THANKFULNESS.THANK_GOD.M_C3_THK_ONLY_GIFTS",
+     "listen_for": [
+      "Only when we get a gift"
+     ],
+     "ask": "When should we thank God?",
+     "repair": "List everyday things to thank God for: waking up, food, family."
+    },
+    {
+     "code": "CRES.G3.CHRIST.THANKFULNESS.THANK_GOD.M_C3_THK_ONLY_CHURCH",
+     "listen_for": [
+      "There is none, only in church"
+     ],
+     "ask": "Name a way of thanking God at home.",
+     "repair": "Practise saying grace before a snack in class."
+    },
+    {
+     "code": "CRES.G3.CHRIST.THANKFULNESS.THANK_GOD.M_C3_THK_TEACHER_PAID",
+     "listen_for": [
+      "We cannot, they are paid"
+     ],
+     "ask": "Why can we thank God for our teachers?",
+     "repair": "Ask what a teacher did for the child this week."
+    },
+    {
+     "code": "CRES.G3.CHRIST.THANKFULNESS.THANK_GOD.M_C3_THK_PSALM",
+     "listen_for": [
+      "we are good"
+     ],
+     "ask": "Complete Psalm 136:1: Give thanks to the Lord, for...",
+     "repair": "Say the verse together with actions."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way of thanking God.",
+     "answer": "Praying (singing, giving an offering)",
+     "shows": "ways"
+    },
+    {
+     "question": "Give a reason to thank God for your family.",
+     "answer": "They love and care for me",
+     "shows": "reasons"
+    }
+   ]
+  }
+ ]
+}

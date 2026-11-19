@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS",
+ "title": "The Birth of Jesus Christ",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS",
+   "key_step": "The child relates the joy of the shepherds (Luke 2:15-20): they hurried, found Jesus in a manger, told others and praised God.",
+   "floor": {
+    "prerequisite": "Knows the story of Jesus' birth.",
+    "question": "In which town was Jesus born?",
+    "answer": "Bethlehem"
+   },
+   "representations": [
+    "picture cards of Luke 2",
+    "a manger model",
+    "Christmas songs"
+   ],
+   "steps": [
+    "Picture-read Luke 2:15-20.",
+    "Say what the shepherds did.",
+    "Say how they felt.",
+    "Sing a song of praise."
+   ],
+   "contexts": [
+    "a Christmas service",
+    "good news shared at home",
+    "a herder with goats"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hurried, found, told, praised."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"told\".",
+     "say": "Whom did the shepherds tell?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say everyone."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order the four words."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_AFRAID_STAY",
+     "listen_for": [
+      "Stayed in the fields"
+     ],
+     "ask": "What did the shepherds do after the angels left?",
+     "repair": "Read Luke 2:15-16."
+    },
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_GIFTS",
+     "listen_for": [
+      "The shepherds"
+     ],
+     "ask": "Who brought gold to Jesus: the shepherds or the wise men?",
+     "repair": "Two cards: shepherds praised; wise men brought gifts."
+    },
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_KEPT_QUIET",
+     "listen_for": [
+      "Kept it secret"
+     ],
+     "ask": "What did the shepherds do after seeing Jesus?",
+     "repair": "Read Luke 2:17, 20."
+    },
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_PALACE",
+     "listen_for": [
+      "In a palace"
+     ],
+     "ask": "Where did the shepherds find baby Jesus?",
+     "repair": "Show a manger: an animal feeding box."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where did the shepherds find Jesus?",
+     "answer": "In a manger",
+     "shows": "relate"
+    },
+    {
+     "question": "What did they do after seeing him?",
+     "answer": "Told others and praised God",
+     "shows": "joy"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION",
+   "key_step": "The child describes the dedication of baby Jesus (Luke 2:22-38): the temple, two doves, Simeon and Anna.",
+   "floor": {
+    "prerequisite": "Knows the birth of Jesus.",
+    "question": "Who were Jesus' earthly parents?",
+    "answer": "Mary and Joseph"
+   },
+   "representations": [
+    "picture cards of Luke 2:22-38",
+    "two paper doves",
+    "name cards Simeon and Anna"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Say where they went.",
+    "Say what was offered.",
+    "Name Simeon and Anna."
+   ],
+   "contexts": [
+    "a baby dedication in church",
+    "a family thanksgiving",
+    "grandparents blessing a baby"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: temple, two doves, Simeon, Anna."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Simeon.",
+     "say": "What did he do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say held Jesus and praised God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the order of events."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_CHURCH",
+     "listen_for": [
+      "In a church"
+     ],
+     "ask": "Where was baby Jesus presented to the Lord?",
+     "repair": "Show a picture of the temple. Read Luke 2:22."
+    },
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_LAMB",
+     "listen_for": [
+      "A lamb"
+     ],
+     "ask": "What did Mary and Joseph offer?",
+     "repair": "Read Luke 2:24 and draw two doves."
+    },
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_TEACHER",
+     "listen_for": [
+      "Twelve years"
+     ],
+     "ask": "How old was Jesus when he was dedicated?",
+     "repair": "Put two pictures side by side: baby Jesus and Jesus at twelve."
+    },
+    {
+     "code": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_SIMEON",
+     "listen_for": [
+      "King Herod"
+     ],
+     "ask": "Who took baby Jesus in his arms and praised God?",
+     "repair": "Read Luke 2:28 with a name card."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was baby Jesus dedicated?",
+     "answer": "In the temple in Jerusalem",
+     "shows": "describes"
+    },
+    {
+     "question": "What did his parents offer?",
+     "answer": "Two doves (young pigeons)",
+     "shows": "describes"
+    }
+   ]
+  }
+ ]
+}

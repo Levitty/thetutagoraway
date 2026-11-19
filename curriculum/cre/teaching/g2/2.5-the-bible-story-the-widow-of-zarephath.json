@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO",
+ "title": "The Bible Story: The Widow of Zarephath",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH",
+   "key_step": "The child retells the widow of Zarephath (1 Kings 17:7-16) and names lessons: God provides, share, trust God.",
+   "floor": {
+    "prerequisite": "Knows the value of sharing.",
+    "question": "Why should we share?",
+    "answer": "To help others and show love"
+   },
+   "representations": [
+    "a handful of flour and a small oil bottle",
+    "picture cards of 1 Kings 17",
+    "a lessons chart"
+   ],
+   "steps": [
+    "Picture-read the story.",
+    "Show how little she had.",
+    "Retell in order.",
+    "Name two lessons."
+   ],
+   "contexts": [
+    "sharing lunch when you have little",
+    "a dry season",
+    "a family helping a visitor"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a handful of flour, a little oil."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the flour.",
+     "say": "What happened to it after she shared?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it did not run out."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_PLENTY",
+     "listen_for": [
+      "Plenty"
+     ],
+     "ask": "How much food did the widow have?",
+     "repair": "Show a tiny handful of flour. Read 1 Kings 17:12."
+    },
+    {
+     "code": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_SELFISH",
+     "listen_for": [
+      "He was greedy"
+     ],
+     "ask": "Why did Elijah ask for bread first?",
+     "repair": "Read 1 Kings 17:13-14. Elijah gave God's promise."
+    },
+    {
+     "code": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_RAN_OUT",
+     "listen_for": [
+      "They ran out"
+     ],
+     "ask": "What happened to the flour and oil?",
+     "repair": "Read 1 Kings 17:16."
+    },
+    {
+     "code": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_JESUS",
+     "listen_for": [
+      "Jesus"
+     ],
+     "ask": "Which prophet visited the widow?",
+     "repair": "Name the prophet on a card: Elijah."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which prophet visited the widow?",
+     "answer": "Elijah",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "God provides (share, trust God)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

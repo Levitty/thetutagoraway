@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.CHRIST.FORGIVENESS",
+ "title": "Forgiveness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.CHRIST.FORGIVENESS.UNFORGIVING_SERVANT",
+   "key_step": "The child retells the unforgiving servant (Matthew 18:21-35) and says we forgive others as God forgives us.",
+   "floor": {
+    "prerequisite": "Knows the prodigal son.",
+    "question": "What did the father do when his son came home?",
+    "answer": "He forgave and welcomed him"
+   },
+   "representations": [
+    "picture cards of Matthew 18",
+    "a big and a small pile of paper coins",
+    "a role-play script"
+   ],
+   "steps": [
+    "Read Matthew 18:21-22.",
+    "Retell the story in order.",
+    "Compare the two debts.",
+    "Say the lesson."
+   ],
+   "contexts": [
+    "a quarrel at break time",
+    "a sibling who breaks a toy",
+    "saying sorry at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: big debt forgiven, small debt not forgiven."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the small debt.",
+     "say": "What should the servant have done?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say forgive him too."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: forgive as God forgives us."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CHRIST.FORGIVENESS.UNFORGIVING_SERVANT.M_C3_FOR_SEVEN",
+     "listen_for": [
+      "Seven times"
+     ],
+     "ask": "How many times did Jesus say we should forgive?",
+     "repair": "Read Matthew 18:21-22. Seventy-seven means keep forgiving."
+    },
+    {
+     "code": "CRES.G3.CHRIST.FORGIVENESS.UNFORGIVING_SERVANT.M_C3_FOR_KING_REFUSED",
+     "listen_for": [
+      "He refused"
+     ],
+     "ask": "What did the king do when the servant begged?",
+     "repair": "Act out both scenes in order with three children."
+    },
+    {
+     "code": "CRES.G3.CHRIST.FORGIVENESS.UNFORGIVING_SERVANT.M_C3_FOR_SMALL_DEBT",
+     "listen_for": [
+      "The fellow servant"
+     ],
+     "ask": "Who owed more money?",
+     "repair": "Draw a mountain of coins and a small pile."
+    },
+    {
+     "code": "CRES.G3.CHRIST.FORGIVENESS.UNFORGIVING_SERVANT.M_C3_FOR_FORGET",
+     "listen_for": [
+      "Pretend it never happened"
+     ],
+     "ask": "A friend says sorry for breaking your pencil. What does forgiving mean?",
+     "repair": "Say: forgiving means letting go of anger and not taking revenge. If someone keeps hurting you, tell an adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many times did Jesus say to forgive?",
+     "answer": "Seventy-seven times",
+     "shows": "retell"
+    },
+    {
+     "question": "What did the unforgiving servant do?",
+     "answer": "Refused to forgive his fellow servant",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

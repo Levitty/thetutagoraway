@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G1.SOCIAL.OUR_SCHOOL",
+ "title": "Our School",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Safety on the way to school: walk with others, keep to the side of the road facing traffic, never go with strangers (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+   "key_step": "The child names the main physical features between home and school and uses them to say where places are.",
+   "floor": {
+    "prerequisite": "Names places near home.",
+    "question": "Name a place near your home.",
+    "answer": "A shop (church, river)"
+   },
+   "representations": [
+    "pictures of features",
+    "a large drawn path from home to school",
+    "a sand model"
+   ],
+   "steps": [
+    "Name what you pass on the way.",
+    "Put the features on the path.",
+    "Say which are natural and which people made.",
+    "Use features to tell where your home is."
+   ],
+   "contexts": [
+    "the walk to school",
+    "a trip to the market",
+    "a visitor looking for the school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a path from a house to a school with a river and a church."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the river.",
+     "say": "What is this feature called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say a river."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label each feature on the path."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_ANIMALS",
+     "listen_for": [
+      "A dog"
+     ],
+     "ask": "Which is a feature on the way to school: a bridge or a dog?",
+     "repair": "Ask: will it be there tomorrow? Features stay in one place."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_INSIDE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a desk a feature on the way between home and school?",
+     "repair": "Draw a path from a house to a school. Only things along the path count."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_ROAD_NONE",
+     "listen_for": [
+      "No, it is just the way"
+     ],
+     "ask": "Is the road a feature?",
+     "repair": "Point to the road on the drawing and name it."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_ALL_SAME",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Do all children pass the same things on the way to school?",
+     "repair": "Let three children draw their way. Compare the features."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a feature between home and school.",
+     "answer": "A river (bridge, road, church)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Is a bridge a feature?",
+     "answer": "Yes",
+     "shows": "identifies"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+   "key_step": "The child says how to keep safe on the way to school: walk with others, keep to the side, cross carefully, go straight home, never go with strangers.",
+   "floor": {
+    "prerequisite": "Knows simple safety rules.",
+    "question": "Is it safe to play near a road?",
+    "answer": "No"
+   },
+   "representations": [
+    "a chalk road in the field",
+    "safe and unsafe picture cards",
+    "a role-play of saying no"
+   ],
+   "steps": [
+    "Name dangers on the way.",
+    "Say the safe action for each.",
+    "Practise crossing.",
+    "Practise saying no to a stranger."
+   ],
+   "contexts": [
+    "the morning walk to school",
+    "going home in the rain",
+    "a busy market day on the road"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child alone and a car on the road."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child.",
+     "say": "Is the child safe? What should she do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say walk on the side, with friends."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: walk with friends, keep to the side, look before crossing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_STRANGER_GIFT",
+     "listen_for": [
+      "Take them and say thank you"
+     ],
+     "ask": "A stranger offers you sweets on the way home. What do you do?",
+     "repair": "Role-play saying \"No, thank you\" and walking to a trusted adult."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_ROAD_PLAY",
+     "listen_for": [
+      "Yes, there are no cars now"
+     ],
+     "ask": "Is a quiet road a good place to play?",
+     "repair": "Show how fast a boda boda comes round a bend. Play only in safe places."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_RUN_CROSS",
+     "listen_for": [
+      "Run fast"
+     ],
+     "ask": "How should you cross a road?",
+     "repair": "Practise on a chalk road: stop, look, listen, walk."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_ALONE_LATE",
+     "listen_for": [
+      "Play on the way and go home later"
+     ],
+     "ask": "After school, what should you do?",
+     "repair": "Talk about parents worrying and dangers after dark. Agree: go straight home."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Should you take sweets from a stranger?",
+     "answer": "No",
+     "shows": "personal safety"
+    },
+    {
+     "question": "What do you do before crossing a road?",
+     "answer": "Stop and look both ways",
+     "shows": "personal safety"
+    }
+   ]
+  }
+ ]
+}

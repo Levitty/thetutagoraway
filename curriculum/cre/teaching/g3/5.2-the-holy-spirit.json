@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G3.THE_CH.THE_HOLY_SPIRIT",
+ "title": "The Holy Spirit",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST",
+   "key_step": "The child retells Pentecost (Acts 2:1-4) and names works of the Holy Spirit: helper, comforter, guide, teacher, strength.",
+   "floor": {
+    "prerequisite": "Knows Jesus promised the Holy Spirit.",
+    "question": "Whom did Jesus promise to send to his disciples?",
+    "answer": "The Holy Spirit"
+   },
+   "representations": [
+    "picture cards of Acts 2",
+    "a festival line: Christmas, Easter, Pentecost",
+    "role cards"
+   ],
+   "steps": [
+    "Read Acts 2:1-4.",
+    "Say what they heard and saw.",
+    "Name works of the Holy Spirit.",
+    "Place Pentecost on the festival line."
+   ],
+   "contexts": [
+    "Pentecost Sunday at church",
+    "a child needing courage",
+    "a friend who needs comfort"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: wind, fire, filled, languages."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"fire\".",
+     "say": "Did the fire burn them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, it looked like fire."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the works of the Holy Spirit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST.M_C3_PEN_REAL_FIRE",
+     "listen_for": [
+      "Real fire that burnt them"
+     ],
+     "ask": "What rested on the disciples at Pentecost?",
+     "repair": "Read Acts 2:3: what seemed to be tongues of fire."
+    },
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST.M_C3_PEN_STORM",
+     "listen_for": [
+      "A storm that blew the house down"
+     ],
+     "ask": "What did the disciples hear at Pentecost?",
+     "repair": "Read Acts 2:2: a sound like wind, filling the house."
+    },
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST.M_C3_PEN_CHRISTMAS",
+     "listen_for": [
+      "Jesus was born"
+     ],
+     "ask": "What happened on the day of Pentecost?",
+     "repair": "Make a three-card line: Christmas (birth), Easter (rose), Pentecost (Holy Spirit came)."
+    },
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.PENTECOST.M_C3_PEN_WORK_MAGIC",
+     "listen_for": [
+      "He makes people rich"
+     ],
+     "ask": "Name a work of the Holy Spirit in a Christian's life.",
+     "repair": "List the roles from John 14:26 and Luke 24:49 in simple words: helper, teacher, comforter, strength."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the disciples see at Pentecost?",
+     "answer": "What looked like tongues of fire",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a work of the Holy Spirit.",
+     "answer": "He guides (comforts, helps)",
+     "shows": "work"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+   "key_step": "The child names five fruit of the Holy Spirit (Galatians 5:22-23) and spots them in actions.",
+   "floor": {
+    "prerequisite": "Knows the Holy Spirit came at Pentecost.",
+    "question": "On which day did the Holy Spirit come on the disciples?",
+    "answer": "Pentecost"
+   },
+   "representations": [
+    "a fruit tree chart with nine labels",
+    "Galatians 5:22-23 on a card",
+    "action cards"
+   ],
+   "steps": [
+    "Read Galatians 5:22-23.",
+    "Name five fruit.",
+    "Match actions to fruit.",
+    "Say which fruit you will show this week."
+   ],
+   "contexts": [
+    "sharing a snack",
+    "waiting in the lunch queue",
+    "making peace after a quarrel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree with nine fruit, some labels missing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a blank fruit.",
+     "say": "Which fruit of the Spirit could go here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write all nine on the tree."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C3_FRU_EAT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a mango a fruit of the Holy Spirit?",
+     "repair": "Draw a tree with words on it: love, joy, peace. Say: these grow in our lives."
+    },
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C3_FRU_MONEY",
+     "listen_for": [
+      "Money"
+     ],
+     "ask": "Which is a fruit of the Spirit: patience or money?",
+     "repair": "Read Galatians 5:22-23 and circle each fruit."
+    },
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C3_FRU_STORY_MATCH",
+     "listen_for": [
+      "Joy"
+     ],
+     "ask": "Juma waits calmly for his turn on the swing. Which fruit is this?",
+     "repair": "Act out each fruit and guess its name."
+    },
+    {
+     "code": "CRES.G3.THE_CH.THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C3_FRU_ONE",
+     "listen_for": [
+      "One, love"
+     ],
+     "ask": "How many fruit of the Spirit are named in Galatians 5:22-23?",
+     "repair": "Count the nine fruit on the board."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a fruit of the Holy Spirit.",
+     "answer": "Love (joy, peace, patience, kindness)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Sharing your food shows which fruit?",
+     "answer": "Kindness",
+     "shows": "applies"
+    }
+   ]
+  }
+ ]
+}

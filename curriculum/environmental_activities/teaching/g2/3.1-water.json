@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.RESOUR.WATER",
+ "title": "Water",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.RESOUR.WATER.WATER_STORAGE",
+   "key_step": "The child names ways of storing water and says why it must be kept clean and covered.",
+   "floor": {
+    "prerequisite": "Knows sources of water.",
+    "question": "Name a source of water.",
+    "answer": "A river (tap, well, rain)"
+   },
+   "representations": [
+    "a jerrycan, a clay pot, a bucket with a lid",
+    "an open and a covered cup left for a day",
+    "a picture of a roof tank"
+   ],
+   "steps": [
+    "Name containers for storing water.",
+    "Compare open and covered water.",
+    "Say why water must be kept safe.",
+    "Practise storing water in a covered bottle."
+   ],
+   "contexts": [
+    "a home with a roof tank",
+    "a school water drum",
+    "carrying water from the river"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an open bucket with flies and a covered jerrycan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the open bucket.",
+     "say": "Is this water safe to drink?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no and why."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: cover, clean, safe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.RESOUR.WATER.WATER_STORAGE.M_E2_STORE_OPEN",
+     "listen_for": [
+      "An open bucket"
+     ],
+     "ask": "Which keeps drinking water safe: an open bucket or a covered jerrycan?",
+     "repair": "Leave an open and a covered cup for a day. Look at dust and insects."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.WATER.WATER_STORAGE.M_E2_STORE_DIRTY_JERRYCAN",
+     "listen_for": [
+      "No, only water goes in"
+     ],
+     "ask": "Should a water jerrycan be washed?",
+     "repair": "Shine a torch into an old jerrycan. Show the green slime. Wash it."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.WATER.WATER_STORAGE.M_E2_STORE_ANIMALS_ANY",
+     "listen_for": [
+      "No, animals drink anything"
+     ],
+     "ask": "Do animals need safe water too?",
+     "repair": "Talk about cows getting sick from dirty water. Show a clean trough."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.WATER.WATER_STORAGE.M_E2_STORE_DISEASE_NONE",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What can happen if you drink dirty water?",
+     "repair": "Tell a short story of a family who got sick from uncovered water. Link cause and effect."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way to store water.",
+     "answer": "A jerrycan (tank, pot)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Why do we cover stored water?",
+     "answer": "To keep out dust, insects and germs",
+     "shows": "importance"
+    }
+   ]
+  }
+ ]
+}

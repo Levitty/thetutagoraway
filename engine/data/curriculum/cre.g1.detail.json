@@ -1,0 +1,224 @@
+{
+ "outcomes": {
+  "CRE.G1.CREATI.SELF_AWARENESS.a": "identity their uniqueness as guided by the word of God",
+  "CRE.G1.CREATI.SELF_AWARENESS.b": "state their gender according to Genesis 1:27",
+  "CRE.G1.CREATI.SELF_AWARENESS.c": "appreciate that God knows them by their names",
+  "CRE.G1.CREATI.MY_FAMILY.a": "name members of their family",
+  "CRE.G1.CREATI.MY_FAMILY.b": "pray with family members to foster unity",
+  "CRE.G1.CREATI.MY_FAMILY.c": "identify five items they share at home",
+  "CRE.G1.CREATI.MY_FAMILY.d": "appreciate family members by praying with them",
+  "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.a": "name plants and animals in the environment",
+  "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.b": "take part in keeping the home environment clean",
+  "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.c": "appreciate God’s creation by caring for plants and animals",
+  "CRE.G1.THE_HO.THE_WORD_OF_GOD.a": "identify five ways of handling the Holy Bible",
+  "CRE.G1.THE_HO.THE_WORD_OF_GOD.b": "mention the two divisions of the Holy Bible",
+  "CRE.G1.THE_HO.THE_WORD_OF_GOD.c": "name the first two books in the New Testament",
+  "CRE.G1.THE_HO.THE_WORD_OF_GOD.d": "desire to handle the Holy Bible with respect",
+  "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.a": "narrate the story of Joseph and his brothers",
+  "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.b": "discuss ways they treat their siblings",
+  "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.c": "identify three values needed for peaceful co-existence",
+  "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.d": "desire to live harmoniously with family members",
+  "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.a": "retell the story of Elijah and the chariot of fire",
+  "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.b": "list three ways of having a good relationship with God",
+  "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.c": "desire to respect God and their parents",
+  "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a": "retell the birth of Jesus Christ",
+  "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.b": "dramatise the birth of Jesus Christ",
+  "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.c": "express the joy of the angels through song and dance",
+  "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.d": "appreciate the birth of Jesus by participating in Christmas celebrations",
+  "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.a": "retell the story of Jesus Christ in the Temple",
+  "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.b": "obey their parents as portrayed by Jesus Christ",
+  "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.c": "take part in Sunday or Sabbath school activities",
+  "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.d": "desire to accompany their parents to church as portrayed by Jesus Christ",
+  "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.a": "name the place where Jesus Christ was baptised",
+  "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.b": "identify the person who baptised Jesus Christ",
+  "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.c": "practise humility in their interaction with others",
+  "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.a": "retell how Jesus changed water into wine",
+  "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.b": "obey instructions as portrayed in the wedding at Cana",
+  "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.c": "desire to be obedient in their interaction with others",
+  "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.a": "retell the healing of Simon’s mother-in-law",
+  "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.b": "show gratitude to others as portrayed by Simon’s mother- in- law",
+  "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.c": "appreciate Jesus’s power to heal the sick",
+  "CRE.G1.CHRIST.SHARING.a": "identify items they share at home as a family",
+  "CRE.G1.CHRIST.SHARING.b": "practise the value of sharing at home and school",
+  "CRE.G1.CHRIST.SHARING.c": "retell the story of the little boy with two fish and five loaves",
+  "CRE.G1.CHRIST.SHARING.d": "desire to keep the environment clean and avoid wastage",
+  "CRE.G1.CHRIST.OBEDIENCE.a": "list the importance of obeying parents",
+  "CRE.G1.CHRIST.OBEDIENCE.b": "practise obedience at home as guided by the scriptures",
+  "CRE.G1.CHRIST.OBEDIENCE.c": "exercise obedience in day-to-day life",
+  "CRE.G1.CHRIST.HONESTY.a": "state reasons for telling the truth",
+  "CRE.G1.CHRIST.HONESTY.b": "demonstrate honesty by not stealing other people’s items",
+  "CRE.G1.CHRIST.HONESTY.c": "practise punctuality at school and home",
+  "CRE.G1.CHRIST.HONESTY.d": "desire to be truthful in their daily lives",
+  "CRE.G1.CHRIST.THANKFULNESS.a": "mention three ways of expressing gratitude to their parents or guardians",
+  "CRE.G1.CHRIST.THANKFULNESS.b": "practise thankfulness at home as guided by the Bible",
+  "CRE.G1.CHRIST.THANKFULNESS.c": "desire to be thankful in daily life",
+  "CRE.G1.THE_CH.A_HOUSE_OF_GOD.a": "recognise the Church as a place of worship and respect it",
+  "CRE.G1.THE_CH.A_HOUSE_OF_GOD.b": "demonstrate responsibility by serving God in Church",
+  "CRE.G1.THE_CH.A_HOUSE_OF_GOD.c": "desire to grow in faith by attending Sunday or Sabbath School",
+  "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.a": "recite simple thanksgiving prayers",
+  "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.b": "practise saying simple prayers at different times of the day",
+  "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.c": "desire to pray always as taught by Jesus Christ"
+ },
+ "skills": {
+  "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME": {
+   "forms": [
+    "who made you",
+    "boy or girl",
+    "is anyone exactly like you"
+   ],
+   "mastery": "Says God made each child special and different (no two children are the same, even twins), that God knows each one by name, and states his or her gender as a boy (male) or girl (female) as God created people male and female (Genesis 1:27). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1": {
+   "forms": [
+    "who is this in the family",
+    "an item we share",
+    "family member or not"
+   ],
+   "mastery": "Names members of his or her family (father, mother, brothers, sisters, grandparents, or the guardian who cares for the child), and five items a family shares (food, water, chairs, utensils, the house, a radio or television). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.1.1), never as a phone question: b) pray with family members to foster unity."
+  },
+  "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1": {
+   "forms": [
+    "plant or animal",
+    "who made it",
+    "name one"
+   ],
+   "mastery": "Names plants (trees, grass, maize, flowers, beans) and animals (cows, goats, birds, fish, dogs) in the environment and says God made them (Genesis 1:11, 24), plants before animals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.1.1), never as a phone question: b) take part in keeping the home environment clean."
+  },
+  "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE": {
+   "forms": [
+    "right or wrong way to handle the Bible",
+    "name a way to care for it",
+    "where to keep it"
+   ],
+   "mastery": "Names ways of handling the Bible with respect: hold it with clean hands, open it gently, do not tear, write or draw in it, do not throw it or sit on it, keep it in a safe clean place, cover it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS": {
+   "forms": [
+    "two parts of the Bible",
+    "first book of the New Testament",
+    "second book"
+   ],
+   "mastery": "Says the Bible has two divisions, the Old Testament and the New Testament, and names Matthew and Mark as the first two books of the New Testament. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH": {
+   "forms": [
+    "what Jacob gave Joseph",
+    "why the brothers were angry",
+    "what they did"
+   ],
+   "mastery": "Narrates Genesis 37: Jacob loved Joseph and gave him a richly coloured coat; his brothers were jealous; Joseph dreamt their sheaves bowed to his; the brothers hated him more and sold him to traders going to Egypt, then told their father a wild animal had killed him. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS": {
+   "forms": [
+    "kind or unkind to a sibling",
+    "a value for living in peace",
+    "what to do here"
+   ],
+   "mastery": "Says how to treat brothers and sisters well (share, help, play together, say sorry, not fight or tease, not be jealous) and names values for peaceful co-existence: love, sharing, forgiveness, respect, kindness. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT": {
+   "forms": [
+    "how Elijah went to heaven",
+    "who was with him",
+    "a way to please God"
+   ],
+   "mastery": "Retells 2 Kings 2:1, 11-12: Elijah and Elisha were walking together; a chariot of fire with horses of fire came between them; Elijah went up to heaven in a whirlwind; Elisha saw it and cried out. Lists ways to have a good relationship with God: pray, read the Bible, obey God and parents, go to church or Sunday school, be kind. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS": {
+   "forms": [
+    "where Jesus was born",
+    "where he was laid",
+    "who told the shepherds"
+   ],
+   "mastery": "Retells Luke 2:4-13: Joseph and Mary travelled from Nazareth to Bethlehem; there was no room in the inn; Jesus was born and laid in a manger; an angel told shepherds the good news and many angels praised God, \"Glory to God in the highest\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) dramatise the birth of Jesus Christ; c) express the joy of the angels through song and dance."
+  },
+  "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY": {
+   "forms": [
+    "how old Jesus was",
+    "where his parents found him",
+    "what he was doing"
+   ],
+   "mastery": "Retells Luke 2:42-49: when Jesus was twelve, his family went to Jerusalem for the Passover; on the way home his parents could not find him; after three days they found him in the temple sitting among the teachers, listening and asking questions; he said he had to be in his Father's house; then he went home and obeyed them (Luke 2:51). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) obey their parents as portrayed by Jesus Christ; c) take part in Sunday or Sabbath school activities."
+  },
+  "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS": {
+   "forms": [
+    "where",
+    "who",
+    "what John said"
+   ],
+   "mastery": "Names the River Jordan as the place and John the Baptist as the person who baptised Jesus (Matthew 3:13-15), and says John felt Jesus should baptise him, showing humility, but Jesus asked to be baptised. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: c) practise humility in their interaction with others."
+  },
+  "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA": {
+   "forms": [
+    "what ran out",
+    "what Jesus told the servants",
+    "what happened"
+   ],
+   "mastery": "Retells John 2:1-10: at a wedding in Cana the wine ran out; Mary told Jesus and told the servants \"Do whatever he tells you\"; Jesus told them to fill six stone jars with water and take some to the master of the banquet; it had become wine, the best wine. It was Jesus' first miracle. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) obey instructions as portrayed in the wedding at Cana."
+  },
+  "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL": {
+   "forms": [
+    "what was wrong with her",
+    "what Jesus did",
+    "what she did after"
+   ],
+   "mastery": "Retells Luke 4:38-39: Simon's mother-in-law had a high fever; they asked Jesus to help her; he bent over her and rebuked the fever, and it left her; she got up at once and began to serve them, showing her thanks. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) show gratitude to others as portrayed by Simon’s mother- in- law."
+  },
+  "CRES.G1.CHRIST.SHARING.SHARE_HOME": {
+   "forms": [
+    "shared or personal",
+    "name an item we share",
+    "why share"
+   ],
+   "mastery": "Names items a family shares at home (food, water, chairs, the table, utensils, the radio or television, the house) and says sharing shows love; personal items (toothbrush, towel, comb) are not shared. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) practise the value of sharing at home and school."
+  },
+  "CRES.G1.CHRIST.SHARING.BOY_LOAVES": {
+   "forms": [
+    "what the boy had",
+    "what Jesus did",
+    "what was left"
+   ],
+   "mastery": "Retells John 6:1-14: a large crowd was hungry; a little boy had five loaves and two fish; he gave them to Jesus; Jesus gave thanks and shared them; everyone ate; twelve baskets of leftovers were gathered so nothing was wasted. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS": {
+   "forms": [
+    "why obey parents",
+    "obedient or not",
+    "what Ephesians 6:1 says"
+   ],
+   "mastery": "Lists why children obey parents: God commands it (Ephesians 6:1: children, obey your parents in the Lord, for this is right), it keeps them safe, things go well and they enjoy long life (6:3), it pleases parents; and knows children never obey anyone asking for something unsafe or secret. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) practise obedience at home as guided by the scriptures."
+  },
+  "CRES.G1.CHRIST.HONESTY.TRUTH_G1": {
+   "forms": [
+    "why tell the truth",
+    "true or a lie",
+    "honest or not"
+   ],
+   "mastery": "States reasons for telling the truth: God wants us to speak truthfully (Ephesians 4:25), people trust us, lies cause trouble, and we are not afraid; and recognises honest acts (not taking others' things, owning up). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) demonstrate honesty by not stealing other people’s items; c) practise punctuality at school and home."
+  },
+  "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS": {
+   "forms": [
+    "a way to thank parents",
+    "thankful or not",
+    "when to say thank you"
+   ],
+   "mastery": "Mentions three ways of thanking parents or guardians: saying thank you, helping with chores, obeying them, praying for them, making a card or drawing, giving a hug. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) practise thankfulness at home as guided by the Bible."
+  },
+  "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1": {
+   "forms": [
+    "what we do in church",
+    "respectful or not",
+    "why we respect church"
+   ],
+   "mastery": "Says the church is a place where Christians worship God (pray, sing, read the Bible, listen to God's word) and names ways of respecting it: walk quietly, listen, keep it clean, do not run or shout, take part in worship. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.3.1), never as a phone question: b) demonstrate responsibility by serving God in Church."
+  },
+  "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES": {
+   "forms": [
+    "when can we pray",
+    "what to say in a prayer",
+    "who we talk to"
+   ],
+   "mastery": "Says Christians can pray at different times of the day (morning, before meals, before school, at bedtime, when afraid or sick), that God's house is a house of prayer (Matthew 21:13), and that a simple prayer talks to God: thank you, please, sorry. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.3.1), never as a phone question: a) recite simple thanksgiving prayers."
+  }
+ }
+}

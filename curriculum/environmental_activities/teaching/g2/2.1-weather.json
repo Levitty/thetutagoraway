@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.NATURA.WEATHER",
+ "title": "Weather",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES",
+   "key_step": "The child identifies the weather at different times of the day, reads weather symbols and predicts the weather from signs.",
+   "floor": {
+    "prerequisite": "Names weather conditions.",
+    "question": "What is the weather when the sun shines brightly?",
+    "answer": "Sunny"
+   },
+   "representations": [
+    "weather symbol cards",
+    "a class weather chart for one week",
+    "pictures of white and dark clouds"
+   ],
+   "steps": [
+    "Look outside and name the weather.",
+    "Choose the symbol.",
+    "Record it at three times of day.",
+    "Predict from the clouds."
+   ],
+   "contexts": [
+    "a misty morning in the highlands",
+    "a hot afternoon at games time",
+    "a rainy evening"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sky with dark clouds and bending trees."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the clouds.",
+     "say": "What weather is coming?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say rain and wind."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the rain and wind symbols."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES.M_E2_WEA_SAME_DAY",
+     "listen_for": [
+      "Yes, all day"
+     ],
+     "ask": "It is sunny in the morning. Will it be sunny all day?",
+     "repair": "Record the weather at 8, 12 and 3 o'clock for a week. Compare."
+    },
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES.M_E2_WEA_CLOUD_RAIN",
+     "listen_for": [
+      "Yes, clouds bring rain"
+     ],
+     "ask": "There are a few white clouds. Will it rain?",
+     "repair": "Show pictures of light white clouds and dark rain clouds. Sort them."
+    },
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES.M_E2_WEA_SYMBOL_WIND",
+     "listen_for": [
+      "Rain"
+     ],
+     "ask": "What does this symbol mean: curved lines blowing sideways?",
+     "repair": "Blow on a paper strip and draw what you see. Compare with the rain symbol of drops falling down."
+    },
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES.M_E2_WEA_MORNING_HOT",
+     "listen_for": [
+      "Morning"
+     ],
+     "ask": "When is it usually hottest: morning or afternoon?",
+     "repair": "Feel the ground or a wall in the morning and after lunch."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which symbol shows sunny weather?",
+     "answer": "The sun",
+     "shows": "reads symbols"
+    },
+    {
+     "question": "Dark clouds are gathering. What will the weather be?",
+     "answer": "Rainy",
+     "shows": "predicts"
+    }
+   ]
+  }
+ ]
+}

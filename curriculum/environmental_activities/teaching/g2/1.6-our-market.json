@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G2.SOCIAL.OUR_MARKET",
+ "title": "Our Market",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY",
+   "key_step": "The child names physical features on the way to a market and uses them, in order, to give and follow directions.",
+   "floor": {
+    "prerequisite": "Knows features between home and school.",
+    "question": "Name a feature you pass on the way to school.",
+    "answer": "A river (a church, a hill)"
+   },
+   "representations": [
+    "a simple drawn route map",
+    "a model of the way to the market in sand",
+    "feature cards"
+   ],
+   "steps": [
+    "Name features on the way.",
+    "Put them in order.",
+    "Give directions using them.",
+    "Follow a friend's directions."
+   ],
+   "contexts": [
+    "market day in the village",
+    "a visitor asking the way",
+    "a school trip"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a path from school past a river and a church to a market."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the river.",
+     "say": "What do we pass next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the church."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the directions in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY.M_E2_WAY_MOVING_THINGS",
+     "listen_for": [
+      "A parked lorry"
+     ],
+     "ask": "Which is a good feature to find the market: a bridge or a parked lorry?",
+     "repair": "Ask: will it be there tomorrow? Good features stay in one place."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY.M_E2_WAY_ORDER",
+     "listen_for": [
+      "The church"
+     ],
+     "ask": "From school you pass a river, then a church, then reach the market. What do you pass first?",
+     "repair": "Walk a classroom path with cards in order. Then retell it in order."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY.M_E2_WAY_BUILT_NATURAL",
+     "listen_for": [
+      "No, features are buildings"
+     ],
+     "ask": "Is a hill a physical feature?",
+     "repair": "Sort pictures into natural features and built features."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY.M_E2_WAY_LEFT_RIGHT",
+     "listen_for": [
+      "Go to the tree"
+     ],
+     "ask": "How would you tell a visitor to find the market after the big tree?",
+     "repair": "Play a directions game in class: the listener must find the place only from your words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a natural feature on the way to a market.",
+     "answer": "A river (hill, valley)",
+     "shows": "identifies"
+    },
+    {
+     "question": "After the church, what comes on the map?",
+     "answer": "The market",
+     "shows": "locates"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_ACTIVITIES",
+   "key_step": "The child names activities that take place in a market and who does them.",
+   "floor": {
+    "prerequisite": "Knows people found in a market.",
+    "question": "Who sells goods in a market?",
+    "answer": "A trader (seller)"
+   },
+   "representations": [
+    "a class market corner",
+    "pictures of market activities",
+    "play money and goods"
+   ],
+   "steps": [
+    "Name what people do in a market.",
+    "Act out buying, selling and bargaining.",
+    "Say how goods get there.",
+    "Say who cleans it."
+   ],
+   "contexts": [
+    "market day",
+    "a fish market by the lake",
+    "a cattle market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a market with a seller, a buyer and a boda boda with sacks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boda boda.",
+     "say": "What activity is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say transporting goods."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label each activity."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_ACTIVITIES.M_E2_MKT_BUY_ONLY",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name another activity in a market apart from buying.",
+     "repair": "Role-play a market: some sell, some carry, some clean, some buy."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_ACTIVITIES.M_E2_MKT_PRICE_FIXED",
+     "listen_for": [
+      "Paying the first price"
+     ],
+     "ask": "What is bargaining?",
+     "repair": "Act out a seller and a buyer agreeing a price for tomatoes."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_ACTIVITIES.M_E2_MKT_TRANSPORT_NONE",
+     "listen_for": [
+      "They are already there"
+     ],
+     "ask": "How do cabbages get to the market?",
+     "repair": "Trace a cabbage from farm to market with pictures."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_ACTIVITIES.M_E2_MKT_CLEAN_NONE",
+     "listen_for": [
+      "Nobody"
+     ],
+     "ask": "Who keeps the market clean?",
+     "repair": "Show a picture of market cleaners and the fees traders pay."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an activity in a market.",
+     "answer": "Selling (buying, bargaining)",
+     "shows": "identifies"
+    },
+    {
+     "question": "What is bargaining?",
+     "answer": "Agreeing a price with the seller",
+     "shows": "activity"
+    }
+   ]
+  }
+ ]
+}

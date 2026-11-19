@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP",
+ "title": "Jesus Christ in the Temple",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+   "key_step": "The child retells Jesus in the temple at twelve (Luke 2:42-49) and says he went home and obeyed his parents.",
+   "floor": {
+    "prerequisite": "Knows a church is a place of worship.",
+    "question": "What do people do in church?",
+    "answer": "Pray and sing"
+   },
+   "representations": [
+    "picture cards of Luke 2:42-51",
+    "a picture of the temple",
+    "flashcards of events"
+   ],
+   "steps": [
+    "Picture-read Luke 2:42-49.",
+    "Arrange the event cards in order.",
+    "Retell.",
+    "Say how Jesus obeyed."
+   ],
+   "contexts": [
+    "going to church with parents",
+    "Sunday school",
+    "a child who wanders off at the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 12 years, temple, 3 days."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"temple\".",
+     "say": "What was Jesus doing there?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say listening and asking questions."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: he went home and obeyed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_BABY",
+     "listen_for": [
+      "A baby"
+     ],
+     "ask": "How old was Jesus when he stayed in the temple?",
+     "repair": "Show a picture of a boy of twelve."
+    },
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_LOST_PLAY",
+     "listen_for": [
+      "In the market playing"
+     ],
+     "ask": "Where did his parents find Jesus?",
+     "repair": "Read Luke 2:46."
+    },
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_TEACHING_ADULTS",
+     "listen_for": [
+      "Shouting at the teachers"
+     ],
+     "ask": "What was Jesus doing in the temple?",
+     "repair": "Act it out: sit, listen, ask."
+    },
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_DISOBEYED",
+     "listen_for": [
+      "Refused to go home"
+     ],
+     "ask": "What did Jesus do after his parents found him?",
+     "repair": "Read Luke 2:51."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How old was Jesus?",
+     "answer": "Twelve",
+     "shows": "retell"
+    },
+    {
+     "question": "Where did his parents find him?",
+     "answer": "In the temple",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

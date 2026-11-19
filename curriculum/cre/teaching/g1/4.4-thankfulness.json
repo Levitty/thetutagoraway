@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.CHRIST.THANKFULNESS",
+ "title": "Thankfulness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+   "key_step": "The child mentions three ways to thank parents or guardians.",
+   "floor": {
+    "prerequisite": "Says thank you.",
+    "question": "What do you say when given food?",
+    "answer": "Thank you"
+   },
+   "representations": [
+    "card-making materials",
+    "role-play situations",
+    "a poem on thanking parents"
+   ],
+   "steps": [
+    "Say why we thank parents.",
+    "Name three ways.",
+    "Make a thank-you card.",
+    "Role-play thanking."
+   ],
+   "contexts": [
+    "supper time",
+    "getting new school shoes",
+    "a parent's birthday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: thank you, help, obey."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"help\".",
+     "say": "How does helping thank parents?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a thank-you card."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_GIFT_ONLY",
+     "listen_for": [
+      "He cannot"
+     ],
+     "ask": "How can a child thank parents without money?",
+     "repair": "List free ways to thank."
+    },
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_DUTY",
+     "listen_for": [
+      "No, it is her job"
+     ],
+     "ask": "Should you thank your mother for food?",
+     "repair": "Ask how mother feels when thanked."
+    },
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_ONCE",
+     "listen_for": [
+      "Once a year"
+     ],
+     "ask": "How often should you thank your parents?",
+     "repair": "Make a daily thank-you habit chart."
+    },
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_GUARDIAN",
+     "listen_for": [
+      "No, only parents"
+     ],
+     "ask": "Should you thank your grandmother who cares for you?",
+     "repair": "Name all who care for us."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way to thank your parents.",
+     "answer": "Say thank you (help them, obey)",
+     "shows": "ways"
+    },
+    {
+     "question": "Should you thank your parents for food?",
+     "answer": "Yes",
+     "shows": "gratitude"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_CH.A_HOUSE_OF_GOD",
+ "title": "A House of God",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+   "key_step": "The child says the church is a place of worship and names ways of respecting it.",
+   "floor": {
+    "prerequisite": "Knows church as a place of worship.",
+    "question": "Name a place where Christians pray.",
+    "answer": "A church"
+   },
+   "representations": [
+    "pictures of churches",
+    "a pretend church corner",
+    "respect cards"
+   ],
+   "steps": [
+    "Say what people do in church.",
+    "Name ways to respect church.",
+    "Role-play a service.",
+    "Say why we respect it."
+   ],
+   "contexts": [
+    "Sunday service",
+    "Sunday school",
+    "a school chapel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a church with a child running inside."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child.",
+     "say": "Is this respectful?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write ways to respect church."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_PLAYGROUND",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Can you run around in church during the service?",
+     "repair": "Practise walking quietly into a pretend church."
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_BUILDING_ONLY",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Can Christians worship in a small church under a tree?",
+     "repair": "Show many kinds of churches."
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_SHOP",
+     "listen_for": [
+      "Buy things"
+     ],
+     "ask": "What do people do in church?",
+     "repair": "List worship activities with pictures."
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_DIRTY",
+     "listen_for": [
+      "Yes, someone will clean"
+     ],
+     "ask": "Should you drop sweet papers in church?",
+     "repair": "Practise picking litter after a class service."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do people do in church?",
+     "answer": "Pray (sing, read the Bible)",
+     "shows": "recognises"
+    },
+    {
+     "question": "Name a way to respect church.",
+     "answer": "Walk quietly (listen, keep it clean)",
+     "shows": "respect"
+    }
+   ]
+  }
+ ]
+}

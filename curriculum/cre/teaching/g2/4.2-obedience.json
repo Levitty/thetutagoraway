@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.OBEDIENCE",
+ "title": "Obedience",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+   "key_step": "The child lists ways of obeying teachers and the children's government and reasons to obey (Hebrews 13:17).",
+   "floor": {
+    "prerequisite": "Knows why we obey parents.",
+    "question": "Why should children obey parents?",
+    "answer": "God commands it (they care for us)"
+   },
+   "representations": [
+    "Hebrews 13:17 on flashcards",
+    "class rules chart",
+    "situation cards"
+   ],
+   "steps": [
+    "Read Hebrews 13:17.",
+    "List ways of obeying at school.",
+    "Discuss reasons.",
+    "Sort good and wrong instructions."
+   ],
+   "contexts": [
+    "class rules",
+    "prefects at assembly",
+    "homework time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the class rules."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"do your homework\".",
+     "say": "Why do we obey this rule?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to give a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the reasons and Hebrews 13:17."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_ONLY_WATCHED",
+     "listen_for": [
+      "No, she is not watching"
+     ],
+     "ask": "The teacher leaves the class. Should you keep working?",
+     "repair": "Talk about God seeing and doing right always."
+    },
+    {
+     "code": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_PREFECT",
+     "listen_for": [
+      "No, she is a child like me"
+     ],
+     "ask": "Should you obey the class monitor?",
+     "repair": "Read Hebrews 13:17. Leaders keep order."
+    },
+    {
+     "code": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_FEAR",
+     "listen_for": [
+      "So we are not beaten"
+     ],
+     "ask": "Why should we obey our teachers?",
+     "repair": "List reasons: learning, safety, order, pleasing God."
+    },
+    {
+     "code": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_WRONG_ORDER",
+     "listen_for": [
+      "Yes, obey older pupils"
+     ],
+     "ask": "An older pupil tells you to steal a pen. Should you obey?",
+     "repair": "Say: we obey good instructions. If anyone asks you to do wrong or unsafe things, say no and tell a trusted adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way to obey teachers.",
+     "answer": "Do homework (follow rules, keep time)",
+     "shows": "ways"
+    },
+    {
+     "question": "Give a reason for obeying teachers.",
+     "answer": "They guide us (God asks us to)",
+     "shows": "reasons"
+    }
+   ]
+  }
+ ]
+}

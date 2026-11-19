@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE",
+ "title": "Bible Story; Naaman is Healed",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.NAAMAN",
+   "key_step": "The child retells the healing of Naaman (2 Kings 5:1-14) and names lessons: God heals, obey, be humble, a child can help.",
+   "floor": {
+    "prerequisite": "Knows Jesus healed the man with a withered hand.",
+    "question": "What was wrong with the man's hand?",
+    "answer": "It was withered"
+   },
+   "representations": [
+    "picture cards of 2 Kings 5",
+    "seven paper waves to count",
+    "a lessons chart"
+   ],
+   "steps": [
+    "Picture-read the story.",
+    "Retell it in order.",
+    "Count the seven washes.",
+    "Name lessons."
+   ],
+   "contexts": [
+    "a sick relative",
+    "taking medicine as the nurse says",
+    "a child helping an adult"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: wash seven times in the Jordan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"seven\".",
+     "say": "Why did Naaman get angry at first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he expected Elisha to come out."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons: obey, humility, God heals."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.NAAMAN.M_C3_NAA_ELISHA_TOUCH",
+     "listen_for": [
+      "He came out and touched him"
+     ],
+     "ask": "How did Elisha tell Naaman to be healed?",
+     "repair": "Read 2 Kings 5:10-11. Naaman expected a show and got a message."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.NAAMAN.M_C3_NAA_ONCE",
+     "listen_for": [
+      "Once"
+     ],
+     "ask": "How many times did Naaman wash in the Jordan?",
+     "repair": "Count seven dips aloud with hand movements."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.NAAMAN.M_C3_NAA_GIRL_NOBODY",
+     "listen_for": [
+      "Nobody, Naaman knew"
+     ],
+     "ask": "Who first told Naaman's family about the prophet?",
+     "repair": "Read 2 Kings 5:2-3. Ask: what did a small girl do for a great man?"
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.NAAMAN.M_C3_NAA_RIVER_MAGIC",
+     "listen_for": [
+      "The river water"
+     ],
+     "ask": "Who healed Naaman?",
+     "repair": "Say: Naaman had washed in other rivers. God healed him when he obeyed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Elisha tell Naaman to do?",
+     "answer": "Wash seven times in the Jordan",
+     "shows": "retell"
+    },
+    {
+     "question": "Who healed Naaman?",
+     "answer": "God",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

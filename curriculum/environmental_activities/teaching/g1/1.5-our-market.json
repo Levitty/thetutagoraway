@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G1.SOCIAL.OUR_MARKET",
+ "title": "Our market",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+   "key_step": "The child names people found in a market and says what each one does.",
+   "floor": {
+    "prerequisite": "Names people and their jobs.",
+    "question": "What does a teacher do?",
+    "answer": "Teaches children"
+   },
+   "representations": [
+    "pictures of market people",
+    "a class market corner",
+    "play money"
+   ],
+   "steps": [
+    "Name people in a market.",
+    "Say what each one does.",
+    "Act out the roles.",
+    "Say who pays and who sells."
+   ],
+   "contexts": [
+    "market day in the village",
+    "a busy town market",
+    "a fish market at the lake"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seller, a buyer and a porter with sacks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the porter.",
+     "say": "What does this person do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say carries goods."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write each person's job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_ONLY_SELLERS",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name a person in a market who is not a seller.",
+     "repair": "Act out a market with sellers, buyers, porters and a cleaner."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_PORTER_BUYER",
+     "listen_for": [
+      "He is buying the sacks"
+     ],
+     "ask": "A man carries sacks for a trader. What is his job?",
+     "repair": "Show a porter being paid to carry. Name the job."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_BUYER_PAY",
+     "listen_for": [
+      "The seller"
+     ],
+     "ask": "Who gives the money when you buy tomatoes?",
+     "repair": "Role-play with play money: the buyer pays, the seller gives the goods and change."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_FREE_FOOD",
+     "listen_for": [
+      "Yes, it is there for everyone"
+     ],
+     "ask": "Can you take a banana from a market stall without paying?",
+     "repair": "Role-play buying. Say: taking without paying is stealing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a seller do?",
+     "answer": "Sells goods",
+     "shows": "roles"
+    },
+    {
+     "question": "Who pays in a market?",
+     "answer": "The buyer",
+     "shows": "roles"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+   "key_step": "The child lists foods sold in a market and sorts them into fruits and vegetables.",
+   "floor": {
+    "prerequisite": "Sorts things into groups.",
+    "question": "Put all the round things together.",
+    "answer": "Groups the round things"
+   },
+   "representations": [
+    "real fruits and vegetables",
+    "two baskets: fruits and vegetables",
+    "flashcards"
+   ],
+   "steps": [
+    "Name foods sold in the market.",
+    "Sort them into fruits and vegetables.",
+    "Find foods from animals.",
+    "Draw a fruit and a vegetable."
+   ],
+   "contexts": [
+    "the local market",
+    "a fruit stall",
+    "a kitchen garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mango, sukuma wiki, an orange and a cabbage."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cabbage.",
+     "say": "Fruit or vegetable?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say vegetable."
+    },
+    {
+     "beat": "reveal",
+     "do": "Put each in the right basket."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_FRUIT_SWEET_ONLY",
+     "listen_for": [
+      "A vegetable, it is not sweet"
+     ],
+     "ask": "Is an avocado a fruit or a vegetable?",
+     "repair": "Cut an avocado and a mango: both have a seed inside and grow on trees. Call both fruits as the class chart does."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_VEG_COOKED_ONLY",
+     "listen_for": [
+      "No, we can eat it raw"
+     ],
+     "ask": "Is a carrot a vegetable?",
+     "repair": "Show raw and cooked carrots. It is still a carrot, still a vegetable."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_MKT_FOOD_NOT_MEAT",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name a food from an animal sold in the market.",
+     "repair": "Show pictures of a butchery and a fish stall in a market."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_FRUIT_COLOUR",
+     "listen_for": [
+      "A fruit, it is green like an orange"
+     ],
+     "ask": "Is sukuma wiki a fruit or a vegetable?",
+     "repair": "Sort by what part we eat: leaves are vegetables; sweet or seeded parts from trees are fruits."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a fruit sold in the market.",
+     "answer": "A mango (banana, orange)",
+     "shows": "lists"
+    },
+    {
+     "question": "Is cabbage a fruit or a vegetable?",
+     "answer": "A vegetable",
+     "shows": "categorises"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT",
+ "title": "Food in Our Environment",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS",
+   "key_step": "The child names local foods and sorts them into energy-giving, body-building and protective foods, and builds a plate with all three.",
+   "floor": {
+    "prerequisite": "Knows food from plants and from animals.",
+    "question": "Does an egg come from a plant or an animal?",
+    "answer": "An animal"
+   },
+   "representations": [
+    "real foods or pictures of ugali, beans, eggs, sukuma, mango",
+    "a plate drawn in three parts",
+    "three baskets labelled with the groups"
+   ],
+   "steps": [
+    "Name foods eaten at home.",
+    "Sort them into three baskets.",
+    "Say what each group does for the body.",
+    "Build a balanced plate."
+   ],
+   "contexts": [
+    "school lunch of githeri",
+    "a market stall",
+    "supper at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plate in three parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty part.",
+     "say": "We have ugali and beans. What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name a fruit or vegetable."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: energy, body-building, protective."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS.M_E3_FOOD_UGALI_BODY",
+     "listen_for": [
+      "Body-building"
+     ],
+     "ask": "Which group does ugali belong to?",
+     "repair": "Say: ugali gives energy to run and play. Beans and eggs build the body. Sort a plate of ugali, beans and sukuma."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS.M_E3_FOOD_FRUIT_SWEET",
+     "listen_for": [
+      "No, protective foods are sweet fruits"
+     ],
+     "ask": "Is sukuma wiki a protective food?",
+     "repair": "Put sukuma, cabbage, mango and orange in one basket labelled protective. Say: they help us fight disease."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS.M_E3_FOOD_MILK_DRINK",
+     "listen_for": [
+      "None, milk is only a drink"
+     ],
+     "ask": "Which group does milk belong to?",
+     "repair": "Show that milk comes from a cow like meat and helps babies grow. It is a body-building food."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS.M_E3_FOOD_ONE_GROUP",
+     "listen_for": [
+      "A, it fills you"
+     ],
+     "ask": "Which meal is balanced? A: rice only. B: rice, beans and cabbage.",
+     "repair": "Draw a plate in three parts. Fill each part with one group. Say: a good meal has all three."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which group are beans in?",
+     "answer": "Body-building",
+     "shows": "classifies"
+    },
+    {
+     "question": "Name a protective food.",
+     "answer": "Sukuma wiki (mango, orange, cabbage)",
+     "shows": "protective group"
+    }
+   ]
+  }
+ ]
+}

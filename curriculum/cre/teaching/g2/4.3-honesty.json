@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.HONESTY",
+ "title": "Honesty",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+   "key_step": "The child gives reasons for telling the truth (Proverbs 12:17, 19) and recognises honest acts.",
+   "floor": {
+    "prerequisite": "Knows why we should not steal.",
+    "question": "Why should we not take others' things?",
+    "answer": "It is stealing; it is wrong"
+   },
+   "representations": [
+    "Proverbs 12:19 on a card",
+    "honest/dishonest cards",
+    "a lost-and-found box"
+   ],
+   "steps": [
+    "Read Proverbs 12:17, 19.",
+    "List reasons to tell the truth.",
+    "Sort honest and dishonest acts.",
+    "Practise owning up."
+   ],
+   "contexts": [
+    "breaking something at home",
+    "a test in class",
+    "finding money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Proverbs 12:19: truthful lips endure forever."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"truthful\".",
+     "say": "Why should we tell the truth?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to give a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the reasons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_SMALL_LIE",
+     "listen_for": [
+      "Yes, to avoid trouble"
+     ],
+     "ask": "You broke a cup. Should you say the cat did it?",
+     "repair": "Show how one lie needs another. Praise owning up."
+    },
+    {
+     "code": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_COPY",
+     "listen_for": [
+      "Yes, the answer is right"
+     ],
+     "ask": "Is copying your friend's homework honest?",
+     "repair": "Say: the teacher needs to see what you know to help you."
+    },
+    {
+     "code": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_FOUND_KEEP",
+     "listen_for": [
+      "Keep it"
+     ],
+     "ask": "You find a pencil case in the field. What is honest?",
+     "repair": "Role-play returning it. Ask how the owner feels."
+    },
+    {
+     "code": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_CAUGHT",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Is a lie wrong if nobody finds out?",
+     "repair": "Read Proverbs 12:19 and talk about God seeing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a reason for telling the truth.",
+     "answer": "God wants it (people trust us)",
+     "shows": "reasons"
+    },
+    {
+     "question": "Is copying a friend's work honest?",
+     "answer": "No",
+     "shows": "recognises"
+    }
+   ]
+  }
+ ]
+}

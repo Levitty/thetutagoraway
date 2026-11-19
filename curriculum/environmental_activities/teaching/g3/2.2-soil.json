@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.NATURA.SOIL",
+ "title": "Soil",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G3.NATURA.SOIL.SOIL_TYPES",
+   "key_step": "The child lists the characteristics of sand, clay and loam and names ways of conserving soil (mulching, manuring, planting trees).",
+   "floor": {
+    "prerequisite": "Sorts soils by type.",
+    "question": "Which soil makes a long ribbon when rolled wet?",
+    "answer": "Clay"
+   },
+   "representations": [
+    "samples of sand, clay and loam",
+    "bottles with holes for a drainage test",
+    "a mulched tray and a bare tray"
+   ],
+   "steps": [
+    "Feel each soil and say how it feels.",
+    "Pour water through each.",
+    "Say which is best for plants.",
+    "Name ways to care for soil."
+   ],
+   "contexts": [
+    "a school garden",
+    "a river bank washed away by rain",
+    "a potter using clay"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three heaps: sand, clay, loam."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the clay.",
+     "say": "How does this feel when wet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say smooth and sticky."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a word under each: rough, sticky, crumbly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.NATURA.SOIL.SOIL_TYPES.M_E3_SOIL_ALL_SAME",
+     "listen_for": [
+      "Yes, soil is soil"
+     ],
+     "ask": "Is sand the same as clay soil?",
+     "repair": "Let the child rub sand and clay between the fingers and roll each wet. Name the feel."
+    },
+    {
+     "code": "ENVI.G3.NATURA.SOIL.SOIL_TYPES.M_E3_SOIL_CLAY_DRAIN",
+     "listen_for": [
+      "Clay"
+     ],
+     "ask": "Water is poured on sand and on clay. Which lets water through faster?",
+     "repair": "Pour water through sand and clay in two bottles with holes. Count how fast it drips."
+    },
+    {
+     "code": "ENVI.G3.NATURA.SOIL.SOIL_TYPES.M_E3_SOIL_SAND_PLANTS",
+     "listen_for": [
+      "Sand"
+     ],
+     "ask": "Which soil is best for growing vegetables?",
+     "repair": "Grow beans in sand, clay and loam pots. Watch which grows best. Name loam."
+    },
+    {
+     "code": "ENVI.G3.NATURA.SOIL.SOIL_TYPES.M_E3_SOIL_BARE_GOOD",
+     "listen_for": [
+      "Bare soil, it is clean"
+     ],
+     "ask": "Which garden protects the soil better: bare soil or soil covered with dry grass?",
+     "repair": "Pour water on a bare tray and a mulched tray of soil. See which washes away."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which soil feels rough?",
+     "answer": "Sand",
+     "shows": "characteristics"
+    },
+    {
+     "question": "Name one way to conserve soil.",
+     "answer": "Mulching (manuring, planting trees)",
+     "shows": "conservation"
+    }
+   ]
+  }
+ ]
+}

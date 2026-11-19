@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.CHRIST.FORGIVENESS",
+ "title": "Forgiveness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON",
+   "key_step": "The child tells the prodigal son in order (Luke 15:11-24) for a class drama and says its lesson on forgiveness.",
+   "floor": {
+    "prerequisite": "Knows the importance of obeying parents.",
+    "question": "Why obey parents?",
+    "answer": "God commands it (they care for us)"
+   },
+   "representations": [
+    "picture cards of Luke 15",
+    "props: robe, ring, sandals",
+    "Matthew 18:21-22 on flashcards"
+   ],
+   "steps": [
+    "Watch or read the story.",
+    "Order the scenes.",
+    "Act it out.",
+    "Say the lesson."
+   ],
+   "contexts": [
+    "a child who says sorry",
+    "a family quarrel",
+    "a friend who returns after a fight"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: went away, wasted, pigs, came home."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"came home\".",
+     "say": "What did the father do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he forgave him."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_FATHER_ANGRY",
+     "listen_for": [
+      "He chased him away"
+     ],
+     "ask": "What did the father do when his son came home?",
+     "repair": "Read Luke 15:20-24 and act it out."
+    },
+    {
+     "code": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_ELDER",
+     "listen_for": [
+      "The elder son"
+     ],
+     "ask": "Which son went to a distant country?",
+     "repair": "Two name cards: younger went away, elder stayed."
+    },
+    {
+     "code": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_COWS",
+     "listen_for": [
+      "Cows"
+     ],
+     "ask": "What animals did the son feed?",
+     "repair": "Read Luke 15:15."
+    },
+    {
+     "code": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_LESSON_MONEY",
+     "listen_for": [
+      "Save your money"
+     ],
+     "ask": "What is the main lesson of the prodigal son?",
+     "repair": "Ask: what did the father do? The lesson is there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the younger son do with his share?",
+     "answer": "Wasted it in a distant country",
+     "shows": "story"
+    },
+    {
+     "question": "What is the lesson of the story?",
+     "answer": "Forgive others as God forgives",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

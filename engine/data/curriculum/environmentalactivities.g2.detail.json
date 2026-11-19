@@ -1,0 +1,181 @@
+{
+ "outcomes": {
+  "ENVI.G2.SOCIAL.OUR_HOME.a": "differentiate between personal and common items used at home",
+  "ENVI.G2.SOCIAL.OUR_HOME.b": "identify materials used for cleaning personal and common items at home",
+  "ENVI.G2.SOCIAL.OUR_HOME.c": "clean personal and common items using locally available materials",
+  "ENVI.G2.SOCIAL.OUR_HOME.d": "advocate for a clean home environment for self and others’ well-being",
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.a": "mention differences between family needs and wants",
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.b": "identify places within the locality where family needs are met",
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.c": "classify family needs and wants for financial literacy awareness",
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.d": "prioritise family needs over family wants",
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.e": "appreciate family needs and wants within the locality",
+  "ENVI.G2.SOCIAL.OUR_SCHOOL.a": "name ways of keeping the school environment clean",
+  "ENVI.G2.SOCIAL.OUR_SCHOOL.b": "identify common accidents at school",
+  "ENVI.G2.SOCIAL.OUR_SCHOOL.c": "clean the school environment for the well-being of self and others",
+  "ENVI.G2.SOCIAL.OUR_SCHOOL.d": "advocate for a clean and safe school environment",
+  "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.a": "identify the meaning of colours on the Kenya national flag",
+  "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b": "name events in which Kenya’s national anthem is sung",
+  "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.c": "observe etiquette when raising and lowering the Kenya national flag",
+  "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.d": "appreciate the importance of the national anthem",
+  "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a": "outline Child Rights and Responsibilities at home and in the school",
+  "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.b": "carry out the responsibilities of a child at home and in school",
+  "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.c": "appreciate Child Rights and Responsibilities for the attainment of social justice",
+  "ENVI.G2.SOCIAL.OUR_MARKET.a": "identify physical features on the way to a local market",
+  "ENVI.G2.SOCIAL.OUR_MARKET.b": "locate local market using physical features",
+  "ENVI.G2.SOCIAL.OUR_MARKET.c": "identify activities that take place in a market",
+  "ENVI.G2.SOCIAL.OUR_MARKET.d": "value things and people found in a market",
+  "ENVI.G2.NATURA.WEATHER.a": "identify weather conditions at different times of the day",
+  "ENVI.G2.NATURA.WEATHER.b": "create a weather record, using weather symbols",
+  "ENVI.G2.NATURA.WEATHER.c": "predict weather conditions at different times of the day",
+  "ENVI.G2.NATURA.WEATHER.d": "develop curiosity in weather conditions experienced in the locality",
+  "ENVI.G2.NATURA.SOIL.a": "identify types of soil found in the locality",
+  "ENVI.G2.NATURA.SOIL.b": "classify types of soil in the locality",
+  "ENVI.G2.NATURA.SOIL.c": "make items from soil",
+  "ENVI.G2.NATURA.SOIL.d": "appreciate different types of soil in the immediate environment",
+  "ENVI.G2.NATURA.LIGHT.a": "identify sources of light in the environment",
+  "ENVI.G2.NATURA.LIGHT.b": "manipulate objects in the presence of light to form shadows for enjoyment",
+  "ENVI.G2.NATURA.LIGHT.c": "describe a variety of ways of conserving light for a sustainable supply of light energy",
+  "ENVI.G2.NATURA.LIGHT.d": "appreciate different sources of light in the environment",
+  "ENVI.G2.RESOUR.WATER.a": "identify ways of storing water at home and school",
+  "ENVI.G2.RESOUR.WATER.b": "conserve water at home and school for future use",
+  "ENVI.G2.RESOUR.WATER.c": "state the importance of keeping water safe for people and animal use",
+  "ENVI.G2.RESOUR.WATER.d": "appreciate safe water storage to prevent health risks to self and others",
+  "ENVI.G2.RESOUR.PLANTS.a": "identify ways of caring for plants using locally available materials",
+  "ENVI.G2.RESOUR.PLANTS.b": "perform plant-care activities using locally available materials",
+  "ENVI.G2.RESOUR.PLANTS.c": "advocate for plant protection for environmental sustainability",
+  "ENVI.G2.RESOUR.ANIMALS.a": "identify food items from animals",
+  "ENVI.G2.RESOUR.ANIMALS.b": "relate food items with respective animals",
+  "ENVI.G2.RESOUR.ANIMALS.c": "carry out activities of caring for animals in the locality",
+  "ENVI.G2.RESOUR.ANIMALS.d": "advocate for clean and secure animal shelters to reduce risks to the animals"
+ },
+ "skills": {
+  "ENVI.G2.SOCIAL.OUR_HOME.HOME_ITEMS": {
+   "forms": [
+    "personal or common item",
+    "what we clean it with",
+    "which item must not be shared"
+   ],
+   "mastery": "Tells personal items (toothbrush, comb, towel, underwear, handkerchief, cup for one person) from common items used by everyone (chairs, plates in the cupboard, the table, the broom, the jerrycan), says personal items are not shared, and names materials to clean them: water, soap, ash, a brush, a cloth, sand for scrubbing pots. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.1.1), never as a phone question: c) clean personal and common items using locally available materials."
+  },
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEEDS_WANTS": {
+   "forms": [
+    "need or want",
+    "which comes first",
+    "sort into needs and wants"
+   ],
+   "mastery": "Says a need is something a family cannot live well without (food, water, shelter, clothing, health care, school) and a want is nice to have (sweets, toys, a television, a new phone, soda); classifies items; and chooses needs first when there is little money. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.NEED_PLACES": {
+   "forms": [
+    "where do we get this",
+    "match a need to a place",
+    "odd one out"
+   ],
+   "mastery": "Matches family needs to local places: food at the market, shop or farm; water at a tap, well, river or borehole; health care at a hospital, clinic or dispensary; clothes at a market or tailor; learning at school; worship at a church or mosque; and knows one place can meet several needs. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN": {
+   "forms": [
+    "which action keeps school clean",
+    "where litter goes",
+    "what tool to use"
+   ],
+   "mastery": "Names ways of keeping the school clean: put litter in a bin or litter pit, sweep and dust classrooms, slash grass, clean toilets and flush or cover, wash hands after the toilet, pick litter in the compound, water flowers; and says clean school stops disease and is a shared duty. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.1.1), never as a phone question: c) clean the school environment for the well-being of self and others."
+  },
+  "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_ACCIDENTS": {
+   "forms": [
+    "which accident could happen here",
+    "how to prevent it",
+    "what to do if hurt"
+   ],
+   "mastery": "Names common accidents at school (falls from running, climbing or slippery floors, cuts from broken glass or sharp objects, burns near the kitchen, bumps from swings, being hit by a stone or ball, falling into a pit) and how to prevent them: walk in corridors, keep away from the kitchen fire, report broken glass, use play equipment one at a time, tell a teacher when hurt. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_COLOURS": {
+   "forms": [
+    "what this colour stands for",
+    "which colour stands for this",
+    "colour the flag correctly"
+   ],
+   "mastery": "Names the colours of the Kenya flag in order from the top (black, white, red, white, green) and their meanings: black for the people of Kenya, red for the blood shed in the struggle for independence, green for the land and natural resources, white for peace; the shield and spears for defending freedom. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.FLAG_ETIQUETTE": {
+   "forms": [
+    "when is the anthem sung",
+    "what to do when the flag is raised",
+    "right or wrong behaviour"
+   ],
+   "mastery": "Names events when the national anthem is sung (school assemblies, national holidays such as Madaraka Day, Mashujaa Day and Jamhuri Day, sports events, important government occasions) and the etiquette when the flag is raised or lowered: stop and stand still at attention, face the flag, remove caps, keep quiet or sing, never let the flag touch the ground. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS": {
+   "forms": [
+    "right or responsibility",
+    "which right is this",
+    "what is a child's responsibility here"
+   ],
+   "mastery": "Names child rights (food, shelter, clothing, education, health care, play, a name, love and care, protection from harm) and child responsibilities at home and school (obey parents and teachers, do homework, help with simple chores, keep clean, care for property, respect others), and says rights come with responsibilities. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.1.1), never as a phone question: b) carry out the responsibilities of a child at home and in school."
+  },
+  "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_WAY": {
+   "forms": [
+    "which feature do you pass",
+    "follow the directions",
+    "natural or built feature"
+   ],
+   "mastery": "Names physical features on the way to a local market (hills, valleys, rivers, bridges, roads, paths, big trees, buildings such as a church, school or shops) and uses them to give or follow directions to the market (go past the bridge, turn at the big tree, the market is after the church). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.SOCIAL.OUR_MARKET.MARKET_ACTIVITIES": {
+   "forms": [
+    "what is this person doing",
+    "which activity happens in a market",
+    "who does it"
+   ],
+   "mastery": "Names market activities: buying and selling, bargaining over price, weighing goods, loading and transporting goods (by handcart, boda boda, lorry), displaying goods, cleaning the market, collecting market fees; and the people who do them. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G2.NATURA.WEATHER.WEATHER_TIMES": {
+   "forms": [
+    "what is the weather in the picture",
+    "which symbol shows it",
+    "what weather is coming"
+   ],
+   "mastery": "Identifies weather at different times of the day (a cool morning, sometimes misty or cloudy; a hot sunny afternoon; a cool, sometimes windy evening; rainy or cloudy days), reads weather symbols (sun, cloud, raindrops, wind lines, sun behind a cloud), and predicts from signs (dark clouds and wind mean rain may come). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.2.1, ENVI.G2.RUBRIC.2.2, ENVI.G2.RUBRIC.2.3), never as a phone question: b) create a weather record, using weather symbols."
+  },
+  "ENVI.G2.NATURA.SOIL.SOIL_KINDS": {
+   "forms": [
+    "which soil is this",
+    "which makes the longest ribbon",
+    "sort by particle size"
+   ],
+   "mastery": "Identifies sand, clay and loam in the locality and classifies them by the soil-ribbon test and particle size: clay makes a long smooth ribbon and has tiny particles; loam makes a short ribbon and is crumbly; sand makes no ribbon, falls apart and has big particles. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.2.1, ENVI.G2.RUBRIC.2.2, ENVI.G2.RUBRIC.2.3), never as a phone question: c) make items from soil."
+  },
+  "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES": {
+   "forms": [
+    "is this a source of light",
+    "natural or made by people",
+    "how to save light"
+   ],
+   "mastery": "Identifies sources of light: natural (the sun, stars, fire, lightning) and made by people (bulbs, torches, candles, lanterns, phone screens); knows the moon only reflects the sun's light; describes ways of conserving light: switch off lights when not in use and during the day, open windows to use daylight, use solar lamps. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.2.1, ENVI.G2.RUBRIC.2.2, ENVI.G2.RUBRIC.2.3), never as a phone question: b) manipulate objects in the presence of light to form shadows for enjoyment."
+  },
+  "ENVI.G2.RESOUR.WATER.WATER_STORAGE": {
+   "forms": [
+    "which container keeps water safe",
+    "why cover the water",
+    "what happens if dirty water is drunk"
+   ],
+   "mastery": "Names ways of storing water at home and school (tanks, jerrycans, drums, clay pots, buckets with lids, bottles) and states why water must be kept safe for people and animals: covered, clean containers keep out dust, insects and germs that cause diseases such as cholera and typhoid. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.3.1), never as a phone question: b) conserve water at home and school for future use."
+  },
+  "ENVI.G2.RESOUR.PLANTS.PLANT_CARE": {
+   "forms": [
+    "what this child is doing for the plant",
+    "what material to use",
+    "helps or harms the plant"
+   ],
+   "mastery": "Names ways of caring for plants with local materials: watering (with a can, a bottle with holes, saved water), manuring (animal dung, compost), mulching (dry grass, leaves), weeding, fencing with sticks or thorns to keep animals away, and not plucking leaves or breaking branches. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.3.1), never as a phone question: b) perform plant-care activities using locally available materials."
+  },
+  "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS": {
+   "forms": [
+    "which animal gives this",
+    "which food comes from this animal",
+    "from an animal or a plant"
+   ],
+   "mastery": "Names food items from animals (milk, eggs, meat, fish, honey, ghee, butter, omena) and relates each to its animal: milk from cows, goats and camels; eggs from hens, ducks and quails; meat from cattle, goats, sheep, chicken, rabbits; fish from lakes and rivers; honey from bees. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G2.RUBRIC.3.1), never as a phone question: c) carry out activities of caring for animals in the locality."
+  }
+ }
+}

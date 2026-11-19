@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN",
+ "title": "The Good Samaritan",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_LI.THE_GOOD_SAMARITAN.GOOD_SAMARITAN",
+   "key_step": "The child narrates the Good Samaritan (Luke 10:30-37) and names lessons: help people in need, love your neighbour, kindness to all.",
+   "floor": {
+    "prerequisite": "Knows compassion from the healing stories.",
+    "question": "What does it mean to show compassion?",
+    "answer": "To care for someone who is suffering"
+   },
+   "representations": [
+    "picture cards of Luke 10:30-37",
+    "a road drawn from Jerusalem to Jericho",
+    "role-play props: bandage, donkey"
+   ],
+   "steps": [
+    "Read the story.",
+    "Act out the passers-by.",
+    "Say what the Samaritan did.",
+    "List four lessons."
+   ],
+   "contexts": [
+    "a child who falls on the playground",
+    "a stranger lost in town",
+    "a new pupil from another county"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: priest, Levite, Samaritan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Samaritan.",
+     "say": "What did he do that the others did not?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he stopped and helped."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_LI.THE_GOOD_SAMARITAN.GOOD_SAMARITAN.M_C3_SAM_PRIEST_HELPED",
+     "listen_for": [
+      "The priest"
+     ],
+     "ask": "Who helped the wounded man?",
+     "repair": "Act out the three passers-by. Ask who stopped."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_GOOD_SAMARITAN.GOOD_SAMARITAN.M_C3_SAM_NEIGHBOUR_NEAR",
+     "listen_for": [
+      "The person who lived next to him"
+     ],
+     "ask": "In the story, who was a neighbour to the wounded man?",
+     "repair": "Read Luke 10:36-37. A neighbour is anyone we help."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_GOOD_SAMARITAN.GOOD_SAMARITAN.M_C3_SAM_ONLY_FRIENDS",
+     "listen_for": [
+      "No, only our own people"
+     ],
+     "ask": "Should we help someone from another community who is hurt?",
+     "repair": "Say that Samaritans and Jews did not get along, yet he helped."
+    },
+    {
+     "code": "CRES.G3.THE_LI.THE_GOOD_SAMARITAN.GOOD_SAMARITAN.M_C3_SAM_LEFT_INN",
+     "listen_for": [
+      "He left him on the road"
+     ],
+     "ask": "Where did the Samaritan take the man?",
+     "repair": "Read Luke 10:34-35. Count the steps of help."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who helped the wounded man?",
+     "answer": "The Samaritan",
+     "shows": "narrate"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "Help people in need (love your neighbour)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.CREATI.MY_FAMILY",
+ "title": "My Family",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Families differ: a child who lives with a grandparent or guardian names the people who care for him or her. Never ask who is missing.",
+ "skills": [
+  {
+   "skill": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+   "key_step": "The child names family members and items a family shares at home.",
+   "floor": {
+    "prerequisite": "Takes turns and shares.",
+    "question": "Will you share your crayons with a friend?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "family picture cards",
+    "flashcards of names",
+    "shared and personal items"
+   ],
+   "steps": [
+    "Name family members.",
+    "Draw your family.",
+    "Name items shared at home.",
+    "Say why sharing helps."
+   ],
+   "contexts": [
+    "supper at home",
+    "family prayers",
+    "a visit to grandparents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a family at a table with one pot of food."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the pot.",
+     "say": "Who shares this food?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the family."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write items shared at home."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_PETS",
+     "listen_for": [
+      "My dog"
+     ],
+     "ask": "Name a member of your family.",
+     "repair": "Sort pictures: people in the family and animals at home."
+    },
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_TOOTHBRUSH",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does a family share one toothbrush?",
+     "repair": "Show personal items and shared items in two baskets."
+    },
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_TWO_ONLY",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Are brothers and sisters part of the family?",
+     "repair": "Draw a family with children and grandparents."
+    },
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_SHARE_NONE",
+     "listen_for": [
+      "No, my food is mine"
+     ],
+     "ask": "Should a family share food at home?",
+     "repair": "Role-play a family meal where food is shared."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a member of your family.",
+     "answer": "My mother (father, brother)",
+     "shows": "names"
+    },
+    {
+     "question": "Name an item a family shares.",
+     "answer": "Food (chairs, water)",
+     "shows": "shared items"
+    }
+   ]
+  }
+ ]
+}

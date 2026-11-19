@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER",
+ "title": "A House of Prayer",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+   "key_step": "The child says when Christians pray during the day and what a simple prayer says (Matthew 21:13).",
+   "floor": {
+    "prerequisite": "Says a short prayer.",
+    "question": "Say a short prayer before eating.",
+    "answer": "Thank you God for the food. Amen"
+   },
+   "representations": [
+    "Matthew 21:13 picture card",
+    "a day chart",
+    "prayer cards: thank you, please, sorry"
+   ],
+   "steps": [
+    "Picture-read Matthew 21:13.",
+    "Name times to pray.",
+    "Compose a simple prayer.",
+    "Pray together."
+   ],
+   "contexts": [
+    "morning assembly",
+    "lunch time",
+    "bedtime at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a sun rising, a plate and a moon."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the plate.",
+     "say": "Can we pray at this time?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say yes, before eating."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a simple prayer for each time."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_CHURCH_ONLY",
+     "listen_for": [
+      "No, only in church"
+     ],
+     "ask": "Can you pray at home?",
+     "repair": "Pray in class and talk about praying at home."
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_LONG",
+     "listen_for": [
+      "No, it is too short"
+     ],
+     "ask": "Is \"Thank you God for this food\" a prayer?",
+     "repair": "Say short prayers together."
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_ASK_ONLY",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "Name something we can say to God apart from asking.",
+     "repair": "Sort prayer cards: thank you, please, sorry."
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_SICK_ONLY",
+     "listen_for": [
+      "Only when sick"
+     ],
+     "ask": "When should we pray?",
+     "repair": "Make a day chart with prayer times."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a time to pray.",
+     "answer": "Morning (before meals, bedtime)",
+     "shows": "times"
+    },
+    {
+     "question": "Is a short prayer a real prayer?",
+     "answer": "Yes",
+     "shows": "prayer"
+    }
+   ]
+  }
+ ]
+}

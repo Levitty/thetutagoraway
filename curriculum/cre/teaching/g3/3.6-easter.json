@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_LI.EASTER",
+ "title": "Easter",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_LI.EASTER.EASTER",
+   "key_step": "The child says why Christians celebrate Easter (Jesus' death and resurrection) and names the events and activities of Easter.",
+   "floor": {
+    "prerequisite": "Knows Jesus died on the cross out of love.",
+    "question": "What did Jesus' death show?",
+    "answer": "His great love for people"
+   },
+   "representations": [
+    "a three-day strip: Friday, Saturday, Sunday",
+    "Matthew 28:6 on a card",
+    "pictures of Easter church services"
+   ],
+   "steps": [
+    "Share how families celebrate Easter.",
+    "Read Matthew 28:1-6.",
+    "Order the Easter days.",
+    "Say why Easter matters."
+   ],
+   "contexts": [
+    "Good Friday service",
+    "Easter Sunday at church",
+    "the Easter holiday at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three days: Friday, Saturday, Sunday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Sunday.",
+     "say": "What happened on this day?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Jesus rose from the dead."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: died Friday, rose Sunday."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_LI.EASTER.EASTER.M_C3_EAS_BIRTH",
+     "listen_for": [
+      "The birth of Jesus"
+     ],
+     "ask": "What do Christians remember at Easter?",
+     "repair": "Put Christmas and Easter cards side by side: birth, and death and rising."
+    },
+    {
+     "code": "CRES.G3.THE_LI.EASTER.EASTER.M_C3_EAS_TOMB_FULL",
+     "listen_for": [
+      "Jesus' body"
+     ],
+     "ask": "What did the women find at the tomb (Matthew 28:6)?",
+     "repair": "Read Matthew 28:6 and show an empty tomb picture."
+    },
+    {
+     "code": "CRES.G3.THE_LI.EASTER.EASTER.M_C3_EAS_DAYS",
+     "listen_for": [
+      "Good Friday"
+     ],
+     "ask": "On which day did Jesus rise from the dead?",
+     "repair": "Draw three days: Friday death, Saturday tomb, Sunday risen."
+    },
+    {
+     "code": "CRES.G3.THE_LI.EASTER.EASTER.M_C3_EAS_HOLIDAY",
+     "listen_for": [
+      "Because there is no school"
+     ],
+     "ask": "Why is Easter important to Christians?",
+     "repair": "Ask what happens in church at Easter and why."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do Christians remember at Easter?",
+     "answer": "Jesus' death and resurrection",
+     "shows": "importance"
+    },
+    {
+     "question": "Name an Easter activity.",
+     "answer": "Going to church (singing, prayers)",
+     "shows": "events"
+    }
+   ]
+  }
+ ]
+}

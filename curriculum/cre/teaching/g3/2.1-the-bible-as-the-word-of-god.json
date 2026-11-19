@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF",
+ "title": "The Bible as the Word of God",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.BIBLE_WORD",
+   "key_step": "The child says how the Bible differs from other books: it is God's word, inspired by God and useful for teaching (2 Timothy 3:16).",
+   "floor": {
+    "prerequisite": "Knows the Old Testament has books.",
+    "question": "How many books are in the Old Testament?",
+    "answer": "39"
+   },
+   "representations": [
+    "a Bible beside a storybook and a textbook",
+    "2 Timothy 3:16 on a card",
+    "a \"my Bible and I\" song"
+   ],
+   "steps": [
+    "Look at a Bible and other books.",
+    "Read 2 Timothy 3:16.",
+    "Say what makes the Bible different.",
+    "Say how it guides us."
+   ],
+   "contexts": [
+    "family Bible reading",
+    "Sunday school",
+    "the class library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 Timothy 3:16: All Scripture is God-breathed."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"God-breathed\".",
+     "say": "What does this tell us about the Bible?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it is from God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: the Bible is God's word."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.BIBLE_WORD.M_C3_BIB_STORYBOOK",
+     "listen_for": [
+      "It is not different"
+     ],
+     "ask": "How is the Bible different from a storybook?",
+     "repair": "Read 2 Timothy 3:16. Compare who gave each book its message."
+    },
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.BIBLE_WORD.M_C3_BIB_BIG_BOOK",
+     "listen_for": [
+      "It is big and thick"
+     ],
+     "ask": "What makes the Bible special?",
+     "repair": "Show a small pocket Bible. Still God's word. Size does not make it special."
+    },
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.BIBLE_WORD.M_C3_BIB_PASTOR_WROTE",
+     "listen_for": [
+      "The pastor"
+     ],
+     "ask": "Who inspired the writing of the Bible?",
+     "repair": "Say: many people wrote over many years, and God inspired them (2 Timothy 3:16)."
+    },
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.BIBLE_WORD.M_C3_BIB_ONLY_CHURCH",
+     "listen_for": [
+      "Only in church"
+     ],
+     "ask": "When can the Bible guide us?",
+     "repair": "Read 2 Timothy 3:16 (useful for teaching) and Psalm 119:105 (a lamp to my feet)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does 2 Timothy 3:16 say about Scripture?",
+     "answer": "It is inspired by God (God-breathed)",
+     "shows": "source"
+    },
+    {
+     "question": "Is the Bible the same as a storybook?",
+     "answer": "No, it is God's word",
+     "shows": "differentiates"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.NEW_TESTAMENT",
+   "key_step": "The child states that the New Testament has 27 books and names the four Gospels in order.",
+   "floor": {
+    "prerequisite": "Knows the Old Testament has 39 books.",
+    "question": "How many books does the Old Testament have?",
+    "answer": "39"
+   },
+   "representations": [
+    "a two-shelf Bible bookcase chart",
+    "Gospel flashcards",
+    "a Gospels song"
+   ],
+   "steps": [
+    "Count the New Testament books on the chart.",
+    "Say 27.",
+    "Name the four Gospels in order.",
+    "Say what they tell about."
+   ],
+   "contexts": [
+    "finding Luke in a Bible",
+    "Sunday school memory work",
+    "a Bible quiz"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two shelves: Old Testament 39, New Testament ?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question mark.",
+     "say": "How many books are here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say 27."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Matthew, Mark, Luke, John at the start of the New Testament shelf."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.NEW_TESTAMENT.M_C3_NT_39",
+     "listen_for": [
+      "39"
+     ],
+     "ask": "How many books are in the New Testament?",
+     "repair": "Write OT 39, NT 27, total 66 on a two-part bookshelf."
+    },
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.NEW_TESTAMENT.M_C3_NT_ACTS_GOSPEL",
+     "listen_for": [
+      "Acts"
+     ],
+     "ask": "Which of these is a Gospel: Acts or Mark?",
+     "repair": "Sing the Gospels in order: Matthew, Mark, Luke, John; then Acts comes next, a different kind of book."
+    },
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.NEW_TESTAMENT.M_C3_NT_ORDER",
+     "listen_for": [
+      "John"
+     ],
+     "ask": "Which Gospel comes first in the New Testament?",
+     "repair": "Use the first letters M, M, L, J in a chant and on flashcards."
+    },
+    {
+     "code": "CRES.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.NEW_TESTAMENT.M_C3_NT_GOSPEL_OT",
+     "listen_for": [
+      "The Old Testament"
+     ],
+     "ask": "In which part of the Bible are the four Gospels?",
+     "repair": "Open a Bible at Matthew: the New Testament begins here."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many books are in the New Testament?",
+     "answer": "27",
+     "shows": "number"
+    },
+    {
+     "question": "Name the four Gospels.",
+     "answer": "Matthew, Mark, Luke, John",
+     "shows": "Gospels"
+    }
+   ]
+  }
+ ]
+}

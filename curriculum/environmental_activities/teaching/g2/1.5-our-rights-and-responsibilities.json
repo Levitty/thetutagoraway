@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB",
+ "title": "Our Rights and Responsibilities",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A child who says a right is not met at home (no food, being beaten, not allowed to school) is listened to privately and the safeguarding policy followed. Never ask a child in class whose rights are not met.",
+ "skills": [
+  {
+   "skill": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS",
+   "key_step": "The child names child rights and responsibilities at home and school and tells one from the other.",
+   "floor": {
+    "prerequisite": "Knows basic needs.",
+    "question": "Name a basic need.",
+    "answer": "Food (shelter, clothing)"
+   },
+   "representations": [
+    "right and responsibility cards",
+    "a two-column chart",
+    "a short story about a child at home"
+   ],
+   "steps": [
+    "Say what a right is and what a responsibility is.",
+    "Sort cards.",
+    "Match a right to a responsibility.",
+    "Act out a responsibility."
+   ],
+   "contexts": [
+    "morning chores at home",
+    "homework time",
+    "a child who cannot go to school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: rights, responsibilities."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"go to school\".",
+     "say": "Which column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say rights."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add \"do homework\" under responsibilities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS.M_E2_RIGHT_RESP_MIX",
+     "listen_for": [
+      "A right"
+     ],
+     "ask": "Is doing homework a right or a responsibility?",
+     "repair": "A right is what I should get; a responsibility is what I should do. Sort cards with the two words."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS.M_E2_RIGHT_ANYTHING",
+     "listen_for": [
+      "Yes, I have a right to toys"
+     ],
+     "ask": "Is getting a new toy every week a child's right?",
+     "repair": "Link rights to needs: food, shelter, school, care, safety. Wants are not rights."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS.M_E2_RIGHT_PLAY_NONE",
+     "listen_for": [
+      "No, play is wasting time"
+     ],
+     "ask": "Is play a child's right?",
+     "repair": "Say: play helps children grow and be healthy. Show the right to play on the chart."
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.RIGHTS.M_E2_RIGHT_NO_RESP",
+     "listen_for": [
+      "No, only adults do"
+     ],
+     "ask": "Do children have responsibilities?",
+     "repair": "List small responsibilities children already do. Praise them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a right of a child.",
+     "answer": "Education (food, play, health care)",
+     "shows": "rights"
+    },
+    {
+     "question": "Name a responsibility at home.",
+     "answer": "Obey parents (help with chores)",
+     "shows": "responsibilities"
+    }
+   ]
+  }
+ ]
+}

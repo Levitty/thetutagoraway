@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE",
+ "title": "Bible Story: The three Hebrew men",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.THREE_HEBREWS",
+   "key_step": "The child narrates the three Hebrew men in the furnace (Daniel 3) and names lessons: worship only God, God protects, be brave.",
+   "floor": {
+    "prerequisite": "Knows Daniel in the lions' den.",
+    "question": "Who shut the lions' mouths?",
+    "answer": "God (an angel)"
+   },
+   "representations": [
+    "picture sequence of Daniel 3",
+    "a golden image cut-out",
+    "name cards: Shadrach, Meshach, Abednego"
+   ],
+   "steps": [
+    "Picture-read the story.",
+    "Say why they refused to bow.",
+    "Say what the king saw.",
+    "List lessons."
+   ],
+   "contexts": [
+    "friends pressuring a child to do wrong",
+    "standing up for what is right",
+    "a fire in the kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bow or burn."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the furnace drawing.",
+     "say": "How many men did the king see in the fire?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say four."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.THREE_HEBREWS.M_C3_HEB_LIONS",
+     "listen_for": [
+      "Into the lions' den"
+     ],
+     "ask": "Where were Shadrach, Meshach and Abednego thrown?",
+     "repair": "Put two pictures side by side: Daniel and lions, three men and fire."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.THREE_HEBREWS.M_C3_HEB_BOWED",
+     "listen_for": [
+      "They bowed"
+     ],
+     "ask": "What did the three men do when told to bow to the golden image?",
+     "repair": "Read Daniel 3:16-18. They chose God over the king."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.THREE_HEBREWS.M_C3_HEB_FOUR_GUARD",
+     "listen_for": [
+      "A guard"
+     ],
+     "ask": "Who was the fourth man in the fire?",
+     "repair": "Read Daniel 3:25, 28: God sent his angel."
+    },
+    {
+     "code": "CRES.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.THREE_HEBREWS.M_C3_HEB_BURNT",
+     "listen_for": [
+      "Badly burnt"
+     ],
+     "ask": "How were the three men when they came out?",
+     "repair": "Read Daniel 3:27 and ask what was strange."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why were the three men thrown into the furnace?",
+     "answer": "They refused to bow to the golden image",
+     "shows": "narrate"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "Worship only God (God protects)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G1.RESOUR.WATER",
+ "title": "Water",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+   "key_step": "The child names sources of water near home and school and lists uses of water.",
+   "floor": {
+    "prerequisite": "Notices things with the senses.",
+    "question": "Is water wet or dry?",
+    "answer": "Wet"
+   },
+   "representations": [
+    "pictures of a river, well, borehole, tap, tank",
+    "a uses chart",
+    "a bucket under the roof when it rains"
+   ],
+   "steps": [
+    "Name where we get water.",
+    "Say what we use water for.",
+    "Draw a source.",
+    "Record uses on the chart."
+   ],
+   "contexts": [
+    "fetching water from a river",
+    "the school tap",
+    "rain on the roof"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river, a tap, a well and rain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rain.",
+     "say": "Is this a source of water?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say yes and how to collect it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write one use of water beside each source."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_TAP_SOURCE",
+     "listen_for": [
+      "The tap makes it"
+     ],
+     "ask": "Where does tap water come from?",
+     "repair": "Follow a pipe from the tap to a tank in the school."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_RAIN_NONE",
+     "listen_for": [
+      "No, rain just falls"
+     ],
+     "ask": "Is rain a source of water?",
+     "repair": "Put a bucket under the roof when it rains. See the water collected."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_USE_DRINK",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name another use of water apart from drinking.",
+     "repair": "List with the class everything water did for them today."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_SEA_ALL",
+     "listen_for": [
+      "No, sources are rivers and lakes"
+     ],
+     "ask": "Is a well a source of water?",
+     "repair": "Show a picture of a well and a spring near a village."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a source of water.",
+     "answer": "A river (well, rain, tap)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Name a use of water at school.",
+     "answer": "Drinking (washing hands, cleaning)",
+     "shows": "uses"
+    }
+   ]
+  }
+ ]
+}

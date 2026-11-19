@@ -1,0 +1,1502 @@
+{
+ "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_NOTHING": {
+  "skill": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+  "error": "Thinks there is nothing good about himself because he is not the best in class.",
+  "example": {
+   "question": "Name one thing you like about yourself.",
+   "wrong_answer": "Nothing, I am not the best",
+   "correct_answer": "My smile (I can sing, I help my friends)"
+  },
+  "cause": "The child compares himself with the top pupils.",
+  "reveals": "Offer \"Nothing, I am not the best\" beside \"My smile (I can sing, I help my friends)\" and ask the child to choose.",
+  "help": "Read Psalm 139:13-14. Let each child say one good thing about a classmate, then about himself.",
+  "feedback": "God made you and there is good in you. Name one thing you like.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_LOOKS_ONLY": {
+  "skill": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+  "error": "Thinks only looks (fair skin, nice clothes) are good things about a person.",
+  "example": {
+   "question": "Is being kind something to like about yourself?",
+   "wrong_answer": "No, only how I look counts",
+   "correct_answer": "Yes, kindness is a good thing about me"
+  },
+  "cause": "Praise at home is often about looks.",
+  "reveals": "Offer \"No, only how I look counts\" beside \"Yes, kindness is a good thing about me\" and ask the child to choose.",
+  "help": "List good things we cannot see: kind, brave, helpful.",
+  "feedback": "Being kind and helpful are good things about you too.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_CHORE_PLAY": {
+  "skill": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+  "error": "Lists playing or watching TV as chores.",
+  "example": {
+   "question": "Which is a chore: sweeping or watching TV?",
+   "wrong_answer": "Watching TV",
+   "correct_answer": "Sweeping"
+  },
+  "cause": "Chore is a new word.",
+  "reveals": "Offer \"Watching TV\" beside \"Sweeping\" and ask the child to choose.",
+  "help": "A chore is a job that helps at home. Sort cards into chores and play.",
+  "feedback": "Sweeping is a chore. Watching TV is not.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES.M_C2_SELF_PROUD": {
+  "skill": "CRES.G2.CREATI.SELF_AWARENESS.SELF_LIKES",
+  "error": "Thinks liking yourself means saying you are better than others.",
+  "example": {
+   "question": "Does liking yourself mean you are better than others?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, everyone is special to God"
+  },
+  "cause": "Self-praise is heard as boasting.",
+  "reveals": "Offer \"Yes\" beside \"No, everyone is special to God\" and ask the child to choose.",
+  "help": "Say: God made each person special; liking yourself and others go together.",
+  "feedback": "You are special and so is everyone else.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_FRIENDS": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY",
+  "error": "Counts neighbours or friends as members of the extended family.",
+  "example": {
+   "question": "Is your neighbour part of your extended family?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, the extended family is relatives like grandparents and cousins"
+  },
+  "cause": "Close neighbours are called aunt or uncle.",
+  "reveals": "Offer \"Yes\" beside \"No, the extended family is relatives like grandparents and cousins\" and ask the child to choose.",
+  "help": "Draw the family tree. Neighbours are not on it, though we love them.",
+  "feedback": "The extended family is relatives: grandparents, uncles, aunts and cousins.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_GRAND_NO": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY",
+  "error": "Thinks grandparents are not family because they live far away.",
+  "example": {
+   "question": "Your grandmother lives in the village. Is she your family?",
+   "wrong_answer": "No, she lives far",
+   "correct_answer": "Yes, she is in my extended family"
+  },
+  "cause": "Family is pictured as people at home.",
+  "reveals": "Offer \"No, she lives far\" beside \"Yes, she is in my extended family\" and ask the child to choose.",
+  "help": "Put grandparents on the tree above parents.",
+  "feedback": "Grandparents are family wherever they live.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_CORNELIUS": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY",
+  "error": "Thinks Cornelius worshipped God alone.",
+  "example": {
+   "question": "According to Acts 10:2, who worshipped God with Cornelius?",
+   "wrong_answer": "Nobody",
+   "correct_answer": "All his family"
+  },
+  "cause": "Bible people are often pictured alone.",
+  "reveals": "Offer \"Nobody\" beside \"All his family\" and ask the child to choose.",
+  "help": "Read Acts 10:2 together.",
+  "feedback": "Cornelius and all his family worshipped God together.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY.M_C2_EXT_COUSIN_SIS": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.EXTENDED_FAMILY",
+  "error": "Calls a cousin a sister.",
+  "example": {
+   "question": "Your uncle's daughter is your...?",
+   "wrong_answer": "Sister",
+   "correct_answer": "Cousin"
+  },
+  "cause": "Cousins are called sisters at home.",
+  "reveals": "Offer \"Sister\" beside \"Cousin\" and ask the child to choose.",
+  "help": "Trace the line on the tree from uncle to his daughter.",
+  "feedback": "Your uncle's daughter is your cousin.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_TOOTHBRUSH": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS",
+  "error": "Thinks sharing a toothbrush with a sibling is kind.",
+  "example": {
+   "question": "Should brothers share one toothbrush?",
+   "wrong_answer": "Yes, sharing is good",
+   "correct_answer": "No, a toothbrush should not be shared"
+  },
+  "cause": "Sharing is always praised.",
+  "reveals": "Offer \"Yes, sharing is good\" beside \"No, a toothbrush should not be shared\" and ask the child to choose.",
+  "help": "Say: some things carry germs from mouth to mouth. Kindness is giving your sibling his own.",
+  "feedback": "Do not share a toothbrush. It spreads germs.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_RAZOR": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS",
+  "error": "Thinks a razor blade can be shared if it looks clean.",
+  "example": {
+   "question": "Can a family share one razor blade?",
+   "wrong_answer": "Yes, if it looks clean",
+   "correct_answer": "No, it can spread blood-borne disease"
+  },
+  "cause": "The danger cannot be seen.",
+  "reveals": "Offer \"Yes, if it looks clean\" beside \"No, it can spread blood-borne disease\" and ask the child to choose.",
+  "help": "Show the \"never share\" list. Blood can carry diseases.",
+  "feedback": "Never share a razor blade. It can spread disease.",
+  "source": "To confirm by a CRE teacher and the school counsellor (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_NOTHING": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS",
+  "error": "Thinks nothing at home should be shared, so food is kept for oneself.",
+  "example": {
+   "question": "Should a family share food?",
+   "wrong_answer": "No, each keeps his own",
+   "correct_answer": "Yes, sharing food brings unity"
+  },
+  "cause": "The no-share rule is over-learnt.",
+  "reveals": "Offer \"No, each keeps his own\" beside \"Yes, sharing food brings unity\" and ask the child to choose.",
+  "help": "Sort into share (food, chairs) and do not share (toothbrush, towel).",
+  "feedback": "Families share food, chairs and water. Only personal items are not shared.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS.M_C2_SH_TOWEL": {
+  "skill": "CRES.G2.CREATI.MY_FAMILY.SHARED_ITEMS",
+  "error": "Thinks a towel can be shared because it is washed.",
+  "example": {
+   "question": "Is a bathing towel shared or not?",
+   "wrong_answer": "Shared, it is washed",
+   "correct_answer": "Not shared"
+  },
+  "cause": "Washing seems to make anything shareable.",
+  "reveals": "Offer \"Shared, it is washed\" beside \"Not shared\" and ask the child to choose.",
+  "help": "A towel touches the body and can pass skin infections.",
+  "feedback": "A bathing towel is personal. Do not share it.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_PEOPLE": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+  "error": "Thinks people or scientists made the sun and stars.",
+  "example": {
+   "question": "Who created the sun, moon and stars?",
+   "wrong_answer": "People",
+   "correct_answer": "God"
+  },
+  "cause": "Lights the child knows (bulbs) are made by people.",
+  "reveals": "Offer \"People\" beside \"God\" and ask the child to choose.",
+  "help": "Read Genesis 1:16. People make bulbs; God made the sun.",
+  "feedback": "God created the sun, moon and stars.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_DAY_ONE": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+  "error": "Says the sun was made on the first day.",
+  "example": {
+   "question": "On which day did God make the sun, moon and stars?",
+   "wrong_answer": "The first day",
+   "correct_answer": "The fourth day"
+  },
+  "cause": "Light was made on day one, so the sun seems to come first.",
+  "reveals": "Offer \"The first day\" beside \"The fourth day\" and ask the child to choose.",
+  "help": "Count the days of creation on fingers to four.",
+  "feedback": "God made the sun, moon and stars on the fourth day.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_SUN_NIGHT": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+  "error": "Thinks the sun rules the night and the moon the day.",
+  "example": {
+   "question": "Which light rules the night?",
+   "wrong_answer": "The sun",
+   "correct_answer": "The moon"
+  },
+  "cause": "The two are mixed up.",
+  "reveals": "Offer \"The sun\" beside \"The moon\" and ask the child to choose.",
+  "help": "Draw a day sky and a night sky and place each light.",
+  "feedback": "The sun rules the day and the moon rules the night.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION.M_C2_SKY_STARS_FEW": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.SKY_CREATION",
+  "error": "Thinks the stars are only decorations with no purpose.",
+  "example": {
+   "question": "What are the lights in the sky for, says Genesis 1:14?",
+   "wrong_answer": "Only to look nice",
+   "correct_answer": "To mark days, seasons and years and give light"
+  },
+  "cause": "Stars are drawn as decorations.",
+  "reveals": "Offer \"Only to look nice\" beside \"To mark days, seasons and years and give light\" and ask the child to choose.",
+  "help": "Read Genesis 1:14 and link with days and seasons.",
+  "feedback": "The lights in the sky mark days, seasons and years.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_PASTOR": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE",
+  "error": "Thinks only pastors and adults need to read the Bible.",
+  "example": {
+   "question": "Can children read the Bible too?",
+   "wrong_answer": "No, only pastors",
+   "correct_answer": "Yes, children and families can read it"
+  },
+  "cause": "The child sees the Bible read by leaders.",
+  "reveals": "Offer \"No, only pastors\" beside \"Yes, children and families can read it\" and ask the child to choose.",
+  "help": "Show a children's Bible and read a verse together.",
+  "feedback": "Children can read the Bible too.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_LAMP_REAL": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE",
+  "error": "Thinks Psalm 119:105 means the Bible gives real light like a lamp.",
+  "example": {
+   "question": "What does \"your word is a lamp for my feet\" mean?",
+   "wrong_answer": "The Bible glows",
+   "correct_answer": "God's word shows us the right way to live"
+  },
+  "cause": "Young children take words literally.",
+  "reveals": "Offer \"The Bible glows\" beside \"God's word shows us the right way to live\" and ask the child to choose.",
+  "help": "Walk a dark path with a torch: it shows where to step. God's word shows how to live.",
+  "feedback": "God's word shows us the right way, like a lamp shows the path.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_STORIES": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE",
+  "error": "Thinks we read the Bible only for nice stories.",
+  "example": {
+   "question": "Why do Christians read the Bible?",
+   "wrong_answer": "For fun stories only",
+   "correct_answer": "To learn about God and how to live"
+  },
+  "cause": "Bible lessons are often stories.",
+  "reveals": "Offer \"For fun stories only\" beside \"To learn about God and how to live\" and ask the child to choose.",
+  "help": "Name a story and its lesson for life.",
+  "feedback": "We read the Bible to learn about God and how to live.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE.M_C2_RB_SUNDAY": {
+  "skill": "CRES.G2.CREATI.CREATION_OF_THE_SKY_SUN_.READ_BIBLE",
+  "error": "Thinks the Bible should be read only on Sunday.",
+  "example": {
+   "question": "When can a family read the Bible?",
+   "wrong_answer": "Only on Sunday",
+   "correct_answer": "Any day"
+  },
+  "cause": "Bible reading is seen in church on Sunday.",
+  "reveals": "Offer \"Only on Sunday\" beside \"Any day\" and ask the child to choose.",
+  "help": "Make a \"verse of the day\" chart for the week.",
+  "feedback": "A family can read the Bible every day.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_27": {
+  "skill": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+  "error": "Gives 27 or 66 as the number of Old Testament books.",
+  "example": {
+   "question": "How many books are in the Old Testament?",
+   "wrong_answer": "66",
+   "correct_answer": "39"
+  },
+  "cause": "Numbers of the whole Bible and the testaments are mixed.",
+  "reveals": "Offer \"66\" beside \"39\" and ask the child to choose.",
+  "help": "Write OT 39 on a long shelf drawing.",
+  "feedback": "The Old Testament has 39 books.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_MATTHEW": {
+  "skill": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+  "error": "Names Matthew and Mark as the first two Old Testament books.",
+  "example": {
+   "question": "What are the first two books of the Old Testament?",
+   "wrong_answer": "Matthew and Mark",
+   "correct_answer": "Genesis and Exodus"
+  },
+  "cause": "Grade 1 taught Matthew and Mark as first books (of the New Testament).",
+  "reveals": "Offer \"Matthew and Mark\" beside \"Genesis and Exodus\" and ask the child to choose.",
+  "help": "Open the Bible at the very front: Genesis, Exodus.",
+  "feedback": "The Old Testament begins with Genesis and Exodus.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_ORDER": {
+  "skill": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+  "error": "Puts Exodus before Genesis.",
+  "example": {
+   "question": "Which book comes first, Genesis or Exodus?",
+   "wrong_answer": "Exodus",
+   "correct_answer": "Genesis"
+  },
+  "cause": "Both are new names.",
+  "reveals": "Offer \"Exodus\" beside \"Genesis\" and ask the child to choose.",
+  "help": "Genesis means beginning; it tells of creation, so it comes first.",
+  "feedback": "Genesis comes first. It tells the beginning.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT.M_C2_OT_THREE_PARTS": {
+  "skill": "CRES.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.OLD_TESTAMENT",
+  "error": "Thinks the Bible has three or more divisions.",
+  "example": {
+   "question": "How many divisions does the Bible have?",
+   "wrong_answer": "Three",
+   "correct_answer": "Two: the Old and the New Testament"
+  },
+  "cause": "Children hear many book names.",
+  "reveals": "Offer \"Three\" beside \"Two: the Old and the New Testament\" and ask the child to choose.",
+  "help": "Show a Bible with a ribbon between the two testaments.",
+  "feedback": "The Bible has two divisions: the Old and New Testament.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_ELI_CALLED": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL",
+  "error": "Thinks it was Eli who called Samuel each time.",
+  "example": {
+   "question": "Who was calling Samuel?",
+   "wrong_answer": "Eli",
+   "correct_answer": "The Lord (God)"
+  },
+  "cause": "Samuel himself thought so.",
+  "reveals": "Offer \"Eli\" beside \"The Lord (God)\" and ask the child to choose.",
+  "help": "Read 1 Samuel 3:8. Eli understood it was the Lord.",
+  "feedback": "It was the Lord calling Samuel, not Eli.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_ONCE": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL",
+  "error": "Thinks God called only once.",
+  "example": {
+   "question": "How many times did Samuel run to Eli?",
+   "wrong_answer": "Once",
+   "correct_answer": "Three times"
+  },
+  "cause": "The repetition is not remembered.",
+  "reveals": "Offer \"Once\" beside \"Three times\" and ask the child to choose.",
+  "help": "Act it out with three runs.",
+  "feedback": "Samuel ran to Eli three times before he knew it was God.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_WORDS": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL",
+  "error": "Gives Samuel's answer as \"I am sleeping\" or \"Who is it?\".",
+  "example": {
+   "question": "What did Samuel say when God called the last time?",
+   "wrong_answer": "Who is it?",
+   "correct_answer": "Speak, for your servant is listening"
+  },
+  "cause": "Natural night-time replies come to mind.",
+  "reveals": "Offer \"Who is it?\" beside \"Speak, for your servant is listening\" and ask the child to choose.",
+  "help": "Say the words together with a hand to the ear.",
+  "feedback": "Samuel said, \"Speak, for your servant is listening.\"",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL.M_C2_SAM_ADULT": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.SAMUEL",
+  "error": "Thinks Samuel was an old man when God called him.",
+  "example": {
+   "question": "Was Samuel a boy or an old man when God called him?",
+   "wrong_answer": "An old man",
+   "correct_answer": "A boy"
+  },
+  "cause": "Prophets are pictured as old.",
+  "reveals": "Offer \"An old man\" beside \"A boy\" and ask the child to choose.",
+  "help": "Show a picture of the boy Samuel. God speaks to children too.",
+  "feedback": "Samuel was a boy. God can call children too.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_STOPPED": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL",
+  "error": "Thinks Daniel stopped praying to obey the king.",
+  "example": {
+   "question": "What did Daniel do after the new law?",
+   "wrong_answer": "Stopped praying",
+   "correct_answer": "Kept praying to God three times a day"
+  },
+  "cause": "Obeying the king seems right.",
+  "reveals": "Offer \"Stopped praying\" beside \"Kept praying to God three times a day\" and ask the child to choose.",
+  "help": "Read Daniel 6:10.",
+  "feedback": "Daniel kept praying to God three times a day.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_TIMES": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL",
+  "error": "Says Daniel prayed once a day or seven times.",
+  "example": {
+   "question": "How many times a day did Daniel pray?",
+   "wrong_answer": "Once",
+   "correct_answer": "Three times"
+  },
+  "cause": "Children guess familiar numbers.",
+  "reveals": "Offer \"Once\" beside \"Three times\" and ask the child to choose.",
+  "help": "Count three prayer times: morning, midday, evening.",
+  "feedback": "Daniel prayed three times a day.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_FOUGHT": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL",
+  "error": "Thinks Daniel fought the lions or the lions were asleep.",
+  "example": {
+   "question": "Why did the lions not hurt Daniel?",
+   "wrong_answer": "He fought them",
+   "correct_answer": "God sent his angel and shut their mouths"
+  },
+  "cause": "Heroes in stories fight.",
+  "reveals": "Offer \"He fought them\" beside \"God sent his angel and shut their mouths\" and ask the child to choose.",
+  "help": "Read Daniel 6:22.",
+  "feedback": "God sent his angel to shut the lions' mouths.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_KING_BAD": {
+  "skill": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL",
+  "error": "Thinks King Darius wanted Daniel to die.",
+  "example": {
+   "question": "How did King Darius feel when Daniel was thrown in?",
+   "wrong_answer": "Happy",
+   "correct_answer": "Very sad; he could not sleep"
+  },
+  "cause": "The king made the law, so he seems the villain.",
+  "reveals": "Offer \"Happy\" beside \"Very sad; he could not sleep\" and ask the child to choose.",
+  "help": "Read Daniel 6:14, 18. The officials tricked him.",
+  "feedback": "King Darius was sad and could not sleep. The officials had tricked him.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_PLENTY": {
+  "skill": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH",
+  "error": "Thinks the widow had plenty of food.",
+  "example": {
+   "question": "How much food did the widow have?",
+   "wrong_answer": "Plenty",
+   "correct_answer": "Only a handful of flour and a little oil"
+  },
+  "cause": "Generous people are pictured as rich.",
+  "reveals": "Offer \"Plenty\" beside \"Only a handful of flour and a little oil\" and ask the child to choose.",
+  "help": "Show a tiny handful of flour. Read 1 Kings 17:12.",
+  "feedback": "The widow had only a handful of flour and a little oil.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_SELFISH": {
+  "skill": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH",
+  "error": "Thinks Elijah was greedy to ask for bread first.",
+  "example": {
+   "question": "Why did Elijah ask for bread first?",
+   "wrong_answer": "He was greedy",
+   "correct_answer": "To test her trust; God promised the flour and oil would not run out"
+  },
+  "cause": "Asking first looks rude.",
+  "reveals": "Offer \"He was greedy\" beside \"To test her trust; God promised the flour and oil would not run out\" and ask the child to choose.",
+  "help": "Read 1 Kings 17:13-14. Elijah gave God's promise.",
+  "feedback": "Elijah gave God's promise. The widow trusted and shared.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_RAN_OUT": {
+  "skill": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH",
+  "error": "Thinks the flour ran out the next day.",
+  "example": {
+   "question": "What happened to the flour and oil?",
+   "wrong_answer": "They ran out",
+   "correct_answer": "They did not run out until the rain came"
+  },
+  "cause": "Food always runs out at home.",
+  "reveals": "Offer \"They ran out\" beside \"They did not run out until the rain came\" and ask the child to choose.",
+  "help": "Read 1 Kings 17:16.",
+  "feedback": "The flour and oil did not run out until God sent rain.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH.M_C2_WID_JESUS": {
+  "skill": "CRES.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO.WIDOW_ZAREPHATH",
+  "error": "Thinks Jesus was the visitor.",
+  "example": {
+   "question": "Which prophet visited the widow?",
+   "wrong_answer": "Jesus",
+   "correct_answer": "Elijah"
+  },
+  "cause": "Miracle stories are linked with Jesus.",
+  "reveals": "Offer \"Jesus\" beside \"Elijah\" and ask the child to choose.",
+  "help": "Name the prophet on a card: Elijah.",
+  "feedback": "Elijah the prophet visited the widow.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_AFRAID_STAY": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS",
+  "error": "Thinks the shepherds stayed in the fields because they were afraid.",
+  "example": {
+   "question": "What did the shepherds do after the angels left?",
+   "wrong_answer": "Stayed in the fields",
+   "correct_answer": "Hurried to Bethlehem to see the baby"
+  },
+  "cause": "Shepherds stay with sheep.",
+  "reveals": "Offer \"Stayed in the fields\" beside \"Hurried to Bethlehem to see the baby\" and ask the child to choose.",
+  "help": "Read Luke 2:15-16.",
+  "feedback": "The shepherds hurried to Bethlehem to see Jesus.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_GIFTS": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS",
+  "error": "Thinks the shepherds brought gold and gifts.",
+  "example": {
+   "question": "Who brought gold to Jesus: the shepherds or the wise men?",
+   "wrong_answer": "The shepherds",
+   "correct_answer": "The wise men"
+  },
+  "cause": "All visitors are mixed in nativity plays.",
+  "reveals": "Offer \"The shepherds\" beside \"The wise men\" and ask the child to choose.",
+  "help": "Two cards: shepherds praised; wise men brought gifts.",
+  "feedback": "The wise men brought gifts. The shepherds praised God.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_KEPT_QUIET": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS",
+  "error": "Thinks the shepherds kept the news secret.",
+  "example": {
+   "question": "What did the shepherds do after seeing Jesus?",
+   "wrong_answer": "Kept it secret",
+   "correct_answer": "Told everyone and praised God"
+  },
+  "cause": "Not every story ends with telling.",
+  "reveals": "Offer \"Kept it secret\" beside \"Told everyone and praised God\" and ask the child to choose.",
+  "help": "Read Luke 2:17, 20.",
+  "feedback": "The shepherds told everyone and praised God.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS.M_C2_SHP_PALACE": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.SHEPHERDS",
+  "error": "Thinks they found Jesus in a palace.",
+  "example": {
+   "question": "Where did the shepherds find baby Jesus?",
+   "wrong_answer": "In a palace",
+   "correct_answer": "Lying in a manger"
+  },
+  "cause": "A king is born in a palace.",
+  "reveals": "Offer \"In a palace\" beside \"Lying in a manger\" and ask the child to choose.",
+  "help": "Show a manger: an animal feeding box.",
+  "feedback": "They found baby Jesus lying in a manger.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_CHURCH": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION",
+  "error": "Thinks Jesus was dedicated in a church like ours.",
+  "example": {
+   "question": "Where was baby Jesus presented to the Lord?",
+   "wrong_answer": "In a church",
+   "correct_answer": "In the temple in Jerusalem"
+  },
+  "cause": "Children know dedication in their own church.",
+  "reveals": "Offer \"In a church\" beside \"In the temple in Jerusalem\" and ask the child to choose.",
+  "help": "Show a picture of the temple. Read Luke 2:22.",
+  "feedback": "Jesus was presented in the temple in Jerusalem.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_LAMB": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION",
+  "error": "Says Mary and Joseph offered a lamb or money.",
+  "example": {
+   "question": "What did Mary and Joseph offer?",
+   "wrong_answer": "A lamb",
+   "correct_answer": "A pair of doves or two young pigeons"
+  },
+  "cause": "Lambs are the best-known sacrifice.",
+  "reveals": "Offer \"A lamb\" beside \"A pair of doves or two young pigeons\" and ask the child to choose.",
+  "help": "Read Luke 2:24 and draw two doves.",
+  "feedback": "They offered a pair of doves or two young pigeons.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_TEACHER": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION",
+  "error": "Mixes the dedication with Jesus at twelve teaching in the temple.",
+  "example": {
+   "question": "How old was Jesus when he was dedicated?",
+   "wrong_answer": "Twelve years",
+   "correct_answer": "A baby"
+  },
+  "cause": "Both stories are in the temple.",
+  "reveals": "Offer \"Twelve years\" beside \"A baby\" and ask the child to choose.",
+  "help": "Put two pictures side by side: baby Jesus and Jesus at twelve.",
+  "feedback": "Jesus was a baby when he was presented in the temple.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION.M_C2_DED_SIMEON": {
+  "skill": "CRES.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.DEDICATION",
+  "error": "Thinks Herod or a priest named Eli held the baby.",
+  "example": {
+   "question": "Who took baby Jesus in his arms and praised God?",
+   "wrong_answer": "King Herod",
+   "correct_answer": "Simeon"
+  },
+  "cause": "Familiar names from other stories come to mind.",
+  "reveals": "Offer \"King Herod\" beside \"Simeon\" and ask the child to choose.",
+  "help": "Read Luke 2:28 with a name card.",
+  "feedback": "Simeon held baby Jesus and praised God.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_MONEY": {
+  "skill": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+  "error": "Names money or toys as the wise men's gifts.",
+  "example": {
+   "question": "Which gifts did the wise men give Jesus?",
+   "wrong_answer": "Money and toys",
+   "correct_answer": "Gold, frankincense and myrrh"
+  },
+  "cause": "Gifts the child knows are money and toys.",
+  "reveals": "Offer \"Money and toys\" beside \"Gold, frankincense and myrrh\" and ask the child to choose.",
+  "help": "Show three boxes labelled with the gifts.",
+  "feedback": "The wise men gave gold, frankincense and myrrh.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_STRANGER_OK": {
+  "skill": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+  "error": "Thinks taking a gift from a stranger is fine because the wise men gave gifts.",
+  "example": {
+   "question": "A stranger offers you a gift on the way home. What do you do?",
+   "wrong_answer": "Take it, like baby Jesus got gifts",
+   "correct_answer": "Say no thank you and tell a trusted adult"
+  },
+  "cause": "The child links gifts with good people.",
+  "reveals": "Offer \"Take it, like baby Jesus got gifts\" beside \"Say no thank you and tell a trusted adult\" and ask the child to choose.",
+  "help": "Separate the story from the rule. Practise \"No, thank you\" and telling a trusted adult.",
+  "feedback": "Say no to gifts from strangers and tell a trusted adult.",
+  "source": "To confirm by a CRE teacher and the school counsellor (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_FOUR": {
+  "skill": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+  "error": "Names four or two gifts.",
+  "example": {
+   "question": "How many kinds of gifts did the wise men bring?",
+   "wrong_answer": "Two",
+   "correct_answer": "Three"
+  },
+  "cause": "Number is forgotten.",
+  "reveals": "Offer \"Two\" beside \"Three\" and ask the child to choose.",
+  "help": "Count on three fingers.",
+  "feedback": "The wise men brought three kinds of gifts.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS.M_C2_WG_SHEPHERDS": {
+  "skill": "CRES.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.WISE_GIFTS",
+  "error": "Thinks the shepherds gave the gold.",
+  "example": {
+   "question": "Who gave gold to Jesus?",
+   "wrong_answer": "The shepherds",
+   "correct_answer": "The wise men"
+  },
+  "cause": "All Christmas visitors are mixed.",
+  "reveals": "Offer \"The shepherds\" beside \"The wise men\" and ask the child to choose.",
+  "help": "Match visitors to what they did.",
+  "feedback": "The wise men gave gold. The shepherds praised God.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_AWAKE": {
+  "skill": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM",
+  "error": "Thinks Jesus was awake and steering the boat.",
+  "example": {
+   "question": "What was Jesus doing when the storm began?",
+   "wrong_answer": "Steering the boat",
+   "correct_answer": "Sleeping"
+  },
+  "cause": "The leader is pictured in charge.",
+  "reveals": "Offer \"Steering the boat\" beside \"Sleeping\" and ask the child to choose.",
+  "help": "Read Matthew 8:24.",
+  "feedback": "Jesus was sleeping in the boat.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_SWAM": {
+  "skill": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM",
+  "error": "Thinks the disciples swam to shore.",
+  "example": {
+   "question": "How did the storm end?",
+   "wrong_answer": "They swam to shore",
+   "correct_answer": "Jesus rebuked the wind and waves and it became calm"
+  },
+  "cause": "Escaping danger means swimming in the child's mind.",
+  "reveals": "Offer \"They swam to shore\" beside \"Jesus rebuked the wind and waves and it became calm\" and ask the child to choose.",
+  "help": "Read Matthew 8:26.",
+  "feedback": "Jesus spoke to the wind and waves and it became calm.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_PETER": {
+  "skill": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM",
+  "error": "Mixes it with Peter walking on water.",
+  "example": {
+   "question": "In the calming of the storm, did Peter walk on water?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, Jesus calmed the storm from the boat"
+  },
+  "cause": "Both stories have a boat and wind.",
+  "reveals": "Offer \"Yes\" beside \"No, Jesus calmed the storm from the boat\" and ask the child to choose.",
+  "help": "Compare the two pictures.",
+  "feedback": "In this story Jesus calmed the storm from the boat.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM.M_C2_STM_FEAR_BAD": {
+  "skill": "CRES.G2.THE_EA.JESUS_CALMS_THE_STORM.CALMS_STORM",
+  "error": "Thinks being afraid is a sin, so the disciples were bad.",
+  "example": {
+   "question": "What should we do when we are afraid?",
+   "wrong_answer": "Hide it, fear is bad",
+   "correct_answer": "Call on Jesus and trust him"
+  },
+  "cause": "The child hears \"why are you afraid\" as a scolding.",
+  "reveals": "Offer \"Hide it, fear is bad\" beside \"Call on Jesus and trust him\" and ask the child to choose.",
+  "help": "Say: the disciples called on Jesus and he helped. We can too.",
+  "feedback": "When afraid, call on Jesus and trust him.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_CAUGHT_NIGHT": {
+  "skill": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH",
+  "error": "Thinks the fishermen had caught many fish in the night.",
+  "example": {
+   "question": "How many fish had Simon caught during the night?",
+   "wrong_answer": "Many",
+   "correct_answer": "None"
+  },
+  "cause": "Fishermen are expected to catch fish.",
+  "reveals": "Offer \"Many\" beside \"None\" and ask the child to choose.",
+  "help": "Read Luke 5:5.",
+  "feedback": "Simon had caught nothing all night.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_SHALLOW": {
+  "skill": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH",
+  "error": "Thinks Jesus told them to fish near the shore.",
+  "example": {
+   "question": "Where did Jesus tell Simon to let down the nets?",
+   "wrong_answer": "Near the shore",
+   "correct_answer": "In deep water"
+  },
+  "cause": "Easy places seem better.",
+  "reveals": "Offer \"Near the shore\" beside \"In deep water\" and ask the child to choose.",
+  "help": "Read Luke 5:4.",
+  "feedback": "Jesus told Simon to go out into deep water.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_ONE_BOAT": {
+  "skill": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH",
+  "error": "Thinks the fish filled only a small basket.",
+  "example": {
+   "question": "How many fish did they catch?",
+   "wrong_answer": "A small basket",
+   "correct_answer": "So many that two boats began to sink"
+  },
+  "cause": "Catches the child has seen are small.",
+  "reveals": "Offer \"A small basket\" beside \"So many that two boats began to sink\" and ask the child to choose.",
+  "help": "Read Luke 5:6-7 and draw two overloaded boats.",
+  "feedback": "They caught so many fish that two boats began to sink.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH.M_C2_CF_REFUSED": {
+  "skill": "CRES.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.CATCH_FISH",
+  "error": "Thinks Simon refused because he was tired.",
+  "example": {
+   "question": "What did Simon do when Jesus told him to fish again?",
+   "wrong_answer": "Refused, he was tired",
+   "correct_answer": "Obeyed: \"Because you say so, I will\""
+  },
+  "cause": "Tired people refuse.",
+  "reveals": "Offer \"Refused, he was tired\" beside \"Obeyed: \"Because you say so, I will\"\" and ask the child to choose.",
+  "help": "Read Luke 5:5 together.",
+  "feedback": "Simon obeyed Jesus even though he was tired.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_LEG": {
+  "skill": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+  "error": "Thinks the man had a bad leg or blind eyes.",
+  "example": {
+   "question": "What was wrong with the man?",
+   "wrong_answer": "He was blind",
+   "correct_answer": "His hand was withered (shrivelled)"
+  },
+  "cause": "Healing stories are mixed.",
+  "reveals": "Offer \"He was blind\" beside \"His hand was withered (shrivelled)\" and ask the child to choose.",
+  "help": "Show a picture and read Matthew 12:10.",
+  "feedback": "The man had a withered hand.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_MARKET": {
+  "skill": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+  "error": "Thinks it happened in the market.",
+  "example": {
+   "question": "Where was the man healed?",
+   "wrong_answer": "In the market",
+   "correct_answer": "In the synagogue"
+  },
+  "cause": "Many miracles happened outdoors.",
+  "reveals": "Offer \"In the market\" beside \"In the synagogue\" and ask the child to choose.",
+  "help": "Read Matthew 12:9.",
+  "feedback": "Jesus healed the man in the synagogue.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_SABBATH_WRONG": {
+  "skill": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+  "error": "Thinks Jesus did wrong by healing on the Sabbath.",
+  "example": {
+   "question": "Was it right for Jesus to heal on the Sabbath?",
+   "wrong_answer": "No, it broke the rule",
+   "correct_answer": "Yes, it is lawful to do good on the Sabbath"
+  },
+  "cause": "The Pharisees' complaint sounds right.",
+  "reveals": "Offer \"No, it broke the rule\" beside \"Yes, it is lawful to do good on the Sabbath\" and ask the child to choose.",
+  "help": "Read Matthew 12:11-12: the sheep in a pit.",
+  "feedback": "Jesus said it is right to do good on the Sabbath.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND.M_C2_WH_TOUCH": {
+  "skill": "CRES.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.WITHERED_HAND",
+  "error": "Thinks Jesus rubbed medicine on the hand.",
+  "example": {
+   "question": "How did Jesus heal the hand?",
+   "wrong_answer": "With medicine",
+   "correct_answer": "He said \"Stretch out your hand\" and it was restored"
+  },
+  "cause": "Healing at home uses medicine.",
+  "reveals": "Offer \"With medicine\" beside \"He said \"Stretch out your hand\" and it was restored\" and ask the child to choose.",
+  "help": "Read Matthew 12:13 and act it out.",
+  "feedback": "Jesus said, \"Stretch out your hand,\" and it was healed.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_BAD_MAN": {
+  "skill": "CRES.G2.THE_EA.EASTER.EASTER_LOVE",
+  "error": "Thinks Jesus died because he did something wrong.",
+  "example": {
+   "question": "Why did Jesus die on the cross?",
+   "wrong_answer": "He did something wrong",
+   "correct_answer": "Because of God's great love for people"
+  },
+  "cause": "In the child's world, punishment follows wrongdoing.",
+  "reveals": "Offer \"He did something wrong\" beside \"Because of God's great love for people\" and ask the child to choose.",
+  "help": "Read John 3:16 in simple words.",
+  "feedback": "Jesus died because God loves us. He did nothing wrong.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_STAYED_DEAD": {
+  "skill": "CRES.G2.THE_EA.EASTER.EASTER_LOVE",
+  "error": "Thinks Jesus stayed in the tomb.",
+  "example": {
+   "question": "What happened on the third day?",
+   "wrong_answer": "He stayed in the tomb",
+   "correct_answer": "He was raised from the dead"
+  },
+  "cause": "Death seems final.",
+  "reveals": "Offer \"He stayed in the tomb\" beside \"He was raised from the dead\" and ask the child to choose.",
+  "help": "Read 1 Corinthians 15:4.",
+  "feedback": "On the third day Jesus rose from the dead.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_EGGS_ONLY": {
+  "skill": "CRES.G2.THE_EA.EASTER.EASTER_LOVE",
+  "error": "Lists only buying new clothes or eating chicken as Easter activities in church.",
+  "example": {
+   "question": "Name an activity done in church at Easter.",
+   "wrong_answer": "Eating chicken",
+   "correct_answer": "Prayers (singing, special services)"
+  },
+  "cause": "Holiday food is what the child remembers.",
+  "reveals": "Offer \"Eating chicken\" beside \"Prayers (singing, special services)\" and ask the child to choose.",
+  "help": "List church activities and home activities separately.",
+  "feedback": "In church at Easter Christians pray, sing and read the Bible.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_CHRISTMAS": {
+  "skill": "CRES.G2.THE_EA.EASTER.EASTER_LOVE",
+  "error": "Thinks Easter is when Jesus was born.",
+  "example": {
+   "question": "Is Easter about Jesus' birth?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, it is about his death and resurrection"
+  },
+  "cause": "Church holidays are mixed.",
+  "reveals": "Offer \"Yes\" beside \"No, it is about his death and resurrection\" and ask the child to choose.",
+  "help": "Put Christmas and Easter cards side by side.",
+  "feedback": "Easter remembers Jesus' death and rising, not his birth.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_NONE": {
+  "skill": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+  "error": "Thinks nothing at school is shared because each pupil has his own things.",
+  "example": {
+   "question": "Name something shared at school.",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Books (desks, balls, crayons)"
+  },
+  "cause": "Pupils are told \"mind your own things\".",
+  "reveals": "Offer \"Nothing\" beside \"Books (desks, balls, crayons)\" and ask the child to choose.",
+  "help": "Walk around the class naming shared things.",
+  "feedback": "Many things are shared at school: books, desks and balls.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_GRAB": {
+  "skill": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+  "error": "Thinks sharing means taking a friend's things when you want.",
+  "example": {
+   "question": "Is taking a friend's crayon without asking sharing?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, sharing is giving or asking politely"
+  },
+  "cause": "The child confuses sharing with taking.",
+  "reveals": "Offer \"Yes\" beside \"No, sharing is giving or asking politely\" and ask the child to choose.",
+  "help": "Role-play asking and offering.",
+  "feedback": "Sharing means giving or asking politely, not grabbing.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_FRIENDS_ONLY": {
+  "skill": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+  "error": "Thinks we share only with our best friends.",
+  "example": {
+   "question": "Should you share with a new pupil?",
+   "wrong_answer": "No, only with my friends",
+   "correct_answer": "Yes, share with everyone"
+  },
+  "cause": "Children share with their circle.",
+  "reveals": "Offer \"No, only with my friends\" beside \"Yes, share with everyone\" and ask the child to choose.",
+  "help": "Talk about how a new pupil feels. Share with all.",
+  "feedback": "We share with everyone, including new pupils.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING.M_C2_SS_BOTTLE": {
+  "skill": "CRES.G2.CHRIST.SHARING.SCHOOL_SHARING",
+  "error": "Thinks drinking from a friend's bottle is good sharing.",
+  "example": {
+   "question": "Should you drink from your friend's water bottle?",
+   "wrong_answer": "Yes, it is sharing",
+   "correct_answer": "No, pour into your own cup"
+  },
+  "cause": "Sharing is praised everywhere.",
+  "reveals": "Offer \"Yes, it is sharing\" beside \"No, pour into your own cup\" and ask the child to choose.",
+  "help": "Show pouring into a cup instead.",
+  "feedback": "Pour water into your own cup. Do not drink from another's bottle.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_ONLY_WATCHED": {
+  "skill": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+  "error": "Obeys only when the teacher is watching.",
+  "example": {
+   "question": "The teacher leaves the class. Should you keep working?",
+   "wrong_answer": "No, she is not watching",
+   "correct_answer": "Yes, obey even when no one watches"
+  },
+  "cause": "Children obey to avoid punishment.",
+  "reveals": "Offer \"No, she is not watching\" beside \"Yes, obey even when no one watches\" and ask the child to choose.",
+  "help": "Talk about God seeing and doing right always.",
+  "feedback": "Obey even when the teacher is not watching.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_PREFECT": {
+  "skill": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+  "error": "Thinks pupils need not obey the children's government because they are children too.",
+  "example": {
+   "question": "Should you obey the class monitor?",
+   "wrong_answer": "No, she is a child like me",
+   "correct_answer": "Yes, she is a leader chosen to help"
+  },
+  "cause": "Leaders are pictured as adults.",
+  "reveals": "Offer \"No, she is a child like me\" beside \"Yes, she is a leader chosen to help\" and ask the child to choose.",
+  "help": "Read Hebrews 13:17. Leaders keep order.",
+  "feedback": "Obey the class monitor and prefects. They help keep order.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_FEAR": {
+  "skill": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+  "error": "Thinks the only reason to obey is fear of punishment.",
+  "example": {
+   "question": "Why should we obey our teachers?",
+   "wrong_answer": "So we are not beaten",
+   "correct_answer": "They guide us and God asks us to obey leaders"
+  },
+  "cause": "Punishment is the reason the child hears most.",
+  "reveals": "Offer \"So we are not beaten\" beside \"They guide us and God asks us to obey leaders\" and ask the child to choose.",
+  "help": "List reasons: learning, safety, order, pleasing God.",
+  "feedback": "We obey teachers because they guide us and God asks us to.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS.M_C2_OB_WRONG_ORDER": {
+  "skill": "CRES.G2.CHRIST.OBEDIENCE.OBEY_TEACHERS",
+  "error": "Thinks a child must obey anyone, even when told to do something unsafe or wrong.",
+  "example": {
+   "question": "An older pupil tells you to steal a pen. Should you obey?",
+   "wrong_answer": "Yes, obey older pupils",
+   "correct_answer": "No, say no and tell a teacher"
+  },
+  "cause": "Obedience is taught without limits.",
+  "reveals": "Offer \"Yes, obey older pupils\" beside \"No, say no and tell a teacher\" and ask the child to choose.",
+  "help": "Say: we obey good instructions. If anyone asks you to do wrong or unsafe things, say no and tell a trusted adult.",
+  "feedback": "Never obey someone who tells you to do wrong. Say no and tell a teacher.",
+  "source": "To confirm by a CRE teacher and the school counsellor (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_SMALL_LIE": {
+  "skill": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+  "error": "Thinks a small lie is fine if it stops trouble.",
+  "example": {
+   "question": "You broke a cup. Should you say the cat did it?",
+   "wrong_answer": "Yes, to avoid trouble",
+   "correct_answer": "No, tell the truth"
+  },
+  "cause": "Small lies seem harmless and helpful.",
+  "reveals": "Offer \"Yes, to avoid trouble\" beside \"No, tell the truth\" and ask the child to choose.",
+  "help": "Show how one lie needs another. Praise owning up.",
+  "feedback": "Tell the truth even about small things. Lies cause more trouble.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_COPY": {
+  "skill": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+  "error": "Thinks copying a friend's work is fine if you get it right.",
+  "example": {
+   "question": "Is copying your friend's homework honest?",
+   "wrong_answer": "Yes, the answer is right",
+   "correct_answer": "No, it is dishonest"
+  },
+  "cause": "Getting answers right is praised.",
+  "reveals": "Offer \"Yes, the answer is right\" beside \"No, it is dishonest\" and ask the child to choose.",
+  "help": "Say: the teacher needs to see what you know to help you.",
+  "feedback": "Copying is dishonest. Do your own work.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_FOUND_KEEP": {
+  "skill": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+  "error": "Thinks found items can be kept.",
+  "example": {
+   "question": "You find a pencil case in the field. What is honest?",
+   "wrong_answer": "Keep it",
+   "correct_answer": "Give it to the teacher"
+  },
+  "cause": "\"Finders keepers\" is a game rule.",
+  "reveals": "Offer \"Keep it\" beside \"Give it to the teacher\" and ask the child to choose.",
+  "help": "Role-play returning it. Ask how the owner feels.",
+  "feedback": "Give found items to the teacher or parent.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.HONESTY.TELL_TRUTH.M_C2_TT_CAUGHT": {
+  "skill": "CRES.G2.CHRIST.HONESTY.TELL_TRUTH",
+  "error": "Thinks lying is wrong only if you are caught.",
+  "example": {
+   "question": "Is a lie wrong if nobody finds out?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes, God knows and lying is wrong"
+  },
+  "cause": "Children fear being caught.",
+  "reveals": "Offer \"No\" beside \"Yes, God knows and lying is wrong\" and ask the child to choose.",
+  "help": "Read Proverbs 12:19 and talk about God seeing.",
+  "feedback": "A lie is wrong even if nobody finds out.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_BIG_GIFTS": {
+  "skill": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS",
+  "error": "Thinks thank you is only for big gifts.",
+  "example": {
+   "question": "Should you say thank you when a friend lends you a pencil?",
+   "wrong_answer": "No, it is small",
+   "correct_answer": "Yes"
+  },
+  "cause": "Thank you is linked with presents.",
+  "reveals": "Offer \"No, it is small\" beside \"Yes\" and ask the child to choose.",
+  "help": "Practise thanking for small things all day.",
+  "feedback": "Say thank you for small things too.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_PARENTS_DUTY": {
+  "skill": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS",
+  "error": "Thinks parents need not be thanked because it is their duty.",
+  "example": {
+   "question": "Should you thank your mother for cooking?",
+   "wrong_answer": "No, it is her job",
+   "correct_answer": "Yes"
+  },
+  "cause": "Duties seem not to need thanks.",
+  "reveals": "Offer \"No, it is her job\" beside \"Yes\" and ask the child to choose.",
+  "help": "Ask how mother feels when thanked.",
+  "feedback": "Thank your parents for what they do. It makes them happy.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_WORDS_ONLY": {
+  "skill": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS",
+  "error": "Thinks thanking can only be done with words.",
+  "example": {
+   "question": "Name another way to thank someone apart from words.",
+   "wrong_answer": "There is none",
+   "correct_answer": "Help them (make a card, give a hug)"
+  },
+  "cause": "Thanks is taught as a phrase.",
+  "reveals": "Offer \"There is none\" beside \"Help them (make a card, give a hug)\" and ask the child to choose.",
+  "help": "Make thank-you cards.",
+  "feedback": "You can thank people with a card, a hug or help.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS.M_C2_TO_ONLY_GOD": {
+  "skill": "CRES.G2.CHRIST.THANKFULNESS.THANK_OTHERS",
+  "error": "Thinks we thank only God, not people.",
+  "example": {
+   "question": "Should we thank people as well as God?",
+   "wrong_answer": "No, only God",
+   "correct_answer": "Yes, both"
+  },
+  "cause": "Thanksgiving is taught in prayers.",
+  "reveals": "Offer \"No, only God\" beside \"Yes, both\" and ask the child to choose.",
+  "help": "Read 1 Thessalonians 5:18 and role-play thanking a friend.",
+  "feedback": "We thank God and we thank people too.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_FATHER_ANGRY": {
+  "skill": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON",
+  "error": "Thinks the father punished or chased the son away.",
+  "example": {
+   "question": "What did the father do when his son came home?",
+   "wrong_answer": "He chased him away",
+   "correct_answer": "He ran to him, hugged him and held a feast"
+  },
+  "cause": "Children expect punishment for wrongdoing.",
+  "reveals": "Offer \"He chased him away\" beside \"He ran to him, hugged him and held a feast\" and ask the child to choose.",
+  "help": "Read Luke 15:20-24 and act it out.",
+  "feedback": "The father ran to his son, hugged him and forgave him.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_ELDER": {
+  "skill": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON",
+  "error": "Thinks the elder son went away.",
+  "example": {
+   "question": "Which son went to a distant country?",
+   "wrong_answer": "The elder son",
+   "correct_answer": "The younger son"
+  },
+  "cause": "Order of sons is confused.",
+  "reveals": "Offer \"The elder son\" beside \"The younger son\" and ask the child to choose.",
+  "help": "Two name cards: younger went away, elder stayed.",
+  "feedback": "The younger son went away.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_COWS": {
+  "skill": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON",
+  "error": "Thinks he looked after cows or goats.",
+  "example": {
+   "question": "What animals did the son feed?",
+   "wrong_answer": "Cows",
+   "correct_answer": "Pigs"
+  },
+  "cause": "Local herding is of cattle.",
+  "reveals": "Offer \"Cows\" beside \"Pigs\" and ask the child to choose.",
+  "help": "Read Luke 15:15.",
+  "feedback": "The son fed pigs.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON.M_C2_PS_LESSON_MONEY": {
+  "skill": "CRES.G2.CHRIST.FORGIVENESS.PRODIGAL_SON",
+  "error": "Gives \"save money\" as the only lesson.",
+  "example": {
+   "question": "What is the main lesson of the prodigal son?",
+   "wrong_answer": "Save your money",
+   "correct_answer": "God forgives us and we should forgive others"
+  },
+  "cause": "Wasting money stands out.",
+  "reveals": "Offer \"Save your money\" beside \"God forgives us and we should forgive others\" and ask the child to choose.",
+  "help": "Ask: what did the father do? The lesson is there.",
+  "feedback": "The main lesson is forgiveness: God forgives, and we forgive others.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_PARENTS_BUY": {
+  "skill": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS",
+  "error": "Thinks lost items do not matter because parents will buy new ones.",
+  "example": {
+   "question": "You lose your ruler. Does it matter?",
+   "wrong_answer": "No, mother will buy another",
+   "correct_answer": "Yes, it costs money; take care of your things"
+  },
+  "cause": "Children do not see the cost.",
+  "reveals": "Offer \"No, mother will buy another\" beside \"Yes, it costs money; take care of your things\" and ask the child to choose.",
+  "help": "Talk about what a ruler costs and what else that money buys.",
+  "feedback": "Lost items cost money. Take care of your things.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_BAG_FLOOR": {
+  "skill": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS",
+  "error": "Thinks books can be left on the floor or field.",
+  "example": {
+   "question": "Where should you keep your books?",
+   "wrong_answer": "Anywhere, on the floor",
+   "correct_answer": "In my bag or desk"
+  },
+  "cause": "Children put things down wherever they are.",
+  "reveals": "Offer \"Anywhere, on the floor\" beside \"In my bag or desk\" and ask the child to choose.",
+  "help": "Practise packing a bag neatly.",
+  "feedback": "Keep books in your bag or desk.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_TEACHER_JOB": {
+  "skill": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS",
+  "error": "Thinks it is the teacher's job to care for pupils' items.",
+  "example": {
+   "question": "Who should take care of your books?",
+   "wrong_answer": "The teacher",
+   "correct_answer": "Me"
+  },
+  "cause": "Teachers often look after things.",
+  "reveals": "Offer \"The teacher\" beside \"Me\" and ask the child to choose.",
+  "help": "Read Colossians 3:23. Each one cares for his own things.",
+  "feedback": "You are responsible for your own books.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS.M_C2_SI_LABEL": {
+  "skill": "CRES.G2.CHRIST.RESPONSIBILITY.SCHOOL_ITEMS",
+  "error": "Does not see why items should be labelled.",
+  "example": {
+   "question": "Why write your name on your books?",
+   "wrong_answer": "There is no reason",
+   "correct_answer": "So they can be returned if lost"
+  },
+  "cause": "Labels seem like decoration.",
+  "reveals": "Offer \"There is no reason\" beside \"So they can be returned if lost\" and ask the child to choose.",
+  "help": "Pick up an unlabelled pencil: whose is it?",
+  "feedback": "Your name helps your things come back to you if lost.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_PLAY": {
+  "skill": "CRES.G2.CHRIST.WORK.HELP_PARENTS",
+  "error": "Lists playing with toys as a way of helping parents.",
+  "example": {
+   "question": "Which helps your parents: washing cups or playing with a ball?",
+   "wrong_answer": "Playing with a ball",
+   "correct_answer": "Washing cups"
+  },
+  "cause": "Being out of the way feels like helping.",
+  "reveals": "Offer \"Playing with a ball\" beside \"Washing cups\" and ask the child to choose.",
+  "help": "Sort cards into helping and playing.",
+  "feedback": "Washing cups helps your parents. Playing is fun but is not helping.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_HEAVY": {
+  "skill": "CRES.G2.CHRIST.WORK.HELP_PARENTS",
+  "error": "Thinks children should do heavy or dangerous jobs like using a panga or cooking alone.",
+  "example": {
+   "question": "Is it safe for a seven-year-old to cook alone on the jiko?",
+   "wrong_answer": "Yes, to help",
+   "correct_answer": "No, help with safe jobs only"
+  },
+  "cause": "Children want to do grown-up jobs.",
+  "reveals": "Offer \"Yes, to help\" beside \"No, help with safe jobs only\" and ask the child to choose.",
+  "help": "List safe jobs for a child and jobs for adults.",
+  "feedback": "Help with safe jobs. Leave fire and sharp tools to adults.",
+  "source": "To confirm by a CRE teacher and the school counsellor (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_GIRLS": {
+  "skill": "CRES.G2.CHRIST.WORK.HELP_PARENTS",
+  "error": "Thinks only girls help in the kitchen.",
+  "example": {
+   "question": "Can boys wash utensils?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes"
+  },
+  "cause": "Jobs at home are often split.",
+  "reveals": "Offer \"No\" beside \"Yes\" and ask the child to choose.",
+  "help": "List jobs: everyone can do them.",
+  "feedback": "Boys and girls can both help with all chores.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.CHRIST.WORK.HELP_PARENTS.M_C2_HP_LAZY_OK": {
+  "skill": "CRES.G2.CHRIST.WORK.HELP_PARENTS",
+  "error": "Thinks work is a punishment.",
+  "example": {
+   "question": "Is work good or a punishment?",
+   "wrong_answer": "A punishment",
+   "correct_answer": "Good; it helps the family"
+  },
+  "cause": "Chores are sometimes given as punishment.",
+  "reveals": "Offer \"A punishment\" beside \"Good; it helps the family\" and ask the child to choose.",
+  "help": "Read Colossians 3:23. Praise children who help.",
+  "feedback": "Work is good. It helps our family.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_THREE": {
+  "skill": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT",
+  "error": "Says he asked for one loaf or money.",
+  "example": {
+   "question": "What did the man ask his friend for?",
+   "wrong_answer": "Money",
+   "correct_answer": "Three loaves of bread"
+  },
+  "cause": "Borrowing is pictured as money.",
+  "reveals": "Offer \"Money\" beside \"Three loaves of bread\" and ask the child to choose.",
+  "help": "Read Luke 11:5 and hold up three paper loaves.",
+  "feedback": "The man asked for three loaves of bread.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_FIRST": {
+  "skill": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT",
+  "error": "Thinks the friend got up at once.",
+  "example": {
+   "question": "Why did the friend finally get up?",
+   "wrong_answer": "He got up at once",
+   "correct_answer": "Because the man kept on asking"
+  },
+  "cause": "Good friends are expected to help at once.",
+  "reveals": "Offer \"He got up at once\" beside \"Because the man kept on asking\" and ask the child to choose.",
+  "help": "Read Luke 11:8 and act out knocking again and again.",
+  "feedback": "The friend got up because the man kept on asking.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_LESSON": {
+  "skill": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT",
+  "error": "Thinks the lesson is \"do not disturb people at night\".",
+  "example": {
+   "question": "What does the story teach about prayer?",
+   "wrong_answer": "Do not disturb people at night",
+   "correct_answer": "Keep on praying; ask and it will be given"
+  },
+  "cause": "The rude timing stands out.",
+  "reveals": "Offer \"Do not disturb people at night\" beside \"Keep on praying; ask and it will be given\" and ask the child to choose.",
+  "help": "Read Luke 11:9-10.",
+  "feedback": "The story teaches us to keep on praying.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_LP_START": {
+  "skill": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT",
+  "error": "Starts the Lord's Prayer with \"Give us this day\".",
+  "example": {
+   "question": "How does the Lord's Prayer begin?",
+   "wrong_answer": "Give us today our daily bread",
+   "correct_answer": "Our Father in heaven"
+  },
+  "cause": "The bread line is the most concrete.",
+  "reveals": "Offer \"Give us today our daily bread\" beside \"Our Father in heaven\" and ask the child to choose.",
+  "help": "Say the first four lines with actions.",
+  "feedback": "The Lord's Prayer begins, \"Our Father in heaven.\"",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_MONEY": {
+  "skill": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE",
+  "error": "Thinks Jesus promised money or houses.",
+  "example": {
+   "question": "What did Jesus promise his disciples in Acts 1:4?",
+   "wrong_answer": "Money",
+   "correct_answer": "The gift of the Holy Spirit"
+  },
+  "cause": "Promises at home are often about things.",
+  "reveals": "Offer \"Money\" beside \"The gift of the Holy Spirit\" and ask the child to choose.",
+  "help": "Read Acts 1:4-5.",
+  "feedback": "Jesus promised to send the Holy Spirit.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_GO_HOME": {
+  "skill": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE",
+  "error": "Thinks Jesus told the disciples to go home.",
+  "example": {
+   "question": "Where did Jesus tell the disciples to wait?",
+   "wrong_answer": "At their homes",
+   "correct_answer": "In Jerusalem"
+  },
+  "cause": "Waiting is done at home.",
+  "reveals": "Offer \"At their homes\" beside \"In Jerusalem\" and ask the child to choose.",
+  "help": "Read Acts 1:4.",
+  "feedback": "Jesus told them to wait in Jerusalem.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_ROLE_PUNISH": {
+  "skill": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE",
+  "error": "Thinks the Holy Spirit punishes children who do wrong.",
+  "example": {
+   "question": "Name a role of the Holy Spirit.",
+   "wrong_answer": "He punishes us",
+   "correct_answer": "He helps (teaches, guides, strengthens) us"
+  },
+  "cause": "Unseen powers are pictured as scary.",
+  "reveals": "Offer \"He punishes us\" beside \"He helps (teaches, guides, strengthens) us\" and ask the child to choose.",
+  "help": "Read John 14:26: the Helper.",
+  "feedback": "The Holy Spirit helps, teaches and guides Christians.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE.M_C2_HSP_PROMISE_BROKEN": {
+  "skill": "CRES.G2.THE_CH.THE_HOLY_SPIRIT.HS_PROMISE",
+  "error": "Thinks a promise does not have to be kept, so Jesus' promise may not come true.",
+  "example": {
+   "question": "Did Jesus keep his promise to send the Holy Spirit?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes, at Pentecost (Acts 2)"
+  },
+  "cause": "Children see promises broken.",
+  "reveals": "Offer \"No\" beside \"Yes, at Pentecost (Acts 2)\" and ask the child to choose.",
+  "help": "Read Acts 2:4 briefly: the promise kept.",
+  "feedback": "Jesus kept his promise. The Holy Spirit came at Pentecost.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

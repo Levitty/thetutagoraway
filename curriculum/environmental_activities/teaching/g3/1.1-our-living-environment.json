@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT",
+ "title": "Our Living Environment",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bedwetting is talked about as something many children go through, never named for a child in class. A child who wets the bed is never shamed or punished; a worried parent is pointed to the school nurse or a health worker (SAFE: teacher to confirm wording).",
+ "skills": [
+  {
+   "skill": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.BEDDING",
+   "key_step": "The child names bedding found locally (mattress, mat, blanket, sheet, pillow) and says how a sleeping area is kept clean: air and sun, wash, sweep, keep food away.",
+   "floor": {
+    "prerequisite": "Knows personal items at home.",
+    "question": "Is a toothbrush a personal item or a common item?",
+    "answer": "A personal item"
+   },
+   "representations": [
+    "pictures of a mattress, mat, blanket, sheet and pillow",
+    "a real blanket aired in the sun",
+    "a chart: clean sleeping area"
+   ],
+   "steps": [
+    "Name things we sleep on and under.",
+    "Sort pictures into bedding and not bedding.",
+    "Say three ways to keep bedding clean.",
+    "Say what to do when bedding gets wet."
+   ],
+   "contexts": [
+    "a dormitory at a boarding school",
+    "a child sharing a bed with a sibling",
+    "a mat in a small one-room house"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bed with a mat, a blanket and a pillow."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the blanket.",
+     "say": "How do we keep this clean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say wash it or put it in the sun."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: air, wash, sweep, no food."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.BEDDING.M_E3_BED_ONLY_MATTRESS",
+     "listen_for": [
+      "None of them, bedding is a mattress"
+     ],
+     "ask": "Which of these can be used as bedding? A sisal mat, a cooking pot, a spoon.",
+     "repair": "Show a mat, a blanket and a gunny-bag mattress. Ask: can you sleep on it or under it? Then it is bedding."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.BEDDING.M_E3_BED_WASH_NEVER",
+     "listen_for": [
+      "No, it looks clean"
+     ],
+     "ask": "Wanjiru's blanket looks clean. Should she still put it in the sun sometimes?",
+     "repair": "Smell a blanket aired in the sun and one kept folded for weeks. Say: germs hide where we cannot see."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.BEDDING.M_E3_BED_FOOD_OK",
+     "listen_for": [
+      "On the bed, then shake it"
+     ],
+     "ask": "Where should we eat our food?",
+     "repair": "Show how crumbs bring ants, cockroaches and rats. Agree: food stays away from where we sleep."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.BEDDING.M_E3_BED_WET_HIDE",
+     "listen_for": [
+      "Fold it and hide it"
+     ],
+     "ask": "A child wets the bed at night. What should be done with the wet bedding?",
+     "repair": "Say calmly that many children wet the bed. Wet bedding is washed and dried in the sun; the child bathes. No one is laughed at."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is bedding: a mat or a plate?",
+     "answer": "A mat",
+     "shows": "bedding"
+    },
+    {
+     "question": "Why do we put a blanket in the sun?",
+     "answer": "To kill germs and remove smells",
+     "shows": "hygiene"
+    }
+   ]
+  }
+ ]
+}

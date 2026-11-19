@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G2.RESOUR.ANIMALS",
+ "title": "Animals",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS",
+   "key_step": "The child names food items from animals and matches each to the animal that gives it.",
+   "floor": {
+    "prerequisite": "Knows domestic animals used as food.",
+    "question": "Name an animal kept for meat.",
+    "answer": "A goat (cow, chicken)"
+   },
+   "representations": [
+    "pictures of foods and animals",
+    "a matching chart",
+    "real eggs and milk"
+   ],
+   "steps": [
+    "Name foods from animals.",
+    "Match each food to its animal.",
+    "Find foods that come from more than one animal.",
+    "Sort foods: from animals or from plants."
+   ],
+   "contexts": [
+    "breakfast with milk and eggs",
+    "a fish market at the lake",
+    "a beekeeper in the village"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow, a hen, a bee and a fish."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bee.",
+     "say": "Which food does it give us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say honey."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a line from each animal to its food."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS.M_E2_AFOOD_MILK_COW",
+     "listen_for": [
+      "None"
+     ],
+     "ask": "Which other animals give milk apart from cows?",
+     "repair": "Show pictures of goat and camel milk in northern Kenya."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS.M_E2_AFOOD_HONEY_PLANT",
+     "listen_for": [
+      "None, it comes from trees"
+     ],
+     "ask": "Which animal gives us honey?",
+     "repair": "Show a beehive picture: bees make honey from flower nectar."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS.M_E2_AFOOD_EGGS_DUCK",
+     "listen_for": [
+      "No, only hens"
+     ],
+     "ask": "Do ducks lay eggs that people eat?",
+     "repair": "Show hen, duck and quail eggs. Many birds lay eggs."
+    },
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS.M_E2_AFOOD_BUTTER_PLANT",
+     "listen_for": [
+      "A plant, like cooking oil"
+     ],
+     "ask": "Where does ghee come from?",
+     "repair": "Show how cream from milk is churned into butter and heated into ghee."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which animal gives us eggs?",
+     "answer": "A hen (duck)",
+     "shows": "relates"
+    },
+    {
+     "question": "Name a food from a goat.",
+     "answer": "Milk (meat)",
+     "shows": "identifies"
+    }
+   ]
+  }
+ ]
+}

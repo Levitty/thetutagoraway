@@ -3,15 +3,15 @@
  "subject_key": "cre",
  "grade": 1,
  "source": "KICD Christian Religious Education Activities, First Published in 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; mapped on 19 Nov 2026 to the Grade 5 Maths standard (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric); written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched.",
  "totals": {
   "strands": 5,
   "sub_strands": 17,
   "outcomes": 58,
   "lessons": 90,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 20,
+  "prerequisites": 40,
+  "misconceptions": 80
  },
  "sub_strands": [
   {
@@ -77,8 +77,110 @@
      "indicator": "CRE.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+     "name": "Identify their uniqueness as God's creation and state their gender (Genesis 1:27)",
+     "outcomes": [
+      "CRE.G1.CREATI.SELF_AWARENESS.a",
+      "CRE.G1.CREATI.SELF_AWARENESS.b"
+     ],
+     "mastery": "Says God made each child special and different (no two children are the same, even twins), that God knows each one by name, and states his or her gender as a boy (male) or girl (female) as God created people male and female (Genesis 1:27). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "who made you",
+      "boy or girl",
+      "is anyone exactly like you"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.GOD_MADE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing God made people comes first. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.OWN_NAME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying one's own name. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_SAME",
+     "skill": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+     "error": "Thinks twins or siblings are exactly the same person.",
+     "example": {
+      "question": "Are twins exactly the same?",
+      "wrong_answer": "Yes, the same",
+      "correct_answer": "No, each is special and different"
+     },
+     "cause": "Twins look alike.",
+     "reveals": "Offer \"Yes, the same\" beside \"No, each is special and different\" and ask the child to choose.",
+     "help": "Compare thumbprints of two children, or two leaves of one tree.",
+     "feedback": "Even twins are different. God made each one special.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_GENDER_CLOTHES",
+     "skill": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+     "error": "Thinks a girl becomes a boy if she wears trousers or has short hair.",
+     "example": {
+      "question": "A girl has short hair. Is she still a girl?",
+      "wrong_answer": "No, she is a boy now",
+      "correct_answer": "Yes, she is a girl"
+     },
+     "cause": "Young children judge gender by clothes and hair.",
+     "reveals": "Offer \"No, she is a boy now\" beside \"Yes, she is a girl\" and ask the child to choose.",
+     "help": "Say: God made you a boy or a girl; clothes and hair do not change it.",
+     "feedback": "Short hair does not change a girl into a boy. God made her a girl.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_GOD_FORGETS",
+     "skill": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+     "error": "Thinks God does not know small children's names.",
+     "example": {
+      "question": "Does God know your name?",
+      "wrong_answer": "No, I am too small",
+      "correct_answer": "Yes, God knows me by name"
+     },
+     "cause": "Big people seem more important.",
+     "reveals": "Offer \"No, I am too small\" beside \"Yes, God knows me by name\" and ask the child to choose.",
+     "help": "Say Isaiah 43:1 simply: God says, \"I have called you by name.\"",
+     "feedback": "God knows you by your name.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_MADE_BY",
+     "skill": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+     "error": "Thinks children were made by the hospital or bought.",
+     "example": {
+      "question": "Who made you?",
+      "wrong_answer": "The hospital",
+      "correct_answer": "God"
+     },
+     "cause": "Babies come home from hospital.",
+     "reveals": "Offer \"The hospital\" beside \"God\" and ask the child to choose.",
+     "help": "Sing a song about God making me. Read Genesis 1:27 with pictures.",
+     "feedback": "God made you.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.1.1"
    ]
@@ -150,8 +252,119 @@
      "indicator": "CRE.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+     "name": "Name members of their family and items they share at home",
+     "outcomes": [
+      "CRE.G1.CREATI.MY_FAMILY.a",
+      "CRE.G1.CREATI.MY_FAMILY.c"
+     ],
+     "mastery": "Names members of his or her family (father, mother, brothers, sisters, grandparents, or the guardian who cares for the child), and five items a family shares (food, water, chairs, utensils, the house, a radio or television). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.1.1), never as a phone question: b) pray with family members to foster unity.",
+     "question_forms": [
+      "who is this in the family",
+      "an item we share",
+      "family member or not"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.OWN_NAME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming people at home. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.TAKE_TURNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sharing with others. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.CREATI.MY_FAMILY.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_PETS",
+     "skill": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+     "error": "Lists the dog or cat as a family member instead of people.",
+     "example": {
+      "question": "Name a member of your family.",
+      "wrong_answer": "My dog",
+      "correct_answer": "My mother (father, sister)"
+     },
+     "cause": "Pets live at home and are loved.",
+     "reveals": "Offer \"My dog\" beside \"My mother (father, sister)\" and ask the child to choose.",
+     "help": "Sort pictures: people in the family and animals at home.",
+     "feedback": "Family members are people like mother, father and sisters.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_TOOTHBRUSH",
+     "skill": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+     "error": "Lists a toothbrush as an item the family shares.",
+     "example": {
+      "question": "Does a family share one toothbrush?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, each has his own"
+     },
+     "cause": "Sharing is always praised.",
+     "reveals": "Offer \"Yes\" beside \"No, each has his own\" and ask the child to choose.",
+     "help": "Show personal items and shared items in two baskets.",
+     "feedback": "Each person has his own toothbrush. The family shares food and chairs.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_TWO_ONLY",
+     "skill": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+     "error": "Thinks a family is only a mother and a father.",
+     "example": {
+      "question": "Are brothers and sisters part of the family?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes"
+     },
+     "cause": "The child pictures parents as the family.",
+     "reveals": "Offer \"No\" beside \"Yes\" and ask the child to choose.",
+     "help": "Draw a family with children and grandparents.",
+     "feedback": "Brothers, sisters and grandparents are family too.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1.M_C1_FAM_SHARE_NONE",
+     "skill": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+     "error": "Thinks his things at home should never be shared.",
+     "example": {
+      "question": "Should a family share food at home?",
+      "wrong_answer": "No, my food is mine",
+      "correct_answer": "Yes, families share food"
+     },
+     "cause": "Young children guard their things.",
+     "reveals": "Offer \"No, my food is mine\" beside \"Yes, families share food\" and ask the child to choose.",
+     "help": "Role-play a family meal where food is shared.",
+     "feedback": "Families share food, water and chairs.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.1.1"
    ]
@@ -213,8 +426,118 @@
      "indicator": "CRE.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1",
+     "name": "Name plants and animals God created (Genesis 1:11, 24)",
+     "outcomes": [
+      "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.a"
+     ],
+     "mastery": "Names plants (trees, grass, maize, flowers, beans) and animals (cows, goats, birds, fish, dogs) in the environment and says God made them (Genesis 1:11, 24), plants before animals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.1.1), never as a phone question: b) take part in keeping the home environment clean.",
+     "question_forms": [
+      "plant or animal",
+      "who made it",
+      "name one"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.GOD_MADE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing God made the world. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "God made people, and also plants and animals. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1.M_C1_PA_TREE_ANIMAL",
+     "skill": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1",
+     "error": "Calls a tree an animal because it is alive.",
+     "example": {
+      "question": "Is a tree a plant or an animal?",
+      "wrong_answer": "An animal",
+      "correct_answer": "A plant"
+     },
+     "cause": "Living things are mixed.",
+     "reveals": "Offer \"An animal\" beside \"A plant\" and ask the child to choose.",
+     "help": "Sort pictures: plants stay in one place and grow from the ground; animals move and eat.",
+     "feedback": "A tree is a plant.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1.M_C1_PA_FISH_NOT",
+     "skill": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1",
+     "error": "Thinks fish and birds are not animals.",
+     "example": {
+      "question": "Is a fish an animal?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes"
+     },
+     "cause": "Animal means four legs to young children.",
+     "reveals": "Offer \"No\" beside \"Yes\" and ask the child to choose.",
+     "help": "Show animals that swim, fly and walk.",
+     "feedback": "Fish and birds are animals too.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1.M_C1_PA_FARMER_MADE",
+     "skill": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1",
+     "error": "Thinks the farmer made the plants and animals.",
+     "example": {
+      "question": "Who created plants and animals?",
+      "wrong_answer": "The farmer",
+      "correct_answer": "God"
+     },
+     "cause": "Farmers grow crops and keep animals.",
+     "reveals": "Offer \"The farmer\" beside \"God\" and ask the child to choose.",
+     "help": "Read Genesis 1:11, 24. Farmers care for what God made.",
+     "feedback": "God created plants and animals. Farmers take care of them.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1.M_C1_PA_FLOWER_NOT",
+     "skill": "CRES.G1.CREATI.CREATION_OF_PLANTS_AND_A.PLANTS_ANIMALS_G1",
+     "error": "Thinks flowers or grass are not plants.",
+     "example": {
+      "question": "Is grass a plant?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes"
+     },
+     "cause": "Plant means crops in the garden.",
+     "reveals": "Offer \"No\" beside \"Yes\" and ask the child to choose.",
+     "help": "Walk outside and touch grass, flowers, trees: all plants.",
+     "feedback": "Grass and flowers are plants.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.1.1"
    ]
@@ -283,8 +606,209 @@
      "indicator": "CRE.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+     "name": "Identify ways of handling the Holy Bible",
+     "outcomes": [
+      "CRE.G1.THE_HO.THE_WORD_OF_GOD.a"
+     ],
+     "mastery": "Names ways of handling the Bible with respect: hold it with clean hands, open it gently, do not tear, write or draw in it, do not throw it or sit on it, keep it in a safe clean place, cover it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "right or wrong way to handle the Bible",
+      "name a way to care for it",
+      "where to keep it"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.BIBLE_HOLY_BOOK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the Bible is God's book. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.FOLLOW_INSTRUCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Following simple care instructions. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+     "name": "Mention the two divisions of the Bible and name the first two books of the New Testament",
+     "outcomes": [
+      "CRE.G1.THE_HO.THE_WORD_OF_GOD.b",
+      "CRE.G1.THE_HO.THE_WORD_OF_GOD.c"
+     ],
+     "mastery": "Says the Bible has two divisions, the Old Testament and the New Testament, and names Matthew and Mark as the first two books of the New Testament. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "two parts of the Bible",
+      "first book of the New Testament",
+      "second book"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Handling the Bible comes before finding its parts. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.BIBLE_HOLY_BOOK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the Bible as God's book. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_DRAW",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+     "error": "Thinks it is fine to draw pictures in the Bible.",
+     "example": {
+      "question": "Can you draw in the Bible?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, keep it clean"
+     },
+     "cause": "Children draw in many books.",
+     "reveals": "Offer \"Yes\" beside \"No, keep it clean\" and ask the child to choose.",
+     "help": "Show a clean Bible and a scribbled book. Agree how we treat God's book.",
+     "feedback": "We do not draw or write in the Bible.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_FLOOR",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+     "error": "Thinks the Bible can be put on the floor or used as a seat.",
+     "example": {
+      "question": "Where should you keep the Bible?",
+      "wrong_answer": "On the floor",
+      "correct_answer": "In a clean safe place"
+     },
+     "cause": "Things are put down anywhere.",
+     "reveals": "Offer \"On the floor\" beside \"In a clean safe place\" and ask the child to choose.",
+     "help": "Choose a special shelf in class for the Bible.",
+     "feedback": "Keep the Bible in a clean, safe place.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_DIRTY_HANDS",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+     "error": "Thinks hands need not be clean to hold the Bible.",
+     "example": {
+      "question": "What should your hands be like when you hold the Bible?",
+      "wrong_answer": "Any way",
+      "correct_answer": "Clean"
+     },
+     "cause": "Washing is for meals.",
+     "reveals": "Offer \"Any way\" beside \"Clean\" and ask the child to choose.",
+     "help": "Wash hands before Bible time.",
+     "feedback": "Hold the Bible with clean hands.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE.M_C1_HB_THROW",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+     "error": "Thinks tossing the Bible to a friend is fine.",
+     "example": {
+      "question": "Can you throw the Bible to your friend?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, hand it gently"
+     },
+     "cause": "Books are passed by throwing in play.",
+     "reveals": "Offer \"Yes\" beside \"No, hand it gently\" and ask the child to choose.",
+     "help": "Practise passing the Bible with two hands.",
+     "feedback": "Pass the Bible gently with your hands.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_THREE",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+     "error": "Thinks the Bible has many parts, one for each story.",
+     "example": {
+      "question": "How many divisions does the Bible have?",
+      "wrong_answer": "Many",
+      "correct_answer": "Two"
+     },
+     "cause": "The Bible has many stories.",
+     "reveals": "Offer \"Many\" beside \"Two\" and ask the child to choose.",
+     "help": "Show a Bible with a ribbon between the two parts.",
+     "feedback": "The Bible has two divisions: Old and New Testament.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_GENESIS",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+     "error": "Names Genesis as the first New Testament book.",
+     "example": {
+      "question": "What is the first book of the New Testament?",
+      "wrong_answer": "Genesis",
+      "correct_answer": "Matthew"
+     },
+     "cause": "Genesis is the first page.",
+     "reveals": "Offer \"Genesis\" beside \"Matthew\" and ask the child to choose.",
+     "help": "Open at the ribbon: the New Testament starts with Matthew.",
+     "feedback": "The New Testament begins with Matthew.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_NAMES",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+     "error": "Names the testaments as \"the old book and the new book\" bought at different times.",
+     "example": {
+      "question": "What does \"New Testament\" mean?",
+      "wrong_answer": "A newer copy of the Bible",
+      "correct_answer": "The second part of the Bible"
+     },
+     "cause": "New means just bought.",
+     "reveals": "Offer \"A newer copy of the Bible\" beside \"The second part of the Bible\" and ask the child to choose.",
+     "help": "Show both parts in one Bible.",
+     "feedback": "The New Testament is the second part of the same Bible.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS.M_C1_BP_ORDER",
+     "skill": "CRES.G1.THE_HO.THE_WORD_OF_GOD.BIBLE_PARTS",
+     "error": "Puts Mark before Matthew.",
+     "example": {
+      "question": "Which comes first: Matthew or Mark?",
+      "wrong_answer": "Mark",
+      "correct_answer": "Matthew"
+     },
+     "cause": "Both start with M.",
+     "reveals": "Offer \"Mark\" beside \"Matthew\" and ask the child to choose.",
+     "help": "Clap \"Mat-thew, Mark\" in order.",
+     "feedback": "Matthew comes first, then Mark.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.1.1"
    ]
@@ -355,8 +879,209 @@
      "indicator": "CRE.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+     "name": "Narrate the story of Joseph and his brothers (Genesis 37)",
+     "outcomes": [
+      "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.a"
+     ],
+     "mastery": "Narrates Genesis 37: Jacob loved Joseph and gave him a richly coloured coat; his brothers were jealous; Joseph dreamt their sheaves bowed to his; the brothers hated him more and sold him to traders going to Egypt, then told their father a wild animal had killed him. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what Jacob gave Joseph",
+      "why the brothers were angry",
+      "what they did"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.LISTEN_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Listening to and retelling a short Bible story. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Family members, brothers and sisters. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+     "name": "Discuss how to treat siblings and name values for peaceful living",
+     "outcomes": [
+      "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.b",
+      "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.c"
+     ],
+     "mastery": "Says how to treat brothers and sisters well (share, help, play together, say sorry, not fight or tease, not be jealous) and names values for peaceful co-existence: love, sharing, forgiveness, respect, kindness. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "kind or unkind to a sibling",
+      "a value for living in peace",
+      "what to do here"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Joseph's brothers show what jealousy does. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.POLITE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying sorry and thank you. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_GIFT_BROTHERS",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+     "error": "Thinks all the brothers got coats.",
+     "example": {
+      "question": "Who got the coat of many colours?",
+      "wrong_answer": "All the brothers",
+      "correct_answer": "Only Joseph"
+     },
+     "cause": "Parents give to all children.",
+     "reveals": "Offer \"All the brothers\" beside \"Only Joseph\" and ask the child to choose.",
+     "help": "Show one coloured coat and plain clothes for the brothers.",
+     "feedback": "Only Joseph got the special coat.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_HAPPY",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+     "error": "Thinks the brothers were happy for Joseph.",
+     "example": {
+      "question": "How did the brothers feel about Joseph's coat?",
+      "wrong_answer": "Happy",
+      "correct_answer": "Jealous"
+     },
+     "cause": "Children expect families to be happy.",
+     "reveals": "Offer \"Happy\" beside \"Jealous\" and ask the child to choose.",
+     "help": "Make a jealous face and name it.",
+     "feedback": "The brothers were jealous of Joseph.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_KILLED",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+     "error": "Thinks a wild animal really killed Joseph.",
+     "example": {
+      "question": "Did a wild animal kill Joseph?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, his brothers sold him and lied"
+     },
+     "cause": "The child believes the brothers' words.",
+     "reveals": "Offer \"Yes\" beside \"No, his brothers sold him and lied\" and ask the child to choose.",
+     "help": "Tell the story again slowly: sold to traders, then the lie.",
+     "feedback": "The brothers sold Joseph and lied to their father.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_DREAM",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+     "error": "Thinks Joseph dreamt about the coat.",
+     "example": {
+      "question": "What did Joseph dream about?",
+      "wrong_answer": "His coat",
+      "correct_answer": "His brothers' sheaves bowing to his"
+     },
+     "cause": "The coat is the most vivid part.",
+     "reveals": "Offer \"His coat\" beside \"His brothers' sheaves bowing to his\" and ask the child to choose.",
+     "help": "Draw bundles of grain bowing to one bundle.",
+     "feedback": "Joseph dreamt that his brothers' sheaves bowed to his.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_FIGHT",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+     "error": "Thinks hitting a sibling who takes your toy is right.",
+     "example": {
+      "question": "Your brother takes your toy. What should you do?",
+      "wrong_answer": "Hit him",
+      "correct_answer": "Ask him to give it back or tell a parent"
+     },
+     "cause": "Hitting back seems fair.",
+     "reveals": "Offer \"Hit him\" beside \"Ask him to give it back or tell a parent\" and ask the child to choose.",
+     "help": "Role-play asking kindly and telling a parent.",
+     "feedback": "Do not hit. Ask kindly or tell a parent.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_JEALOUS",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+     "error": "Thinks it is fine to be angry when a sibling gets something.",
+     "example": {
+      "question": "Your sister gets new shoes. What should you do?",
+      "wrong_answer": "Be angry",
+      "correct_answer": "Be happy for her"
+     },
+     "cause": "Jealousy is a natural first feeling.",
+     "reveals": "Offer \"Be angry\" beside \"Be happy for her\" and ask the child to choose.",
+     "help": "Link with Joseph's brothers. Practise saying \"I am happy for you\".",
+     "feedback": "Be happy when your sister gets something good.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_VALUE_MONEY",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+     "error": "Names money or toys as values for living in peace.",
+     "example": {
+      "question": "Which helps a family live in peace: love or a new toy?",
+      "wrong_answer": "A new toy",
+      "correct_answer": "Love"
+     },
+     "cause": "Value is a new word.",
+     "reveals": "Offer \"A new toy\" beside \"Love\" and ask the child to choose.",
+     "help": "Show values cards: love, sharing, forgiveness.",
+     "feedback": "Love, sharing and forgiveness help a family live in peace.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_SORRY",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+     "error": "Thinks saying sorry is only for the younger child.",
+     "example": {
+      "question": "Who should say sorry after a quarrel?",
+      "wrong_answer": "Only the younger one",
+      "correct_answer": "The one who did wrong, even if older"
+     },
+     "cause": "Older children are rarely made to apologise.",
+     "reveals": "Offer \"Only the younger one\" beside \"The one who did wrong, even if older\" and ask the child to choose.",
+     "help": "Role-play an older sibling saying sorry.",
+     "feedback": "Whoever did wrong says sorry, younger or older.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.1.1"
    ]
@@ -419,8 +1144,110 @@
      "indicator": "CRE.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+     "name": "Retell the story of Elijah and the chariot of fire and list ways of a good relationship with God (2 Kings 2:1, 11-12)",
+     "outcomes": [
+      "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.a",
+      "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.b"
+     ],
+     "mastery": "Retells 2 Kings 2:1, 11-12: Elijah and Elisha were walking together; a chariot of fire with horses of fire came between them; Elijah went up to heaven in a whirlwind; Elisha saw it and cried out. Lists ways to have a good relationship with God: pray, read the Bible, obey God and parents, go to church or Sunday school, be kind. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "how Elijah went to heaven",
+      "who was with him",
+      "a way to please God"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.LISTEN_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Retelling a short Bible story. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.SHORT_PRAYER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying a short prayer: one way to be close to God. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_DIED",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+     "error": "Thinks Elijah died and was buried.",
+     "example": {
+      "question": "How did Elijah leave the earth?",
+      "wrong_answer": "He died and was buried",
+      "correct_answer": "He went up to heaven in a whirlwind"
+     },
+     "cause": "Everyone who leaves the story dies.",
+     "reveals": "Offer \"He died and was buried\" beside \"He went up to heaven in a whirlwind\" and ask the child to choose.",
+     "help": "Read 2 Kings 2:11 with a picture.",
+     "feedback": "Elijah went up to heaven in a whirlwind.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_CAR",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+     "error": "Thinks a chariot is a car or a lorry.",
+     "example": {
+      "question": "What came between Elijah and Elisha?",
+      "wrong_answer": "A car",
+      "correct_answer": "A chariot of fire with horses of fire"
+     },
+     "cause": "Chariot is a new word.",
+     "reveals": "Offer \"A car\" beside \"A chariot of fire with horses of fire\" and ask the child to choose.",
+     "help": "Show a picture of a chariot pulled by horses.",
+     "feedback": "A chariot of fire with horses of fire came.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_ALONE",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+     "error": "Thinks Elijah was alone.",
+     "example": {
+      "question": "Who was with Elijah?",
+      "wrong_answer": "Nobody",
+      "correct_answer": "Elisha"
+     },
+     "cause": "Names are hard.",
+     "reveals": "Offer \"Nobody\" beside \"Elisha\" and ask the child to choose.",
+     "help": "Use two name cards.",
+     "feedback": "Elisha was with Elijah.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT.M_C1_ELI_GOOD_REL",
+     "skill": "CRES.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.ELIJAH_CHARIOT",
+     "error": "Thinks being friends with God means getting things from God.",
+     "example": {
+      "question": "Name a way to have a good relationship with God.",
+      "wrong_answer": "Ask God for toys",
+      "correct_answer": "Pray (read the Bible, obey)"
+     },
+     "cause": "Prayer is heard mostly as asking.",
+     "reveals": "Offer \"Ask God for toys\" beside \"Pray (read the Bible, obey)\" and ask the child to choose.",
+     "help": "List: pray, read the Bible, obey, go to Sunday school.",
+     "feedback": "We grow close to God by praying, reading the Bible and obeying.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.1.1"
    ]
@@ -490,8 +1317,119 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+     "name": "Retell the birth of Jesus Christ (Luke 2:4-13)",
+     "outcomes": [
+      "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a"
+     ],
+     "mastery": "Retells Luke 2:4-13: Joseph and Mary travelled from Nazareth to Bethlehem; there was no room in the inn; Jesus was born and laid in a manger; an angel told shepherds the good news and many angels praised God, \"Glory to God in the highest\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) dramatise the birth of Jesus Christ; c) express the joy of the angels through song and dance.",
+     "question_forms": [
+      "where Jesus was born",
+      "where he was laid",
+      "who told the shepherds"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.CHRISTMAS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing Christmas is about Jesus' birth. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.LISTEN_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Retelling a short Bible story. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.b",
+       "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.c"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_HOSPITAL",
+     "skill": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+     "error": "Thinks Jesus was born in a hospital or a house.",
+     "example": {
+      "question": "Where was baby Jesus laid after he was born?",
+      "wrong_answer": "In a hospital bed",
+      "correct_answer": "In a manger"
+     },
+     "cause": "Babies today are born in hospitals.",
+     "reveals": "Offer \"In a hospital bed\" beside \"In a manger\" and ask the child to choose.",
+     "help": "Show a manger: a feeding box for animals.",
+     "feedback": "Baby Jesus was laid in a manger.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_NAZARETH",
+     "skill": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+     "error": "Thinks Jesus was born in Nazareth or Nairobi.",
+     "example": {
+      "question": "In which town was Jesus born?",
+      "wrong_answer": "Nazareth",
+      "correct_answer": "Bethlehem"
+     },
+     "cause": "Nazareth is also in the story.",
+     "reveals": "Offer \"Nazareth\" beside \"Bethlehem\" and ask the child to choose.",
+     "help": "Draw the journey from Nazareth to Bethlehem.",
+     "feedback": "Jesus was born in Bethlehem.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_WISE_ANGEL",
+     "skill": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+     "error": "Thinks the wise men told the shepherds.",
+     "example": {
+      "question": "Who told the shepherds about baby Jesus?",
+      "wrong_answer": "The wise men",
+      "correct_answer": "An angel"
+     },
+     "cause": "All Christmas visitors are mixed.",
+     "reveals": "Offer \"The wise men\" beside \"An angel\" and ask the child to choose.",
+     "help": "Show an angel appearing to shepherds at night.",
+     "feedback": "An angel told the shepherds.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS.M_C1_BJ_INN_ROOM",
+     "skill": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+     "error": "Thinks Mary and Joseph stayed in the inn.",
+     "example": {
+      "question": "Was there room for Mary and Joseph in the inn?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No"
+     },
+     "cause": "Travellers stay in inns.",
+     "reveals": "Offer \"Yes\" beside \"No\" and ask the child to choose.",
+     "help": "Read Luke 2:7 and act knocking at a full inn.",
+     "feedback": "There was no room in the inn.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -560,8 +1498,119 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+     "name": "Retell the story of Jesus in the temple at twelve (Luke 2:42-49)",
+     "outcomes": [
+      "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.a"
+     ],
+     "mastery": "Retells Luke 2:42-49: when Jesus was twelve, his family went to Jerusalem for the Passover; on the way home his parents could not find him; after three days they found him in the temple sitting among the teachers, listening and asking questions; he said he had to be in his Father's house; then he went home and obeyed them (Luke 2:51). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) obey their parents as portrayed by Jesus Christ; c) take part in Sunday or Sabbath school activities.",
+     "question_forms": [
+      "how old Jesus was",
+      "where his parents found him",
+      "what he was doing"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.BIRTH_JESUS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The birth of Jesus comes before his childhood. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.CHURCH_PLACE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing a place of worship. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.b",
+       "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.c"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_BABY",
+     "skill": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+     "error": "Thinks Jesus was a baby in this story.",
+     "example": {
+      "question": "How old was Jesus when he stayed in the temple?",
+      "wrong_answer": "A baby",
+      "correct_answer": "Twelve years"
+     },
+     "cause": "Jesus as a child is pictured as a baby.",
+     "reveals": "Offer \"A baby\" beside \"Twelve years\" and ask the child to choose.",
+     "help": "Show a picture of a boy of twelve.",
+     "feedback": "Jesus was twelve years old.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_LOST_PLAY",
+     "skill": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+     "error": "Thinks Jesus was lost playing in the market.",
+     "example": {
+      "question": "Where did his parents find Jesus?",
+      "wrong_answer": "In the market playing",
+      "correct_answer": "In the temple with the teachers"
+     },
+     "cause": "Lost children are found playing.",
+     "reveals": "Offer \"In the market playing\" beside \"In the temple with the teachers\" and ask the child to choose.",
+     "help": "Read Luke 2:46.",
+     "feedback": "They found Jesus in the temple with the teachers.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_TEACHING_ADULTS",
+     "skill": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+     "error": "Thinks Jesus was shouting at or teaching the teachers rudely.",
+     "example": {
+      "question": "What was Jesus doing in the temple?",
+      "wrong_answer": "Shouting at the teachers",
+      "correct_answer": "Listening and asking questions"
+     },
+     "cause": "Children picture a clever boy showing off.",
+     "reveals": "Offer \"Shouting at the teachers\" beside \"Listening and asking questions\" and ask the child to choose.",
+     "help": "Act it out: sit, listen, ask.",
+     "feedback": "Jesus was listening and asking questions.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY.M_C1_TB_DISOBEYED",
+     "skill": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+     "error": "Thinks Jesus refused to go home with his parents.",
+     "example": {
+      "question": "What did Jesus do after his parents found him?",
+      "wrong_answer": "Refused to go home",
+      "correct_answer": "Went home and obeyed them"
+     },
+     "cause": "The story seems to show him staying.",
+     "reveals": "Offer \"Refused to go home\" beside \"Went home and obeyed them\" and ask the child to choose.",
+     "help": "Read Luke 2:51.",
+     "feedback": "Jesus went home with his parents and obeyed them.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -624,8 +1673,119 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+     "name": "Name the place where Jesus was baptised and the person who baptised him (Matthew 3:13-15)",
+     "outcomes": [
+      "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.a",
+      "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.b"
+     ],
+     "mastery": "Names the River Jordan as the place and John the Baptist as the person who baptised Jesus (Matthew 3:13-15), and says John felt Jesus should baptise him, showing humility, but Jesus asked to be baptised. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: c) practise humility in their interaction with others.",
+     "question_forms": [
+      "where",
+      "who",
+      "what John said"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The life of Jesus in order: childhood, then baptism. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.LISTEN_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Retelling a short Bible story. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.c"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_PETER",
+     "skill": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+     "error": "Says Peter or a pastor baptised Jesus.",
+     "example": {
+      "question": "Who baptised Jesus?",
+      "wrong_answer": "Peter",
+      "correct_answer": "John the Baptist"
+     },
+     "cause": "Peter is a well-known name.",
+     "reveals": "Offer \"Peter\" beside \"John the Baptist\" and ask the child to choose.",
+     "help": "Show a name card \"John the Baptist\" by a river picture.",
+     "feedback": "John the Baptist baptised Jesus.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_CHURCH",
+     "skill": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+     "error": "Thinks Jesus was baptised in a church.",
+     "example": {
+      "question": "Where was Jesus baptised?",
+      "wrong_answer": "In a church",
+      "correct_answer": "In the River Jordan"
+     },
+     "cause": "Baptisms the child sees are in church.",
+     "reveals": "Offer \"In a church\" beside \"In the River Jordan\" and ask the child to choose.",
+     "help": "Show a river picture. Read Matthew 3:13.",
+     "feedback": "Jesus was baptised in the River Jordan.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_LAKE",
+     "skill": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+     "error": "Names the Sea of Galilee or Lake Victoria.",
+     "example": {
+      "question": "Which river?",
+      "wrong_answer": "Lake Victoria",
+      "correct_answer": "The River Jordan"
+     },
+     "cause": "Known big water comes to mind.",
+     "reveals": "Offer \"Lake Victoria\" beside \"The River Jordan\" and ask the child to choose.",
+     "help": "Say \"Jordan\" with a river action.",
+     "feedback": "Jesus was baptised in the River Jordan.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS.M_C1_BAP_JOHN_PROUD",
+     "skill": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+     "error": "Thinks John was proud to baptise Jesus.",
+     "example": {
+      "question": "What did John say when Jesus came?",
+      "wrong_answer": "I am greater than you",
+      "correct_answer": "I need to be baptised by you"
+     },
+     "cause": "The baptiser seems the important one.",
+     "reveals": "Offer \"I am greater than you\" beside \"I need to be baptised by you\" and ask the child to choose.",
+     "help": "Read Matthew 3:14: John was humble.",
+     "feedback": "John humbly said, \"I need to be baptised by you.\"",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -689,8 +1849,118 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+     "name": "Retell how Jesus changed water into wine (John 2:1-10)",
+     "outcomes": [
+      "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.a"
+     ],
+     "mastery": "Retells John 2:1-10: at a wedding in Cana the wine ran out; Mary told Jesus and told the servants \"Do whatever he tells you\"; Jesus told them to fill six stone jars with water and take some to the master of the banquet; it had become wine, the best wine. It was Jesus' first miracle. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) obey instructions as portrayed in the wedding at Cana.",
+     "question_forms": [
+      "what ran out",
+      "what Jesus told the servants",
+      "what happened"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.FOLLOW_INSTRUCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Following instructions, as the servants did. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.BAPTISM_JESUS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The start of Jesus' work after his baptism. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_FOOD",
+     "skill": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+     "error": "Thinks the food ran out.",
+     "example": {
+      "question": "What ran out at the wedding?",
+      "wrong_answer": "Food",
+      "correct_answer": "Wine"
+     },
+     "cause": "Feasts run out of food.",
+     "reveals": "Offer \"Food\" beside \"Wine\" and ask the child to choose.",
+     "help": "Read John 2:3.",
+     "feedback": "The wine ran out.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_SHOP",
+     "skill": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+     "error": "Thinks Jesus bought more wine.",
+     "example": {
+      "question": "How did Jesus help?",
+      "wrong_answer": "He bought wine",
+      "correct_answer": "He changed water into wine"
+     },
+     "cause": "Running out means buying more.",
+     "reveals": "Offer \"He bought wine\" beside \"He changed water into wine\" and ask the child to choose.",
+     "help": "Act it out with jars of water.",
+     "feedback": "Jesus changed water into wine.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_MILK",
+     "skill": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+     "error": "Thinks the water became milk or juice.",
+     "example": {
+      "question": "What did the water become?",
+      "wrong_answer": "Milk",
+      "correct_answer": "Wine"
+     },
+     "cause": "Wine is not a child's drink.",
+     "reveals": "Offer \"Milk\" beside \"Wine\" and ask the child to choose.",
+     "help": "Read John 2:9.",
+     "feedback": "The water became wine.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_SERVANTS_NO",
+     "skill": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+     "error": "Thinks the servants refused to obey.",
+     "example": {
+      "question": "What did the servants do when Jesus spoke?",
+      "wrong_answer": "Refused",
+      "correct_answer": "Filled the jars as he said"
+     },
+     "cause": "Carrying water is hard work.",
+     "reveals": "Offer \"Refused\" beside \"Filled the jars as he said\" and ask the child to choose.",
+     "help": "Read John 2:7-8 and act it out.",
+     "feedback": "The servants obeyed and filled the jars.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -754,8 +2024,118 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+     "name": "Retell the healing of Simon's mother-in-law (Luke 4:38-39)",
+     "outcomes": [
+      "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.a"
+     ],
+     "mastery": "Retells Luke 4:38-39: Simon's mother-in-law had a high fever; they asked Jesus to help her; he bent over her and rebuked the fever, and it left her; she got up at once and began to serve them, showing her thanks. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) show gratitude to others as portrayed by Simon’s mother- in- law.",
+     "question_forms": [
+      "what was wrong with her",
+      "what Jesus did",
+      "what she did after"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Jesus' first miracle, another sign of his power. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.POLITE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying thank you after being helped. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_LEG",
+     "skill": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+     "error": "Thinks she had a broken leg.",
+     "example": {
+      "question": "What was wrong with Simon's mother-in-law?",
+      "wrong_answer": "A broken leg",
+      "correct_answer": "A high fever"
+     },
+     "cause": "Illness is pictured as injury.",
+     "reveals": "Offer \"A broken leg\" beside \"A high fever\" and ask the child to choose.",
+     "help": "Touch a forehead: hot means fever.",
+     "feedback": "She had a high fever.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_MEDICINE",
+     "skill": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+     "error": "Thinks Jesus gave her medicine.",
+     "example": {
+      "question": "How did Jesus heal her?",
+      "wrong_answer": "Gave her medicine",
+      "correct_answer": "He rebuked the fever and it left"
+     },
+     "cause": "Illness at home is treated with medicine.",
+     "reveals": "Offer \"Gave her medicine\" beside \"He rebuked the fever and it left\" and ask the child to choose.",
+     "help": "Read Luke 4:39.",
+     "feedback": "Jesus spoke to the fever and it left her.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_SLEPT",
+     "skill": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+     "error": "Thinks she slept after being healed.",
+     "example": {
+      "question": "What did she do after she was healed?",
+      "wrong_answer": "Went back to sleep",
+      "correct_answer": "Got up and served them"
+     },
+     "cause": "Sick people rest after getting better.",
+     "reveals": "Offer \"Went back to sleep\" beside \"Got up and served them\" and ask the child to choose.",
+     "help": "Act out getting up and serving food.",
+     "feedback": "She got up at once and served them.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL.M_C1_SIM_MOTHER",
+     "skill": "CRES.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.SIMON_MIL",
+     "error": "Thinks she was Simon's own mother.",
+     "example": {
+      "question": "Whose mother-in-law was she?",
+      "wrong_answer": "Jesus'",
+      "correct_answer": "Simon's (Simon Peter's)"
+     },
+     "cause": "Mother-in-law is a new word.",
+     "reveals": "Offer \"Jesus'\" beside \"Simon's (Simon Peter's)\" and ask the child to choose.",
+     "help": "Explain: the mother of Simon's wife.",
+     "feedback": "She was the mother of Simon's wife.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -825,8 +2205,217 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+     "name": "Identify items they share at home as a family",
+     "outcomes": [
+      "CRE.G1.CHRIST.SHARING.a"
+     ],
+     "mastery": "Names items a family shares at home (food, water, chairs, the table, utensils, the radio or television, the house) and says sharing shows love; personal items (toothbrush, towel, comb) are not shared. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) practise the value of sharing at home and school.",
+     "question_forms": [
+      "shared or personal",
+      "name an item we share",
+      "why share"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.CREATI.MY_FAMILY.FAMILY_G1",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Items shared at home, named in My Family. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.TAKE_TURNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Taking turns and sharing. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.CHRIST.SHARING.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES",
+     "name": "Retell the story of the little boy with two fish and five loaves (John 6:1-14)",
+     "outcomes": [
+      "CRE.G1.CHRIST.SHARING.c"
+     ],
+     "mastery": "Retells John 6:1-14: a large crowd was hungry; a little boy had five loaves and two fish; he gave them to Jesus; Jesus gave thanks and shared them; everyone ate; twelve baskets of leftovers were gathered so nothing was wasted. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what the boy had",
+      "what Jesus did",
+      "what was left"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sharing at home. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.PP2.READINESS.LISTEN_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Retelling a short Bible story. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_TOWEL",
+     "skill": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+     "error": "Thinks towels are shared by the whole family.",
+     "example": {
+      "question": "Is a bathing towel shared?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is personal"
+     },
+     "cause": "Towels hang together.",
+     "reveals": "Offer \"Yes\" beside \"No, it is personal\" and ask the child to choose.",
+     "help": "Two baskets: shared and personal.",
+     "feedback": "A bathing towel is personal.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_GREEDY",
+     "skill": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+     "error": "Thinks the biggest share should go to the one who grabs first.",
+     "example": {
+      "question": "Food is on the table. Who should get it first?",
+      "wrong_answer": "Whoever grabs first",
+      "correct_answer": "Everyone shares fairly"
+     },
+     "cause": "Grabbing works in play.",
+     "reveals": "Offer \"Whoever grabs first\" beside \"Everyone shares fairly\" and ask the child to choose.",
+     "help": "Role-play serving fairly.",
+     "feedback": "Share food fairly so everyone gets some.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_TV_MINE",
+     "skill": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+     "error": "Thinks the television belongs only to the child who likes it.",
+     "example": {
+      "question": "Who uses the TV at home?",
+      "wrong_answer": "Only me",
+      "correct_answer": "The whole family"
+     },
+     "cause": "Children claim favourite things.",
+     "reveals": "Offer \"Only me\" beside \"The whole family\" and ask the child to choose.",
+     "help": "Take turns choosing in role-play.",
+     "feedback": "The whole family shares the TV.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.SHARE_HOME.M_C1_SH_WHY",
+     "skill": "CRES.G1.CHRIST.SHARING.SHARE_HOME",
+     "error": "Does not know why families share.",
+     "example": {
+      "question": "Why do families share?",
+      "wrong_answer": "Because they must",
+      "correct_answer": "To show love and care"
+     },
+     "cause": "Sharing is a rule without reason.",
+     "reveals": "Offer \"Because they must\" beside \"To show love and care\" and ask the child to choose.",
+     "help": "Ask how it feels when someone shares with you.",
+     "feedback": "Families share to show love.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_NUMBERS",
+     "skill": "CRES.G1.CHRIST.SHARING.BOY_LOAVES",
+     "error": "Swaps the numbers: two loaves and five fish.",
+     "example": {
+      "question": "How many loaves did the boy have?",
+      "wrong_answer": "Two",
+      "correct_answer": "Five"
+     },
+     "cause": "The numbers are easily swapped.",
+     "reveals": "Offer \"Two\" beside \"Five\" and ask the child to choose.",
+     "help": "Show five fingers for loaves, two for fish.",
+     "feedback": "The boy had five loaves and two fish.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_KEPT",
+     "skill": "CRES.G1.CHRIST.SHARING.BOY_LOAVES",
+     "error": "Thinks the boy kept his food.",
+     "example": {
+      "question": "What did the boy do with his food?",
+      "wrong_answer": "Ate it himself",
+      "correct_answer": "Gave it to Jesus"
+     },
+     "cause": "Children keep their lunch.",
+     "reveals": "Offer \"Ate it himself\" beside \"Gave it to Jesus\" and ask the child to choose.",
+     "help": "Act out giving the basket.",
+     "feedback": "The boy gave his food to Jesus to share.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_WASTE",
+     "skill": "CRES.G1.CHRIST.SHARING.BOY_LOAVES",
+     "error": "Thinks the leftovers were thrown away.",
+     "example": {
+      "question": "What happened to the leftover food?",
+      "wrong_answer": "Thrown away",
+      "correct_answer": "Gathered into twelve baskets"
+     },
+     "cause": "Leftovers are thrown away at home.",
+     "reveals": "Offer \"Thrown away\" beside \"Gathered into twelve baskets\" and ask the child to choose.",
+     "help": "Read John 6:12-13.",
+     "feedback": "The leftovers were gathered so nothing was wasted.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.SHARING.BOY_LOAVES.M_C1_BL_FEW",
+     "skill": "CRES.G1.CHRIST.SHARING.BOY_LOAVES",
+     "error": "Thinks only a few people ate.",
+     "example": {
+      "question": "How many people ate?",
+      "wrong_answer": "A few",
+      "correct_answer": "A very large crowd (about five thousand men)"
+     },
+     "cause": "Five loaves seems enough for a few.",
+     "reveals": "Offer \"A few\" beside \"A very large crowd (about five thousand men)\" and ask the child to choose.",
+     "help": "Show a crowd picture.",
+     "feedback": "A very large crowd ate.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -887,8 +2476,118 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+     "name": "List the importance of obeying parents (Ephesians 6:1-3)",
+     "outcomes": [
+      "CRE.G1.CHRIST.OBEDIENCE.a"
+     ],
+     "mastery": "Lists why children obey parents: God commands it (Ephesians 6:1: children, obey your parents in the Lord, for this is right), it keeps them safe, things go well and they enjoy long life (6:3), it pleases parents; and knows children never obey anyone asking for something unsafe or secret. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) practise obedience at home as guided by the scriptures.",
+     "question_forms": [
+      "why obey parents",
+      "obedient or not",
+      "what Ephesians 6:1 says"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.FOLLOW_INSTRUCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Following simple instructions. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.TEMPLE_BOY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Jesus went home and obeyed his parents. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.CHRIST.OBEDIENCE.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_FEAR",
+     "skill": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+     "error": "Thinks we obey parents only so we are not beaten.",
+     "example": {
+      "question": "Why should children obey parents?",
+      "wrong_answer": "So we are not beaten",
+      "correct_answer": "God says it is right, and it keeps us safe"
+     },
+     "cause": "Fear is the reason children hear.",
+     "reveals": "Offer \"So we are not beaten\" beside \"God says it is right, and it keeps us safe\" and ask the child to choose.",
+     "help": "Read Ephesians 6:1-3 simply.",
+     "feedback": "We obey parents because God says it is right and it keeps us safe.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_LATER",
+     "skill": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+     "error": "Thinks obeying later is the same as obeying.",
+     "example": {
+      "question": "Mother says \"come and eat\". When should you come?",
+      "wrong_answer": "After my game",
+      "correct_answer": "Straight away"
+     },
+     "cause": "Delay feels like obeying.",
+     "reveals": "Offer \"After my game\" beside \"Straight away\" and ask the child to choose.",
+     "help": "Play a game: obey at once when called.",
+     "feedback": "Obeying means doing it straight away.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_MOTHER_ONLY",
+     "skill": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+     "error": "Thinks only the mother must be obeyed.",
+     "example": {
+      "question": "Should you obey your father too?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes, both parents (and guardians)"
+     },
+     "cause": "The child spends most time with mother.",
+     "reveals": "Offer \"No\" beside \"Yes, both parents (and guardians)\" and ask the child to choose.",
+     "help": "Read \"honour your father and mother\".",
+     "feedback": "Obey both your father and mother.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS.M_C1_OP_ANY_ADULT",
+     "skill": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+     "error": "Thinks a child must obey any adult, even one asking to keep a secret or go somewhere alone.",
+     "example": {
+      "question": "A grown-up you do not know tells you to come with him. Should you obey?",
+      "wrong_answer": "Yes, obey adults",
+      "correct_answer": "No, say no and tell a trusted adult"
+     },
+     "cause": "Obedience is taught without limits.",
+     "reveals": "Offer \"Yes, obey adults\" beside \"No, say no and tell a trusted adult\" and ask the child to choose.",
+     "help": "Say: we obey parents and teachers. If anyone asks for something unsafe or secret, say no and tell.",
+     "feedback": "Never go with a stranger. Say no and tell a trusted adult.",
+     "source": "To confirm by a CRE teacher and the school counsellor (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -958,8 +2657,119 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+     "name": "State reasons for telling the truth (Ephesians 4:25)",
+     "outcomes": [
+      "CRE.G1.CHRIST.HONESTY.a"
+     ],
+     "mastery": "States reasons for telling the truth: God wants us to speak truthfully (Ephesians 4:25), people trust us, lies cause trouble, and we are not afraid; and recognises honest acts (not taking others' things, owning up). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) demonstrate honesty by not stealing other people’s items; c) practise punctuality at school and home.",
+     "question_forms": [
+      "why tell the truth",
+      "true or a lie",
+      "honest or not"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.POLITE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying sorry when we do wrong. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Obeying God and parents. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.CHRIST.HONESTY.b",
+       "CRE.G1.CHRIST.HONESTY.c"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_FUN_LIE",
+     "skill": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+     "error": "Thinks a lie told for fun is not a lie.",
+     "example": {
+      "question": "Is it a lie to say \"the teacher is coming\" when she is not, for fun?",
+      "wrong_answer": "No, it is fun",
+      "correct_answer": "Yes, it is a lie"
+     },
+     "cause": "Jokes and lies are confused.",
+     "reveals": "Offer \"No, it is fun\" beside \"Yes, it is a lie\" and ask the child to choose.",
+     "help": "Tell the story of the boy who cried wolf.",
+     "feedback": "Saying something untrue is a lie, even for fun.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_PICK",
+     "skill": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+     "error": "Thinks picking up a friend's eraser and keeping it is fine.",
+     "example": {
+      "question": "You find your friend's eraser. What do you do?",
+      "wrong_answer": "Keep it",
+      "correct_answer": "Give it back"
+     },
+     "cause": "Found things seem free.",
+     "reveals": "Offer \"Keep it\" beside \"Give it back\" and ask the child to choose.",
+     "help": "Role-play returning it.",
+     "feedback": "Give back things that are not yours.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_BLAME",
+     "skill": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+     "error": "Blames a sibling to avoid trouble.",
+     "example": {
+      "question": "You spilled the milk. What should you say?",
+      "wrong_answer": "My sister did it",
+      "correct_answer": "I spilled it, I am sorry"
+     },
+     "cause": "Blaming avoids punishment.",
+     "reveals": "Offer \"My sister did it\" beside \"I spilled it, I am sorry\" and ask the child to choose.",
+     "help": "Praise owning up with a sticker.",
+     "feedback": "Say the truth: \"I spilled it, I am sorry.\"",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.HONESTY.TRUTH_G1.M_C1_TR_GOD_SEE",
+     "skill": "CRES.G1.CHRIST.HONESTY.TRUTH_G1",
+     "error": "Thinks a lie nobody hears is fine.",
+     "example": {
+      "question": "Does God know when we lie?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes"
+     },
+     "cause": "Children think only adults can catch them.",
+     "reveals": "Offer \"No\" beside \"Yes\" and ask the child to choose.",
+     "help": "Talk about God knowing everything.",
+     "feedback": "God knows the truth. Always tell the truth.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -1022,8 +2832,118 @@
      "indicator": "CRE.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+     "name": "Mention ways of expressing gratitude to parents or guardians",
+     "outcomes": [
+      "CRE.G1.CHRIST.THANKFULNESS.a"
+     ],
+     "mastery": "Mentions three ways of thanking parents or guardians: saying thank you, helping with chores, obeying them, praying for them, making a card or drawing, giving a hug. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.2.1), never as a phone question: b) practise thankfulness at home as guided by the Bible.",
+     "question_forms": [
+      "a way to thank parents",
+      "thankful or not",
+      "when to say thank you"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.POLITE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying thank you. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.CHRIST.OBEDIENCE.OBEY_PARENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Obeying parents is a way of thanking them. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.CHRIST.THANKFULNESS.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_GIFT_ONLY",
+     "skill": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+     "error": "Thinks only buying a present thanks parents.",
+     "example": {
+      "question": "How can a child thank parents without money?",
+      "wrong_answer": "He cannot",
+      "correct_answer": "Say thank you (help, obey, pray for them)"
+     },
+     "cause": "Thanks is linked with presents.",
+     "reveals": "Offer \"He cannot\" beside \"Say thank you (help, obey, pray for them)\" and ask the child to choose.",
+     "help": "List free ways to thank.",
+     "feedback": "You can thank parents by saying thank you, helping and obeying.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_DUTY",
+     "skill": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+     "error": "Thinks parents need not be thanked for food because it is their job.",
+     "example": {
+      "question": "Should you thank your mother for food?",
+      "wrong_answer": "No, it is her job",
+      "correct_answer": "Yes"
+     },
+     "cause": "Duties seem not to need thanks.",
+     "reveals": "Offer \"No, it is her job\" beside \"Yes\" and ask the child to choose.",
+     "help": "Ask how mother feels when thanked.",
+     "feedback": "Thank your parents for food. It makes them happy.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_ONCE",
+     "skill": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+     "error": "Thinks saying thank you once a year is enough.",
+     "example": {
+      "question": "How often should you thank your parents?",
+      "wrong_answer": "Once a year",
+      "correct_answer": "Every day"
+     },
+     "cause": "Thanks is linked with birthdays.",
+     "reveals": "Offer \"Once a year\" beside \"Every day\" and ask the child to choose.",
+     "help": "Make a daily thank-you habit chart.",
+     "feedback": "Thank your parents every day.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS.M_C1_TP_GUARDIAN",
+     "skill": "CRES.G1.CHRIST.THANKFULNESS.THANK_PARENTS",
+     "error": "Thinks only parents, not grandparents or guardians, should be thanked.",
+     "example": {
+      "question": "Should you thank your grandmother who cares for you?",
+      "wrong_answer": "No, only parents",
+      "correct_answer": "Yes"
+     },
+     "cause": "The outcome word \"parents\" is taken narrowly.",
+     "reveals": "Offer \"No, only parents\" beside \"Yes\" and ask the child to choose.",
+     "help": "Name all who care for us.",
+     "feedback": "Thank everyone who cares for you.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.2.1"
    ]
@@ -1084,8 +3004,118 @@
      "indicator": "CRE.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+     "name": "Recognise the church as a place of worship and ways of respecting it",
+     "outcomes": [
+      "CRE.G1.THE_CH.A_HOUSE_OF_GOD.a"
+     ],
+     "mastery": "Says the church is a place where Christians worship God (pray, sing, read the Bible, listen to God's word) and names ways of respecting it: walk quietly, listen, keep it clean, do not run or shout, take part in worship. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.3.1), never as a phone question: b) demonstrate responsibility by serving God in Church.",
+     "question_forms": [
+      "what we do in church",
+      "respectful or not",
+      "why we respect church"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.CHURCH_PLACE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing church as a place of worship. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.THE_HO.THE_WORD_OF_GOD.HANDLE_BIBLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Respect for God's word, read in church. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_CH.A_HOUSE_OF_GOD.b"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_PLAYGROUND",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+     "error": "Thinks church is a place to run and play.",
+     "example": {
+      "question": "Can you run around in church during the service?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, sit quietly and listen"
+     },
+     "cause": "Church is a big open space.",
+     "reveals": "Offer \"Yes\" beside \"No, sit quietly and listen\" and ask the child to choose.",
+     "help": "Practise walking quietly into a pretend church.",
+     "feedback": "In church we walk quietly and listen.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_BUILDING_ONLY",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+     "error": "Thinks church is only a big stone building.",
+     "example": {
+      "question": "Can Christians worship in a small church under a tree?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes"
+     },
+     "cause": "Churches in pictures are big buildings.",
+     "reveals": "Offer \"No\" beside \"Yes\" and ask the child to choose.",
+     "help": "Show many kinds of churches.",
+     "feedback": "Christians can worship in big or small churches.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_SHOP",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+     "error": "Thinks church is a place to buy things.",
+     "example": {
+      "question": "What do people do in church?",
+      "wrong_answer": "Buy things",
+      "correct_answer": "Pray, sing and read the Bible"
+     },
+     "cause": "Collections and sales are seen at church.",
+     "reveals": "Offer \"Buy things\" beside \"Pray, sing and read the Bible\" and ask the child to choose.",
+     "help": "List worship activities with pictures.",
+     "feedback": "In church people pray, sing and read the Bible.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1.M_C1_CH_DIRTY",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+     "error": "Thinks dropping papers in church does not matter.",
+     "example": {
+      "question": "Should you drop sweet papers in church?",
+      "wrong_answer": "Yes, someone will clean",
+      "correct_answer": "No, keep God's house clean"
+     },
+     "cause": "Cleaning is someone else's job.",
+     "reveals": "Offer \"Yes, someone will clean\" beside \"No, keep God's house clean\" and ask the child to choose.",
+     "help": "Practise picking litter after a class service.",
+     "feedback": "Keep the church clean. It is God's house.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.3.1"
    ]
@@ -1145,8 +3175,118 @@
      "indicator": "CRE.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+     "name": "Say simple prayers at different times of the day (Matthew 21:13)",
+     "outcomes": [
+      "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.b"
+     ],
+     "mastery": "Says Christians can pray at different times of the day (morning, before meals, before school, at bedtime, when afraid or sick), that God's house is a house of prayer (Matthew 21:13), and that a simple prayer talks to God: thank you, please, sorry. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CRE.G1.RUBRIC.3.1), never as a phone question: a) recite simple thanksgiving prayers.",
+     "question_forms": [
+      "when can we pray",
+      "what to say in a prayer",
+      "who we talk to"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.PP2.READINESS.SHORT_PRAYER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saying a short prayer. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G1.THE_CH.A_HOUSE_OF_GOD.CHURCH_G1",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The church as a house of God. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.a"
+      ],
+      "indicators": [
+       "CRE.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_CHURCH_ONLY",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+     "error": "Thinks prayer can be said only in church.",
+     "example": {
+      "question": "Can you pray at home?",
+      "wrong_answer": "No, only in church",
+      "correct_answer": "Yes, anywhere"
+     },
+     "cause": "Prayer is seen in church.",
+     "reveals": "Offer \"No, only in church\" beside \"Yes, anywhere\" and ask the child to choose.",
+     "help": "Pray in class and talk about praying at home.",
+     "feedback": "You can pray anywhere: at home, at school, in church.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_LONG",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+     "error": "Thinks a prayer must be long and use big words.",
+     "example": {
+      "question": "Is \"Thank you God for this food\" a prayer?",
+      "wrong_answer": "No, it is too short",
+      "correct_answer": "Yes"
+     },
+     "cause": "Adult prayers are long.",
+     "reveals": "Offer \"No, it is too short\" beside \"Yes\" and ask the child to choose.",
+     "help": "Say short prayers together.",
+     "feedback": "A short, simple prayer is a real prayer.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_ASK_ONLY",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+     "error": "Thinks prayer is only asking for things.",
+     "example": {
+      "question": "Name something we can say to God apart from asking.",
+      "wrong_answer": "Nothing",
+      "correct_answer": "Thank you (sorry)"
+     },
+     "cause": "Children hear requests in prayer.",
+     "reveals": "Offer \"Nothing\" beside \"Thank you (sorry)\" and ask the child to choose.",
+     "help": "Sort prayer cards: thank you, please, sorry.",
+     "feedback": "In prayer we can say thank you and sorry too.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES.M_C1_PT_SICK_ONLY",
+     "skill": "CRES.G1.THE_CH.A_HOUSE_OF_PRAYER.PRAYER_TIMES",
+     "error": "Thinks we pray only when sick or in trouble.",
+     "example": {
+      "question": "When should we pray?",
+      "wrong_answer": "Only when sick",
+      "correct_answer": "Every day, morning and night, before meals"
+     },
+     "cause": "Prayer is linked with crises.",
+     "reveals": "Offer \"Only when sick\" beside \"Every day, morning and night, before meals\" and ask the child to choose.",
+     "help": "Make a day chart with prayer times.",
+     "feedback": "We pray every day, not only when in trouble.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G1.RUBRIC.3.1"
    ]
@@ -1235,6 +3375,68 @@
      "status": "kicd_verified"
     }
    ]
+  }
+ ],
+ "readiness": [
+  {
+   "code": "CRE.PP2.READINESS.GOD_MADE",
+   "name": "Say that God made things",
+   "what": "Says that God made people, plants, animals and the sky.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.OWN_NAME",
+   "name": "Say own name and family names",
+   "what": "Says his or her own name and the names of people at home.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.BIBLE_HOLY_BOOK",
+   "name": "Know the Bible as a holy book",
+   "what": "Points to the Bible, says it is God's book and handles it gently.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.LISTEN_STORY",
+   "name": "Listen to and retell a short Bible story",
+   "what": "Listens to a short Bible story with pictures and retells one or two events in order.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.SHORT_PRAYER",
+   "name": "Say a short prayer",
+   "what": "Says a short prayer such as grace before meals or a bedtime prayer.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.CHRISTMAS",
+   "name": "Know Christmas is about Jesus' birth",
+   "what": "Says that at Christmas Christians celebrate the birth of baby Jesus.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.POLITE_WORDS",
+   "name": "Use please, thank you and sorry",
+   "what": "Says please, thank you and sorry at the right times.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.TAKE_TURNS",
+   "name": "Take turns and share",
+   "what": "Takes turns and shares toys and food with other children.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.FOLLOW_INSTRUCTIONS",
+   "name": "Follow simple instructions",
+   "what": "Follows one- or two-step instructions from a parent or teacher.",
+   "status": "proposed"
+  },
+  {
+   "code": "CRE.PP2.READINESS.CHURCH_PLACE",
+   "name": "Know church as a place of worship",
+   "what": "Says that a church is a place where Christians pray, sing and learn about God.",
+   "status": "proposed"
   }
  ]
 }

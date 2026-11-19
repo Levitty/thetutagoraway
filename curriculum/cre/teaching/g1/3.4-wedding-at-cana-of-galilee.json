@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL",
+ "title": "Wedding at Cana of Galilee",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA",
+   "key_step": "The child retells the wedding at Cana (John 2:1-10) and says the servants obeyed Jesus.",
+   "floor": {
+    "prerequisite": "Follows simple instructions.",
+    "question": "Please stand up and clap twice.",
+    "answer": "Does both"
+   },
+   "representations": [
+    "six paper jars",
+    "picture cards of John 2",
+    "Mary's words on a card"
+   ],
+   "steps": [
+    "Share a wedding you attended.",
+    "Picture-read John 2:1-10.",
+    "Act out filling the jars.",
+    "Retell."
+   ],
+   "contexts": [
+    "a wedding in the village",
+    "obeying a teacher",
+    "a family feast"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw six jars."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the jars.",
+     "say": "What did Jesus tell the servants to put in them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say water."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: water became wine."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_FOOD",
+     "listen_for": [
+      "Food"
+     ],
+     "ask": "What ran out at the wedding?",
+     "repair": "Read John 2:3."
+    },
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_SHOP",
+     "listen_for": [
+      "He bought wine"
+     ],
+     "ask": "How did Jesus help?",
+     "repair": "Act it out with jars of water."
+    },
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_MILK",
+     "listen_for": [
+      "Milk"
+     ],
+     "ask": "What did the water become?",
+     "repair": "Read John 2:9."
+    },
+    {
+     "code": "CRES.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.CANA.M_C1_CANA_SERVANTS_NO",
+     "listen_for": [
+      "Refused"
+     ],
+     "ask": "What did the servants do when Jesus spoke?",
+     "repair": "Read John 2:7-8 and act it out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What ran out at the wedding?",
+     "answer": "Wine",
+     "shows": "retell"
+    },
+    {
+     "question": "What did Jesus change water into?",
+     "answer": "Wine",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.RESOUR.WATER",
+ "title": "Water",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G3.RESOUR.WATER.CLEAN_WATER",
+   "key_step": "The child names ways water gets dirty and how to make it clean and safe: filter, boil, cover.",
+   "floor": {
+    "prerequisite": "Knows ways of storing water.",
+    "question": "Name a container for storing water.",
+    "answer": "A jerrycan (tank, pot)"
+   },
+   "representations": [
+    "a river picture with a village upstream",
+    "an improvised sand and cloth filter in a bottle",
+    "muddy water and clear water samples"
+   ],
+   "steps": [
+    "Name what makes water dirty.",
+    "Filter muddy water.",
+    "Say why we still boil it.",
+    "Store it covered."
+   ],
+   "contexts": [
+    "a river where cows drink",
+    "a borehole at school",
+    "rainwater from a roof"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river with cows drinking and people washing upstream."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the school downstream.",
+     "say": "Is this water safe for the school to drink?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no and why."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: filter, boil, cover."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.RESOUR.WATER.CLEAN_WATER.M_E3_WAT_CLEAR_SAFE",
+     "listen_for": [
+      "Yes, it is clear"
+     ],
+     "ask": "River water looks clear. Is it safe to drink straight away?",
+     "repair": "Show clear water under a hand lens or a picture of germs. Rule: boil drinking water."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.WATER.CLEAN_WATER.M_E3_WAT_FILTER_GERMS",
+     "listen_for": [
+      "Nothing, it is clean now"
+     ],
+     "ask": "Water has gone through a sand and cloth filter. What else should be done before drinking?",
+     "repair": "Filter muddy water: it looks clear. Say: the filter removes dirt, boiling kills germs."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.WATER.CLEAN_WATER.M_E3_WAT_WASH_RIVER",
+     "listen_for": [
+      "Yes, the dirt flows away"
+     ],
+     "ask": "People wash clothes in a river upstream. Is the water downstream clean?",
+     "repair": "Draw a river with a village upstream and a school downstream. Follow the soap with a finger."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.WATER.CLEAN_WATER.M_E3_WAT_COVER_NO",
+     "listen_for": [
+      "In an open bucket"
+     ],
+     "ask": "You have boiled water. How should you keep it?",
+     "repair": "Leave an open cup in class for a day. See dust and insects. Cover the other."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one way water gets dirty.",
+     "answer": "Animals drink and leave dung in it (washing, rubbish)",
+     "shows": "contamination"
+    },
+    {
+     "question": "How do we kill germs in water?",
+     "answer": "Boil it",
+     "shows": "making water safe"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G1.CREATI.SELF_AWARENESS",
+ "title": "Self-Awareness",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME",
+   "key_step": "The child says God made him or her special, that no one is exactly the same, and states his or her gender (Genesis 1:27).",
+   "floor": {
+    "prerequisite": "Says own name.",
+    "question": "What is your name?",
+    "answer": "The child says his or her name"
+   },
+   "representations": [
+    "thumbprint cards",
+    "Genesis 1:27 picture card",
+    "a song about being special"
+   ],
+   "steps": [
+    "Read Genesis 1:27 with pictures.",
+    "Say \"God made me a boy\" or \"a girl\".",
+    "Compare thumbprints.",
+    "Say \"God knows my name\"."
+   ],
+   "contexts": [
+    "twins in the class",
+    "a new baby at home",
+    "a class photo"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: God made me special."
+    },
+    {
+     "beat": "point",
+     "do": "Point at two thumbprints.",
+     "say": "Are they the same?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: no one is like me."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_SAME",
+     "listen_for": [
+      "Yes, the same"
+     ],
+     "ask": "Are twins exactly the same?",
+     "repair": "Compare thumbprints of two children, or two leaves of one tree."
+    },
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_GENDER_CLOTHES",
+     "listen_for": [
+      "No, she is a boy now"
+     ],
+     "ask": "A girl has short hair. Is she still a girl?",
+     "repair": "Say: God made you a boy or a girl; clothes and hair do not change it."
+    },
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_GOD_FORGETS",
+     "listen_for": [
+      "No, I am too small"
+     ],
+     "ask": "Does God know your name?",
+     "repair": "Say Isaiah 43:1 simply: God says, \"I have called you by name.\""
+    },
+    {
+     "code": "CRES.G1.CREATI.SELF_AWARENESS.UNIQUE_ME.M_C1_UNI_MADE_BY",
+     "listen_for": [
+      "The hospital"
+     ],
+     "ask": "Who made you?",
+     "repair": "Sing a song about God making me. Read Genesis 1:27 with pictures."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who made you?",
+     "answer": "God",
+     "shows": "creator"
+    },
+    {
+     "question": "Is anyone exactly like you?",
+     "answer": "No",
+     "shows": "uniqueness"
+    }
+   ]
+  }
+ ]
+}

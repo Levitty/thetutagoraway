@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH",
+ "title": "Bible Story: Daniel in the den of lions",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL",
+   "key_step": "The child retells Daniel in the lions' den (Daniel 6) and lists lessons: pray always, trust God, God protects, be faithful.",
+   "floor": {
+    "prerequisite": "Knows simple prayers at different times of day.",
+    "question": "When can we pray?",
+    "answer": "Morning, before meals, at night (any time)"
+   },
+   "representations": [
+    "picture cards of Daniel 6",
+    "a window cut-out",
+    "a lessons chart"
+   ],
+   "steps": [
+    "Picture-read the story.",
+    "Count Daniel's prayer times.",
+    "Retell in order.",
+    "List four lessons."
+   ],
+   "contexts": [
+    "praying at school",
+    "being laughed at for doing right",
+    "a hard day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: pray three times a day."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lions picture.",
+     "say": "Who kept Daniel safe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_STOPPED",
+     "listen_for": [
+      "Stopped praying"
+     ],
+     "ask": "What did Daniel do after the new law?",
+     "repair": "Read Daniel 6:10."
+    },
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_TIMES",
+     "listen_for": [
+      "Once"
+     ],
+     "ask": "How many times a day did Daniel pray?",
+     "repair": "Count three prayer times: morning, midday, evening."
+    },
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_FOUGHT",
+     "listen_for": [
+      "He fought them"
+     ],
+     "ask": "Why did the lions not hurt Daniel?",
+     "repair": "Read Daniel 6:22."
+    },
+    {
+     "code": "CRES.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.DANIEL.M_C2_DAN_KING_BAD",
+     "listen_for": [
+      "Happy"
+     ],
+     "ask": "How did King Darius feel when Daniel was thrown in?",
+     "repair": "Read Daniel 6:14, 18. The officials tricked him."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why was Daniel thrown into the lions' den?",
+     "answer": "He kept praying to God",
+     "shows": "retell"
+    },
+    {
+     "question": "Name a lesson from the story.",
+     "answer": "Pray always (God protects)",
+     "shows": "lessons"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.SOCIAL.CULTURAL_EVENTS",
+ "title": "Cultural Events",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS",
+   "key_step": "The child names cultural events in the community and sorts them by what they do: bring people together, care for the environment, or both.",
+   "floor": {
+    "prerequisite": "Knows responsibilities in a community.",
+    "question": "Name one thing children can do to help at school.",
+    "answer": "Clean the class (pick litter)"
+   },
+   "representations": [
+    "pictures of local cultural events",
+    "a Venn diagram on the floor",
+    "a song from a cultural event"
+   ],
+   "steps": [
+    "Name events in our community.",
+    "Say what happens at each.",
+    "Sort them into social, environmental or both.",
+    "Say why one event can do both."
+   ],
+   "contexts": [
+    "a harvest thanksgiving",
+    "a school cultural day",
+    "a wedding in the village"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two overlapping circles: people together, caring for the environment."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a picture of a tree-planting day.",
+     "say": "Where does this go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place it, maybe in the middle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the event in the right part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS.M_E3_CULT_PARTY_ONLY",
+     "listen_for": [
+      "No, there is no party"
+     ],
+     "ask": "Is a tree-planting ceremony a cultural event?",
+     "repair": "List events with and without parties. Say: a cultural event is what a community does together by its ways."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS.M_E3_CULT_ENV_NONE",
+     "listen_for": [
+      "A wedding, because people dance"
+     ],
+     "ask": "Which event cares for the environment?",
+     "repair": "Show pictures of a tree planted at a naming or a clean-up after a harvest feast. Sort them."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS.M_E3_CULT_ONE_PURPOSE",
+     "listen_for": [
+      "Only brings people together"
+     ],
+     "ask": "A school cultural day ends with everyone planting trees. What does it do?",
+     "repair": "Use a Venn diagram: social well-being, environmental care, both in the middle."
+    },
+    {
+     "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.CULTURAL_EVENTS.M_E3_CULT_OTHERS_WRONG",
+     "listen_for": [
+      "It is wrong because it is not like ours"
+     ],
+     "ask": "A classmate's community has a different naming ceremony. What should we think?",
+     "repair": "Invite children to share events from their communities. Find what all of them have in common: bringing people together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a cultural event in your community.",
+     "answer": "A wedding (naming ceremony, harvest festival)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Does a tree-planting ceremony care for the environment?",
+     "answer": "Yes",
+     "shows": "classifies"
+    }
+   ]
+  }
+ ]
+}

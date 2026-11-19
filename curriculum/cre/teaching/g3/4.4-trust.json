@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.CHRIST.TRUST",
+ "title": "Trust",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Child protection. The school counsellor reads this file first. Name trusted adults (a parent or guardian, the class teacher, the head teacher, the police) and Childline Kenya 116. Never ask a child in class about his or her own experience; a child who discloses is listened to privately and the safeguarding policy followed (SAFE).",
+ "skills": [
+  {
+   "skill": "CRES.G3.CHRIST.TRUST.TRUSTED_ADULTS",
+   "key_step": "The child names people to trust for safety and at least three people to report to if touched inappropriately; it is never the child's fault.",
+   "floor": {
+    "prerequisite": "Knows to refuse gifts from strangers.",
+    "question": "A stranger offers you a gift. What do you say?",
+    "answer": "No, thank you"
+   },
+   "representations": [
+    "a \"my trusted adults\" hand (five fingers, five people)",
+    "Childline 116 poster",
+    "safe-touch rules card"
+   ],
+   "steps": [
+    "Draw your hand and name five trusted adults.",
+    "Say the rule: no secrets about touching.",
+    "Practise telling.",
+    "Say it is never your fault."
+   ],
+   "contexts": [
+    "a visitor at home",
+    "a stranger at the market",
+    "a child who feels unsafe"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: my trusted adults."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the five fingers.",
+     "say": "Who would you tell if someone touched you in a bad way?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name trusted adults."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: tell, keep telling, 116."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CHRIST.TRUST.TRUSTED_ADULTS.M_C3_TRU_SECRET_KEEP",
+     "listen_for": [
+      "Keep the secret"
+     ],
+     "ask": "A grown-up touches you in a bad way and says \"keep it a secret\". What do you do?",
+     "repair": "Teach: no secrets about touching. Tell a parent, teacher or call 116."
+    },
+    {
+     "code": "CRES.G3.CHRIST.TRUST.TRUSTED_ADULTS.M_C3_TRU_OWN_FAULT",
+     "listen_for": [
+      "The child's"
+     ],
+     "ask": "If someone touches a child in a bad way, whose fault is it?",
+     "repair": "Say clearly and kindly: it is never your fault. Telling is right."
+    },
+    {
+     "code": "CRES.G3.CHRIST.TRUST.TRUSTED_ADULTS.M_C3_TRU_KNOWN_SAFE",
+     "listen_for": [
+      "No, people I know are always safe"
+     ],
+     "ask": "Can someone you know ask you to keep a secret touch?",
+     "repair": "Teach the rule: anyone, known or unknown. Name several trusted adults."
+    },
+    {
+     "code": "CRES.G3.CHRIST.TRUST.TRUSTED_ADULTS.M_C3_TRU_TELL_ONCE",
+     "listen_for": [
+      "Stop telling"
+     ],
+     "ask": "You told an adult and they did not help. What next?",
+     "repair": "List three or more people to tell and Childline 116. Keep telling."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a person you can report to.",
+     "answer": "A parent (teacher, head teacher, police)",
+     "shows": "report"
+    },
+    {
+     "question": "Should you keep a secret about bad touching?",
+     "answer": "No, tell a trusted adult",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

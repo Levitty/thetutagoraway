@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.NATURA.HEAT",
+ "title": "Heat",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+   "key_step": "The child lists sources of heat (sun, fire, stoves, electricity) and says what heat is used for, and how to save it.",
+   "floor": {
+    "prerequisite": "Knows sources of light.",
+    "question": "Name a source of light.",
+    "answer": "The sun (a lamp, fire)"
+   },
+   "representations": [
+    "pictures of a jiko, iron, kettle, sun, gas cooker",
+    "two wet cloths for the sun test",
+    "a source-and-use matching chart"
+   ],
+   "steps": [
+    "Name things that give heat.",
+    "Say what each is used for.",
+    "Test the sun drying clothes.",
+    "Say how to save heat."
+   ],
+   "contexts": [
+    "cooking supper",
+    "drying maize after harvest",
+    "ironing a school uniform"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the sun, a jiko and an iron."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the iron.",
+     "say": "What do we use its heat for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say ironing clothes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a line from each source to its use."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES.M_E3_HEAT_LIGHT_SAME",
+     "listen_for": [
+      "The torch"
+     ],
+     "ask": "Which is a source of heat: a torch or a charcoal jiko?",
+     "repair": "Hold a hand near a torch and near a warm jiko (safely). Feel which is warm."
+    },
+    {
+     "code": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES.M_E3_HEAT_SUN_ONLY_LIGHT",
+     "listen_for": [
+      "Because of the wind only"
+     ],
+     "ask": "Why do clothes dry when hung in the sun?",
+     "repair": "Put two wet cloths, one in sun and one in shade. Feel and compare after an hour."
+    },
+    {
+     "code": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES.M_E3_HEAT_COVER_NO",
+     "listen_for": [
+      "Uncovered, so we can see it"
+     ],
+     "ask": "Which pot of water boils faster: covered or uncovered?",
+     "repair": "Boil two small pots, one covered. Time them. Say: the lid keeps heat in and saves fuel."
+    },
+    {
+     "code": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES.M_E3_HEAT_FIRE_LEAVE",
+     "listen_for": [
+      "Leave it, it will go out"
+     ],
+     "ask": "Cooking is finished. What should be done with the fire?",
+     "repair": "Show how embers can flare up and burn. An adult puts out the fire; children keep away."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a source of heat.",
+     "answer": "The sun (fire, a jiko, an iron)",
+     "shows": "sources"
+    },
+    {
+     "question": "What is heat used for at home?",
+     "answer": "Cooking (warming, ironing, drying)",
+     "shows": "uses"
+    }
+   ]
+  }
+ ]
+}

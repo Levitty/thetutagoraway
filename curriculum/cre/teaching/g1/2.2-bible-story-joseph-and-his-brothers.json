@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H",
+ "title": "Bible Story: Joseph and his brothers",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Being sold by his brothers is told simply; the lesson is love and no jealousy among siblings.",
+ "skills": [
+  {
+   "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH",
+   "key_step": "The child narrates Joseph and his brothers (Genesis 37): the coat, jealousy, the dream, being sold.",
+   "floor": {
+    "prerequisite": "Retells a short Bible story.",
+    "question": "Tell one thing that happened in a Bible story you know.",
+    "answer": "Any event in order"
+   },
+   "representations": [
+    "a coloured coat picture",
+    "story sequence cards",
+    "a video of Genesis 37"
+   ],
+   "steps": [
+    "Picture-read the story.",
+    "Order the cards.",
+    "Narrate the story.",
+    "Draw and colour the coat."
+   ],
+   "contexts": [
+    "jealousy between siblings",
+    "a gift to one child",
+    "a family quarrel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a coat of many colours."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the coat.",
+     "say": "How did the brothers feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say jealous."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: coat, jealous, dream, sold."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_GIFT_BROTHERS",
+     "listen_for": [
+      "All the brothers"
+     ],
+     "ask": "Who got the coat of many colours?",
+     "repair": "Show one coloured coat and plain clothes for the brothers."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_HAPPY",
+     "listen_for": [
+      "Happy"
+     ],
+     "ask": "How did the brothers feel about Joseph's coat?",
+     "repair": "Make a jealous face and name it."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_KILLED",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Did a wild animal kill Joseph?",
+     "repair": "Tell the story again slowly: sold to traders, then the lie."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.JOSEPH.M_C1_JOS_DREAM",
+     "listen_for": [
+      "His coat"
+     ],
+     "ask": "What did Joseph dream about?",
+     "repair": "Draw bundles of grain bowing to one bundle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Jacob give Joseph?",
+     "answer": "A coat of many colours",
+     "shows": "narrate"
+    },
+    {
+     "question": "What did the brothers do to Joseph?",
+     "answer": "Sold him to traders",
+     "shows": "narrate"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS",
+   "key_step": "The child says how to treat siblings and names values for peace: love, sharing, forgiveness, respect.",
+   "floor": {
+    "prerequisite": "Knows the story of Joseph.",
+    "question": "Why were Joseph's brothers angry?",
+    "answer": "They were jealous"
+   },
+   "representations": [
+    "values cards",
+    "situation pictures",
+    "a role-play"
+   ],
+   "steps": [
+    "Say how Joseph's brothers treated him.",
+    "Say how we should treat siblings.",
+    "Name three values.",
+    "Act out making peace."
+   ],
+   "contexts": [
+    "sharing toys at home",
+    "a quarrel over food",
+    "a new baby"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: love, sharing, forgiveness."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"forgiveness\".",
+     "say": "When do brothers and sisters need this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say after a quarrel."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write how to treat siblings."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_FIGHT",
+     "listen_for": [
+      "Hit him"
+     ],
+     "ask": "Your brother takes your toy. What should you do?",
+     "repair": "Role-play asking kindly and telling a parent."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_JEALOUS",
+     "listen_for": [
+      "Be angry"
+     ],
+     "ask": "Your sister gets new shoes. What should you do?",
+     "repair": "Link with Joseph's brothers. Practise saying \"I am happy for you\"."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_VALUE_MONEY",
+     "listen_for": [
+      "A new toy"
+     ],
+     "ask": "Which helps a family live in peace: love or a new toy?",
+     "repair": "Show values cards: love, sharing, forgiveness."
+    },
+    {
+     "code": "CRES.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.SIBLINGS.M_C1_SIB_SORRY",
+     "listen_for": [
+      "Only the younger one"
+     ],
+     "ask": "Who should say sorry after a quarrel?",
+     "repair": "Role-play an older sibling saying sorry."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a value for living in peace.",
+     "answer": "Love (sharing, forgiveness)",
+     "shows": "values"
+    },
+    {
+     "question": "Your sister breaks your crayon by mistake. What do you do?",
+     "answer": "Forgive her",
+     "shows": "treating siblings"
+    }
+   ]
+  }
+ ]
+}

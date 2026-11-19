@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G3.CREATI.MY_FAMILY",
+ "title": "My Family",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Families differ: a child living with a grandmother, one parent or a guardian draws the people who care for him or her. Never ask who is missing.",
+ "skills": [
+  {
+   "skill": "CRES.G3.CREATI.MY_FAMILY.FAMILY_MEMBERS",
+   "key_step": "The child names members of the nuclear and extended family and how each is related, using a family tree.",
+   "floor": {
+    "prerequisite": "Names family members.",
+    "question": "Name one member of your family.",
+    "answer": "My mother (father, sister)"
+   },
+   "representations": [
+    "a family tree chart",
+    "two circles: nuclear inside, extended outside",
+    "photos or drawings"
+   ],
+   "steps": [
+    "Name your nuclear family.",
+    "Name your extended family.",
+    "Place each on the tree.",
+    "Say how they are related."
+   ],
+   "contexts": [
+    "a family visit at Christmas",
+    "living with grandmother",
+    "a wedding with many relatives"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a small family tree: grandparents, parents, children."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the grandparents.",
+     "say": "Nuclear or extended family?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say extended."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label the two parts of the tree."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G3.CREATI.MY_FAMILY.FAMILY_MEMBERS.M_C3_FAM_GRANDMA_NUCLEAR",
+     "listen_for": [
+      "Nuclear"
+     ],
+     "ask": "Is a grandmother part of the nuclear or the extended family?",
+     "repair": "Draw the nuclear family in the middle circle (father, mother, children) and the extended family around it. Grandmother may live with you and still be extended."
+    },
+    {
+     "code": "CRES.G3.CREATI.MY_FAMILY.FAMILY_MEMBERS.M_C3_FAM_COUSIN",
+     "listen_for": [
+      "Brother"
+     ],
+     "ask": "Your aunt's son is your...?",
+     "repair": "Trace on a family tree: aunt, then her son, a cousin."
+    },
+    {
+     "code": "CRES.G3.CREATI.MY_FAMILY.FAMILY_MEMBERS.M_C3_FAM_UNCLE_SIDE",
+     "listen_for": [
+      "No, uncles are father's brothers"
+     ],
+     "ask": "Is your mother's brother your uncle?",
+     "repair": "Show both sides of a family tree with uncles on each."
+    },
+    {
+     "code": "CRES.G3.CREATI.MY_FAMILY.FAMILY_MEMBERS.M_C3_FAM_ONLY_PARENTS",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Achieng lives with her grandmother. Does she have a family?",
+     "repair": "Show many family pictures. Say: family is the people God gives to love and care for us."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a member of the extended family.",
+     "answer": "A grandmother (uncle, aunt, cousin)",
+     "shows": "names"
+    },
+    {
+     "question": "Your father's sister is your...?",
+     "answer": "Aunt",
+     "shows": "relationship"
+    }
+   ]
+  }
+ ]
+}

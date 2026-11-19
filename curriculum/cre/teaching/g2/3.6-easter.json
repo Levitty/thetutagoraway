@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_EA.EASTER",
+ "title": "Easter",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_EA.EASTER.EASTER_LOVE",
+   "key_step": "The child says Jesus' death was a sign of God's love, that he rose on the third day, and lists Easter church activities.",
+   "floor": {
+    "prerequisite": "Knows the church is a place of worship.",
+    "question": "What do people do in church?",
+    "answer": "Pray, sing, read the Bible"
+   },
+   "representations": [
+    "1 Corinthians 15:3-4 on flashcards",
+    "a three-day strip",
+    "pictures of Easter services"
+   ],
+   "steps": [
+    "Read the verse.",
+    "Say why Jesus died.",
+    "Say what happened on the third day.",
+    "List Easter church activities."
+   ],
+   "contexts": [
+    "Good Friday",
+    "Easter Sunday",
+    "Palm Sunday procession"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: died, buried, raised on the third day."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"raised\".",
+     "say": "What does this mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Jesus rose from the dead."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Easter church activities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_BAD_MAN",
+     "listen_for": [
+      "He did something wrong"
+     ],
+     "ask": "Why did Jesus die on the cross?",
+     "repair": "Read John 3:16 in simple words."
+    },
+    {
+     "code": "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_STAYED_DEAD",
+     "listen_for": [
+      "He stayed in the tomb"
+     ],
+     "ask": "What happened on the third day?",
+     "repair": "Read 1 Corinthians 15:4."
+    },
+    {
+     "code": "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_EGGS_ONLY",
+     "listen_for": [
+      "Eating chicken"
+     ],
+     "ask": "Name an activity done in church at Easter.",
+     "repair": "List church activities and home activities separately."
+    },
+    {
+     "code": "CRES.G2.THE_EA.EASTER.EASTER_LOVE.M_C2_EL_CHRISTMAS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is Easter about Jesus' birth?",
+     "repair": "Put Christmas and Easter cards side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Jesus' death show?",
+     "answer": "God's great love",
+     "shows": "recognises"
+    },
+    {
+     "question": "Name an activity in church at Easter.",
+     "answer": "Prayers (singing, services)",
+     "shows": "lists"
+    }
+   ]
+  }
+ ]
+}

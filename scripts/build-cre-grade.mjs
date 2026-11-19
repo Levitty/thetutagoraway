@@ -11,7 +11,11 @@
 //    the SQL (supabase/migrations/20261126_cre_g<n>_skills_misconceptions.sql, through scripts/lib/curriculum-sql.mjs), copied to
 //    ~/Desktop/Tuta Workspace/HOREB_SQL_CRE_G<n>.sql. NOT RUN: the owner runs the SQL.
 // Official outcomes, sub-strand text and the KICD rubrics are never touched. Skills 'proposed', misconceptions 'draft', pack draft.
-// CRE Grade 9 has no file (KICD's design could not be read) and Grades 1 to 3 have outcomes only: not started.
+// CRE Grade 9 has no file (KICD's design could not be read).
+// Grades 1 to 3 (19 Nov 2026): node scripts/build-cre-grade.mjs 3 (then 2, 1; then rebuild 3 and 2). They had outcomes only and no
+// families, so there is no first pass: every skill is NEW in scripts/data/cre-depth/g<n>.mjs, with the Grades 1-3 rules of
+// scripts/lib/lower-grade.mjs (lower-grade outcome prerequisites move to that grade's skills, Grade 1 readiness skills
+// CRE.PP2.READINESS.*, practical outcomes to the teacher's KICD rubric, every skill in the awaiting list). Grades 4 to 8 unchanged.
 // ============================================================================
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync, copyFileSync, existsSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
@@ -19,16 +23,19 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { deepenGrade, packFiles } from './lib/subject-depth.mjs';
 import { curriculumSql } from './lib/curriculum-sql.mjs';
-import { CRE_NOT_TESTED, REVIEWER, TC } from './data/cre-depth/common.mjs';
+import { CRE_NOT_TESTED, CRE_NOT_TESTED_ATTITUDE, REVIEWER, TC } from './data/cre-depth/common.mjs';
+import { switchLowerRefs, lowerResolver, notTestedWith, applyRubrics, writeAwaitingAll, withOutcomeCleanup } from './lib/lower-grade.mjs';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const GRADE = Number(process.argv[2]);
-if (![4, 5, 6, 7, 8].includes(GRADE)) { console.error('usage: node scripts/build-cre-grade.mjs 4|5|6|7|8'); process.exit(1); }
+if (![1, 2, 3, 4, 5, 6, 7, 8].includes(GRADE)) { console.error('usage: node scripts/build-cre-grade.mjs 1|2|3|4|5|6|7|8'); process.exit(1); }
+const LOWER = GRADE <= 3;
 const run = (args) => { const r = spawnSync('node', args, { stdio: 'inherit', cwd: ROOT }); if (r.status) process.exit(r.status); };
 const load = (g) => { const f = join(ROOT, `curriculum/cre/g${g}.json`); return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : null; };
-const MIS_PREFIX = { 4: 'M_C4_', 5: 'M_C5_', 6: 'M_C6_', 7: 'M_CR7_', 8: 'M_CR8_' }[GRADE];
+const MIS_PREFIX = { 1: 'M_C1_', 2: 'M_C2_', 3: 'M_C3_', 4: 'M_C4_', 5: 'M_C5_', 6: 'M_C6_', 7: 'M_CR7_', 8: 'M_CR8_' }[GRADE];
 
 async function writeAwaiting() {
+  if (LOWER) { const n = writeAwaitingAll(ROOT, `src/ai-tutor/content/families/cre_g${GRADE}_awaiting.js`, load(GRADE), { label: `Grade ${GRADE} CRE`, generator: `scripts/build-cre-grade.mjs ${GRADE}` }); console.log(`cre g${GRADE}: ${n} skills with no family yet`); return; }
   const entry = (await import(`../src/ai-tutor/content/subjects/cre_g${GRADE}.js?${Date.now()}`)).default;
   const used = new Set(entry.families.map(f => f.cskill));
   const list = Object.keys(entry.map.skills).filter(c => !used.has(c));
@@ -42,42 +49,54 @@ async function writeAwaiting() {
 if (process.argv.includes('--awaiting')) { await writeAwaiting(); process.exit(0); }
 
 // ---- 1. the first pass
-run([`scripts/build-cre-g${GRADE}.mjs`]);
+if (!LOWER) run([`scripts/build-cre-g${GRADE}.mjs`]);
 
 // ---- 2. the depth layer
 const cur = load(GRADE);
-const data = await import(`./data/cre-depth/g${GRADE}.mjs`);
+if (LOWER) for (const s of cur.sub_strands) { s.skills = []; s.misconceptions = []; }   // outcomes only: idempotent
+const raw = await import(`./data/cre-depth/g${GRADE}.mjs`);
+const data = LOWER ? { ...raw, NEW: raw.NEW.map(n => ({ ...n, pre: [...n.pre] })) } : raw;
+const sw = LOWER ? switchLowerRefs(data.NEW, { lower: load, outcomePrefix: (g) => `CRE.G${g}.` }) : null;
 const taken = new Set();
-for (const g of [4, 5, 6, 7, 8]) if (g !== GRADE) for (const s of load(g).sub_strands) for (const m of s.misconceptions || []) taken.add(m.code.slice(m.skill.length + 1));
+for (const g of [1, 2, 3, 4, 5, 6, 7, 8]) if (g !== GRADE) for (const s of load(g).sub_strands) for (const m of s.misconceptions || []) taken.add(m.code.slice(m.skill.length + 1));
 const SUB = `CRE.G${GRADE}.`, SKILL = `CRES.G${GRADE}.`;
 const { packs, added, newSkills } = deepenGrade(cur, data, {
   label: `CRE Grade ${GRADE}`, grade: GRADE, subPrefix: SUB, skillPrefix: SKILL, lower: load,
-  outcomePrefix: (g) => `CRE.G${g}.`, misPrefix: MIS_PREFIX, taken, notTested: CRE_NOT_TESTED, reviewer: REVIEWER,
+  outcomePrefix: (g) => `CRE.G${g}.`, misPrefix: MIS_PREFIX, taken, notTested: LOWER ? notTestedWith(cur, data.NEW, SUB, CRE_NOT_TESTED) : CRE_NOT_TESTED, reviewer: REVIEWER,
   masteryRule: /four of the last five/, source: TC,
+  ...(LOWER ? { resolveExtra: lowerResolver({ lower: load, outcomePrefix: (g) => `CRE.G${g}.`, readiness: data.READINESS, readinessPrefix: 'CRE.PP2.READINESS.' }) } : {}),
 });
+const nRubric = LOWER ? applyRubrics(cur, data.NEW, { subPrefix: SUB, skillPrefix: SKILL, attitude: CRE_NOT_TESTED_ATTITUDE }) : 0;
+if (LOWER && data.READINESS) cur.readiness = data.READINESS.map(r => ({ code: `CRE.PP2.READINESS.${r.code}`, name: r.name, what: r.what, status: 'proposed' }));
 
 // ---- 3. write
 const PACK_DIR = join(ROOT, `curriculum/cre/teaching/g${GRADE}/`);
 mkdirSync(PACK_DIR, { recursive: true });
 const files = packFiles(cur, packs, { subPrefix: SUB, skillPrefix: SKILL, notes: data.NOTES || {},
-  status: `draft: written 18 Nov 2026 offline for Grade ${GRADE} Christian Religious Education; not yet checked by ${REVIEWER}; not loaded by the live tutor` });
+  status: `draft: written ${LOWER ? 19 : 18} Nov 2026 offline for Grade ${GRADE} Christian Religious Education; not yet checked by ${REVIEWER}; not loaded by the live tutor` });
 for (const [slug, text] of Object.entries(files)) writeFileSync(join(PACK_DIR, slug), text);
 for (const f of readdirSync(PACK_DIR)) if (f.endsWith('.json') && !files[f]) unlinkSync(join(PACK_DIR, f));
-cur.status = `outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting ${REVIEWER}'s review. Rubrics from KICD, untouched.`;
+cur.status = LOWER ? `outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; mapped on 19 Nov 2026 to the Grade 5 Maths standard (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric); written offline by Claude, awaiting ${REVIEWER}'s review. Rubrics from KICD, untouched.` : `outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting ${REVIEWER}'s review. Rubrics from KICD, untouched.`;
 writeFileSync(join(ROOT, `curriculum/cre/g${GRADE}.json`), JSON.stringify(cur, null, 1) + '\n');
+if (LOWER) console.log(`cre g${GRADE}: ${sw.switched} lower-grade outcome prerequisites now name skills, ${sw.kept} kept as outcomes; ${nRubric} practical outcomes to the teacher's rubric`);
 console.log(`cre g${GRADE} depth: ${newSkills} new skills, +${added.pre} prerequisites, +${added.mis} misconceptions, ${added.fix} fixed; now ${cur.totals.skills} skills, ${cur.totals.prerequisites} prerequisites, ${cur.totals.misconceptions} misconceptions, ${Object.keys(files).length} teaching pack files`);
 
 run(['scripts/build-subject-map.mjs', 'cre', String(GRADE), '--dir', 'cre', '--title', 'Christian Religious Education']);
 run(['scripts/build-cre-grade.mjs', String(GRADE), '--awaiting']);
 
 const MIG = `20261126_cre_g${GRADE}_skills_misconceptions.sql`;
-const sql = curriculumSql(cur, {
+const sql = curriculumSql(cur, LOWER ? {
+  title: `Grade ${GRADE} Christian Religious Education`, when: 'owner, 19 Nov 2026',
+  after: `20261110_curriculum.sql (the five curriculum tables); the CRE grades in order, 1 to 3 (prerequisites name the grade below${GRADE === 1 ? ' or pre-primary readiness skills, CRE.PP2.READINESS.*, defined by HOREB in g1.json under readiness, not rows of curriculum_skills' : ''}; there is no foreign key on them)`,
+  why: `CRE Grade ${GRADE} had KICD outcomes only (curriculum/cre/g${GRADE}.json) and no question families; on 19 Nov 2026 it was mapped to the Grade 5 Maths standard (a skill for every testable outcome, practical outcomes to the teacher's KICD rubric, two or more prerequisites and four misconceptions per skill, a teaching pack).`,
+  generator: `scripts/build-cre-grade.mjs ${GRADE}`, source: `curriculum/cre/g${GRADE}.json`,
+} : {
   title: `Grade ${GRADE} Christian Religious Education`, when: 'owner, 18 Nov 2026',
   after: '20261110_curriculum.sql (the five curriculum tables); the CRE grades in order, 4 to 8 (prerequisites name the grade below; there is no foreign key on them, so the order is for the reviewer only)',
   why: `CRE Grade ${GRADE} had a first-pass map in the repository (curriculum/cre/g${GRADE}.json) that no migration loaded; on 18 Nov 2026 it was brought to the Grade 5 Maths standard (a skill for every testable outcome, two prerequisites and four misconceptions per skill, a teaching pack).`,
   generator: `scripts/build-cre-grade.mjs ${GRADE}`, source: `curriculum/cre/g${GRADE}.json`,
 });
-writeFileSync(join(ROOT, 'supabase/migrations', MIG), sql.text);
+writeFileSync(join(ROOT, 'supabase/migrations', MIG), LOWER ? withOutcomeCleanup(sql.text, cur, `CRES.G${GRADE}.%`) : sql.text);
 const WS = join(homedir(), 'Desktop', 'Tuta Workspace');
 if (existsSync(WS)) copyFileSync(join(ROOT, 'supabase/migrations', MIG), join(WS, `HOREB_SQL_CRE_G${GRADE}.sql`));
 console.log(`SQL: ${MIG} (${sql.skills} skills, ${sql.prerequisites} prerequisites, ${sql.misconceptions} misconceptions)${existsSync(WS) ? `, copied to Tuta Workspace/HOREB_SQL_CRE_G${GRADE}.sql` : ''}`);

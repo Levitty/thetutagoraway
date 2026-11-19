@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G2.THE_CH.PRAYER",
+ "title": "Prayer",
+ "status": "draft: written 19 Nov 2026 offline for Grade 2 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT",
+   "key_step": "The child retells the friend at midnight (Luke 11:5-10), says the lesson to keep praying, and knows the opening of the Lord's Prayer.",
+   "floor": {
+    "prerequisite": "Knows simple prayers.",
+    "question": "When can we pray?",
+    "answer": "Any time (morning, at meals, at night)"
+   },
+   "representations": [
+    "three paper loaves",
+    "a door to knock on",
+    "the Lord's Prayer chart"
+   ],
+   "steps": [
+    "Picture-read Luke 11:5-10.",
+    "Act out the knocking.",
+    "Say the lesson.",
+    "Say the first lines of the Lord's Prayer."
+   ],
+   "contexts": [
+    "praying for a sick relative",
+    "asking a parent many times",
+    "night prayers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: knock, knock, knock."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the third knock.",
+     "say": "Why did the friend finally open?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say because he kept asking."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: keep on praying."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_THREE",
+     "listen_for": [
+      "Money"
+     ],
+     "ask": "What did the man ask his friend for?",
+     "repair": "Read Luke 11:5 and hold up three paper loaves."
+    },
+    {
+     "code": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_FIRST",
+     "listen_for": [
+      "He got up at once"
+     ],
+     "ask": "Why did the friend finally get up?",
+     "repair": "Read Luke 11:8 and act out knocking again and again."
+    },
+    {
+     "code": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_LESSON",
+     "listen_for": [
+      "Do not disturb people at night"
+     ],
+     "ask": "What does the story teach about prayer?",
+     "repair": "Read Luke 11:9-10."
+    },
+    {
+     "code": "CRES.G2.THE_CH.PRAYER.FRIEND_MIDNIGHT.M_C2_FM_LP_START",
+     "listen_for": [
+      "Give us today our daily bread"
+     ],
+     "ask": "How does the Lord's Prayer begin?",
+     "repair": "Say the first four lines with actions."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the man ask for?",
+     "answer": "Three loaves",
+     "shows": "retell"
+    },
+    {
+     "question": "What does the story teach about prayer?",
+     "answer": "Keep on praying",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}
