@@ -6,6 +6,7 @@ import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.pre
 import { FAMILIES as A } from '../families/pretechnical_g7_a.js';
 import { FAMILIES as B } from '../families/pretechnical_g7_b.js';
 import { FAMILIES as C } from '../families/pretechnical_g7_c.js';
+import { FAMILIES as D } from '../families/pretechnical_g7_d.js';
 import { SIGNED } from '../families/pretechnical_g7_signed.js';
 import { AWAITING } from '../families/pretechnical_g7_awaiting.js';
 
@@ -14,8 +15,8 @@ export default {
   name: 'Pre-Technical Studies', shortName: 'Pre-Technical Studies', icon: 'book',
   description: 'Grade 7 Pre-Technical Studies from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...A, ...B, ...C],                          // add each family file you write: [...A, ...B]
-  familyFiles: ['pretechnical_g7_a.js', 'pretechnical_g7_b.js', 'pretechnical_g7_c.js'],              // the same files by name (a phone build drops them while nothing is signed)
+  families: [...A, ...B, ...C, ...D],                          // add each family file you write: [...A, ...B]
+  familyFiles: ['pretechnical_g7_a.js', 'pretechnical_g7_b.js', 'pretechnical_g7_c.js', 'pretechnical_g7_d.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'pretechnical_g7_signed.js',
   awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -24,6 +25,6 @@ export default {
   bank: false,                               // true only to also list the families in the shared bank (FAMILIES): Science G5 only
   curriculumDir: 'pre_technical',                   // curriculum/<dir>/g<N>.json
   misconceptionsFile: 'engine/data/curriculum/pretechnical.g7.misconceptions.json',
-  reviewDoc: 'docs/qa/pretechnical-g7-review-2026-11-13.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  reviewDoc: 'docs/qa/pretechnical-g7-review-2026-11-19.md',   // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
   precheckLabel: 'Pre-Technical Studies 7',
 };

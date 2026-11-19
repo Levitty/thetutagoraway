@@ -104,6 +104,7 @@ export default {
   'pretechnical_g7_a.js': 'pretechnical_g7_signed.js',
   'pretechnical_g7_b.js': 'pretechnical_g7_signed.js',
   'pretechnical_g7_c.js': 'pretechnical_g7_signed.js',
+  'pretechnical_g7_d.js': 'pretechnical_g7_signed.js',
   'pretechnical_g8_a.js': 'pretechnical_g8_signed.js',
   'pretechnical_g8_b.js': 'pretechnical_g8_signed.js',
   'pretechnical_g9_a.js': 'pretechnical_g9_signed.js',
