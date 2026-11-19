@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.RESOUR.WASTE_MATERIALS",
+ "title": "Waste Materials",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Children never pick broken glass, sharp tins, used syringes or medical waste; an adult handles them (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME",
+   "key_step": "The child names waste materials that can earn money and describes how (sell to recyclers, make items, make compost), keeping away from dangerous waste.",
+   "floor": {
+    "prerequisite": "Knows how to keep the school clean.",
+    "question": "Where do we put litter at school?",
+    "answer": "In the dustbin (litter pit)"
+   },
+   "representations": [
+    "clean waste items: bottles, tins, cartons, bottle tops",
+    "items made from waste",
+    "a \"never touch\" card"
+   ],
+   "steps": [
+    "Sort clean waste by material.",
+    "Say what each can be made into or sold for.",
+    "Name waste children must never touch.",
+    "Plan a class waste project."
+   ],
+   "contexts": [
+    "a scrap metal dealer",
+    "a woman weaving mats from plastic bags",
+    "a compost heap at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plastic bottle, a tin, peels and a syringe."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the syringe.",
+     "say": "Can we pick this to sell?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, tell an adult."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a use beside each safe item."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME.M_E3_WST_ALL_RUBBISH",
+     "listen_for": [
+      "No, it is rubbish"
+     ],
+     "ask": "Can an empty plastic bottle earn money?",
+     "repair": "Show items made from waste (a bottle-top toy, a tyre sandal) and a collector buying plastics."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME.M_E3_WST_PICK_ANY",
+     "listen_for": [
+      "Pick it and sell it"
+     ],
+     "ask": "You see a used syringe on the dumping site. What do you do?",
+     "repair": "Show a \"never touch\" list: broken glass, syringes, sharp tins, medical waste. Tell an adult."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME.M_E3_WST_BURN_BEST",
+     "listen_for": [
+      "Burning, it makes them disappear"
+     ],
+     "ask": "What is a better way to deal with plastic bottles than burning them?",
+     "repair": "Show the black smoke from burning plastic in a picture. Say it harms the lungs and air."
+    },
+    {
+     "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME.M_E3_WST_KITCHEN_NONE",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What can banana and potato peels be used for?",
+     "repair": "Start a small compost heap at school. Show the manure after some weeks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a waste material that can earn money.",
+     "answer": "Plastic bottles (scrap metal, paper)",
+     "shows": "identifies"
+    },
+    {
+     "question": "How can peels earn money?",
+     "answer": "Made into compost and sold",
+     "shows": "describes"
+    }
+   ]
+  }
+ ]
+}

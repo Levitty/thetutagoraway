@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G3.NATURA.WEATHER",
+ "title": "Weather",
+ "status": "draft: written 19 Nov 2026 offline for Grade 3 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Lightning and floods are real dangers in many parts of Kenya: teach the safe action first (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER",
+   "key_step": "The child describes unfavourable weather, says how it can harm people and what to do to stay safe.",
+   "floor": {
+    "prerequisite": "Names weather conditions.",
+    "question": "What is the weather when the sky is dark and water falls?",
+    "answer": "Rainy"
+   },
+   "representations": [
+    "pictures of a flood, a storm, a drought, hail",
+    "a \"what do I do?\" card for each",
+    "a weather story"
+   ],
+   "steps": [
+    "Name the weather in the picture.",
+    "Say how it can hurt people.",
+    "Say the safe action.",
+    "Act out the safe action."
+   ],
+   "contexts": [
+    "the long rains with floods",
+    "a drought in a dry area",
+    "a thunderstorm at break time"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a storm with lightning and a tall tree."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tree.",
+     "say": "Is it safe to stand here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no and where to go."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: go indoors, not under a tree."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER.M_E3_WEA_TREE_SHELTER",
+     "listen_for": [
+      "Under the tallest tree"
+     ],
+     "ask": "It starts to thunder and rain while you walk home. Where do you go?",
+     "repair": "Show that lightning strikes the tallest thing. Practise going into a building or crouching low in the open."
+    },
+    {
+     "code": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER.M_E3_WEA_FLOOD_CROSS",
+     "listen_for": [
+      "Walk across quickly"
+     ],
+     "ask": "A small river is flooded up to your knees on the way to school. What do you do?",
+     "repair": "Show how a little moving water can push over a child. Rule: turn back, wait for an adult."
+    },
+    {
+     "code": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER.M_E3_WEA_HOT_GOOD",
+     "listen_for": [
+      "No, sunshine is always good"
+     ],
+     "ask": "Can very hot weather be dangerous?",
+     "repair": "Talk about a drought: dry rivers, dying crops and thirst. Name the safe actions: water, shade, hat."
+    },
+    {
+     "code": "ENVI.G3.NATURA.WEATHER.BAD_WEATHER.M_E3_WEA_LIGHTNING_PHONE",
+     "listen_for": [
+      "Yes, until the rain comes"
+     ],
+     "ask": "You hear thunder but it is not raining yet. Can you keep playing football in the field?",
+     "repair": "Teach the rule: when thunder roars, go indoors. Lightning can strike before the rain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one danger of floods.",
+     "answer": "People can drown (houses are destroyed)",
+     "shows": "explains danger"
+    },
+    {
+     "question": "What do you do when you hear thunder?",
+     "answer": "Go indoors",
+     "shows": "responds safely"
+    }
+   ]
+  }
+ ]
+}
