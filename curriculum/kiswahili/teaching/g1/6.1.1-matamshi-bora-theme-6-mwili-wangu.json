@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 6: Mwili wangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (si-ki-o), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: sikio, bega, damu",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Bega, goti na sikio ni sehemu za mwili."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "mwili wangu",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "si-ki-o"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T6",
+     "listen_for": [
+      "tamu"
+     ],
+     "ask": "Ulisikia /d/ au /t/?",
+     "repair": "Sikiliza: \"damu\" ina sauti /d/, si /t/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T6",
+     "listen_for": [
+      "siwa"
+     ],
+     "ask": "Ulisikia /z/ au /s/?",
+     "repair": "\"ziwa\" ina sauti /z/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T6",
+     "listen_for": [
+      "s-i-k-i-o"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: si-ki-o."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_NAME_T6",
+     "listen_for": [
+      "ji"
+     ],
+     "ask": "Ni jina la herufi au ni sauti yake?",
+     "repair": "Kwa Kiswahili tunatamka sauti: /g/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T6",
+     "listen_for": [
+      "mkono"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"bega\" ina sauti lengwa; \"mkono\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"damu\" kwa silabi.",
+     "answer": "da-mu",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: bega au mkono?",
+     "answer": "bega",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 2: Familia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (ma-ma), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: mama, kaka, tatu",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Mama na kaka wanalala."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "familia",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "ma-ma"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T2",
+     "listen_for": [
+      "rara"
+     ],
+     "ask": "Ulisikia /l/ au /r/?",
+     "repair": "Sikiliza: \"lala\" ina sauti /l/, si /r/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T2",
+     "listen_for": [
+      "gaga"
+     ],
+     "ask": "Ulisikia /k/ au /g/?",
+     "repair": "\"kaka\" ina sauti /k/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T2",
+     "listen_for": [
+      "m-a-m-a"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: ma-ma."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_NAME_T2",
+     "listen_for": [
+      "em"
+     ],
+     "ask": "Ni jina la herufi au ni sauti yake?",
+     "repair": "Kwa Kiswahili tunatamka sauti: /m/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T2",
+     "listen_for": [
+      "baba"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"kaka\" ina sauti lengwa; \"baba\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"tatu\" kwa silabi.",
+     "answer": "ta-tu",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: kaka au baba?",
+     "answer": "kaka",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

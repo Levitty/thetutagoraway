@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA",
+ "title": "Umoja na Wingi wa Majina (Theme 2: Familia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on familia using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "familia",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mtoto - watoto; kiti - viti"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"watoto\".",
+     "say": "Mtoto mmoja au wengi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_WRONGCLASS_T2",
+     "listen_for": [
+      "witi"
+     ],
+     "ask": "Neno hili ni la ngeli gani?",
+     "repair": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (viti)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_NUMWORD_T2",
+     "listen_for": [
+      "mtoto wawili"
+     ],
+     "ask": "Nomino inabadilikaje ikiwa zaidi ya moja?",
+     "repair": "Nomino hubadilika pia: vitabu viwili. (watoto wawili)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_REVERSE_T2",
+     "listen_for": [
+      "vikombe"
+     ],
+     "ask": "Ni kimoja au ni vingi?",
+     "repair": "Kimoja ni kitabu; vingi ni vitabu. (kikombe)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_NCLASS_T2",
+     "listen_for": [
+      "makalamu"
+     ],
+     "ask": "Neno hili linabadilikaje katika wingi?",
+     "repair": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (kalamu)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Wingi wa \"mzee\" ni?",
+     "answer": "wazee",
+     "shows": "m-wa"
+    },
+    {
+     "question": "Wingi wa \"kitanda\" ni?",
+     "answer": "vitanda",
+     "shows": "ki-vi"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2777 @@
+{
+ "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_REPLY_T1": {
+  "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Answers a greeting with the same greeting (Hujambo? Hujambo!) instead of its reply.",
+  "example": {
+   "question": "Rafiki anakusalimu: \"Hujambo?\" Unajibu nini?",
+   "wrong_answer": "Hujambo",
+   "correct_answer": "Sijambo"
+  },
+  "cause": "The child hears the greeting as a sound to echo, as with \"Hello\" in English; the question-and-answer pair has not been learnt.",
+  "reveals": "The question \"Rafiki anakusalimu: \"Hujambo?\" Unajibu nini?\" with \"Hujambo\" among the options.",
+  "help": "Act it as a ball game: the greeting is thrown, the reply is caught; the two words are on two different cards.",
+  "feedback": "Ukiulizwa \"Hujambo?\" unajibu \"Sijambo,\" maana yake sina tatizo.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_ELDER_T1": {
+  "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Greets an elder with a peer or Sheng greeting (Mambo! Sasa!) instead of Shikamoo.",
+  "example": {
+   "question": "Unamwona babu njiani. Unamsalimu vipi?",
+   "wrong_answer": "Mambo babu!",
+   "correct_answer": "Shikamoo babu!"
+  },
+  "cause": "Mambo and Sasa are what the child hears most among children and on the street; he has not been taught that an elder is greeted differently.",
+  "reveals": "The question \"Unamwona babu njiani. Unamsalimu vipi?\" with \"Mambo babu!\" among the options.",
+  "help": "Sort picture cards of people (babu, rafiki, mwalimu) into two piles: Shikamoo and Hujambo.",
+  "feedback": "Mzee husalimiwa kwa heshima: Shikamoo babu!",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_MARAHABA_T1": {
+  "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Gives the elder's reply to the child's greeting the wrong way round (the elder says Shikamoo, or the child says Marahaba).",
+  "example": {
+   "question": "Mtoto anamsalimu bibi: \"Shikamoo bibi!\" Bibi anajibu nini?",
+   "wrong_answer": "Shikamoo",
+   "correct_answer": "Marahaba"
+  },
+  "cause": "Both words are heard together and the child does not yet know which belongs to the young person and which to the elder.",
+  "reveals": "The question \"Mtoto anamsalimu bibi: \"Shikamoo bibi!\" Bibi anajibu nini?\" with \"Shikamoo\" among the options.",
+  "help": "Role-play with a hat for the elder: only the one with the hat may say Marahaba.",
+  "feedback": "Mtoto anasema Shikamoo; mzee anajibu Marahaba.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_TIME_T1": {
+  "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Uses the greeting of another time of day.",
+  "example": {
+   "question": "Unamwona mwalimu asubuhi. Unamsalimu vipi?",
+   "wrong_answer": "Habari za jioni mwalimu!",
+   "correct_answer": "Habari za asubuhi mwalimu!"
+  },
+  "cause": "The child learnt one greeting as a set phrase and uses it at every hour.",
+  "reveals": "The question \"Unamwona mwalimu asubuhi. Unamsalimu vipi?\" with \"Habari za jioni mwalimu!\" among the options.",
+  "help": "A clock or sun chart: asubuhi, mchana, jioni, usiku; the child moves the arrow and says the greeting for that time.",
+  "feedback": "Salamu hufuata wakati: Habari za asubuhi mwalimu!",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_LEAVE_T1": {
+  "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Uses a greeting when leaving, or a farewell when arriving.",
+  "example": {
+   "question": "Unaenda nyumbani baada ya shule. Unamuaga mwalimu vipi?",
+   "wrong_answer": "Hujambo mwalimu!",
+   "correct_answer": "Kwaheri mwalimu!"
+  },
+  "cause": "Greeting and farewell words are learnt on one chart and the child mixes the two columns.",
+  "reveals": "The question \"Unaenda nyumbani baada ya shule. Unamuaga mwalimu vipi?\" with \"Hujambo mwalimu!\" among the options.",
+  "help": "Act out a door: walk in and greet, walk out and say goodbye.",
+  "feedback": "Unapoondoka unaaga: Kwaheri mwalimu!",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_GROUP_T1": {
+  "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Greets a group with the singular greeting (Hujambo?) or answers for a group with Sijambo.",
+  "example": {
+   "question": "Mwalimu anaingia darasani na kusema: \"Hamjambo wanafunzi?\" Darasa linajibu nini?",
+   "wrong_answer": "Sijambo",
+   "correct_answer": "Hatujambo"
+  },
+  "cause": "The child knows one pair only; the plural forms hamjambo/hatujambo follow the person marker (m-, tu-), which has not been noticed.",
+  "reveals": "The question \"Mwalimu anaingia darasani na kusema: \"Hamjambo wanafunzi?\" Darasa linajibu nini?\" with \"Sijambo\" among the options.",
+  "help": "Greet one child, then the whole row; show that the word changes with one or many.",
+  "feedback": "Watu wengi hujibu \"Hatujambo.\"",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_RIGHT_T1": {
+  "skill": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA",
+  "error": "Starts reading from the right or from the bottom of the page.",
+  "example": {
+   "question": "Unaanza kusoma ukurasa kutoka wapi?",
+   "wrong_answer": "chini upande wa kulia",
+   "correct_answer": "juu upande wa kushoto"
+  },
+  "cause": "Some children have seen other scripts read from the right, or simply start where the picture is.",
+  "reveals": "The question \"Unaanza kusoma ukurasa kutoka wapi?\" with \"chini upande wa kulia\" among the options.",
+  "help": "Put a green dot at the top left of each page: start at the green dot.",
+  "feedback": "Tunaanza juu, upande wa kushoto.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_UPSIDE_T1": {
+  "skill": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA",
+  "error": "Holds the book upside down or back to front.",
+  "example": {
+   "question": "Kitabu kiko sawa lini?",
+   "wrong_answer": "picha zikiwa juu chini",
+   "correct_answer": "picha na maandishi yakiwa wima, jalada mbele"
+  },
+  "cause": "The child has handled few books and does not check the picture before reading.",
+  "reveals": "The question \"Kitabu kiko sawa lini?\" with \"picha zikiwa juu chini\" among the options.",
+  "help": "Before opening, find the front cover and check that the people in the picture stand up.",
+  "feedback": "Shika kitabu wima: jalada mbele, picha zimesimama.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_POSTURE_T1": {
+  "skill": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA",
+  "error": "Reads lying on the desk with his face almost on the page, or leaning back far from it.",
+  "example": {
+   "question": "Mkao upi ni bora unaposoma?",
+   "wrong_answer": "kulala juu ya meza uso karibu na kitabu",
+   "correct_answer": "kuketi wima, kitabu mezani umbali wa mkono"
+  },
+  "cause": "The child is tired or cannot see well; nobody has shown the reading position.",
+  "reveals": "The question \"Mkao upi ni bora unaposoma?\" with \"kulala juu ya meza uso karibu na kitabu\" among the options.",
+  "help": "Show the \"elbow distance\": the book is as far as from the elbow to the hand. If the child still leans in, tell the parent to check the eyes.",
+  "feedback": "Keti wima, kitabu kiwe umbali wa kiwiko hadi kiganja.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA.M1_USM_SKIPLINE_T1": {
+  "skill": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA",
+  "error": "Loses the line and jumps to another line or back to the start.",
+  "example": {
+   "question": "Unapomaliza mstari wa kwanza, unaenda wapi?",
+   "wrong_answer": "popote ninapoona neno ninalolijua",
+   "correct_answer": "mwanzo wa mstari wa pili, upande wa kushoto"
+  },
+  "cause": "The eye sweep back to the next line is new; without a finger guide the child lands anywhere.",
+  "reveals": "The question \"Unapomaliza mstari wa kwanza, unaenda wapi?\" with \"popote ninapoona neno ninalolijua\" among the options.",
+  "help": "Move a finger or a card under the line; at the end, slide back to the left and down one line.",
+  "feedback": "Mwisho wa mstari, rudi kushoto kwenye mstari unaofuata.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_FIST_T1": {
+  "skill": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA",
+  "error": "Grips the pencil in the fist, or with all the fingers wrapped round it.",
+  "example": {
+   "question": "Kalamu inashikwa vipi?",
+   "wrong_answer": "kwa ngumi nzima",
+   "correct_answer": "kwa kidole gumba na vidole viwili"
+  },
+  "cause": "A fist grip is how small children first hold a crayon; the tripod grip has not been taught.",
+  "reveals": "The question \"Kalamu inashikwa vipi?\" with \"kwa ngumi nzima\" among the options.",
+  "help": "Pinch the pencil with thumb and pointer, rest it on the middle finger; a small rubber band can mark the place.",
+  "feedback": "Shika kalamu kwa vidole vitatu, si kwa ngumi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_SLUMP_T1": {
+  "skill": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA",
+  "error": "Writes with the head on the desk or the body twisted, the book at an angle.",
+  "example": {
+   "question": "Mkao upi ni bora unapoandika?",
+   "wrong_answer": "kichwa juu ya meza",
+   "correct_answer": "kuketi wima, miguu sakafuni, daftari limenyooka"
+  },
+  "cause": "The child tires quickly and nobody has shown the writing position.",
+  "reveals": "The question \"Mkao upi ni bora unapoandika?\" with \"kichwa juu ya meza\" among the options.",
+  "help": "Check four things before writing: back straight, feet down, book straight, free hand holding the page.",
+  "feedback": "Keti wima na unyooshe daftari kabla ya kuandika.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_RTL_T1": {
+  "skill": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA",
+  "error": "Starts writing at the right of the line, or writes letters from right to left.",
+  "example": {
+   "question": "Unaanza kuandika mstari kutoka wapi?",
+   "wrong_answer": "upande wa kulia",
+   "correct_answer": "upande wa kushoto"
+  },
+  "cause": "The child starts wherever there is space, or copies the direction of a sibling's writing in another script.",
+  "reveals": "The question \"Unaanza kuandika mstari kutoka wapi?\" with \"upande wa kulia\" among the options.",
+  "help": "A green start line at the left margin of each line.",
+  "feedback": "Tunaandika kutoka kushoto kwenda kulia.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA.M1_UAN_PRESS_T1": {
+  "skill": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA",
+  "error": "Presses so hard the pencil breaks or tears the page.",
+  "example": {
+   "question": "Unaandika kwa nguvu kiasi gani?",
+   "wrong_answer": "kwa nguvu sana mpaka karatasi ikatike",
+   "correct_answer": "kwa upole, kalamu ikiteleza"
+  },
+  "cause": "The child holds the pencil too tight from worry or from the fist grip.",
+  "reveals": "The question \"Unaandika kwa nguvu kiasi gani?\" with \"kwa nguvu sana mpaka karatasi ikatike\" among the options.",
+  "help": "Write on a sheet with carbon or soft paper below; the mark should not come through.",
+  "feedback": "Andika kwa upole: kalamu iteleze.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_PREFIX_T1": {
+  "skill": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI",
+  "error": "The pronoun and the subject marker on the verb do not agree (Wao anacheza).",
+  "example": {
+   "question": "Jaza: Sisi ___ (imba) wimbo.",
+   "wrong_answer": "ninaimba",
+   "correct_answer": "tunaimba"
+  },
+  "cause": "The child learns the pronoun as a word and the verb as a fixed form; he has not seen that the verb changes with the person.",
+  "reveals": "The question \"Jaza: Sisi ___ (imba) wimbo.\" with \"ninaimba\" among the options.",
+  "help": "Colour the pronoun and the verb's first syllable the same colour: yeye a-, wao wa-, mimi ni-, sisi tu-, wewe u-, nyinyi m-.",
+  "feedback": "Kitendo hufuata nafsi: Wao wanacheza; Yeye anacheza. (tunaimba)",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_NUMBER_T1": {
+  "skill": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI",
+  "error": "Uses the one-person pronoun for many people, or the reverse.",
+  "example": {
+   "question": "Mimi na Ali tunacheza. ___ tunacheza.",
+   "wrong_answer": "Mimi",
+   "correct_answer": "Sisi"
+  },
+  "cause": "The child has not linked the pronoun pair to one and many.",
+  "reveals": "The question \"Mimi na Ali tunacheza. ___ tunacheza.\" with \"Mimi\" among the options.",
+  "help": "Point at one child, then at a group, saying the right pronoun each time.",
+  "feedback": "Mtu mmoja ni yeye; watu wengi ni wao. (Sisi)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_PERSON_T1": {
+  "skill": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI",
+  "error": "Repeats the pronoun of the question in the answer (Wewe unaenda wapi? Wewe ninaenda sokoni.) instead of switching to mimi.",
+  "example": {
+   "question": "Mwalimu anakuuliza: \"Unaitwa nani?\" Unajibu:",
+   "wrong_answer": "Wewe ni Baraka.",
+   "correct_answer": "Mimi ni Baraka."
+  },
+  "cause": "The child copies the words he heard; changing person between speakers is new.",
+  "reveals": "The question \"Mwalimu anakuuliza: \"Unaitwa nani?\" Unajibu:\" with \"Wewe ni Baraka.\" among the options.",
+  "help": "Ask and answer in pairs with a pointing finger: wewe points out, mimi points to the chest.",
+  "feedback": "Ukiulizwa kwa \"wewe\", unajibu kwa \"mimi\". (Mimi ni Baraka.)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_OBJ_T1": {
+  "skill": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI",
+  "error": "Puts the pronoun after the verb instead of the object marker inside it (Mama alimpa mimi for Mama alinipa).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Mama alimpa mimi chakula.",
+   "correct_answer": "Mama alinipa chakula."
+  },
+  "cause": "English says \"gave me\"; the child adds the separate word instead of -ni- inside the verb.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Mama alimpa mimi chakula.\" among the options.",
+  "help": "Show the verb with the object marker coloured: a-li-ni-pa; compare with the wrong form.",
+  "feedback": "Tunasema \"Mama alinipa\", si \"alimpa mimi\". (Mama alinipa chakula.)",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T2": {
+  "skill": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /r/ for /l/, so \"lala\" becomes \"rara\".",
+  "example": {
+   "question": "Mwalimu anasema \"lala\". Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "rara",
+   "correct_answer": "lala"
+  },
+  "cause": "Many Kenyan first languages have no /l/, or do not separate it from /r/; the child puts in the home sound.",
+  "reveals": "The question \"Mwalimu anasema \"lala\". Neno lipi limetamkwa vizuri?\" with \"rara\" among the options.",
+  "help": "Say the two side by side, slowly, watching the mouth; the child holds up a card for the sound he hears.",
+  "feedback": "Sikiliza: \"lala\" ina sauti /l/, si /r/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T2": {
+  "skill": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /g/ for /k/, so \"kaka\" becomes \"gaga\".",
+  "example": {
+   "question": "Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "gaga",
+   "correct_answer": "kaka"
+  },
+  "cause": "/k/ and /g/ are close; a first language with only one of them puts that one in both places.",
+  "reveals": "The question \"Neno lipi limetamkwa vizuri?\" with \"gaga\" among the options.",
+  "help": "Contrast the two with a mirror and a hand before the mouth; the child says which he hears.",
+  "feedback": "\"kaka\" ina sauti /k/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T2": {
+  "skill": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+  "error": "Splits \"mama\" by letters rather than by syllables (each Kiswahili syllable ends in a vowel).",
+  "example": {
+   "question": "Neno \"mama\" lina silabi zipi?",
+   "wrong_answer": "m-a-m-a",
+   "correct_answer": "ma-ma"
+  },
+  "cause": "The child has learnt letters one by one and has not been shown that a syllable is a sound that ends in a vowel.",
+  "reveals": "The question \"Neno \"mama\" lina silabi zipi?\" with \"m-a-m-a\" among the options.",
+  "help": "Clap the word: one clap per vowel; the consonants go with the vowel after them.",
+  "feedback": "Kila silabi ya Kiswahili huishia kwa irabu: ma-ma.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_NAME_T2": {
+  "skill": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says the English letter name instead of the Kiswahili sound (/m/ as \"em\"), so the syllable cannot be built.",
+  "example": {
+   "question": "Sauti ya herufi \"m\" ni ipi?",
+   "wrong_answer": "em",
+   "correct_answer": "/m/"
+  },
+  "cause": "English letter names are taught alongside and the child brings them to Kiswahili; a syllable is built from sounds, not names.",
+  "reveals": "The question \"Sauti ya herufi \"m\" ni ipi?\" with \"em\" among the options.",
+  "help": "Say the sound alone, short (/m/), then join it to a vowel: ma, me, mi.",
+  "feedback": "Kwa Kiswahili tunatamka sauti: /m/.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T2": {
+  "skill": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+  "error": "Picks a word with no target sound when asked for one that has it.",
+  "example": {
+   "question": "Ni neno lipi lina sauti /m/, /a/, /u/, /k/, /t/, /l/?",
+   "wrong_answer": "baba",
+   "correct_answer": "kaka"
+  },
+  "cause": "The child looks at the first letter or the picture, not at the sound.",
+  "reveals": "The question \"Ni neno lipi lina sauti /m/, /a/, /u/, /k/, /t/, /l/?\" with \"baba\" among the options.",
+  "help": "Underline the target sound in each word on the card before choosing.",
+  "feedback": "\"kaka\" ina sauti lengwa; \"baba\" haina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_SOUND_T2": {
+  "skill": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads the target word wrongly: \"kuku\" as \"guku\".",
+  "example": {
+   "question": "Neno \"kuku\" linasomwa vipi?",
+   "wrong_answer": "guku",
+   "correct_answer": "kuku"
+  },
+  "cause": "The child reads the letters with the sounds of his first language, or adds a vowel to break the cluster.",
+  "reveals": "The question \"Neno \"kuku\" linasomwa vipi?\" with \"guku\" among the options.",
+  "help": "Pick out the target words before reading; practise them on cards, then read the passage.",
+  "feedback": "Soma \"kuku\" kama lilivyoandikwa.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_WORD_T2": {
+  "skill": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads word by word or syllable by syllable, so the sentence has no meaning when heard.",
+  "example": {
+   "question": "Ni usomaji upi ni wa ufasaha: \"Mama ana kuku.\"?",
+   "wrong_answer": "Mama ... ana ... kuku.",
+   "correct_answer": "Mama ana kuku."
+  },
+  "cause": "The child is still decoding each word; he has not yet read a group of words as one piece.",
+  "reveals": "The question \"Ni usomaji upi ni wa ufasaha: \"Mama ana kuku.\"?\" with \"Mama ... ana ... kuku.\" among the options.",
+  "help": "Echo reading: the teacher reads a phrase, the child repeats it in one breath.",
+  "feedback": "Soma maneno kwa pamoja kama unavyozungumza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_QUIET_T2": {
+  "skill": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads so softly (or so loudly, shouting) that the class cannot follow.",
+  "example": {
+   "question": "Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?",
+   "wrong_answer": "ya chini ili nisikosee mbele ya wenzangu",
+   "correct_answer": "ya kusikika na wote darasani, bila kupiga kelele"
+  },
+  "cause": "Shyness, or the belief that reading well means reading loud.",
+  "reveals": "The question \"Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?\" with \"ya chini ili nisikosee mbele ya wenzangu\" among the options.",
+  "help": "Stand the reader at the front and a listener at the back: the listener raises a hand when he hears every word.",
+  "feedback": "Soma kwa sauti inayosikika na wote, bila kupiga kelele.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_PACE_T2": {
+  "skill": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads as fast as possible and thinks the fastest reader is the best.",
+  "example": {
+   "question": "Kasi ifaayo ya kusoma kifungu ni ipi?",
+   "wrong_answer": "haraka iwezekanavyo",
+   "correct_answer": "kasi ya kuzungumza, karibu maneno 5 kwa dakika"
+  },
+  "cause": "Reading races in class reward speed; nobody asked whether the listeners understood.",
+  "reveals": "The question \"Kasi ifaayo ya kusoma kifungu ni ipi?\" with \"haraka iwezekanavyo\" among the options.",
+  "help": "Time two readings, one very fast and one at speaking pace; the listeners answer one question after each.",
+  "feedback": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_MARK_T2": {
+  "skill": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads a question in the flat voice of a statement and runs on through the koma and kikomo.",
+  "example": {
+   "question": "Sentensi \"Je, kaka yuko?\" inasomwa vipi?",
+   "wrong_answer": "kwa sauti ileile ya sentensi ya kawaida",
+   "correct_answer": "sauti hupanda mwishoni kwa sababu ni swali"
+  },
+  "cause": "The child looks at the words and not at the marks.",
+  "reveals": "The question \"Sentensi \"Je, kaka yuko?\" inasomwa vipi?\" with \"kwa sauti ileile ya sentensi ya kawaida\" among the options.",
+  "help": "Read the same words three ways (. ? !); the child points at the mark that fits each reading; clap at each kikomo.",
+  "feedback": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_CAPSTART_T2": {
+  "skill": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Starts a sentence or a name with a small letter.",
+  "example": {
+   "question": "Andika kwa usahihi: mama na baba wako nyumbani.",
+   "wrong_answer": "mama na baba wako nyumbani.",
+   "correct_answer": "Mama na Baba wako nyumbani."
+  },
+  "cause": "The child copies words, not sentences; the rule that a sentence and a name begin with a capital is not yet used.",
+  "reveals": "The question \"Andika kwa usahihi: mama na baba wako nyumbani.\" with \"mama na baba wako nyumbani.\" among the options.",
+  "help": "Circle the first letter of each sentence and each name in a passage in red.",
+  "feedback": "Sentensi na jina la mtu au mahali huanza kwa herufi kubwa.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_CAPMID_T2": {
+  "skill": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Puts capital letters in the middle of words (JuMa, Kitabu KiKubwa).",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "JuMa ANakula",
+   "correct_answer": "Juma anakula"
+  },
+  "cause": "Some capitals (K, M, S) are easier to form than the small letter, so the child uses them anywhere.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"JuMa ANakula\" among the options.",
+  "help": "Sort letter cards: capital only at the start; the rest small.",
+  "feedback": "Herufi kubwa iko mwanzoni tu; nyingine ni ndogo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_SPACE_T2": {
+  "skill": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Leaves no space between words (Mamaanapika).",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "Mamaanapikachakula.",
+   "correct_answer": "Mama anapika chakula."
+  },
+  "cause": "Spoken Kiswahili runs words together; the child writes the stream as he hears it.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"Mamaanapikachakula.\" among the options.",
+  "help": "Put a finger space after every word.",
+  "feedback": "Acha nafasi ya kidole kati ya neno na neno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_TURN_T2": {
+  "skill": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Turns b and d (or p and q) round: dada written \"baba\" or \"bada\".",
+  "example": {
+   "question": "Andika neno \"dada\".",
+   "wrong_answer": "bada",
+   "correct_answer": "dada"
+  },
+  "cause": "Mirror letters are common in early writing; the child has not fixed the direction.",
+  "reveals": "The question \"Andika neno \"dada\".\" with \"bada\" among the options.",
+  "help": "Teach d as \"c then a tall line\"; trace it in sand.",
+  "feedback": "Herufi d huanza kama c, kisha mstari mrefu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_LINE_T2": {
+  "skill": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Writes letters floating above the line or of mixed sizes, so the line goes up and down.",
+  "example": {
+   "question": "Maandishi nadhifu yanakaa wapi?",
+   "wrong_answer": "popote kwenye ukurasa",
+   "correct_answer": "juu ya mstari, herufi zikiwa na ukubwa sawa"
+  },
+  "cause": "The child writes fast and does not look at the line.",
+  "reveals": "The question \"Maandishi nadhifu yanakaa wapi?\" with \"popote kwenye ukurasa\" among the options.",
+  "help": "Trace the line with a finger first; every letter sits on it.",
+  "feedback": "Kila herufi ikae juu ya mstari.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_WRONGCLASS_T2": {
+  "skill": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Makes the plural with the prefix of another noun class (kitabu -> watabu).",
+  "example": {
+   "question": "Wingi wa \"kiti\" ni?",
+   "wrong_answer": "witi",
+   "correct_answer": "viti"
+  },
+  "cause": "The child knows that wa- makes people plural and uses it for everything; the ngeli of the noun is not yet known.",
+  "reveals": "The question \"Wingi wa \"kiti\" ni?\" with \"witi\" among the options.",
+  "help": "Sort noun cards into ngeli families (m-wa, ki-vi, li-ma, n-n) and say each plural aloud.",
+  "feedback": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (viti)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_NUMWORD_T2": {
+  "skill": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Shows the plural only with a number word and leaves the noun singular (kitabu mbili).",
+  "example": {
+   "question": "Wingi wa \"mtoto mmoja\" ni?",
+   "wrong_answer": "mtoto wawili",
+   "correct_answer": "watoto wawili"
+  },
+  "cause": "English and some first languages keep the noun and add a number; Kiswahili changes the noun and the number agrees.",
+  "reveals": "The question \"Wingi wa \"mtoto mmoja\" ni?\" with \"mtoto wawili\" among the options.",
+  "help": "Line up two books: the child says vitabu viwili; then three: vitabu vitatu.",
+  "feedback": "Nomino hubadilika pia: vitabu viwili. (watoto wawili)",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_REVERSE_T2": {
+  "skill": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Takes the plural form for the singular (miti for one tree, vitabu for one book).",
+  "example": {
+   "question": "Ni lipi ni umoja?",
+   "wrong_answer": "vikombe",
+   "correct_answer": "kikombe"
+  },
+  "cause": "The child heard the plural more often (a tree is usually among trees) and learnt it as the name.",
+  "reveals": "The question \"Ni lipi ni umoja?\" with \"vikombe\" among the options.",
+  "help": "Hold one object, then many; the child names each.",
+  "feedback": "Kimoja ni kitabu; vingi ni vitabu. (kikombe)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_NCLASS_T2": {
+  "skill": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Gives a noun of the n-n class a plural prefix (nyumba -> manyumba), or changes an irregular noun wrongly (jicho -> majicho).",
+  "example": {
+   "question": "Wingi wa \"kalamu\" ni?",
+   "wrong_answer": "makalamu",
+   "correct_answer": "kalamu"
+  },
+  "cause": "The child expects every plural to look different; n-n nouns stay the same and some li-ma nouns change their stem.",
+  "reveals": "The question \"Wingi wa \"kalamu\" ni?\" with \"makalamu\" among the options.",
+  "help": "Keep a short list of the same-in-both nouns (nyumba, ndizi, kalamu) and the irregular ones (jicho - macho, jino - meno).",
+  "feedback": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (kalamu)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA.M1_HES_POLE_T3": {
+  "skill": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+  "error": "Says samahani when someone else is hurt by accident, where pole (sympathy) is meant.",
+  "example": {
+   "question": "Rafiki ameanguka mwenyewe uwanjani. Unamwambia nini?",
+   "wrong_answer": "Samahani",
+   "correct_answer": "Pole"
+  },
+  "cause": "English \"sorry\" covers both apology and sympathy; Kiswahili separates them: samahani when I did wrong, pole when you suffer.",
+  "reveals": "The question \"Rafiki ameanguka mwenyewe uwanjani. Unamwambia nini?\" with \"Samahani\" among the options.",
+  "help": "Two pictures: I stepped on your foot (samahani); you fell by yourself (pole). The child names each.",
+  "feedback": "Pole ni ya kumhurumia aliyeumia; samahani ni ya kuomba msamaha ukikosea.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA.M1_HES_KARIBU_T3": {
+  "skill": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+  "error": "Answers \"Asante\" with \"Asante\" instead of \"Karibu\" (or \"Si neno\").",
+  "example": {
+   "question": "Ulimpa rafiki kalamu, akasema \"Asante.\" Unajibu nini?",
+   "wrong_answer": "Asante",
+   "correct_answer": "Karibu"
+  },
+  "cause": "The child echoes the polite word he has just heard.",
+  "reveals": "The question \"Ulimpa rafiki kalamu, akasema \"Asante.\" Unajibu nini?\" with \"Asante\" among the options.",
+  "help": "Practise the pair with two children: one gives, one thanks, the giver answers Karibu.",
+  "feedback": "Ukishukuriwa, unajibu \"Karibu.\"",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA.M1_HES_COMMAND_T3": {
+  "skill": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+  "error": "Asks with a bare command (Nipe maji!) without tafadhali or naomba.",
+  "example": {
+   "question": "Unataka maji kutoka kwa mama. Unasemaje?",
+   "wrong_answer": "Nipe maji!",
+   "correct_answer": "Mama, tafadhali naomba maji."
+  },
+  "cause": "At home and in play the child hears short commands and copies them to adults.",
+  "reveals": "The question \"Unataka maji kutoka kwa mama. Unasemaje?\" with \"Nipe maji!\" among the options.",
+  "help": "Say both versions; the child says which one makes mama want to help.",
+  "feedback": "Ombi la adabu lina \"tafadhali\" au \"naomba.\"",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA.M1_HES_TITLE_T3": {
+  "skill": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+  "error": "Calls an adult by the bare first name without a title (Mwalimu, Mama, Baba, Bi., Bw.).",
+  "example": {
+   "question": "Unamwita mwalimu wako, Bi. Akinyi. Unasemaje?",
+   "wrong_answer": "Akinyi, njoo!",
+   "correct_answer": "Mwalimu, tafadhali njoo."
+  },
+  "cause": "Children call each other by name and carry the habit to adults.",
+  "reveals": "The question \"Unamwita mwalimu wako, Bi. Akinyi. Unasemaje?\" with \"Akinyi, njoo!\" among the options.",
+  "help": "Make title cards (Mwalimu, Mama, Babu, Daktari); the child puts one before each name.",
+  "feedback": "Mtu mzima huitwa kwa heshima: Mwalimu, Mama, Babu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA.M1_HES_POLEREPLY_T3": {
+  "skill": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+  "error": "Answers \"Pole\" with \"Pole\" instead of \"Asante\".",
+  "example": {
+   "question": "Rafiki anakuambia \"Pole kwa kuumia.\" Unajibu?",
+   "wrong_answer": "Pole",
+   "correct_answer": "Asante"
+  },
+  "cause": "The child echoes the word, as with greetings.",
+  "reveals": "The question \"Rafiki anakuambia \"Pole kwa kuumia.\" Unajibu?\" with \"Pole\" among the options.",
+  "help": "Act it: one child is hurt, the other says pole, the hurt one says asante.",
+  "feedback": "Ukiambiwa \"pole\" unashukuru: \"Asante.\"",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_DECODE_T3": {
+  "skill": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Reads every word aloud but cannot say what the passage was about.",
+  "example": {
+   "question": "Umesoma kifungu. Kinahusu nini?",
+   "wrong_answer": "Sijui, nilikuwa nikisoma maneno tu.",
+   "correct_answer": "Kifungu kinahusu kuku wa Juma."
+  },
+  "cause": "All the child's effort goes into sounding out the words; nobody has asked him what the sentences said.",
+  "reveals": "The question \"Umesoma kifungu. Kinahusu nini?\" with \"Sijui, nilikuwa nikisoma maneno tu.\" among the options.",
+  "help": "After each sentence stop and ask \"Sentensi hii imesema nini?\" before reading on.",
+  "feedback": "Soma tena polepole na ufikirie maana: Kifungu kinahusu kuku wa Juma.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_WORD_T3": {
+  "skill": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Gives \"watano\" the meaning of a word that looks or sounds like it.",
+  "example": {
+   "question": "Soma: \"Juma ana kuku watano. Kuku wawili ni weupe. Kuku watatu ni weusi. Juma anawapenda kuku wake.\" Neno \"watano\" lina maana gani?",
+   "wrong_answer": "watoto",
+   "correct_answer": "idadi ya tano"
+  },
+  "cause": "The child matches the word to a known one by its look instead of reading the sentence around it.",
+  "reveals": "The question \"Soma: \"Juma ana kuku watano. Kuku wawili ni weupe. Kuku watatu ni weusi. Juma anawapenda kuku wake.\" Neno \"watano\" lina maana gani?\" with \"watoto\" among the options.",
+  "help": "Cover the word; the child says what word would fit the sentence, then uncovers it.",
+  "feedback": "Katika kifungu, \"watano\" ni idadi ya tano.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_MSG_T3": {
+  "skill": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Gives one detail of the passage as its message.",
+  "example": {
+   "question": "Ujumbe wa kifungu ni upi?",
+   "wrong_answer": "Kuku wawili ni weupe.",
+   "correct_answer": "Juma ana kuku watano na anawapenda."
+  },
+  "cause": "The detail is what the child remembers best; he has not been asked what the writer wants us to know.",
+  "reveals": "The question \"Ujumbe wa kifungu ni upi?\" with \"Kuku wawili ni weupe.\" among the options.",
+  "help": "Ask two questions side by side: \"Nini kilitokea?\" and \"Kifungu kinatuambia nini?\"",
+  "feedback": "Hilo ni tukio moja. Ujumbe ni: Juma ana kuku watano na anawapenda.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_OWN_T3": {
+  "skill": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Answers from his own life instead of from the passage.",
+  "example": {
+   "question": "Juma ana kuku wangapi?",
+   "wrong_answer": "Sisi tuna kuku kumi.",
+   "correct_answer": "watano"
+  },
+  "cause": "The child links the question to what he knows from home and does not check the text.",
+  "reveals": "The question \"Juma ana kuku wangapi?\" with \"Sisi tuna kuku kumi.\" among the options.",
+  "help": "Ask the child to point at the line in the passage that gives the answer.",
+  "feedback": "Jibu liko kwenye kifungu: watano",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_TALL_T3": {
+  "skill": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Writes the tall small letters (b, d, h, k, l) short, so h looks like n.",
+  "example": {
+   "question": "Andika neno \"habari\". Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "nabari",
+   "correct_answer": "habari"
+  },
+  "cause": "The child does not use the lines of the book: tall letters must reach the top line.",
+  "reveals": "The question \"Andika neno \"habari\". Ni lipi limeandikwa vizuri?\" with \"nabari\" among the options.",
+  "help": "Write on three-line paper; the child colours the part of h that goes up.",
+  "feedback": "Herufi h, k, l, b, d hupanda juu ya mstari wa kati.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_SIZE_T3": {
+  "skill": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Writes some small letters as big as capitals (kiti written kiTi or KITI).",
+  "example": {
+   "question": "Ni neno lipi limeandikwa kwa herufi ndogo vizuri?",
+   "wrong_answer": "KITI",
+   "correct_answer": "kiti"
+  },
+  "cause": "Capitals were learnt first in pre-primary and feel safer to write.",
+  "reveals": "The question \"Ni neno lipi limeandikwa kwa herufi ndogo vizuri?\" with \"KITI\" among the options.",
+  "help": "Compare k/K, s/S, t/T on cards; the child picks the small one for the middle of a word.",
+  "feedback": "Ndani ya neno tumia herufi ndogo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_SPACE_T3": {
+  "skill": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Leaves no space between words (Mamaanapika).",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "Mamaanapikachakula.",
+   "correct_answer": "Mama anapika chakula."
+  },
+  "cause": "Spoken Kiswahili runs words together; the child writes the stream as he hears it.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"Mamaanapikachakula.\" among the options.",
+  "help": "Put a finger space after every word.",
+  "feedback": "Acha nafasi ya kidole kati ya neno na neno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_TURN_T3": {
+  "skill": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Turns b and d (or p and q) round: dada written \"baba\" or \"bada\".",
+  "example": {
+   "question": "Andika neno \"dada\".",
+   "wrong_answer": "bada",
+   "correct_answer": "dada"
+  },
+  "cause": "Mirror letters are common in early writing; the child has not fixed the direction.",
+  "reveals": "The question \"Andika neno \"dada\".\" with \"bada\" among the options.",
+  "help": "Teach d as \"c then a tall line\"; trace it in sand.",
+  "feedback": "Herufi d huanza kama c, kisha mstari mrefu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU.M1_HAT_LINE_T3": {
+  "skill": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+  "error": "Writes letters floating above the line or of mixed sizes, so the line goes up and down.",
+  "example": {
+   "question": "Maandishi nadhifu yanakaa wapi?",
+   "wrong_answer": "popote kwenye ukurasa",
+   "correct_answer": "juu ya mstari, herufi zikiwa na ukubwa sawa"
+  },
+  "cause": "The child writes fast and does not look at the line.",
+  "reveals": "The question \"Maandishi nadhifu yanakaa wapi?\" with \"popote kwenye ukurasa\" among the options.",
+  "help": "Trace the line with a finger first; every letter sits on it.",
+  "feedback": "Kila herufi ikae juu ya mstari.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_CLASSDEM_T3": {
+  "skill": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI",
+  "error": "Uses the people word (huyu, yule) for a thing (kiti huyu).",
+  "example": {
+   "question": "Jaza: Kiti ___ ni changu.",
+   "wrong_answer": "huyu",
+   "correct_answer": "hiki"
+  },
+  "cause": "Huyu was the first pointing word learnt; the child uses it for anything.",
+  "reveals": "The question \"Jaza: Kiti ___ ni changu.\" with \"huyu\" among the options.",
+  "help": "Point at a child (huyu) and at a chair (hiki); then sort pictures by the pointing word they take.",
+  "feedback": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (hiki)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_NUMDEM_T3": {
+  "skill": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI",
+  "error": "Uses the one-thing pointing word with a plural noun (watoto huyu).",
+  "example": {
+   "question": "Jaza: Watoto ___ ni wanafunzi.",
+   "wrong_answer": "huyu",
+   "correct_answer": "hawa"
+  },
+  "cause": "The child changes the noun but not the pointing word.",
+  "reveals": "The question \"Jaza: Watoto ___ ni wanafunzi.\" with \"huyu\" among the options.",
+  "help": "Pair the forms on cards: huyu-hawa, yule-wale, hiki-hivi, hili-haya.",
+  "feedback": "Watoto ni wengi: watoto hawa. (hawa)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_HII_T3": {
+  "skill": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI",
+  "error": "Uses hii for every noun (kitabu hii, mtoto hii), as in town Kiswahili.",
+  "example": {
+   "question": "Jaza: Mtoto ___ ni dada yangu.",
+   "wrong_answer": "hii",
+   "correct_answer": "huyu"
+  },
+  "cause": "Hii is the pointing word heard most in town speech, where the noun class is dropped.",
+  "reveals": "The question \"Jaza: Mtoto ___ ni dada yangu.\" with \"hii\" among the options.",
+  "help": "Read pairs aloud: kitabu hiki, mtoto huyu, nyumba hii; the child hears the match.",
+  "feedback": "Kitabu hiki; mtoto huyu; nyumba hii. (huyu)",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI.M1_SAR_REVERSE_T3": {
+  "skill": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI",
+  "error": "Takes the plural form for the singular (miti for one tree, vitabu for one book).",
+  "example": {
+   "question": "Ni lipi ni la mtu mmoja?",
+   "wrong_answer": "hawa",
+   "correct_answer": "huyu"
+  },
+  "cause": "The child heard the plural more often (a tree is usually among trees) and learnt it as the name.",
+  "reveals": "The question \"Ni lipi ni la mtu mmoja?\" with \"hawa\" among the options.",
+  "help": "Hold one object, then many; the child names each.",
+  "feedback": "Kimoja ni kitabu; vingi ni vitabu. (huyu)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_NEAR_T4": {
+  "skill": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+  "error": "Says /i/ for /e/, so \"wewe\" becomes \"wiwi\".",
+  "example": {
+   "question": "Mwalimu anasema \"wewe\". Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "wiwi",
+   "correct_answer": "wewe"
+  },
+  "cause": "Many Kenyan first languages have no /e/, or do not separate it from /i/; the child puts in the home sound.",
+  "reveals": "The question \"Mwalimu anasema \"wewe\". Neno lipi limetamkwa vizuri?\" with \"wiwi\" among the options.",
+  "help": "Say the two side by side, slowly, watching the mouth; the child holds up a card for the sound he hears.",
+  "feedback": "Sikiliza: \"wewe\" ina sauti /e/, si /i/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_NEAR2_T4": {
+  "skill": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+  "error": "Says /u/ for /o/, so \"nono\" becomes \"nunu\".",
+  "example": {
+   "question": "Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "nunu",
+   "correct_answer": "nono"
+  },
+  "cause": "/o/ and /u/ are close; a first language with only one of them puts that one in both places.",
+  "reveals": "The question \"Neno lipi limetamkwa vizuri?\" with \"nunu\" among the options.",
+  "help": "Contrast the two with a mirror and a hand before the mouth; the child says which he hears.",
+  "feedback": "\"nono\" ina sauti /o/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_SYLL_T4": {
+  "skill": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+  "error": "Splits \"nane\" by letters rather than by syllables (each Kiswahili syllable ends in a vowel).",
+  "example": {
+   "question": "Neno \"nane\" lina silabi zipi?",
+   "wrong_answer": "n-a-n-e",
+   "correct_answer": "na-ne"
+  },
+  "cause": "The child has learnt letters one by one and has not been shown that a syllable is a sound that ends in a vowel.",
+  "reveals": "The question \"Neno \"nane\" lina silabi zipi?\" with \"n-a-n-e\" among the options.",
+  "help": "Clap the word: one clap per vowel; the consonants go with the vowel after them.",
+  "feedback": "Kila silabi ya Kiswahili huishia kwa irabu: na-ne.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_NAME_T4": {
+  "skill": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+  "error": "Says the English letter name instead of the Kiswahili sound (/e/ as \"ii\"), so the syllable cannot be built.",
+  "example": {
+   "question": "Sauti ya herufi \"e\" ni ipi?",
+   "wrong_answer": "ii",
+   "correct_answer": "/e/"
+  },
+  "cause": "English letter names are taught alongside and the child brings them to Kiswahili; a syllable is built from sounds, not names.",
+  "reveals": "The question \"Sauti ya herufi \"e\" ni ipi?\" with \"ii\" among the options.",
+  "help": "Say the sound alone, short (/e/), then join it to a vowel: ea, ee, ei.",
+  "feedback": "Kwa Kiswahili tunatamka sauti: /e/.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_PICK_T4": {
+  "skill": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+  "error": "Picks a word with no target sound when asked for one that has it.",
+  "example": {
+   "question": "Ni neno lipi lina sauti /n/, /o/, /w/, /e/, /i/, /h/?",
+   "wrong_answer": "mama",
+   "correct_answer": "wewe"
+  },
+  "cause": "The child looks at the first letter or the picture, not at the sound.",
+  "reveals": "The question \"Ni neno lipi lina sauti /n/, /o/, /w/, /e/, /i/, /h/?\" with \"mama\" among the options.",
+  "help": "Underline the target sound in each word on the card before choosing.",
+  "feedback": "\"wewe\" ina sauti lengwa; \"mama\" haina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_SOUND_T4": {
+  "skill": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads the target word wrongly: \"wewe\" as \"wiwi\".",
+  "example": {
+   "question": "Neno \"wewe\" linasomwa vipi?",
+   "wrong_answer": "wiwi",
+   "correct_answer": "wewe"
+  },
+  "cause": "The child reads the letters with the sounds of his first language, or adds a vowel to break the cluster.",
+  "reveals": "The question \"Neno \"wewe\" linasomwa vipi?\" with \"wiwi\" among the options.",
+  "help": "Pick out the target words before reading; practise them on cards, then read the passage.",
+  "feedback": "Soma \"wewe\" kama lilivyoandikwa.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_WORD_T4": {
+  "skill": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads word by word or syllable by syllable, so the sentence has no meaning when heard.",
+  "example": {
+   "question": "Ni usomaji upi ni wa ufasaha: \"Leo ni siku ya Jumanne.\"?",
+   "wrong_answer": "Leo ... ni ... siku ... ya ... Jumanne.",
+   "correct_answer": "Leo ni siku ya Jumanne."
+  },
+  "cause": "The child is still decoding each word; he has not yet read a group of words as one piece.",
+  "reveals": "The question \"Ni usomaji upi ni wa ufasaha: \"Leo ni siku ya Jumanne.\"?\" with \"Leo ... ni ... siku ... ya ... Jumanne.\" among the options.",
+  "help": "Echo reading: the teacher reads a phrase, the child repeats it in one breath.",
+  "feedback": "Soma maneno kwa pamoja kama unavyozungumza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_QUIET_T4": {
+  "skill": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads so softly (or so loudly, shouting) that the class cannot follow.",
+  "example": {
+   "question": "Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?",
+   "wrong_answer": "ya chini ili nisikosee mbele ya wenzangu",
+   "correct_answer": "ya kusikika na wote darasani, bila kupiga kelele"
+  },
+  "cause": "Shyness, or the belief that reading well means reading loud.",
+  "reveals": "The question \"Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?\" with \"ya chini ili nisikosee mbele ya wenzangu\" among the options.",
+  "help": "Stand the reader at the front and a listener at the back: the listener raises a hand when he hears every word.",
+  "feedback": "Soma kwa sauti inayosikika na wote, bila kupiga kelele.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_PACE_T4": {
+  "skill": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads as fast as possible and thinks the fastest reader is the best.",
+  "example": {
+   "question": "Kasi ifaayo ya kusoma kifungu ni ipi?",
+   "wrong_answer": "haraka iwezekanavyo",
+   "correct_answer": "kasi ya kuzungumza, karibu maneno 15 kwa dakika"
+  },
+  "cause": "Reading races in class reward speed; nobody asked whether the listeners understood.",
+  "reveals": "The question \"Kasi ifaayo ya kusoma kifungu ni ipi?\" with \"haraka iwezekanavyo\" among the options.",
+  "help": "Time two readings, one very fast and one at speaking pace; the listeners answer one question after each.",
+  "feedback": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_MARK_T4": {
+  "skill": "KISW.G1.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads a question in the flat voice of a statement and runs on through the koma and kikomo.",
+  "example": {
+   "question": "Sentensi \"Je, wewe uko nyumbani?\" inasomwa vipi?",
+   "wrong_answer": "kwa sauti ileile ya sentensi ya kawaida",
+   "correct_answer": "sauti hupanda mwishoni kwa sababu ni swali"
+  },
+  "cause": "The child looks at the words and not at the marks.",
+  "reveals": "The question \"Sentensi \"Je, wewe uko nyumbani?\" inasomwa vipi?\" with \"kwa sauti ileile ya sentensi ya kawaida\" among the options.",
+  "help": "Read the same words three ways (. ? !); the child points at the mark that fits each reading; clap at each kikomo.",
+  "feedback": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_GAPS_T4": {
+  "skill": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI",
+  "error": "Leaves a gap between every letter of a word (m a m a).",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "m a m a",
+   "correct_answer": "mama"
+  },
+  "cause": "The child learnt each letter alone and keeps a space after it.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"m a m a\" among the options.",
+  "help": "Write the syllable as one block (ma), then put two blocks together (mama), close.",
+  "feedback": "Herufi za neno moja hukaa karibu: mama.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_ORDER_T4": {
+  "skill": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI",
+  "error": "Joins the syllables in the wrong order (ta + tu written tuta for tatu).",
+  "example": {
+   "question": "Unganisha silabi: ta + tu",
+   "wrong_answer": "tuta",
+   "correct_answer": "tatu"
+  },
+  "cause": "The child hears both syllables but writes the one he remembers best first.",
+  "reveals": "The question \"Unganisha silabi: ta + tu\" with \"tuta\" among the options.",
+  "help": "Clap the word and write one syllable per clap, in order, saying each.",
+  "feedback": "Andika silabi kwa mpangilio unaozisikia: ta-tu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_DROP_T4": {
+  "skill": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI",
+  "error": "Leaves out the vowel of a syllable (mm for mama, kk for kaka).",
+  "example": {
+   "question": "Unganisha silabi: ka + ka",
+   "wrong_answer": "kk",
+   "correct_answer": "kaka"
+  },
+  "cause": "The child writes the consonants he hears most strongly; the vowel ending each syllable is missed.",
+  "reveals": "The question \"Unganisha silabi: ka + ka\" with \"kk\" among the options.",
+  "help": "Every syllable ends in a vowel: say the vowel long (kaaa) and write it.",
+  "feedback": "Kila silabi huishia kwa irabu: ka-ka.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI.M1_UNG_LINES_T4": {
+  "skill": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI",
+  "error": "Writes each syllable on a new line, or one above the other.",
+  "example": {
+   "question": "Neno \"baba\" liandikwe vipi?",
+   "wrong_answer": "ba juu, ba chini",
+   "correct_answer": "baba katika mstari mmoja"
+  },
+  "cause": "Syllable cards were stacked in class and the child copies the stack.",
+  "reveals": "The question \"Neno \"baba\" liandikwe vipi?\" with \"ba juu, ba chini\" among the options.",
+  "help": "Lay the syllable cards side by side on the desk before writing.",
+  "feedback": "Silabi za neno moja hukaa kwenye mstari mmoja.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_WRONGCLASS_T4": {
+  "skill": "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Makes the plural with the prefix of another noun class (kitabu -> watabu).",
+  "example": {
+   "question": "Wingi wa \"mti\" ni?",
+   "wrong_answer": "viti",
+   "correct_answer": "miti"
+  },
+  "cause": "The child knows that wa- makes people plural and uses it for everything; the ngeli of the noun is not yet known.",
+  "reveals": "The question \"Wingi wa \"mti\" ni?\" with \"viti\" among the options.",
+  "help": "Sort noun cards into ngeli families (m-wa, ki-vi, li-ma, n-n) and say each plural aloud.",
+  "feedback": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (miti)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_NCLASS_T4": {
+  "skill": "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Gives a noun of the n-n class a plural prefix (nyumba -> manyumba), or changes an irregular noun wrongly (jicho -> majicho).",
+  "example": {
+   "question": "Wingi wa \"jicho\" ni?",
+   "wrong_answer": "majicho",
+   "correct_answer": "macho"
+  },
+  "cause": "The child expects every plural to look different; n-n nouns stay the same and some li-ma nouns change their stem.",
+  "reveals": "The question \"Wingi wa \"jicho\" ni?\" with \"majicho\" among the options.",
+  "help": "Keep a short list of the same-in-both nouns (nyumba, ndizi, kalamu) and the irregular ones (jicho - macho, jino - meno).",
+  "feedback": "Baadhi ya nomino hazibadiliki, na baadhi hubadilika kwa njia yake. (macho)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_NUMWORD_T4": {
+  "skill": "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Shows the plural only with a number word and leaves the noun singular (kitabu mbili).",
+  "example": {
+   "question": "Wingi wa \"yai moja\" ni?",
+   "wrong_answer": "yai mbili",
+   "correct_answer": "mayai mawili"
+  },
+  "cause": "English and some first languages keep the noun and add a number; Kiswahili changes the noun and the number agrees.",
+  "reveals": "The question \"Wingi wa \"yai moja\" ni?\" with \"yai mbili\" among the options.",
+  "help": "Line up two books: the child says vitabu viwili; then three: vitabu vitatu.",
+  "feedback": "Nomino hubadilika pia: vitabu viwili. (mayai mawili)",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI.M1_SAR_REVERSE_T4": {
+  "skill": "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+  "error": "Takes the plural form for the singular (miti for one tree, vitabu for one book).",
+  "example": {
+   "question": "Ni lipi ni umoja?",
+   "wrong_answer": "majani",
+   "correct_answer": "jani"
+  },
+  "cause": "The child heard the plural more often (a tree is usually among trees) and learnt it as the name.",
+  "reveals": "The question \"Ni lipi ni umoja?\" with \"majani\" among the options.",
+  "help": "Hold one object, then many; the child names each.",
+  "feedback": "Kimoja ni kitabu; vingi ni vitabu. (jani)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_DETAIL_T5": {
+  "skill": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+  "error": "Gives a detail of the passage as its message.",
+  "example": {
+   "question": "Ujumbe wa kifungu ulichosikiliza ni upi?",
+   "wrong_answer": "Kamau alisahau chakula.",
+   "correct_answer": "Tushiriki tulicho nacho na wenzetu."
+  },
+  "cause": "The detail is the clearest thing the child remembers; he has not been asked what the passage teaches.",
+  "reveals": "The question \"Ujumbe wa kifungu ulichosikiliza ni upi?\" with \"Kamau alisahau chakula.\" among the options.",
+  "help": "After listening, ask \"Kifungu kinatufundisha nini?\" and compare it with \"Nini kilitokea?\".",
+  "feedback": "Hilo ni tukio moja. Ujumbe ni: Tushiriki tulicho nacho na wenzetu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_WORD_T5": {
+  "skill": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+  "error": "Gives \"kushiriki\" the meaning of a word that sounds like it.",
+  "example": {
+   "question": "Neno \"kushiriki\" katika kifungu lina maana gani?",
+   "wrong_answer": "kushinda",
+   "correct_answer": "kugawana kitu na mwenzako"
+  },
+  "cause": "The child matches the sound of the word to one he knows instead of listening to the sentence around it.",
+  "reveals": "The question \"Neno \"kushiriki\" katika kifungu lina maana gani?\" with \"kushinda\" among the options.",
+  "help": "Replay the sentence; the child tries each meaning in it and keeps the one that makes sense.",
+  "feedback": "Katika kifungu, \"kushiriki\" ni kugawana kitu na mwenzako.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_SENT_T5": {
+  "skill": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+  "error": "Makes a \"sentence\" that only repeats the word and shows no meaning (kushiriki ni kushiriki).",
+  "example": {
+   "question": "Ni sentensi ipi inaonyesha maana ya \"kushiriki\"?",
+   "wrong_answer": "Kushiriki ni kushiriki.",
+   "correct_answer": "Tulishiriki mkate darasani."
+  },
+  "cause": "The child thinks any sentence with the word in it is enough.",
+  "reveals": "The question \"Ni sentensi ipi inaonyesha maana ya \"kushiriki\"?\" with \"Kushiriki ni kushiriki.\" among the options.",
+  "help": "Ask: if your friend did not know the word, would your sentence tell him what it means?",
+  "feedback": "Sentensi nzuri inaonyesha maana ya neno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_ORDER_T5": {
+  "skill": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+  "error": "Retells the events out of order.",
+  "example": {
+   "question": "Panga matukio ya kifungu kama yalivyotokea.",
+   "wrong_answer": "Walikula pamoja, Kamau alisahau chakula, Otieno alimgawia",
+   "correct_answer": "Kamau alisahau chakula, Otieno alimgawia, walikula pamoja"
+  },
+  "cause": "The child remembers the most exciting event and tells it first.",
+  "reveals": "The question \"Panga matukio ya kifungu kama yalivyotokea.\" with \"Walikula pamoja, Kamau alisahau chakula, Otieno alimgawia\" among the options.",
+  "help": "Three picture cards of the events; the child lays them left to right and retells with kwanza, kisha, mwishowe.",
+  "feedback": "Matukio yalifuatana hivi: Kamau alisahau chakula, Otieno alimgawia, walikula pamoja.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M1_SIK_ADD_T5": {
+  "skill": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+  "error": "Adds events that were not in the passage when retelling.",
+  "example": {
+   "question": "Unaposimulia upya, unaongeza mambo ambayo hayakuwa kwenye kifungu?",
+   "wrong_answer": "ndiyo, ili hadithi iwe tamu",
+   "correct_answer": "hapana, ninasimulia yaliyokuwemo tu"
+  },
+  "cause": "Retelling is taken as storytelling: the child invents to make it longer.",
+  "reveals": "The question \"Unaposimulia upya, unaongeza mambo ambayo hayakuwa kwenye kifungu?\" with \"ndiyo, ili hadithi iwe tamu\" among the options.",
+  "help": "After the retelling, the class checks each event: was it in the passage? Thumbs up or down.",
+  "feedback": "Kusimulia upya ni kusema yaliyokuwa kwenye kifungu tu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_DECODE_T5": {
+  "skill": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+  "error": "Reads every word aloud but cannot say what the passage was about.",
+  "example": {
+   "question": "Umesoma kifungu. Kinahusu nini?",
+   "wrong_answer": "Sijui, nilikuwa nikisoma maneno tu.",
+   "correct_answer": "Kifungu kinahusu Akinyi na rafiki yake Wanjiku."
+  },
+  "cause": "All the child's effort goes into sounding out the words; nobody has asked him what the sentences said.",
+  "reveals": "The question \"Umesoma kifungu. Kinahusu nini?\" with \"Sijui, nilikuwa nikisoma maneno tu.\" among the options.",
+  "help": "After each sentence stop and ask \"Sentensi hii imesema nini?\" before reading on.",
+  "feedback": "Soma tena polepole na ufikirie maana: Kifungu kinahusu Akinyi na rafiki yake Wanjiku.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_WORD_T5": {
+  "skill": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+  "error": "Gives \"tunasaidiana\" the meaning of a word that looks or sounds like it.",
+  "example": {
+   "question": "Soma: \"Mimi ni Akinyi. Nina rafiki anayeitwa Wanjiku. Tunacheza pamoja shuleni. Tunasaidiana kila siku.\" Neno \"tunasaidiana\" lina maana gani?",
+   "wrong_answer": "tunasalimiana",
+   "correct_answer": "kila mmoja anamsaidia mwenzake"
+  },
+  "cause": "The child matches the word to a known one by its look instead of reading the sentence around it.",
+  "reveals": "The question \"Soma: \"Mimi ni Akinyi. Nina rafiki anayeitwa Wanjiku. Tunacheza pamoja shuleni. Tunasaidiana kila siku.\" Neno \"tunasaidiana\" lina maana gani?\" with \"tunasalimiana\" among the options.",
+  "help": "Cover the word; the child says what word would fit the sentence, then uncovers it.",
+  "feedback": "Katika kifungu, \"tunasaidiana\" ni kila mmoja anamsaidia mwenzake.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_MSG_T5": {
+  "skill": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+  "error": "Gives one detail of the passage as its message.",
+  "example": {
+   "question": "Ujumbe wa kifungu ni upi?",
+   "wrong_answer": "Akinyi yuko shuleni.",
+   "correct_answer": "Marafiki hucheza pamoja na kusaidiana."
+  },
+  "cause": "The detail is what the child remembers best; he has not been asked what the writer wants us to know.",
+  "reveals": "The question \"Ujumbe wa kifungu ni upi?\" with \"Akinyi yuko shuleni.\" among the options.",
+  "help": "Ask two questions side by side: \"Nini kilitokea?\" and \"Kifungu kinatuambia nini?\"",
+  "feedback": "Hilo ni tukio moja. Ujumbe ni: Marafiki hucheza pamoja na kusaidiana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_OWN_T5": {
+  "skill": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+  "error": "Answers from his own life instead of from the passage.",
+  "example": {
+   "question": "Rafiki wa Akinyi anaitwa nani?",
+   "wrong_answer": "Rafiki yangu ni Otieno.",
+   "correct_answer": "Wanjiku"
+  },
+  "cause": "The child links the question to what he knows from home and does not check the text.",
+  "reveals": "The question \"Rafiki wa Akinyi anaitwa nani?\" with \"Rafiki yangu ni Otieno.\" among the options.",
+  "help": "Ask the child to point at the line in the passage that gives the answer.",
+  "feedback": "Jibu liko kwenye kifungu: Wanjiku",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_NOSTOP_T5": {
+  "skill": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA",
+  "error": "Runs sentences together with no kikomo.",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "Juma alienda shuleni alisoma vizuri alirudi nyumbani",
+   "correct_answer": "Juma alienda shuleni. Alisoma vizuri. Alirudi nyumbani."
+  },
+  "cause": "The child writes as he speaks, one long breath.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"Juma alienda shuleni alisoma vizuri alirudi nyumbani\" among the options.",
+  "help": "Read the writing aloud; where the breath stops, put a kikomo.",
+  "feedback": "Kila sentensi huishia kwa kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_LINE_T5": {
+  "skill": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA",
+  "error": "Puts a kikomo at the end of every line of writing, not at the end of the sentence.",
+  "example": {
+   "question": "Kikomo huwekwa wapi?",
+   "wrong_answer": "mwishoni mwa kila mstari wa daftari",
+   "correct_answer": "mwishoni mwa sentensi"
+  },
+  "cause": "The line of the book looks like the end of a sentence.",
+  "reveals": "The question \"Kikomo huwekwa wapi?\" with \"mwishoni mwa kila mstari wa daftari\" among the options.",
+  "help": "Write one sentence that runs over two lines; the child finds where it really ends.",
+  "feedback": "Kikomo huwekwa sentensi inapoisha, si mstari.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_CAP_T5": {
+  "skill": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA",
+  "error": "Writes a small letter after a kikomo or kiulizi.",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Mimi ni Amina. mama alifurahi.",
+   "correct_answer": "Mimi ni Amina. Mama alifurahi."
+  },
+  "cause": "The child does not link the mark to the capital that follows it.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Mimi ni Amina. mama alifurahi.\" among the options.",
+  "help": "Every kikomo is a gate: the next word starts big.",
+  "feedback": "Baada ya kikomo, herufi kubwa.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_STOPQ_T5": {
+  "skill": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA",
+  "error": "Ends a question with a kikomo.",
+  "example": {
+   "question": "Weka alama sahihi: Unaenda wapi",
+   "wrong_answer": "Unaenda wapi.",
+   "correct_answer": "Unaenda wapi?"
+  },
+  "cause": "The child ends every sentence the same way.",
+  "reveals": "The question \"Weka alama sahihi: Unaenda wapi\" with \"Unaenda wapi.\" among the options.",
+  "help": "Read the sentence aloud: if the voice rises and asks, it takes a kiulizi.",
+  "feedback": "Swali huishia kwa kiulizi (?).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_CONCPOSS_T5": {
+  "skill": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+  "error": "Uses the wrong noun-class form of the possessive (kitabu yangu for kitabu changu).",
+  "example": {
+   "question": "Jaza: Kitabu ___ (-angu) ni kipya.",
+   "wrong_answer": "yangu",
+   "correct_answer": "changu"
+  },
+  "cause": "Town Kiswahili uses yangu, yako, yake for every noun; the child has not seen the ngeli agreement.",
+  "reveals": "The question \"Jaza: Kitabu ___ (-angu) ni kipya.\" with \"yangu\" among the options.",
+  "help": "Pair nouns and possessives by colour: kitabu changu, kiti chake, mtoto wangu.",
+  "feedback": "Kitabu changu; kiti chake: kimilikishi hufuata ngeli. (changu)",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_NUMPOSS_T5": {
+  "skill": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+  "error": "Leaves the possessive singular with a plural noun (vitabu changu).",
+  "example": {
+   "question": "Jaza: Vitabu ___ (-angu) ni vipya.",
+   "wrong_answer": "changu",
+   "correct_answer": "vyangu"
+  },
+  "cause": "The child changes the noun and forgets the possessive.",
+  "reveals": "The question \"Jaza: Vitabu ___ (-angu) ni vipya.\" with \"changu\" among the options.",
+  "help": "Change one object to many in front of the child; both words change.",
+  "feedback": "Vitabu vyangu: vyote viwili hubadilika. (vyangu)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_OWNER_T5": {
+  "skill": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+  "error": "Uses the possessive of the wrong owner (-ake for something that is his own, -ake for many owners).",
+  "example": {
+   "question": "Mimi na wenzangu tuna darasa. Ni darasa ___.",
+   "wrong_answer": "langu",
+   "correct_answer": "letu"
+  },
+  "cause": "The child has not linked -angu, -ako, -ake, -etu, -enu, -ao to who owns the thing.",
+  "reveals": "The question \"Mimi na wenzangu tuna darasa. Ni darasa ___.\" with \"langu\" among the options.",
+  "help": "Hold up an object: Ni cha nani? Answer with the owner first, then the possessive.",
+  "feedback": "Mwenye kitu ni nani? Mimi: changu; yeye: chake; wao: chao. (letu)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI.M1_SAR_ORDERPOSS_T5": {
+  "skill": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+  "error": "Puts the possessive before the noun (yangu kalamu), in English word order.",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "yangu kalamu",
+   "correct_answer": "kalamu yangu"
+  },
+  "cause": "English puts \"my\" before the noun; Kiswahili puts it after.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"yangu kalamu\" among the options.",
+  "help": "Build the phrase with cards: the noun first, then the possessive.",
+  "feedback": "Nomino kwanza, kimilikishi baadaye: kalamu yangu. (kalamu yangu)",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T6": {
+  "skill": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /t/ for /d/, so \"damu\" becomes \"tamu\".",
+  "example": {
+   "question": "Mwalimu anasema \"damu\". Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "tamu",
+   "correct_answer": "damu"
+  },
+  "cause": "Many Kenyan first languages have no /d/, or do not separate it from /t/; the child puts in the home sound.",
+  "reveals": "The question \"Mwalimu anasema \"damu\". Neno lipi limetamkwa vizuri?\" with \"tamu\" among the options.",
+  "help": "Say the two side by side, slowly, watching the mouth; the child holds up a card for the sound he hears.",
+  "feedback": "Sikiliza: \"damu\" ina sauti /d/, si /t/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T6": {
+  "skill": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /s/ for /z/, so \"ziwa\" becomes \"siwa\".",
+  "example": {
+   "question": "Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "siwa",
+   "correct_answer": "ziwa"
+  },
+  "cause": "/z/ and /s/ are close; a first language with only one of them puts that one in both places.",
+  "reveals": "The question \"Neno lipi limetamkwa vizuri?\" with \"siwa\" among the options.",
+  "help": "Contrast the two with a mirror and a hand before the mouth; the child says which he hears.",
+  "feedback": "\"ziwa\" ina sauti /z/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T6": {
+  "skill": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+  "error": "Splits \"sikio\" by letters rather than by syllables (each Kiswahili syllable ends in a vowel).",
+  "example": {
+   "question": "Neno \"sikio\" lina silabi zipi?",
+   "wrong_answer": "s-i-k-i-o",
+   "correct_answer": "si-ki-o"
+  },
+  "cause": "The child has learnt letters one by one and has not been shown that a syllable is a sound that ends in a vowel.",
+  "reveals": "The question \"Neno \"sikio\" lina silabi zipi?\" with \"s-i-k-i-o\" among the options.",
+  "help": "Clap the word: one clap per vowel; the consonants go with the vowel after them.",
+  "feedback": "Kila silabi ya Kiswahili huishia kwa irabu: si-ki-o.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_NAME_T6": {
+  "skill": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says the English letter name instead of the Kiswahili sound (/g/ as \"ji\"), so the syllable cannot be built.",
+  "example": {
+   "question": "Sauti ya herufi \"g\" ni ipi?",
+   "wrong_answer": "ji",
+   "correct_answer": "/g/"
+  },
+  "cause": "English letter names are taught alongside and the child brings them to Kiswahili; a syllable is built from sounds, not names.",
+  "reveals": "The question \"Sauti ya herufi \"g\" ni ipi?\" with \"ji\" among the options.",
+  "help": "Say the sound alone, short (/g/), then join it to a vowel: ga, ge, gi.",
+  "feedback": "Kwa Kiswahili tunatamka sauti: /g/.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T6": {
+  "skill": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+  "error": "Picks a word with no target sound when asked for one that has it.",
+  "example": {
+   "question": "Ni neno lipi lina sauti /s/, /b/, /y/, /z/, /g/, /d/?",
+   "wrong_answer": "mkono",
+   "correct_answer": "bega"
+  },
+  "cause": "The child looks at the first letter or the picture, not at the sound.",
+  "reveals": "The question \"Ni neno lipi lina sauti /s/, /b/, /y/, /z/, /g/, /d/?\" with \"mkono\" among the options.",
+  "help": "Underline the target sound in each word on the card before choosing.",
+  "feedback": "\"bega\" ina sauti lengwa; \"mkono\" haina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI.M1_UFS_SOUND_T6": {
+  "skill": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI",
+  "error": "Reads the target word wrongly: \"damu\" as \"tamu\".",
+  "example": {
+   "question": "Neno \"damu\" linasomwa vipi?",
+   "wrong_answer": "tamu",
+   "correct_answer": "damu"
+  },
+  "cause": "The child reads the letters with the sounds of his first language, or adds a vowel to break the cluster.",
+  "reveals": "The question \"Neno \"damu\" linasomwa vipi?\" with \"tamu\" among the options.",
+  "help": "Pick out the target words before reading; practise them on cards, then read the passage.",
+  "feedback": "Soma \"damu\" kama lilivyoandikwa.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI.M1_UFS_WORD_T6": {
+  "skill": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI",
+  "error": "Reads word by word or syllable by syllable, so the sentence has no meaning when heard.",
+  "example": {
+   "question": "Ni usomaji upi ni wa ufasaha: \"Baba ana sikio na bega.\"?",
+   "wrong_answer": "Baba ... ana ... sikio ... na ... bega.",
+   "correct_answer": "Baba ana sikio na bega."
+  },
+  "cause": "The child is still decoding each word; he has not yet read a group of words as one piece.",
+  "reveals": "The question \"Ni usomaji upi ni wa ufasaha: \"Baba ana sikio na bega.\"?\" with \"Baba ... ana ... sikio ... na ... bega.\" among the options.",
+  "help": "Echo reading: the teacher reads a phrase, the child repeats it in one breath.",
+  "feedback": "Soma maneno kwa pamoja kama unavyozungumza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI.M1_UFS_QUIET_T6": {
+  "skill": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI",
+  "error": "Reads so softly (or so loudly, shouting) that the class cannot follow.",
+  "example": {
+   "question": "Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?",
+   "wrong_answer": "ya chini ili nisikosee mbele ya wenzangu",
+   "correct_answer": "ya kusikika na wote darasani, bila kupiga kelele"
+  },
+  "cause": "Shyness, or the belief that reading well means reading loud.",
+  "reveals": "The question \"Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?\" with \"ya chini ili nisikosee mbele ya wenzangu\" among the options.",
+  "help": "Stand the reader at the front and a listener at the back: the listener raises a hand when he hears every word.",
+  "feedback": "Soma kwa sauti inayosikika na wote, bila kupiga kelele.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI.M1_UFS_PACE_T6": {
+  "skill": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI",
+  "error": "Reads as fast as possible and thinks the fastest reader is the best.",
+  "example": {
+   "question": "Kasi ifaayo ya kusoma kifungu ni ipi?",
+   "wrong_answer": "haraka iwezekanavyo",
+   "correct_answer": "kasi ya kuzungumza, karibu maneno 20 kwa dakika"
+  },
+  "cause": "Reading races in class reward speed; nobody asked whether the listeners understood.",
+  "reveals": "The question \"Kasi ifaayo ya kusoma kifungu ni ipi?\" with \"haraka iwezekanavyo\" among the options.",
+  "help": "Time two readings, one very fast and one at speaking pace; the listeners answer one question after each.",
+  "feedback": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI.M1_UFS_MARK_T6": {
+  "skill": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI",
+  "error": "Reads a question in the flat voice of a statement and runs on through the koma and kikomo.",
+  "example": {
+   "question": "Sentensi \"Je, goti lako linauma?\" inasomwa vipi?",
+   "wrong_answer": "kwa sauti ileile ya sentensi ya kawaida",
+   "correct_answer": "sauti hupanda mwishoni kwa sababu ni swali"
+  },
+  "cause": "The child looks at the words and not at the marks.",
+  "reveals": "The question \"Sentensi \"Je, goti lako linauma?\" inasomwa vipi?\" with \"kwa sauti ileile ya sentensi ya kawaida\" among the options.",
+  "help": "Read the same words three ways (. ? !); the child points at the mark that fits each reading; clap at each kikomo.",
+  "feedback": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_MT_T6": {
+  "skill": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+  "error": "Spells the word with the sound of his first language: \"damu\" written \"tamu\".",
+  "example": {
+   "question": "Ni tahajia ipi sahihi?",
+   "wrong_answer": "tamu",
+   "correct_answer": "damu"
+  },
+  "cause": "The child writes as he says the word; if his first language merges the two sounds, the letter is a guess.",
+  "reveals": "The question \"Ni tahajia ipi sahihi?\" with \"tamu\" among the options.",
+  "help": "Keep a list of the class's hard pairs (l/r, s/sh, z/dh, s/th); say each word slowly before writing.",
+  "feedback": "Andika \"damu\" kama linavyotamkwa kwa Kiswahili sanifu.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_NASAL_T6": {
+  "skill": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+  "error": "Drops the nasal: \"ndevu\" written \"devu\".",
+  "example": {
+   "question": "Ni tahajia ipi sahihi?",
+   "wrong_answer": "devu",
+   "correct_answer": "ndevu"
+  },
+  "cause": "The n or m before a consonant is soft and quick; the child does not hear it.",
+  "reveals": "The question \"Ni tahajia ipi sahihi?\" with \"devu\" among the options.",
+  "help": "Hum the nasal before the word (mmm-bwa, nnn-dege).",
+  "feedback": "\"ndevu\" lina sauti ya pua mwanzoni.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_VOWEL_T6": {
+  "skill": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+  "error": "Writes a long vowel short, so the word changes: \"kaa\" written \"ka\".",
+  "example": {
+   "question": "Andika neno lenye maana ya \"kuketi\".",
+   "wrong_answer": "ka",
+   "correct_answer": "kaa"
+  },
+  "cause": "The child hears the length but does not know it is shown by two letters.",
+  "reveals": "The question \"Andika neno lenye maana ya \"kuketi\".\" with \"ka\" among the options.",
+  "help": "Clap the two vowels as two beats; compare a word with one and two vowels.",
+  "feedback": "\"kaa\" lina irabu mbili zinazofuatana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_NGAPOS_T6": {
+  "skill": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+  "error": "Writes ng' without the apostrophe (ngombe for ng'ombe), or puts it where it does not belong (ng'oma for ngoma).",
+  "example": {
+   "question": "Ni tahajia ipi sahihi ya mnyama anayetupa maziwa?",
+   "wrong_answer": "ngombe",
+   "correct_answer": "ng'ombe"
+  },
+  "cause": "Ng' and ng are two sounds; the apostrophe looks like dirt on the page to the child.",
+  "reveals": "The question \"Ni tahajia ipi sahihi ya mnyama anayetupa maziwa?\" with \"ngombe\" among the options.",
+  "help": "Say ng'ombe and ngoma: the first has no g sound; mark it with the apostrophe.",
+  "feedback": "Ng'ombe huandikwa na kibainishi: ng'.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_JOIN_T6": {
+  "skill": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+  "error": "Joins two words into one, or splits one word into two (kwasababu; mwana funzi).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Nilichelewa kwasababu ya mvua.",
+   "correct_answer": "Nilichelewa kwa sababu ya mvua."
+  },
+  "cause": "In speech the words run together; the child has not seen each written apart.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Nilichelewa kwasababu ya mvua.\" among the options.",
+  "help": "Count the words aloud with a finger for each before writing.",
+  "feedback": "\"Kwa sababu\" ni maneno mawili.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_CONCADJ_T6": {
+  "skill": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+  "error": "Gives the adjective the people prefix whatever the noun (kiti mzuri).",
+  "example": {
+   "question": "Jaza: Kitabu ___ (-zuri).",
+   "wrong_answer": "mzuri",
+   "correct_answer": "kizuri"
+  },
+  "cause": "Mzuri is the form the child hears most (mtoto mzuri) and is used everywhere.",
+  "reveals": "The question \"Jaza: Kitabu ___ (-zuri).\" with \"mzuri\" among the options.",
+  "help": "Match noun and adjective by colour: kiti kizuri, mtoto mzuri, vitu vizuri.",
+  "feedback": "Kivumishi hufuata ngeli: kiti kizuri. (kizuri)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_NADJ_T6": {
+  "skill": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+  "error": "Gives an n-n noun the m- form of the adjective (nyumba mzuri for nyumba nzuri).",
+  "example": {
+   "question": "Jaza: Nguo ___ (-zuri).",
+   "wrong_answer": "mzuri",
+   "correct_answer": "nzuri"
+  },
+  "cause": "The n- prefix and its sound changes (nzuri, ndefu, nyeupe) are new to the child.",
+  "reveals": "The question \"Jaza: Nguo ___ (-zuri).\" with \"mzuri\" among the options.",
+  "help": "Read pairs aloud: nyumba nzuri, kalamu ndefu, nguo nyeupe.",
+  "feedback": "Nyumba nzuri; nguo nyeupe. (nzuri)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_ORDERADJ_T6": {
+  "skill": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+  "error": "Puts the adjective before the noun (mzuri mtoto), in English word order.",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "mzuri mtoto",
+   "correct_answer": "mtoto mzuri"
+  },
+  "cause": "English puts the describing word first.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"mzuri mtoto\" among the options.",
+  "help": "Build with cards: noun first, then the adjective.",
+  "feedback": "Nomino kwanza: mtoto mzuri. (mtoto mzuri)",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_PLADJ_T6": {
+  "skill": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+  "error": "Leaves the adjective singular with a plural noun (watoto mzuri).",
+  "example": {
+   "question": "Jaza: Watoto ___ (-zuri).",
+   "wrong_answer": "mzuri",
+   "correct_answer": "wazuri"
+  },
+  "cause": "The child changes the noun only.",
+  "reveals": "The question \"Jaza: Watoto ___ (-zuri).\" with \"mzuri\" among the options.",
+  "help": "Change the noun to many and ask the child to change every word that goes with it.",
+  "feedback": "Watoto wazuri: vyote hubadilika. (wazuri)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_OPPADJ_T6": {
+  "skill": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+  "error": "Picks the opposite member of the pair (mrefu for a short person).",
+  "example": {
+   "question": "Picha inaonyesha meno machafu yenye mashimo. Meno ni ___.",
+   "wrong_answer": "mazuri",
+   "correct_answer": "mabaya"
+  },
+  "cause": "The pair is learnt together and the two words are swapped.",
+  "reveals": "The question \"Picha inaonyesha meno machafu yenye mashimo. Meno ni ___.\" with \"mazuri\" among the options.",
+  "help": "Act the pairs with the body: stretch for refu, crouch for fupi.",
+  "feedback": "Angalia picha tena na uchague neno linalofaa. (mabaya)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO.M1_MAG_HALF_T7": {
+  "skill": "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO",
+  "error": "Carries out only the first part of a two-step instruction.",
+  "example": {
+   "question": "Agizo: \"Osha mikono, kisha uikaushe.\" Umefanya nini?",
+   "wrong_answer": "anaosha mikono tu",
+   "correct_answer": "anaosha mikono kisha anaikausha"
+  },
+  "cause": "The child starts acting as soon as he hears the first verb and stops listening.",
+  "reveals": "The question \"Agizo: \"Osha mikono, kisha uikaushe.\" Umefanya nini?\" with \"anaosha mikono tu\" among the options.",
+  "help": "Hold up one finger for each step while giving the instruction; the child repeats the steps before moving.",
+  "feedback": "Sikiliza agizo lote kwanza, kisha fanya hatua zote.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO.M1_MAG_ORDER_T7": {
+  "skill": "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO",
+  "error": "Does the steps in the wrong order.",
+  "example": {
+   "question": "Agizo: \"Osha mikono, kisha ule chakula.\" Ni nini kinatangulia?",
+   "wrong_answer": "kula chakula",
+   "correct_answer": "kuosha mikono"
+  },
+  "cause": "The child does the step he wants most first; the order words kwanza and kisha are not yet noticed.",
+  "reveals": "The question \"Agizo: \"Osha mikono, kisha ule chakula.\" Ni nini kinatangulia?\" with \"kula chakula\" among the options.",
+  "help": "Number the steps on the board with kwanza, kisha, mwishowe.",
+  "feedback": "Neno \"kisha\" linaonyesha hatua inayofuata.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO.M1_MAG_DIR_T7": {
+  "skill": "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO",
+  "error": "Mixes a direction or action word.",
+  "example": {
+   "question": "Agizo: \"Inua mkono wa kulia.\" Ni kitendo kipi sahihi?",
+   "wrong_answer": "anainua mkono wa kushoto",
+   "correct_answer": "anainua mkono wa kulia"
+  },
+  "cause": "Pairs such as kulia/kushoto and juu/chini are learnt together and swapped.",
+  "reveals": "The question \"Agizo: \"Inua mkono wa kulia.\" Ni kitendo kipi sahihi?\" with \"anainua mkono wa kushoto\" among the options.",
+  "help": "Play \"Mwalimu anasema\": the teacher calls the word, the child acts it; mark the right hand with a band.",
+  "feedback": "Inua mkono wa kulia. maana yake ni anainua mkono wa kulia.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO.M1_MAG_VAGUE_T7": {
+  "skill": "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO",
+  "error": "Gives an instruction that leaves out what to act on, or with no polite word (Lete!).",
+  "example": {
+   "question": "Ni agizo lipi liko wazi na lina adabu?",
+   "wrong_answer": "Lete!",
+   "correct_answer": "Tafadhali lete kitabu chako mezani."
+  },
+  "cause": "The child knows what he means and does not see that the listener cannot.",
+  "reveals": "The question \"Ni agizo lipi liko wazi na lina adabu?\" with \"Lete!\" among the options.",
+  "help": "The child gives the instruction to a partner, who does exactly what was said and no more.",
+  "feedback": "Agizo zuri linasema nini kifanyike, kwa kitu gani, na kwa adabu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_WORD_T7": {
+  "skill": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Gives \"husugua\" the meaning of a word that looks or sounds like it.",
+  "example": {
+   "question": "Soma: \"Kila asubuhi Baraka huoga kwa maji na sabuni. Yeye husugua meno na kuchana nywele. Baraka huwa safi.\" Neno \"husugua\" lina maana gani?",
+   "wrong_answer": "husahau",
+   "correct_answer": "husafisha kwa kusugua"
+  },
+  "cause": "The child matches the word to a known one by its look instead of reading the sentence around it.",
+  "reveals": "The question \"Soma: \"Kila asubuhi Baraka huoga kwa maji na sabuni. Yeye husugua meno na kuchana nywele. Baraka huwa safi.\" Neno \"husugua\" lina maana gani?\" with \"husahau\" among the options.",
+  "help": "Cover the word; the child says what word would fit the sentence, then uncovers it.",
+  "feedback": "Katika kifungu, \"husugua\" ni husafisha kwa kusugua.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_MSG_T7": {
+  "skill": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Gives one detail of the passage as its message.",
+  "example": {
+   "question": "Ujumbe wa kifungu ni upi?",
+   "wrong_answer": "Baraka huchana nywele.",
+   "correct_answer": "Tuoge na kusafisha mwili kila siku."
+  },
+  "cause": "The detail is what the child remembers best; he has not been asked what the writer wants us to know.",
+  "reveals": "The question \"Ujumbe wa kifungu ni upi?\" with \"Baraka huchana nywele.\" among the options.",
+  "help": "Ask two questions side by side: \"Nini kilitokea?\" and \"Kifungu kinatuambia nini?\"",
+  "feedback": "Hilo ni tukio moja. Ujumbe ni: Tuoge na kusafisha mwili kila siku.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_GUESS_T7": {
+  "skill": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Predicts something the passage gives no clue for, without looking at the picture.",
+  "example": {
+   "question": "Picha inaonyesha mikono michafu ya Baraka kabla ya chakula. Atafanya nini?",
+   "wrong_answer": "Atakula moja kwa moja.",
+   "correct_answer": "Ataosha mikono kwa sabuni."
+  },
+  "cause": "Prediction is taken as free imagination; the child has not been shown that clues in the text and picture point the way.",
+  "reveals": "The question \"Picha inaonyesha mikono michafu ya Baraka kabla ya chakula. Atafanya nini?\" with \"Atakula moja kwa moja.\" among the options.",
+  "help": "Underline the clue words and point at the picture; the guess must fit them.",
+  "feedback": "Tabiri kwa kutumia dalili za picha na za kifungu: Ataosha mikono kwa sabuni.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_LESSON_T7": {
+  "skill": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Retells what happened when asked for the lesson.",
+  "example": {
+   "question": "Tunajifunza nini kutokana na kifungu?",
+   "wrong_answer": "Baraka huoga asubuhi.",
+   "correct_answer": "Tunapaswa kuweka miili yetu safi."
+  },
+  "cause": "The lesson question sounds like a what-happened question to the child.",
+  "reveals": "The question \"Tunajifunza nini kutokana na kifungu?\" with \"Baraka huoga asubuhi.\" among the options.",
+  "help": "Start the answer with \"Tunajifunza kwamba tunapaswa...\"",
+  "feedback": "Funzo ni: Tunapaswa kuweka miili yetu safi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_OWN_T7": {
+  "skill": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Answers from his own life instead of from the passage.",
+  "example": {
+   "question": "Baraka huoga kwa nini?",
+   "wrong_answer": "Mimi huoga kwa maji moto.",
+   "correct_answer": "maji na sabuni"
+  },
+  "cause": "The child links the question to what he knows from home and does not check the text.",
+  "reveals": "The question \"Baraka huoga kwa nini?\" with \"Mimi huoga kwa maji moto.\" among the options.",
+  "help": "Ask the child to point at the line in the passage that gives the answer.",
+  "feedback": "Jibu liko kwenye kifungu: maji na sabuni",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA.M1_TAH_MT_T7": {
+  "skill": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA",
+  "error": "Spells the word with the sound of his first language: \"taulo\" written \"tauro\".",
+  "example": {
+   "question": "Ni tahajia ipi sahihi?",
+   "wrong_answer": "tauro",
+   "correct_answer": "taulo"
+  },
+  "cause": "The child writes as he says the word; if his first language merges the two sounds, the letter is a guess.",
+  "reveals": "The question \"Ni tahajia ipi sahihi?\" with \"tauro\" among the options.",
+  "help": "Keep a list of the class's hard pairs (l/r, s/sh, z/dh, s/th); say each word slowly before writing.",
+  "feedback": "Andika \"taulo\" kama linavyotamkwa kwa Kiswahili sanifu.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA.M1_TAH_NASAL_T7": {
+  "skill": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA",
+  "error": "Drops the nasal: \"ndoo\" written \"doo\".",
+  "example": {
+   "question": "Ni tahajia ipi sahihi?",
+   "wrong_answer": "doo",
+   "correct_answer": "ndoo"
+  },
+  "cause": "The n or m before a consonant is soft and quick; the child does not hear it.",
+  "reveals": "The question \"Ni tahajia ipi sahihi?\" with \"doo\" among the options.",
+  "help": "Hum the nasal before the word (mmm-bwa, nnn-dege).",
+  "feedback": "\"ndoo\" lina sauti ya pua mwanzoni.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA.M1_TAH_VOWEL_T7": {
+  "skill": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA",
+  "error": "Writes a long vowel short, so the word changes: \"choo\" written \"cho\".",
+  "example": {
+   "question": "Andika neno lenye maana ya \"chumba cha kujisaidia\".",
+   "wrong_answer": "cho",
+   "correct_answer": "choo"
+  },
+  "cause": "The child hears the length but does not know it is shown by two letters.",
+  "reveals": "The question \"Andika neno lenye maana ya \"chumba cha kujisaidia\".\" with \"cho\" among the options.",
+  "help": "Clap the two vowels as two beats; compare a word with one and two vowels.",
+  "feedback": "\"choo\" lina irabu mbili zinazofuatana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA.M1_TAH_NGAPOS_T7": {
+  "skill": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA",
+  "error": "Writes ng' without the apostrophe (ngombe for ng'ombe), or puts it where it does not belong (ng'oma for ngoma).",
+  "example": {
+   "question": "Ni tahajia ipi sahihi ya mnyama anayetupa maziwa?",
+   "wrong_answer": "ngombe",
+   "correct_answer": "ng'ombe"
+  },
+  "cause": "Ng' and ng are two sounds; the apostrophe looks like dirt on the page to the child.",
+  "reveals": "The question \"Ni tahajia ipi sahihi ya mnyama anayetupa maziwa?\" with \"ngombe\" among the options.",
+  "help": "Say ng'ombe and ngoma: the first has no g sound; mark it with the apostrophe.",
+  "feedback": "Ng'ombe huandikwa na kibainishi: ng'.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA.M1_TAH_JOIN_T7": {
+  "skill": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA",
+  "error": "Joins two words into one, or splits one word into two (kwasababu; mwana funzi).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Nilichelewa kwasababu ya mvua.",
+   "correct_answer": "Nilichelewa kwa sababu ya mvua."
+  },
+  "cause": "In speech the words run together; the child has not seen each written apart.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Nilichelewa kwasababu ya mvua.\" among the options.",
+  "help": "Count the words aloud with a finger for each before writing.",
+  "feedback": "\"Kwa sababu\" ni maneno mawili.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_FINALA_T7": {
+  "skill": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+  "error": "Keeps the final -a in the negative present (hasoma for hasomi).",
+  "example": {
+   "question": "Kanusha: Mimi ninaoga.",
+   "wrong_answer": "Mimi sioga.",
+   "correct_answer": "Mimi siogi."
+  },
+  "cause": "The child adds the negative prefix and leaves the rest of the verb as it was.",
+  "reveals": "The question \"Kanusha: Mimi ninaoga.\" with \"Mimi sioga.\" among the options.",
+  "help": "Show the pair with the end of the verb circled: anasoma - hasomi.",
+  "feedback": "Katika ukanushaji wa wakati uliopo, -a inakuwa -i: hasomi. (Mimi siogi.)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_KEEPNA_T7": {
+  "skill": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+  "error": "Keeps the tense marker -na- in the negative (hanasomi for hasomi).",
+  "example": {
+   "question": "Kanusha: Mimi ninaosha mikono.",
+   "wrong_answer": "Mimi sinaoshi mikono.",
+   "correct_answer": "Mimi sioshi mikono."
+  },
+  "cause": "The child negates by adding ha- to the whole positive verb.",
+  "reveals": "The question \"Kanusha: Mimi ninaosha mikono.\" with \"Mimi sinaoshi mikono.\" among the options.",
+  "help": "Cross out na in the positive form and change the end.",
+  "feedback": "Hasomi: hakuna -na- katika ukanushaji huu. (Mimi sioshi mikono.)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_SIPLUS_T7": {
+  "skill": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+  "error": "Negates by putting si before the positive verb (Yeye si anasoma).",
+  "example": {
+   "question": "Kanusha: Sisi tunachana nywele.",
+   "wrong_answer": "Sisi si tunachana nywele.",
+   "correct_answer": "Sisi hatuchani nywele."
+  },
+  "cause": "Si is the negative the child knows (si mimi), so he puts it in front of any sentence.",
+  "reveals": "The question \"Kanusha: Sisi tunachana nywele.\" with \"Sisi si tunachana nywele.\" among the options.",
+  "help": "Show si as the negative of ni (Yeye si mwalimu) and ha- as the negative of a verb.",
+  "feedback": "Kitendo hukanushwa kwa ha-: Yeye hasomi. (Sisi hatuchani nywele.)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI.M1_SAR_PERSNEG_T7": {
+  "skill": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+  "error": "Uses the negative prefix of another person (Wao hasomi for hawasomi; Mimi hasomi for sisomi).",
+  "example": {
+   "question": "Kanusha: Sisi tunasugua meno.",
+   "wrong_answer": "Sisi hasugui meno.",
+   "correct_answer": "Sisi hatusugui meno."
+  },
+  "cause": "The child learnt one negative form (ha-) and uses it for all persons.",
+  "reveals": "The question \"Kanusha: Sisi tunasugua meno.\" with \"Sisi hasugui meno.\" among the options.",
+  "help": "Table of persons: si-, hu-, ha-, hatu-, ham-, hawa-; the child points before writing.",
+  "feedback": "Wao hawasomi; mimi sisomi. (Sisi hatusugui meno.)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T8": {
+  "skill": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /f/ for /v/, so \"viazi\" becomes \"fiazi\".",
+  "example": {
+   "question": "Mwalimu anasema \"viazi\". Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "fiazi",
+   "correct_answer": "viazi"
+  },
+  "cause": "Many Kenyan first languages have no /v/, or do not separate it from /f/; the child puts in the home sound.",
+  "reveals": "The question \"Mwalimu anasema \"viazi\". Neno lipi limetamkwa vizuri?\" with \"fiazi\" among the options.",
+  "help": "Say the two side by side, slowly, watching the mouth; the child holds up a card for the sound he hears.",
+  "feedback": "Sikiliza: \"viazi\" ina sauti /v/, si /f/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T8": {
+  "skill": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /s/ for /sh/, so \"shamba\" becomes \"samba\".",
+  "example": {
+   "question": "Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "samba",
+   "correct_answer": "shamba"
+  },
+  "cause": "/sh/ and /s/ are close; a first language with only one of them puts that one in both places.",
+  "reveals": "The question \"Neno lipi limetamkwa vizuri?\" with \"samba\" among the options.",
+  "help": "Contrast the two with a mirror and a hand before the mouth; the child says which he hears.",
+  "feedback": "\"shamba\" ina sauti /sh/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T8": {
+  "skill": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+  "error": "Splits \"viazi\" by letters rather than by syllables (each Kiswahili syllable ends in a vowel).",
+  "example": {
+   "question": "Neno \"viazi\" lina silabi zipi?",
+   "wrong_answer": "v-i-a-z-i",
+   "correct_answer": "vi-a-zi"
+  },
+  "cause": "The child has learnt letters one by one and has not been shown that a syllable is a sound that ends in a vowel.",
+  "reveals": "The question \"Neno \"viazi\" lina silabi zipi?\" with \"v-i-a-z-i\" among the options.",
+  "help": "Clap the word: one clap per vowel; the consonants go with the vowel after them.",
+  "feedback": "Kila silabi ya Kiswahili huishia kwa irabu: vi-a-zi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_NAME_T8": {
+  "skill": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says the English letter name instead of the Kiswahili sound (/j/ as \"jei\"), so the syllable cannot be built.",
+  "example": {
+   "question": "Sauti ya herufi \"j\" ni ipi?",
+   "wrong_answer": "jei",
+   "correct_answer": "/j/"
+  },
+  "cause": "English letter names are taught alongside and the child brings them to Kiswahili; a syllable is built from sounds, not names.",
+  "reveals": "The question \"Sauti ya herufi \"j\" ni ipi?\" with \"jei\" among the options.",
+  "help": "Say the sound alone, short (/j/), then join it to a vowel: ja, je, ji.",
+  "feedback": "Kwa Kiswahili tunatamka sauti: /j/.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T8": {
+  "skill": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+  "error": "Picks a word with no target sound when asked for one that has it.",
+  "example": {
+   "question": "Ni neno lipi lina sauti /j/, /r/, /p/, /f/, /v/, /sh/?",
+   "wrong_answer": "ugali",
+   "correct_answer": "papai"
+  },
+  "cause": "The child looks at the first letter or the picture, not at the sound.",
+  "reveals": "The question \"Ni neno lipi lina sauti /j/, /r/, /p/, /f/, /v/, /sh/?\" with \"ugali\" among the options.",
+  "help": "Underline the target sound in each word on the card before choosing.",
+  "feedback": "\"papai\" ina sauti lengwa; \"ugali\" haina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_SOUND_T8": {
+  "skill": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads the target word wrongly: \"viazi\" as \"fiazi\".",
+  "example": {
+   "question": "Neno \"viazi\" linasomwa vipi?",
+   "wrong_answer": "fiazi",
+   "correct_answer": "viazi"
+  },
+  "cause": "The child reads the letters with the sounds of his first language, or adds a vowel to break the cluster.",
+  "reveals": "The question \"Neno \"viazi\" linasomwa vipi?\" with \"fiazi\" among the options.",
+  "help": "Pick out the target words before reading; practise them on cards, then read the passage.",
+  "feedback": "Soma \"viazi\" kama lilivyoandikwa.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_WORD_T8": {
+  "skill": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads word by word or syllable by syllable, so the sentence has no meaning when heard.",
+  "example": {
+   "question": "Ni usomaji upi ni wa ufasaha: \"Tunakula viazi na papai.\"?",
+   "wrong_answer": "Tunakula ... viazi ... na ... papai.",
+   "correct_answer": "Tunakula viazi na papai."
+  },
+  "cause": "The child is still decoding each word; he has not yet read a group of words as one piece.",
+  "reveals": "The question \"Ni usomaji upi ni wa ufasaha: \"Tunakula viazi na papai.\"?\" with \"Tunakula ... viazi ... na ... papai.\" among the options.",
+  "help": "Echo reading: the teacher reads a phrase, the child repeats it in one breath.",
+  "feedback": "Soma maneno kwa pamoja kama unavyozungumza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_QUIET_T8": {
+  "skill": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads so softly (or so loudly, shouting) that the class cannot follow.",
+  "example": {
+   "question": "Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?",
+   "wrong_answer": "ya chini ili nisikosee mbele ya wenzangu",
+   "correct_answer": "ya kusikika na wote darasani, bila kupiga kelele"
+  },
+  "cause": "Shyness, or the belief that reading well means reading loud.",
+  "reveals": "The question \"Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?\" with \"ya chini ili nisikosee mbele ya wenzangu\" among the options.",
+  "help": "Stand the reader at the front and a listener at the back: the listener raises a hand when he hears every word.",
+  "feedback": "Soma kwa sauti inayosikika na wote, bila kupiga kelele.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_PACE_T8": {
+  "skill": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads as fast as possible and thinks the fastest reader is the best.",
+  "example": {
+   "question": "Kasi ifaayo ya kusoma kifungu ni ipi?",
+   "wrong_answer": "haraka iwezekanavyo",
+   "correct_answer": "kasi ya kuzungumza, karibu maneno 25 kwa dakika"
+  },
+  "cause": "Reading races in class reward speed; nobody asked whether the listeners understood.",
+  "reveals": "The question \"Kasi ifaayo ya kusoma kifungu ni ipi?\" with \"haraka iwezekanavyo\" among the options.",
+  "help": "Time two readings, one very fast and one at speaking pace; the listeners answer one question after each.",
+  "feedback": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_MARK_T8": {
+  "skill": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads a question in the flat voice of a statement and runs on through the koma and kikomo.",
+  "example": {
+   "question": "Sentensi \"Je, umekunywa uji?\" inasomwa vipi?",
+   "wrong_answer": "kwa sauti ileile ya sentensi ya kawaida",
+   "correct_answer": "sauti hupanda mwishoni kwa sababu ni swali"
+  },
+  "cause": "The child looks at the words and not at the marks.",
+  "reveals": "The question \"Sentensi \"Je, umekunywa uji?\" inasomwa vipi?\" with \"kwa sauti ileile ya sentensi ya kawaida\" among the options.",
+  "help": "Read the same words three ways (. ? !); the child points at the mark that fits each reading; clap at each kikomo.",
+  "feedback": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA.M1_TAH_MT_T8": {
+  "skill": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+  "error": "Spells the word with the sound of his first language: \"mchele\" written \"mchere\".",
+  "example": {
+   "question": "Ni tahajia ipi sahihi?",
+   "wrong_answer": "mchere",
+   "correct_answer": "mchele"
+  },
+  "cause": "The child writes as he says the word; if his first language merges the two sounds, the letter is a guess.",
+  "reveals": "The question \"Ni tahajia ipi sahihi?\" with \"mchere\" among the options.",
+  "help": "Keep a list of the class's hard pairs (l/r, s/sh, z/dh, s/th); say each word slowly before writing.",
+  "feedback": "Andika \"mchele\" kama linavyotamkwa kwa Kiswahili sanifu.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA.M1_TAH_NASAL_T8": {
+  "skill": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+  "error": "Drops the nasal: \"ndizi\" written \"dizi\".",
+  "example": {
+   "question": "Ni tahajia ipi sahihi?",
+   "wrong_answer": "dizi",
+   "correct_answer": "ndizi"
+  },
+  "cause": "The n or m before a consonant is soft and quick; the child does not hear it.",
+  "reveals": "The question \"Ni tahajia ipi sahihi?\" with \"dizi\" among the options.",
+  "help": "Hum the nasal before the word (mmm-bwa, nnn-dege).",
+  "feedback": "\"ndizi\" lina sauti ya pua mwanzoni.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA.M1_TAH_VOWEL_T8": {
+  "skill": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+  "error": "Writes a long vowel short, so the word changes: \"mkaa\" written \"mka\".",
+  "example": {
+   "question": "Andika neno lenye maana ya \"kitu kinachochomwa kupikia\".",
+   "wrong_answer": "mka",
+   "correct_answer": "mkaa"
+  },
+  "cause": "The child hears the length but does not know it is shown by two letters.",
+  "reveals": "The question \"Andika neno lenye maana ya \"kitu kinachochomwa kupikia\".\" with \"mka\" among the options.",
+  "help": "Clap the two vowels as two beats; compare a word with one and two vowels.",
+  "feedback": "\"mkaa\" lina irabu mbili zinazofuatana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA.M1_TAH_NGAPOS_T8": {
+  "skill": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+  "error": "Writes ng' without the apostrophe (ngombe for ng'ombe), or puts it where it does not belong (ng'oma for ngoma).",
+  "example": {
+   "question": "Ni tahajia ipi sahihi ya mnyama anayetupa maziwa?",
+   "wrong_answer": "ngombe",
+   "correct_answer": "ng'ombe"
+  },
+  "cause": "Ng' and ng are two sounds; the apostrophe looks like dirt on the page to the child.",
+  "reveals": "The question \"Ni tahajia ipi sahihi ya mnyama anayetupa maziwa?\" with \"ngombe\" among the options.",
+  "help": "Say ng'ombe and ngoma: the first has no g sound; mark it with the apostrophe.",
+  "feedback": "Ng'ombe huandikwa na kibainishi: ng'.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA.M1_TAH_JOIN_T8": {
+  "skill": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+  "error": "Joins two words into one, or splits one word into two (kwasababu; mwana funzi).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Nilichelewa kwasababu ya mvua.",
+   "correct_answer": "Nilichelewa kwa sababu ya mvua."
+  },
+  "cause": "In speech the words run together; the child has not seen each written apart.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Nilichelewa kwasababu ya mvua.\" among the options.",
+  "help": "Count the words aloud with a finger for each before writing.",
+  "feedback": "\"Kwa sababu\" ni maneno mawili.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI.M1_SAR_CLASSDEM_T8": {
+  "skill": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI",
+  "error": "Uses the people word (huyu, yule) for a thing (kiti huyu).",
+  "example": {
+   "question": "Jaza: Chakula ___ ni kitamu.",
+   "wrong_answer": "huyu",
+   "correct_answer": "hiki"
+  },
+  "cause": "Huyu was the first pointing word learnt; the child uses it for anything.",
+  "reveals": "The question \"Jaza: Chakula ___ ni kitamu.\" with \"huyu\" among the options.",
+  "help": "Point at a child (huyu) and at a chair (hiki); then sort pictures by the pointing word they take.",
+  "feedback": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (hiki)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI.M1_SAR_NUMDEM_T8": {
+  "skill": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI",
+  "error": "Uses the one-thing pointing word with a plural noun (watoto huyu).",
+  "example": {
+   "question": "Jaza: Vyakula ___ ni vitamu.",
+   "wrong_answer": "hiki",
+   "correct_answer": "hivi"
+  },
+  "cause": "The child changes the noun but not the pointing word.",
+  "reveals": "The question \"Jaza: Vyakula ___ ni vitamu.\" with \"hiki\" among the options.",
+  "help": "Pair the forms on cards: huyu-hawa, yule-wale, hiki-hivi, hili-haya.",
+  "feedback": "Watoto ni wengi: watoto hawa. (hivi)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI.M1_SAR_HII_T8": {
+  "skill": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI",
+  "error": "Uses hii for every noun (kitabu hii, mtoto hii), as in town Kiswahili.",
+  "example": {
+   "question": "Jaza: Kikombe ___ ni changu.",
+   "wrong_answer": "hii",
+   "correct_answer": "hiki"
+  },
+  "cause": "Hii is the pointing word heard most in town speech, where the noun class is dropped.",
+  "reveals": "The question \"Jaza: Kikombe ___ ni changu.\" with \"hii\" among the options.",
+  "help": "Read pairs aloud: kitabu hiki, mtoto huyu, nyumba hii; the child hears the match.",
+  "feedback": "Kitabu hiki; mtoto huyu; nyumba hii. (hiki)",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI.M1_SAR_REVERSE_T8": {
+  "skill": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI",
+  "error": "Takes the plural form for the singular (miti for one tree, vitabu for one book).",
+  "example": {
+   "question": "Ni kipi ni umoja?",
+   "wrong_answer": "viazi hivi",
+   "correct_answer": "kiazi hiki"
+  },
+  "cause": "The child heard the plural more often (a tree is usually among trees) and learnt it as the name.",
+  "reveals": "The question \"Ni kipi ni umoja?\" with \"viazi hivi\" among the options.",
+  "help": "Hold one object, then many; the child names each.",
+  "feedback": "Kimoja ni kitabu; vingi ni vitabu. (kiazi hiki)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO.M1_MAZ_TOPIC_T9": {
+  "skill": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+  "error": "Says something that has nothing to do with the topic.",
+  "example": {
+   "question": "Mnazungumza kuhusu vyombo vya jikoni. Ni sentensi ipi inafaa?",
+   "wrong_answer": "Jana nilitazama katuni nzuri.",
+   "correct_answer": "Mama ana jokofu jikoni."
+  },
+  "cause": "The child says what is on his mind; he has not learnt that a conversation has a topic everyone keeps to.",
+  "reveals": "The question \"Mnazungumza kuhusu vyombo vya jikoni. Ni sentensi ipi inafaa?\" with \"Jana nilitazama katuni nzuri.\" among the options.",
+  "help": "Put the topic picture in the middle; before speaking the child points to it.",
+  "feedback": "Tunazungumza kuhusu vyombo vya jikoni; sema jambo kuhusu hilo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO.M1_MAZ_TURN_T9": {
+  "skill": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+  "error": "Talks over others and does not wait for his turn.",
+  "example": {
+   "question": "Mwenzako anazungumza. Unafanya nini?",
+   "wrong_answer": "ninaanza kuzungumza pia",
+   "correct_answer": "ninasikiliza mpaka amalize, kisha ninazungumza"
+  },
+  "cause": "Eagerness: the child fears he will forget his idea.",
+  "reveals": "The question \"Mwenzako anazungumza. Unafanya nini?\" with \"ninaanza kuzungumza pia\" among the options.",
+  "help": "Pass a talking object (a ball): only the one holding it speaks.",
+  "feedback": "Subiri zamu yako; msikilize mwenzako kwanza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO.M1_MAZ_MIX_T9": {
+  "skill": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+  "error": "Mixes English or Sheng words into the Kiswahili sentence.",
+  "example": {
+   "question": "Sema kwa Kiswahili sanifu:",
+   "wrong_answer": "Mama ana fridge jikoni.",
+   "correct_answer": "Mama ana jokofu jikoni."
+  },
+  "cause": "At home and in town the child hears mixed speech and does not know the Kiswahili word.",
+  "reveals": "The question \"Sema kwa Kiswahili sanifu:\" with \"Mama ana fridge jikoni.\" among the options.",
+  "help": "Keep a word wall: the English or Sheng word, and its Kiswahili word next to it.",
+  "feedback": "Kwa Kiswahili tunasema: Mama ana jokofu jikoni.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO.M1_MAZ_GEST_T9": {
+  "skill": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+  "error": "Uses a gesture or face that does not match the words (smiling while giving sad news).",
+  "example": {
+   "question": "Unasema \"Rafiki yangu ni mgonjwa.\" Uso wako unaonyesha nini?",
+   "wrong_answer": "tabasamu kubwa",
+   "correct_answer": "huzuni"
+  },
+  "cause": "The child smiles from shyness or does not link the face to the message.",
+  "reveals": "The question \"Unasema \"Rafiki yangu ni mgonjwa.\" Uso wako unaonyesha nini?\" with \"tabasamu kubwa\" among the options.",
+  "help": "Say one sentence with three faces; the class picks the face that fits.",
+  "feedback": "Ishara zako zifuate ujumbe wako.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO.M1_MAZ_LR_T9": {
+  "skill": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+  "error": "Says /l/ for /r/ (or /r/ for /l/) while speaking: \"rafiki\" becomes \"lafiki\".",
+  "example": {
+   "question": "Tamka vizuri: rafiki",
+   "wrong_answer": "lafiki",
+   "correct_answer": "rafiki"
+  },
+  "cause": "Several Kenyan first languages do not separate /l/ and /r/; the home sound carries into Kiswahili.",
+  "reveals": "The question \"Tamka vizuri: rafiki\" with \"lafiki\" among the options.",
+  "help": "Practise the pairs with a mirror: the tongue taps for r, it rests for l.",
+  "feedback": "Tamka \"rafiki\" kwa /r/: ulimi unagonga mara moja.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_WORD_T9": {
+  "skill": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Gives \"sufuria\" the meaning of a word that looks or sounds like it.",
+  "example": {
+   "question": "Soma: \"Mama yuko jikoni. Anapika ugali na sukumawiki. Dada anaosha sufuria. Chakula kiko tayari.\" Neno \"sufuria\" lina maana gani?",
+   "wrong_answer": "sufu",
+   "correct_answer": "chombo cha kupikia"
+  },
+  "cause": "The child matches the word to a known one by its look instead of reading the sentence around it.",
+  "reveals": "The question \"Soma: \"Mama yuko jikoni. Anapika ugali na sukumawiki. Dada anaosha sufuria. Chakula kiko tayari.\" Neno \"sufuria\" lina maana gani?\" with \"sufu\" among the options.",
+  "help": "Cover the word; the child says what word would fit the sentence, then uncovers it.",
+  "feedback": "Katika kifungu, \"sufuria\" ni chombo cha kupikia.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_MSG_T9": {
+  "skill": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Gives one detail of the passage as its message.",
+  "example": {
+   "question": "Ujumbe wa kifungu ni upi?",
+   "wrong_answer": "Dada anaosha sufuria.",
+   "correct_answer": "Familia hushirikiana kupika chakula."
+  },
+  "cause": "The detail is what the child remembers best; he has not been asked what the writer wants us to know.",
+  "reveals": "The question \"Ujumbe wa kifungu ni upi?\" with \"Dada anaosha sufuria.\" among the options.",
+  "help": "Ask two questions side by side: \"Nini kilitokea?\" and \"Kifungu kinatuambia nini?\"",
+  "feedback": "Hilo ni tukio moja. Ujumbe ni: Familia hushirikiana kupika chakula.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_GUESS_T9": {
+  "skill": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Predicts something the passage gives no clue for, without looking at the picture.",
+  "example": {
+   "question": "Picha inaonyesha meza yenye sahani. Familia itafanya nini?",
+   "wrong_answer": "Italala.",
+   "correct_answer": "Itakula chakula pamoja."
+  },
+  "cause": "Prediction is taken as free imagination; the child has not been shown that clues in the text and picture point the way.",
+  "reveals": "The question \"Picha inaonyesha meza yenye sahani. Familia itafanya nini?\" with \"Italala.\" among the options.",
+  "help": "Underline the clue words and point at the picture; the guess must fit them.",
+  "feedback": "Tabiri kwa kutumia dalili za picha na za kifungu: Itakula chakula pamoja.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_LESSON_T9": {
+  "skill": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Retells what happened when asked for the lesson.",
+  "example": {
+   "question": "Tunajifunza nini kutokana na kifungu?",
+   "wrong_answer": "Mama anapika ugali.",
+   "correct_answer": "Tunapaswa kuwasaidia wazazi kazi za jikoni."
+  },
+  "cause": "The lesson question sounds like a what-happened question to the child.",
+  "reveals": "The question \"Tunajifunza nini kutokana na kifungu?\" with \"Mama anapika ugali.\" among the options.",
+  "help": "Start the answer with \"Tunajifunza kwamba tunapaswa...\"",
+  "feedback": "Funzo ni: Tunapaswa kuwasaidia wazazi kazi za jikoni.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_OWN_T9": {
+  "skill": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+  "error": "Answers from his own life instead of from the passage.",
+  "example": {
+   "question": "Mama anapika nini?",
+   "wrong_answer": "Mama yangu anapika wali.",
+   "correct_answer": "ugali na sukumawiki"
+  },
+  "cause": "The child links the question to what he knows from home and does not check the text.",
+  "reveals": "The question \"Mama anapika nini?\" with \"Mama yangu anapika wali.\" among the options.",
+  "help": "Ask the child to point at the line in the passage that gives the answer.",
+  "feedback": "Jibu liko kwenye kifungu: ugali na sukumawiki",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_NAME_T9": {
+  "skill": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Lists the things in the picture (mti, mtoto, mbwa) instead of writing sentences about what is happening.",
+  "example": {
+   "question": "Ni kipi ni kifungu kuhusu picha?",
+   "wrong_answer": "mti. mtoto. mbwa.",
+   "correct_answer": "Mtoto anacheza na mbwa chini ya mti."
+  },
+  "cause": "Naming pictures was the earlier task; the child has not moved to sentences.",
+  "reveals": "The question \"Ni kipi ni kifungu kuhusu picha?\" with \"mti. mtoto. mbwa.\" among the options.",
+  "help": "Ask \"Nani? Anafanya nini? Wapi?\" for each part of the picture.",
+  "feedback": "Kifungu kina sentensi zinazoeleza kinachotokea.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_TITLE_T9": {
+  "skill": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Writes no title, or a title that does not fit the writing.",
+  "example": {
+   "question": "Kichwa kipi kinafaa insha kuhusu jikoni?",
+   "wrong_answer": "Insha",
+   "correct_answer": "Jikoni Kwetu"
+  },
+  "cause": "The child thinks the word \"insha\" or the date is the title.",
+  "reveals": "The question \"Kichwa kipi kinafaa insha kuhusu jikoni?\" with \"Insha\" among the options.",
+  "help": "Read the finished writing and ask: what is it about in three words?",
+  "feedback": "Kichwa kinasema insha inahusu nini: Jikoni Kwetu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_HALAFU_T9": {
+  "skill": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Joins every sentence with \"na halafu\", so the writing is one long sentence.",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "Tuliamka na halafu tukaoga na halafu tukaenda sokoni.",
+   "correct_answer": "Tuliamka asubuhi. Tulioga, kisha tukaenda sokoni."
+  },
+  "cause": "Spoken retelling joins events with na halafu; the child writes as he talks.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"Tuliamka na halafu tukaoga na halafu tukaenda sokoni.\" among the options.",
+  "help": "Give a word bank: kwanza, kisha, baadaye, mwishowe; one per sentence.",
+  "feedback": "Tumia kikomo na maneno kama kisha, baadaye.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_TENSE_T9": {
+  "skill": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Slips from one tense to another in the middle of the writing (past -li- to present -na-, or habitual hu- to past).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Mama alipika ugali. Dada anaosha vyombo.",
+   "correct_answer": "Mama alipika ugali. Dada aliosha vyombo."
+  },
+  "cause": "The child thinks of the events as he writes and the tense of the moment comes in.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Mama alipika ugali. Dada anaosha vyombo.\" among the options.",
+  "help": "Underline every verb; all the tense markers should match.",
+  "feedback": "Tumia wakati mmoja katika insha nzima.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_MIX_T9": {
+  "skill": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Puts English or Sheng words into the Kiswahili writing.",
+  "example": {
+   "question": "Sahihisha:",
+   "wrong_answer": "Mama anapika rice.",
+   "correct_answer": "Mama anapika wali."
+  },
+  "cause": "The child does not know the Kiswahili word and fills the gap with the one he knows.",
+  "reveals": "The question \"Sahihisha:\" with \"Mama anapika rice.\" among the options.",
+  "help": "Keep a word bank of theme words on the board before writing.",
+  "feedback": "Kwa Kiswahili: Mama anapika wali.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO.M1_SAR_VNOUN_T9": {
+  "skill": "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO",
+  "error": "Picks a thing word as the action word (in \"Mama anapika ugali\" chooses ugali).",
+  "example": {
+   "question": "Neno la kitendo katika \"Mama anapika ugali\" ni lipi?",
+   "wrong_answer": "ugali",
+   "correct_answer": "anapika"
+  },
+  "cause": "The child looks for the word he knows best, often the thing he can picture.",
+  "reveals": "The question \"Neno la kitendo katika \"Mama anapika ugali\" ni lipi?\" with \"ugali\" among the options.",
+  "help": "Act the sentence: the word you can do is the action word.",
+  "feedback": "Neno la kitendo ni lile tunaloweza kulifanya: anapika. (anapika)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO.M1_SAR_VBARE_T9": {
+  "skill": "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO",
+  "error": "Writes the bare verb with no person marker (Mama pika ugali for Mama anapika ugali).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Mama pika ugali.",
+   "correct_answer": "Mama anapika ugali."
+  },
+  "cause": "The command form (pika!) is heard most at home and the child uses it in every sentence.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Mama pika ugali.\" among the options.",
+  "help": "Colour the a-na- in front of the verb; read the sentence with and without it.",
+  "feedback": "Tunasema \"Mama anapika\", si \"Mama pika\". (Mama anapika ugali.)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO.M1_SAR_VAGREE_T9": {
+  "skill": "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO",
+  "error": "Gives the verb the marker of the wrong person or number (Mama wanapika; Watoto anacheza).",
+  "example": {
+   "question": "Jaza: Watoto ___ (kula) chakula.",
+   "wrong_answer": "anakula",
+   "correct_answer": "wanakula"
+  },
+  "cause": "The child has not linked the start of the verb to who is doing it.",
+  "reveals": "The question \"Jaza: Watoto ___ (kula) chakula.\" with \"anakula\" among the options.",
+  "help": "Point at the doer, then at the start of the verb; they must match (mmoja a-, wengi wa-).",
+  "feedback": "Mtu mmoja: anapika; watu wengi: wanapika. (wanakula)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO.M1_SAR_VADJ_T9": {
+  "skill": "KISW.G1.SARUFI.T9_MATUMIZI_YA_MANENO_Y.VITENDO",
+  "error": "Takes a describing word for an action word (in \"Sahani ni safi\" chooses safi as the action).",
+  "example": {
+   "question": "Neno la kitendo katika \"Dada anaosha sahani safi\" ni lipi?",
+   "wrong_answer": "safi",
+   "correct_answer": "anaosha"
+  },
+  "cause": "Any word after the noun looks like what the noun \"does\".",
+  "reveals": "The question \"Neno la kitendo katika \"Dada anaosha sahani safi\" ni lipi?\" with \"safi\" among the options.",
+  "help": "Ask \"Inafanya nini?\" If there is no answer, there is no action word.",
+  "feedback": "Neno la kitendo linaonyesha kinachofanywa, kama \"anaosha\". (anaosha)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T10": {
+  "skill": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /z/ for /dh/, so \"dhahabu\" becomes \"zahabu\".",
+  "example": {
+   "question": "Mwalimu anasema \"dhahabu\". Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "zahabu",
+   "correct_answer": "dhahabu"
+  },
+  "cause": "Many Kenyan first languages have no /dh/, or do not separate it from /z/; the child puts in the home sound.",
+  "reveals": "The question \"Mwalimu anasema \"dhahabu\". Neno lipi limetamkwa vizuri?\" with \"zahabu\" among the options.",
+  "help": "Say the two side by side, slowly, watching the mouth; the child holds up a card for the sound he hears.",
+  "feedback": "Sikiliza: \"dhahabu\" ina sauti /dh/, si /z/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T10": {
+  "skill": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+  "error": "Says /sh/ for /ch/, so \"chenga\" becomes \"shenga\".",
+  "example": {
+   "question": "Neno lipi limetamkwa vizuri?",
+   "wrong_answer": "shenga",
+   "correct_answer": "chenga"
+  },
+  "cause": "/ch/ and /sh/ are close; a first language with only one of them puts that one in both places.",
+  "reveals": "The question \"Neno lipi limetamkwa vizuri?\" with \"shenga\" among the options.",
+  "help": "Contrast the two with a mirror and a hand before the mouth; the child says which he hears.",
+  "feedback": "\"chenga\" ina sauti /ch/.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_DROP_T10": {
+  "skill": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+  "error": "Drops part of the target sound, so \"ngoma\" becomes \"goma\".",
+  "example": {
+   "question": "Neno \"ngoma\" limeandikwa au kutamkwa vipi kwa usahihi?",
+   "wrong_answer": "goma",
+   "correct_answer": "ngoma"
+  },
+  "cause": "The second part of the sound (the w or y glide, or the soft nasal) is quick and quiet; the child does not hear it and leaves it out.",
+  "reveals": "The question \"Neno \"ngoma\" limeandikwa au kutamkwa vipi kwa usahihi?\" with \"goma\" among the options.",
+  "help": "Stretch the syllable slowly (p-y-a), then say it fast; the child copies.",
+  "feedback": "Sikiliza tena: \"ngoma\". Usiache sehemu ya sauti.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T10": {
+  "skill": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+  "error": "Splits \"ngoma\" by letters rather than by syllables (each Kiswahili syllable ends in a vowel).",
+  "example": {
+   "question": "Neno \"ngoma\" lina silabi zipi?",
+   "wrong_answer": "n-g-o-m-a",
+   "correct_answer": "ngo-ma"
+  },
+  "cause": "The child has learnt letters one by one and has not been shown that a syllable is a sound that ends in a vowel.",
+  "reveals": "The question \"Neno \"ngoma\" lina silabi zipi?\" with \"n-g-o-m-a\" among the options.",
+  "help": "Clap the word: one clap per vowel; the consonants go with the vowel after them.",
+  "feedback": "Kila silabi ya Kiswahili huishia kwa irabu: ngo-ma.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T10": {
+  "skill": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+  "error": "Picks a word with no target sound when asked for one that has it.",
+  "example": {
+   "question": "Ni neno lipi lina sauti /ny/, /dh/, /th/, /ch/, /gh/, /ng/, /ng'/?",
+   "wrong_answer": "mpira",
+   "correct_answer": "chenga"
+  },
+  "cause": "The child looks at the first letter or the picture, not at the sound.",
+  "reveals": "The question \"Ni neno lipi lina sauti /ny/, /dh/, /th/, /ch/, /gh/, /ng/, /ng'/?\" with \"mpira\" among the options.",
+  "help": "Underline the target sound in each word on the card before choosing.",
+  "feedback": "\"chenga\" ina sauti lengwa; \"mpira\" haina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_SOUND_T10": {
+  "skill": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads the target word wrongly: \"chenga\" as \"shenga\".",
+  "example": {
+   "question": "Neno \"chenga\" linasomwa vipi?",
+   "wrong_answer": "shenga",
+   "correct_answer": "chenga"
+  },
+  "cause": "The child reads the letters with the sounds of his first language, or adds a vowel to break the cluster.",
+  "reveals": "The question \"Neno \"chenga\" linasomwa vipi?\" with \"shenga\" among the options.",
+  "help": "Pick out the target words before reading; practise them on cards, then read the passage.",
+  "feedback": "Soma \"chenga\" kama lilivyoandikwa.",
+  "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_WORD_T10": {
+  "skill": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads word by word or syllable by syllable, so the sentence has no meaning when heard.",
+  "example": {
+   "question": "Ni usomaji upi ni wa ufasaha: \"Tunacheza ngoma uwanjani.\"?",
+   "wrong_answer": "Tunacheza ... ngoma ... uwanjani.",
+   "correct_answer": "Tunacheza ngoma uwanjani."
+  },
+  "cause": "The child is still decoding each word; he has not yet read a group of words as one piece.",
+  "reveals": "The question \"Ni usomaji upi ni wa ufasaha: \"Tunacheza ngoma uwanjani.\"?\" with \"Tunacheza ... ngoma ... uwanjani.\" among the options.",
+  "help": "Echo reading: the teacher reads a phrase, the child repeats it in one breath.",
+  "feedback": "Soma maneno kwa pamoja kama unavyozungumza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_QUIET_T10": {
+  "skill": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads so softly (or so loudly, shouting) that the class cannot follow.",
+  "example": {
+   "question": "Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?",
+   "wrong_answer": "ya chini ili nisikosee mbele ya wenzangu",
+   "correct_answer": "ya kusikika na wote darasani, bila kupiga kelele"
+  },
+  "cause": "Shyness, or the belief that reading well means reading loud.",
+  "reveals": "The question \"Unaposoma mbele ya darasa, sauti yako inafaa kuwa vipi?\" with \"ya chini ili nisikosee mbele ya wenzangu\" among the options.",
+  "help": "Stand the reader at the front and a listener at the back: the listener raises a hand when he hears every word.",
+  "feedback": "Soma kwa sauti inayosikika na wote, bila kupiga kelele.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_PACE_T10": {
+  "skill": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads as fast as possible and thinks the fastest reader is the best.",
+  "example": {
+   "question": "Kasi ifaayo ya kusoma kifungu ni ipi?",
+   "wrong_answer": "haraka iwezekanavyo",
+   "correct_answer": "kasi ya kuzungumza, karibu maneno 30 kwa dakika"
+  },
+  "cause": "Reading races in class reward speed; nobody asked whether the listeners understood.",
+  "reveals": "The question \"Kasi ifaayo ya kusoma kifungu ni ipi?\" with \"haraka iwezekanavyo\" among the options.",
+  "help": "Time two readings, one very fast and one at speaking pace; the listeners answer one question after each.",
+  "feedback": "Kasi ifaayo ni ya kuzungumza: si haraka mno, si polepole mno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M1_UFS_MARK_T10": {
+  "skill": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+  "error": "Reads a question in the flat voice of a statement and runs on through the koma and kikomo.",
+  "example": {
+   "question": "Sentensi \"Je, umeona nyota?\" inasomwa vipi?",
+   "wrong_answer": "kwa sauti ileile ya sentensi ya kawaida",
+   "correct_answer": "sauti hupanda mwishoni kwa sababu ni swali"
+  },
+  "cause": "The child looks at the words and not at the marks.",
+  "reveals": "The question \"Sentensi \"Je, umeona nyota?\" inasomwa vipi?\" with \"kwa sauti ileile ya sentensi ya kawaida\" among the options.",
+  "help": "Read the same words three ways (. ? !); the child points at the mark that fits each reading; clap at each kikomo.",
+  "feedback": "Kiulizi (?) hupandisha sauti mwishoni; simama kidogo kwenye koma na kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_NAME_T10": {
+  "skill": "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Lists the things in the picture (mti, mtoto, mbwa) instead of writing sentences about what is happening.",
+  "example": {
+   "question": "Ni kipi ni kifungu kuhusu picha?",
+   "wrong_answer": "mti. mtoto. mbwa.",
+   "correct_answer": "Mtoto anacheza na mbwa chini ya mti."
+  },
+  "cause": "Naming pictures was the earlier task; the child has not moved to sentences.",
+  "reveals": "The question \"Ni kipi ni kifungu kuhusu picha?\" with \"mti. mtoto. mbwa.\" among the options.",
+  "help": "Ask \"Nani? Anafanya nini? Wapi?\" for each part of the picture.",
+  "feedback": "Kifungu kina sentensi zinazoeleza kinachotokea.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_TITLE_T10": {
+  "skill": "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Writes no title, or a title that does not fit the writing.",
+  "example": {
+   "question": "Kichwa kipi kinafaa insha kuhusu michezo?",
+   "wrong_answer": "Insha",
+   "correct_answer": "Michezo Shuleni"
+  },
+  "cause": "The child thinks the word \"insha\" or the date is the title.",
+  "reveals": "The question \"Kichwa kipi kinafaa insha kuhusu michezo?\" with \"Insha\" among the options.",
+  "help": "Read the finished writing and ask: what is it about in three words?",
+  "feedback": "Kichwa kinasema insha inahusu nini: Michezo Shuleni.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_HALAFU_T10": {
+  "skill": "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Joins every sentence with \"na halafu\", so the writing is one long sentence.",
+  "example": {
+   "question": "Ni lipi limeandikwa vizuri?",
+   "wrong_answer": "Tuliamka na halafu tukaoga na halafu tukaenda sokoni.",
+   "correct_answer": "Tuliamka asubuhi. Tulioga, kisha tukaenda sokoni."
+  },
+  "cause": "Spoken retelling joins events with na halafu; the child writes as he talks.",
+  "reveals": "The question \"Ni lipi limeandikwa vizuri?\" with \"Tuliamka na halafu tukaoga na halafu tukaenda sokoni.\" among the options.",
+  "help": "Give a word bank: kwanza, kisha, baadaye, mwishowe; one per sentence.",
+  "feedback": "Tumia kikomo na maneno kama kisha, baadaye.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_TENSE_T10": {
+  "skill": "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Slips from one tense to another in the middle of the writing (past -li- to present -na-, or habitual hu- to past).",
+  "example": {
+   "question": "Ni lipi sahihi?",
+   "wrong_answer": "Jana tulicheza mpira. Juma anafunga bao.",
+   "correct_answer": "Jana tulicheza mpira. Juma alifunga bao."
+  },
+  "cause": "The child thinks of the events as he writes and the tense of the moment comes in.",
+  "reveals": "The question \"Ni lipi sahihi?\" with \"Jana tulicheza mpira. Juma anafunga bao.\" among the options.",
+  "help": "Underline every verb; all the tense markers should match.",
+  "feedback": "Tumia wakati mmoja katika insha nzima.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_MIX_T10": {
+  "skill": "KISW.G1.KUANDI.T10_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+  "error": "Puts English or Sheng words into the Kiswahili writing.",
+  "example": {
+   "question": "Sahihisha:",
+   "wrong_answer": "Tulicheza football.",
+   "correct_answer": "Tulicheza mpira wa miguu."
+  },
+  "cause": "The child does not know the Kiswahili word and fills the gap with the one he knows.",
+  "reveals": "The question \"Sahihisha:\" with \"Tulicheza football.\" among the options.",
+  "help": "Keep a word bank of theme words on the board before writing.",
+  "feedback": "Kwa Kiswahili: Tulicheza mpira wa miguu.",
+  "source": "English or mother-tongue interference on Kiswahili; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M1_SAR_NEGATE_T10": {
+  "skill": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+  "error": "Gives the negative of the verb (hafungui) instead of its opposite action (funga).",
+  "example": {
+   "question": "Kinyume cha \"anza\" (mchezo) ni?",
+   "wrong_answer": "usianze",
+   "correct_answer": "maliza"
+  },
+  "cause": "The child thinks \"opposite\" means \"not doing it\".",
+  "reveals": "The question \"Kinyume cha \"anza\" (mchezo) ni?\" with \"usianze\" among the options.",
+  "help": "Act it: fungua the door, then funga it; not doing anything is not the opposite.",
+  "feedback": "Kinyume cha kitendo ni kitendo kingine: fungua - funga. (maliza)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M1_SAR_ADDUA_T10": {
+  "skill": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+  "error": "Makes an opposite by adding -ua to any verb (keti -> ketua).",
+  "example": {
+   "question": "Kinyume cha \"keti\" ni?",
+   "wrong_answer": "ketua",
+   "correct_answer": "simama"
+  },
+  "cause": "Fungua/funga and vaa/vua show a pattern, and the child uses it everywhere.",
+  "reveals": "The question \"Kinyume cha \"keti\" ni?\" with \"ketua\" among the options.",
+  "help": "Sort pairs into two piles: made with -ua (funga-fungua) and different words (keti-simama).",
+  "feedback": "Kinyume cha keti ni simama. (simama)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M1_SAR_SAME_T10": {
+  "skill": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+  "error": "Gives a word of the same meaning as the opposite (simama - inuka).",
+  "example": {
+   "question": "Kinyume cha \"ingia\" ni?",
+   "wrong_answer": "jiunga",
+   "correct_answer": "toka"
+  },
+  "cause": "The child knows the words go together but not that they mean the same.",
+  "reveals": "The question \"Kinyume cha \"ingia\" ni?\" with \"jiunga\" among the options.",
+  "help": "Act both words: if the action is the same, it is not the opposite.",
+  "feedback": "Kinyume ni kitendo kinachopingana. (toka)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M1_SAR_NOUNOPP_T10": {
+  "skill": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+  "error": "Gives a place or thing word as the opposite of an action (ingia - nje).",
+  "example": {
+   "question": "Kinyume cha \"panda\" (mti) ni?",
+   "wrong_answer": "chini",
+   "correct_answer": "shuka"
+  },
+  "cause": "Ingia and nje are heard together in \"ingia ndani, toka nje\".",
+  "reveals": "The question \"Kinyume cha \"panda\" (mti) ni?\" with \"chini\" among the options.",
+  "help": "Ask \"Ni kitendo?\" before accepting: the opposite of an action is an action.",
+  "feedback": "Kinyume cha ingia ni toka. (shuka)",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ }
+}

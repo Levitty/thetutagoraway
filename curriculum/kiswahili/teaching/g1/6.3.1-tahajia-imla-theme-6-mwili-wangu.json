@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA",
+ "title": "Tahajia Imla (Theme 6: Mwili wangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+   "key_step": "The child says the word slowly, listens for the hard part (the sound, the nasal, the long vowel), writes it and reads it back.",
+   "floor": {
+    "prerequisite": "Writes simple open-syllable words (mama, baba, kaka).",
+    "question": "Andika: kaka",
+    "answer": "kaka"
+   },
+   "representations": [
+    "a list of hard pairs",
+    "syllable claps",
+    "a word wall of the theme words"
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Say it slowly.",
+    "Write it syllable by syllable.",
+    "Read it back and check."
+   ],
+   "contexts": [
+    "mwili wangu",
+    "a weekly spelling test",
+    "writing a shopping list"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "nde-vu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the nasal.",
+     "say": "Unasikia nini mwanzoni?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes three theme words read by the teacher and checks them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_MT_T6",
+     "listen_for": [
+      "tamu"
+     ],
+     "ask": "Unasikia sauti gani hapa?",
+     "repair": "Andika \"damu\" kama linavyotamkwa kwa Kiswahili sanifu."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_NASAL_T6",
+     "listen_for": [
+      "devu"
+     ],
+     "ask": "Unasikia sauti ya pua?",
+     "repair": "\"ndevu\" lina sauti ya pua mwanzoni."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_VOWEL_T6",
+     "listen_for": [
+      "ka"
+     ],
+     "ask": "Irabu ngapi unasikia?",
+     "repair": "\"kaa\" lina irabu mbili zinazofuatana."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_NGAPOS_T6",
+     "listen_for": [
+      "ngombe"
+     ],
+     "ask": "Unasikia /g/ katika neno hili?",
+     "repair": "Ng'ombe huandikwa na kibainishi: ng'."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA.M1_TAH_JOIN_T6",
+     "listen_for": [
+      "Nilichelewa kwasababu ya mvua."
+     ],
+     "ask": "Ni maneno mangapi hapa?",
+     "repair": "\"Kwa sababu\" ni maneno mawili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika: damu",
+     "answer": "damu",
+     "shows": "sound"
+    },
+    {
+     "question": "Andika: ndevu",
+     "answer": "ndevu",
+     "shows": "nasal"
+    }
+   ]
+  }
+ ]
+}

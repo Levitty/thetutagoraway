@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 10: Michezo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (ngo-ma), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: ngoma, chenga, nyota",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Tulicheza ngoma na kupiga chenga uwanjani."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "michezo",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "ngo-ma"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR_T10",
+     "listen_for": [
+      "zahabu"
+     ],
+     "ask": "Ulisikia /dh/ au /z/?",
+     "repair": "Sikiliza: \"dhahabu\" ina sauti /dh/, si /z/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_NEAR2_T10",
+     "listen_for": [
+      "shenga"
+     ],
+     "ask": "Ulisikia /ch/ au /sh/?",
+     "repair": "\"chenga\" ina sauti /ch/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_DROP_T10",
+     "listen_for": [
+      "goma"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"ngoma\"?",
+     "repair": "Sikiliza tena: \"ngoma\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_SYLL_T10",
+     "listen_for": [
+      "n-g-o-m-a"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: ngo-ma."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI.M1_SAU_PICK_T10",
+     "listen_for": [
+      "mpira"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"chenga\" ina sauti lengwa; \"mpira\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"nyota\" kwa silabi.",
+     "answer": "nyo-ta",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: chenga au mpira?",
+     "answer": "chenga",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

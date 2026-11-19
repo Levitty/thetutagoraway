@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_",
+ "title": "Matumizi ya - zuri na – baya (Theme 6: Mwili wangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on mwili wangu using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "mwili wangu",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nywele nzuri; meno mazuri."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mazuri\".",
+     "say": "Meno ni ngeli gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_CONCADJ_T6",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Kiti ni ngeli gani?",
+     "repair": "Kivumishi hufuata ngeli: kiti kizuri. (kizuri)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_NADJ_T6",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Nomino hii inabadilika katika wingi?",
+     "repair": "Nyumba nzuri; nguo nyeupe. (nzuri)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_ORDERADJ_T6",
+     "listen_for": [
+      "mzuri mtoto"
+     ],
+     "ask": "Neno lipi linaanza?",
+     "repair": "Nomino kwanza: mtoto mzuri. (mtoto mzuri)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_PLADJ_T6",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Nomino imebadilika; kivumishi je?",
+     "repair": "Watoto wazuri: vyote hubadilika. (wazuri)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI.M1_SAR_OPPADJ_T6",
+     "listen_for": [
+      "mazuri"
+     ],
+     "ask": "Picha inaonyesha nini?",
+     "repair": "Angalia picha tena na uchague neno linalofaa. (mabaya)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mkono ___ (-zuri).",
+     "answer": "mzuri",
+     "shows": "m-mi"
+    },
+    {
+     "question": "Jaza: Kiatu ___ (-baya).",
+     "answer": "kibaya",
+     "shows": "ki-vi"
+    }
+   ]
+  }
+ ]
+}

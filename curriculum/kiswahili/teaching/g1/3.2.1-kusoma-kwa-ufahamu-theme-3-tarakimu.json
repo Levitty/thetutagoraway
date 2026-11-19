@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 3: Tarakimu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "a picture of the theme",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "tarakimu",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Juma ana kuku watano. Kuku wawili ni weupe. Kuku watatu ni weusi. Juma anawapenda kuku wake."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_DECODE_T3",
+     "listen_for": [
+      "Sijui, nilikuwa nikisoma maneno tu."
+     ],
+     "ask": "Sentensi ya kwanza imesema nini?",
+     "repair": "Soma tena polepole na ufikirie maana: Kifungu kinahusu kuku wa Juma."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_WORD_T3",
+     "listen_for": [
+      "watoto"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"watano\" ni idadi ya tano."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_MSG_T3",
+     "listen_for": [
+      "Kuku wawili ni weupe."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Juma ana kuku watano na anawapenda."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M1_UFM_OWN_T3",
+     "listen_for": [
+      "Sisi tuna kuku kumi."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: watano"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"watano\" ni nini?",
+     "answer": "idadi ya tano",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Kifungu kinatuambia nini?",
+     "answer": "Juma ana kuku watano na anawapenda.",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

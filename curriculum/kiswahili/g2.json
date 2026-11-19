@@ -87,16 +87,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The first greetings and farewells of Grade 1 come before the greetings of the times of day.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Words of courtesy of Grade 1.",
        "status": "proposed",
@@ -305,16 +305,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Answering questions about a very short passage in Grade 1 comes first.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T1_USOMAJI_MWAFAKA.USOMAJI_MWAFAKA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading readiness of Grade 1: holding the book and reading left to right.",
        "status": "proposed",
@@ -491,16 +491,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUANDI.T4_HATI_NADHIFU.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T4_HATI_NADHIFU.KUUNGANISHA_SILABI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Neat writing of words in Grade 1 comes before neat sentences.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.KUANDI.T1_UANDISHI_BORA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T1_UANDISHI_BORA.UANDISHI_BORA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sitting well and holding the pencil well (Grade 1).",
        "status": "proposed",
@@ -672,16 +672,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Mimi and sisi with their verbs (Grade 1) show the pattern of a pronoun pair.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.SARUFI.T7_UKANUSHAJI.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Grade 1 already met the person in the verb through simple negation.",
        "status": "proposed",
@@ -862,16 +862,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing the syllables of a target sound in Grade 1 comes first.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading open syllables (ma, me, mi, mo, mu) in Grade 1.",
        "status": "proposed",
@@ -1085,8 +1085,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reading short sentences with target sounds in Grade 1.",
        "status": "proposed",
@@ -1269,8 +1269,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Forming the capital letters in Grade 1.",
        "status": "proposed",
@@ -1444,16 +1444,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T2_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Singular and plural of single nouns (Grade 1) come before two-word groups.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "-angu and -etu (Grade 1) are the second word of these groups.",
        "status": "proposed",
@@ -1631,8 +1631,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T3_MANENO_YA_ADABU_NA_H.HESHIMA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The words of courtesy of Grade 1 come first.",
        "status": "proposed",
@@ -1841,8 +1841,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Answering about a short read passage in Grade 1.",
        "status": "proposed",
@@ -2025,8 +2025,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T3_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Forming the small letters in Grade 1.",
        "status": "proposed",
@@ -2201,16 +2201,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T3_MATUMIZI_YA_HUYU_NA_.VIONYESHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Huyu and hawa (Grade 1) are the first pointing words.",
        "status": "proposed",
        "grade": 1
       },
       {
-       "requires": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Hiki and hivi (Grade 1) show that things take other pointing words.",
        "status": "proposed",
@@ -2385,8 +2385,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing target syllables in Grade 1.",
        "status": "proposed",
@@ -2777,8 +2777,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T7_KUANDIKA_MANENO_IPAS.TAHAJIA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing single words properly in Grade 1.",
        "status": "proposed",
@@ -2954,8 +2954,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T4_UMOJA_NA_WINGI_WA_MA.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Singular and plural of nouns (Grade 1).",
        "status": "proposed",
@@ -3147,8 +3147,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Listening to a short story and answering about it in Grade 1 comes first.",
        "status": "proposed",
@@ -3355,8 +3355,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T7_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Answering about a short read passage in Grade 1.",
        "status": "proposed",
@@ -3543,8 +3543,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Ending a sentence with a kikomo (Grade 1) comes before the kiulizi.",
        "status": "proposed",
@@ -3725,8 +3725,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T5_MATUMIZI_YA_ANGU_NA_.VIMILIKISHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "-angu and -etu (Grade 1) show the owner pattern.",
        "status": "proposed",
@@ -3906,8 +3906,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing target syllables in Grade 1.",
        "status": "proposed",
@@ -4122,8 +4122,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T6_KUSOMA_KWA_UFASAHA_S.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading short sentences aloud in Grade 1.",
        "status": "proposed",
@@ -4318,8 +4318,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing two-syllable words from dictation in Grade 1.",
        "status": "proposed",
@@ -4503,8 +4503,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "-zuri and -baya (Grade 1) are the first adjectives that agree.",
        "status": "proposed",
@@ -4679,8 +4679,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSIKI.T7_MAAGIZO.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T7_MAAGIZO.MAAGIZO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Following one-step instructions in Grade 1 comes before two steps.",
        "status": "proposed",
@@ -4871,8 +4871,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Answering about a short read passage in Grade 1.",
        "status": "proposed",
@@ -5065,8 +5065,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUANDI.T8_TAHAJIA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Spelling words of Grade 1 correctly.",
        "status": "proposed",
@@ -5233,8 +5233,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.SARUFI.T7_UKANUSHAJI.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T7_UKANUSHAJI.UKANUSHAJI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Negating a simple sentence in Grade 1.",
        "status": "proposed",
@@ -5404,8 +5404,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing target syllables in Grade 1.",
        "status": "proposed",
@@ -5601,8 +5601,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading short sentences aloud in Grade 1.",
        "status": "proposed",
@@ -5786,8 +5786,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUANDI.T8_TAHAJIA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T8_TAHAJIA.TAHAJIA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Spelling simple words in Grade 1.",
        "status": "proposed",
@@ -5967,8 +5967,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T8_MATUMIZI_YA_HIKI_NA_.VIONYESHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hiki and hivi (Grade 1).",
        "status": "proposed",
@@ -6137,8 +6137,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T9_MAZUNGUMZO.MAZUNGUMZO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Taking part in a short conversation in Grade 1 comes first.",
        "status": "proposed",
@@ -6526,8 +6526,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing a few sentences from a picture in Grade 1 comes first.",
        "status": "proposed",
@@ -6715,8 +6715,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T6_MATUMIZI_YA_ZURI_NA_.VIVUMISHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "-zuri and -baya (Grade 1) are the stems of vizuri and vibaya.",
        "status": "proposed",
@@ -6886,8 +6886,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing target syllables in Grade 1.",
        "status": "proposed",
@@ -7085,8 +7085,8 @@
        "grade": 2
       },
       {
-       "requires": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading short sentences aloud in Grade 1.",
        "status": "proposed",
@@ -7456,8 +7456,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.b",
-       "kind": "outcome",
+       "requires": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Opposite actions of Grade 1 come first.",
        "status": "proposed",

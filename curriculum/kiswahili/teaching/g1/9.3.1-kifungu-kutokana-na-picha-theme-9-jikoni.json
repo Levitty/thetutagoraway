@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_",
+ "title": "Kifungu kutokana na Picha (Theme 9: Jikoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU",
+   "key_step": "The child plans in three boxes, writes one idea per sentence in one tense with Kiswahili words, then reads it back and corrects it.",
+   "floor": {
+    "prerequisite": "Writes a sentence with a capital and a kikomo.",
+    "question": "Andika sentensi kuhusu shule yako.",
+    "answer": "Shule yangu ni nzuri."
+   },
+   "representations": [
+    "a three-box plan",
+    "a word bank of theme words and kwanza, kisha, mwishowe",
+    "a model insha on the board"
+   ],
+   "steps": [
+    "Plan: who, where, what happened, end.",
+    "Write the title.",
+    "Write one idea per sentence.",
+    "Read it back and correct."
+   ],
+   "contexts": [
+    "jikoni",
+    "a class story wall",
+    "a story to read to a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jikoni Kwetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii itahusu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the first two sentences of the insha and reads them aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_NAME_T9",
+     "listen_for": [
+      "mti. mtoto. mbwa."
+     ],
+     "ask": "Mtoto anafanya nini?",
+     "repair": "Kifungu kina sentensi zinazoeleza kinachotokea."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_TITLE_T9",
+     "listen_for": [
+      "Insha"
+     ],
+     "ask": "Insha yako inahusu nini?",
+     "repair": "Kichwa kinasema insha inahusu nini: Jikoni Kwetu."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_HALAFU_T9",
+     "listen_for": [
+      "Tuliamka na halafu tukaoga na halafu tukaenda sokoni."
+     ],
+     "ask": "Unaweza kuweka kikomo wapi hapa?",
+     "repair": "Tumia kikomo na maneno kama kisha, baadaye."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_TENSE_T9",
+     "listen_for": [
+      "Mama alipika ugali. Dada anaosha vyombo."
+     ],
+     "ask": "Kitendo hiki kilitokea lini?",
+     "repair": "Tumia wakati mmoja katika insha nzima."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T9_KIFUNGU_KUTOKANA_NA_.KIFUNGU.M1_INS_MIX_T9",
+     "listen_for": [
+      "Mama anapika rice."
+     ],
+     "ask": "Neno hilo ni la lugha gani?",
+     "repair": "Kwa Kiswahili: Mama anapika wali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kichwa kifaacho insha kuhusu jikoni ni?",
+     "answer": "Jikoni Kwetu",
+     "shows": "title"
+    },
+    {
+     "question": "Sahihisha: Mama alipika ugali. Dada anaosha vyombo.",
+     "answer": "Mama alipika ugali. Dada aliosha vyombo.",
+     "shows": "tense"
+    }
+   ]
+  }
+ ]
+}

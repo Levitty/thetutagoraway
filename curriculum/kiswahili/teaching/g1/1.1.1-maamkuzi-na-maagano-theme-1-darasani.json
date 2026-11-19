@@ -1,0 +1,115 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO",
+ "title": "Maamkuzi na Maagano (Theme 1: Darasani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+   "key_step": "The child asks three questions before greeting: who is it, what time is it, am I arriving or leaving; then says the greeting and waits for its reply.",
+   "floor": {
+    "prerequisite": "Says his own name and a friend's name.",
+    "question": "Unaitwa nani?",
+    "answer": "Ninaitwa Baraka"
+   },
+   "representations": [
+    "a chart of greetings with their replies side by side",
+    "picture cards: babu, rafiki, mwalimu, darasa",
+    "a sun chart for the time of day"
+   ],
+   "steps": [
+    "Look at who it is.",
+    "Think of the time of day.",
+    "Arriving or leaving?",
+    "Say the greeting, then listen for the reply."
+   ],
+   "contexts": [
+    "darasani",
+    "arriving at school in the morning",
+    "visiting grandmother at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Shikamoo! - ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture of babu.",
+     "say": "Babu anajibu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child greets a friend and then an elder, each with its own reply."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_REPLY_T1",
+     "listen_for": [
+      "Hujambo"
+     ],
+     "ask": "\"Hujambo?\" ni swali. Jibu lake ni lipi?",
+     "repair": "Ukiulizwa \"Hujambo?\" unajibu \"Sijambo,\" maana yake sina tatizo."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_ELDER_T1",
+     "listen_for": [
+      "Mambo babu!"
+     ],
+     "ask": "Unayemsalimu ni mzee au mtoto mwenzako?",
+     "repair": "Mzee husalimiwa kwa heshima: Shikamoo babu!"
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_MARAHABA_T1",
+     "listen_for": [
+      "Shikamoo"
+     ],
+     "ask": "Ni nani mdogo katika salamu hii, na anasema nini?",
+     "repair": "Mtoto anasema Shikamoo; mzee anajibu Marahaba."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_TIME_T1",
+     "listen_for": [
+      "Habari za jioni mwalimu!"
+     ],
+     "ask": "Ni wakati gani wa siku sasa?",
+     "repair": "Salamu hufuata wakati: Habari za asubuhi mwalimu!"
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_LEAVE_T1",
+     "listen_for": [
+      "Hujambo mwalimu!"
+     ],
+     "ask": "Unafika au unaondoka?",
+     "repair": "Unapoondoka unaaga: Kwaheri mwalimu!"
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M1_SAL_GROUP_T1",
+     "listen_for": [
+      "Sijambo"
+     ],
+     "ask": "Mwalimu alimsalimu mtu mmoja au darasa zima?",
+     "repair": "Watu wengi hujibu \"Hatujambo.\""
+    }
+   ],
+   "checks": [
+    {
+     "question": "Rafiki anasema \"Hujambo?\" Unajibu?",
+     "answer": "Sijambo",
+     "shows": "reply"
+    },
+    {
+     "question": "Unamsalimu bibi. Unasema?",
+     "answer": "Shikamoo bibi",
+     "shows": "elder"
+    }
+   ]
+  }
+ ]
+}

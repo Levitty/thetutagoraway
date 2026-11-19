@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_",
+ "title": "Matumizi ya Mimi na Sisi (Theme 1: Darasani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on darasani using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "darasani",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mimi ninasoma; sisi tunasoma."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"tunasoma\".",
+     "say": "Kitendo kinaanza na nini kwa sisi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_PREFIX_T1",
+     "listen_for": [
+      "ninaimba"
+     ],
+     "ask": "Mwanzo wa kitendo unakubaliana na nani?",
+     "repair": "Kitendo hufuata nafsi: Wao wanacheza; Yeye anacheza. (tunaimba)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_NUMBER_T1",
+     "listen_for": [
+      "Mimi"
+     ],
+     "ask": "Ni mtu mmoja au watu wengi?",
+     "repair": "Mtu mmoja ni yeye; watu wengi ni wao. (Sisi)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_PERSON_T1",
+     "listen_for": [
+      "Wewe ni Baraka."
+     ],
+     "ask": "Unazungumza kuhusu nani, wewe mwenyewe?",
+     "repair": "Ukiulizwa kwa \"wewe\", unajibu kwa \"mimi\". (Mimi ni Baraka.)"
+    },
+    {
+     "code": "KISW.G1.SARUFI.T1_MATUMIZI_YA_MIMI_NA_.NAFSI.M1_SAR_OBJ_T1",
+     "listen_for": [
+      "Mama alimpa mimi chakula."
+     ],
+     "ask": "Alama ya mtendwa iko wapi ndani ya kitendo?",
+     "repair": "Tunasema \"Mama alinipa\", si \"alimpa mimi\". (Mama alinipa chakula.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mimi ___ (cheza).",
+     "answer": "ninacheza",
+     "shows": "mimi"
+    },
+    {
+     "question": "Jaza: Sisi ___ (cheza).",
+     "answer": "tunacheza",
+     "shows": "sisi"
+    }
+   ]
+  }
+ ]
+}

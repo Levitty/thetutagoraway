@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO",
+ "title": "Matumizi ya Kikomo (Theme 5: Mimi na wenzangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA",
+   "key_step": "The child reads each sentence aloud and asks: does it want an answer? Then he puts ? or . and starts the next one big.",
+   "floor": {
+    "prerequisite": "Writes a short sentence with a capital at the start.",
+    "question": "Andika: Baba analima.",
+    "answer": "Baba analima."
+   },
+   "representations": [
+    "a question card and a statement card",
+    "the marks . and ? cut out to place",
+    "a passage with the marks missing"
+   ],
+   "steps": [
+    "Read the sentence aloud.",
+    "Ask: does it ask or tell?",
+    "Put the mark.",
+    "Start the next sentence with a capital."
+   ],
+   "contexts": [
+    "mimi na wenzangu",
+    "writing questions for a class interview",
+    "a note home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, unaitwa nani?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end of the sentence.",
+     "say": "Sentensi hii inaishia kwa alama gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one question and one statement about the theme with their marks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_NOSTOP_T5",
+     "listen_for": [
+      "Juma alienda shuleni alisoma vizuri alirudi nyumbani"
+     ],
+     "ask": "Wazo la kwanza linaishia wapi?",
+     "repair": "Kila sentensi huishia kwa kikomo."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_LINE_T5",
+     "listen_for": [
+      "mwishoni mwa kila mstari wa daftari"
+     ],
+     "ask": "Sentensi hii inaisha wapi?",
+     "repair": "Kikomo huwekwa sentensi inapoisha, si mstari."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_CAP_T5",
+     "listen_for": [
+      "Mimi ni Amina. mama alifurahi."
+     ],
+     "ask": "Neno linalofuata kikomo linaanza kwa herufi gani?",
+     "repair": "Baada ya kikomo, herufi kubwa."
+    },
+    {
+     "code": "KISW.G1.KUANDI.T5_MATUMIZI_YA_KIKOMO.ALAMA.M1_ALA_STOPQ_T5",
+     "listen_for": [
+      "Unaenda wapi."
+     ],
+     "ask": "Sentensi hii inauliza au inaeleza?",
+     "repair": "Swali huishia kwa kiulizi (?)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Weka alama: Je, unaitwa nani",
+     "answer": "Je, unaitwa nani?",
+     "shows": "kiulizi"
+    },
+    {
+     "question": "Weka alama: Mimi ni Amina",
+     "answer": "Mimi ni Amina.",
+     "shows": "kikomo"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K",
+ "title": "Kusoma kwa Ufahamu Kifungu (Theme 5: Mimi na wenzangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "a picture of the theme",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "mimi na wenzangu",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mimi ni Akinyi. Nina rafiki anayeitwa Wanjiku. Tunacheza pamoja shuleni. Tunasaidiana kila siku."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_DECODE_T5",
+     "listen_for": [
+      "Sijui, nilikuwa nikisoma maneno tu."
+     ],
+     "ask": "Sentensi ya kwanza imesema nini?",
+     "repair": "Soma tena polepole na ufikirie maana: Kifungu kinahusu Akinyi na rafiki yake Wanjiku."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_WORD_T5",
+     "listen_for": [
+      "tunasalimiana"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"tunasaidiana\" ni kila mmoja anamsaidia mwenzake."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_MSG_T5",
+     "listen_for": [
+      "Akinyi yuko shuleni."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Marafiki hucheza pamoja na kusaidiana."
+    },
+    {
+     "code": "KISW.G1.KUSOMA.T5_KUSOMA_KWA_UFAHAMU_K.UFAHAMU.M1_UFM_OWN_T5",
+     "listen_for": [
+      "Rafiki yangu ni Otieno."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: Wanjiku"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"tunasaidiana\" ni nini?",
+     "answer": "kila mmoja anamsaidia mwenzake",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Kifungu kinatuambia nini?",
+     "answer": "Marafiki hucheza pamoja na kusaidiana.",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

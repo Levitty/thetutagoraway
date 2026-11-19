@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_",
+ "title": "Matamshi Bora Sauti: (/n/, /o/, /w/, /e/, /i/, /h/) (Theme 4: Siku za wiki)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (na-ne), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: nane, wewe, hii",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Wewe na mimi tutaenda nyumbani."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "siku za wiki",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "na-ne"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_NEAR_T4",
+     "listen_for": [
+      "wiwi"
+     ],
+     "ask": "Ulisikia /e/ au /i/?",
+     "repair": "Sikiliza: \"wewe\" ina sauti /e/, si /i/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_NEAR2_T4",
+     "listen_for": [
+      "nunu"
+     ],
+     "ask": "Ulisikia /o/ au /u/?",
+     "repair": "\"nono\" ina sauti /o/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_SYLL_T4",
+     "listen_for": [
+      "n-a-n-e"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: na-ne."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_NAME_T4",
+     "listen_for": [
+      "ii"
+     ],
+     "ask": "Ni jina la herufi au ni sauti yake?",
+     "repair": "Kwa Kiswahili tunatamka sauti: /e/."
+    },
+    {
+     "code": "KISW.G1.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI.M1_SAU_PICK_T4",
+     "listen_for": [
+      "mama"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"wewe\" ina sauti lengwa; \"mama\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"hii\" kwa silabi.",
+     "answer": "hi-i",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: wewe au mama?",
+     "answer": "wewe",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}
