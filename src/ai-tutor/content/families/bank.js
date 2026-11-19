@@ -2,6 +2,8 @@ import { bankFamilies } from '../subjects/registry.js';
 // Every grade's families, in one list. Each file exports FAMILIES, an array.
 import { FAMILIES as GAPS } from './gaps.js';
 import { FAMILIES as G1_3 } from './g1_3.js';
+// Grade 2, the skills that had no family (19 Nov 2026), written in the young kit: see g23c_lib.js.
+import { FAMILIES as G2C_COV } from './g2c_cov.js';
 import { FAMILIES as G4 } from './g4.js';
 import { FAMILIES as G4C_WHOLE } from './g4c_whole.js';
 import { FAMILIES as G4C_NUMOPS } from './g4c_numops.js';
@@ -44,4 +46,4 @@ import { FAMILIES as G7_MEASURE } from './g7_measure.js';
 import { FAMILIES as G7_GEO_DATA } from './g7_geo_data.js';
 
 // Subject-grades in the registry (subjects/registry.js) that ask to be in the bank (Science Grade 5 today) come first.
-export const GRADE_FAMILIES = [...bankFamilies(), ...G9_NUM_ALG, ...G9_MEASURE, ...G9_GEO_DATA, ...G8_NUM_ALG, ...G8_MEASURE_GEO, ...G7_NUM_ALG, ...G7_MEASURE, ...G7_GEO_DATA, ...G6, ...G6_COV, ...G6_CURRICULUM, ...G8_COV, ...G5_CURRICULUM, ...G5, ...G4_CURRICULUM, ...G4, ...G1_3, ...GAPS];
+export const GRADE_FAMILIES = [...bankFamilies(), ...G9_NUM_ALG, ...G9_MEASURE, ...G9_GEO_DATA, ...G8_NUM_ALG, ...G8_MEASURE_GEO, ...G7_NUM_ALG, ...G7_MEASURE, ...G7_GEO_DATA, ...G6, ...G6_COV, ...G6_CURRICULUM, ...G8_COV, ...G5_CURRICULUM, ...G5, ...G4_CURRICULUM, ...G4, ...G2C_COV, ...G1_3, ...GAPS];
