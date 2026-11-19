@@ -2513,8 +2513,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
@@ -4180,8 +4179,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -5599,8 +5597,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
@@ -9088,8 +9085,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
@@ -9868,8 +9864,7 @@
      ],
      "leads_to": [],
      "status": "proposed",
-     "assessed_by": "questions",
-     "no_family": true
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [

@@ -1646,8 +1646,7 @@ export const SKILLS = {
    "M6_PC_NO_ORDER",
    "M6_PC_TOPIC_TOO_WIDE",
    "M6_PC_PLAN_TOO_LONG"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION": {
   "name": "Write an open-ended composition on a variety of themes",
@@ -1845,8 +1844,7 @@ export const SKILLS = {
    "M6_RV_DECORATION",
    "M6_RV_CAPTION_IGNORED",
    "M6_RV_DIAGRAM_ORDER"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS": {
   "name": "Use who, whom, whose and which",
@@ -2014,8 +2012,7 @@ export const SKILLS = {
    "M6_WE_SALARY_WAGE",
    "M6_WE_INTEGRITY_INTELLIGENT",
    "M6_WE_DILIGENT_DELIGHT"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
   "name": "Use stress and intonation in questions, statements and exclamations",
@@ -2360,8 +2357,7 @@ export const SKILLS = {
    "M6_DW_ORDER",
    "M6_DW_ADVERB",
    "M6_DW_WRONG_SENSE"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION": {
   "name": "Plan, write and judge a descriptive composition",
@@ -2432,8 +2428,7 @@ export const SKILLS = {
    "M6_NC_GESTURE_MISMATCH",
    "M6_NC_FIDGET",
    "M6_NC_FACE_WORDS"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES": {
   "name": "Find rhyme, repeated lines and rhythm in a poem or song",
