@@ -45,6 +45,7 @@ export default {
   'eng_g5_lang.js': 'eng_signed.js',
   'eng_g5_reading.js': 'eng_signed.js',
   'eng_g5_vocab.js': 'eng_signed.js',
+  'english_g4_a.js': 'english_g4_signed.js',
   'english_g4_lang.js': 'english_g4_signed.js',
   'english_g4_reading.js': 'english_g4_signed.js',
   'english_g4_vocab.js': 'english_g4_signed.js',

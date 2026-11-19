@@ -1243,8 +1243,7 @@ export const SKILLS = {
    "M4_FV_SMALL_BROTHER",
    "M4_FV_NIECE_NEPHEW",
    "M4_FV_AUNT_UNCLE"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE": {
   "name": "Listen to a short oral text and recall what was said",
@@ -1682,8 +1681,7 @@ export const SKILLS = {
    "M4_SM_TEXTSPEAK",
    "M4_SM_LETTER_FORMAT",
    "M4_SM_MISSING_DETAIL"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS": {
   "name": "Use words about food and a balanced diet",
@@ -1716,8 +1714,7 @@ export const SKILLS = {
    "M4_LB_AND_FOR_BUT",
    "M4_LB_NOT_LIKE",
    "M4_LB_LIKE_ING_TO"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL": {
   "name": "Scan a text for a detail",
@@ -1753,8 +1750,7 @@ export const SKILLS = {
    "M4_SR_TOO_HARD",
    "M4_SR_THICKNESS",
    "M4_SR_WRONG_TYPE"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING": {
   "name": "Read familiar books independently and keep going",
@@ -2228,8 +2224,7 @@ export const SKILLS = {
    "M4_IP_NO_PAUSE",
    "M4_IP_SORRY_ONLY",
    "M4_IP_COMMAND"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
   "name": "Join ideas with and, but, because, so and or",
@@ -2319,8 +2314,7 @@ export const SKILLS = {
    "M4_NC_FROWN",
    "M4_NC_TONE_WORDS",
    "M4_NC_POINTING"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES": {
   "name": "Ask questions with who, what, where, when, why, how and whose",
@@ -2512,8 +2506,7 @@ export const SKILLS = {
    "M4_VB_TOO_FOR_VERY",
    "M4_VB_NO_CONTRAST",
    "M4_VB_VERY_MUCH"
-  ],
-  "nofamily": "questions"
+  ]
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION": {
   "name": "Use in, on, under, behind, between and next to",
