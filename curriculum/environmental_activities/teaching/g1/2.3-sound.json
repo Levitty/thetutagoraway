@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G1.NATURA.SOUND",
+ "title": "Sound",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Danger sounds (a fire alarm, a hooting car, a siren, a shout for help) are taught with the action: stop, move away, tell an adult (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G1.NATURA.SOUND.SOUNDS",
+   "key_step": "The child names sounds in the environment and their sources, and tells danger sounds and what to do when hearing them.",
+   "floor": {
+    "prerequisite": "Names animals and their sounds.",
+    "question": "What sound does a dog make?",
+    "answer": "Bark (woof)"
+   },
+   "representations": [
+    "recorded sounds",
+    "pictures of sources",
+    "a fire drill"
+   ],
+   "steps": [
+    "Close eyes and listen.",
+    "Name the sound and its source.",
+    "Say if it warns of danger.",
+    "Practise what to do."
+   ],
+   "contexts": [
+    "a sound walk around school",
+    "the road outside school",
+    "a fire drill"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a car, a cow, a bell and a drum."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the car.",
+     "say": "If it hoots behind you, what do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say move to the side."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the danger sounds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_LOUD_DANGER",
+     "listen_for": [
+      "Yes, it is loud"
+     ],
+     "ask": "Is a loud song at a party a danger sound?",
+     "repair": "Play a loud song and a car hoot. Ask which one tells us to move."
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_HOOT_IGNORE",
+     "listen_for": [
+      "Keep walking in the road"
+     ],
+     "ask": "You hear a car hooting behind you on the road. What do you do?",
+     "repair": "Play the sound and practise stepping to the side."
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_ANIMAL_MIX",
+     "listen_for": [
+      "A goat"
+     ],
+     "ask": "Which animal says \"moo\"?",
+     "repair": "Play animal sounds and match to pictures."
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_ALARM_HIDE",
+     "listen_for": [
+      "Hide under the desk"
+     ],
+     "ask": "The school fire bell rings. What do you do?",
+     "repair": "Hold a fire drill. Walk out in a line to the assembly point."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What animal crows in the morning?",
+     "answer": "A cock",
+     "shows": "identifies sounds"
+    },
+    {
+     "question": "Name a sound that warns of danger.",
+     "answer": "A car hooting (a siren, a fire bell)",
+     "shows": "discriminates"
+    }
+   ]
+  }
+ ]
+}

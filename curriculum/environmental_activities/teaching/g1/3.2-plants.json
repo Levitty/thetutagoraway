@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G1.RESOUR.PLANTS",
+ "title": "Plants",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+   "key_step": "The child names and points to the parts of a plant: roots, stem, leaves, flowers.",
+   "floor": {
+    "prerequisite": "Sorts plants from other things.",
+    "question": "Is a stone a plant?",
+    "answer": "No"
+   },
+   "representations": [
+    "a real small plant with roots",
+    "a plant picture to label",
+    "a nature walk"
+   ],
+   "steps": [
+    "Look at a real plant.",
+    "Point to each part and name it.",
+    "Pull up a weed to see roots.",
+    "Colour the parts."
+   ],
+   "contexts": [
+    "the school garden",
+    "a maize field",
+    "a mango tree in the compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plant with roots under a soil line."
+    },
+    {
+     "beat": "point",
+     "do": "Point below the soil line.",
+     "say": "What part is here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the roots."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label roots, stem, leaves, flower."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_ROOTS_NONE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Does a plant have roots?",
+     "repair": "Gently pull up a weed. Show the roots."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_STEM_ROOT",
+     "listen_for": [
+      "The root"
+     ],
+     "ask": "What is the part that holds up the leaves called?",
+     "repair": "Use a pulled-up plant: green stem above, roots below."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_FLOWER_ALL",
+     "listen_for": [
+      "No, it has no flowers"
+     ],
+     "ask": "Grass has no flowers today. Is grass a plant?",
+     "repair": "Walk and find plants with and without flowers."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_TREE_NOT",
+     "listen_for": [
+      "No, it is a tree"
+     ],
+     "ask": "Is a mango tree a plant?",
+     "repair": "Compare a bean plant and a tree: both have roots, stem, leaves."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of a plant is under the soil?",
+     "answer": "The roots",
+     "shows": "identifies"
+    },
+    {
+     "question": "Name the part that holds up the leaves.",
+     "answer": "The stem",
+     "shows": "identifies"
+    }
+   ]
+  }
+ ]
+}

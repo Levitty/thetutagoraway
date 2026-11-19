@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G1.RESOUR.ANIMALS",
+ "title": "Animals",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+   "key_step": "The child names domestic animals, tells them from wild animals and lists those used as food.",
+   "floor": {
+    "prerequisite": "Names animals and their sounds.",
+    "question": "Which animal says \"meh\"?",
+    "answer": "A goat"
+   },
+   "representations": [
+    "pictures of domestic and wild animals",
+    "two baskets: at home and in the wild",
+    "an animal-food chart"
+   ],
+   "steps": [
+    "Name animals kept at home.",
+    "Sort domestic from wild.",
+    "Say which are used as food.",
+    "Say what the others do for us."
+   ],
+   "contexts": [
+    "a farm visit",
+    "a home with hens",
+    "a game park picture"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow, a lion, a hen and a dog."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lion.",
+     "say": "Is it domestic?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, wild."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the domestic animals and star those used as food."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_WILD_ZOO",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a zebra a domestic animal?",
+     "repair": "Sort pictures: animals kept at home and animals living in the wild."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_DOG_FOOD",
+     "listen_for": [
+      "A dog"
+     ],
+     "ask": "Which animal is kept as food: a hen or a dog?",
+     "repair": "Ask what each home animal gives us. Dogs guard; hens give eggs and meat."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_BIRD_NOT",
+     "listen_for": [
+      "No, it is a bird"
+     ],
+     "ask": "Is a hen an animal?",
+     "repair": "Show that birds are animals too: they move, eat and breathe."
+    },
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_ALL_FOOD",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a donkey kept for food in most homes?",
+     "repair": "Make a chart: animal and what it does for us."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a domestic animal.",
+     "answer": "A cow (goat, hen)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Name a domestic animal used as food.",
+     "answer": "A goat (cow, hen)",
+     "shows": "lists"
+    }
+   ]
+  }
+ ]
+}

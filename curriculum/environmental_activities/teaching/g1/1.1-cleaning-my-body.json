@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G1.SOCIAL.CLEANING_MY_BODY",
+ "title": "Cleaning My Body",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A child who comes to school unwashed is never shamed in front of others; the teacher speaks to the family kindly.",
+ "skills": [
+  {
+   "skill": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+   "key_step": "The child names what we use to clean each part of the body: soap and water, a toothbrush or chewing stick, a comb, a towel.",
+   "floor": {
+    "prerequisite": "Names body parts.",
+    "question": "Point to your teeth. What are they?",
+    "answer": "Teeth"
+   },
+   "representations": [
+    "real soap, toothbrush, chewing stick, comb, towel",
+    "a big drawing of a child",
+    "matching cards"
+   ],
+   "steps": [
+    "Name a body part.",
+    "Pick the material that cleans it.",
+    "Show how it is used.",
+    "Say why we keep clean."
+   ],
+   "contexts": [
+    "getting ready for school",
+    "washing hands before lunch",
+    "bath time"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child's face, hands and feet."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the teeth.",
+     "say": "What do we clean these with?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say a toothbrush or chewing stick."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the material beside each part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_WATER_HANDS",
+     "listen_for": [
+      "Only water"
+     ],
+     "ask": "What do you need to wash your hands well?",
+     "repair": "Rub a little oil or charcoal on hands. Rinse with water, then use soap. Compare."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_TOWEL_TEETH",
+     "listen_for": [
+      "A comb"
+     ],
+     "ask": "What do we clean our teeth with?",
+     "repair": "Match real items to a drawing of a face: comb to hair, toothbrush to teeth."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_FEET_NO",
+     "listen_for": [
+      "No, nobody sees them"
+     ],
+     "ask": "Should we wash our feet?",
+     "repair": "Look at feet after play. Say: feet get dirty and can smell or get jiggers."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_HAIR_WATER",
+     "listen_for": [
+      "Only comb it"
+     ],
+     "ask": "How do we clean our hair?",
+     "repair": "Show a step chart: wash, rinse, dry, comb."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do we clean our teeth with?",
+     "answer": "A toothbrush (chewing stick)",
+     "shows": "materials"
+    },
+    {
+     "question": "What do we use with water to wash hands?",
+     "answer": "Soap",
+     "shows": "materials"
+    }
+   ]
+  }
+ ]
+}

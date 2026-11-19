@@ -1,0 +1,178 @@
+{
+ "outcomes": {
+  "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a": "identify materials used to clean different parts of the body",
+  "ENVI.G1.SOCIAL.CLEANING_MY_BODY.b": "wash face, teeth, hands, feet, and hair using locally available materials",
+  "ENVI.G1.SOCIAL.CLEANING_MY_BODY.c": "appreciate the importance of a clean body for personal hygiene",
+  "ENVI.G1.SOCIAL.OUR_HOME.a": "identify materials used to clean a home environment",
+  "ENVI.G1.SOCIAL.OUR_HOME.b": "state common accidents at home for personal and others’ safety",
+  "ENVI.G1.SOCIAL.OUR_HOME.c": "carry out activities to ensure cleanliness in the home",
+  "ENVI.G1.SOCIAL.OUR_HOME.d": "reflect on the importance of living in a clean home environment",
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.a": "identify basic needs in the family",
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.b": "classify items and structures as basic needs in the family",
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.c": "categorise food from plants and animals eaten at home",
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.d": "select suitable food for a healthy body",
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.e": "appreciate different needs in the family",
+  "ENVI.G1.SOCIAL.OUR_SCHOOL.a": "identify the main physical features between home and school",
+  "ENVI.G1.SOCIAL.OUR_SCHOOL.b": "draw main physical features between home and school",
+  "ENVI.G1.SOCIAL.OUR_SCHOOL.c": "apply personal safety on the way to school",
+  "ENVI.G1.SOCIAL.OUR_SCHOOL.d": "acknowledge the significance of identifying places using key features",
+  "ENVI.G1.SOCIAL.OUR_MARKET.a": "identify roles of people found in a market",
+  "ENVI.G1.SOCIAL.OUR_MARKET.b": "list food items found in a market",
+  "ENVI.G1.SOCIAL.OUR_MARKET.c": "categorise food items found in a market into fruits and vegetables",
+  "ENVI.G1.SOCIAL.OUR_MARKET.d": "appreciate activities that are carried out in a market",
+  "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a": "describe the appearance of the sky during the day and at night",
+  "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.b": "identify weather conditions in the locality",
+  "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.c": "record different weather conditions in the locality",
+  "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.d": "appreciate differences in weather conditions at different times of the day",
+  "ENVI.G1.NATURA.SOIL.a": "identify ways of playing with soil for enjoyment",
+  "ENVI.G1.NATURA.SOIL.b": "play with soil for enjoyment",
+  "ENVI.G1.NATURA.SOIL.c": "model objects using soil at school",
+  "ENVI.G1.NATURA.SOIL.d": "develop curiosity in playing with soil for enjoyment",
+  "ENVI.G1.NATURA.SOUND.a": "identify sounds in the immediate environment",
+  "ENVI.G1.NATURA.SOUND.b": "create sounds from objects for enjoyment",
+  "ENVI.G1.NATURA.SOUND.c": "discriminate sounds that alert on danger for an appropriate response",
+  "ENVI.G1.NATURA.SOUND.d": "acknowledge sounds that alert us to dangers",
+  "ENVI.G1.RESOUR.WATER.a": "identify sources of water in the immediate environment",
+  "ENVI.G1.RESOUR.WATER.b": "record uses of water at home and school",
+  "ENVI.G1.RESOUR.WATER.c": "conserve water at home and school",
+  "ENVI.G1.RESOUR.WATER.d": "acknowledge different sources of water in the immediate environment",
+  "ENVI.G1.RESOUR.PLANTS.a": "identify parts of a plant found in the school garden or compound",
+  "ENVI.G1.RESOUR.PLANTS.b": "draw different parts of a plant found at school",
+  "ENVI.G1.RESOUR.PLANTS.c": "carry out activities that conserve plants in the immediate environment",
+  "ENVI.G1.RESOUR.PLANTS.d": "advocate for the conservation of plants in the immediate environment",
+  "ENVI.G1.RESOUR.ANIMALS.a": "identify domestic animals in the immediate environment",
+  "ENVI.G1.RESOUR.ANIMALS.b": "list domestic animals used as food in the locality",
+  "ENVI.G1.RESOUR.ANIMALS.c": "carry out basic care activities for small domestic animals",
+  "ENVI.G1.RESOUR.ANIMALS.d": "acknowledge the diversity of animals in the immediate environment"
+ },
+ "skills": {
+  "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING": {
+   "forms": [
+    "picture: what do we clean this part with",
+    "match material to body part",
+    "odd one out"
+   ],
+   "mastery": "Names materials for cleaning each body part: water and soap for hands, face, feet and body; a toothbrush with toothpaste or a chewing stick (mswaki) for teeth; a comb or brush and soap for hair; a towel to dry; a nail cutter for nails; and says why we keep the body clean. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.1.1), never as a phone question: b) wash face, teeth, hands, feet, and hair using locally available materials."
+  },
+  "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING": {
+   "forms": [
+    "what is used to sweep, wipe, dust",
+    "match tool and job",
+    "odd one out"
+   ],
+   "mastery": "Names materials used to clean a home: a broom (fagio) to sweep, a dustpan and a litter bin to collect litter, a cloth or duster to wipe and dust, a mop or rag with water to clean the floor, soap and water, a rake for the compound. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.1.1), never as a phone question: c) carry out activities to ensure cleanliness in the home."
+  },
+  "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS": {
+   "forms": [
+    "what could happen here",
+    "safe or not safe",
+    "what to do"
+   ],
+   "mastery": "States common accidents at home (burns from fire, hot water or a jiko; cuts from knives and broken glass; falls from stairs, trees or wet floors; poisoning from medicines or paraffin; electric shocks from sockets) and the safe thing to do: keep away, never touch, tell an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS": {
+   "forms": [
+    "is this a basic need",
+    "which need is this",
+    "sort into food, shelter, clothing"
+   ],
+   "mastery": "Identifies the basic needs of a family (food, water, clothing, shelter) and classifies items and structures as basic needs: a house, hut or manyatta as shelter; a shirt, dress or blanket as clothing; ugali, beans or milk as food. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES": {
+   "forms": [
+    "from a plant or an animal",
+    "which food is healthy",
+    "which plate is better"
+   ],
+   "mastery": "Sorts food eaten at home into food from plants (maize, beans, sukuma wiki, bananas, rice, potatoes, fruits) and food from animals (milk, eggs, meat, fish), and selects suitable food for a healthy body (fruits, vegetables, milk, githeri, clean water) over too many sweets, crisps and sodas. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES": {
+   "forms": [
+    "what do you pass on the way",
+    "is this a feature",
+    "natural or made by people"
+   ],
+   "mastery": "Names the main physical features between home and school (roads and paths, rivers and bridges, hills and valleys, big trees, churches and mosques, shops, a market, a dispensary) and uses them to say where a place is. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.1.1), never as a phone question: b) draw main physical features between home and school."
+  },
+  "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY": {
+   "forms": [
+    "safe or unsafe",
+    "what to do here",
+    "where to walk"
+   ],
+   "mastery": "Says how to keep safe on the way to and from school: walk with friends or an adult, walk on the side of the road facing oncoming cars, cross at a crossing after looking both ways, go straight home, do not play on the road or near rivers, never go with or take things from strangers, tell a trusted adult if afraid. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE": {
+   "forms": [
+    "who is this person in the market",
+    "what does this person do",
+    "match person and job"
+   ],
+   "mastery": "Names people in a market and their roles: sellers (traders) sell goods, buyers buy, porters and handcart pullers carry goods, boda boda and lorry drivers transport goods, cleaners clean, market masters or county askaris keep order and collect fees, butchers sell meat. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG": {
+   "forms": [
+    "fruit or vegetable",
+    "name a food sold in the market",
+    "odd one out"
+   ],
+   "mastery": "Lists food items found in a local market (maize, beans, potatoes, tomatoes, onions, sukuma wiki, cabbage, bananas, mangoes, oranges, pawpaws, avocados, fish, meat, eggs) and sorts fruits (mangoes, oranges, bananas, pawpaws, pineapples, avocados, passion fruit) from vegetables (sukuma wiki, cabbage, spinach, carrots, onions, managu, terere). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY": {
+   "forms": [
+    "day or night sky",
+    "what do we see in the sky now",
+    "which is seen at night"
+   ],
+   "mastery": "Describes the day sky (bright, blue or cloudy, the sun, clouds, birds, sometimes the moon) and the night sky (dark, the moon, stars, sometimes clouds), and knows the sun is not seen at night and stars are too faint to see in the day. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception."
+  },
+  "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS": {
+   "forms": [
+    "what is the weather in the picture",
+    "match weather to symbol",
+    "what do we wear"
+   ],
+   "mastery": "Identifies weather conditions (sunny, rainy, cloudy, windy, hot, cold) from the sky, pictures and symbols, and says what people do or wear in each (an umbrella for rain, a sweater for cold, a hat for sun). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.2.1), never as a phone question: c) record different weather conditions in the locality."
+  },
+  "ENVI.G1.NATURA.SOIL.SOIL_PLAY": {
+   "forms": [
+    "which is a way of playing with soil",
+    "what can we make",
+    "what to do after playing"
+   ],
+   "mastery": "Names ways of playing with soil (filling and emptying cans, building sand castles, modelling pots, animals and balls, drawing in the soil, painting with soil mixed with water, making mud patterns) and the safe rules: never eat soil, keep it away from eyes, wash hands after playing. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.2.1), never as a phone question: b) play with soil for enjoyment; c) model objects using soil at school."
+  },
+  "ENVI.G1.NATURA.SOUND.SOUNDS": {
+   "forms": [
+    "what made this sound",
+    "is this a danger sound",
+    "what do you do when you hear it"
+   ],
+   "mastery": "Identifies sounds from people (talking, singing, clapping), animals (a cow mooing, a dog barking, a cock crowing), machines (a car, a motorbike, a grinding mill) and nature (rain, thunder, wind), and tells sounds that warn of danger (a hooting car, a siren, a fire alarm or bell, a shout for help, a dog growling, thunder) and what to do: stop, move away, tell an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.2.1), never as a phone question: b) create sounds from objects for enjoyment."
+  },
+  "ENVI.G1.RESOUR.WATER.WATER_SOURCES": {
+   "forms": [
+    "where does this water come from",
+    "what is water used for",
+    "match source and use"
+   ],
+   "mastery": "Identifies sources of water in the immediate environment (rain, rivers, lakes, wells, boreholes, springs, taps, dams, tanks) and records uses at home and school (drinking, cooking, washing, bathing, cleaning, watering plants, giving animals, flushing toilets). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.3.1), never as a phone question: c) conserve water at home and school."
+  },
+  "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS": {
+   "forms": [
+    "name the part",
+    "point to the part",
+    "which part is under the soil"
+   ],
+   "mastery": "Names and points to the parts of a plant: roots (under the soil), stem, leaves, flowers, and sometimes fruits and seeds, on real plants and pictures; knows the roots are hidden under the soil. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.3.1), never as a phone question: b) draw different parts of a plant found at school; c) carry out activities that conserve plants in the immediate environment."
+  },
+  "ENVI.G1.RESOUR.ANIMALS.DOMESTIC": {
+   "forms": [
+    "domestic or wild",
+    "which animal do we eat",
+    "odd one out"
+   ],
+   "mastery": "Identifies domestic animals (cows, goats, sheep, hens, ducks, rabbits, pigs, donkeys, dogs, cats, camels) and tells them from wild animals (lions, elephants, zebras), and lists domestic animals used as food in the locality (cows, goats, sheep, hens, rabbits, ducks, fish from ponds). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.3.1), never as a phone question: c) carry out basic care activities for small domestic animals."
+  }
+ }
+}

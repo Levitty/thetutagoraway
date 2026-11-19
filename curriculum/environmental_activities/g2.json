@@ -105,15 +105,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Materials for cleaning the body come before cleaning items. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Materials for cleaning the home. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -300,8 +300,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Basic needs of a family, from Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -342,8 +342,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Food items found in a market. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -571,8 +571,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Cleaning activities at home come before the school. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -615,8 +615,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Common accidents at home come before accidents at school. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -849,8 +849,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Main features seen at school, where the flag flies. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -892,8 +892,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Behaving well and safely at school. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1112,8 +1112,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Basic needs, which match many child rights. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1296,8 +1296,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Main features between home and school, from Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1338,8 +1338,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Roles of people found in a market. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1568,8 +1568,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Weather conditions in the locality, from Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1752,8 +1752,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.NATURA.SOIL.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Modelling objects with soil in Grade 1, where some soils held shape. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1936,15 +1936,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The sky by day and by night: the sun, moon and stars. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.NATURA.SOUND.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.NATURA.SOUND.SOUNDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifying things in the immediate environment by the senses. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -2121,8 +2121,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.RESOUR.WATER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sources of water, from Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -2293,8 +2293,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.RESOUR.PLANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Activities that conserve plants, from Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -2477,15 +2477,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G1.RESOUR.ANIMALS.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Domestic animals used as food, from Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Food from plants and animals eaten at home. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"

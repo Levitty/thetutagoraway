@@ -3,15 +3,15 @@
  "subject_key": "environmental_activities",
  "grade": 1,
  "source": "KICD Environmental Activities, First Published in 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; mapped on 19 Nov 2026 to the Grade 5 Maths standard (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric); written offline by Claude, awaiting a CBC Environmental Activities teacher's review. Rubrics from KICD, untouched.",
  "totals": {
   "strands": 3,
   "sub_strands": 11,
   "outcomes": 44,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 16,
+  "prerequisites": 33,
+  "misconceptions": 64
  },
  "sub_strands": [
   {
@@ -82,8 +82,118 @@
      "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+     "name": "Identify materials used to clean different parts of the body",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a"
+     ],
+     "mastery": "Names materials for cleaning each body part: water and soap for hands, face, feet and body; a toothbrush with toothpaste or a chewing stick (mswaki) for teeth; a comb or brush and soap for hair; a towel to dry; a nail cutter for nails; and says why we keep the body clean. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.1.1), never as a phone question: b) wash face, teeth, hands, feet, and hair using locally available materials.",
+     "question_forms": [
+      "picture: what do we clean this part with",
+      "match material to body part",
+      "odd one out"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SELF_CARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Washing hands with help before Grade 1. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.BODY_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming body parts comes before cleaning each one. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.SOCIAL.CLEANING_MY_BODY.b"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_WATER_HANDS",
+     "skill": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+     "error": "Thinks rinsing hands in water without soap makes them clean.",
+     "example": {
+      "question": "What do you need to wash your hands well?",
+      "wrong_answer": "Only water",
+      "correct_answer": "Water and soap"
+     },
+     "cause": "Water makes hands look and feel clean.",
+     "reveals": "Offer \"Only water\" beside \"Water and soap\" and ask the child to choose.",
+     "help": "Rub a little oil or charcoal on hands. Rinse with water, then use soap. Compare.",
+     "feedback": "Wash your hands with water and soap. Soap removes germs and dirt.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_TOWEL_TEETH",
+     "skill": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+     "error": "Picks a towel or comb as the material for cleaning teeth.",
+     "example": {
+      "question": "What do we clean our teeth with?",
+      "wrong_answer": "A comb",
+      "correct_answer": "A toothbrush (or a chewing stick)"
+     },
+     "cause": "All personal cleaning things are kept together, so the child mixes their uses.",
+     "reveals": "Offer \"A comb\" beside \"A toothbrush (or a chewing stick)\" and ask the child to choose.",
+     "help": "Match real items to a drawing of a face: comb to hair, toothbrush to teeth.",
+     "feedback": "We clean our teeth with a toothbrush or a chewing stick.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_FEET_NO",
+     "skill": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+     "error": "Thinks feet do not need washing because they are not seen.",
+     "example": {
+      "question": "Should we wash our feet?",
+      "wrong_answer": "No, nobody sees them",
+      "correct_answer": "Yes, every day"
+     },
+     "cause": "The child links cleaning with what other people see.",
+     "reveals": "Offer \"No, nobody sees them\" beside \"Yes, every day\" and ask the child to choose.",
+     "help": "Look at feet after play. Say: feet get dirty and can smell or get jiggers.",
+     "feedback": "Wash your feet every day. Dirty feet can get sores and jiggers.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING.M_E1_BODY_HAIR_WATER",
+     "skill": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+     "error": "Thinks hair is cleaned by combing only, never washed.",
+     "example": {
+      "question": "How do we clean our hair?",
+      "wrong_answer": "Only comb it",
+      "correct_answer": "Wash it with water and soap, then comb it"
+     },
+     "cause": "Combing is done every day, washing less often.",
+     "reveals": "Offer \"Only comb it\" beside \"Wash it with water and soap, then comb it\" and ask the child to choose.",
+     "help": "Show a step chart: wash, rinse, dry, comb.",
+     "feedback": "We wash our hair with soap and water, then comb it.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.1.1"
    ]
@@ -154,8 +264,217 @@
      "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+     "name": "Identify materials used to clean the home",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.OUR_HOME.a"
+     ],
+     "mastery": "Names materials used to clean a home: a broom (fagio) to sweep, a dustpan and a litter bin to collect litter, a cloth or duster to wipe and dust, a mop or rag with water to clean the floor, soap and water, a rake for the compound. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.1.1), never as a phone question: c) carry out activities to ensure cleanliness in the home.",
+     "question_forms": [
+      "what is used to sweep, wipe, dust",
+      "match tool and job",
+      "odd one out"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.HOME_PEOPLE_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming rooms and things at home. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Soap, water and a cloth clean the body and the home. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.SOCIAL.OUR_HOME.c"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+     "name": "State common accidents at home for personal and others' safety",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.OUR_HOME.b"
+     ],
+     "mastery": "States common accidents at home (burns from fire, hot water or a jiko; cuts from knives and broken glass; falls from stairs, trees or wet floors; poisoning from medicines or paraffin; electric shocks from sockets) and the safe thing to do: keep away, never touch, tell an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what could happen here",
+      "safe or not safe",
+      "what to do"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Simple safety rules from pre-primary. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.HOME_PEOPLE_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the places in a home where accidents happen. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_BROOM_WIPE",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+     "error": "Thinks a broom is used to wipe the table.",
+     "example": {
+      "question": "What do we use to wipe a table?",
+      "wrong_answer": "A broom",
+      "correct_answer": "A cloth"
+     },
+     "cause": "The broom is the cleaning tool the child sees most.",
+     "reveals": "Offer \"A broom\" beside \"A cloth\" and ask the child to choose.",
+     "help": "Act out each job with the right tool: sweep with a broom, wipe with a cloth.",
+     "feedback": "We wipe a table with a cloth. A broom sweeps the floor.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_LITTER_CORNER",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+     "error": "Thinks litter swept up can be left in a corner.",
+     "example": {
+      "question": "Where does swept litter go?",
+      "wrong_answer": "In a corner",
+      "correct_answer": "Into a dustpan, then the bin or litter pit"
+     },
+     "cause": "Sweeping it away seems to finish the job.",
+     "reveals": "Offer \"In a corner\" beside \"Into a dustpan, then the bin or litter pit\" and ask the child to choose.",
+     "help": "Sweep, collect with a dustpan, put it in the bin. Say all three steps.",
+     "feedback": "Swept litter goes into the dustpan and then the bin.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_MOP_DRY",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+     "error": "Thinks a mop is used dry like a broom.",
+     "example": {
+      "question": "What do we put on a mop to clean the floor?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "Water (and soap)"
+     },
+     "cause": "Mops and brooms both have long handles.",
+     "reveals": "Offer \"Nothing\" beside \"Water (and soap)\" and ask the child to choose.",
+     "help": "Show a mop dipped in a bucket of water.",
+     "feedback": "A mop is dipped in water to clean the floor.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_ADULT_ONLY",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+     "error": "Thinks cleaning the home is only for mothers or adults.",
+     "example": {
+      "question": "Who can help keep the home clean?",
+      "wrong_answer": "Only mother",
+      "correct_answer": "Everyone in the family, children too"
+     },
+     "cause": "At home, cleaning is often done by one adult.",
+     "reveals": "Offer \"Only mother\" beside \"Everyone in the family, children too\" and ask the child to choose.",
+     "help": "List small jobs a six-year-old can do: pick litter, wipe a table, arrange shoes.",
+     "feedback": "Everyone at home can help keep it clean, children too.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_MEDICINE_SWEET",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+     "error": "Thinks coloured tablets or syrup are sweets.",
+     "example": {
+      "question": "You find coloured tablets on the table. What do you do?",
+      "wrong_answer": "Eat them, they look like sweets",
+      "correct_answer": "Do not touch; tell an adult"
+     },
+     "cause": "Many medicines look and taste like sweets.",
+     "reveals": "Offer \"Eat them, they look like sweets\" beside \"Do not touch; tell an adult\" and ask the child to choose.",
+     "help": "Show a medicine bottle and sweets. Rule: only take medicine from a parent or nurse.",
+     "feedback": "Never eat medicine you find. Tell an adult.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_PARAFFIN_WATER",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+     "error": "Thinks a bottle of paraffin or chemical in a soda bottle is a drink.",
+     "example": {
+      "question": "There is a soda bottle with a clear liquid on the floor. Can you drink it?",
+      "wrong_answer": "Yes, it is water",
+      "correct_answer": "No, it may be paraffin or poison; tell an adult"
+     },
+     "cause": "Things in soda bottles are usually drinks.",
+     "reveals": "Offer \"Yes, it is water\" beside \"No, it may be paraffin or poison; tell an adult\" and ask the child to choose.",
+     "help": "Smell (from a distance, adult-held) paraffin in a bottle. Rule: never drink from an unknown bottle.",
+     "feedback": "Never drink from a bottle if you do not know what is inside. Tell an adult.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_JIKO_TOUCH",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+     "error": "Thinks a jiko is safe to touch when the fire looks out.",
+     "example": {
+      "question": "The jiko has no flames. Is it safe to touch?",
+      "wrong_answer": "Yes, the fire is out",
+      "correct_answer": "No, it can still be very hot"
+     },
+     "cause": "No flames looks like no heat.",
+     "reveals": "Offer \"Yes, the fire is out\" beside \"No, it can still be very hot\" and ask the child to choose.",
+     "help": "Hold a hand near (not on) a jiko after cooking with an adult. Feel the heat.",
+     "feedback": "A jiko can be hot even without flames. Do not touch it.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_SOCKET_PLAY",
+     "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+     "error": "Thinks putting a finger or a stick into a socket is a game.",
+     "example": {
+      "question": "Is it safe to put a pin in a socket?",
+      "wrong_answer": "Yes, it is fun",
+      "correct_answer": "No, you can get an electric shock"
+     },
+     "cause": "A socket looks like a small toy with holes.",
+     "reveals": "Offer \"Yes, it is fun\" beside \"No, you can get an electric shock\" and ask the child to choose.",
+     "help": "Show a socket picture with a red cross. Electricity can hurt badly.",
+     "feedback": "Never put anything into a socket. Electricity can hurt you.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.1.1"
    ]
@@ -237,8 +556,210 @@
      "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+     "name": "Identify and classify the basic needs of a family",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.FAMILY_NEEDS.a",
+      "ENVI.G1.SOCIAL.FAMILY_NEEDS.b"
+     ],
+     "mastery": "Identifies the basic needs of a family (food, water, clothing, shelter) and classifies items and structures as basic needs: a house, hut or manyatta as shelter; a shirt, dress or blanket as clothing; ugali, beans or milk as food. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "is this a basic need",
+      "which need is this",
+      "sort into food, shelter, clothing"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.HOME_PEOPLE_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the home and the people in it. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SORT_THINGS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting things into groups. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+     "name": "Group food eaten at home into food from plants and food from animals, and choose suitable food for a healthy body",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.FAMILY_NEEDS.c",
+      "ENVI.G1.SOCIAL.FAMILY_NEEDS.d"
+     ],
+     "mastery": "Sorts food eaten at home into food from plants (maize, beans, sukuma wiki, bananas, rice, potatoes, fruits) and food from animals (milk, eggs, meat, fish), and selects suitable food for a healthy body (fruits, vegetables, milk, githeri, clean water) over too many sweets, crisps and sodas. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "from a plant or an animal",
+      "which food is healthy",
+      "which plate is better"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.FOODS_EATEN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming foods eaten at home. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Food as a basic need of the family. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_TOY",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+     "error": "Calls a toy or a sweet a basic need.",
+     "example": {
+      "question": "Is a toy car a basic need?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, food, water, clothes and shelter are basic needs"
+     },
+     "cause": "Things the child loves feel necessary.",
+     "reveals": "Offer \"Yes\" beside \"No, food, water, clothes and shelter are basic needs\" and ask the child to choose.",
+     "help": "Ask: could we live without it? Sort pictures into \"we must have\" and \"nice to have\".",
+     "feedback": "Basic needs are food, water, clothes and shelter. A toy is not a basic need.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_HOUSE_SHAPE",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+     "error": "Thinks only a stone or iron-roofed house is shelter, not a hut or a manyatta.",
+     "example": {
+      "question": "Is a grass-thatched hut a shelter?",
+      "wrong_answer": "No, a shelter is a stone house",
+      "correct_answer": "Yes, it keeps people safe and dry"
+     },
+     "cause": "Pictures of houses in books are often stone houses.",
+     "reveals": "Offer \"No, a shelter is a stone house\" beside \"Yes, it keeps people safe and dry\" and ask the child to choose.",
+     "help": "Show many shelters: a hut, a manyatta, a flat, a tent. Ask what each does.",
+     "feedback": "A hut, a manyatta and a stone house are all shelters.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_WATER_FOOD",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+     "error": "Leaves out water as a need.",
+     "example": {
+      "question": "Name a basic need we drink.",
+      "wrong_answer": "Soda",
+      "correct_answer": "Water"
+     },
+     "cause": "Water is everywhere and not thought of as something we need.",
+     "reveals": "Offer \"Soda\" beside \"Water\" and ask the child to choose.",
+     "help": "Talk about a hot day with no water. Add water to the needs chart.",
+     "feedback": "Water is a basic need. We cannot live without it.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_SHOES_FOOD",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+     "error": "Puts clothes and shoes in the food group when sorting.",
+     "example": {
+      "question": "Which group does a shirt go in: food, clothing or shelter?",
+      "wrong_answer": "Food",
+      "correct_answer": "Clothing"
+     },
+     "cause": "The child sorts by what he likes, not by kind.",
+     "reveals": "Offer \"Food\" beside \"Clothing\" and ask the child to choose.",
+     "help": "Use three baskets with picture labels: a plate, a shirt, a house.",
+     "feedback": "A shirt is clothing. It keeps our body covered and warm.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_EGG_PLANT",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+     "error": "Thinks eggs or milk come from plants because they are bought in shops like flour.",
+     "example": {
+      "question": "Does milk come from a plant or an animal?",
+      "wrong_answer": "A plant",
+      "correct_answer": "An animal (a cow or goat)"
+     },
+     "cause": "The child sees milk in packets next to flour.",
+     "reveals": "Offer \"A plant\" beside \"An animal (a cow or goat)\" and ask the child to choose.",
+     "help": "Show pictures: a cow and milk, a hen and an egg, a maize plant and flour.",
+     "feedback": "Milk comes from animals like cows and goats.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_BREAD_ANIMAL",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+     "error": "Thinks bread or chapati comes from an animal.",
+     "example": {
+      "question": "Does a chapati come from a plant or an animal?",
+      "wrong_answer": "An animal",
+      "correct_answer": "A plant (wheat)"
+     },
+     "cause": "Bread is made, so its source is hidden.",
+     "reveals": "Offer \"An animal\" beside \"A plant (wheat)\" and ask the child to choose.",
+     "help": "Show wheat grains, flour and a chapati in order.",
+     "feedback": "A chapati is made from wheat flour. Wheat is a plant.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_SWEET_HEALTHY",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+     "error": "Chooses sweets and soda as food for a healthy body because they give energy.",
+     "example": {
+      "question": "Which is better for a healthy body: an orange or a soda?",
+      "wrong_answer": "A soda",
+      "correct_answer": "An orange"
+     },
+     "cause": "Sweet things are given as treats and seem good.",
+     "reveals": "Offer \"A soda\" beside \"An orange\" and ask the child to choose.",
+     "help": "Show a tooth picture and a strong body picture. Fruit helps the body; too much sugar harms teeth.",
+     "feedback": "An orange is better for your body than a soda. Too much sugar harms teeth.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_BIG_HEALTHY",
+     "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+     "error": "Thinks the biggest plate of food is always the healthiest.",
+     "example": {
+      "question": "Which is healthier: a big plate of chips or a plate of githeri with sukuma?",
+      "wrong_answer": "The big plate of chips",
+      "correct_answer": "Githeri with sukuma"
+     },
+     "cause": "Being full feels like being healthy.",
+     "reveals": "Offer \"The big plate of chips\" beside \"Githeri with sukuma\" and ask the child to choose.",
+     "help": "Compare the two plates: count the kinds of food. Different foods keep us healthy.",
+     "feedback": "Githeri with vegetables is healthier than a big plate of chips.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.1.1"
    ]
@@ -308,8 +829,217 @@
      "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+     "name": "Identify the main physical features between home and school",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.OUR_SCHOOL.a"
+     ],
+     "mastery": "Names the main physical features between home and school (roads and paths, rivers and bridges, hills and valleys, big trees, churches and mosques, shops, a market, a dispensary) and uses them to say where a place is. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.1.1), never as a phone question: b) draw main physical features between home and school.",
+     "question_forms": [
+      "what do you pass on the way",
+      "is this a feature",
+      "natural or made by people"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.HOME_PEOPLE_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming places near home. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SENSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Seeing and noticing things in the surroundings. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.SOCIAL.OUR_SCHOOL.b"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+     "name": "Say how to keep safe on the way to school",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.OUR_SCHOOL.c"
+     ],
+     "mastery": "Says how to keep safe on the way to and from school: walk with friends or an adult, walk on the side of the road facing oncoming cars, cross at a crossing after looking both ways, go straight home, do not play on the road or near rivers, never go with or take things from strangers, tell a trusted adult if afraid. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "safe or unsafe",
+      "what to do here",
+      "where to walk"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Keeping away from roads and dangers. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the road, river and other features on the way. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_ANIMALS",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+     "error": "Names animals or people seen on the way as features.",
+     "example": {
+      "question": "Which is a feature on the way to school: a bridge or a dog?",
+      "wrong_answer": "A dog",
+      "correct_answer": "A bridge"
+     },
+     "cause": "The child remembers what moved and caught attention.",
+     "reveals": "Offer \"A dog\" beside \"A bridge\" and ask the child to choose.",
+     "help": "Ask: will it be there tomorrow? Features stay in one place.",
+     "feedback": "A feature stays in one place, like a bridge or a hill.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_INSIDE",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+     "error": "Names things inside the classroom (desks, a board) as features between home and school.",
+     "example": {
+      "question": "Is a desk a feature on the way between home and school?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is inside the class"
+     },
+     "cause": "The word school makes the child think of the classroom.",
+     "reveals": "Offer \"Yes\" beside \"No, it is inside the class\" and ask the child to choose.",
+     "help": "Draw a path from a house to a school. Only things along the path count.",
+     "feedback": "Features on the way are along the path, like a river or a shop.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_ROAD_NONE",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+     "error": "Does not count the road or path itself as a feature.",
+     "example": {
+      "question": "Is the road a feature?",
+      "wrong_answer": "No, it is just the way",
+      "correct_answer": "Yes, a road is a feature made by people"
+     },
+     "cause": "The road is where one walks, not something one sees.",
+     "reveals": "Offer \"No, it is just the way\" beside \"Yes, a road is a feature made by people\" and ask the child to choose.",
+     "help": "Point to the road on the drawing and name it.",
+     "feedback": "A road is a feature. People made it.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES.M_E1_FEAT_ALL_SAME",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.HOME_SCHOOL_FEATURES",
+     "error": "Thinks every child passes the same features to school.",
+     "example": {
+      "question": "Do all children pass the same things on the way to school?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, each child's way is different"
+     },
+     "cause": "The child assumes others see what he sees.",
+     "reveals": "Offer \"Yes\" beside \"No, each child's way is different\" and ask the child to choose.",
+     "help": "Let three children draw their way. Compare the features.",
+     "feedback": "Each child passes different features on the way to school.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_STRANGER_GIFT",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+     "error": "Thinks taking sweets from a friendly stranger is fine.",
+     "example": {
+      "question": "A stranger offers you sweets on the way home. What do you do?",
+      "wrong_answer": "Take them and say thank you",
+      "correct_answer": "Say no, walk away and tell a trusted adult"
+     },
+     "cause": "Children are taught to be polite and accept gifts.",
+     "reveals": "Offer \"Take them and say thank you\" beside \"Say no, walk away and tell a trusted adult\" and ask the child to choose.",
+     "help": "Role-play saying \"No, thank you\" and walking to a trusted adult.",
+     "feedback": "Do not take things from strangers. Say no and tell a trusted adult.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_ROAD_PLAY",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+     "error": "Thinks a quiet road is a safe place to play.",
+     "example": {
+      "question": "Is a quiet road a good place to play?",
+      "wrong_answer": "Yes, there are no cars now",
+      "correct_answer": "No, a car or motorbike can come suddenly"
+     },
+     "cause": "The child sees the road empty and forgets it changes.",
+     "reveals": "Offer \"Yes, there are no cars now\" beside \"No, a car or motorbike can come suddenly\" and ask the child to choose.",
+     "help": "Show how fast a boda boda comes round a bend. Play only in safe places.",
+     "feedback": "Never play on the road. Cars and motorbikes can come quickly.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_RUN_CROSS",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+     "error": "Thinks running fast across the road is the safe way to cross.",
+     "example": {
+      "question": "How should you cross a road?",
+      "wrong_answer": "Run fast",
+      "correct_answer": "Stop, look both ways, and walk across when it is clear"
+     },
+     "cause": "Running feels like getting out of danger quickly.",
+     "reveals": "Offer \"Run fast\" beside \"Stop, look both ways, and walk across when it is clear\" and ask the child to choose.",
+     "help": "Practise on a chalk road: stop, look, listen, walk.",
+     "feedback": "Stop, look both ways and walk across when the road is clear.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY.M_E1_WAY_ALONE_LATE",
+     "skill": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+     "error": "Thinks it is fine to stop and play on the way home and arrive late.",
+     "example": {
+      "question": "After school, what should you do?",
+      "wrong_answer": "Play on the way and go home later",
+      "correct_answer": "Go straight home"
+     },
+     "cause": "Playing with friends is more fun than going home.",
+     "reveals": "Offer \"Play on the way and go home later\" beside \"Go straight home\" and ask the child to choose.",
+     "help": "Talk about parents worrying and dangers after dark. Agree: go straight home.",
+     "feedback": "Go straight home after school so your family knows you are safe.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.1.1"
    ]
@@ -379,8 +1109,216 @@
      "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+     "name": "Identify the roles of people found in a market",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.OUR_MARKET.a"
+     ],
+     "mastery": "Names people in a market and their roles: sellers (traders) sell goods, buyers buy, porters and handcart pullers carry goods, boda boda and lorry drivers transport goods, cleaners clean, market masters or county askaris keep order and collect fees, butchers sell meat. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "who is this person in the market",
+      "what does this person do",
+      "match person and job"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.HOME_PEOPLE_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming people and what they do. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Food bought in the market. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+     "name": "List food items found in a market and sort them into fruits and vegetables",
+     "outcomes": [
+      "ENVI.G1.SOCIAL.OUR_MARKET.b",
+      "ENVI.G1.SOCIAL.OUR_MARKET.c"
+     ],
+     "mastery": "Lists food items found in a local market (maize, beans, potatoes, tomatoes, onions, sukuma wiki, cabbage, bananas, mangoes, oranges, pawpaws, avocados, fish, meat, eggs) and sorts fruits (mangoes, oranges, bananas, pawpaws, pineapples, avocados, passion fruit) from vegetables (sukuma wiki, cabbage, spinach, carrots, onions, managu, terere). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "fruit or vegetable",
+      "name a food sold in the market",
+      "odd one out"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.FOODS_EATEN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming foods eaten at home. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SORT_THINGS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting things into groups. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Food from plants, which fruits and vegetables are. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_ONLY_SELLERS",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+     "error": "Thinks only sellers are found in a market.",
+     "example": {
+      "question": "Name a person in a market who is not a seller.",
+      "wrong_answer": "There is none",
+      "correct_answer": "A buyer (a porter, a cleaner)"
+     },
+     "cause": "Stalls and sellers are what the child notices most.",
+     "reveals": "Offer \"There is none\" beside \"A buyer (a porter, a cleaner)\" and ask the child to choose.",
+     "help": "Act out a market with sellers, buyers, porters and a cleaner.",
+     "feedback": "Many people work in a market: sellers, buyers, porters and cleaners.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_PORTER_BUYER",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+     "error": "Thinks a person carrying sacks is buying them.",
+     "example": {
+      "question": "A man carries sacks for a trader. What is his job?",
+      "wrong_answer": "He is buying the sacks",
+      "correct_answer": "He is a porter; he carries goods for others"
+     },
+     "cause": "Carrying goods looks like taking them home.",
+     "reveals": "Offer \"He is buying the sacks\" beside \"He is a porter; he carries goods for others\" and ask the child to choose.",
+     "help": "Show a porter being paid to carry. Name the job.",
+     "feedback": "A porter carries goods for other people and is paid for it.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_BUYER_PAY",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+     "error": "Thinks the seller pays the buyer.",
+     "example": {
+      "question": "Who gives the money when you buy tomatoes?",
+      "wrong_answer": "The seller",
+      "correct_answer": "The buyer"
+     },
+     "cause": "Children see change given back and think the seller pays.",
+     "reveals": "Offer \"The seller\" beside \"The buyer\" and ask the child to choose.",
+     "help": "Role-play with play money: the buyer pays, the seller gives the goods and change.",
+     "feedback": "The buyer pays money. The seller gives the goods.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE.M_E1_MKT_FREE_FOOD",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.MARKET_PEOPLE",
+     "error": "Thinks food in the market is free to take.",
+     "example": {
+      "question": "Can you take a banana from a market stall without paying?",
+      "wrong_answer": "Yes, it is there for everyone",
+      "correct_answer": "No, we must pay for it"
+     },
+     "cause": "Food at home is given without paying.",
+     "reveals": "Offer \"Yes, it is there for everyone\" beside \"No, we must pay for it\" and ask the child to choose.",
+     "help": "Role-play buying. Say: taking without paying is stealing.",
+     "feedback": "Food in the market belongs to the seller. We pay for it.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_FRUIT_SWEET_ONLY",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+     "error": "Thinks a food is a fruit only if it is sweet, so an avocado is a vegetable.",
+     "example": {
+      "question": "Is an avocado a fruit or a vegetable?",
+      "wrong_answer": "A vegetable, it is not sweet",
+      "correct_answer": "A fruit"
+     },
+     "cause": "The child sorts by taste.",
+     "reveals": "Offer \"A vegetable, it is not sweet\" beside \"A fruit\" and ask the child to choose.",
+     "help": "Cut an avocado and a mango: both have a seed inside and grow on trees. Call both fruits as the class chart does.",
+     "feedback": "An avocado is a fruit, even though it is not sweet.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_VEG_COOKED_ONLY",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+     "error": "Thinks a vegetable is anything cooked, so cooked bananas are vegetables and raw carrots are not.",
+     "example": {
+      "question": "Is a carrot a vegetable?",
+      "wrong_answer": "No, we can eat it raw",
+      "correct_answer": "Yes, a carrot is a vegetable"
+     },
+     "cause": "At home vegetables are cooked with ugali.",
+     "reveals": "Offer \"No, we can eat it raw\" beside \"Yes, a carrot is a vegetable\" and ask the child to choose.",
+     "help": "Show raw and cooked carrots. It is still a carrot, still a vegetable.",
+     "feedback": "A carrot is a vegetable, raw or cooked.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_MKT_FOOD_NOT_MEAT",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+     "error": "Thinks the market sells only fruits and vegetables, not meat, fish or eggs.",
+     "example": {
+      "question": "Name a food from an animal sold in the market.",
+      "wrong_answer": "There is none",
+      "correct_answer": "Fish (meat, eggs)"
+     },
+     "cause": "Stalls of fruits and vegetables are the most colourful.",
+     "reveals": "Offer \"There is none\" beside \"Fish (meat, eggs)\" and ask the child to choose.",
+     "help": "Show pictures of a butchery and a fish stall in a market.",
+     "feedback": "Markets also sell fish, meat and eggs.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG.M_E1_FRUIT_COLOUR",
+     "skill": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+     "error": "Sorts by colour, so green sukuma goes with green oranges as fruit.",
+     "example": {
+      "question": "Is sukuma wiki a fruit or a vegetable?",
+      "wrong_answer": "A fruit, it is green like an orange",
+      "correct_answer": "A vegetable"
+     },
+     "cause": "Colour is the first thing children sort by.",
+     "reveals": "Offer \"A fruit, it is green like an orange\" beside \"A vegetable\" and ask the child to choose.",
+     "help": "Sort by what part we eat: leaves are vegetables; sweet or seeded parts from trees are fruits.",
+     "feedback": "Sukuma wiki is a vegetable. We eat its leaves.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.1.1"
    ]
@@ -451,8 +1389,217 @@
      "indicator": "ENVI.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+     "name": "Describe the appearance of the sky during the day and at night",
+     "outcomes": [
+      "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a"
+     ],
+     "mastery": "Describes the day sky (bright, blue or cloudy, the sun, clouds, birds, sometimes the moon) and the night sky (dark, the moon, stars, sometimes clouds), and knows the sun is not seen at night and stars are too faint to see in the day. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception.",
+     "question_forms": [
+      "day or night sky",
+      "what do we see in the sky now",
+      "which is seen at night"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.WEATHER_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Simple words for what the sky and weather are like. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SENSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Observing by looking. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+     "name": "Identify weather conditions in the locality",
+     "outcomes": [
+      "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.b"
+     ],
+     "mastery": "Identifies weather conditions (sunny, rainy, cloudy, windy, hot, cold) from the sky, pictures and symbols, and says what people do or wear in each (an umbrella for rain, a sweater for cold, a hat for sun). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.2.1), never as a phone question: c) record different weather conditions in the locality.",
+     "question_forms": [
+      "what is the weather in the picture",
+      "match weather to symbol",
+      "what do we wear"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Looking at the sky comes before naming the weather. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.WEATHER_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Weather words from pre-primary. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.c"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_SUN_NIGHT",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+     "error": "Thinks the sun can be seen at night.",
+     "example": {
+      "question": "Can we see the sun at night?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, at night we see the moon and stars"
+     },
+     "cause": "The child mixes the sun and the moon, both round and bright.",
+     "reveals": "Offer \"Yes\" beside \"No, at night we see the moon and stars\" and ask the child to choose.",
+     "help": "Draw a day sky and a night sky side by side. Put the sun only in the day sky.",
+     "feedback": "We see the sun in the day. At night we see the moon and stars.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_STARS_GONE",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+     "error": "Thinks the stars go away in the day.",
+     "example": {
+      "question": "Where are the stars during the day?",
+      "wrong_answer": "They go away",
+      "correct_answer": "They are still there, but the sun is too bright for us to see them"
+     },
+     "cause": "What cannot be seen seems to be gone.",
+     "reveals": "Offer \"They go away\" beside \"They are still there, but the sun is too bright for us to see them\" and ask the child to choose.",
+     "help": "Shine a small torch in a bright room and a dark room. Seen only in the dark.",
+     "feedback": "The stars are still there in the day. The sunlight is too bright for us to see them.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_MOON_DAY",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+     "error": "Thinks the moon is never seen during the day.",
+     "example": {
+      "question": "Can you sometimes see the moon in the day?",
+      "wrong_answer": "No, never",
+      "correct_answer": "Yes, sometimes"
+     },
+     "cause": "The moon is taught as the night object.",
+     "reveals": "Offer \"No, never\" beside \"Yes, sometimes\" and ask the child to choose.",
+     "help": "Look out on a morning when the moon shows, or show a photo of a day moon.",
+     "feedback": "Sometimes we can see the moon in the day sky.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY.M_E1_SKY_CLOUDS_NIGHT",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+     "error": "Thinks there are no clouds at night.",
+     "example": {
+      "question": "Can there be clouds at night?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes, clouds can cover the moon and stars"
+     },
+     "cause": "Clouds are hard to see in the dark.",
+     "reveals": "Offer \"No\" beside \"Yes, clouds can cover the moon and stars\" and ask the child to choose.",
+     "help": "Talk about a night when the moon was hidden. Clouds covered it.",
+     "feedback": "Clouds can be in the sky at night too. They hide the moon and stars.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_CLOUD_RAIN",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+     "error": "Thinks a cloudy day is the same as a rainy day.",
+     "example": {
+      "question": "The sky is full of grey clouds but no rain falls. What is the weather?",
+      "wrong_answer": "Rainy",
+      "correct_answer": "Cloudy"
+     },
+     "cause": "Clouds and rain often come together.",
+     "reveals": "Offer \"Rainy\" beside \"Cloudy\" and ask the child to choose.",
+     "help": "Show two pictures: clouds only, clouds with rain falling. Name each.",
+     "feedback": "If there are clouds but no rain, it is cloudy.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_WIND_SEE",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+     "error": "Thinks wind cannot be a weather condition because it cannot be seen.",
+     "example": {
+      "question": "How do you know it is windy?",
+      "wrong_answer": "You cannot know",
+      "correct_answer": "Trees move, leaves blow and clothes on the line wave"
+     },
+     "cause": "Weather words the child knows are things seen.",
+     "reveals": "Offer \"You cannot know\" beside \"Trees move, leaves blow and clothes on the line wave\" and ask the child to choose.",
+     "help": "Take a paper streamer outside. Watch it move.",
+     "feedback": "We know it is windy when trees and clothes move.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_SUN_HOT",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+     "error": "Thinks a sunny day is always hot, and a cold day cannot be sunny.",
+     "example": {
+      "question": "Can a sunny morning be cold?",
+      "wrong_answer": "No, sun is always hot",
+      "correct_answer": "Yes, some sunny mornings are cold"
+     },
+     "cause": "Sunny and hot are taught together.",
+     "reveals": "Offer \"No, sun is always hot\" beside \"Yes, some sunny mornings are cold\" and ask the child to choose.",
+     "help": "Talk about a cold, bright morning in July. Feel the air.",
+     "feedback": "A day can be sunny and still cold, like some mornings.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS.M_E1_WEA_CLOTHES",
+     "skill": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.WEATHER_KINDS",
+     "error": "Picks the wrong clothing for the weather (a sweater on a hot day).",
+     "example": {
+      "question": "It is very hot. What should you wear?",
+      "wrong_answer": "A thick sweater",
+      "correct_answer": "Light clothes and a hat"
+     },
+     "cause": "The child picks favourite clothes, not weather clothes.",
+     "reveals": "Offer \"A thick sweater\" beside \"Light clothes and a hat\" and ask the child to choose.",
+     "help": "Dress a paper doll for each weather card.",
+     "feedback": "On a hot day wear light clothes and a hat.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.2.1"
    ]
@@ -521,8 +1668,119 @@
      "indicator": "ENVI.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+     "name": "Identify ways of playing with soil for enjoyment and safely",
+     "outcomes": [
+      "ENVI.G1.NATURA.SOIL.a"
+     ],
+     "mastery": "Names ways of playing with soil (filling and emptying cans, building sand castles, modelling pots, animals and balls, drawing in the soil, painting with soil mixed with water, making mud patterns) and the safe rules: never eat soil, keep it away from eyes, wash hands after playing. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.2.1), never as a phone question: b) play with soil for enjoyment; c) model objects using soil at school.",
+     "question_forms": [
+      "which is a way of playing with soil",
+      "what can we make",
+      "what to do after playing"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SENSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Touching and feeling things. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SELF_CARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Washing hands after play. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.NATURA.SOIL.b",
+       "ENVI.G1.NATURA.SOIL.c"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_DIRTY_BAD",
+     "skill": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+     "error": "Thinks playing with soil is always bad because it makes one dirty.",
+     "example": {
+      "question": "Is it good to play with soil?",
+      "wrong_answer": "No, it makes us dirty",
+      "correct_answer": "Yes, it is fun, and we wash our hands after"
+     },
+     "cause": "Children are scolded for getting dirty.",
+     "reveals": "Offer \"No, it makes us dirty\" beside \"Yes, it is fun, and we wash our hands after\" and ask the child to choose.",
+     "help": "Play with soil in class, then wash hands together. Say: play, then wash.",
+     "feedback": "Playing with soil is fun. We wash our hands after playing.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_EAT",
+     "skill": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+     "error": "Thinks tasting soil is part of playing.",
+     "example": {
+      "question": "Can we eat soil while playing?",
+      "wrong_answer": "Yes, a little",
+      "correct_answer": "No, never eat soil"
+     },
+     "cause": "Young children put things in their mouths.",
+     "reveals": "Offer \"Yes, a little\" beside \"No, never eat soil\" and ask the child to choose.",
+     "help": "Show a picture of germs and worms in soil. Rule: soil never goes in the mouth.",
+     "feedback": "Never eat soil. It can have germs and worms.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_WASH_NONE",
+     "skill": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+     "error": "Thinks hands need no washing if the soil was dry.",
+     "example": {
+      "question": "You played with dry soil. Should you wash your hands?",
+      "wrong_answer": "No, it was dry",
+      "correct_answer": "Yes, always wash with soap"
+     },
+     "cause": "Dry soil falls off, so hands look clean.",
+     "reveals": "Offer \"No, it was dry\" beside \"Yes, always wash with soap\" and ask the child to choose.",
+     "help": "Rub hands after dry soil play on white paper. See the dust.",
+     "feedback": "Always wash your hands with soap after playing with soil.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_THROW",
+     "skill": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+     "error": "Thinks throwing soil at friends is a fun way to play.",
+     "example": {
+      "question": "Is throwing soil at a friend a good way to play?",
+      "wrong_answer": "Yes, it is fun",
+      "correct_answer": "No, it can hurt their eyes"
+     },
+     "cause": "Throwing is part of many games.",
+     "reveals": "Offer \"Yes, it is fun\" beside \"No, it can hurt their eyes\" and ask the child to choose.",
+     "help": "Talk about soil in the eyes. Agree games where soil stays on the ground.",
+     "feedback": "Do not throw soil. It can hurt someone's eyes.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.2.1"
    ]
@@ -597,8 +1855,119 @@
      "indicator": "ENVI.G1.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS",
+     "name": "Identify sounds in the environment and tell sounds that warn of danger",
+     "outcomes": [
+      "ENVI.G1.NATURA.SOUND.a",
+      "ENVI.G1.NATURA.SOUND.c"
+     ],
+     "mastery": "Identifies sounds from people (talking, singing, clapping), animals (a cow mooing, a dog barking, a cock crowing), machines (a car, a motorbike, a grinding mill) and nature (rain, thunder, wind), and tells sounds that warn of danger (a hooting car, a siren, a fire alarm or bell, a shout for help, a dog growling, thunder) and what to do: stop, move away, tell an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.2.1), never as a phone question: b) create sounds from objects for enjoyment.",
+     "question_forms": [
+      "what made this sound",
+      "is this a danger sound",
+      "what do you do when you hear it"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SENSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Listening with the ears. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.ANIMALS_AROUND",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming animals and their sounds. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.NATURA.SOUND.b"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_LOUD_DANGER",
+     "skill": "ENVI.G1.NATURA.SOUND.SOUNDS",
+     "error": "Thinks every loud sound is a danger sound, and soft sounds are always safe.",
+     "example": {
+      "question": "Is a loud song at a party a danger sound?",
+      "wrong_answer": "Yes, it is loud",
+      "correct_answer": "No, a hooting car or a fire alarm warns of danger"
+     },
+     "cause": "Loud sounds are frightening, so they seem dangerous.",
+     "reveals": "Offer \"Yes, it is loud\" beside \"No, a hooting car or a fire alarm warns of danger\" and ask the child to choose.",
+     "help": "Play a loud song and a car hoot. Ask which one tells us to move.",
+     "feedback": "A danger sound tells us to take care, like a car hooting. Not every loud sound is danger.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_HOOT_IGNORE",
+     "skill": "ENVI.G1.NATURA.SOUND.SOUNDS",
+     "error": "Thinks a car hooting is just noise and keeps walking on the road.",
+     "example": {
+      "question": "You hear a car hooting behind you on the road. What do you do?",
+      "wrong_answer": "Keep walking in the road",
+      "correct_answer": "Move to the side of the road at once"
+     },
+     "cause": "Hooting is heard so often it seems to mean nothing.",
+     "reveals": "Offer \"Keep walking in the road\" beside \"Move to the side of the road at once\" and ask the child to choose.",
+     "help": "Play the sound and practise stepping to the side.",
+     "feedback": "When a car hoots, move to the side of the road at once.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_ANIMAL_MIX",
+     "skill": "ENVI.G1.NATURA.SOUND.SOUNDS",
+     "error": "Matches a sound to the wrong animal (a goat for a cow's moo).",
+     "example": {
+      "question": "Which animal says \"moo\"?",
+      "wrong_answer": "A goat",
+      "correct_answer": "A cow"
+     },
+     "cause": "Farm animals are learnt together.",
+     "reveals": "Offer \"A goat\" beside \"A cow\" and ask the child to choose.",
+     "help": "Play animal sounds and match to pictures.",
+     "feedback": "A cow says moo. A goat bleats.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOUND.SOUNDS.M_E1_SND_ALARM_HIDE",
+     "skill": "ENVI.G1.NATURA.SOUND.SOUNDS",
+     "error": "Thinks the right thing at a fire alarm is to hide under the desk.",
+     "example": {
+      "question": "The school fire bell rings. What do you do?",
+      "wrong_answer": "Hide under the desk",
+      "correct_answer": "Leave the class calmly with the teacher to the assembly point"
+     },
+     "cause": "Hiding feels safe when frightened.",
+     "reveals": "Offer \"Hide under the desk\" beside \"Leave the class calmly with the teacher to the assembly point\" and ask the child to choose.",
+     "help": "Hold a fire drill. Walk out in a line to the assembly point.",
+     "feedback": "When the fire bell rings, walk out calmly with your teacher.",
+     "source": "To confirm by a CBC Environmental Activities teacher (SAFE: child-safety content, read first): a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.2.1"
    ]
@@ -670,8 +2039,119 @@
      "indicator": "ENVI.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+     "name": "Identify sources of water and record uses of water at home and school",
+     "outcomes": [
+      "ENVI.G1.RESOUR.WATER.a",
+      "ENVI.G1.RESOUR.WATER.b"
+     ],
+     "mastery": "Identifies sources of water in the immediate environment (rain, rivers, lakes, wells, boreholes, springs, taps, dams, tanks) and records uses at home and school (drinking, cooking, washing, bathing, cleaning, watering plants, giving animals, flushing toilets). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.3.1), never as a phone question: c) conserve water at home and school.",
+     "question_forms": [
+      "where does this water come from",
+      "what is water used for",
+      "match source and use"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SENSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Seeing, touching and noticing water around us. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.BODY_CLEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Water is used to wash the body. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.RESOUR.WATER.c"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_TAP_SOURCE",
+     "skill": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+     "error": "Thinks water is made in the tap.",
+     "example": {
+      "question": "Where does tap water come from?",
+      "wrong_answer": "The tap makes it",
+      "correct_answer": "From a river, borehole or tank through pipes"
+     },
+     "cause": "The tap is where water is seen to appear.",
+     "reveals": "Offer \"The tap makes it\" beside \"From a river, borehole or tank through pipes\" and ask the child to choose.",
+     "help": "Follow a pipe from the tap to a tank in the school.",
+     "feedback": "The tap does not make water. Water comes through pipes from a tank, river or borehole.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_RAIN_NONE",
+     "skill": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+     "error": "Does not see rain as a source of water.",
+     "example": {
+      "question": "Is rain a source of water?",
+      "wrong_answer": "No, rain just falls",
+      "correct_answer": "Yes, we can collect rain in tanks and pots"
+     },
+     "cause": "Rain is weather, not a water supply, to the child.",
+     "reveals": "Offer \"No, rain just falls\" beside \"Yes, we can collect rain in tanks and pots\" and ask the child to choose.",
+     "help": "Put a bucket under the roof when it rains. See the water collected.",
+     "feedback": "Rain is a source of water. We can collect it from roofs.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_USE_DRINK",
+     "skill": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+     "error": "Names drinking as the only use of water.",
+     "example": {
+      "question": "Name another use of water apart from drinking.",
+      "wrong_answer": "There is none",
+      "correct_answer": "Cooking (washing, bathing, cleaning)"
+     },
+     "cause": "Drinking is the use the child feels most.",
+     "reveals": "Offer \"There is none\" beside \"Cooking (washing, bathing, cleaning)\" and ask the child to choose.",
+     "help": "List with the class everything water did for them today.",
+     "feedback": "We use water for drinking, cooking, washing, bathing and cleaning.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.WATER.WATER_SOURCES.M_E1_WAT_SEA_ALL",
+     "skill": "ENVI.G1.RESOUR.WATER.WATER_SOURCES",
+     "error": "Thinks all water sources are big like rivers and lakes, missing wells and springs.",
+     "example": {
+      "question": "Is a well a source of water?",
+      "wrong_answer": "No, sources are rivers and lakes",
+      "correct_answer": "Yes"
+     },
+     "cause": "Big water bodies are shown in books.",
+     "reveals": "Offer \"No, sources are rivers and lakes\" beside \"Yes\" and ask the child to choose.",
+     "help": "Show a picture of a well and a spring near a village.",
+     "feedback": "A well and a spring are sources of water too.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.3.1"
    ]
@@ -746,8 +2226,119 @@
      "indicator": "ENVI.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+     "name": "Identify the parts of a plant found in the school garden",
+     "outcomes": [
+      "ENVI.G1.RESOUR.PLANTS.a"
+     ],
+     "mastery": "Names and points to the parts of a plant: roots (under the soil), stem, leaves, flowers, and sometimes fruits and seeds, on real plants and pictures; knows the roots are hidden under the soil. Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.3.1), never as a phone question: b) draw different parts of a plant found at school; c) carry out activities that conserve plants in the immediate environment.",
+     "question_forms": [
+      "name the part",
+      "point to the part",
+      "which part is under the soil"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.SORT_THINGS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting plants from animals and objects. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SENSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Looking closely at a plant. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.RESOUR.PLANTS.b",
+       "ENVI.G1.RESOUR.PLANTS.c"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_ROOTS_NONE",
+     "skill": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+     "error": "Thinks a plant has no roots because they cannot be seen.",
+     "example": {
+      "question": "Does a plant have roots?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes, under the soil"
+     },
+     "cause": "Children name only what they see above the ground.",
+     "reveals": "Offer \"No\" beside \"Yes, under the soil\" and ask the child to choose.",
+     "help": "Gently pull up a weed. Show the roots.",
+     "feedback": "Plants have roots under the soil.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_STEM_ROOT",
+     "skill": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+     "error": "Calls the stem the root because it goes into the soil.",
+     "example": {
+      "question": "What is the part that holds up the leaves called?",
+      "wrong_answer": "The root",
+      "correct_answer": "The stem"
+     },
+     "cause": "The stem touches the soil, so it seems to be the root.",
+     "reveals": "Offer \"The root\" beside \"The stem\" and ask the child to choose.",
+     "help": "Use a pulled-up plant: green stem above, roots below.",
+     "feedback": "The stem holds up the leaves. The roots are under the soil.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_FLOWER_ALL",
+     "skill": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+     "error": "Thinks a plant without flowers now is not a plant.",
+     "example": {
+      "question": "Grass has no flowers today. Is grass a plant?",
+      "wrong_answer": "No, it has no flowers",
+      "correct_answer": "Yes, it has roots, a stem and leaves"
+     },
+     "cause": "Plants in songs and pictures always have flowers.",
+     "reveals": "Offer \"No, it has no flowers\" beside \"Yes, it has roots, a stem and leaves\" and ask the child to choose.",
+     "help": "Walk and find plants with and without flowers.",
+     "feedback": "A plant can be a plant without flowers today.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS.M_E1_PART_TREE_NOT",
+     "skill": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+     "error": "Thinks a tree is not a plant because it is too big.",
+     "example": {
+      "question": "Is a mango tree a plant?",
+      "wrong_answer": "No, it is a tree",
+      "correct_answer": "Yes, a tree is a big plant"
+     },
+     "cause": "Plant is the word for small garden plants.",
+     "reveals": "Offer \"No, it is a tree\" beside \"Yes, a tree is a big plant\" and ask the child to choose.",
+     "help": "Compare a bean plant and a tree: both have roots, stem, leaves.",
+     "feedback": "A tree is a big plant. Its trunk is its stem.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.3.1"
    ]
@@ -820,8 +2411,119 @@
      "indicator": "ENVI.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+     "name": "Identify domestic animals and those used as food in the locality",
+     "outcomes": [
+      "ENVI.G1.RESOUR.ANIMALS.a",
+      "ENVI.G1.RESOUR.ANIMALS.b"
+     ],
+     "mastery": "Identifies domestic animals (cows, goats, sheep, hens, ducks, rabbits, pigs, donkeys, dogs, cats, camels) and tells them from wild animals (lions, elephants, zebras), and lists domestic animals used as food in the locality (cows, goats, sheep, hens, rabbits, ducks, fish from ponds). Evidence rule: at least four of the last five fresh questions right across at least two question forms (read aloud to the child, with pictures), and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (ENVI.G1.RUBRIC.3.1), never as a phone question: c) carry out basic care activities for small domestic animals.",
+     "question_forms": [
+      "domestic or wild",
+      "which animal do we eat",
+      "odd one out"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.PP2.READINESS.ANIMALS_AROUND",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming animals at home and nearby. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.PP2.READINESS.SORT_THINGS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting animals into groups. Proposed, to confirm by a CBC Environmental Activities teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "ENVI.G1.RESOUR.ANIMALS.c"
+      ],
+      "indicators": [
+       "ENVI.G1.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_WILD_ZOO",
+     "skill": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+     "error": "Thinks a zebra or lion is domestic because people go to see it in a park.",
+     "example": {
+      "question": "Is a zebra a domestic animal?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is a wild animal"
+     },
+     "cause": "Animals seen near people at parks seem tame.",
+     "reveals": "Offer \"Yes\" beside \"No, it is a wild animal\" and ask the child to choose.",
+     "help": "Sort pictures: animals kept at home and animals living in the wild.",
+     "feedback": "A zebra is a wild animal. Domestic animals are kept at home.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_DOG_FOOD",
+     "skill": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+     "error": "Lists a dog or a cat as an animal used as food.",
+     "example": {
+      "question": "Which animal is kept as food: a hen or a dog?",
+      "wrong_answer": "A dog",
+      "correct_answer": "A hen"
+     },
+     "cause": "All home animals are grouped together.",
+     "reveals": "Offer \"A dog\" beside \"A hen\" and ask the child to choose.",
+     "help": "Ask what each home animal gives us. Dogs guard; hens give eggs and meat.",
+     "feedback": "Hens are kept for food. Dogs guard the home.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_BIRD_NOT",
+     "skill": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+     "error": "Thinks hens and ducks are not animals because they are birds.",
+     "example": {
+      "question": "Is a hen an animal?",
+      "wrong_answer": "No, it is a bird",
+      "correct_answer": "Yes, a hen is a domestic animal (a bird)"
+     },
+     "cause": "Animal is used at home for four-legged animals.",
+     "reveals": "Offer \"No, it is a bird\" beside \"Yes, a hen is a domestic animal (a bird)\" and ask the child to choose.",
+     "help": "Show that birds are animals too: they move, eat and breathe.",
+     "feedback": "A hen is an animal. Birds are animals too.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC.M_E1_DOM_ALL_FOOD",
+     "skill": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+     "error": "Thinks every domestic animal is kept for food.",
+     "example": {
+      "question": "Is a donkey kept for food in most homes?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, a donkey carries loads"
+     },
+     "cause": "Talk of animals at home is mostly about meat and milk.",
+     "reveals": "Offer \"Yes\" beside \"No, a donkey carries loads\" and ask the child to choose.",
+     "help": "Make a chart: animal and what it does for us.",
+     "feedback": "Some animals are kept for food. Others help us, like a donkey that carries loads.",
+     "source": "To confirm by a CBC Environmental Activities teacher: a common error of young children, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENVI.G1.RUBRIC.3.1"
    ]
@@ -904,6 +2606,62 @@
      "status": "kicd_read"
     }
    ]
+  }
+ ],
+ "readiness": [
+  {
+   "code": "ENVI.PP2.READINESS.SELF_CARE",
+   "name": "Basic self-care",
+   "what": "Washes hands with help, uses the toilet, wipes the nose and says when he or she is dirty.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.BODY_PARTS",
+   "name": "Name the main body parts",
+   "what": "Names and points to the head, face, eyes, ears, nose, mouth, teeth, hands, feet and hair.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.HOME_PEOPLE_PLACES",
+   "name": "Name people and things at home",
+   "what": "Names family members, rooms and common things at home and says what some of them are used for.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.SENSES",
+   "name": "Explore with the senses",
+   "what": "Uses seeing, hearing, touching, smelling and tasting (only with an adult's say) to tell things apart.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.SORT_THINGS",
+   "name": "Sort things into groups",
+   "what": "Puts things into groups by kind (plants, animals, objects) or by colour and size.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.WEATHER_WORDS",
+   "name": "Use simple weather words",
+   "what": "Says whether it is sunny, rainy, hot, cold or windy today.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.SAFETY_RULES",
+   "name": "Know simple safety rules",
+   "what": "Keeps away from fire, hot water, sharp objects and roads, and tells an adult when hurt or afraid.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.FOODS_EATEN",
+   "name": "Name foods eaten at home",
+   "what": "Names foods and drinks eaten at home and says some come from plants and some from animals.",
+   "status": "proposed"
+  },
+  {
+   "code": "ENVI.PP2.READINESS.ANIMALS_AROUND",
+   "name": "Name common animals and their sounds",
+   "what": "Names animals seen at home and nearby (cow, goat, hen, dog, cat) and makes their sounds.",
+   "status": "proposed"
   }
  ]
 }

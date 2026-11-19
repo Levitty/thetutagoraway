@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENVI.G1.NATURA.SOIL",
+ "title": "Soil",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.NATURA.SOIL.SOIL_PLAY",
+   "key_step": "The child names ways of playing with soil and the safe rules: never eat it or throw it, wash hands after.",
+   "floor": {
+    "prerequisite": "Explores by touching.",
+    "question": "Is this stone rough or smooth?",
+    "answer": "Rough (smooth)"
+   },
+   "representations": [
+    "soil, water, cans and spoons",
+    "pictures of soil play",
+    "a hand-washing station"
+   ],
+   "steps": [
+    "Name ways to play with soil.",
+    "Play: fill, empty, model.",
+    "Say the safety rules.",
+    "Wash hands."
+   ],
+   "contexts": [
+    "the sand corner",
+    "making mud balls after rain",
+    "a potter's yard"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child filling a can with soil."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child's hands.",
+     "say": "What must she do after playing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say wash her hands."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: play, then wash."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_DIRTY_BAD",
+     "listen_for": [
+      "No, it makes us dirty"
+     ],
+     "ask": "Is it good to play with soil?",
+     "repair": "Play with soil in class, then wash hands together. Say: play, then wash."
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_EAT",
+     "listen_for": [
+      "Yes, a little"
+     ],
+     "ask": "Can we eat soil while playing?",
+     "repair": "Show a picture of germs and worms in soil. Rule: soil never goes in the mouth."
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_WASH_NONE",
+     "listen_for": [
+      "No, it was dry"
+     ],
+     "ask": "You played with dry soil. Should you wash your hands?",
+     "repair": "Rub hands after dry soil play on white paper. See the dust."
+    },
+    {
+     "code": "ENVI.G1.NATURA.SOIL.SOIL_PLAY.M_E1_SOIL_THROW",
+     "listen_for": [
+      "Yes, it is fun"
+     ],
+     "ask": "Is throwing soil at a friend a good way to play?",
+     "repair": "Talk about soil in the eyes. Agree games where soil stays on the ground."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one way to play with soil.",
+     "answer": "Fill and empty cans (model, draw in it)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Can we eat soil?",
+     "answer": "No",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G1.SOCIAL.OUR_HOME",
+ "title": "Our Home",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Accidents are taught with the safe action first: keep away from fire, hot water, medicines and sharp tools; tell an adult (SAFE).",
+ "skills": [
+  {
+   "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+   "key_step": "The child names materials used to clean a home and says what each is for.",
+   "floor": {
+    "prerequisite": "Names things at home.",
+    "question": "Name one room in a home.",
+    "answer": "A kitchen (sitting room, bedroom)"
+   },
+   "representations": [
+    "a broom, dustpan, duster, cloth and mop",
+    "pictures of cleaning jobs",
+    "a play corner"
+   ],
+   "steps": [
+    "Name each cleaning tool.",
+    "Say what job it does.",
+    "Act out the job.",
+    "Say how children can help."
+   ],
+   "contexts": [
+    "sweeping the house in the morning",
+    "cleaning up after a meal",
+    "raking the compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a broom, a cloth and a dustpan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dustpan.",
+     "say": "What is this used for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say collecting litter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a line from each tool to its job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_BROOM_WIPE",
+     "listen_for": [
+      "A broom"
+     ],
+     "ask": "What do we use to wipe a table?",
+     "repair": "Act out each job with the right tool: sweep with a broom, wipe with a cloth."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_LITTER_CORNER",
+     "listen_for": [
+      "In a corner"
+     ],
+     "ask": "Where does swept litter go?",
+     "repair": "Sweep, collect with a dustpan, put it in the bin. Say all three steps."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_MOP_DRY",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What do we put on a mop to clean the floor?",
+     "repair": "Show a mop dipped in a bucket of water."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING.M_E1_HOME_ADULT_ONLY",
+     "listen_for": [
+      "Only mother"
+     ],
+     "ask": "Who can help keep the home clean?",
+     "repair": "List small jobs a six-year-old can do: pick litter, wipe a table, arrange shoes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do we sweep with?",
+     "answer": "A broom",
+     "shows": "materials"
+    },
+    {
+     "question": "What do we dust with?",
+     "answer": "A duster (cloth)",
+     "shows": "materials"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+   "key_step": "The child states common accidents at home (burns, cuts, falls, poisoning, shocks) and the safe action: keep away and tell an adult.",
+   "floor": {
+    "prerequisite": "Knows simple safety rules.",
+    "question": "Should you play near a fire?",
+    "answer": "No"
+   },
+   "representations": [
+    "pictures of a home with dangers marked",
+    "safe and unsafe cards",
+    "a \"tell an adult\" song"
+   ],
+   "steps": [
+    "Find the dangers in the picture.",
+    "Say what accident could happen.",
+    "Say the safe action.",
+    "Practise telling an adult."
+   ],
+   "contexts": [
+    "the kitchen at supper time",
+    "medicines on a shelf",
+    "a wet bathroom floor"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a kitchen with a jiko, a knife and a medicine bottle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the medicine.",
+     "say": "What should you do if you find this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say do not touch, tell an adult."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark each danger with a red cross."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_MEDICINE_SWEET",
+     "listen_for": [
+      "Eat them, they look like sweets"
+     ],
+     "ask": "You find coloured tablets on the table. What do you do?",
+     "repair": "Show a medicine bottle and sweets. Rule: only take medicine from a parent or nurse."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_PARAFFIN_WATER",
+     "listen_for": [
+      "Yes, it is water"
+     ],
+     "ask": "There is a soda bottle with a clear liquid on the floor. Can you drink it?",
+     "repair": "Smell (from a distance, adult-held) paraffin in a bottle. Rule: never drink from an unknown bottle."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_JIKO_TOUCH",
+     "listen_for": [
+      "Yes, the fire is out"
+     ],
+     "ask": "The jiko has no flames. Is it safe to touch?",
+     "repair": "Hold a hand near (not on) a jiko after cooking with an adult. Feel the heat."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS.M_E1_ACC_SOCKET_PLAY",
+     "listen_for": [
+      "Yes, it is fun"
+     ],
+     "ask": "Is it safe to put a pin in a socket?",
+     "repair": "Show a socket picture with a red cross. Electricity can hurt badly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an accident that can happen in the kitchen.",
+     "answer": "Burns (cuts)",
+     "shows": "states accidents"
+    },
+    {
+     "question": "You find tablets on the floor. What do you do?",
+     "answer": "Tell an adult",
+     "shows": "safe action"
+    }
+   ]
+  }
+ ]
+}

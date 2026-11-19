@@ -107,8 +107,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_CLEANING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Cleaning materials for a home come before cleaning a sleeping area. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -291,8 +291,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Basic needs of a family, which emotional needs add to. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -569,15 +569,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Food from plants and animals comes before the three food groups. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Sorting fruits and vegetables: the protective group. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -761,15 +761,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Personal safety on the way to school. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_HOME.b",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.HOME_ACCIDENTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Common accidents at home. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -803,8 +803,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.WAY_SAFETY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Safety on the way to school, where roads are crossed. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1563,8 +1563,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The sun seen in the sky by day. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1931,8 +1931,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.RESOUR.PLANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G1.RESOUR.PLANTS.PLANT_PARTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Parts of a plant: thorns are on stems, berries are fruits. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"
@@ -1973,8 +1973,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.c",
-       "kind": "outcome",
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.FRUIT_VEG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Fruits and vegetables sold at the market are edible plants. Proposed, to confirm by a CBC Environmental Activities teacher.",
        "status": "proposed"

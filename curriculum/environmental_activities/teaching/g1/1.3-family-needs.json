@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENVI.G1.SOCIAL.FAMILY_NEEDS",
+ "title": "Family Needs",
+ "status": "draft: written 19 Nov 2026 offline for Grade 1 Environmental Activities; not yet checked by a CBC Environmental Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS",
+   "key_step": "The child names the basic needs of a family (food, water, clothing, shelter) and sorts items into them.",
+   "floor": {
+    "prerequisite": "Sorts things into groups.",
+    "question": "Put the red blocks together. Which group is this?",
+    "answer": "The red blocks"
+   },
+   "representations": [
+    "pictures of food, clothes, shelters, toys",
+    "three baskets with picture labels",
+    "a family picture"
+   ],
+   "steps": [
+    "Name what a family needs.",
+    "Sort pictures into food, clothing and shelter.",
+    "Find the pictures that are not needs.",
+    "Say why."
+   ],
+   "contexts": [
+    "a family at supper",
+    "a house in the rain",
+    "buying school uniform"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a house, a shirt, a plate of food and a ball."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ball.",
+     "say": "Is this a basic need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the basic needs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_TOY",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a toy car a basic need?",
+     "repair": "Ask: could we live without it? Sort pictures into \"we must have\" and \"nice to have\"."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_HOUSE_SHAPE",
+     "listen_for": [
+      "No, a shelter is a stone house"
+     ],
+     "ask": "Is a grass-thatched hut a shelter?",
+     "repair": "Show many shelters: a hut, a manyatta, a flat, a tent. Ask what each does."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_WATER_FOOD",
+     "listen_for": [
+      "Soda"
+     ],
+     "ask": "Name a basic need we drink.",
+     "repair": "Talk about a hot day with no water. Add water to the needs chart."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.BASIC_NEEDS.M_E1_NEED_SHOES_FOOD",
+     "listen_for": [
+      "Food"
+     ],
+     "ask": "Which group does a shirt go in: food, clothing or shelter?",
+     "repair": "Use three baskets with picture labels: a plate, a shirt, a house."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a basic need.",
+     "answer": "Food (water, clothes, shelter)",
+     "shows": "identifies"
+    },
+    {
+     "question": "Is a house food, clothing or shelter?",
+     "answer": "Shelter",
+     "shows": "classifies"
+    }
+   ]
+  },
+  {
+   "skill": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+   "key_step": "The child sorts food eaten at home into food from plants and food from animals and picks healthy food.",
+   "floor": {
+    "prerequisite": "Names foods eaten at home.",
+    "question": "Name a food you eat at home.",
+    "answer": "Ugali (beans, rice)"
+   },
+   "representations": [
+    "real foods or pictures",
+    "two baskets: a plant and an animal picture",
+    "healthy and unhealthy plates"
+   ],
+   "steps": [
+    "Name foods eaten at home.",
+    "Sort them: from plants or from animals.",
+    "Pick a healthy plate.",
+    "Say why."
+   ],
+   "contexts": [
+    "school lunch",
+    "breakfast at home",
+    "a shop with sweets and fruits"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an egg, a mango, a cup of milk and a maize cob."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the egg.",
+     "say": "From a plant or an animal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say an animal, a hen."
+    },
+    {
+     "beat": "reveal",
+     "do": "Put each food under a plant or an animal picture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_EGG_PLANT",
+     "listen_for": [
+      "A plant"
+     ],
+     "ask": "Does milk come from a plant or an animal?",
+     "repair": "Show pictures: a cow and milk, a hen and an egg, a maize plant and flour."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_BREAD_ANIMAL",
+     "listen_for": [
+      "An animal"
+     ],
+     "ask": "Does a chapati come from a plant or an animal?",
+     "repair": "Show wheat grains, flour and a chapati in order."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_SWEET_HEALTHY",
+     "listen_for": [
+      "A soda"
+     ],
+     "ask": "Which is better for a healthy body: an orange or a soda?",
+     "repair": "Show a tooth picture and a strong body picture. Fruit helps the body; too much sugar harms teeth."
+    },
+    {
+     "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES.M_E1_FOOD_BIG_HEALTHY",
+     "listen_for": [
+      "The big plate of chips"
+     ],
+     "ask": "Which is healthier: a big plate of chips or a plate of githeri with sukuma?",
+     "repair": "Compare the two plates: count the kinds of food. Different foods keep us healthy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does a mango come from a plant or an animal?",
+     "answer": "A plant",
+     "shows": "categorises"
+    },
+    {
+     "question": "Which is healthier: fruit or sweets?",
+     "answer": "Fruit",
+     "shows": "selects"
+    }
+   ]
+  }
+ ]
+}
