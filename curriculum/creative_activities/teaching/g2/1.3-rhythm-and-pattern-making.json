@@ -1,0 +1,272 @@
+{
+ "sub_strand": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+ "title": "Rhythm and Pattern Making",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clap names and words from the classroom. Print with cut potatoes, bottle tops and card shapes.",
+ "skills": [
+  {
+   "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS",
+   "key_step": "The child names the ways of making rhythm: reciting, clapping, tapping, stamping and humming.",
+   "floor": {
+    "prerequisite": "Keeps a steady beat (Grade 1).",
+    "question": "Clap a steady beat with me.",
+    "answer": "claps evenly with the teacher"
+   },
+   "representations": [
+    "claps, stamps, taps",
+    "a short rhyme",
+    "picture cards of each way"
+   ],
+   "steps": [
+    "Watch or listen.",
+    "Name the way: clap, tap, stamp, hum or recite.",
+    "Copy it."
+   ],
+   "contexts": [
+    "a clapping game at break",
+    "a rhyme at assembly"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hum a tune with lips closed.",
+     "say": "What am I doing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: humming."
+    },
+    {
+     "beat": "predict",
+     "do": "Is that a way of making rhythm?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Yes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_ONLY_DRUM",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Can you make rhythm without a drum?",
+     "repair": "Make a rhythm with claps and stamps only."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_HUM_SING",
+     "listen_for": [
+      "singing the words loudly"
+     ],
+     "ask": "What is humming?",
+     "repair": "Sing a line, then hum it with lips closed."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_RECITE",
+     "listen_for": [
+      "no, they are not singing"
+     ],
+     "ask": "Children say a rhyme together in a steady beat. Are they making rhythm?",
+     "repair": "Recite a rhyme and clap the beat with it."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS.M_CAC2_RW_FAST_ONLY",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is rhythm just playing as fast as you can?",
+     "repair": "Clap a slow pattern and a fast pattern; both are rhythms."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two ways of making rhythm without an instrument.",
+     "answer": "any two of: clapping, tapping, stamping, humming, reciting",
+     "shows": "ways"
+    },
+    {
+     "question": "Can a slow pattern be a rhythm?",
+     "answer": "yes",
+     "shows": "rhythm"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM",
+   "key_step": "The child claps once for each part of a word and matches clapped patterns to words.",
+   "floor": {
+    "prerequisite": "Claps with body percussion (Grade 1).",
+    "question": "Show me a clap and a stamp.",
+    "answer": "claps and stamps"
+   },
+   "representations": [
+    "names of children",
+    "fruit and animal words",
+    "clap counting with fingers"
+   ],
+   "steps": [
+    "Say the word slowly.",
+    "Clap each part as you say it.",
+    "Count the claps."
+   ],
+   "contexts": [
+    "a name game at the start of the day",
+    "a market words game"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Say and clap: pa-pa-ya."
+    },
+    {
+     "beat": "predict",
+     "do": "How many claps?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for three."
+    },
+    {
+     "beat": "reveal",
+     "do": "Three claps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_ONE_CLAP",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "How many claps for \"ba-na-na\"?",
+     "repair": "Say the word slowly and clap each part."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_LETTERS",
+     "listen_for": [
+      "three, one for each letter"
+     ],
+     "ask": "How many claps for \"cat\"?",
+     "repair": "Say \"cat\" and feel your chin drop once."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_NAME_LONG",
+     "listen_for": [
+      "three, it has three letters"
+     ],
+     "ask": "How many claps for \"Ann\"?",
+     "repair": "Clap your name and a friend's name and compare."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM.M_CAC2_WR_UNEVEN",
+     "listen_for": [
+      "as fast as possible"
+     ],
+     "ask": "Clap \"Nai-ro-bi\". How should the claps sound?",
+     "repair": "Say and clap together slowly, then at normal speed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many claps for \"ma-ma\"?",
+     "answer": "two",
+     "shows": "claps"
+    },
+    {
+     "question": "How many claps for \"dog\"?",
+     "answer": "one",
+     "shows": "syllables"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN",
+   "key_step": "The child finds the part that repeats in a printed shape pattern and says what comes next.",
+   "floor": {
+    "prerequisite": "Recognises a pattern (Grade 1).",
+    "question": "Red, blue, red, blue. What comes next?",
+    "answer": "red"
+   },
+   "representations": [
+    "printing blocks of shapes",
+    "paint on a sponge",
+    "pattern strips"
+   ],
+   "steps": [
+    "Name each shape.",
+    "Find the part that repeats.",
+    "Say what comes next.",
+    "Print it."
+   ],
+   "contexts": [
+    "a border for the class display",
+    "a printed cloth pattern"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Print: circle, square, circle, square."
+    },
+    {
+     "beat": "predict",
+     "do": "What comes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for circle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_NEXT_SAME",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "Circle, square, circle, square, circle. What comes next?",
+     "repair": "Say the pattern aloud and point: circle, square..."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_COLOUR_SHAPE",
+     "listen_for": [
+      "a blue circle"
+     ],
+     "ask": "A red circle, a red triangle, a red circle. What comes next?",
+     "repair": "Cover the colours and look only at the shapes."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_UNIT_TWO",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "Circle, circle, triangle, circle, circle. What comes next?",
+     "repair": "Put a ring round each repeating part: circle, circle, triangle."
+    },
+    {
+     "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN.M_CAC2_SH_PRINT_SMUDGE",
+     "listen_for": [
+      "slide the block across the paper"
+     ],
+     "ask": "How do you print a shape so it is clear?",
+     "repair": "Print once by pressing and once by sliding; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Triangle, circle, triangle, circle. What comes next?",
+     "answer": "triangle",
+     "shows": "next"
+    },
+    {
+     "question": "How do you lift the block after printing?",
+     "answer": "straight up",
+     "shows": "printing"
+    }
+   ]
+  }
+ ]
+}

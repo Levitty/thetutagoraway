@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_",
+ "title": "Plaited Ornament (single-stranded)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Tie the three strands to a chair or a nail first. Say \"right over middle, left over middle\" aloud.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+   "key_step": "The child names plaiting materials and the steps of a three-strand plait: tie, right over middle, left over middle, repeat, tie.",
+   "floor": {
+    "prerequisite": "Pleats paper (Grade 1).",
+    "question": "Show how you fold paper forward and back.",
+    "answer": "folds forward and back"
+   },
+   "representations": [
+    "three strands of fibre or polythene",
+    "a chair to tie to",
+    "a finished bracelet"
+   ],
+   "steps": [
+    "Tie three strands at the top.",
+    "Cross the right over the middle.",
+    "Cross the left over the middle.",
+    "Repeat; tie the end."
+   ],
+   "contexts": [
+    "a bracelet for a friend",
+    "sisal ropes made at home"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "I crossed the right strand.",
+     "say": "Which one next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the left."
+    },
+    {
+     "beat": "predict",
+     "do": "Then?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The right again."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_TWO_STRANDS",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "How many strands do you need for a simple plait?",
+     "repair": "Try to plait two strands; then add a third."
+    },
+    {
+     "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_SAME_SIDE",
+     "listen_for": [
+      "the right strand again"
+     ],
+     "ask": "You crossed the right strand over the middle. Which strand crosses next?",
+     "repair": "Say \"right over middle, left over middle\" with each cross."
+    },
+    {
+     "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_NO_TIE",
+     "listen_for": [
+      "start plaiting straight away"
+     ],
+     "ask": "What do you do before you start to plait?",
+     "repair": "Try plaiting loose strands; they slip apart."
+    },
+    {
+     "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT.M_CAC2_PL_MATERIAL",
+     "listen_for": [
+      "no, only thread"
+     ],
+     "ask": "Can you plait a bracelet from banana fibre?",
+     "repair": "Show banana fibre, sisal and polythene strips plaited."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many strands in a simple plait?",
+     "answer": "three",
+     "shows": "strands"
+    },
+    {
+     "question": "Name a material for plaiting.",
+     "answer": "any of: thread, banana fibre, sisal, polythene",
+     "shows": "materials"
+    }
+   ]
+  }
+ ]
+}

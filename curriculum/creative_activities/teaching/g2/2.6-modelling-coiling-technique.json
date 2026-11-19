@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI",
+ "title": "Modelling (Coiling technique)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use clay or plasticine. Roll coils on a flat surface with the palms, not the fingertips.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+   "key_step": "The child names coiled items and orders the coil method: base, even coils, wind, join, smooth.",
+   "floor": {
+    "prerequisite": "Models by pinching (Grade 1).",
+    "question": "How do you make a pinch pot?",
+    "answer": "press your thumb into a ball of clay and pinch the sides"
+   },
+   "representations": [
+    "clay",
+    "a flat board",
+    "a coiled pot or basket"
+   ],
+   "steps": [
+    "Make a flat base.",
+    "Roll even coils.",
+    "Wind a coil round the base.",
+    "Join and smooth each coil."
+   ],
+   "contexts": [
+    "pots made by local potters",
+    "a coiled basket at home"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a coil sitting loose on another.",
+     "say": "What is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: joining."
+    },
+    {
+     "beat": "predict",
+     "do": "What happens if we lift it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "It falls apart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_THICK_THIN",
+     "listen_for": [
+      "any thickness"
+     ],
+     "ask": "How should the coils for a pot be?",
+     "repair": "Roll with flat palms moving out from the middle."
+    },
+    {
+     "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_NO_JOIN",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "After placing a coil on top of another, what do you do?",
+     "repair": "Lift a pot with unjoined coils: it falls apart."
+    },
+    {
+     "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_NO_BASE",
+     "listen_for": [
+      "the top"
+     ],
+     "ask": "What do you make first for a coil pot?",
+     "repair": "Make a flat round base and wind the first coil round it."
+    },
+    {
+     "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL.M_CAC2_CO_PINCH",
+     "listen_for": [
+      "by pinching a ball of clay"
+     ],
+     "ask": "How is a coil pot made?",
+     "repair": "Make a pinch pot and a coil pot side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item made by coiling.",
+     "answer": "any of: a pot, a bowl, a basket",
+     "shows": "items"
+    },
+    {
+     "question": "What do you make first?",
+     "answer": "a flat base",
+     "shows": "method"
+    }
+   ]
+  }
+ ]
+}

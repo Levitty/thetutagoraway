@@ -92,8 +92,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.TURNING.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Moving the body in named directions (Grade 2 turning) comes before moving objects towards and away from the body. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -283,8 +283,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.DRAWING_AND_PAINTING.d",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Painting with a brush (Grade 2) comes before mixing paint by spraying and blowing. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -335,8 +335,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.CREATI.DRAWING_AND_PAINTING.d",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Painting regular shapes with a brush (Grade 2) comes before drawing a picture from regular and irregular shapes. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -586,15 +586,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Clapping the rhythm of simple words (Grade 2) is where long and short sounds are first felt. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The ways of making rhythm (Grade 2) are how long and short sounds are performed. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -631,8 +631,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.e",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Printing shape patterns (Grade 2) is the same printing used for a random repeat pattern. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -877,8 +877,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.HOPPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The four directions of hopping and their floor patterns (Grade 2) are the same for skipping. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1063,17 +1063,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.MOSAIC.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.MOSAIC.MOSAIC",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "A mosaic (Grade 2) is also made by pasting pieces; a collage uses pieces of different kinds and sizes. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "reason": "A mosaic and its materials and tools (Grade 2) are also pasted pieces; a collage uses pieces of different kinds and sizes. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.CREATI.MOSAIC.b",
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.a",
        "kind": "outcome",
-       "strength": "essential",
-       "reason": "The tools and pasting materials of a mosaic (Grade 2) are the same ones prepared for a collage. Proposed, to confirm by a CBC Creative Activities teacher.",
+       "strength": "helpful",
+       "reason": "Waste materials that can be reused (Grade 3 Environmental Activities) are many of the materials collected for a collage. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       }
      ],
@@ -1246,15 +1246,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.MELODY.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing similar and different tunes (Grade 2) is the start of naming what has varied. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.CREATI.MELODY.c",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.MELODY.NEW_WORDS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Putting new words to a tune (Grade 2) is one kind of variation. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1288,8 +1288,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.PERFOR.SONGS.c",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Performing a song with techniques (Grade 2) is where directions are followed. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1523,8 +1523,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Plaiting a bracelet (Grade 2) already passes strands over and under each other. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1707,15 +1707,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.PERFOR.SONGS.c",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Singing a song with the right tune and clear words (Grade 2) is needed before keeping one part in a round. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.PERFOR.SONGS.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of a topical song (Grade 2) is how the message of a round is found. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1883,15 +1883,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.CREATI.HOPPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hopping in different directions and patterns (Grade 2) gives the directions and floor patterns used for galloping. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.CREATI.TURNING.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Turning left and right (Grade 2) is used to change the direction of a gallop. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2056,8 +2056,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making a three-dimensional item by coiling (Grade 2) comes before building a toy from parts. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2250,15 +2250,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The tucked egg roll (Grade 2) teaches the round back a forward roll needs. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The swan balance (Grade 2) teaches holding still on one point, as the V-balance does. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2436,8 +2436,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming indigenous wind instruments (Grade 2) comes before naming string instruments. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2625,15 +2625,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Rolling and shaping clay by coiling (Grade 2) uses the same hands as rolling pellets. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making a plaited bracelet (Grade 2) is the first ornament; beads are threaded into the next. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2826,8 +2826,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.PERFOR.SONGS.b",
-       "kind": "outcome",
+       "requires": "CREA.G2.PERFOR.SONGS.SONG_MESSAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of a song (Grade 2) is how the message of the anthem is found. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -3097,8 +3097,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.a",
-       "kind": "outcome",
+       "requires": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Water points at school (Grade 2) come before water points and water bodies in the wider locality. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -3139,8 +3139,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.c",
-       "kind": "outcome",
+       "requires": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Water safety rules at school (Grade 2) grow into rules for rivers, dams and wells. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"

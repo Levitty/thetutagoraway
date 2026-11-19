@@ -1,5 +1,5 @@
 // Creative Activities Grade 3, built in the depth pass (19 Nov 2026) from the KICD outcomes in curriculum/creative_activities/g3.json:
-// the skills (SKILLS), and for each sub-strand prerequisites (Grade 2 Creative Activities skills, Grade 2-3 Maths skills, Grade 2-3
+// the skills (SKILLS), and for each sub-strand prerequisites (Grade 2 Creative Activities skills, Grade 1 outcomes, Grade 2-3 Maths skills, Grade 2-3
 // Environmental Activities outcomes), four misconceptions per skill (real errors of seven and eight year olds: colour names and
 // mixing, long and short sounds, shapes in pictures, directions of movement, the order of a round, song and game rules), the teaching
 // pack and the practical outcomes each knowledge skill supports (marked by the teacher with the KICD rubric, never a phone question).
@@ -46,7 +46,7 @@ export const SUBS = [
     key: PP,
     packNotes: 'Outside, in pairs and small teams, on soft ground. Counting while pushing and pulling links to Mathematics.',
     rubric: { PUSH_PULL: ['b'] },
-    pre: { PUSH_PULL: [[`${G2}CREATI.TURNING.a`, 'Moving the body in named directions (Grade 2 turning) comes before moving objects towards and away from the body.'], ['MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT', 'Moving along a straight line from a point (Grade 3 Maths) is what a push or a pull does to an object.', 'helpful']] },
+    pre: { PUSH_PULL: [[`${G2}CREATI.TURNING.TURN_DIRECTIONS`, 'Moving the body in named directions (Grade 2 turning) comes before moving objects towards and away from the body.'], ['MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT', 'Moving along a straight line from a point (Grade 3 Maths) is what a push or a pull does to an object.', 'helpful']] },
     mis: [
       ['PUSH_PULL', 'M_CAC3_PP_TOWARDS_PUSH', 'Calls bringing a bucket up from a well a push.', 'A girl brings a bucket of water up from a well with a rope. Is she pushing or pulling?', 'pushing', 'pulling', 'The child links pushing with any hard work using the arms.', 'Ask: is the bucket coming towards her or going away from her?', 'The bucket comes towards her, so she is pulling.'],
       ['PUSH_PULL', 'M_CAC3_PP_WHEELBARROW', 'Says a wheelbarrow being moved along is pulled because it moves forward.', 'A boy moves a wheelbarrow in front of him. Is he pushing or pulling?', 'pulling', 'pushing', 'The child thinks moving forward always means pulling.', 'Push a chair across the floor, then pull it, and say where the chair is each time.', 'The wheelbarrow goes away from his body in front of him, so he pushes it.'],
@@ -68,8 +68,8 @@ export const SUBS = [
     packNotes: 'Use three primaries only and let the children find the secondaries. Spray and blow outside or over newspaper; wash hands and brushes after.',
     rubric: { COLOUR_MIXING: ['b', 'd'], SHAPES_PICTURE: ['c'] },
     pre: {
-      COLOUR_MIXING: [[`${G2}CREATI.DRAWING_AND_PAINTING.d`, 'Painting with a brush (Grade 2) comes before mixing paint by spraying and blowing.'], ['CREA.G1.CREATI.PAINTING_AND_COLOURING.a', 'Knowing paints, brushes and sponges (Grade 1) is the start of colour work.', 'helpful']],
-      SHAPES_PICTURE: [['MATH.G3.GEOMET.SHAPES.NAME_SHAPES', 'Naming the basic shapes (Grade 3 Maths) is how regular shapes are picked out in a picture.'], [`${G2}CREATI.DRAWING_AND_PAINTING.d`, 'Painting regular shapes with a brush (Grade 2) comes before drawing a picture from regular and irregular shapes.']],
+      COLOUR_MIXING: [[`${G2}CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING`, 'Painting with a brush (Grade 2) comes before mixing paint by spraying and blowing.'], ['CREA.G1.CREATI.PAINTING_AND_COLOURING.a', 'Knowing paints, brushes and sponges (Grade 1) is the start of colour work.', 'helpful']],
+      SHAPES_PICTURE: [['MATH.G3.GEOMET.SHAPES.NAME_SHAPES', 'Naming the basic shapes (Grade 3 Maths) is how regular shapes are picked out in a picture.'], [`${G2}CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING`, 'Painting regular shapes with a brush (Grade 2) comes before drawing a picture from regular and irregular shapes.']],
     },
     mis: [
       ['COLOUR_MIXING', 'M_CAC3_CM_BLUE_YELLOW', 'Says blue and yellow make brown or purple.', 'What colour do blue and yellow make when mixed?', 'purple', 'green', 'The child guesses from the colours they like or has mixed too many colours at once and got brown.', 'Mix one drop of blue into yellow in front of the class.', 'Blue and yellow make green.'],
@@ -103,8 +103,8 @@ export const SUBS = [
     packNotes: 'Say and clap the French rhythm names; do not ask a Grade 3 child to read staff notation. Print outside with found objects.',
     rubric: { SOUND_DURATION: ['b', 'c'], RANDOM_REPEAT: ['d'] },
     pre: {
-      SOUND_DURATION: [[`${G2}CREATI.RHYTHM_AND_PATTERN_MAKIN.c`, 'Clapping the rhythm of simple words (Grade 2) is where long and short sounds are first felt.'], [`${G2}CREATI.RHYTHM_AND_PATTERN_MAKIN.a`, 'The ways of making rhythm (Grade 2) are how long and short sounds are performed.', 'helpful']],
-      RANDOM_REPEAT: [[`${G2}CREATI.RHYTHM_AND_PATTERN_MAKIN.e`, 'Printing shape patterns (Grade 2) is the same printing used for a random repeat pattern.'], ['MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS', 'Continuing a pattern of shapes (Grade 2 Maths) is the regular pattern a random repeat is compared with.', 'helpful']],
+      SOUND_DURATION: [[`${G2}CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM`, 'Clapping the rhythm of simple words (Grade 2) is where long and short sounds are first felt.'], [`${G2}CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS`, 'The ways of making rhythm (Grade 2) are how long and short sounds are performed.', 'helpful']],
+      RANDOM_REPEAT: [[`${G2}CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN`, 'Printing shape patterns (Grade 2) is the same printing used for a random repeat pattern.'], ['MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS', 'Continuing a pattern of shapes (Grade 2 Maths) is the regular pattern a random repeat is compared with.', 'helpful']],
     },
     mis: [
       ['SOUND_DURATION', 'M_CAC3_SD_TATE_LONG', 'Thinks ta-te is longer than taa because it has two syllables.', 'Which takes longer: ta-te or taa?', 'ta-te', 'they take the same time, one beat', 'Two syllables sound like more to the child.', 'Walk one step to taa and one step to ta-te while clapping.', 'Ta-te and taa both last one beat. Ta-te has two short sounds in it.'],
@@ -137,7 +137,7 @@ export const SUBS = [
     key: SK,
     packNotes: 'Use ropes on a flat, soft surface. Chalk the floor patterns first.',
     rubric: { SKIP_DIRECTIONS: ['b', 'c'] },
-    pre: { SKIP_DIRECTIONS: [[`${G2}CREATI.HOPPING.a`, 'The four directions of hopping and their floor patterns (Grade 2) are the same for skipping.'], ['MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT', 'Telling right from left from a point (Grade 3 Maths) is needed to skip to the right or to the left.']] },
+    pre: { SKIP_DIRECTIONS: [[`${G2}CREATI.HOPPING.HOP_DIRECTIONS`, 'The four directions of hopping and their floor patterns (Grade 2) are the same for skipping.'], ['MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT', 'Telling right from left from a point (Grade 3 Maths) is needed to skip to the right or to the left.']] },
     mis: [
       ['SKIP_DIRECTIONS', 'M_CAC3_SK_LEFT_RIGHT', "Mixes up right and left, naming the teacher's right as their own.", 'Face the board and skip to your right. Which hand points the way?', 'my left hand', 'my right hand, the one I write with if I am right-handed', "The child copies the teacher who faces them, so sides are mirrored.", 'Stand with your back to the class and point right, then let children copy.', 'Your right is on your own right-hand side, not the side of the person facing you.'],
       ['SKIP_DIRECTIONS', 'M_CAC3_SK_ZIGZAG_CURVE', 'Calls a curved path a zigzag.', 'A path goes like a snake, smooth and bending. Is it a zigzag?', 'yes', 'no, it is curved', 'Both paths change direction, so the child uses the word they like.', 'Chalk a zigzag with sharp corners and a curve with none.', 'A zigzag has sharp corners. A curve bends smoothly.'],
@@ -158,7 +158,7 @@ export const SUBS = [
     key: CO,
     packNotes: 'Collect materials from home and the compound a week before. Make paste from flour or cassava and water.',
     rubric: { COLLAGE: ['c'] },
-    pre: { COLLAGE: [[`${G2}CREATI.MOSAIC.a`, 'A mosaic (Grade 2) is also made by pasting pieces; a collage uses pieces of different kinds and sizes.'], [`${G2}CREATI.MOSAIC.b`, 'The tools and pasting materials of a mosaic (Grade 2) are the same ones prepared for a collage.']] },
+    pre: { COLLAGE: [[`${G2}CREATI.MOSAIC.MOSAIC`, 'A mosaic and its materials and tools (Grade 2) are also pasted pieces; a collage uses pieces of different kinds and sizes.'], ['ENVI.G3.RESOUR.WASTE_MATERIALS.a', 'Waste materials that can be reused (Grade 3 Environmental Activities) are many of the materials collected for a collage.', 'helpful']] },
     mis: [
       ['COLLAGE', 'M_CAC3_CO_DRAWING', 'Thinks a collage is a coloured drawing.', 'Which picture is a collage?', 'a picture coloured with crayons', 'a picture made by pasting pieces of paper, cloth and seeds', 'All pictures look alike to the child at first.', 'Touch a collage: feel the pieces stuck on.', 'A collage is made by pasting pieces onto a surface.'],
       ['COLLAGE', 'M_CAC3_CO_ONE_MATERIAL', 'Thinks a collage must use only one material, like a mosaic.', 'Can a collage use paper, cloth and seeds together?', 'no, only one material', 'yes, many different materials', 'The Grade 2 mosaic used small pieces of one kind.', 'Show a collage with paper, cloth and feathers.', 'A collage can mix many materials.'],
@@ -180,8 +180,8 @@ export const SUBS = [
     packNotes: 'Sing a short tune the class knows; change one thing at a time. Improvised percussion: tins, bottles of water, sticks.',
     rubric: { PERF_DIRECTIONS: ['b', 'c'] },
     pre: {
-      MELODY_VARIATION: [[`${G2}CREATI.MELODY.a`, 'Hearing similar and different tunes (Grade 2) is the start of naming what has varied.'], [`${G2}CREATI.MELODY.c`, 'Putting new words to a tune (Grade 2) is one kind of variation.', 'helpful']],
-      PERF_DIRECTIONS: [['MELODY_VARIATION', 'Hearing tempo and volume change in a melody comes before following directions to change them.'], [`${G2}PERFOR.SONGS.c`, 'Performing a song with techniques (Grade 2) is where directions are followed.']],
+      MELODY_VARIATION: [[`${G2}CREATI.MELODY.SAME_DIFFERENT`, 'Hearing similar and different tunes (Grade 2) is the start of naming what has varied.'], [`${G2}CREATI.MELODY.NEW_WORDS`, 'Putting new words to a tune (Grade 2) is one kind of variation.', 'helpful']],
+      PERF_DIRECTIONS: [['MELODY_VARIATION', 'Hearing tempo and volume change in a melody comes before following directions to change them.'], [`${G2}PERFOR.SONGS.SONG_TECHNIQUES`, 'Performing a song with techniques (Grade 2) is where directions are followed.']],
     },
     mis: [
       ['MELODY_VARIATION', 'M_CAC3_MV_LOUD_HIGH', 'Calls a louder version of a tune higher.', 'The class sings a song again, louder but on the same notes. What changed?', 'it got higher', 'it got louder', 'In daily speech "turn it up" means both louder and higher.', 'Sing the same note softly then loudly; then a low note and a high note.', 'Louder is volume. Higher is pitch. They are different.'],
@@ -214,7 +214,7 @@ export const SUBS = [
     key: WE,
     packNotes: 'Fold the base paper and cut slits for the warp. Use two colours so the over-under shows.',
     rubric: { PAPER_WEAVE: ['b'] },
-    pre: { PAPER_WEAVE: [[`${G2}PERFOR.PLAITED_ORNAMENT_SINGLE_.b`, 'Plaiting a bracelet (Grade 2) already passes strands over and under each other.'], ['MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS', 'Continuing a pattern (Grade 2 Maths) is how the alternate rows of a weave are planned.', 'helpful']] },
+    pre: { PAPER_WEAVE: [[`${G2}PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT`, 'Plaiting a bracelet (Grade 2) already passes strands over and under each other.'], ['MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS', 'Continuing a pattern (Grade 2 Maths) is how the alternate rows of a weave are planned.', 'helpful']] },
     mis: [
       ['PAPER_WEAVE', 'M_CAC3_WV_SAME_START', 'Starts every row the same way (over first), so the strips slide out.', 'Row 1 started over. How should row 2 start?', 'over, the same as row 1', 'under, the opposite of row 1', 'The child copies the row above exactly.', 'Weave two rows the same way and lift the paper: the strip falls out.', 'Start each new row the opposite way to the one before.'],
       ['PAPER_WEAVE', 'M_CAC3_WV_OVER_TWO', 'Goes over two strips and under one in a plain weave.', 'In a plain weave, how does the strip go?', 'over two, under one', 'over one, under one', 'The child skips strips by accident when the slits are close.', 'Say "over, under, over, under" aloud with each strip.', 'A plain weave goes over one and under one.'],
@@ -235,7 +235,7 @@ export const SUBS = [
     key: RO,
     packNotes: 'Teach the whole song in unison first. Groups stand apart; the teacher brings each group in.',
     rubric: { ROUND: ['b'] },
-    pre: { ROUND: [[`${G2}PERFOR.SONGS.c`, 'Singing a song with the right tune and clear words (Grade 2) is needed before keeping one part in a round.'], [`${G2}PERFOR.SONGS.b`, 'Saying the message of a topical song (Grade 2) is how the message of a round is found.']] },
+    pre: { ROUND: [[`${G2}PERFOR.SONGS.SONG_TECHNIQUES`, 'Singing a song with the right tune and clear words (Grade 2) is needed before keeping one part in a round.'], [`${G2}PERFOR.SONGS.SONG_MESSAGE`, 'Saying the message of a topical song (Grade 2) is how the message of a round is found.']] },
     mis: [
       ['ROUND', 'M_CAC3_RO_DIFFERENT_SONGS', 'Thinks the groups in a round sing different songs.', 'In a round, what do the groups sing?', 'different songs', 'the same song, starting at different times', 'The sound is mixed, so the child thinks the songs differ.', 'Sing the round slowly with two groups, then each group alone.', 'In a round every group sings the same song, starting at different times.'],
       ['ROUND', 'M_CAC3_RO_TOGETHER', 'Thinks a round starts with all groups together.', 'Do all groups start a round together?', 'yes', 'no, one group starts, then the next joins later', 'Most class songs start together.', 'Point to group 1 to start; point to group 2 after one line.', 'In a round each group starts later than the one before.'],
@@ -256,7 +256,7 @@ export const SUBS = [
     key: GA,
     packNotes: 'Gallop to a drum beat. Change the leading foot only when the teacher says.',
     rubric: { GALLOP: ['b'] },
-    pre: { GALLOP: [[`${G2}CREATI.HOPPING.a`, 'Hopping in different directions and patterns (Grade 2) gives the directions and floor patterns used for galloping.'], [`${G2}CREATI.TURNING.a`, 'Turning left and right (Grade 2) is used to change the direction of a gallop.', 'helpful']] },
+    pre: { GALLOP: [[`${G2}CREATI.HOPPING.HOP_DIRECTIONS`, 'Hopping in different directions and patterns (Grade 2) gives the directions and floor patterns used for galloping.'], [`${G2}CREATI.TURNING.TURN_DIRECTIONS`, 'Turning left and right (Grade 2) is used to change the direction of a gallop.', 'helpful']] },
     mis: [
       ['GALLOP', 'M_CAC3_GA_HOP', 'Thinks galloping is hopping on one leg.', 'Is galloping the same as hopping?', 'yes', 'no; in galloping both feet touch the ground, one leading', 'Both are bouncy moves.', 'Hop on one foot, then gallop, and watch the feet.', 'In galloping both feet touch the ground. Hopping uses one foot.'],
       ['GALLOP', 'M_CAC3_GA_SWAP', 'Swaps the leading foot every step.', 'In a gallop, which foot leads?', 'the feet take turns', 'the same foot leads every time', 'Walking and running swap feet, so the child does the same.', 'Put a ribbon on the leading foot and keep it in front.', 'In a gallop the same foot always leads.'],
@@ -277,7 +277,7 @@ export const SUBS = [
     key: TA,
     packNotes: 'Collect clean recycled materials. The teacher cuts tins and wire; children join with glue, string and rubber bands.',
     rubric: { ASSEMBLAGE: ['b'] },
-    pre: { ASSEMBLAGE: [[`${G2}PERFOR.MODELLING_COILING_TECHNI.b`, 'Making a three-dimensional item by coiling (Grade 2) comes before building a toy from parts.'], ['ENVI.G3.RESOUR.WASTE_MATERIALS.a', 'Waste materials that can be reused (Grade 3 Environmental Activities) are the materials of an assemblage.', 'helpful']] },
+    pre: { ASSEMBLAGE: [[`${G2}PERFOR.MODELLING_COILING_TECHNI.COIL`, 'Making a three-dimensional item by coiling (Grade 2) comes before building a toy from parts.'], ['ENVI.G3.RESOUR.WASTE_MATERIALS.a', 'Waste materials that can be reused (Grade 3 Environmental Activities) are the materials of an assemblage.', 'helpful']] },
     mis: [
       ['ASSEMBLAGE', 'M_CAC3_TA_BOUGHT', 'Thinks toys can only be bought from a shop.', 'Can you make a toy car from bottle tops and a box?', 'no, toys come from shops', 'yes, by joining found objects', 'The child has seen toys only in shops.', 'Show a wire car made in the community.', 'You can make toys by joining found objects.'],
       ['ASSEMBLAGE', 'M_CAC3_TA_DRAWN', 'Thinks assemblage is drawing a toy on paper.', 'What is a toy made by assemblage?', 'a drawing of a toy', 'a toy built by joining real objects together', 'The word is new, and most art lessons are on paper.', 'Hold an assemblage toy and turn it round.', 'An assemblage toy is built from real objects you can hold.'],
@@ -298,7 +298,7 @@ export const SUBS = [
     key: FR,
     packNotes: 'Mats or soft grass only. The teacher demonstrates and spots every roll. Markers: bottle tops or bean bags at the start line.',
     rubric: { ROLL_BALANCE: ['b', 'c', 'd'] },
-    pre: { ROLL_BALANCE: [[`${G2}PERFOR.EGG_ROLL_AND_SWAN_BALANC.a`, 'The tucked egg roll (Grade 2) teaches the round back a forward roll needs.'], [`${G2}PERFOR.EGG_ROLL_AND_SWAN_BALANC.b`, 'The swan balance (Grade 2) teaches holding still on one point, as the V-balance does.']] },
+    pre: { ROLL_BALANCE: [[`${G2}PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL`, 'The tucked egg roll (Grade 2) teaches the round back a forward roll needs.'], [`${G2}PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN`, 'The swan balance (Grade 2) teaches holding still on one point, as the V-balance does.']] },
     mis: [
       ['ROLL_BALANCE', 'M_CAC3_FR_HEAD_TOP', 'Thinks a forward roll goes over the top of the head.', 'In a forward roll, which part touches the mat first after the hands?', 'the top of the head', 'the back of the shoulders, with the chin tucked in', 'From the side a roll looks like going over the head.', 'Tuck the chin onto a bean bag held at the chest.', 'Tuck your chin. You roll on the back of your shoulders, not your head.', TCA],
       ['ROLL_BALANCE', 'M_CAC3_FR_STRAIGHT_BACK', 'Keeps a straight back in a forward roll.', 'What shape is your back in a forward roll?', 'straight and flat', 'round, like a ball', 'The child is used to standing up straight.', 'Rock on the back like a rocking chair first.', 'Make your back round like a ball so you roll smoothly.', TCA],
@@ -319,7 +319,7 @@ export const SUBS = [
     key: SI,
     packNotes: 'Show real instruments or clear pictures. The teacher prepares the wire or string and the bow for improvised instruments.',
     rubric: { STRING_INSTR: ['b', 'c'] },
-    pre: { STRING_INSTR: [[`${G2}PERFOR.WIND_MUSICAL_INSTRUMENTS.a`, 'Naming indigenous wind instruments (Grade 2) comes before naming string instruments.'], ['CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.a', 'Naming percussion instruments (Grade 1) begins sorting instruments by how they make sound.', 'helpful']] },
+    pre: { STRING_INSTR: [[`${G2}PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND`, 'Naming indigenous wind instruments (Grade 2) comes before naming string instruments.'], ['CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.a', 'Naming percussion instruments (Grade 1) begins sorting instruments by how they make sound.', 'helpful']] },
     mis: [
       ['STRING_INSTR', 'M_CAC3_SI_ORUTU_DRUM', 'Calls the orutu a drum because it has a skin.', 'The orutu has a string and a bow. What kind of instrument is it?', 'a drum', 'a string instrument (a fiddle)', 'The orutu has a skin-covered resonator like a drum.', 'Bow the string and listen: the string makes the sound.', 'The orutu is a fiddle. Its sound comes from a string.', TCI],
       ['STRING_INSTR', 'M_CAC3_SI_BOW_PLUCK', 'Thinks a fiddle is played by plucking with the fingers.', 'How is a fiddle such as the wandindi played?', 'by plucking', 'by bowing: rubbing a bow across the string', 'Guitars, which are plucked, are the string instrument the child knows.', 'Rub a bow across a string and then pluck it.', 'A fiddle is played by bowing across its string.', TCI],
@@ -340,7 +340,7 @@ export const SUBS = [
     key: MB,
     packNotes: 'Use clay, paper pulp or salt dough. Pierce while soft; dry in the shade; paint when dry.',
     rubric: { BEADS: ['b', 'c', 'd'] },
-    pre: { BEADS: [[`${G2}PERFOR.MODELLING_COILING_TECHNI.b`, 'Rolling and shaping clay by coiling (Grade 2) uses the same hands as rolling pellets.'], [`${G2}PERFOR.PLAITED_ORNAMENT_SINGLE_.b`, 'Making a plaited bracelet (Grade 2) is the first ornament; beads are threaded into the next.']] },
+    pre: { BEADS: [[`${G2}PERFOR.MODELLING_COILING_TECHNI.COIL`, 'Rolling and shaping clay by coiling (Grade 2) uses the same hands as rolling pellets.'], [`${G2}PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT`, 'Making a plaited bracelet (Grade 2) is the first ornament; beads are threaded into the next.']] },
     mis: [
       ['BEADS', 'M_CAC3_BD_HOLE_DRY', 'Makes the hole after the bead has dried.', 'When do you make the hole in a clay bead?', 'after it dries', 'while it is still soft', 'Painting comes after drying, so the child puts every step after drying.', 'Try to push a stick through a dry bead and a soft bead.', 'Make the hole while the bead is soft. Dry clay cracks.'],
       ['BEADS', 'M_CAC3_BD_PELLET_COIL', 'Rolls a long coil instead of a ball when told to make a pellet.', 'In the pellet technique, what shape do you roll?', 'a long coil', 'a small ball', 'Coiling was learnt in Grade 2.', 'Roll between flat palms in circles, not back and forth.', 'A pellet is a small ball, rolled in circles between the palms.'],
@@ -362,7 +362,7 @@ export const SUBS = [
     packNotes: 'The anthem text is Kiswahili; questions give the lines in Kiswahili and ask for order and meaning in English. Practise standing at attention at assembly.',
     rubric: { ANTHEM_OCCASIONS: ['d'] },
     pre: {
-      ANTHEM_TEXT: [['ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b', 'Events at which the anthem is sung (Grade 2 Environmental Activities) come before learning its words and message.'], [`${G2}PERFOR.SONGS.b`, 'Saying the message of a song (Grade 2) is how the message of the anthem is found.']],
+      ANTHEM_TEXT: [['ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b', 'Events at which the anthem is sung (Grade 2 Environmental Activities) come before learning its words and message.'], [`${G2}PERFOR.SONGS.SONG_MESSAGE`, 'Saying the message of a song (Grade 2) is how the message of the anthem is found.']],
       ANTHEM_OCCASIONS: [['ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.c', 'The etiquette of raising and lowering the flag (Grade 2 Environmental Activities) is the etiquette of the anthem.'], ['ANTHEM_TEXT', 'Knowing the words of the anthem comes before singing it properly on these occasions.', 'helpful']],
     },
     mis: [
@@ -396,8 +396,8 @@ export const SUBS = [
     key: WS,
     packNotes: 'Talk about the water points the children really pass. Never take children to deep water for this lesson; use pictures.',
     pre: {
-      WATER_DANGERS: [[`${G2}APPREC.WATER_SAFETY_AWARENESS.a`, 'Water points at school (Grade 2) come before water points and water bodies in the wider locality.'], ['ENVI.G3.RESOUR.WATER.a', 'How water is made dirty (Grade 3 Environmental Activities) explains the disease danger of water points.', 'helpful']],
-      WATER_SAFETY: [['WATER_DANGERS', 'Knowing the dangers of each water point comes before naming how to stay safe from them.'], [`${G2}APPREC.WATER_SAFETY_AWARENESS.c`, 'Water safety rules at school (Grade 2) grow into rules for rivers, dams and wells.']],
+      WATER_DANGERS: [[`${G2}APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS`, 'Water points at school (Grade 2) come before water points and water bodies in the wider locality.'], ['ENVI.G3.RESOUR.WATER.a', 'How water is made dirty (Grade 3 Environmental Activities) explains the disease danger of water points.', 'helpful']],
+      WATER_SAFETY: [['WATER_DANGERS', 'Knowing the dangers of each water point comes before naming how to stay safe from them.'], [`${G2}APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL`, 'Water safety rules at school (Grade 2) grow into rules for rivers, dams and wells.']],
     },
     mis: [
       ['WATER_DANGERS', 'M_CAC3_WD_SHALLOW_SAFE', 'Thinks shallow water cannot be dangerous.', 'Can a small child drown in shallow water?', 'no, it is too shallow', 'yes, even shallow water can drown a child', 'Drowning is linked only with deep lakes and the sea.', 'Talk about a basin, a puddle and a pond: a face in water is dangerous anywhere.', 'Even shallow water can be dangerous. Always have an adult near.'],

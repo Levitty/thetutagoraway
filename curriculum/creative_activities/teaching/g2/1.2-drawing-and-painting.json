@@ -1,0 +1,187 @@
+{
+ "sub_strand": "CREA.G2.CREATI.DRAWING_AND_PAINTING",
+ "title": "Drawing and Painting",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Take rubbings outside on bark, leaves, coins and walls. Brushes: one per colour pot, washed between colours.",
+ "skills": [
+  {
+   "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE",
+   "key_step": "The child says texture is how a surface feels, names rough, smooth and bumpy surfaces, and says how a rubbing shows texture.",
+   "floor": {
+    "prerequisite": "Knows colouring materials (Grade 1).",
+    "question": "Name one thing you colour with.",
+    "answer": "any of: crayon, pencil, paint"
+   },
+   "representations": [
+    "leaves, coins, bark, a mat",
+    "thin paper",
+    "crayons with the paper peeled off"
+   ],
+   "steps": [
+    "Touch the surface.",
+    "Say how it feels.",
+    "Lay thin paper on it.",
+    "Rub with the side of the crayon."
+   ],
+   "contexts": [
+    "a nature walk in the school compound",
+    "decorating a card"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Feel a woven mat.",
+     "say": "How does it feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: bumpy."
+    },
+    {
+     "beat": "predict",
+     "do": "What will a rubbing of it show?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The bumpy pattern of the weave."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_COLOUR",
+     "listen_for": [
+      "brown"
+     ],
+     "ask": "What is the texture of tree bark?",
+     "repair": "Close your eyes and touch the bark: what does it feel like?"
+    },
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_SHINY_SMOOTH",
+     "listen_for": [
+      "rough, because it is not shiny"
+     ],
+     "ask": "Is a plastic plate rough or smooth?",
+     "repair": "Rub fingers over a matt plastic plate and a stone."
+    },
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_RUB_TIP",
+     "listen_for": [
+      "the point"
+     ],
+     "ask": "Which part of the crayon do you use for a rubbing?",
+     "repair": "Peel a crayon and rub with its side over a leaf."
+    },
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE.M_CAC2_TX_THICK_PAPER",
+     "listen_for": [
+      "thick card"
+     ],
+     "ask": "Which paper is best for a rubbing?",
+     "repair": "Rub the same coin under card and under thin paper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the texture of a stone wall?",
+     "answer": "rough",
+     "shows": "texture"
+    },
+    {
+     "question": "Which part of the crayon do you rub with?",
+     "answer": "the side",
+     "shows": "rubbing"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING",
+   "key_step": "The child names regular shapes and says how to paint them neatly: dip the tip, wipe, stroke in one direction, wash between colours.",
+   "floor": {
+    "prerequisite": "Paints with a brush (Grade 1).",
+    "question": "What do you hold to paint with a brush?",
+    "answer": "the handle"
+   },
+   "representations": [
+    "outlines of shapes",
+    "brushes and water pots",
+    "shape cards"
+   ],
+   "steps": [
+    "Name the shape.",
+    "Dip the tip and wipe.",
+    "Paint inside the outline.",
+    "Wash the brush."
+   ],
+   "contexts": [
+    "painting a flag for a school event",
+    "a shape picture for the class wall"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a dripping brush.",
+     "say": "What went wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: too much paint."
+    },
+    {
+     "beat": "predict",
+     "do": "What should I do?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Dip only the tip and wipe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_DIP_DEEP",
+     "listen_for": [
+      "all of it, up to the handle"
+     ],
+     "ask": "How much of the brush do you dip into the paint?",
+     "repair": "Show a dripping brush and a brush dipped at the tip."
+    },
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_NO_WASH",
+     "listen_for": [
+      "dip straight into yellow"
+     ],
+     "ask": "You finish with red and want yellow. What do you do first?",
+     "repair": "Put a red brush in yellow and watch it turn orange."
+    },
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_TRIANGLE_SIDES",
+     "listen_for": [
+      "four"
+     ],
+     "ask": "How many sides does a triangle have?",
+     "repair": "Count the sides of a triangle with a finger: one, two, three."
+    },
+    {
+     "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING.M_CAC2_BP_SCRUB",
+     "listen_for": [
+      "scrub it back and forth hard"
+     ],
+     "ask": "How do you move the brush to paint a shape neatly?",
+     "repair": "Show a scrubbed shape (torn paper) next to a smooth one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you do before taking a new colour?",
+     "answer": "wash the brush",
+     "shows": "brush"
+    },
+    {
+     "question": "How many sides has a rectangle?",
+     "answer": "four",
+     "shows": "shapes"
+    }
+   ]
+  }
+ ]
+}

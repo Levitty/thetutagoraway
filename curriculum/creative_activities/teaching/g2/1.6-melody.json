@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G2.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use short tunes the class knows. Draw the shapes on the board as the song is sung.",
+ "skills": [
+  {
+   "skill": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT",
+   "key_step": "The child says if two tunes are the same or different and shows a song with shapes: the same shape for a tune that returns.",
+   "floor": {
+    "prerequisite": "Hears like and unlike passages (Grade 1).",
+    "question": "Are these two lines alike?",
+    "answer": "alike or not, as sung"
+   },
+   "representations": [
+    "short tunes",
+    "circle, triangle and square cards",
+    "humming"
+   ],
+   "steps": [
+    "Listen to the first tune.",
+    "Draw a shape for it.",
+    "Listen to the next tune: same or different?",
+    "Same: same shape. Different: new shape."
+   ],
+   "contexts": [
+    "a song for assembly",
+    "a game song in the field"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Sing line 1 and draw a circle."
+    },
+    {
+     "beat": "predict",
+     "do": "Line 2 is the same tune. Which shape?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for circle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_WORDS",
+     "listen_for": [
+      "no, different"
+     ],
+     "ask": "Two lines have the same tune but different words. Are the tunes the same?",
+     "repair": "Hum both lines without words."
+    },
+    {
+     "code": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_SHAPE_SAME",
+     "listen_for": [
+      "a new shape"
+     ],
+     "ask": "The first tune comes back again. Which shape do you draw?",
+     "repair": "Sing the song and point to the shape each time the first tune returns."
+    },
+    {
+     "code": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_LOUD_DIFF",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "The same tune is sung louder. Is it a different tune?",
+     "repair": "Sing it softly and loudly; ask if the notes moved."
+    },
+    {
+     "code": "CREA.G2.CREATI.MELODY.SAME_DIFFERENT.M_CAC2_SD_SHAPE_MEANING",
+     "listen_for": [
+      "a happy part"
+     ],
+     "ask": "In our song we drew a circle, a triangle, then a circle. What does the second circle show?",
+     "repair": "Say: the shape only tells same or different."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Same tune, new words: same or different tune?",
+     "answer": "same",
+     "shows": "tune"
+    },
+    {
+     "question": "Which shape do you draw when a tune comes back?",
+     "answer": "the same shape as before",
+     "shows": "shapes"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G2.CREATI.MELODY.NEW_WORDS",
+   "key_step": "The child keeps a known tune and fits new words to it, one word part for each note, so the words make sense.",
+   "floor": {
+    "prerequisite": "Knows when a tune is the same.",
+    "question": "Hum this tune. Is it the same as before?",
+    "answer": "yes or no, as hummed"
+   },
+   "representations": [
+    "a tune the class knows",
+    "word cards",
+    "clapping"
+   ],
+   "steps": [
+    "Choose a known tune.",
+    "Pick one idea for the words.",
+    "Fit one word part to each note.",
+    "Sing it to check."
+   ],
+   "contexts": [
+    "a song about hand washing",
+    "a song for a visitor"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Clap the four notes of the line."
+    },
+    {
+     "beat": "predict",
+     "do": "Will \"wash your hands\" fit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait and try."
+    },
+    {
+     "beat": "reveal",
+     "do": "Wash-your-hands: four parts, four notes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_CHANGE_TUNE",
+     "listen_for": [
+      "it changes too"
+     ],
+     "ask": "You put new words to a song you know. What happens to the tune?",
+     "repair": "Sing the old words, then the new words, while humming partners keep the tune."
+    },
+    {
+     "code": "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_TOO_MANY",
+     "listen_for": [
+      "as many as you like"
+     ],
+     "ask": "The line has four notes. How many word parts fit?",
+     "repair": "Clap the notes, then clap the new words, and compare."
+    },
+    {
+     "code": "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_NO_SENSE",
+     "listen_for": [
+      "no, any words will do"
+     ],
+     "ask": "Do the new words of a song need to make sense?",
+     "repair": "Sing a nonsense line and a sensible one; ask which tells us something."
+    },
+    {
+     "code": "CREA.G2.CREATI.MELODY.NEW_WORDS.M_CAC2_NW_NEW_SONG_NAME",
+     "listen_for": [
+      "no, songs cannot change"
+     ],
+     "ask": "Can you sing new words about washing hands to a tune you already know?",
+     "repair": "Sing a hand-washing verse to a tune the class knows."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When you put new words to a tune, does the tune change?",
+     "answer": "no",
+     "shows": "tune"
+    },
+    {
+     "question": "How many word parts go on each note?",
+     "answer": "one",
+     "shows": "fit"
+    }
+   ]
+  }
+ ]
+}

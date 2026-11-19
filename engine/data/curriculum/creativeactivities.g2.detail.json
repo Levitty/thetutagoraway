@@ -1,0 +1,253 @@
+{
+ "outcomes": {
+  "CREA.G2.CREATI.HOPPING.a": "identify different directions of hopping for space awareness",
+  "CREA.G2.CREATI.HOPPING.b": "perform hopping in different directions for agility",
+  "CREA.G2.CREATI.HOPPING.c": "make pattern formations while hopping in different directions for coordination",
+  "CREA.G2.CREATI.HOPPING.d": "appreciate hopping in different directions for fitness",
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.a": "identify texture on surfaces",
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.b": "create texture on paper by rubbing on surfaces",
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.c": "apply texture on drawn shapes",
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.d": "paint regular shapes using a brush",
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.e": "enjoy drawing and painting for creativity",
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.a": "identify different ways of creating rhythms in music",
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.b": "imitate repetitive rhythmic sounds for rhythm awareness",
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.c": "recite/clap rhythmic patterns of simple words to develop a sense of rhythm",
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.d": "create rhythmic patterns based on simple words",
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.e": "create simple shape patterns by printing",
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.f": "appreciate rhythmic improvisation as a way of developing rhythm skills",
+  "CREA.G2.CREATI.TURNING.a": "identify the different directions of turning body in movement",
+  "CREA.G2.CREATI.TURNING.b": "perform turning body in different directions for coordination",
+  "CREA.G2.CREATI.TURNING.c": "appreciate turning activities as a basic skill for body movement during play",
+  "CREA.G2.CREATI.MOSAIC.a": "identify a mosaic picture",
+  "CREA.G2.CREATI.MOSAIC.b": "identify materials and tools used in making a mosaic",
+  "CREA.G2.CREATI.MOSAIC.c": "make a mosaic for self-expression",
+  "CREA.G2.CREATI.MOSAIC.d": "appreciate mosaic for aesthetic awareness",
+  "CREA.G2.CREATI.MELODY.a": "identify melodic variations in simple tunes for aural discrimination",
+  "CREA.G2.CREATI.MELODY.b": "use basic shapes to represent melodic variations in a simple song",
+  "CREA.G2.CREATI.MELODY.c": "improvise new words to existing tunes for self-expression",
+  "CREA.G2.CREATI.MELODY.d": "enjoy improvising text to familiar tunes",
+  "CREA.G2.CREATI.MELODY.e": "value melodic variation in creating a melody",
+  "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.a": "identify singing games in Western style",
+  "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.b": "sing appropriate game songs in Western style",
+  "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.c": "use props in performing a singing game in Western style",
+  "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.d": "perform singing games in Western style observing performance aspects",
+  "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.e": "enjoy performing singing games in Western style",
+  "CREA.G2.PERFOR.KICKING.a": "identify parts of the leg used when kicking a ball",
+  "CREA.G2.PERFOR.KICKING.b": "perform kicking a ball in different directions for skill acquisition",
+  "CREA.G2.PERFOR.KICKING.c": "appreciate kicking the ball in different directions as a fundamental skill in games",
+  "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.a": "identify different materials for plaiting a bracelet",
+  "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.b": "make a single strand bracelet using the plaiting technique",
+  "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.c": "value plaiting technique and ornament making",
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.a": "identify different directions the body moves when performing an egg roll in gymnastics",
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.b": "identify body parts used to perform a swan balance in gymnastics",
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.c": "improvise markers for use during performance of the egg roll and swan balance",
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.d": "perform the egg roll and swan balance in gymnastics for skill acquisition",
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.e": "appreciate performing the egg roll and swan balance for fun",
+  "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.a": "identify wind musical instruments from indigenous Kenyan communities",
+  "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.b": "improvise a wind instrument using locally available materials",
+  "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.c": "produce sound on an improvised musical wind instrument",
+  "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.d": "enjoy playing an improvised musical wind instrument",
+  "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.a": "identify items made by coil method",
+  "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.b": "model items using the coil method",
+  "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.c": "appreciate modelling using the coiling technique",
+  "CREA.G2.PERFOR.SONGS.a": "identify a topical song for knowledge acquisition",
+  "CREA.G2.PERFOR.SONGS.b": "describe the message of a given topical song",
+  "CREA.G2.PERFOR.SONGS.c": "perform a topical song applying performance techniques",
+  "CREA.G2.PERFOR.SONGS.d": "appreciate the importance of performing topical songs",
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.a": "identify the participants in a Western style singing game performance",
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.b": "identify costumes used in a Western style singing game performance",
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.c": "identify props used in a Western style singing game",
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.d": "describe the message in a singing game",
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.e": "appreciate the aspects in the performances of a singing game in Western style",
+  "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.a": "recognise different water points in the school environment",
+  "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.b": "perform singing games on water safety around water points in school",
+  "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.c": "narrate ways of applying water safety precautions in the school",
+  "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.d": "appreciate water safety at school for life skills"
+ },
+ "skills": {
+  "CREA.G2.CREATI.HOPPING.HOP_DIRECTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says hopping is taking off and landing on the same one foot, tells it from jumping (two feet) and from skipping, names the directions (forward, backward, to the right, to the left) and the floor patterns (straight, curved, circular, zigzag). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: b) perform hopping in different directions for agility; c) make pattern formations while hopping in different directions for coordination."
+  },
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.TEXTURE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says texture is how a surface feels or looks as if it would feel (rough, smooth, bumpy, ridged), names surfaces with each texture (tree bark, a leaf, a coin, a woven mat, a wall), and says a rubbing is made by laying thin paper on the surface and rubbing the side of a crayon over it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: b) create texture on paper by rubbing on surfaces; c) apply texture on drawn shapes."
+  },
+  "CREA.G2.CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the regular shapes they paint (circle, square, triangle, rectangle), and says how to use a brush: dip only the tip, wipe the extra paint on the edge of the pot, paint inside the outline in one direction, and wash the brush before taking a new colour. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: d) paint regular shapes using a brush."
+  },
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.RHYTHM_WAYS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the ways of making rhythm in music (reciting words, clapping, tapping, stamping, humming) and picks the way being used in a short performance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: b) imitate repetitive rhythmic sounds for rhythm awareness."
+  },
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.WORD_RHYTHM": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says each part (syllable) of a word gets one clap, counts the claps for simple words (cat 1, ma-ma 2, ba-na-na 3, Nai-ro-bi 3), and matches a clapped pattern to the word or name it fits. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: c) recite/clap rhythmic patterns of simple words to develop a sense of rhythm; d) create rhythmic patterns based on simple words."
+  },
+  "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.SHAPE_PATTERN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the shapes in a printed pattern (circles, triangles, squares), says which part repeats, and says which shape comes next in a pattern such as circle, square, circle, square, or circle, circle, triangle. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: e) create simple shape patterns by printing."
+  },
+  "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names a turn to the left and a turn to the right, says a half turn ends facing the back and a full turn ends facing the front again, and says which way they face after a turn or two turns put together. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: b) perform turning body in different directions for coordination."
+  },
+  "CREA.G2.CREATI.MOSAIC.MOSAIC": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says a mosaic is a picture made of many small pieces of about the same size stuck close together with small gaps between them, names materials (coloured paper, seeds, eggshells, bottle tops, small stones) and tools (scissors, glue or paste, a brush), and tells a mosaic from a painting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: c) make a mosaic for self-expression."
+  },
+  "CREA.G2.CREATI.MELODY.SAME_DIFFERENT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child hears two short tunes and says if they are the same or different, and shows a song with shapes: the same shape for a tune that comes back, a different shape (circle, triangle, square) for a new tune. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G2.CREATI.MELODY.NEW_WORDS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says that when new words are put to a known tune the tune stays the same, the new words must fit the same number of notes and beats, and the words should make sense together (a song about washing hands to a tune the class knows). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.1.1), never as a phone question: c) improvise new words to existing tunes for self-expression."
+  },
+  "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.WESTERN_GAMES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names Western-style singing games (Here we go round the mulberry bush, London Bridge is falling down, The farmer's in his den, In and out the windows), and the parts of a singing game: the song, the game actions, the formation (a ring, a line, an arch), props and costumes, and the safety rules (good posture, holding hands gently, keeping the circle). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: b) sing appropriate game songs in Western style; c) use props in performing a singing game in Western style; d) perform singing games in Western style observing performance aspects."
+  },
+  "CREA.G2.PERFOR.KICKING.KICK": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the parts used to kick (the thigh, the knee, the lower leg, the inside of the foot, the top of the foot, the toes), says the inside of the foot gives a short, accurate kick, the standing foot goes beside the ball and the eyes stay on the ball, and names the directions of a kick (forward, backward, left, right). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: b) perform kicking a ball in different directions for skill acquisition."
+  },
+  "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.PLAIT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names materials for plaiting a bracelet (threads, reused polythene strips, banana fibre, sisal), and says the steps of a three-strand plait: tie the three strands at the top, cross the right strand over the middle, then the left strand over the middle, repeat, and tie the end. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: b) make a single strand bracelet using the plaiting technique."
+  },
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.EGG_ROLL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says in an egg roll the body is curled tight like an egg (knees to chest, arms holding the shins, chin tucked) and rolls sideways along the mat, to the left and to the right, and says markers show where to start and stop. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: c) improvise markers for use during performance of the egg roll and swan balance; d) perform the egg roll and swan balance in gymnastics for skill acquisition."
+  },
+  "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.SWAN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says in a swan balance the child stands on one leg, leans the body forward, stretches the other leg straight out behind and spreads the arms like wings, with the head up, and holds still. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: d) perform the egg roll and swan balance in gymnastics for skill acquisition."
+  },
+  "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names wind instruments from indigenous Kenyan communities (flutes made from bamboo, reeds or gourds; horns such as the siwa), says the sound comes from blowing, and that a flute is played by holding it with the fingers over the holes and blowing gently. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: b) improvise a wind instrument using locally available materials; c) produce sound on an improvised musical wind instrument."
+  },
+  "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.COIL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names items made by coiling (pots, bowls, baskets, mats) and orders the coil method: roll long, even coils of clay, wind them round on a flat base, join each coil to the one below by pressing and smoothing, and smooth the sides. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: b) model items using the coil method."
+  },
+  "CREA.G2.PERFOR.SONGS.SONG_MESSAGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says a topical song is about one topic (washing hands, road safety, keeping the school clean, caring for animals), names the topic of a song they know and says its message in their own words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G2.PERFOR.SONGS.SONG_TECHNIQUES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the techniques of performing a song (the right tune, clear words, gestures that match the words, facial expressions that match the mood) and says which technique a performer forgot in a short story. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.2.1), never as a phone question: c) perform a topical song applying performance techniques."
+  },
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_PARTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the participants of a Western singing game (the singers in the ring, the one in the middle such as the farmer, the two who make the bridge), the costumes they may wear and the props they use (a scarf, a hat, a hoop, a handkerchief), and tells a prop from a costume. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.GAME_MESSAGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child says what a singing game is about (London Bridge: building and mending; Here we go round the mulberry bush: the jobs we do each day; The farmer's in his den: a farm family and its animals) and what it teaches (working together, taking turns, daily routines). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.WATER_POINTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names the water points in the school environment (taps, water tanks, a well, a borehole, a pond, a drain or trench that fills with rain water) and says which can be dangerous to a small child. Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception."
+  },
+  "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.SAFETY_SCHOOL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "spot the mistake in a friend's answer"
+   ],
+   "mastery": "The child names water safety rules at school (do not play at the taps or tanks, close taps after use, wipe or avoid wet slippery floors, keep away from ponds and trenches, never climb water tanks, tell a teacher about an open tank or well). Evidence rule: at least four of the last five fresh questions right across at least two question forms, read aloud to the child where needed, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G2.RUBRIC.3.1), never as a phone question: b) perform singing games on water safety around water points in school."
+  }
+ }
+}

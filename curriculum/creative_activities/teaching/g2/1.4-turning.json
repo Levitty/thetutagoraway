@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G2.CREATI.TURNING",
+ "title": "Turning",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mark the front of the room clearly. Turn slowly and say where you face after each turn.",
+ "skills": [
+  {
+   "skill": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS",
+   "key_step": "The child names left and right turns and says where a half turn and a full turn end.",
+   "floor": {
+    "prerequisite": "Stretches in named directions (Grade 1).",
+    "question": "Stretch upwards.",
+    "answer": "stretches up"
+   },
+   "representations": [
+    "a marked front wall",
+    "arrow cards",
+    "a drum"
+   ],
+   "steps": [
+    "Face the front.",
+    "Turn the way you are told.",
+    "Say where you face now."
+   ],
+   "contexts": [
+    "a dance at a school event",
+    "a game of follow the leader"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Face the board. Make a half turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Children turn."
+    },
+    {
+     "beat": "predict",
+     "do": "Where do you face?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The back of the room."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_HALF_SIDE",
+     "listen_for": [
+      "the window at the side"
+     ],
+     "ask": "You face the board and make a half turn. Where do you face?",
+     "repair": "Face the board, turn slowly and stop when you see the back wall."
+    },
+    {
+     "code": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_FULL_BACK",
+     "listen_for": [
+      "the back of the room"
+     ],
+     "ask": "You face the board and make a full turn. Where do you face?",
+     "repair": "Turn all the way round until you see the board again."
+    },
+    {
+     "code": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_LEFT_RIGHT",
+     "listen_for": [
+      "the left shoulder goes forward"
+     ],
+     "ask": "Turn to your left. Which shoulder goes back?",
+     "repair": "Hold up the left hand in an L shape before turning."
+    },
+    {
+     "code": "CREA.G2.CREATI.TURNING.TURN_DIRECTIONS.M_CAC2_TU_TWO_HALVES",
+     "listen_for": [
+      "the back"
+     ],
+     "ask": "You make two half turns. Where do you face?",
+     "repair": "Make one half turn, say where you face, then another."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where do you face after a full turn?",
+     "answer": "where you started",
+     "shows": "full turn"
+    },
+    {
+     "question": "Where do you face after a half turn from the front?",
+     "answer": "the back",
+     "shows": "half turn"
+    }
+   ]
+  }
+ ]
+}

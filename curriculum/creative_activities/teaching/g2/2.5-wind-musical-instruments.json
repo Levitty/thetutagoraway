@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS",
+ "title": "Wind Musical Instruments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Show real flutes or pictures. The teacher prepares straws or bamboo with holes; children blow gently.",
+ "skills": [
+  {
+   "skill": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND",
+   "key_step": "The child names indigenous wind instruments, says they sound by blowing, and holds a flute with fingers over the holes, blowing gently.",
+   "floor": {
+    "prerequisite": "Names percussion instruments (Grade 1).",
+    "question": "How do you play a shaker?",
+    "answer": "by shaking it"
+   },
+   "representations": [
+    "pictures or real flutes and horns",
+    "straw flutes",
+    "a recording"
+   ],
+   "steps": [
+    "Look: is it blown?",
+    "Hold with fingers over the holes.",
+    "Blow gently.",
+    "Name the instrument."
+   ],
+   "contexts": [
+    "a cultural day",
+    "a music festival"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a flute.",
+     "say": "How is it played?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: blowing."
+    },
+    {
+     "beat": "predict",
+     "do": "Hard or gently?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Gently."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_DRUM",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a drum a wind instrument?",
+     "repair": "Blow on a drum: no sound. Hit it: sound."
+    },
+    {
+     "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_BLOW_HARD",
+     "listen_for": [
+      "as hard as you can"
+     ],
+     "ask": "How do you blow a flute?",
+     "repair": "Blow hard (a squeak) and gently (a clear note)."
+    },
+    {
+     "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_HOLES",
+     "listen_for": [
+      "decoration"
+     ],
+     "ask": "What are the holes on a flute for?",
+     "repair": "Cover and uncover a hole while blowing."
+    },
+    {
+     "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND.M_CAC2_WI_SHARE",
+     "listen_for": [
+      "give it straight away"
+     ],
+     "ask": "Your friend wants to play your flute. What do you do first?",
+     "repair": "Show how to wipe the mouthpiece with a clean cloth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is a wind instrument played?",
+     "answer": "by blowing",
+     "shows": "wind"
+    },
+    {
+     "question": "What do the holes on a flute do?",
+     "answer": "change the note",
+     "shows": "holes"
+    }
+   ]
+  }
+ ]
+}
