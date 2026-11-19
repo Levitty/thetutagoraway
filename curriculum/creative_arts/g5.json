@@ -2372,8 +2372,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making toys from materials (Grade 3) is the first making with tools. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -2834,8 +2834,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.WEAVING.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.WEAVING.PAPER_WEAVE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Weaving strips over and under (Grade 3) is the first step to plaiting. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -3231,8 +3231,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.COLLAGE.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.COLLAGE.COLLAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Preparing materials for a collage (Grade 3) is like preparing pieces for appliqué. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4044,8 +4044,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.a",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Toys made by assemblage (Grade 3) are the first puppets children meet. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4080,8 +4080,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.b",
-       "kind": "outcome",
+       "requires": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.ASSEMBLAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making toys from materials (Grade 3) is how a glove puppet is made. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
@@ -4848,8 +4848,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
-       "kind": "outcome",
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.SOUND_DURATION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Keeping time to a song (Grade 3) is what counting games to a musical rhythm need. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
