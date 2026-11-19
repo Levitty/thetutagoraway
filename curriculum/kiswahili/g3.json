@@ -88,16 +88,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Greeting and answering at the times of day (Grade 2) comes before the wider greetings of the community.",
        "status": "proposed",
        "grade": 2
       },
       {
-       "requires": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Words of respect of Grade 2 carry into greeting elders.",
        "status": "proposed",
@@ -307,16 +307,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.c",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of a short passage in Grade 2 comes first.",
        "status": "proposed",
        "grade": 2
       },
       {
-       "requires": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.d",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Saying the lesson of a short story in Grade 2.",
        "status": "proposed",
@@ -487,16 +487,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUANDI.T1_HATI_NADHIFU.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T1_HATI_NADHIFU.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing sentences in neat handwriting (Grade 2) comes before a whole passage.",
        "status": "proposed",
        "grade": 2
       },
       {
-       "requires": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Leaving space between words (Grade 2).",
        "status": "proposed",
@@ -668,16 +668,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.NAFSI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using wewe and nyinyi with their verbs (Grade 2) shows the pattern of a pronoun pair.",
        "status": "proposed",
        "grade": 2
       },
       {
-       "requires": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Huyo and hao (Grade 2) already separate one person from many.",
        "status": "proposed",
@@ -853,16 +853,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Recognising the sounds of the Kiswahili alphabet (Grade 2) is the base for sorting them into vowels and consonants.",
        "status": "proposed",
        "grade": 2
       },
       {
-       "requires": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Finding those sounds in a read passage in Grade 2.",
        "status": "proposed",
@@ -1065,8 +1065,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reading a short story with target sounds and good pronunciation in Grade 2 comes first.",
        "status": "proposed",
@@ -1254,8 +1254,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing capital letters in words and sentences (Grade 2).",
        "status": "proposed",
@@ -1432,8 +1432,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.c",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Singular and plural of word groups (Grade 2) come before whole sentences.",
        "status": "proposed",
@@ -1616,8 +1616,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using the words of respect and courtesy of Grade 2 is the base.",
        "status": "proposed",
@@ -1826,8 +1826,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Theme vocabulary in a short story (Grade 2).",
        "status": "proposed",
@@ -2008,8 +2008,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.HATI_NADHIFU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing small letters in their right shapes (Grade 2).",
        "status": "proposed",
@@ -2183,16 +2183,16 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Huyo and hao (Grade 2) are the pointing words before yule and wale.",
        "status": "proposed",
        "grade": 2
       },
       {
-       "requires": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "One and many in two-word groups (Grade 2).",
        "status": "proposed",
@@ -2370,8 +2370,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing the syllables of a target sound in Grade 2 comes first.",
        "status": "proposed",
@@ -2759,8 +2759,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.NAFASI_KATI_YA_MANENO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Space between words (Grade 2) is the first rule of layout.",
        "status": "proposed",
@@ -2928,8 +2928,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.c",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing singular and plural word groups (Grade 2).",
        "status": "proposed",
@@ -3101,8 +3101,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.d",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of a heard story in Grade 2 comes first.",
        "status": "proposed",
@@ -3311,8 +3311,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Predicting from a short passage in Grade 2.",
        "status": "proposed",
@@ -3490,8 +3490,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUANDI.T5_UAKIFISHI.c",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T5_UAKIFISHI.ALAMA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Using the kiulizi in a sentence (Grade 2) comes first.",
        "status": "proposed",
@@ -3675,8 +3675,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "-ako and -enu (Grade 2) show the owner pattern first.",
        "status": "proposed",
@@ -3864,8 +3864,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing the syllables of target sounds in words and sentences (Grade 2).",
        "status": "proposed",
@@ -4075,8 +4075,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.d",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading a short story at a fitting pace (Grade 2).",
        "status": "proposed",
@@ -4258,8 +4258,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.IMLA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing three-syllable words from dictation (Grade 2).",
        "status": "proposed",
@@ -4443,8 +4443,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.VIVUMISHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "-refu, -kubwa and -tamu (Grade 2) are the first adjectives that agree.",
        "status": "proposed",
@@ -4617,8 +4617,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSIKI.T7_MAAGIZO.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T7_MAAGIZO.MAAGIZO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Giving and following two-step instructions in Grade 2 comes first.",
        "status": "proposed",
@@ -4811,8 +4811,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.c",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of a short passage (Grade 2).",
        "status": "proposed",
@@ -4995,8 +4995,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.KIFUNGU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing a short paragraph about his surroundings (Grade 2).",
        "status": "proposed",
@@ -5180,8 +5180,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.UKANUSHAJI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The negative of the second person (Grade 2) shows the pattern.",
        "status": "proposed",
@@ -5360,8 +5360,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying words and sentences with target sounds (Grade 2).",
        "status": "proposed",
@@ -5571,8 +5571,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading a short story with good pronunciation (Grade 2).",
        "status": "proposed",
@@ -5751,8 +5751,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T8_TAHAJIA.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T8_TAHAJIA.TAHAJIA",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writing sentences with correct spelling (Grade 2).",
        "status": "proposed",
@@ -5940,8 +5940,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Huyo and hao (Grade 2).",
        "status": "proposed",
@@ -6117,8 +6117,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.c",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.MAZUNGUMZO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Speaking fluently in an unprepared talk (Grade 2) comes first.",
        "status": "proposed",
@@ -6324,8 +6324,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Predicting what will happen in a short passage (Grade 2).",
        "status": "proposed",
@@ -6699,8 +6699,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Writing two-word groups (Grade 2) comes before three-word place phrases.",
        "status": "proposed",
@@ -6880,8 +6880,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.a",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing target syllables in words (Grade 2).",
        "status": "proposed",
@@ -7091,8 +7091,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.d",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading at a fitting pace (Grade 2).",
        "status": "proposed",
@@ -7276,8 +7276,8 @@
        "grade": 3
       },
       {
-       "requires": "KISW.G2.KUANDI.T7_UHARIRI.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Editing his own writing (Grade 2) before the clean copy.",
        "status": "proposed",
@@ -7454,8 +7454,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.b",
-       "kind": "outcome",
+       "requires": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Opposite actions in sentences (Grade 2) come first.",
        "status": "proposed",

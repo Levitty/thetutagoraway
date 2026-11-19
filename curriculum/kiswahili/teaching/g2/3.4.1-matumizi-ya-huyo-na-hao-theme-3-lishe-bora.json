@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_",
+ "title": "Matumizi ya Huyo na Hao (Theme 3: Lishe bora)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on lishe bora using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "lishe bora",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Huyo ni mpishi; hao ni wapishi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"hao\".",
+     "say": "Wapishi ni wangapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI.M2_SAR_CLASSDEM_T3",
+     "listen_for": [
+      "huyo"
+     ],
+     "ask": "Ni mtu au ni kitu?",
+     "repair": "Kitu cha ngeli ya ki-vi huonyeshwa kwa hiki; mtu huonyeshwa kwa huyu. (hicho)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI.M2_SAR_NUMDEM_T3",
+     "listen_for": [
+      "huyo"
+     ],
+     "ask": "Ni mmoja au ni wengi?",
+     "repair": "Watoto ni wengi: watoto hawa. (hao)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI.M2_SAR_DIST_T3",
+     "listen_for": [
+      "huyo"
+     ],
+     "ask": "Yuko karibu nawe au mbali?",
+     "repair": "Huyu ni karibu nami; yule ni mbali. (huyu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.VIONYESHI.M2_SAR_HII_T3",
+     "listen_for": [
+      "hii"
+     ],
+     "ask": "Neno hili la kuonyesha linakubaliana na nomino?",
+     "repair": "Kitabu hiki; mtoto huyu; nyumba hii. (huyo)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Watoto ___ (walio karibu nawe) wanakula.",
+     "answer": "hao",
+     "shows": "plural"
+    },
+    {
+     "question": "Jaza: Mzee ___ (aliye karibu nawe) ni babu yangu.",
+     "answer": "huyo",
+     "shows": "singular"
+    }
+   ]
+  }
+ ]
+}

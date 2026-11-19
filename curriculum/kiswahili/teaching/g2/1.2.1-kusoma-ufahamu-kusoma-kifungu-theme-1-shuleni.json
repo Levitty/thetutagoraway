@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM",
+ "title": "Kusoma Ufahamu Kusoma kifungu. (Theme 1: Shuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "the picture beside the passage",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "shuleni",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Leo ni siku ya kwanza ya Neema shuleni. Mwalimu alimkaribisha darasani kwa tabasamu. Neema alipata rafiki mpya anayeitwa Amani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU.M2_UFM_WORD_T1",
+     "listen_for": [
+      "kukasirisha"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"kukaribisha\" ni kumpokea mtu kwa furaha."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU.M2_UFM_MSG_T1",
+     "listen_for": [
+      "Neema alipata rafiki."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Shule ni mahali pazuri pa kupata marafiki na kujifunza."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU.M2_UFM_GUESS_T1",
+     "listen_for": [
+      "Watalala darasani."
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za picha na za kifungu: Wataenda kucheza wakati wa mapumziko."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU.M2_UFM_LESSON_T1",
+     "listen_for": [
+      "Mwalimu alitabasamu."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tunapaswa kuwakaribisha wanafunzi wapya kwa upendo."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.UFAHAMU.M2_UFM_OWN_T1",
+     "listen_for": [
+      "Rafiki yangu anaitwa Juma."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: Amani"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"kukaribisha\" ni nini?",
+     "answer": "kumpokea mtu kwa furaha",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tunapaswa kuwakaribisha wanafunzi wapya kwa upendo.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

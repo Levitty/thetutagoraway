@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E",
+ "title": "Matumizi ya -ako na –enu (Theme 5: Mnyama nimpendaye)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on mnyama nimpendaye using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "mnyama nimpendaye",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Paka wako ni mweupe; paka wenu ni weusi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wenu\".",
+     "say": "Wenye paka ni wangapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI.M2_SAR_CONCPOSS_T5",
+     "listen_for": [
+      "yako"
+     ],
+     "ask": "Nomino ni ya ngeli gani?",
+     "repair": "Kitabu changu; kiti chake: kimilikishi hufuata ngeli. (wako)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI.M2_SAR_NUMPOSS_T5",
+     "listen_for": [
+      "chako"
+     ],
+     "ask": "Vitabu ni vingi; kimilikishi kimebadilika?",
+     "repair": "Vitabu vyangu: vyote viwili hubadilika. (vyako)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI.M2_SAR_OWNER_T5",
+     "listen_for": [
+      "yako"
+     ],
+     "ask": "Kitu hiki ni cha nani?",
+     "repair": "Mwenye kitu ni nani? Mimi: changu; yeye: chake; wao: chao. (yenu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.VIMILIKISHI.M2_SAR_ORDERPOSS_T5",
+     "listen_for": [
+      "wako paka"
+     ],
+     "ask": "Neno lipi linaanza?",
+     "repair": "Nomino kwanza, kimilikishi baadaye: kalamu yangu. (paka wako)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Juma, mbuzi ___ amepotea.",
+     "answer": "wako",
+     "shows": "one owner"
+    },
+    {
+     "question": "Jaza: Watoto, kalamu ___ ziko mezani.",
+     "answer": "zenu",
+     "shows": "many owners"
+    }
+   ]
+  }
+ ]
+}

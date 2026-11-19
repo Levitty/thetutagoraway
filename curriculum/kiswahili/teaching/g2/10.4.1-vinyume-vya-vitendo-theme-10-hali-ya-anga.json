@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO",
+ "title": "Vinyume vya Vitendo (Theme 10: Hali ya anga)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on hali ya anga using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "hali ya anga",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mvua ilianza asubuhi, ikamaliza jioni."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ikamaliza\".",
+     "say": "Ni kitendo gani kinapingana na anza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M2_SAR_NEGATE_T10",
+     "listen_for": [
+      "usifungue"
+     ],
+     "ask": "Ni kitendo gani kinarudisha hali ilivyokuwa?",
+     "repair": "Kinyume cha kitendo ni kitendo kingine: fungua - funga. (funga)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M2_SAR_ADDUA_T10",
+     "listen_for": [
+      "simamua"
+     ],
+     "ask": "Je, \"ketua\" ni neno la Kiswahili?",
+     "repair": "Kinyume cha keti ni simama. (keti)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M2_SAR_SAME_T10",
+     "listen_for": [
+      "zindua"
+     ],
+     "ask": "Vitendo hivi vinafanana au vinapingana?",
+     "repair": "Kinyume ni kitendo kinachopingana. (maliza)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.VINYUME.M2_SAR_NOUNOPP_T10",
+     "listen_for": [
+      "chini"
+     ],
+     "ask": "Jibu lako ni kitendo?",
+     "repair": "Kinyume cha ingia ni toka. (shuka)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"funga\" ni?",
+     "answer": "fungua",
+     "shows": "reversive"
+    },
+    {
+     "question": "Kinyume cha \"keti\" ni?",
+     "answer": "simama",
+     "shows": "different word"
+    }
+   ]
+  }
+ ]
+}

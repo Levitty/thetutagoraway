@@ -23,6 +23,7 @@ import english_g9 from './english_g9.js';
 import integratedscience_g7 from './integratedscience_g7.js';
 import integratedscience_g8 from './integratedscience_g8.js';
 import integratedscience_g9 from './integratedscience_g9.js';
+import kiswahili_g2 from './kiswahili_g2.js';
 import kiswahili_g3 from './kiswahili_g3.js';
 import kiswahili_g4 from './kiswahili_g4.js';
 import kiswahili_g5 from './kiswahili_g5.js';
@@ -67,6 +68,7 @@ export const ENTRIES = [
   integratedscience_g7,
   integratedscience_g8,
   integratedscience_g9,
+  kiswahili_g2,
   kiswahili_g3,
   kiswahili_g4,
   kiswahili_g5,

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa ufahamu (Theme 9: Hospitalini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "the picture beside the passage",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "hospitalini",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Amina alikuwa na homa. Mama alimpeleka hospitalini. Daktari alimpima na kumpa dawa. Baada ya siku tatu, Amina alipona."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M2_UFM_WORD_T9",
+     "listen_for": [
+      "hema"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"homa\" ni ugonjwa wa mwili kuwa na joto jingi."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M2_UFM_MSG_T9",
+     "listen_for": [
+      "Amina alienda hospitalini."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tukiugua twende hospitalini mapema tupate matibabu."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M2_UFM_GUESS_T9",
+     "listen_for": [
+      "Atarudi hospitalini."
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za picha na za kifungu: Atarudi shuleni."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M2_UFM_LESSON_T9",
+     "listen_for": [
+      "Daktari alimpima Amina."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tunapaswa kumeza dawa kama daktari anavyoagiza."
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.UFAHAMU.M2_UFM_OWN_T9",
+     "listen_for": [
+      "Mimi nilipona baada ya wiki moja."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: siku tatu"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"homa\" ni nini?",
+     "answer": "ugonjwa wa mwili kuwa na joto jingi",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tunapaswa kumeza dawa kama daktari anavyoagiza.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

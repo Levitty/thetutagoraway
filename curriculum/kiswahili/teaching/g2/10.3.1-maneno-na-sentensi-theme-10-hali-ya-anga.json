@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI",
+ "title": "Maneno Na Sentensi (Theme 10: Hali ya anga)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA",
+   "key_step": "The child says the word slowly, listens for the hard part (the sound, the nasal, the long vowel), writes it and reads it back.",
+   "floor": {
+    "prerequisite": "Writes simple open-syllable words (mama, baba, kaka).",
+    "question": "Andika: kaka",
+    "answer": "kaka"
+   },
+   "representations": [
+    "a list of hard pairs",
+    "syllable claps",
+    "a word wall of the theme words"
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Say it slowly.",
+    "Write it syllable by syllable.",
+    "Read it back and check."
+   ],
+   "contexts": [
+    "hali ya anga",
+    "a weekly spelling test",
+    "writing a shopping list"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mvu-a"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the nasal.",
+     "say": "Unasikia nini mwanzoni?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes three theme words read by the teacher and checks them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA.M2_TAH_MT_T10",
+     "listen_for": [
+      "ladi"
+     ],
+     "ask": "Unasikia sauti gani hapa?",
+     "repair": "Andika \"radi\" kama linavyotamkwa kwa Kiswahili sanifu."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA.M2_TAH_NASAL_T10",
+     "listen_for": [
+      "vua"
+     ],
+     "ask": "Unasikia sauti ya pua?",
+     "repair": "\"mvua\" lina sauti ya pua mwanzoni."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA.M2_TAH_VOWEL_T10",
+     "listen_for": [
+      "sa"
+     ],
+     "ask": "Irabu ngapi unasikia?",
+     "repair": "\"saa\" lina irabu mbili zinazofuatana."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA.M2_TAH_NGAPOS_T10",
+     "listen_for": [
+      "ngombe"
+     ],
+     "ask": "Unasikia /g/ katika neno hili?",
+     "repair": "Ng'ombe huandikwa na kibainishi: ng'."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.TAHAJIA.M2_TAH_JOIN_T10",
+     "listen_for": [
+      "Nilichelewa kwasababu ya mvua."
+     ],
+     "ask": "Ni maneno mangapi hapa?",
+     "repair": "\"Kwa sababu\" ni maneno mawili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika: radi",
+     "answer": "radi",
+     "shows": "sound"
+    },
+    {
+     "question": "Andika: mvua",
+     "answer": "mvua",
+     "shows": "nasal"
+    }
+   ]
+  }
+ ]
+}

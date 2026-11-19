@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI",
+ "title": "Umoja na Wingi wa Vifungu (Theme 2: Haki zangu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on haki zangu using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "haki zangu",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "chakula changu - vyakula vyetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"vyakula\".",
+     "say": "Kiambishi kimebadilikaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI.M2_SAR_WRONGCLASS_T2",
+     "listen_for": [
+      "watanda wetu"
+     ],
+     "ask": "Neno hili ni la ngeli gani?",
+     "repair": "Kila ngeli ina wingi wake: kitabu - vitabu, mtoto - watoto. (vitanda vyetu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI.M2_SAR_NUMPOSS_T2",
+     "listen_for": [
+      "viatu changu"
+     ],
+     "ask": "Vitabu ni vingi; kimilikishi kimebadilika?",
+     "repair": "Vitabu vyangu: vyote viwili hubadilika. (viatu vyetu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI.M2_SAR_NUMWORD_T2",
+     "listen_for": [
+      "kikombe viwili"
+     ],
+     "ask": "Nomino inabadilikaje ikiwa zaidi ya moja?",
+     "repair": "Nomino hubadilika pia: vitabu viwili. (vikombe viwili)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI.M2_SAR_REVERSE_T2",
+     "listen_for": [
+      "vyakula vyetu"
+     ],
+     "ask": "Ni kimoja au ni vingi?",
+     "repair": "Kimoja ni kitabu; vingi ni vitabu. (chakula changu)"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.UMOJA_WINGI.M2_SAR_CONCPOSS_T2",
+     "listen_for": [
+      "yangu"
+     ],
+     "ask": "Nomino ni ya ngeli gani?",
+     "repair": "Kitabu changu; kiti chake: kimilikishi hufuata ngeli. (changu)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Wingi wa \"kiti changu\" ni?",
+     "answer": "viti vyetu",
+     "shows": "ki-vi"
+    },
+    {
+     "question": "Umoja wa \"vitabu vyetu\" ni?",
+     "answer": "kitabu changu",
+     "shows": "ki-vi"
+    }
+   ]
+  }
+ ]
+}

@@ -72,7 +72,7 @@ const shorts = new Set(cur.sub_strands.flatMap(s => s.misconceptions.map(m => m.
 const outcomeOf = (s, ref) => {
   const i = ref.lastIndexOf('.');
   const sub = i < 0 ? s : subOf(ref.slice(0, i)), letter = i < 0 ? ref : ref.slice(i + 1);
-  return (sub.outcomes.find(o => o.letter === letter) || fail(`no outcome ${ref} for ${s.code}`)).code;
+  return (sub.outcomes.find(o => o.letter === letter || o.code === `${sub.code}.${letter}`) || fail(`no outcome ${ref} for ${s.code}`)).code;
 };
 
 const LEADS = cur.sub_strands.some(s => s.skills.some(k => k.leads_to));   // Grade 4 skills also name the Grade 5 skills they lead to

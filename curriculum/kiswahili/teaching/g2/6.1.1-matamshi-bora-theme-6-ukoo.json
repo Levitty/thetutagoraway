@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA",
+ "title": "Matamshi Bora: (Theme 6: Ukoo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the target sound as one syllable (nya-nya), says it in one beat, and checks it in the word.",
+   "floor": {
+    "prerequisite": "Says the five vowels a, e, i, o, u and reads open syllables (ma, me, mi, mo, mu).",
+    "question": "Soma: ma - ma",
+    "answer": "mama"
+   },
+   "representations": [
+    "word cards: nyanya, ngoma, nyama",
+    "clapping one beat for each syllable",
+    "a sentence with the sounds: Nyanya alicheza ngoma kwenye sherehe ya ukoo."
+   ],
+   "steps": [
+    "Listen to the word.",
+    "Find the target sound.",
+    "Clap the syllables.",
+    "Say the word in one go and use it in a sentence."
+   ],
+   "contexts": [
+    "ukoo: bibi, babu na nyanya",
+    "a class word tree",
+    "a song with the sounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "nya-nya"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the target syllable.",
+     "say": "Silabi hii inatamkwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says each word on the card and claps its syllables."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M2_SAU_NEAR_T6",
+     "listen_for": [
+      "nanya"
+     ],
+     "ask": "Ulisikia /ny/ au /n/?",
+     "repair": "Sikiliza: \"nyanya\" ina sauti /ny/, si /n/."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M2_SAU_VOWEL_T6",
+     "listen_for": [
+      "niyota"
+     ],
+     "ask": "Unapiga makofi mangapi kwa neno hili?",
+     "repair": "\"nyota\" ina silabi nyo-ta; hakuna irabu ya ziada."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M2_SAU_DROP_T6",
+     "listen_for": [
+      "goma"
+     ],
+     "ask": "Kuna sauti gani baada ya herufi ya kwanza katika \"ngoma\"?",
+     "repair": "Sikiliza tena: \"ngoma\". Usiache sehemu ya sauti."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M2_SAU_SYLL_T6",
+     "listen_for": [
+      "n-y-a-n-y-a"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: nya-nya."
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.MATAMSHI.M2_SAU_PICK_T6",
+     "listen_for": [
+      "baba"
+     ],
+     "ask": "Sauti hiyo iko wapi katika neno hili?",
+     "repair": "\"ngoma\" ina sauti lengwa; \"baba\" haina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gawa \"nyama\" kwa silabi.",
+     "answer": "nya-ma",
+     "shows": "syllables"
+    },
+    {
+     "question": "Ni neno lipi lina sauti lengwa: ngoma au baba?",
+     "answer": "ngoma",
+     "shows": "hearing the sound"
+    }
+   ]
+  }
+ ]
+}

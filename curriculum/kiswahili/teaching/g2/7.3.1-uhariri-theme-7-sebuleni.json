@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G2.KUANDI.T7_UHARIRI",
+ "title": "Uhariri: (Theme 7: Sebuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI",
+   "key_step": "The child reads his writing aloud with a finger under each word and checks four things on a card before the clean copy.",
+   "floor": {
+    "prerequisite": "Writes a sentence with a capital and a kikomo.",
+    "question": "Andika sentensi kuhusu sebule yenu.",
+    "answer": "Sebule yetu ni safi."
+   },
+   "representations": [
+    "an editing card with four checks",
+    "a passage with planted errors",
+    "a coloured pencil for corrections"
+   ],
+   "steps": [
+    "Read aloud with a finger.",
+    "Check capitals and marks.",
+    "Check for missing words and spelling.",
+    "Write the clean copy."
+   ],
+   "contexts": [
+    "sebuleni: a passage about the sitting room",
+    "a note to a parent",
+    "a class story wall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "tuliketi sebuleni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter.",
+     "say": "Kuna kosa gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds and corrects two errors in his own sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI.M2_HAR_NEAT_T7",
+     "listen_for": [
+      "kuandika upya kwa mwandiko mzuri"
+     ],
+     "ask": "Umepata makosa mangapi?",
+     "repair": "Kuhariri ni kutafuta na kusahihisha makosa."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI.M2_HAR_NOREAD_T7",
+     "listen_for": [
+      "Mama alipika chakula kitamu sana sana."
+     ],
+     "ask": "Ukisoma kwa sauti, unasikia nini?",
+     "repair": "Soma kwa sauti, neno kwa neno."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI.M2_HAR_CAPSTOP_T7",
+     "listen_for": [
+      "tuliketi sebuleni"
+     ],
+     "ask": "Sentensi inaanza na kuishaje?",
+     "repair": "Angalia herufi kubwa mwanzoni na kikomo mwishoni."
+    },
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.UHARIRI.M2_HAR_HOLE_T7",
+     "listen_for": [
+      "ninalifuta kwa nguvu au kulichora juu"
+     ],
+     "ask": "Mwalimu ataweza kusoma marekebisho yako?",
+     "repair": "Piga mstari mmoja juu ya kosa, andika sahihi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Hariri: baba anasoma gazeti",
+     "answer": "Baba anasoma gazeti.",
+     "shows": "capital and kikomo"
+    },
+    {
+     "question": "Kuhariri ni nini?",
+     "answer": "kusahihisha makosa",
+     "shows": "editing"
+    }
+   ]
+  }
+ ]
+}
