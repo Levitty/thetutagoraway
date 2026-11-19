@@ -92,15 +92,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.PLANT_SAFETY",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.PLANTS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.PLANTS.PLANT_CARE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Caring for plants in Grade 2 is where the child first sees plants need water and grow. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -141,8 +141,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.PLANTS.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.PLANTS.EDIBLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making a kitchen garden in Grade 3 shows roots, stems and leaves on real plants. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -399,17 +399,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.RESOUR.ANIMALS.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "ENVI.G3.RESOUR.ANIMALS.DOMESTIC_ANIMALS",
+       "kind": "skill",
+       "reason": "Caring for domestic animals in Grade 3 shows that animals feed, grow and need shelter. Proposed, to confirm by a CBC Science and Technology teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.ANIMALS.b",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Caring for domestic animals in Grade 3 shows that animals feed, grow and need shelter. Proposed, to confirm by a CBC Science and Technology teacher.",
+       "requires": "ENVI.G1.RESOUR.ANIMALS.DOMESTIC",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Naming the domestic animals of the locality (Grade 1) gives the child real animals whose signs of life this skill checks. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
       }
      ],
@@ -448,8 +448,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.ANIMALS.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.ANIMALS.ANIMAL_FOODS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knowing the animals that give food (cow, hen, fish) gives the child a stock of animals to sort. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -830,17 +830,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS",
+       "kind": "skill",
+       "reason": "Sorting foods into groups in Grade 3 gives the child the food whose journey this skill follows. Proposed, to confirm by a CBC Science and Technology teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Sorting foods into groups in Grade 3 gives the child the food whose journey this skill follows. Proposed, to confirm by a CBC Science and Technology teacher.",
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.FOOD_SOURCES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Food from plants and food from animals eaten at home (Grade 1) is the food the child follows from the mouth to the stomach. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
       }
      ],
@@ -879,8 +879,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.FOOD_GROUPS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The child needs a real food (a piece of ugali) whose path to follow. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -1256,15 +1256,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.RESOUR.WATER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WATER.CLEAN_WATER",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.WATER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.WATER.WATER_STORAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Storing water in Grade 2 shows the child that water takes the shape of its container. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -1309,8 +1309,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WATER.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WATER.CLEAN_WATER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making water clean in Grade 3 involves pouring and boiling, which show liquids flow and water turns to steam. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -1581,17 +1581,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.a",
-       "kind": "outcome",
-       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.WASTE_INCOME",
+       "kind": "skill",
+       "reason": "Managing waste materials in Grade 3 gives the child real waste to sort. Proposed, to confirm by a CBC Science and Technology teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.c",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Managing waste materials in Grade 3 gives the child real waste to sort. Proposed, to confirm by a CBC Science and Technology teacher.",
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.SCHOOL_CLEAN",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Keeping the school clean in Grade 2 means picking up litter: peels, paper and plastic, the waste this skill sorts. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
       }
      ],
@@ -1630,8 +1630,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WATER.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WATER.CLEAN_WATER",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
@@ -2013,15 +2013,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.RESOUR.WATER.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WATER.CLEAN_WATER",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.RESOUR.WATER.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.RESOUR.WATER.WATER_STORAGE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 children conserved water at home and school; this skill names what they did. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -2062,8 +2062,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.RESOUR.WATER.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.RESOUR.WATER.CLEAN_WATER",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
@@ -2443,15 +2443,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.NATURA.SOIL.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.SOIL.SOIL_TYPES",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.NATURA.SOIL.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.SOIL.SOIL_KINDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making items from soil in Grade 2 is pressing, pulling and pushing clay: the child has felt forces before naming them. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -2496,8 +2496,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.NATURA.SOIL.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.SOIL.SOIL_KINDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Shaping clay in Grade 2 is the first change of shape by a force the child has made. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -2882,15 +2882,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.NATURA.HEAT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.NATURA.LIGHT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Grade 2 named sources of light in the environment; this skill sorts them into natural and artificial and true and false sources. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -2931,8 +2931,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.NATURA.LIGHT.c",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Conserving light in Grade 2 (switching off, using daylight) leads into ways of lighting a house. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -2973,8 +2973,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G2.NATURA.LIGHT.b",
-       "kind": "outcome",
+       "requires": "ENVI.G2.NATURA.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Making shadows in Grade 2 shows the child light travels from a source and is blocked. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
@@ -3315,17 +3315,17 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "ENVI.G3.NATURA.HEAT.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.HEAT.b",
-       "kind": "outcome",
-       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
-       "strength": "essential",
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.SKY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The sun seen in the sky by day (Grade 1) is the main source of heat in nature. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
       }
      ],
@@ -3364,8 +3364,8 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.HEAT.b",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
@@ -3410,15 +3410,15 @@
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.NATURA.HEAT.c",
-       "kind": "outcome",
+       "requires": "ENVI.G3.NATURA.HEAT.HEAT_SOURCES",
+       "kind": "skill",
        "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
       },
       {
-       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
-       "kind": "outcome",
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.SAFE_PLACES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Keeping safe in the community (Grade 3) is the habit this skill applies to heat. Proposed, to confirm by a CBC Science and Technology teacher.",
        "status": "proposed"
