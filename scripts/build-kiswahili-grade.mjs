@@ -25,7 +25,9 @@ import { curriculumSql } from './lib/curriculum-sql.mjs';
 const ROOT = new URL('..', import.meta.url).pathname;
 const GRADE = Number(process.argv[2]);
 const ONLY_AWAITING = process.argv.includes('--awaiting');
-if (![4, 5, 6, 7, 8, 9].includes(GRADE)) { console.error('usage: node scripts/build-kiswahili-grade.mjs 4|5|6|7|8|9'); process.exit(1); }
+if (![1, 2, 3, 4, 5, 6, 7, 8, 9].includes(GRADE)) { console.error('usage: node scripts/build-kiswahili-grade.mjs 1|2|...|9'); process.exit(1); }
+// Grades 1 to 3 (18 Nov 2026) had KICD outcomes only: no first pass, no families; every skill comes from the depth layer.
+const LOWER = GRADE <= 3;
 const NOT_TESTED = /^\s*(kuchangamkia|kufurahia|kuonea fahari|kuthamini|kujenga mazoea|kukuza mazoea|kuridhia|ufurahia)/i;
 const fail = (msg) => { throw new Error(`Kiswahili Grade ${GRADE}: ${msg}`); };
 const run = (args) => { const r = spawnSync('node', args, { stdio: 'inherit', cwd: ROOT }); if (r.status) process.exit(r.status); };
@@ -44,14 +46,19 @@ async function writeAwaiting() {
 }
 if (ONLY_AWAITING) { await writeAwaiting(); process.exit(0); }
 
-// ---- 1. the first pass
-run([`scripts/build-kiswahili-g${GRADE}.mjs`]);
+// ---- 1. the first pass (Grades 4 to 9 only)
+if (!LOWER) run([`scripts/build-kiswahili-g${GRADE}.mjs`]);
 
 // ---- 2. the depth layer
 const load = (g) => JSON.parse(readFileSync(join(ROOT, `curriculum/kiswahili/g${g}.json`), 'utf8'));
 const FILE = join(ROOT, `curriculum/kiswahili/g${GRADE}.json`);
 const cur = load(GRADE);
-const { ADD, NEW, NOTES = {} } = await import(`./data/kiswahili-g${GRADE}/index.mjs`);
+const { ADD, NEW, NOTES = {}, READINESS } = await import(`./data/kiswahili-g${GRADE}/index.mjs`);
+if (LOWER) for (const s of cur.sub_strands) { s.skills = []; s.misconceptions = []; }   // rebuilt from the depth layer every run
+// Grade 1 reaches below the curriculum with pre-primary readiness skills it defines itself (KISW.PP2.READINESS.*, ref 'PP:<ID>'),
+// as Maths Grade 1 does (MATH.PP2.READINESS.*): for a teacher to confirm against the PP2 design.
+if (READINESS) cur.readiness = READINESS.map(r => ({ code: `KISW.PP2.READINESS.${r.id}`, name: r.name, what: r.what, status: 'proposed' }));
+const READY = new Set((cur.readiness || []).map(r => r.code));
 const P = `KISW.G${GRADE}.`;
 const below = {};
 for (let g = 1; g < GRADE; g++) {
@@ -86,6 +93,7 @@ for (const a of ADD) {
 for (const s of cur.sub_strands) for (const k of s.skills) if (!work.some(w => w.k === k)) fail(`${k.code} has no depth entry (prerequisites, misconceptions, teaching pack)`);
 
 const resolve = (s, r) => {
+  if (r.startsWith('PP:')) { const code = `KISW.PP2.READINESS.${r.slice(3)}`; if (!READY.has(code)) fail(`unknown readiness skill ${code}`); return [code, 'skill']; }
   const m = /^G(\d)(o?):(.+)$/.exec(r);
   if (m) {
     const g = Number(m[1]), b = below[g] || fail(`prerequisite ${r}: Grade ${g} is not below`);
@@ -102,7 +110,7 @@ for (const { k, s, d } of work) {
     if (requires === k.code) fail(`${k.code} requires itself`);
     if (k.prerequisites.some(x => x.requires === requires)) fail(`${k.code}: prerequisite ${requires} twice`);
     if (!reason || reason.length < 12) fail(`${k.code}: prerequisite ${r} needs a reason`);
-    k.prerequisites.push({ requires, kind, strength, reason, status: 'proposed', grade: Number(/^KISW\.G(\d)\./.exec(requires)[1]) });
+    k.prerequisites.push({ requires, kind, strength, reason, status: 'proposed', grade: READY.has(requires) ? 0 : Number(/^KISW\.G(\d)\./.exec(requires)[1]) });
   }
   for (const x of d.mis || []) {
     if (shorts.has(x.short)) fail(`misconception code ${x.short} is used twice in Grade ${GRADE}`);
@@ -149,7 +157,7 @@ for (const s of cur.sub_strands) {
 for (const f of readdirSync(PACK_DIR)) if (f.endsWith('.json') && !written.has(f)) unlinkSync(join(PACK_DIR, f));
 const all = cur.sub_strands;
 cur.totals = { ...cur.totals, skills: all.reduce((n, s) => n + s.skills.length, 0), prerequisites: all.reduce((n, s) => n + s.skills.reduce((m, k) => m + k.prerequisites.length, 0), 0), misconceptions: all.reduce((n, s) => n + s.misconceptions.length, 0) };
-cur.status = `outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a native Kiswahili teacher's review`;
+cur.status = LOWER ? `outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; mapped to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill; the file had outcomes only); written offline by Claude, awaiting a native Kiswahili teacher's review` : `outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a native Kiswahili teacher's review`;
 writeFileSync(FILE, JSON.stringify(cur, null, 1) + '\n');
 console.log(`kiswahili g${GRADE} depth: ${cur.totals.skills} skills, ${cur.totals.prerequisites} prerequisites, ${cur.totals.misconceptions} misconceptions, ${written.size} teaching pack files`);
 
@@ -158,8 +166,8 @@ run(['scripts/build-kiswahili-grade.mjs', String(GRADE), '--awaiting']);
 
 const MIG = `20261125_kiswahili_g${GRADE}_skills_misconceptions.sql`;
 const sql = curriculumSql(cur, {
-  title: `Grade ${GRADE} Kiswahili`, when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (the five curriculum tables); the Kiswahili grades in order, 4 to 9 (prerequisites name the grade below; there is no foreign key on them, so the order is for the reviewer only)',
-  why: `Kiswahili Grade ${GRADE} had a first-pass map in the repository (curriculum/kiswahili/g${GRADE}.json) that no migration loaded; on 18 Nov 2026 it was brought to the Grade 5 Maths standard (a skill for every sub-strand, two prerequisites and four misconceptions per skill, a teaching pack).`,
+  title: `Grade ${GRADE} Kiswahili`, when: 'owner, 18 Nov 2026', after: `20261110_curriculum.sql (the five curriculum tables); the Kiswahili grades in order, ${LOWER ? '1' : '4'} to 9 (prerequisites name the grade below; there is no foreign key on them, so the order is for the reviewer only)`,
+  why: LOWER ? `Kiswahili Grade ${GRADE} had KICD outcomes only (curriculum/kiswahili/g${GRADE}.json: no skills, no families); on 18 Nov 2026 it was mapped to the Grade 5 Maths standard (a skill for every testable outcome, two prerequisites and four misconceptions per skill, a teaching pack)${GRADE === 1 ? '; prerequisites below Grade 1 name pre-primary readiness skills defined in g1.json (readiness), for a teacher to confirm' : ''}.` : `Kiswahili Grade ${GRADE} had a first-pass map in the repository (curriculum/kiswahili/g${GRADE}.json) that no migration loaded; on 18 Nov 2026 it was brought to the Grade 5 Maths standard (a skill for every sub-strand, two prerequisites and four misconceptions per skill, a teaching pack).`,
   generator: `scripts/build-kiswahili-grade.mjs ${GRADE}`, source: `curriculum/kiswahili/g${GRADE}.json`,
 });
 writeFileSync(join(ROOT, 'supabase/migrations', MIG), sql.text);

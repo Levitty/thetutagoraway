@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 5: Usalama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "the picture beside the passage",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "usalama",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Hawa aliona waya wa umeme umeanguka karibu na njia. Alikumbuka maneno ya mwalimu: usiguse waya wa umeme. Alimwita baba mara moja."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_WORD_T5",
+     "listen_for": [
+      "mayai"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"waya\" ni uzi wa chuma unaopitisha umeme."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_MSG_T5",
+     "listen_for": [
+      "Hawa alikuwa njiani."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Tusiguse waya wa umeme; tuwaite watu wazima."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_GUESS_T5",
+     "listen_for": [
+      "Atashika waya kwa mkono."
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za picha na za kifungu: Atawapigia wataalamu wa umeme waje kuurekebisha."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_LESSON_T5",
+     "listen_for": [
+      "Hawa aliona waya njiani."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tunapaswa kuepuka hatari na kuwaeleza watu wazima."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_OWN_T5",
+     "listen_for": [
+      "Mimi ningempigia mama simu."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: Baba"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"waya\" ni nini?",
+     "answer": "uzi wa chuma unaopitisha umeme",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tunapaswa kuepuka hatari na kuwaeleza watu wazima.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

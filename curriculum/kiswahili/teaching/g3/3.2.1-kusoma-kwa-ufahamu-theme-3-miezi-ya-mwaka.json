@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 3: Miezi ya mwaka)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU",
+   "key_step": "The child reads the passage twice, answers each question by pointing at the line that gives it, and tells the lesson as what we should do.",
+   "floor": {
+    "prerequisite": "Reads a short sentence and answers a who-question about it.",
+    "question": "Soma: \"Juma analima shamba.\" Nani analima?",
+    "answer": "Juma"
+   },
+   "representations": [
+    "the passage on a chart with clue words underlined",
+    "a picture of the theme",
+    "question cards: Nini? Ujumbe? Kitatokea nini? Funzo?"
+   ],
+   "steps": [
+    "Read the passage.",
+    "Read the question.",
+    "Find the line with the answer.",
+    "Say the answer in your own words."
+   ],
+   "contexts": [
+    "miezi ya mwaka",
+    "a class reader",
+    "a story read at home with a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwezi wa Desemba, Baraka alisherehekea siku yake ya kuzaliwa. Alitimiza miaka minane. Mama alimwokea keki, na marafiki zake wakamwimbia."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the new word.",
+     "say": "Neno hili lina maana gani hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the meaning, then the message and the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_WORD_T3",
+     "listen_for": [
+      "kusahau"
+     ],
+     "ask": "Sentensi inasema nini kuhusu neno hilo?",
+     "repair": "Katika kifungu, \"kusherehekea\" ni kufanya sherehe kwa furaha."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_MSG_T3",
+     "listen_for": [
+      "Mama alioka keki."
+     ],
+     "ask": "Mwandishi anataka tujue nini?",
+     "repair": "Hilo ni tukio moja. Ujumbe ni: Siku ya kuzaliwa ni siku ya furaha ya kukumbuka tulipozaliwa."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_GUESS_T3",
+     "listen_for": [
+      "miaka minane tena"
+     ],
+     "ask": "Ni dalili gani katika kifungu inakuonyesha hivyo?",
+     "repair": "Tabiri kwa kutumia dalili za kifungu: miaka tisa"
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_LESSON_T3",
+     "listen_for": [
+      "Marafiki walimwimbia Baraka."
+     ],
+     "ask": "Kifungu kinatufundisha tufanye nini?",
+     "repair": "Funzo ni: Tunapaswa kufurahi pamoja na marafiki zetu."
+    },
+    {
+     "code": "KISW.G3.KUSOMA.T3_KUSOMA_KWA_UFAHAMU.UFAHAMU.M3_UFM_OWN_T3",
+     "listen_for": [
+      "Mimi nilizaliwa mwezi wa Machi."
+     ],
+     "ask": "Ni sentensi gani katika kifungu inatoa jibu hilo?",
+     "repair": "Jibu liko kwenye kifungu: Desemba"
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"kusherehekea\" ni nini?",
+     "answer": "kufanya sherehe kwa furaha",
+     "shows": "vocabulary"
+    },
+    {
+     "question": "Tunajifunza nini?",
+     "answer": "Tunapaswa kufurahi pamoja na marafiki zetu.",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

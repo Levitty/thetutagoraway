@@ -34,7 +34,7 @@ test('skills and the misconception library are proposed or draft, with the field
       assert.equal(k.status, 'proposed');
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
-      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS[p.requires] || (p.grade === 3 && /^KISW\.G3\./.test(p.requires)), `${k.code}: unknown prerequisite ${p.requires}`);   // a Grade 3 skill: checked below
     }
     for (const m of s.misconceptions) {
       assert.equal(m.status, 'draft');
@@ -118,14 +118,16 @@ test('Grade 4 misconception codes start M4_ and never clash with Grade 5 (the tw
   for (const code of Object.keys(SKILLS)) assert.ok(code.startsWith('KISW.G4.') && !(code in G5_SKILLS));
 });
 
-test('prerequisites reach Grade 3 outcomes and Grade 4 skills only, and leads_to names real Grade 5 skills', () => {
+test('prerequisites reach Grade 3 outcomes or skills and Grade 4 skills only, and leads_to names real Grade 5 skills', () => {
   const g3 = JSON.parse(readFileSync(new URL('../curriculum/kiswahili/g3.json', import.meta.url), 'utf8'));
   const g3Codes = new Set(g3.sub_strands.flatMap(s => s.outcomes.map(o => o.code)));
+  const g3Skills = new Set(g3.sub_strands.flatMap(s => (s.skills || []).map(k => k.code)));   // Grade 3 mapped 18 Nov 2026
   let pre = 0, leads = 0;
   for (const s of subs) for (const k of s.skills) {
     for (const p of k.prerequisites) {
       pre++;
       if (p.kind === 'outcome') assert.ok(g3Codes.has(p.requires) && p.grade === 3, `${k.code}: ${p.requires}`);
+      else if (p.grade === 3) assert.ok(g3Skills.has(p.requires), `${k.code}: ${p.requires}`);
       else assert.ok(SKILLS[p.requires] && p.grade === 4 && p.requires !== k.code, `${k.code}: ${p.requires}`);
     }
     for (const l of k.leads_to) { leads++; assert.ok(G5_SKILLS[l.skill], `${k.code}: ${l.skill} is not a Grade 5 skill`); }

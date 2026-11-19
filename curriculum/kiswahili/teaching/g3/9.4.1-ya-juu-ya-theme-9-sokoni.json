@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T9_YA_JUU_YA",
+ "title": "ya: Juu ya, (Theme 9: Sokoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T9_YA_JUU_YA.VIHUSISHI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on sokoni using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "sokoni",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nyanya ziko ndani ya kikapu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ndani ya\".",
+     "say": "Nyanya ziko wapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T9_YA_JUU_YA.VIHUSISHI.M3_SAR_DROPYA_T9",
+     "listen_for": [
+      "Ndizi ziko juu meza."
+     ],
+     "ask": "Neno gani limekosekana kati ya \"juu\" na \"meza\"?",
+     "repair": "Tunasema \"juu ya meza\". (Ndizi ziko juu ya meza.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T9_YA_JUU_YA.VIHUSISHI.M3_SAR_KWA_T9",
+     "listen_for": [
+      "Machungwa yako ndani kwa kikapu."
+     ],
+     "ask": "Neno linalofuata \"ndani\" ni lipi?",
+     "repair": "Tunasema \"ndani ya sanduku\". (Machungwa yako ndani ya kikapu.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T9_YA_JUU_YA.VIHUSISHI.M3_SAR_SWAPPOS_T9",
+     "listen_for": [
+      "nyuma ya kibanda"
+     ],
+     "ask": "Mpira uko wapi hasa?",
+     "repair": "Angalia tena mpira ulipo. (mbele ya kibanda)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T9_YA_JUU_YA.VIHUSISHI.M3_SAR_DOUBLENI_T9",
+     "listen_for": [
+      "Pesa ziko ndani ya mfukoni."
+     ],
+     "ask": "Umetumia njia mbili kwa pamoja?",
+     "repair": "Sema \"ndani ya sanduku\" au \"sandukuni\", si vyote viwili. (Pesa ziko ndani ya mfuko.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Paka yuko ___ meza (chini).",
+     "answer": "chini ya",
+     "shows": "place"
+    },
+    {
+     "question": "Jaza: Maembe yako ___ kikapu (ndani).",
+     "answer": "ndani ya",
+     "shows": "place"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_",
+ "title": "Matumizi ya Yeye na Wao (Theme 1: Uzalendo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.NAFSI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on uzalendo using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "uzalendo",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wao wanacheza mpira."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wanacheza\".",
+     "say": "Kitendo kinaanza na nini kwa wao?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.NAFSI.M3_SAR_PREFIX_T1",
+     "listen_for": [
+      "anacheza"
+     ],
+     "ask": "Mwanzo wa kitendo unakubaliana na nani?",
+     "repair": "Kitendo hufuata nafsi: Wao wanacheza; Yeye anacheza. (wanacheza)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.NAFSI.M3_SAR_NUMBER_T1",
+     "listen_for": [
+      "Yeye"
+     ],
+     "ask": "Ni mtu mmoja au watu wengi?",
+     "repair": "Mtu mmoja ni yeye; watu wengi ni wao. (Wao)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.NAFSI.M3_SAR_GENDER_T1",
+     "listen_for": [
+      "Wao"
+     ],
+     "ask": "Neno yeye linaweza kumtaja msichana?",
+     "repair": "Yeye ni mtu mmoja, mvulana au msichana. (Yeye)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T1_MATUMIZI_YA_YEYE_NA_.NAFSI.M3_SAR_PERSON_T1",
+     "listen_for": [
+      "Wewe yuko shambani."
+     ],
+     "ask": "Unazungumza kuhusu nani, wewe mwenyewe?",
+     "repair": "Ukiulizwa kwa \"wewe\", unajibu kwa \"mimi\". (Yeye yuko shambani.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Yeye ___ (soma).",
+     "answer": "anasoma",
+     "shows": "yeye"
+    },
+    {
+     "question": "Jaza: Wao ___ (soma).",
+     "answer": "wanasoma",
+     "shows": "wao"
+    }
+   ]
+  }
+ ]
+}

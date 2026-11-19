@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T7_MAAGIZO",
+ "title": "Maagizo (Theme 7: Dukani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO",
+   "key_step": "The child hears the whole instruction, counts its steps on his fingers, and does them in order; when giving one, he names the action and the thing.",
+   "floor": {
+    "prerequisite": "Does a one-step action on hearing it.",
+    "question": "Simama!",
+    "answer": "the child stands"
+   },
+   "representations": [
+    "finger counting of steps",
+    "action cards: simama, keti, chukua, weka",
+    "a band on the right hand"
+   ],
+   "steps": [
+    "Listen to the whole instruction.",
+    "Count the steps.",
+    "Do them in order.",
+    "Give one instruction to a partner."
+   ],
+   "contexts": [
+    "dukani",
+    "lining up for assembly",
+    "helping at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Chukua kitabu, kisha ukiweke mezani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kisha\".",
+     "say": "Hatua ya pili ni ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child does both steps and gives a two-step instruction to a partner."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO.M3_MAG_HALF_T7",
+     "listen_for": [
+      "anachukua kikapu tu"
+     ],
+     "ask": "Agizo lilikuwa na hatua ngapi?",
+     "repair": "Sikiliza agizo lote kwanza, kisha fanya hatua zote."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO.M3_MAG_ORDER_T7",
+     "listen_for": [
+      "kula chakula"
+     ],
+     "ask": "Neno lipi linakuambia hatua ya pili?",
+     "repair": "Neno \"kisha\" linaonyesha hatua inayofuata."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO.M3_MAG_DIR_T7",
+     "listen_for": [
+      "anaiweka upande wa kushoto"
+     ],
+     "ask": "Neno hilo linakuambia ufanye nini?",
+     "repair": "Weka sukari upande wa kulia wa meza. maana yake ni anaiweka upande wa kulia."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T7_MAAGIZO.MAAGIZO.M3_MAG_VAGUE_T7",
+     "listen_for": [
+      "Lete!"
+     ],
+     "ask": "Mwenzako atajuaje alete nini?",
+     "repair": "Agizo zuri linasema nini kifanyike, kwa kitu gani, na kwa adabu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Agizo \"Keti kisha ufungue kitabu\" lina hatua ngapi?",
+     "answer": "mbili",
+     "shows": "steps"
+    },
+    {
+     "question": "Toa agizo la adabu la kumwomba mwenzako afunge mlango.",
+     "answer": "Tafadhali funga mlango.",
+     "shows": "giving"
+    }
+   ]
+  }
+ ]
+}

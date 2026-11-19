@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI",
+ "title": "Insha ya Masimulizi (Theme 9: Sokoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA",
+   "key_step": "The child plans in three boxes, writes one idea per sentence in one tense with Kiswahili words, then reads it back and corrects it.",
+   "floor": {
+    "prerequisite": "Writes a sentence with a capital and a kikomo.",
+    "question": "Andika sentensi kuhusu shule yako.",
+    "answer": "Shule yangu ni nzuri."
+   },
+   "representations": [
+    "a three-box plan",
+    "a word bank of theme words and kwanza, kisha, mwishowe",
+    "a model insha on the board"
+   ],
+   "steps": [
+    "Plan: who, where, what happened, end.",
+    "Write the title.",
+    "Write one idea per sentence.",
+    "Read it back and correct."
+   ],
+   "contexts": [
+    "sokoni",
+    "a class story wall",
+    "a story to read to a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Safari Yangu ya Sokoni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii itahusu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the first two sentences of the insha and reads them aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA.M3_INS_LIST_T9",
+     "listen_for": [
+      "sentensi nyingi tu"
+     ],
+     "ask": "Kisa chako kinaishaje?",
+     "repair": "Kisa kina mwanzo, kati na mwisho."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA.M3_INS_TITLE_T9",
+     "listen_for": [
+      "Insha"
+     ],
+     "ask": "Insha yako inahusu nini?",
+     "repair": "Kichwa kinasema insha inahusu nini: Safari Yangu ya Sokoni."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA.M3_INS_HALAFU_T9",
+     "listen_for": [
+      "Tuliamka na halafu tukaoga na halafu tukaenda sokoni."
+     ],
+     "ask": "Unaweza kuweka kikomo wapi hapa?",
+     "repair": "Tumia kikomo na maneno kama kisha, baadaye."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA.M3_INS_TENSE_T9",
+     "listen_for": [
+      "Tulifika sokoni mapema. Mama ananunua ndizi."
+     ],
+     "ask": "Kitendo hiki kilitokea lini?",
+     "repair": "Tumia wakati mmoja katika insha nzima."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T9_INSHA_YA_MASIMULIZI.INSHA.M3_INS_MIX_T9",
+     "listen_for": [
+      "Tulinunua sukuma na onions."
+     ],
+     "ask": "Neno hilo ni la lugha gani?",
+     "repair": "Kwa Kiswahili: Tulinunua sukumawiki na vitunguu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kichwa kifaacho insha kuhusu sokoni ni?",
+     "answer": "Safari Yangu ya Sokoni",
+     "shows": "title"
+    },
+    {
+     "question": "Sahihisha: Tulifika sokoni mapema. Mama ananunua ndizi.",
+     "answer": "Tulifika sokoni mapema. Mama alinunua ndizi.",
+     "shows": "tense"
+    }
+   ]
+  }
+ ]
+}

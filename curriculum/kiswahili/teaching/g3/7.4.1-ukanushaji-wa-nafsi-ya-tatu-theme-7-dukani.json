@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_",
+ "title": "Ukanushaji wa nafsi ya tatu (Theme 7: Dukani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI",
+   "key_step": "The child finds the word the grammar point depends on (the person, the noun and its ngeli, one or many) before choosing the form.",
+   "floor": {
+    "prerequisite": "Names everyday things and people in Kiswahili.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture and word cards sorted by ngeli or person",
+    "colour matching of the parts that agree",
+    "a short passage on dukani using the words"
+   ],
+   "steps": [
+    "Find the noun or person.",
+    "Ask: one or many? Which ngeli or person?",
+    "Choose the form.",
+    "Read the whole sentence back."
+   ],
+   "contexts": [
+    "dukani",
+    "a game with real objects in class",
+    "talking with a parent at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Anauza - hauzi; wanauza - hawauzi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"hauzi\".",
+     "say": "Herufi ya mwisho imebadilikaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes his own sentence with the form and reads it aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI.M3_SAR_FINALA_T7",
+     "listen_for": [
+      "Yeye hauza sukari."
+     ],
+     "ask": "Herufi ya mwisho ya kitendo hiki ni ipi?",
+     "repair": "Katika ukanushaji wa wakati uliopo, -a inakuwa -i: hasomi. (Yeye hauzi sukari.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI.M3_SAR_KEEPNA_T7",
+     "listen_for": [
+      "Yeye hananunui mkate."
+     ],
+     "ask": "Kuna -na- katika ukanushaji?",
+     "repair": "Hasomi: hakuna -na- katika ukanushaji huu. (Yeye hanunui mkate.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI.M3_SAR_SIPLUS_T7",
+     "listen_for": [
+      "Muuzaji si anafungua duka."
+     ],
+     "ask": "Ni kitendo au ni \"ni\"?",
+     "repair": "Kitendo hukanushwa kwa ha-: Yeye hasomi. (Muuzaji hafungui duka.)"
+    },
+    {
+     "code": "KISW.G3.SARUFI.T7_UKANUSHAJI_WA_NAFSI_.UKANUSHAJI.M3_SAR_PERSNEG_T7",
+     "listen_for": [
+      "Wao hauzi maziwa."
+     ],
+     "ask": "Ni nafsi gani hapa?",
+     "repair": "Wao hawasomi; mimi sisomi. (Wao hawauzi maziwa.)"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Yeye anapika.",
+     "answer": "Yeye hapiki.",
+     "shows": "yeye"
+    },
+    {
+     "question": "Kanusha: Wao wanacheza.",
+     "answer": "Wao hawachezi.",
+     "shows": "wao"
+    }
+   ]
+  }
+ ]
+}

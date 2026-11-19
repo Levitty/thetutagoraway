@@ -1,7 +1,8 @@
 // Kiswahili Grade 4, Kusikiliza na Kuzungumza: depth layer (18 Nov 2026, offline).
 import { m, p, x, E, H, ENG } from '../kiswahili-depth-lib.mjs';
 import { matamshi, masimulizi } from '../kiswahili-kinds.mjs';
-const G3 = (k) => `G3o:${k}`;
+import { down } from "../kiswahili-kinds-lower.mjs";
+const G3 = (k) => down(3, k);   // a Grade 3 outcome names the Grade 3 skill that carries it (Grade 3 mapped 18 Nov 2026)
 export const NEW = [
   matamshi({ G: 4, sub: 'KUSIKI.T1_MATAMSHI_BORA', tag: 'T1', sounds: ['t', 'd'], label: 'p/b, t/d, k/g na ch/j', letters: ['a', 'b', 'c', 'd'], theme: 'nyumbani (home)',
     w: [['tamu', 'damu', 'sweet', 'blood'], ['koti', 'goti', 'a coat', 'a knee']],

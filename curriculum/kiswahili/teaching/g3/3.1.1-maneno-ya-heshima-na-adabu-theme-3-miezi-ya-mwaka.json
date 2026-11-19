@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA",
+ "title": "Maneno ya Heshima na Adabu (Theme 3: Miezi ya mwaka)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA",
+   "key_step": "The child names the situation (asking, thanking, apologising, someone is hurt) before choosing the polite word.",
+   "floor": {
+    "prerequisite": "Greets a classmate and an elder.",
+    "question": "Bibi anakusalimu. Unasema?",
+    "answer": "Shikamoo bibi"
+   },
+   "representations": [
+    "situation picture cards",
+    "a chart: tafadhali, naomba, asante, karibu, samahani, pole",
+    "role play in pairs"
+   ],
+   "steps": [
+    "Look at the situation.",
+    "Ask: am I asking, thanking, sorry, or is someone hurt?",
+    "Choose the word.",
+    "Say the whole sentence politely."
+   ],
+   "contexts": [
+    "miezi ya mwaka: sherehe za kuzaliwa na sikukuu",
+    "borrowing a pencil in class",
+    "a friend falls in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Umemkanyaga mwenzako: ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture.",
+     "say": "Uliyekosea ni nani? Unasema nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says \"Samahani\" and acts out two more situations."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA.M3_HES_POLE_T3",
+     "listen_for": [
+      "Samahani"
+     ],
+     "ask": "Ni wewe uliyemwangusha?",
+     "repair": "Pole ni ya kumhurumia aliyeumia; samahani ni ya kuomba msamaha ukikosea."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA.M3_HES_KARIBU_T3",
+     "listen_for": [
+      "Asante"
+     ],
+     "ask": "Nani alipewa kitu, na nani alitoa?",
+     "repair": "Ukishukuriwa, unajibu \"Karibu.\""
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA.M3_HES_COMMAND_T3",
+     "listen_for": [
+      "Nipe maji!"
+     ],
+     "ask": "Mama atajisikiaje ukimwambia hivyo?",
+     "repair": "Ombi la adabu lina \"tafadhali\" au \"naomba.\""
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA.M3_HES_TITLE_T3",
+     "listen_for": [
+      "Akinyi, njoo!"
+     ],
+     "ask": "Unamwitaje mtu mzima?",
+     "repair": "Mtu mzima huitwa kwa heshima: Mwalimu, Mama, Babu."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T3_MANENO_YA_HESHIMA_NA.HESHIMA.M3_HES_POLEREPLY_T3",
+     "listen_for": [
+      "Pole"
+     ],
+     "ask": "Ni nani aliumia, na anasema nini?",
+     "repair": "Ukiambiwa \"pole\" unashukuru: \"Asante.\""
+    }
+   ],
+   "checks": [
+    {
+     "question": "Umepewa zawadi. Unasema?",
+     "answer": "Asante",
+     "shows": "thanking"
+    },
+    {
+     "question": "Rafiki ameumia mwenyewe. Unasema?",
+     "answer": "Pole",
+     "shows": "sympathy"
+    }
+   ]
+  }
+ ]
+}

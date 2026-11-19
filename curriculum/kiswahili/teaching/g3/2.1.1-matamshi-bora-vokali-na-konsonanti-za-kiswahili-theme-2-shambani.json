@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI",
+ "title": "Matamshi Bora: Vokali na Konsonanti za Kiswahili (Theme 2: Shambani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI",
+   "key_step": "The child says each sound, not the letter name, and asks \"one sound or two?\" before counting consonants.",
+   "floor": {
+    "prerequisite": "Says the five vowels in order.",
+    "question": "Taja irabu za Kiswahili.",
+    "answer": "a, e, i, o, u"
+   },
+   "representations": [
+    "vowel and consonant baskets with letter cards",
+    "a mirror for the mouth shapes",
+    "a sound chart of the alphabet with sh, ch, ny, ng' on single cards"
+   ],
+   "steps": [
+    "Hear the sound.",
+    "Ask: is it a vowel?",
+    "If not, is it one consonant written with two letters?",
+    "Say it in a word."
+   ],
+   "contexts": [
+    "shambani: names of crops (mahindi, maharagwe, mtama)",
+    "the alphabet song",
+    "a word tree"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "sh - a - m - b - a"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"sh\".",
+     "say": "Hii ni sauti moja au mbili?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts six letter cards into vowels and consonants and says each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI.M3_VOK_Y_T2",
+     "listen_for": [
+      "a, e, i, o, u, y"
+     ],
+     "ask": "Irabu za Kiswahili ni ngapi?",
+     "repair": "Kiswahili kina irabu tano tu: a, e, i, o, u."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI.M3_VOK_DIGRAPH_T2",
+     "listen_for": [
+      "mbili: s na h"
+     ],
+     "ask": "Unasikia sauti moja au mbili mwanzoni?",
+     "repair": "\"sh\" ni sauti moja, ingawa ina herufi mbili."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI.M3_VOK_NAME_T2",
+     "listen_for": [
+      "ai"
+     ],
+     "ask": "Hili ni jina la herufi kwa Kiingereza au sauti yake kwa Kiswahili?",
+     "repair": "Kwa Kiswahili, \"i\" inatamkwa /i/, kama katika \"iko\"."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI.M3_VOK_UO_T2",
+     "listen_for": [
+      "koko"
+     ],
+     "ask": "Mdomo wako unakaaje unaposema /u/?",
+     "repair": "Sikiliza: \"kuku\" ina /u/ mara mbili."
+    },
+    {
+     "code": "KISW.G3.KUSIKI.T2_MATAMSHI_BORA_VOKALI.VOKALI_KONSONANTI.M3_VOK_NG_T2",
+     "listen_for": [
+      "ngoma"
+     ],
+     "ask": "Unasikia /g/ katika neno hili?",
+     "repair": "Ng'ombe: sauti ng' bila /g/; ngoma: ng yenye /g/."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Taja irabu tano za Kiswahili.",
+     "answer": "a, e, i, o, u",
+     "shows": "vowels"
+    },
+    {
+     "question": "\"ch\" katika \"chai\" ni sauti ngapi?",
+     "answer": "moja",
+     "shows": "one consonant"
+    }
+   ]
+  }
+ ]
+}

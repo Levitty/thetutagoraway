@@ -1,7 +1,8 @@
 // Kiswahili Grade 4, Kuandika: depth layer (18 Nov 2026, offline).
 import { m, p, s, x, E, H } from '../kiswahili-depth-lib.mjs';
 import { insha } from '../kiswahili-kinds.mjs';
-const G3 = (k) => `G3o:${k}`;
+import { down } from "../kiswahili-kinds-lower.mjs";
+const G3 = (k) => down(3, k);   // a Grade 3 outcome names the Grade 3 skill that carries it (Grade 3 mapped 18 Nov 2026)
 const AINA = 'KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA', UAK = 'KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI', BARUA = 'KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA';
 const PRE_INSHA = (extra) => [[AINA, E, 'Telling the kinds of insha and their parts comes before writing one.'], extra];
 const MAS = (sub, tag, title, past, now, weak, steps, extra) => insha({ G: 4, sub, tag, id: 'INSHA_MASIMULIZI', type: 'masimulizi', letters: ['a', 'b'], title, past, now, weak, steps, theme: title.toLowerCase(), pre: PRE_INSHA(extra) });

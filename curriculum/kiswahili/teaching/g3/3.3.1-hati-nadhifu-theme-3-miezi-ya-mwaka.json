@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G3.KUANDI.T3_HATI_NADHIFU",
+ "title": "Hati Nadhifu (Theme 3: Miezi ya mwaka)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUANDI.T3_HATI_NADHIFU.HATI_NADHIFU",
+   "key_step": "The child forms each letter from the right starting point, sits it on the line, leaves a finger space after each word, and checks before the clean copy.",
+   "floor": {
+    "prerequisite": "Holds the pencil well and writes his own name.",
+    "question": "Andika jina lako.",
+    "answer": "the child writes his name"
+   },
+   "representations": [
+    "three-line paper",
+    "letter shapes traced in sand or air",
+    "a model passage on the board"
+   ],
+   "steps": [
+    "Look at the model.",
+    "Write each letter on the line.",
+    "Leave a space after each word.",
+    "Check and write the clean copy."
+   ],
+   "contexts": [
+    "miezi ya mwaka",
+    "copying the date from the board",
+    "writing a note to a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwezi wa Aprili mvua hunyesha sana."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter.",
+     "say": "Herufi hii inaanzaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the line neatly and reads it back."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUANDI.T3_HATI_NADHIFU.HATI_NADHIFU.M3_HAT_TALL_T3",
+     "listen_for": [
+      "nabari"
+     ],
+     "ask": "Herufi hii inapanda mpaka wapi?",
+     "repair": "Herufi h, k, l, b, d hupanda juu ya mstari wa kati."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T3_HATI_NADHIFU.HATI_NADHIFU.M3_HAT_SIZE_T3",
+     "listen_for": [
+      "KITI"
+     ],
+     "ask": "Herufi hizi ni kubwa au ndogo?",
+     "repair": "Ndani ya neno tumia herufi ndogo."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T3_HATI_NADHIFU.HATI_NADHIFU.M3_HAT_SPACE_T3",
+     "listen_for": [
+      "Mamaanapikachakula."
+     ],
+     "ask": "Kuna maneno mangapi hapa?",
+     "repair": "Acha nafasi ya kidole kati ya neno na neno."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T3_HATI_NADHIFU.HATI_NADHIFU.M3_HAT_TURN_T3",
+     "listen_for": [
+      "bada"
+     ],
+     "ask": "Herufi hii inaangalia upande gani?",
+     "repair": "Herufi d huanza kama c, kisha mstari mrefu."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T3_HATI_NADHIFU.HATI_NADHIFU.M3_HAT_LINE_T3",
+     "listen_for": [
+      "popote kwenye ukurasa"
+     ],
+     "ask": "Herufi zako zinakaa wapi?",
+     "repair": "Kila herufi ikae juu ya mstari."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: Mwezi wa Aprili mvua hunyesha sana.",
+     "answer": "Mwezi wa Aprili mvua hunyesha sana.",
+     "shows": "neat writing"
+    },
+    {
+     "question": "Unaacha nini kati ya maneno?",
+     "answer": "nafasi",
+     "shows": "spacing"
+    }
+   ]
+  }
+ ]
+}

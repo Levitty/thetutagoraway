@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA",
+ "title": "Nafasi ya Pambizo katika Uandishi (Theme 4: Kazi mbalimbali)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA",
+   "key_step": "The child marks the margin first, writes inside it with spaces between words, and starts a new aya for each new idea.",
+   "floor": {
+    "prerequisite": "Writes a sentence with spaces between words.",
+    "question": "Andika: Mama anapika.",
+    "answer": "Mama anapika."
+   },
+   "representations": [
+    "a page with the margin coloured",
+    "a model passage with two aya",
+    "syllable claps for a long word"
+   ],
+   "steps": [
+    "Find the margin.",
+    "Write the first idea.",
+    "Start a new aya for the next idea.",
+    "Check the margin and spaces."
+   ],
+   "contexts": [
+    "kazi mbalimbali",
+    "writing in the exercise book",
+    "a short letter to a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mku-lima"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dash.",
+     "say": "Kwa nini neno limegawanywa hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two aya about the theme inside the margin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA.M3_NAF_MARGIN_T4",
+     "listen_for": [
+      "sehemu ya kuandikia kwanza"
+     ],
+     "ask": "Mstari wa pambizo uko wapi?",
+     "repair": "Usiandike ndani ya pambizo."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA.M3_NAF_NOAYA_T4",
+     "listen_for": [
+      "sianzi; ninaandika kila kitu pamoja"
+     ],
+     "ask": "Wazo jipya linaanza wapi?",
+     "repair": "Wazo jipya, aya mpya."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA.M3_NAF_EVERYLINE_T4",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Sentensi hizi zinahusu wazo moja?",
+     "repair": "Sentensi za wazo moja hukaa pamoja katika aya moja."
+    },
+    {
+     "code": "KISW.G3.KUANDI.T4_NAFASI_YA_PAMBIZO_KA.PAMBIZO_AYA.M3_NAF_SPLIT_T4",
+     "listen_for": [
+      "mkul-ima"
+     ],
+     "ask": "Silabi za neno hili ni zipi?",
+     "repair": "Gawa neno kati ya silabi na uweke kistari."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Pambizo ni nini?",
+     "answer": "nafasi ukingoni mwa ukurasa",
+     "shows": "margin"
+    },
+    {
+     "question": "Unaanza aya mpya lini?",
+     "answer": "wazo jipya linapoanza",
+     "shows": "paragraph"
+    }
+   ]
+  }
+ ]
+}
