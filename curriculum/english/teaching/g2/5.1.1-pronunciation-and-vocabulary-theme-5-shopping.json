@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 5: Shopping)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (nt, sl, ar, nd, nk) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"star\" and \"cat\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "at the market",
+    "a bank in town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: star, cat."
+    },
+    {
+     "beat": "point",
+     "do": "Say star.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in star."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK.M2_AR_SHORT_A",
+     "listen_for": [
+      "cat"
+     ],
+     "ask": "Long and open?",
+     "repair": "Car, star."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK.M2_NT_ND",
+     "listen_for": [
+      "bend"
+     ],
+     "ask": "Puff or buzz?",
+     "repair": "Puff: bent."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK.M2_NK_NG",
+     "listen_for": [
+      "sing"
+     ],
+     "ask": "A click at the end?",
+     "repair": "Sink."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK.M2_SL_S",
+     "listen_for": [
+      "sip"
+     ],
+     "ask": "Did you hear l?",
+     "repair": "Slip."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has ar: car, cat, cap?",
+     "answer": "car",
+     "shows": "ar"
+    },
+    {
+     "question": "Which word ends with nk: sing, sink, sin?",
+     "answer": "sink",
+     "shows": "nk"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

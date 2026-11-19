@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM",
+ "title": "Punctuation - The Comma (Theme 9: Wild animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST",
+   "assessed_by": "questions",
+   "key_step": "The child writes a comma after each item except the last two, which take and.",
+   "floor": {
+    "prerequisite": "Ends sentences with a full stop.",
+    "question": "Fix: I ate",
+    "answer": "I ate."
+   },
+   "steps": [
+    "Show a list.",
+    "Read with a pause at each comma.",
+    "Punctuate lists.",
+    "Write own list."
+   ],
+   "contexts": [
+    "animals seen at the game park",
+    "things for a picnic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We saw lions zebras giraffes and elephants."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Where do the commas go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M3_CO_NONE",
+     "listen_for": [
+      "We saw lions zebras giraffes and elephants."
+     ],
+     "ask": "Where do you pause?",
+     "repair": "Comma there."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M3_CO_AND_EVERY",
+     "listen_for": [
+      "drums and flags and balloons and sweets"
+     ],
+     "ask": "Can a comma replace and?",
+     "repair": "Yes, except last."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M3_CO_FULL_STOPS",
+     "listen_for": [
+      "I bought rice. beans. and sugar."
+     ],
+     "ask": "Does the sentence end there?",
+     "repair": "No: comma."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST.M3_CO_AFTER_AND",
+     "listen_for": [
+      "tea, bread and, milk"
+     ],
+     "ask": "Comma after and?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: I like mangoes oranges and bananas.",
+     "answer": "I like mangoes, oranges and bananas.",
+     "shows": "commas"
+    },
+    {
+     "question": "Write three things in your bag as a list.",
+     "answer": "pen, book and ruler (any)",
+     "shows": "list"
+    }
+   ]
+  }
+ ]
+}

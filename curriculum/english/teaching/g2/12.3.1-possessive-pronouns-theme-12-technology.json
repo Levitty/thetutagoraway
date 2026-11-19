@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS",
+ "title": "Possessive Pronouns (Theme 12: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Whose? Boy or girl?\" and uses the word alone with no apostrophe.",
+   "floor": {
+    "prerequisite": "Uses my and his.",
+    "question": "This is ___ phone. (me)",
+    "answer": "my"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "phones and radios at home",
+    "sharing at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: That phone belongs to Mary. It is ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "his or hers?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: hers"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS.M2_PO_HIS_HERS",
+     "listen_for": [
+      "his"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "Hers."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS.M2_PO_MINE_NOUN",
+     "listen_for": [
+      "mine"
+     ],
+     "ask": "A noun after it?",
+     "repair": "My radio."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS.M2_PO_APOSTROPHE",
+     "listen_for": [
+      "your's"
+     ],
+     "ask": "Apostrophe?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS.M2_PO_US",
+     "listen_for": [
+      "us"
+     ],
+     "ask": "Belongs to us?",
+     "repair": "Ours."
+    }
+   ],
+   "checks": [
+    {
+     "question": "This radio is ___ (me).",
+     "answer": "mine",
+     "shows": "mine"
+    },
+    {
+     "question": "The classroom is ___ (us).",
+     "answer": "ours",
+     "shows": "ours"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 4: Child rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (wr, pr, sm, st), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"stop\" start like \"top\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "writing our names",
+    "children's rights in a poster",
+    "a smile for a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: stop, top."
+    },
+    {
+     "beat": "point",
+     "do": "Say stop.",
+     "say": "Listen: st or t?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the st in stop."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST.M3_WR_W_SOUND",
+     "listen_for": [
+      "wet"
+     ],
+     "ask": "Is the w heard?",
+     "repair": "Silent: write says r."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST.M3_PR_BR_VOICE",
+     "listen_for": [
+      "bride"
+     ],
+     "ask": "Did it puff?",
+     "repair": "Puff: pride."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST.M3_SM_SN",
+     "listen_for": [
+      "snail"
+     ],
+     "ask": "Did the lips close?",
+     "repair": "Close for small."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST.M3_ST_DROP_S",
+     "listen_for": [
+      "top"
+     ],
+     "ask": "Did you hear the hiss?",
+     "repair": "Sss-top."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with the r sound: write, wet, wall?",
+     "answer": "write",
+     "shows": "wr"
+    },
+    {
+     "question": "Which word starts with sm: snail, small, mall?",
+     "answer": "small",
+     "shows": "sm"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

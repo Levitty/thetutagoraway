@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 14: Numbers)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.J_S_NG",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (j, s, ng), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"jam\" start like \"yam\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "numbers: six and seven",
+    "singing a number song"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: jam, yam."
+    },
+    {
+     "beat": "point",
+     "do": "Say jam.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write jam and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.J_S_NG.M1_JS_J_Y",
+     "listen_for": [
+      "yam"
+     ],
+     "ask": "Stop at the start?",
+     "repair": "Jam."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.J_S_NG.M1_JS_NG_G",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Any g?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.J_S_NG.M1_JS_NG_N",
+     "listen_for": [
+      "sin"
+     ],
+     "ask": "Back of the tongue?",
+     "repair": "Sing."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.J_S_NG.M1_JS_S_SH",
+     "listen_for": [
+      "shix"
+     ],
+     "ask": "Smile?",
+     "repair": "Six."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word ends with ng: sing, sin, sit?",
+     "answer": "sing",
+     "shows": "ng"
+    },
+    {
+     "question": "Which word starts with j: jug, yes, gum?",
+     "answer": "jug",
+     "shows": "j"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

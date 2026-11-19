@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T1_PRE_WRITING",
+ "title": "Pre-writing (Theme 1: Greetings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T1_PRE_WRITING.WRITING_POSTURE",
+   "assessed_by": "questions",
+   "key_step": "The child checks: sit up, feet down, book straight, helper hand on the page, pinch grip.",
+   "floor": {
+    "prerequisite": "Holds a crayon.",
+    "question": "Show me how you hold a crayon.",
+    "answer": "holds it"
+   },
+   "steps": [
+    "Show good and poor posture.",
+    "Practise the pinch grip.",
+    "Choose the good picture.",
+    "Check before writing."
+   ],
+   "contexts": [
+    "getting ready to write",
+    "a writing lesson"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fist grip and a pinch grip."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Which is the writing grip?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows the pinch grip."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.WRITING_POSTURE.M1_WP_SLOUCH",
+     "listen_for": [
+      "the child lying over the desk"
+     ],
+     "ask": "Back straight?",
+     "repair": "Sit up."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.WRITING_POSTURE.M1_WP_FIST",
+     "listen_for": [
+      "the pencil in a closed fist"
+     ],
+     "ask": "Pinch or fist?",
+     "repair": "Pinch."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.WRITING_POSTURE.M1_WP_NO_HOLD",
+     "listen_for": [
+      "stays on my lap"
+     ],
+     "ask": "Where is your helper hand?",
+     "repair": "On the book."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.WRITING_POSTURE.M1_WP_FACE_ON_BOOK",
+     "listen_for": [
+      "touching the page"
+     ],
+     "ask": "How close?",
+     "repair": "A ruler away."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How do we hold a pencil?",
+     "answer": "between thumb and two fingers",
+     "shows": "grip"
+    },
+    {
+     "question": "What does the other hand do?",
+     "answer": "holds the book",
+     "shows": "helper hand"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS",
+   "assessed_by": "teacher",
+   "key_step": "The child traces from left to right with a light, steady line, keeping between the lines.",
+   "floor": {
+    "prerequisite": "Holds a pencil.",
+    "question": "Draw a line.",
+    "answer": "draws"
+   },
+   "steps": [
+    "Trace in the air.",
+    "Trace on the page.",
+    "Copy.",
+    "Draw alone."
+   ],
+   "contexts": [
+    "patterns on a kiondo basket",
+    "waves on a lake"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a zigzag with a green dot on the left."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the green dot.",
+     "say": "Start here and go right."
+    },
+    {
+     "beat": "pause",
+     "do": "The child traces."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a zigzag alone."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS.M1_PW_RIGHT_LEFT",
+     "listen_for": [
+      "starts on the right"
+     ],
+     "ask": "Where do we start?",
+     "repair": "Green dot, left."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS.M1_PW_PRESS",
+     "listen_for": [
+      "deep grooves, torn page"
+     ],
+     "ask": "Is your hand tight?",
+     "repair": "Lightly."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS.M1_PW_LIFT",
+     "listen_for": [
+      "many short broken strokes"
+     ],
+     "ask": "Keep the pencil down?",
+     "repair": "To the end."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS.M1_PW_OUTSIDE",
+     "listen_for": [
+      "lines all over the page"
+     ],
+     "ask": "Between the lines?",
+     "repair": "Slow down."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Trace a row of circles.",
+     "answer": "smooth circles left to right",
+     "shows": "control"
+    },
+    {
+     "question": "Copy the wavy line.",
+     "answer": "one smooth line",
+     "shows": "control"
+    }
+   ]
+  }
+ ]
+}

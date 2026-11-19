@@ -1,0 +1,371 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T1_COMPREHENSION",
+ "title": "Comprehension (Theme 1: Activities at home and school)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child finds a clue in the title, the picture or the story so far, then says what will happen and why.",
+   "floor": {
+    "prerequisite": "Answers what is happening in a picture.",
+    "question": "What is the boy doing?",
+    "answer": "He is running."
+   },
+   "steps": [
+    "Read the title; look at the pictures.",
+    "Ask: what do you think will happen? Why?",
+    "Read on and check.",
+    "Say whether the guess was right and what the clue was."
+   ],
+   "contexts": [
+    "a story called The Lost Calf",
+    "a story about a big race",
+    "a festival story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Title: The Broken Kite. Picture: a girl crying, a torn kite."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What will the story be about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: A girl's kite gets torn. She may fix it or get help."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT.M3_PR_DESCRIBES",
+     "listen_for": [
+      "There is a boy and a bush."
+     ],
+     "ask": "What will happen next?",
+     "repair": "Say it with will."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT.M3_PR_NO_CLUE",
+     "listen_for": [
+      "a wedding"
+     ],
+     "ask": "Which clue did you use?",
+     "repair": "Find a word in the title."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT.M3_PR_PAST_EVENT",
+     "listen_for": [
+      "Juma climbed the tree."
+     ],
+     "ask": "Has that happened already?",
+     "repair": "Next means after."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT.M3_PR_FEAR_WRONG",
+     "listen_for": [
+      "Yes, it was a mistake."
+     ],
+     "ask": "Is it fine to guess?",
+     "repair": "Guess, then check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Title: Juma and the Snake. What might happen?",
+     "answer": "Juma meets a snake",
+     "shows": "title clue"
+    },
+    {
+     "question": "The clouds are dark. Mama takes the washing in. What will happen?",
+     "answer": "It will rain.",
+     "shows": "story clue"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Who acts or talks?\" for characters and \"Where and when?\" for the setting.",
+   "floor": {
+    "prerequisite": "Answers who and where questions.",
+    "question": "Who is in the picture?",
+    "answer": "a girl"
+   },
+   "steps": [
+    "Read the story.",
+    "List everyone who acts or talks.",
+    "Find where and when.",
+    "Draw the setting."
+   ],
+   "contexts": [
+    "a Hare and Elephant story",
+    "a story at the market",
+    "a rainy morning at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: One rainy morning, Hare met Tortoise at the river."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Who are the characters? What is the setting?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Hare and Tortoise; at the river, one rainy morning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING.M3_CS_ANIMALS",
+     "listen_for": [
+      "There are no characters; they are animals."
+     ],
+     "ask": "Does Hare act or talk?",
+     "repair": "Yes: a character."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING.M3_CS_SETTING_PERSON",
+     "listen_for": [
+      "Mama"
+     ],
+     "ask": "Setting means where and when. Where?",
+     "repair": "Gikomba market."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING.M3_CS_NO_TIME",
+     "listen_for": [
+      "at home"
+     ],
+     "ask": "And when?",
+     "repair": "On a cold night."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING.M3_CS_MAIN_ONLY",
+     "listen_for": [
+      "Akinyi"
+     ],
+     "ask": "Is anyone else in the story?",
+     "repair": "List them all."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Grandmother told stories by the fire at night. Who is the character?",
+     "answer": "Grandmother",
+     "shows": "character"
+    },
+    {
+     "question": "What is the setting?",
+     "answer": "by the fire at night",
+     "shows": "setting"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+   "assessed_by": "questions",
+   "key_step": "The child rereads the sentence around the word, finds the clue, and tests a meaning in the gap.",
+   "floor": {
+    "prerequisite": "Knows the theme words.",
+    "question": "A person who grows crops is a ...",
+    "answer": "farmer"
+   },
+   "steps": [
+    "Read the sentence.",
+    "Cover the word and ask what would fit.",
+    "Find the clue.",
+    "Put the meaning in and reread."
+   ],
+   "contexts": [
+    "a story about savings",
+    "a text about the environment",
+    "a story about a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The road was slippery after the rain, so Ali walked slowly."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What does slippery mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: easy to slide on"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M3_WC_LOOKS_LIKE",
+     "listen_for": [
+      "a burn on the skin"
+     ],
+     "ask": "Does that meaning fit the sentence?",
+     "repair": "Read it with your meaning in."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M3_WC_USUAL_MEANING",
+     "listen_for": [
+      "a place to keep money"
+     ],
+     "ask": "Which meaning fits here?",
+     "repair": "River: the side."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M3_WC_GIVES_UP",
+     "listen_for": [
+      "I do not know."
+     ],
+     "ask": "What clues are around it?",
+     "repair": "After rain, walked slowly."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M3_WC_PICTURE_ONLY",
+     "listen_for": [
+      "happy"
+     ],
+     "ask": "What do the words say?",
+     "repair": "Tore her book: angry."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The lion roared so loudly that the birds flew away. Roared means ...",
+     "answer": "made a very loud sound",
+     "shows": "clue: loudly"
+    },
+    {
+     "question": "We sat on the bank and watched the fish. Bank means ...",
+     "answer": "the side of a river",
+     "shows": "two meanings"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child reads the question word, finds the sentence that answers it, and points to it.",
+   "floor": {
+    "prerequisite": "Knows who, what, where, when.",
+    "question": "Where do you sleep?",
+    "answer": "in my bed"
+   },
+   "steps": [
+    "Read the text.",
+    "Read the question; circle the question word.",
+    "Find the sentence.",
+    "Answer and point."
+   ],
+   "contexts": [
+    "a text about wild animals",
+    "a story about play time",
+    "a text about food"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Otieno ate rice for supper at his aunt's house."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Where did Otieno eat supper?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: at his aunt's house"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M3_DQ_OWN_LIFE",
+     "listen_for": [
+      "ugali"
+     ],
+     "ask": "What does the text say?",
+     "repair": "Point to the answer."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M3_DQ_WRONG_WORD",
+     "listen_for": [
+      "on Monday"
+     ],
+     "ask": "What does where want?",
+     "repair": "A place."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M3_DQ_WORD_MATCH",
+     "listen_for": [
+      "The goat ate grass."
+     ],
+     "ask": "Is that sentence about the cow?",
+     "repair": "Find the cow sentence."
+    },
+    {
+     "code": "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M3_DQ_YES_ONLY",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "Why wants a ...?",
+     "repair": "Reason: because ..."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Otieno eat?",
+     "answer": "rice",
+     "shows": "what"
+    },
+    {
+     "question": "When did he eat it?",
+     "answer": "at supper",
+     "shows": "when"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

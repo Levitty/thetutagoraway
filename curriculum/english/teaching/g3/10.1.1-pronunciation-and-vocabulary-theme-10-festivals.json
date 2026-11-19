@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 10: Festivals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (-mb, -nt, -nd, -nch), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"bent\" start like \"bend\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a tent at a festival",
+    "lunch at a wedding",
+    "a band playing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: bent, bend."
+    },
+    {
+     "beat": "point",
+     "do": "Say bent.",
+     "say": "Listen: nt or nd?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the nt in bent."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH.M3_MB_B_SOUNDED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is the b heard?",
+     "repair": "Silent: thumb."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH.M3_NT_ND_VOICE",
+     "listen_for": [
+      "bend"
+     ],
+     "ask": "Puff or buzz?",
+     "repair": "Puff: bent."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH.M3_NCH_NSH",
+     "listen_for": [
+      "bush"
+     ],
+     "ask": "Stop at the start of ch?",
+     "repair": "t-sh: lunch."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH.M3_ND_DROP_D",
+     "listen_for": [
+      "ban"
+     ],
+     "ask": "Did you hear d?",
+     "repair": "Ban-d."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In \"comb\", do you hear b?",
+     "answer": "no",
+     "shows": "mb"
+    },
+    {
+     "question": "Which word ends like lunch: bench, bush, bun?",
+     "answer": "bench",
+     "shows": "nch"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

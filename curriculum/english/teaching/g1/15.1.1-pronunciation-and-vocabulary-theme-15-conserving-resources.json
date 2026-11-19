@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 15: Conserving resources)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.L_S_R",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (l, s, r), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"light\" start like \"right\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "saving water and light",
+    "rain on the roof"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: light, right."
+    },
+    {
+     "beat": "point",
+     "do": "Say light.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write light and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.L_S_R.M1_LR_L_R",
+     "listen_for": [
+      "right"
+     ],
+     "ask": "Tongue up?",
+     "repair": "Light."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.L_S_R.M1_LR_R_L",
+     "listen_for": [
+      "lane"
+     ],
+     "ask": "Curled?",
+     "repair": "Rain."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.L_S_R.M1_LR_S_SH",
+     "listen_for": [
+      "shave"
+     ],
+     "ask": "Smile?",
+     "repair": "Save."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.L_S_R.M1_LR_END_VOWEL",
+     "listen_for": [
+      "2 (ba-si)"
+     ],
+     "ask": "Any sound after s?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The teacher says \"rain\". Rain or lane?",
+     "answer": "rain",
+     "shows": "r"
+    },
+    {
+     "question": "Clap the beats in \"bus\".",
+     "answer": "1",
+     "shows": "no end vowel"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T4_PRE_READING",
+ "title": "Pre-reading (Theme 4: Home)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD",
+   "assessed_by": "questions",
+   "key_step": "The child looks at every letter left to right, small or capital, and circles each match.",
+   "floor": {
+    "prerequisite": "Matches capital and small letters.",
+    "question": "Which small letter goes with M?",
+    "answer": "m"
+   },
+   "steps": [
+    "Say the letter.",
+    "Look along the word.",
+    "Circle each one.",
+    "Count them."
+   ],
+   "contexts": [
+    "the home: mat, table",
+    "names in class"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Amina, ham, mat"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Amina.",
+     "say": "How many a's?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles each a."
+    },
+    {
+     "beat": "reveal",
+     "do": "Two: A and a."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD.M1_LW_FIRST",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Did you look at the end?",
+     "repair": "Every letter."
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD.M1_LW_M_N",
+     "listen_for": [
+      "circles the n"
+     ],
+     "ask": "Two humps or one?",
+     "repair": "M two."
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD.M1_LW_CAPITAL",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "Is A an a?",
+     "repair": "Yes."
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD.M1_LW_B_D",
+     "listen_for": [
+      "circles the d"
+     ],
+     "ask": "Make the bed.",
+     "repair": "B."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does \"ham\" have an m?",
+     "answer": "yes",
+     "shows": "end"
+    },
+    {
+     "question": "Circle the e in \"tea\".",
+     "answer": "circles e",
+     "shows": "middle"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly and places a letter for each sound, left to right.",
+   "floor": {
+    "prerequisite": "Finds letters in words.",
+    "question": "Circle the m in mat.",
+    "answer": "circles m"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Place the first letter.",
+    "Add the others.",
+    "Read it back."
+   ],
+   "contexts": [
+    "the home: mat, team"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Lay out: m, a, t"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first gap.",
+     "say": "What sound comes first in mat?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child places the cards."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: mat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS.M1_BW_ORDER",
+     "listen_for": [
+      "tam"
+     ],
+     "ask": "What sound comes first?",
+     "repair": "M."
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS.M1_BW_NO_VOWEL",
+     "listen_for": [
+      "mt"
+     ],
+     "ask": "Is there a vowel?",
+     "repair": "Add e."
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS.M1_BW_EXTRA",
+     "listen_for": [
+      "teaa"
+     ],
+     "ask": "How many sounds?",
+     "repair": "Three letters."
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS.M1_BW_A_E",
+     "listen_for": [
+      "met"
+     ],
+     "ask": "Mouth wide?",
+     "repair": "A."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Make \"tea\" with t, e, a.",
+     "answer": "tea",
+     "shows": "build"
+    },
+    {
+     "question": "Which letter is missing: m_t (mat)?",
+     "answer": "a",
+     "shows": "vowel"
+    }
+   ]
+  }
+ ]
+}

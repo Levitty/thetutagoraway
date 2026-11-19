@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 15: Caring for others)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (scr, spr, str, sw, st) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"spray\" and \"string\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "caring for a sick friend",
+    "sweeping the compound"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: spray, string."
+    },
+    {
+     "beat": "point",
+     "do": "Say spray.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in spray."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST.M2_STR_THREE_BEATS",
+     "listen_for": [
+      "3 (si-ti-rong)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: strong."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST.M2_SCR_STR",
+     "listen_for": [
+      "stub"
+     ],
+     "ask": "K in the middle?",
+     "repair": "Scrub."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST.M2_SW_TWO_BEATS",
+     "listen_for": [
+      "2 (su-weep)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: sweep."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST.M2_STR_SPR",
+     "listen_for": [
+      "string"
+     ],
+     "ask": "P or t in the middle?",
+     "repair": "P: spray."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with scr: scrub, stub, sub?",
+     "answer": "scrub",
+     "shows": "scr"
+    },
+    {
+     "question": "Which word starts with sw: swim, sim, wim?",
+     "answer": "swim",
+     "shows": "sw"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI",
+ "title": "Adjectives: Comparatives and superlatives (Theme 11: Play time and sports)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST",
+   "assessed_by": "questions",
+   "key_step": "The child counts how many are compared: two takes -er than, three or more takes the -est.",
+   "floor": {
+    "prerequisite": "Knows describing words.",
+    "question": "A giraffe is ___ (tall).",
+    "answer": "tall"
+   },
+   "steps": [
+    "Compare two children.",
+    "Compare three.",
+    "Learn the spelling rules.",
+    "Write about sports."
+   ],
+   "contexts": [
+    "a race at sports day",
+    "tall players",
+    "happy fans"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Akinyi is the ___ runner in the class. (fast)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? faster or fastest?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Akinyi is the fastest runner in the class."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST.M3_CM_MORE_ER",
+     "listen_for": [
+      "more taller"
+     ],
+     "ask": "Does taller already mean more?",
+     "repair": "Taller."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST.M3_CM_ER_FOR_EST",
+     "listen_for": [
+      "faster"
+     ],
+     "ask": "Two or the whole class?",
+     "repair": "Fastest."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST.M3_CM_NO_DOUBLE",
+     "listen_for": [
+      "biger"
+     ],
+     "ask": "Short vowel, one consonant?",
+     "repair": "Double: bigger."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST.M3_CM_Y_TO_I",
+     "listen_for": [
+      "happyer"
+     ],
+     "ask": "What happens to y?",
+     "repair": "Happier."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A ball is ___ than a marble. (big)",
+     "answer": "bigger",
+     "shows": "double"
+    },
+    {
+     "question": "This is the ___ day of my life. (happy)",
+     "answer": "happiest",
+     "shows": "y to i"
+    }
+   ]
+  }
+ ]
+}

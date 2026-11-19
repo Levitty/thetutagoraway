@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 2: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (i to p), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"sheep\" start like \"ship\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "things at school",
+    "a pen and a pencil"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: sheep, ship."
+    },
+    {
+     "beat": "point",
+     "do": "Say sheep.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sheep and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P.M1_IP_SHEEP_SHIP",
+     "listen_for": [
+      "ship"
+     ],
+     "ask": "Long or short?",
+     "repair": "Sheep: long."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P.M1_IP_I_NAME",
+     "listen_for": [
+      "kite"
+     ],
+     "ask": "Quick i?",
+     "repair": "Pin."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P.M1_IP_M_N",
+     "listen_for": [
+      "nat"
+     ],
+     "ask": "Lips close?",
+     "repair": "Mat."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P.M1_IP_P_B",
+     "listen_for": [
+      "Ben"
+     ],
+     "ask": "Puff?",
+     "repair": "Pen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with m: mat, nut, pot?",
+     "answer": "mat",
+     "shows": "m"
+    },
+    {
+     "question": "The teacher says \"pin\". Pin or bin?",
+     "answer": "pin",
+     "shows": "p"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES",
+   "assessed_by": "voice",
+   "key_step": "The child starts with I or This is and finishes the sentence with the new word.",
+   "floor": {
+    "prerequisite": "Names things in English.",
+    "question": "What is this? (a book)",
+    "answer": "a book"
+   },
+   "steps": [
+    "Model: This is my book.",
+    "The child copies it.",
+    "The child says a new one.",
+    "Partner talk."
+   ],
+   "contexts": [
+    "my family",
+    "my home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a school bag."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bag.",
+     "say": "Say: This is my bag."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws something and says a sentence about it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES.M1_SS_ONE_WORD",
+     "listen_for": [
+      "Book."
+     ],
+     "ask": "Can you say it as a sentence?",
+     "repair": "I see a book."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES.M1_SS_HOME_WORD",
+     "listen_for": [
+      "I have mama na baba."
+     ],
+     "ask": "In English?",
+     "repair": "A mother and a father."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES.M1_SS_NO_VERB",
+     "listen_for": [
+      "Me pencil."
+     ],
+     "ask": "Me pencil, or I have a pencil?",
+     "repair": "I have."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES.M1_SS_ECHO",
+     "listen_for": [
+      "What is your name."
+     ],
+     "ask": "Start with My ...",
+     "repair": "My name is ..."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tell me about your home.",
+     "answer": "a sentence of three or more words",
+     "shows": "sentence"
+    },
+    {
+     "question": "What do you have?",
+     "answer": "I have a ...",
+     "shows": "verb"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS"
+ ]
+}

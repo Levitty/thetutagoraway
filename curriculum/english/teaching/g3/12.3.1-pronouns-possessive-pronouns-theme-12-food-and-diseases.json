@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_",
+ "title": "Pronouns: Possessive pronouns (Theme 12: Food and diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Whose?\" and \"Boy or girl?\" and uses the pronoun alone, with no apostrophe.",
+   "floor": {
+    "prerequisite": "Knows my, your, his, her.",
+    "question": "This is ___ book (me).",
+    "answer": "my"
+   },
+   "steps": [
+    "Hold up objects: whose is it?",
+    "Answer with mine, yours, his, hers.",
+    "Fill gaps.",
+    "Write two sentences."
+   ],
+   "contexts": [
+    "sharing food at lunch",
+    "lost and found at school",
+    "a family meal"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Amina lost ___ pencil."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? his or her?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Amina lost her pencil."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS.M3_PO_HIS_HER",
+     "listen_for": [
+      "his"
+     ],
+     "ask": "Is Amina a boy or a girl?",
+     "repair": "Girl: her."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS.M3_PO_MINE_NOUN",
+     "listen_for": [
+      "mine"
+     ],
+     "ask": "Is there a noun after it?",
+     "repair": "My book."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS.M3_PO_APOSTROPHE",
+     "listen_for": [
+      "your's"
+     ],
+     "ask": "Any apostrophe in yours?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS.M3_PO_OBJECT_FORM",
+     "listen_for": [
+      "me"
+     ],
+     "ask": "It belongs to me: it is ...",
+     "repair": "Mine."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Whose bag is this? It is ___ (me).",
+     "answer": "mine",
+     "shows": "mine"
+    },
+    {
+     "question": "This cup is ___ (Juma).",
+     "answer": "his",
+     "shows": "his"
+    }
+   ]
+  }
+ ]
+}

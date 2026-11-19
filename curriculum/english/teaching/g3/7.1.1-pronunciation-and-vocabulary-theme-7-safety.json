@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 7: Safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (dw, tw, nk, sq), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"sink\" start like \"sing\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "twins crossing the road",
+    "a bank on a busy street",
+    "a square road sign"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: sink, sing."
+    },
+    {
+     "beat": "point",
+     "do": "Say sink.",
+     "say": "Listen: nk or ng?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the nk in sink."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ.M3_NK_NG",
+     "listen_for": [
+      "sing"
+     ],
+     "ask": "Did you hear a click at the end?",
+     "repair": "K: sink."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ.M3_SQ_SK",
+     "listen_for": [
+      "school"
+     ],
+     "ask": "Did the lips round after k?",
+     "repair": "Sk-w: square."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ.M3_TW_TWO_BEATS",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: twin."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ.M3_DW_DR",
+     "listen_for": [
+      "draw"
+     ],
+     "ask": "Round lips or curled tongue?",
+     "repair": "Round: dwarf."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts like squeeze: square, school, sun?",
+     "answer": "square",
+     "shows": "sq"
+    },
+    {
+     "question": "Which word ends with nk: thing, think, tin?",
+     "answer": "think",
+     "shows": "nk"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS",
+ "title": "Indefinite pronouns (Theme 4: Child rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses somebody in statements, anybody after not and in questions, nobody with a positive verb, and a singular verb.",
+   "floor": {
+    "prerequisite": "Uses is and are.",
+    "question": "Somebody ___ here.",
+    "answer": "is"
+   },
+   "steps": [
+    "Show three cards.",
+    "Read sentences; sort them.",
+    "Fill gaps.",
+    "Make own sentences about child rights."
+   ],
+   "contexts": [
+    "child rights at home",
+    "a knock at the door",
+    "an empty classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Nobody ___ to school on Sunday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? came or did not come?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Nobody came to school on Sunday."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS.M3_IN_DOUBLE_NEG",
+     "listen_for": [
+      "did not come"
+     ],
+     "ask": "Does nobody already mean not?",
+     "repair": "Nobody came."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS.M3_IN_PLURAL_VERB",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "One or many?",
+     "repair": "One: is."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS.M3_IN_ANY_SOME",
+     "listen_for": [
+      "somebody"
+     ],
+     "ask": "Is there not in the sentence?",
+     "repair": "Anybody."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS.M3_IN_ANYBODY_STATEMENT",
+     "listen_for": [
+      "Anybody"
+     ],
+     "ask": "Statement or question?",
+     "repair": "Statement: somebody."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is ___ at home?",
+     "answer": "anybody",
+     "shows": "question"
+    },
+    {
+     "question": "___ left a bag in the class.",
+     "answer": "Somebody",
+     "shows": "statement"
+    }
+   ]
+  }
+ ]
+}

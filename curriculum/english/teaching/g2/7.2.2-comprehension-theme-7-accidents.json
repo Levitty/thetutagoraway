@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T7_COMPREHENSION",
+ "title": "Comprehension (Theme 7: Accidents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS",
+   "assessed_by": "questions",
+   "key_step": "The child lists everyone who acts or talks, says what each is like from what they do, and tells what happened.",
+   "floor": {
+    "prerequisite": "Answers who questions.",
+    "question": "Who is in the picture?",
+    "answer": "a boy"
+   },
+   "steps": [
+    "Read the story.",
+    "List the characters.",
+    "Say one thing about each.",
+    "Tell the events."
+   ],
+   "contexts": [
+    "a story about an accident",
+    "Hare and Tortoise",
+    "a family at the clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Juma shared his lunch with the new boy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Who are the characters? What is Juma like?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Juma and the new boy; Juma is kind."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS.M2_CE_ANIMALS",
+     "listen_for": [
+      "none, they are animals"
+     ],
+     "ask": "Does Hare act?",
+     "repair": "Yes: a character."
+    },
+    {
+     "code": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS.M2_CE_MAIN_ONLY",
+     "listen_for": [
+      "Ali"
+     ],
+     "ask": "Anyone else?",
+     "repair": "List them all."
+    },
+    {
+     "code": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS.M2_CE_LOOKS_ONLY",
+     "listen_for": [
+      "tall"
+     ],
+     "ask": "What does he do?",
+     "repair": "Shares: kind."
+    },
+    {
+     "code": "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS.M2_CE_EVENT_PERSON",
+     "listen_for": [
+      "Achieng"
+     ],
+     "ask": "What happened?",
+     "repair": "An action."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Hare and Tortoise had a race. Who are the characters?",
+     "answer": "Hare and Tortoise",
+     "shows": "characters"
+    },
+    {
+     "question": "What happened?",
+     "answer": "They had a race.",
+     "shows": "events"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT",
+  "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+  "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

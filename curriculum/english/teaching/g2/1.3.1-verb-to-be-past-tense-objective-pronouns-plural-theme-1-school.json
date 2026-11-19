@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS",
+ "title": "Verb ‘to be’- Past Tense Objective Pronouns - Plural (Theme 1: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"One or more?\" and chooses was or were.",
+   "floor": {
+    "prerequisite": "Uses am, is and are.",
+    "question": "We ___ friends. (are or is?)",
+    "answer": "are"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "yesterday at school",
+    "last week at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We ___ in the library."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "was or were?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: We were in the library."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE.M2_WW_WE_WAS",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "We is one or more?",
+     "repair": "Were."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE.M2_WW_I_WERE",
+     "listen_for": [
+      "were"
+     ],
+     "ask": "One person?",
+     "repair": "Was."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE.M2_WW_IS_PAST",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "Now or last week?",
+     "repair": "Was."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE.M2_WW_CHILDREN_WAS",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "One child or many?",
+     "repair": "Were."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I ___ sick yesterday.",
+     "answer": "was",
+     "shows": "one"
+    },
+    {
+     "question": "The children ___ happy.",
+     "answer": "were",
+     "shows": "plural"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Is it doing the action, or is the action done to it?\" Done to: us, you, them.",
+   "floor": {
+    "prerequisite": "Uses me, him and her.",
+    "question": "Mama called ___ (I).",
+    "answer": "me"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "the teacher gives books",
+    "playing with friends"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The teacher gave ___ sweets. (we)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "we or us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: The teacher gave us sweets."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS.M2_OP_WE_FOR_US",
+     "listen_for": [
+      "we"
+     ],
+     "ask": "After the verb?",
+     "repair": "Us."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS.M2_OP_THEY_FOR_THEM",
+     "listen_for": [
+      "they"
+     ],
+     "ask": "After the verb?",
+     "repair": "Them."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS.M2_OP_US_SUBJECT",
+     "listen_for": [
+      "Us"
+     ],
+     "ask": "Doing it?",
+     "repair": "We."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS.M2_OP_PREP_THEY",
+     "listen_for": [
+      "they"
+     ],
+     "ask": "After with?",
+     "repair": "Them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I saw ___ at the market. (they)",
+     "answer": "them",
+     "shows": "them"
+    },
+    {
+     "question": "Come with ___. (we)",
+     "answer": "us",
+     "shows": "us"
+    }
+   ]
+  }
+ ]
+}

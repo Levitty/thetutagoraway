@@ -9,7 +9,7 @@
 // The depth data is authored offline in scripts/data/english-depth/g<N>-*.mjs (no model call at run time). Each file may export
 //   NEW  [[sub, id, name, letters, assess, forms, mastery], ...]           sub is the sub-strand key after ENGL.G<N>. (prefix match)
 //   OUT  { ID: ['b', 'LANGUA.T3.c'] }                                       more official outcomes for a skill (own sub-strand letter, or SUB.letter)
-//   PRE  { ID: ['OTHER_ID', 'G4:ID', 'G3o:LISTEN.T1.a', ['G5:ID', 'reason']] }   prerequisites added to a skill
+//   PRE  { ID: ['OTHER_ID', 'G4:ID', 'G3o:LISTEN.T1.a', ['G5:ID', 'reason']] }   prerequisites added to a skill (Grade 1 also 'PP:ID', a readiness skill)
 //   MIS  [[ID, SHORT, error, question, wrong, right, cause, help], ...]      misconceptions added to a skill; SHORT starts M<N>_
 //   PACK { ID: [key_step, [floor_prerequisite, floor_question, floor_answer], steps, contexts, board, checks, { SHORT: [ask, repair] }] }
 //        board [[beat, do, say?]] with beats draw, point, count, predict, pause, child_draws, reveal, write; checks [[q, a, shows] x 2]
@@ -107,6 +107,9 @@ export async function applyDepth(grade, doc, { families = null } = {}) {
   const lowerSkills = (g) => (lower[g] ||= load(g).sub_strands.flatMap(s => (s.skills || []).map(k => k.code)));
   const lowerOutcomes = (g) => (lower[`o${g}`] ||= load(g).sub_strands.flatMap(s => s.outcomes.map(o => o.code)));
   const resolve = (ref) => {
+    // Grade 1 has no grade below: PP:ID names a pre-primary readiness skill that Grade 1 defines under readiness (18 Nov 2026).
+    const pp = /^PP:([A-Z0-9_]+)$/.exec(ref);
+    if (pp) return [`ENGL.PP2.READINESS.${pp[1]}`, 'skill', 'Pre-primary readiness, defined in Grade 1 under readiness. Proposed, to confirm against the PP2 design by a Kenyan teacher.'];
     const m = /^G(\d)(o?):(.+)$/.exec(ref);
     if (!m) { const [k] = get(ref, 'PRE'); return [k.code, 'skill', 'This skill builds on it. Proposed, to confirm by a Kenyan English teacher.']; }
     const g = Number(m[1]);
@@ -132,7 +135,8 @@ export async function applyDepth(grade, doc, { families = null } = {}) {
   }
   // ---- misconceptions
   const allShort = new Set();
-  for (let g = 4; g <= 9; g++) if (g !== grade) for (const s of load(g).sub_strands) for (const m of s.misconceptions || []) allShort.add(m.code.split('.').pop());
+  for (let g = 1; g <= 9; g++) if (g !== grade)   // Grades 1-3 joined on 18 Nov 2026 (no first pass: every skill is new)
+    for (const s of load(g).sub_strands) for (const m of s.misconceptions || []) allShort.add(m.code.split('.').pop());
   for (const s of doc.sub_strands) for (const m of s.misconceptions || []) allShort.add(m.code.split('.').pop());
   for (const [id, short, error, question, wrong, right, cause, help] of D.MIS) {
     const [k, s] = get(id, 'MIS');

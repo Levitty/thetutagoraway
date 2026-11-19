@@ -42,8 +42,8 @@ test('the bank holds the science families (as before) and not the English ones; 
 test('every entry is complete and every family sits in its own entry', async () => {
   const ids = new Set();
   for (const e of SUBJECT_GRADES) {
-    // a subject-grade mapped before any family is written (Kiswahili Grades 1-3, 18 Nov 2026) lists every skill as awaiting
-    assert.ok(e.families.length > 0 || (e.awaiting?.length && e.awaiting.length === Object.keys(e.map.skills).length), `${e.subject} g${e.grade} has families, or lists every skill as awaiting`);
+    // A subject-grade mapped before any family is written (Kiswahili and English Grades 1-3, 18-19 Nov 2026): allowed while every skill is listed as awaiting or marked nofamily.
+    assert.ok(e.families.length > 0 || (e.awaiting?.length && e.awaiting.length === Object.keys(e.map.skills).length) || Object.values(e.map.skills).every(k => k.nofamily), `${e.subject} g${e.grade} has families, or every skill is awaiting or nofamily`);
     for (const f of e.families) {
       assert.ok(!ids.has(f.id), `duplicate family id ${f.id}`);
       ids.add(f.id);
@@ -73,8 +73,9 @@ test('the practice engine reads its subjects from the registry', () => {
   assert.deepEqual(Object.keys(SUBJECT_DEFS).slice(0, 2), ['science', 'english']);
   assert.equal(SUBJECT_DEFS.science.description, 'Science and Technology for Grades 4, 5, 6 from the CBC design');   // Grade 4 joined Grade 5 on 12 Nov 2026, Grade 6 after it
   assert.equal(Object.keys(subjectDef('science').map).length, 93);   // 33 skills in Grade 5, 25 in Grade 4 and 35 in Grade 6
-  // Every English skill of Grades 4 to 9 (294 before the depth pass of 18 Nov 2026, which added the speaking, reading-aloud and composition skills).
-  assert.equal(Object.keys(subjectDef('english').map).length, [4, 5, 6, 7, 8, 9].reduce((n, g) => n + JSON.parse(readFileSync(new URL(`../curriculum/english/g${g}.json`, import.meta.url), 'utf8')).totals.skills, 0));
+  // Every English skill of Grades 1 to 9 (294 for Grades 4-9 before the depth pass of 18 Nov 2026, which added the speaking, reading-aloud and
+  // composition skills; Grades 1-3 joined the same day). A grade with no entry yet has no skills in its file, so it adds nothing.
+  assert.equal(Object.keys(subjectDef('english').map).length, [1, 2, 3, 4, 5, 6, 7, 8, 9].reduce((n, g) => n + JSON.parse(readFileSync(new URL(`../curriculum/english/g${g}.json`, import.meta.url), 'utf8')).totals.skills, 0));
 });
 
 test('the phone-bundle list names every family file and its signed list', async () => {

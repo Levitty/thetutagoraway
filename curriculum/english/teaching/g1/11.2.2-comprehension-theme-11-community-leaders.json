@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T11_COMPREHENSION",
+ "title": "Comprehension (Theme 11: Community leaders)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child looks at the title and picture and says what will happen, using will.",
+   "floor": {
+    "prerequisite": "Listens to stories.",
+    "question": "What was the story about?",
+    "answer": "a dog"
+   },
+   "steps": [
+    "Show the cover.",
+    "Ask what will happen.",
+    "Read and check.",
+    "Say if the guess was right."
+   ],
+   "contexts": [
+    "community leaders",
+    "technology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Title: The Big Rain. Picture: dark clouds."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture and words.",
+     "say": "What will happen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child points to the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: It will rain."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT.M1_PR_DESCRIBE",
+     "listen_for": [
+      "There are clouds."
+     ],
+     "ask": "What will happen?",
+     "repair": "Use will."
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT.M1_PR_NO_CLUE",
+     "listen_for": [
+      "a cow"
+     ],
+     "ask": "Look at the title.",
+     "repair": "A phone."
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT.M1_PR_ALREADY",
+     "listen_for": [
+      "The boy dropped his cup."
+     ],
+     "ask": "Has it happened?",
+     "repair": "After."
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT.M1_PR_AFRAID",
+     "listen_for": [
+      "I do not know."
+     ],
+     "ask": "Is a guess fine?",
+     "repair": "Yes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Title: My New Phone. What is the story about?",
+     "answer": "a new phone",
+     "shows": "title"
+    },
+    {
+     "question": "The boy dropped his cup. What next?",
+     "answer": "It will break.",
+     "shows": "next"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the answer in the text or picture, or uses a clue for how someone feels.",
+   "floor": {
+    "prerequisite": "Listens to stories.",
+    "question": "Who was in the story?",
+    "answer": "a hen"
+   },
+   "steps": [
+    "Read the text.",
+    "Ask the question.",
+    "Find the answer.",
+    "Point to it."
+   ],
+   "contexts": [
+    "living together",
+    "numbers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Tom has a red ball. He is happy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture and words.",
+     "say": "What colour is Tom's ball?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child points to the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: red"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS.M1_AQ_OWN_LIFE",
+     "listen_for": [
+      "blue, like mine"
+     ],
+     "ask": "What does the text say?",
+     "repair": "Red."
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS.M1_AQ_WRONG_WORD",
+     "listen_for": [
+      "the cat"
+     ],
+     "ask": "Where wants?",
+     "repair": "A place."
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS.M1_AQ_YES",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "What wants?",
+     "repair": "A thing."
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS.M1_AQ_NOT_SAID",
+     "listen_for": [
+      "It does not say."
+     ],
+     "ask": "What does crying show?",
+     "repair": "Sad."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the cat? (The cat is under the bed.)",
+     "answer": "under the bed",
+     "shows": "where"
+    },
+    {
+     "question": "Amina cried. How did she feel?",
+     "answer": "sad",
+     "shows": "feeling"
+    }
+   ]
+  }
+ ]
+}

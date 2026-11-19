@@ -1,0 +1,278 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T3_COMPREHENSION",
+ "title": "Comprehension (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA",
+   "assessed_by": "questions",
+   "key_step": "The child tests each answer: does it cover the whole text, or only a part?",
+   "floor": {
+    "prerequisite": "Answers direct questions.",
+    "question": "What did Juma sweep?",
+    "answer": "the classroom"
+   },
+   "steps": [
+    "Read the whole text.",
+    "List what each part is about.",
+    "Find what they share.",
+    "Choose a title."
+   ],
+   "contexts": [
+    "a text about safety at home",
+    "a text about caring for pets",
+    "a text about our environment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Children help at home. They sweep, wash dishes and feed the hens."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What is it mainly about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: how children help at home"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA.M3_MI_DETAIL",
+     "listen_for": [
+      "feeding hens"
+     ],
+     "ask": "Does it cover every part?",
+     "repair": "Find the answer that covers all."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA.M3_MI_TOO_WIDE",
+     "listen_for": [
+      "animals"
+     ],
+     "ask": "Is the whole text about all animals?",
+     "repair": "No: a dog."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA.M3_MI_FIRST_LINE",
+     "listen_for": [
+      "It was sunny."
+     ],
+     "ask": "Have you read it all?",
+     "repair": "Decide at the end."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA.M3_MI_PURPOSE",
+     "listen_for": [
+      "to tell a story"
+     ],
+     "ask": "Story, facts or steps?",
+     "repair": "Steps: how to."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A text tells how to wash hands. Why was it written?",
+     "answer": "to tell us how to wash hands",
+     "shows": "purpose"
+    },
+    {
+     "question": "Best title for a text about planting trees at school?",
+     "answer": "Planting Trees at School",
+     "shows": "main idea"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.READIN.T3_COMPREHENSION.SUMMARISE",
+   "assessed_by": "questions",
+   "key_step": "The child says who, what happened and how it ended, in order, in three sentences.",
+   "floor": {
+    "prerequisite": "Knows the main idea.",
+    "question": "What is the story about?",
+    "answer": "a boy saving money"
+   },
+   "steps": [
+    "Read the story.",
+    "Find the beginning, middle and end.",
+    "Say one sentence for each.",
+    "Cross out details."
+   ],
+   "contexts": [
+    "a story about saving",
+    "a text about a talent show",
+    "a story about the environment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Peter wanted a ball. He saved coins for weeks. At last he bought it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Summarise in two sentences."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Peter saved coins for weeks. He bought a ball."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SUMMARISE.M3_SU_EVERYTHING",
+     "listen_for": [
+      "ten sentences, every detail"
+     ],
+     "ask": "Do we need every detail?",
+     "repair": "Three sentences only."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SUMMARISE.M3_SU_ONE_DETAIL",
+     "listen_for": [
+      "The coins were in a tin."
+     ],
+     "ask": "Who, what, how did it end?",
+     "repair": "Peter saved and bought a ball."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SUMMARISE.M3_SU_OPINION",
+     "listen_for": [
+      "I liked the boy. Saving is good."
+     ],
+     "ask": "Is that what happened?",
+     "repair": "Leave out what you think."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SUMMARISE.M3_SU_ORDER",
+     "listen_for": [
+      "It grew. She planted a seed."
+     ],
+     "ask": "What happened first?",
+     "repair": "Beginning, middle, end."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which sentence belongs in the summary: \"The tin was red\" or \"Peter bought the ball\"?",
+     "answer": "Peter bought the ball",
+     "shows": "keep the main"
+    },
+    {
+     "question": "Is \"I liked Peter\" part of a summary?",
+     "answer": "no",
+     "shows": "no opinion"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS",
+   "assessed_by": "questions",
+   "key_step": "The child finds each event, numbers it, and uses first, then, after that, finally.",
+   "floor": {
+    "prerequisite": "Answers when questions.",
+    "question": "When did Juma eat?",
+    "answer": "in the morning"
+   },
+   "steps": [
+    "Read the text.",
+    "Find each event.",
+    "Number them.",
+    "Retell with first, then, finally."
+   ],
+   "contexts": [
+    "a story about a festival",
+    "a text about making tea",
+    "a story about a lost calf"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Before school, Juma ate breakfast. After school, he played."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What did Juma do first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and point to the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue in the text."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: ate breakfast"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS.M3_SE_ORDER_TOLD",
+     "listen_for": [
+      "went to school"
+     ],
+     "ask": "What does before tell you?",
+     "repair": "That came first."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS.M3_SE_ENDS_ONLY",
+     "listen_for": [
+      "woke up, dressed, washed, walked to school"
+     ],
+     "ask": "Did you check the middle ones?",
+     "repair": "Number each in the text."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS.M3_SE_AFTER_BEFORE",
+     "listen_for": [
+      "She fed the hens."
+     ],
+     "ask": "After means earlier or later?",
+     "repair": "Later."
+    },
+    {
+     "code": "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS.M3_SE_PICTURE_PLACE",
+     "listen_for": [
+      "leaves them as they lie"
+     ],
+     "ask": "What must happen first?",
+     "repair": "Boil the water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order: dried, washed, wore the shirt.",
+     "answer": "washed, dried, wore",
+     "shows": "order"
+    },
+    {
+     "question": "What did Amina do after feeding the hens? (She fed the hens, then fetched water.)",
+     "answer": "fetched water",
+     "shows": "after"
+    }
+   ]
+  }
+ ]
+}

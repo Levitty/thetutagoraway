@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T10_PREPOSITIONS",
+ "title": "Prepositions (Theme 10: Festivals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+   "assessed_by": "questions",
+   "key_step": "The child looks at where the thing is from the other object's side and chooses the word.",
+   "floor": {
+    "prerequisite": "Follows position instructions.",
+    "question": "Put the pen on the book.",
+    "answer": "does it"
+   },
+   "steps": [
+    "Place objects; say where.",
+    "Act the words.",
+    "Describe a picture.",
+    "Give directions."
+   ],
+   "contexts": [
+    "decorations at a festival",
+    "a classroom map",
+    "the way to the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The cup is ___ the table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? on or in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: The cup is on the table."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M3_PP_IN_ON",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Inside or on top?",
+     "repair": "On top: on."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M3_PP_BETWEEN_ONE",
+     "listen_for": [
+      "between"
+     ],
+     "ask": "How many things?",
+     "repair": "One: beside."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M3_PP_BEHIND_FRONT",
+     "listen_for": [
+      "in front of"
+     ],
+     "ask": "Does the tree hide him?",
+     "repair": "Behind."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M3_PP_ABOVE_ON",
+     "listen_for": [
+      "above"
+     ],
+     "ask": "Does it touch?",
+     "repair": "On."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The ball is ___ the two boxes.",
+     "answer": "between",
+     "shows": "between"
+    },
+    {
+     "question": "The boy is hidden ___ the tree.",
+     "answer": "behind",
+     "shows": "behind"
+    }
+   ]
+  }
+ ]
+}

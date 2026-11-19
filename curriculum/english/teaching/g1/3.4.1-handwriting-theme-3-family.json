@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T3_HANDWRITING",
+ "title": "Handwriting (Theme 3: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child checks a letter: right way round, right size, closed where it should be.",
+   "floor": {
+    "prerequisite": "Knows the letters.",
+    "question": "Show me the letter s.",
+    "answer": "points"
+   },
+   "steps": [
+    "Show good and poor letters.",
+    "Talk about what is wrong.",
+    "Choose the good one.",
+    "Check own letters."
+   ],
+   "contexts": [
+    "letters in a story",
+    "letters on the board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: s / backwards s / a / open a"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which are written right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS.M1_FL_BACKWARDS",
+     "listen_for": [
+      "a backwards s"
+     ],
+     "ask": "Which way does s face?",
+     "repair": "Like c at the top."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS.M1_FL_B_D",
+     "listen_for": [
+      "d"
+     ],
+     "ask": "Make the bed.",
+     "repair": "B."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS.M1_FL_SIZE",
+     "listen_for": [
+      "a tall a reaching the top line"
+     ],
+     "ask": "Short or tall letter?",
+     "repair": "Short."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS.M1_FL_OPEN",
+     "listen_for": [
+      "an a like a u"
+     ],
+     "ask": "Closed?",
+     "repair": "Yes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which b is written right?",
+     "answer": "b with the belly on the right",
+     "shows": "direction"
+    },
+    {
+     "question": "Which a is right: open or closed?",
+     "answer": "closed",
+     "shows": "formation"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS",
+   "assessed_by": "teacher",
+   "key_step": "The child starts each letter at its starting dot, follows the arrows, and writes left to right.",
+   "floor": {
+    "prerequisite": "Draws patterns.",
+    "question": "Draw a circle.",
+    "answer": "draws"
+   },
+   "steps": [
+    "Model the letter with arrows.",
+    "Trace in the air.",
+    "Trace, then copy.",
+    "Write in words."
+   ],
+   "contexts": [
+    "letters of the theme: a, m, t, e",
+    "my name"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a with a dot at the top and arrows."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dot.",
+     "say": "Start here, round like c, then down."
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes a."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a row of a."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS.M1_FM_BOTTOM_START",
+     "listen_for": [
+      "starts at the bottom, a looks like u"
+     ],
+     "ask": "Where is the starting dot?",
+     "repair": "At the top."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS.M1_FM_REVERSE",
+     "listen_for": [
+      "sun with a backwards s"
+     ],
+     "ask": "Which way does s face?",
+     "repair": "Like c."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS.M1_FM_CAPS_MIX",
+     "listen_for": [
+      "bAt"
+     ],
+     "ask": "Small or capital inside a word?",
+     "repair": "Small."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS.M1_FM_RIGHT_LEFT",
+     "listen_for": [
+      "tam"
+     ],
+     "ask": "Which side do you start?",
+     "repair": "Left."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write: mat",
+     "answer": "m, a, t formed right, left to right",
+     "shows": "formation"
+    },
+    {
+     "question": "Write: sun",
+     "answer": "s the right way round",
+     "shows": "reversal"
+    }
+   ]
+  }
+ ]
+}

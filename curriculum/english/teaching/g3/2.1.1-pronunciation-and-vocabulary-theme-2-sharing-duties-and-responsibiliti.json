@@ -1,0 +1,188 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 2: Sharing duties and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (dr, fl, fr, gl), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"fly\" start like \"fry\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a flag at the school gate",
+    "fetching water with a drum",
+    "washing a glass"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: fly, fry."
+    },
+    {
+     "beat": "point",
+     "do": "Say fly.",
+     "say": "Listen: fl or fr?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the fl in fly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL.M3_FL_FR_SWAP",
+     "listen_for": [
+      "fry"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Up: fly."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL.M3_DR_DROP_R",
+     "listen_for": [
+      "dip"
+     ],
+     "ask": "Did you hear r?",
+     "repair": "D-r-ip."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL.M3_GL_CL_VOICE",
+     "listen_for": [
+      "class"
+     ],
+     "ask": "Did it buzz?",
+     "repair": "Buzz: glass."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL.M3_FR_F_ONLY",
+     "listen_for": [
+      "fan"
+     ],
+     "ask": "What came after f?",
+     "repair": "F-r: frog."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with gl: glue, blue, goat?",
+     "answer": "glue",
+     "shows": "gl"
+    },
+    {
+     "question": "Which word starts with fr: fish, frog, flag?",
+     "answer": "frog",
+     "shows": "fr"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS",
+   "assessed_by": "voice",
+   "key_step": "The child holds the three steps on three fingers, then does them in order.",
+   "floor": {
+    "prerequisite": "Follows two-step instructions.",
+    "question": "Stand up and clap.",
+    "answer": "stands and claps"
+   },
+   "steps": [
+    "Say the three steps once.",
+    "The child repeats them.",
+    "The child does them.",
+    "Swap: the child gives the instruction."
+   ],
+   "contexts": [
+    "getting ready for break",
+    "tidying the classroom",
+    "a game in the field"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three boxes: 1, 2, 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boxes as you speak.",
+     "say": "Pick up the book, put it on the chair, sit down."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child does it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a picture for each step."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS.M3_FI_LAST_ONLY",
+     "listen_for": [
+      "sits down only"
+     ],
+     "ask": "What was the first step?",
+     "repair": "Count them on your fingers."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS.M3_FI_ORDER",
+     "listen_for": [
+      "writes the name, then opens the book"
+     ],
+     "ask": "Which came first?",
+     "repair": "First, then, last."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS.M3_FI_POSITION",
+     "listen_for": [
+      "puts it on the book"
+     ],
+     "ask": "Under or on?",
+     "repair": "Under is below."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS.M3_FI_COPY",
+     "listen_for": [
+      "picks the blue crayon a friend picked"
+     ],
+     "ask": "What did you hear?",
+     "repair": "Listen with eyes closed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Touch your nose, jump once and clap.",
+     "answer": "all three in order",
+     "shows": "order"
+    },
+    {
+     "question": "Put the pencil under the book, then stand up and turn round.",
+     "answer": "all three steps",
+     "shows": "position"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 1: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (bl, sp, sc, sk, ck) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"scarf\" and \"shirt\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a desk in school",
+    "a black school bag"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: scarf, shirt."
+    },
+    {
+     "beat": "point",
+     "do": "Say scarf.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in scarf."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK.M2_SC_SK_DIFFERENT",
+     "listen_for": [
+      "scarf and shirt"
+     ],
+     "ask": "Listen: do they start the same?",
+     "repair": "Both s-k."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK.M2_BL_TWO_BEATS",
+     "listen_for": [
+      "2 (bu-lack)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: black."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK.M2_SP_FIRST_LETTER",
+     "listen_for": [
+      "sun"
+     ],
+     "ask": "What came after s?",
+     "repair": "P: spoon."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK.M2_CK_VOICED",
+     "listen_for": [
+      "bag"
+     ],
+     "ask": "Buzz at the end?",
+     "repair": "No: back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with sk: skip, sip, ship?",
+     "answer": "skip",
+     "shows": "sk"
+    },
+    {
+     "question": "Which word ends with ck: duck, dug, dog?",
+     "answer": "duck",
+     "shows": "ck"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says what the word means, then tests it in the sentence.",
+   "floor": {
+    "prerequisite": "Names everyday objects.",
+    "question": "What do we sweep with?",
+    "answer": "a broom"
+   },
+   "steps": [
+    "Show the picture or the thing.",
+    "Say the word in a sentence.",
+    "Sort words into groups.",
+    "Choose a word for a gap."
+   ],
+   "contexts": [
+    "things in the classroom",
+    "transport",
+    "the farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a duster, a broom and a bucket."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the duster.",
+     "say": "What do we clean with it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels one more picture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M2_TW_SAME_GROUP",
+     "listen_for": [
+      "broom"
+     ],
+     "ask": "What is this one used for?",
+     "repair": "Duster for the board."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M2_TW_HOME_WORD",
+     "listen_for": [
+      "gari"
+     ],
+     "ask": "In English?",
+     "repair": "Car."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M2_TW_SOUND_ALIKE",
+     "listen_for": [
+      "shop keeper"
+     ],
+     "ask": "Does it make sense?",
+     "repair": "Shop."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M2_TW_PERSON_THING",
+     "listen_for": [
+      "shop"
+     ],
+     "ask": "Person or place?",
+     "repair": "Shopkeeper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The person who drives a bus is a ...",
+     "answer": "driver",
+     "shows": "person word"
+    },
+    {
+     "question": "We plant a ... to grow a tree.",
+     "answer": "seedling",
+     "shows": "garden"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP",
+   "assessed_by": "voice",
+   "key_step": "The child holds the two steps on two fingers, then does them in order.",
+   "floor": {
+    "prerequisite": "Follows one-step instructions.",
+    "question": "Stand up.",
+    "answer": "stands"
+   },
+   "steps": [
+    "Say the two steps once.",
+    "The child repeats them.",
+    "The child does them.",
+    "Swap roles."
+   ],
+   "contexts": [
+    "tidying the classroom",
+    "getting ready for break"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two boxes: 1, 2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boxes as you speak.",
+     "say": "Pick up the book, then put it on the shelf."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child does it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws each step."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP.M2_FI_LAST_ONLY",
+     "listen_for": [
+      "closes the door while sitting"
+     ],
+     "ask": "What was first?",
+     "repair": "Two fingers."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP.M2_FI_ORDER",
+     "listen_for": [
+      "eats, then washes"
+     ],
+     "ask": "What does then mean?",
+     "repair": "After."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP.M2_FI_LEFT_RIGHT",
+     "listen_for": [
+      "raises the left hand"
+     ],
+     "ask": "Which hand makes an L?",
+     "repair": "The left; the other is right."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP.M2_FI_COPY",
+     "listen_for": [
+      "picks the colour a friend picked"
+     ],
+     "ask": "What did you hear?",
+     "repair": "Listen first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Clap twice, then sit down.",
+     "answer": "both steps in order",
+     "shows": "order"
+    },
+    {
+     "question": "Touch your left ear, then your right knee.",
+     "answer": "both steps, left and right right",
+     "shows": "left and right"
+    }
+   ]
+  }
+ ]
+}

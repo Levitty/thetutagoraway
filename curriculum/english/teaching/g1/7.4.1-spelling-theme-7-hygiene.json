@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T7_SPELLING",
+ "title": "Spelling (Theme 7: Hygiene)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T7_SPELLING.B_D_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child checks the tricky letters with a trick: the bed for b and d, p's stick on the left, u is a cup.",
+   "floor": {
+    "prerequisite": "Forms letters.",
+    "question": "Write: c",
+    "answer": "c"
+   },
+   "steps": [
+    "Make the bed with fists.",
+    "Trace b starting with the stick, d starting with c.",
+    "Sort letter cards.",
+    "Fix words."
+   ],
+   "contexts": [
+    "the hygiene theme: brush, rug"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bog / dog"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which word is the animal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.B_D_LETTERS.M1_BD_B_D",
+     "listen_for": [
+      "bog"
+     ],
+     "ask": "Make the bed.",
+     "repair": "D on the right."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.B_D_LETTERS.M1_BD_P_Q",
+     "listen_for": [
+      "qen"
+     ],
+     "ask": "Stick on which side?",
+     "repair": "Left for p."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.B_D_LETTERS.M1_BD_U_N",
+     "listen_for": [
+      "np"
+     ],
+     "ask": "Can it hold water?",
+     "repair": "U."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.B_D_LETTERS.M1_BD_G_Q",
+     "listen_for": [
+      "qoat"
+     ],
+     "ask": "Hook or straight?",
+     "repair": "G hooks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fix: The bog barks.",
+     "answer": "The dog barks.",
+     "shows": "b and d"
+    },
+    {
+     "question": "Fill: _p (not down)",
+     "answer": "u",
+     "shows": "u and n"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD",
+  "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS",
+  "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC"
+ ]
+}

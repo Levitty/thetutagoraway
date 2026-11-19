@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 9: My friends)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (k, y, l, s), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"yam\" start like \"jam\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "playing with friends",
+    "yes and no"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: yam, jam."
+    },
+    {
+     "beat": "point",
+     "do": "Say yam.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write yam and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S.M1_KJ_Y_J",
+     "listen_for": [
+      "jam"
+     ],
+     "ask": "A stop at the start?",
+     "repair": "No: yam."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S.M1_KJ_Y_NAME",
+     "listen_for": [
+      "wye"
+     ],
+     "ask": "Name or sound?",
+     "repair": "Y-y-yes."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S.M1_KJ_L_R",
+     "listen_for": [
+      "ramp"
+     ],
+     "ask": "Tongue up?",
+     "repair": "Lamp."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S.M1_KJ_S_Z",
+     "listen_for": [
+      "zip"
+     ],
+     "ask": "Hiss or buzz?",
+     "repair": "Hiss: sip."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts like \"yes\": yam, jam, ham?",
+     "answer": "yam",
+     "shows": "y"
+    },
+    {
+     "question": "The teacher says \"lamp\". Lamp or ramp?",
+     "answer": "lamp",
+     "shows": "l"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+ ]
+}

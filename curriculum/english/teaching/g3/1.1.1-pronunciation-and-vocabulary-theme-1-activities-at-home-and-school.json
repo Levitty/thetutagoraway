@@ -1,0 +1,274 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 1: Activities at home and school)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (bl, br, cl, ch), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"blue\" start like \"brown\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "cleaning the classroom",
+    "brushing teeth before school",
+    "a chair at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: blue, brown."
+    },
+    {
+     "beat": "point",
+     "do": "Say blue.",
+     "say": "Listen: bl or br?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the bl in blue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH.M3_BL_BR_SWAP",
+     "listen_for": [
+      "brown"
+     ],
+     "ask": "Was the tongue up or curled?",
+     "repair": "Up for blue, curled for brown."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH.M3_BL_FIRST_LETTER",
+     "listen_for": [
+      "bag"
+     ],
+     "ask": "What came after the b?",
+     "repair": "Black has b-l; bag has b-a."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH.M3_CH_SH",
+     "listen_for": [
+      "shop"
+     ],
+     "ask": "Did it start with a stop?",
+     "repair": "t-sh: chin."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH.M3_CL_TWO_BEATS",
+     "listen_for": [
+      "2 (ku-lap)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: clap."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with cl: clean, kind, lean?",
+     "answer": "clean",
+     "shows": "cl"
+    },
+    {
+     "question": "Which word starts with the sound in chair: shoe, chalk, sock?",
+     "answer": "chalk",
+     "shows": "ch"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+   "assessed_by": "voice",
+   "key_step": "The child glues the consonants of the blend into one beat, then adds the vowel.",
+   "floor": {
+    "prerequisite": "Says single letter-sounds.",
+    "question": "Say the first sound of \"bag\".",
+    "answer": "/b/"
+   },
+   "steps": [
+    "Say each consonant alone.",
+    "Push them together with no vowel between.",
+    "Add the rest of the word.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "three friends playing",
+    "a frog in the river",
+    "a street in town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: b + l = bl, blue."
+    },
+    {
+     "beat": "point",
+     "do": "Point at bl.",
+     "say": "Say b and l together, no sound between. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say blue."
+    },
+    {
+     "beat": "count",
+     "do": "The child claps the beats: one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: blue, not bu-lu."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS.M3_PSB_EXTRA_VOWEL",
+     "listen_for": [
+      "bulu"
+     ],
+     "ask": "How many beats did you say?",
+     "repair": "One beat: blue."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS.M3_PSB_L_R",
+     "listen_for": [
+      "The flog can fry."
+     ],
+     "ask": "Tongue up or curled?",
+     "repair": "Up for fly, curled for frog."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS.M3_PSB_DROP",
+     "listen_for": [
+      "top"
+     ],
+     "ask": "Did you say both sounds?",
+     "repair": "S then t: stop."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS.M3_PSB_TH_T",
+     "listen_for": [
+      "tree"
+     ],
+     "ask": "Is your tongue between your teeth?",
+     "repair": "Yes for three."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: The flag is green.",
+     "answer": "clear fl and gr, one beat each",
+     "shows": "fl, gr"
+    },
+    {
+     "question": "Say: three strong trees",
+     "answer": "thr, str and tr clear",
+     "shows": "thr, str"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says what the word means, then checks it in the sentence.",
+   "floor": {
+    "prerequisite": "Names everyday objects.",
+    "question": "What do we use to sweep?",
+    "answer": "a broom"
+   },
+   "steps": [
+    "Show the picture or the real thing.",
+    "Say the word and use it in a sentence.",
+    "Sort the word into its group.",
+    "Choose it for a gap."
+   ],
+   "contexts": [
+    "duties at home",
+    "occupations in our village",
+    "animals on the farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a broom, a bucket and a mop."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the broom.",
+     "say": "What is this? What do we do with it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the word."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels one more picture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M3_TW_COOKER",
+     "listen_for": [
+      "cooker"
+     ],
+     "ask": "Is it a person or a thing?",
+     "repair": "A person: cook."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M3_TW_SAME_GROUP",
+     "listen_for": [
+      "goat"
+     ],
+     "ask": "What makes this one different?",
+     "repair": "Wool: sheep."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M3_TW_SOUND_ALIKE",
+     "listen_for": [
+      "hammer"
+     ],
+     "ask": "Does the sentence make sense with it?",
+     "repair": "Helmet goes on the head."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS.M3_TW_PICTURE_NEAR",
+     "listen_for": [
+      "floor"
+     ],
+     "ask": "What is in her hand?",
+     "repair": "The broom."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A person who treats sick animals is a ...",
+     "answer": "vet",
+     "shows": "occupations"
+    },
+    {
+     "question": "We keep money in a ...",
+     "answer": "bank (or savings box)",
+     "shows": "savings"
+    }
+   ]
+  }
+ ]
+}

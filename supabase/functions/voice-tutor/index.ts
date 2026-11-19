@@ -10522,10 +10522,10 @@ var tbl = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells)
 var wrongs3 = (w14) => w14.length > 3 ? shuffle(w14).slice(0, 3) : w14;
 var hintsOf = (opt) => [opt.h?.[0], opt.h?.[1]].filter(Boolean);
 function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
-  const { skills: SKILLS46, outcomes: OUTCOMES45, misFeedback: MIS_FEEDBACK45 } = map;
+  const { skills: SKILLS49, outcomes: OUTCOMES48, misFeedback: MIS_FEEDBACK48 } = map;
   const feedback = (code, own, why) => {
     if (own) return own;
-    const f = MIS_FEEDBACK45[code];
+    const f = MIS_FEEDBACK48[code];
     if (!f) throw new Error(`${subject} family: no misconception ${code}`);
     return why ? `${why} ${f}` : f;
   };
@@ -10569,10 +10569,10 @@ function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
   const sfam35 = (d) => {
     const { cs, gen: gen2, id: id5, form, rung: rung2, oc, ...rest } = d;
     const code = `${prefix}.G${grade}.${cs}`;
-    const ck = SKILLS46[code];
+    const ck = SKILLS49[code];
     if (!ck) throw new Error(`${id5}: no ${subject} skill ${code}`);
     const outcome = oc ? ck.outcomes.find((o) => o.endsWith(`.${oc}`)) : ck.outcome;
-    if (!outcome || !OUTCOMES45[outcome]) throw new Error(`${id5}: outcome ${oc} not on ${cs}`);
+    if (!outcome || !OUTCOMES48[outcome]) throw new Error(`${id5}: outcome ${oc} not on ${cs}`);
     const draw = () => gen2();
     return family({ reviewed: signed2.includes(id5), subject, ...rest, id: id5, form, rung: rung2, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
   };
@@ -34624,8 +34624,10087 @@ var creativearts_g8_default = {
   precheckLabel: "Creative Arts and Sports 8"
 };
 
-// src/ai-tutor/content/curriculumMap.english.g4.js
+// src/ai-tutor/content/curriculumMap.english.g1.js
 var SUBSTRANDS16 = {
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 1: Greetings)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T1_PRE_READING": {
+    "name": "Pre-reading (Theme 1: Greetings)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T1_PRE_READING.a",
+      "ENGL.G1.READIN.T1_PRE_READING.b",
+      "ENGL.G1.READIN.T1_PRE_READING.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T": {
+    "name": "Verb \u2018to be\u2019- Present Tense (Theme 1: Greetings)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.a",
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.b",
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T1_PRE_WRITING": {
+    "name": "Pre-writing (Theme 1: Greetings)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T1_PRE_WRITING.a",
+      "ENGL.G1.WRITIN.T1_PRE_WRITING.b",
+      "ENGL.G1.WRITIN.T1_PRE_WRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 2: School)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T2_PRE_READING": {
+    "name": "Pre-reading (Theme 2: School)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T2_PRE_READING.a",
+      "ENGL.G1.READIN.T2_PRE_READING.b",
+      "ENGL.G1.READIN.T2_PRE_READING.c",
+      "ENGL.G1.READIN.T2_PRE_READING.d"
+    ]
+  },
+  "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_": {
+    "name": "Verbs \u2018to do\u2019- Present form Subjective Pronouns-Singular (Theme 2: School)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a",
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.b",
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T2_PRE_WRITING": {
+    "name": "Pre-writing (Theme 2: School)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T2_PRE_WRITING.a",
+      "ENGL.G1.WRITIN.T2_PRE_WRITING.b",
+      "ENGL.G1.WRITIN.T2_PRE_WRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 3: Family)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T3_PRE_READING": {
+    "name": "Pre-reading (Theme 3: Family)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T3_PRE_READING.a",
+      "ENGL.G1.READIN.T3_PRE_READING.b",
+      "ENGL.G1.READIN.T3_PRE_READING.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT": {
+    "name": "Verb \u2018to have\u2019 \u2013 present form Objective Pronouns- Singular (Theme 3: Family)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a",
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.b",
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING": {
+    "name": "Handwriting (Theme 3: Family)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T3_HANDWRITING.a",
+      "ENGL.G1.WRITIN.T3_HANDWRITING.b",
+      "ENGL.G1.WRITIN.T3_HANDWRITING.c",
+      "ENGL.G1.WRITIN.T3_HANDWRITING.d"
+    ]
+  },
+  "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 4: Home)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T4_PRE_READING": {
+    "name": "Pre-reading (Theme 4: Home)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T4_PRE_READING.a",
+      "ENGL.G1.READIN.T4_PRE_READING.b",
+      "ENGL.G1.READIN.T4_PRE_READING.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS": {
+    "name": "Singular and plurals (adding -s and -es) (Theme 4: Home)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.a",
+      "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.b",
+      "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T4_HANDWRITING": {
+    "name": "Handwriting (Theme 4: Home)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T4_HANDWRITING.a",
+      "ENGL.G1.WRITIN.T4_HANDWRITING.b",
+      "ENGL.G1.WRITIN.T4_HANDWRITING.c",
+      "ENGL.G1.WRITIN.T4_HANDWRITING.d"
+    ]
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 5: Time)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T5_PRE_READING": {
+    "name": "Pre- reading (Theme 5: Time)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T5_PRE_READING.a",
+      "ENGL.G1.READIN.T5_PRE_READING.b",
+      "ENGL.G1.READIN.T5_PRE_READING.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE": {
+    "name": "Tense: Present Simple Tense (Theme 5: Time)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.a",
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.b",
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T5_HANDWRITING": {
+    "name": "Handwriting (Theme 5: Time)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T5_HANDWRITING.a",
+      "ENGL.G1.WRITIN.T5_HANDWRITING.b",
+      "ENGL.G1.WRITIN.T5_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 6: Weather and our environment)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T6_WORD_READING": {
+    "name": "Word Reading (Theme 6: Weather and our environment)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T6_WORD_READING.a",
+      "ENGL.G1.READIN.T6_WORD_READING.b",
+      "ENGL.G1.READIN.T6_WORD_READING.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT": {
+    "name": "1 Tense: Present Continuous Tense (Adding -ing) (Theme 6: Weather and our environment)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.a",
+      "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.b",
+      "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T6_SPELLING": {
+    "name": "Spelling (Theme 6: Weather and our environment)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T6_SPELLING.a",
+      "ENGL.G1.WRITIN.T6_SPELLING.b",
+      "ENGL.G1.WRITIN.T6_SPELLING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 7: Hygiene)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T7_WORD_READING": {
+    "name": "Word Reading (Theme 7: Hygiene)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T7_WORD_READING.a",
+      "ENGL.G1.READIN.T7_WORD_READING.b",
+      "ENGL.G1.READIN.T7_WORD_READING.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE": {
+    "name": "Tense: Simple Past Tense (Adding -ed / -d) (Theme 7: Hygiene)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.a",
+      "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.b",
+      "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T7_SPELLING": {
+    "name": "Spelling (Theme 7: Hygiene)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T7_SPELLING.a",
+      "ENGL.G1.WRITIN.T7_SPELLING.b",
+      "ENGL.G1.WRITIN.T7_SPELLING.c",
+      "ENGL.G1.WRITIN.T7_SPELLING.d"
+    ]
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 8: Parts of the body)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T8_FLUENCY": {
+    "name": "Fluency (Theme 8: Parts of the body)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T8_FLUENCY.a",
+      "ENGL.G1.READIN.T8_FLUENCY.b",
+      "ENGL.G1.READIN.T8_FLUENCY.c",
+      "ENGL.G1.READIN.T8_FLUENCY.d"
+    ]
+  },
+  "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_": {
+    "name": "Demonstratives: this, that, these and those (Theme 8: Parts of the body)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.a",
+      "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.b",
+      "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T8_SPELLING": {
+    "name": "Spelling (Theme 8: Parts of the body)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T8_SPELLING.a",
+      "ENGL.G1.WRITIN.T8_SPELLING.b",
+      "ENGL.G1.WRITIN.T8_SPELLING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 9: My friends)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T9_FLUENCY": {
+    "name": "Fluency (Theme 9: My friends)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T9_FLUENCY.a",
+      "ENGL.G1.READIN.T9_FLUENCY.b",
+      "ENGL.G1.READIN.T9_FLUENCY.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO": {
+    "name": "Nouns: Common and proper nouns (Theme 9: My friends)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.a",
+      "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.b",
+      "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_": {
+    "name": "Punctuation (capital letters, small letters and the full stop) (Theme 9: My friends)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.a",
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.b",
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.c",
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.d"
+    ]
+  },
+  "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 10: Safety)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T10_FLUENCY": {
+    "name": "Fluency (Theme 10: Safety)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T10_FLUENCY.a",
+      "ENGL.G1.READIN.T10_FLUENCY.b",
+      "ENGL.G1.READIN.T10_FLUENCY.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_": {
+    "name": "Simple prepositions (in, on, under, between, behind, in front, inside, outside) (Theme 10: Safety)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.a",
+      "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.b",
+      "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_": {
+    "name": "Punctuation - Capital letters - Question marks (Theme 10: Safety)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.a",
+      "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.b",
+      "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 11: Community leaders)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T11_FLUENCY": {
+    "name": "Fluency (Theme 11: Community leaders)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T11_FLUENCY.a",
+      "ENGL.G1.READIN.T11_FLUENCY.b",
+      "ENGL.G1.READIN.T11_FLUENCY.c"
+    ]
+  },
+  "ENGL.G1.READIN.T11_COMPREHENSION": {
+    "name": "Comprehension (Theme 11: Community leaders)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T11_COMPREHENSION.a",
+      "ENGL.G1.READIN.T11_COMPREHENSION.b",
+      "ENGL.G1.READIN.T11_COMPREHENSION.c"
+    ]
+  },
+  "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T": {
+    "name": "Adjectives: (one and two-syllable adjectives) (Theme 11: Community leaders)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.a",
+      "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.b",
+      "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 11: Community leaders)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.a",
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 12: Living together)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T12_FLUENCY": {
+    "name": "Fluency (Theme 12: Living together)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T12_FLUENCY.a",
+      "ENGL.G1.READIN.T12_FLUENCY.b",
+      "ENGL.G1.READIN.T12_FLUENCY.c"
+    ]
+  },
+  "ENGL.G1.READIN.T12_COMPREHENSION": {
+    "name": "Comprehension (Theme 12: Living together)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T12_COMPREHENSION.a",
+      "ENGL.G1.READIN.T12_COMPREHENSION.b",
+      "ENGL.G1.READIN.T12_COMPREHENSION.c",
+      "ENGL.G1.READIN.T12_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H": {
+    "name": "Possessives: (my, our, her, his, their, its) (Theme 12: Living together)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.a",
+      "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.b",
+      "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T12_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 12: Living together)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T12_GUIDED_WRITING.a",
+      "ENGL.G1.WRITIN.T12_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T12_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 13: Technology)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T13_COMPREHENSION": {
+    "name": "Comprehension (Theme 13: Technology)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T13_COMPREHENSION.a",
+      "ENGL.G1.READIN.T13_COMPREHENSION.b",
+      "ENGL.G1.READIN.T13_COMPREHENSION.c",
+      "ENGL.G1.READIN.T13_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT": {
+    "name": "Yes/ No questions (with can, may, will) (Theme 13: Technology)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.a",
+      "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.b",
+      "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T13_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 13: Technology)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T13_GUIDED_WRITING.a",
+      "ENGL.G1.WRITIN.T13_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T13_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 14: Numbers)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T14_FLUENCY": {
+    "name": "Fluency (Theme 14: Numbers)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T14_FLUENCY.a",
+      "ENGL.G1.READIN.T14_FLUENCY.b",
+      "ENGL.G1.READIN.T14_FLUENCY.c"
+    ]
+  },
+  "ENGL.G1.READIN.T14_COMPREHENSION": {
+    "name": "Comprehension (Theme 14: Numbers)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T14_COMPREHENSION.a",
+      "ENGL.G1.READIN.T14_COMPREHENSION.b",
+      "ENGL.G1.READIN.T14_COMPREHENSION.c",
+      "ENGL.G1.READIN.T14_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE": {
+    "name": "Adverbs of Place (Theme 14: Numbers)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.a",
+      "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.b",
+      "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T14_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 14: Numbers)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T14_GUIDED_WRITING.a",
+      "ENGL.G1.WRITIN.T14_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T14_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 15: Conserving resources)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G1.READIN.T15_FLUENCY": {
+    "name": "Fluency (Theme 15: Conserving resources)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T15_FLUENCY.a",
+      "ENGL.G1.READIN.T15_FLUENCY.b",
+      "ENGL.G1.READIN.T15_FLUENCY.c"
+    ]
+  },
+  "ENGL.G1.READIN.T15_COMPREHENSION": {
+    "name": "Comprehension (Theme 15: Conserving resources)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G1.READIN.T15_COMPREHENSION.a",
+      "ENGL.G1.READIN.T15_COMPREHENSION.b",
+      "ENGL.G1.READIN.T15_COMPREHENSION.c",
+      "ENGL.G1.READIN.T15_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR": {
+    "name": "Interjections of surprise (Theme 15: Conserving resources)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.a",
+      "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.b",
+      "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.c"
+    ]
+  },
+  "ENGL.G1.WRITIN.T15_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 15: Conserving resources)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T15_GUIDED_WRITING.a",
+      "ENGL.G1.WRITIN.T15_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T15_GUIDED_WRITING.c"
+    ]
+  }
+};
+var OUTCOMES16 = {
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T1_PRE_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T1_PRE_READING"
+  },
+  "ENGL.G1.READIN.T1_PRE_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T1_PRE_READING"
+  },
+  "ENGL.G1.READIN.T1_PRE_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T1_PRE_READING"
+  },
+  "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T"
+  },
+  "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T"
+  },
+  "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T"
+  },
+  "ENGL.G1.WRITIN.T1_PRE_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T1_PRE_WRITING"
+  },
+  "ENGL.G1.WRITIN.T1_PRE_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T1_PRE_WRITING"
+  },
+  "ENGL.G1.WRITIN.T1_PRE_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T1_PRE_WRITING"
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T2_PRE_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T2_PRE_READING"
+  },
+  "ENGL.G1.READIN.T2_PRE_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T2_PRE_READING"
+  },
+  "ENGL.G1.READIN.T2_PRE_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T2_PRE_READING"
+  },
+  "ENGL.G1.READIN.T2_PRE_READING.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.READIN.T2_PRE_READING"
+  },
+  "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_"
+  },
+  "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_"
+  },
+  "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_"
+  },
+  "ENGL.G1.WRITIN.T2_PRE_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T2_PRE_WRITING"
+  },
+  "ENGL.G1.WRITIN.T2_PRE_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T2_PRE_WRITING"
+  },
+  "ENGL.G1.WRITIN.T2_PRE_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T2_PRE_WRITING"
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T3_PRE_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T3_PRE_READING"
+  },
+  "ENGL.G1.READIN.T3_PRE_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T3_PRE_READING"
+  },
+  "ENGL.G1.READIN.T3_PRE_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T3_PRE_READING"
+  },
+  "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT"
+  },
+  "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT"
+  },
+  "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT"
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T4_PRE_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T4_PRE_READING"
+  },
+  "ENGL.G1.READIN.T4_PRE_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T4_PRE_READING"
+  },
+  "ENGL.G1.READIN.T4_PRE_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T4_PRE_READING"
+  },
+  "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS"
+  },
+  "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS"
+  },
+  "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS"
+  },
+  "ENGL.G1.WRITIN.T4_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T4_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T4_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T4_HANDWRITING.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T5_PRE_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T5_PRE_READING"
+  },
+  "ENGL.G1.READIN.T5_PRE_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T5_PRE_READING"
+  },
+  "ENGL.G1.READIN.T5_PRE_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T5_PRE_READING"
+  },
+  "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE"
+  },
+  "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE"
+  },
+  "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE"
+  },
+  "ENGL.G1.WRITIN.T5_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T5_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T5_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T5_HANDWRITING"
+  },
+  "ENGL.G1.WRITIN.T5_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T5_HANDWRITING"
+  },
+  "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T6_WORD_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T6_WORD_READING"
+  },
+  "ENGL.G1.READIN.T6_WORD_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T6_WORD_READING"
+  },
+  "ENGL.G1.READIN.T6_WORD_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T6_WORD_READING"
+  },
+  "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT"
+  },
+  "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT"
+  },
+  "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT"
+  },
+  "ENGL.G1.WRITIN.T6_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T6_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T6_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T7_WORD_READING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T7_WORD_READING"
+  },
+  "ENGL.G1.READIN.T7_WORD_READING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T7_WORD_READING"
+  },
+  "ENGL.G1.READIN.T7_WORD_READING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T7_WORD_READING"
+  },
+  "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE"
+  },
+  "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE"
+  },
+  "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE"
+  },
+  "ENGL.G1.WRITIN.T7_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T7_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T7_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T7_SPELLING.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T8_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T8_FLUENCY"
+  },
+  "ENGL.G1.READIN.T8_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T8_FLUENCY"
+  },
+  "ENGL.G1.READIN.T8_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T8_FLUENCY"
+  },
+  "ENGL.G1.READIN.T8_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.READIN.T8_FLUENCY"
+  },
+  "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_"
+  },
+  "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_"
+  },
+  "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_"
+  },
+  "ENGL.G1.WRITIN.T8_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T8_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G1.WRITIN.T8_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T9_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T9_FLUENCY"
+  },
+  "ENGL.G1.READIN.T9_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T9_FLUENCY"
+  },
+  "ENGL.G1.READIN.T9_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T9_FLUENCY"
+  },
+  "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO"
+  },
+  "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO"
+  },
+  "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO"
+  },
+  "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T10_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T10_FLUENCY"
+  },
+  "ENGL.G1.READIN.T10_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T10_FLUENCY"
+  },
+  "ENGL.G1.READIN.T10_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T10_FLUENCY"
+  },
+  "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_"
+  },
+  "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_"
+  },
+  "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_"
+  },
+  "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_"
+  },
+  "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T11_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T11_FLUENCY"
+  },
+  "ENGL.G1.READIN.T11_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T11_FLUENCY"
+  },
+  "ENGL.G1.READIN.T11_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T11_FLUENCY"
+  },
+  "ENGL.G1.READIN.T11_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T11_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T11_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T"
+  },
+  "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T"
+  },
+  "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T"
+  },
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T12_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T12_FLUENCY"
+  },
+  "ENGL.G1.READIN.T12_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T12_FLUENCY"
+  },
+  "ENGL.G1.READIN.T12_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T12_FLUENCY"
+  },
+  "ENGL.G1.READIN.T12_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T12_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T12_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T12_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H"
+  },
+  "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H"
+  },
+  "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H"
+  },
+  "ENGL.G1.WRITIN.T12_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T12_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T12_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T12_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T12_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T12_GUIDED_WRITING"
+  },
+  "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T13_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T13_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T13_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T13_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT"
+  },
+  "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT"
+  },
+  "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT"
+  },
+  "ENGL.G1.WRITIN.T13_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T13_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T13_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T14_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T14_FLUENCY"
+  },
+  "ENGL.G1.READIN.T14_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T14_FLUENCY"
+  },
+  "ENGL.G1.READIN.T14_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T14_FLUENCY"
+  },
+  "ENGL.G1.READIN.T14_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T14_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T14_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T14_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE"
+  },
+  "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE"
+  },
+  "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE"
+  },
+  "ENGL.G1.WRITIN.T14_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T14_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T14_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G1.READIN.T15_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T15_FLUENCY"
+  },
+  "ENGL.G1.READIN.T15_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T15_FLUENCY"
+  },
+  "ENGL.G1.READIN.T15_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T15_FLUENCY"
+  },
+  "ENGL.G1.READIN.T15_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T15_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T15_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G1.READIN.T15_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G1.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR"
+  },
+  "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR"
+  },
+  "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR"
+  },
+  "ENGL.G1.WRITIN.T15_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G1.WRITIN.T15_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T15_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G1.WRITIN.T15_GUIDED_WRITING"
+  },
+  "ENGL.G1.WRITIN.T15_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G1.WRITIN.T15_GUIDED_WRITING"
+  }
+};
+var SKILLS17 = {
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H": {
+    "name": "Match the letters a to h to their sounds",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_LH_NAME_FOR_SOUND",
+      "M1_LH_B_D",
+      "M1_LH_C_S",
+      "M1_LH_E_I"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS": {
+    "name": "Say the letter-sounds clearly",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.READIN.T3_PRE_READING.b",
+      "ENGL.G1.READIN.T6_WORD_READING.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_SLS_NAME",
+      "M1_SLS_UH",
+      "M1_SLS_L_R",
+      "M1_SLS_END_VOWEL"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS": {
+    "name": "Greet people and answer greetings correctly",
+    "sub": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_GR_TIME",
+      "M1_GR_REPLY_FINE",
+      "M1_GR_NIGHT",
+      "M1_GR_ELDER_HI"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE": {
+    "name": "Sit and hold reading materials the right way",
+    "sub": "ENGL.G1.READIN.T1_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T1_PRE_READING.a",
+    "outcomes": [
+      "ENGL.G1.READIN.T1_PRE_READING.a",
+      "ENGL.G1.READIN.T2_PRE_READING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_RP_SLOUCH",
+      "M1_RP_TOO_CLOSE",
+      "M1_RP_UPSIDE",
+      "M1_RP_DARK"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS": {
+    "name": "Blend letter-sounds to read short words",
+    "sub": "ENGL.G1.READIN.T1_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T1_PRE_READING.b",
+    "outcomes": [
+      "ENGL.G1.READIN.T1_PRE_READING.b",
+      "ENGL.G1.READIN.T2_PRE_READING.c",
+      "ENGL.G1.READIN.T5_PRE_READING.b",
+      "ENGL.G1.READIN.T7_WORD_READING.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS"
+    ],
+    "mis": [
+      "M1_DW_NO_BLEND",
+      "M1_DW_PICTURE",
+      "M1_DW_B_D",
+      "M1_DW_RIGHT_LEFT"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT": {
+    "name": "Use am, is and are to greet and introduce",
+    "sub": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T",
+    "outcome": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.a",
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS"
+    ],
+    "mis": [
+      "M1_BE_I_IS",
+      "M1_BE_HE_ARE",
+      "M1_BE_DROP",
+      "M1_BE_YOU_IS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T1_PRE_WRITING.WRITING_POSTURE": {
+    "name": "Sit and hold the pencil and book the right way to write",
+    "sub": "ENGL.G1.WRITIN.T1_PRE_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T1_PRE_WRITING.a",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T1_PRE_WRITING.a",
+      "ENGL.G1.WRITIN.T2_PRE_WRITING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_WP_SLOUCH",
+      "M1_WP_FIST",
+      "M1_WP_NO_HOLD",
+      "M1_WP_FACE_ON_BOOK"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS": {
+    "name": "Draw writing patterns with control",
+    "sub": "ENGL.G1.WRITIN.T1_PRE_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T1_PRE_WRITING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T1_PRE_WRITING.b",
+      "ENGL.G1.WRITIN.T2_PRE_WRITING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_PW_RIGHT_LEFT",
+      "M1_PW_PRESS",
+      "M1_PW_LIFT",
+      "M1_PW_OUTSIDE"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P": {
+    "name": "Hear and pick out words with the sounds of i to p",
+    "sub": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_IP_SHEEP_SHIP",
+      "M1_IP_I_NAME",
+      "M1_IP_M_N",
+      "M1_IP_P_B"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES": {
+    "name": "Say short sentences with new words",
+    "sub": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M1_SS_ONE_WORD",
+      "M1_SS_HOME_WORD",
+      "M1_SS_NO_VERB",
+      "M1_SS_ECHO"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS": {
+    "name": "Tell capital letters from small letters and match them",
+    "sub": "ENGL.G1.READIN.T2_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T2_PRE_READING.a",
+    "outcomes": [
+      "ENGL.G1.READIN.T2_PRE_READING.a",
+      "ENGL.G1.WRITIN.T4_HANDWRITING.a",
+      "ENGL.G1.WRITIN.T5_HANDWRITING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_CS_NOT_PAIRS",
+      "M1_CS_B_D",
+      "M1_CS_BIG_SMALL",
+      "M1_CS_P_Q"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG": {
+    "name": "Use I, he, she and it",
+    "sub": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_",
+    "outcome": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a",
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_SP_HE_SHE",
+      "M1_SP_ME_SUBJECT",
+      "M1_SP_DOUBLE",
+      "M1_SP_IT_PERSON"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES": {
+    "name": "Use do and does",
+    "sub": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_",
+    "outcome": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a",
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG",
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT"
+    ],
+    "mis": [
+      "M1_DD_HE_DO",
+      "M1_DD_I_DOES",
+      "M1_DD_DOES_S",
+      "M1_DD_NOT_NO_DO"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z": {
+    "name": "Match the letters q to z to their sounds",
+    "sub": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P"
+    ],
+    "mis": [
+      "M1_QZ_NAME_FOR_SOUND",
+      "M1_QZ_V_B",
+      "M1_QZ_X_START",
+      "M1_QZ_R_L"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP": {
+    "name": "Respond to a one-step instruction",
+    "sub": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_FO_COPY",
+      "M1_FO_HALF",
+      "M1_FO_POSITION",
+      "M1_FO_OPEN_CLOSE"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.READIN.T3_PRE_READING.LETTER_NAMES": {
+    "name": "Name the letters of the alphabet",
+    "sub": "ENGL.G1.READIN.T3_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T3_PRE_READING.a",
+    "outcomes": [
+      "ENGL.G1.READIN.T3_PRE_READING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z"
+    ],
+    "mis": [
+      "M1_LN_SOUND",
+      "M1_LN_SONG",
+      "M1_LN_V_B",
+      "M1_LN_U_W"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS": {
+    "name": "Use have and has",
+    "sub": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT",
+    "outcome": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a",
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG",
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES"
+    ],
+    "mis": [
+      "M1_HH_SHE_HAVE",
+      "M1_HH_I_HAS",
+      "M1_HH_HAVING",
+      "M1_HH_WITH"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.OBJECT_PRONOUNS_SG": {
+    "name": "Use me, him, her and it after a verb",
+    "sub": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT",
+    "outcome": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a",
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP"
+    ],
+    "mis": [
+      "M1_OP_I_ME",
+      "M1_OP_HE_HIM",
+      "M1_OP_HIM_HER",
+      "M1_OP_SHE_HER"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS": {
+    "name": "Tell a correctly formed letter from a poorly formed one",
+    "sub": "ENGL.G1.WRITIN.T3_HANDWRITING",
+    "outcome": "ENGL.G1.WRITIN.T3_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T3_HANDWRITING.a"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS"
+    ],
+    "mis": [
+      "M1_FL_BACKWARDS",
+      "M1_FL_B_D",
+      "M1_FL_SIZE",
+      "M1_FL_OPEN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T3_HANDWRITING.FORM_LETTERS": {
+    "name": "Form small and capital letters correctly, writing left to right",
+    "sub": "ENGL.G1.WRITIN.T3_HANDWRITING",
+    "outcome": "ENGL.G1.WRITIN.T3_HANDWRITING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T3_HANDWRITING.b",
+      "ENGL.G1.WRITIN.T3_HANDWRITING.c",
+      "ENGL.G1.WRITIN.T4_HANDWRITING.b",
+      "ENGL.G1.WRITIN.T4_HANDWRITING.c",
+      "ENGL.G1.WRITIN.T5_HANDWRITING.b",
+      "ENGL.G1.WRITIN.T7_SPELLING.b",
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.b"
+    ],
+    "pre": [
+      "ENGL.G1.WRITIN.T1_PRE_WRITING.PRE_WRITING_PATTERNS",
+      "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS"
+    ],
+    "mis": [
+      "M1_FM_BOTTOM_START",
+      "M1_FM_REVERSE",
+      "M1_FM_CAPS_MIX",
+      "M1_FM_RIGHT_LEFT"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD": {
+    "name": "Find a letter in words",
+    "sub": "ENGL.G1.READIN.T4_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T4_PRE_READING.a",
+    "outcomes": [
+      "ENGL.G1.READIN.T4_PRE_READING.a",
+      "ENGL.G1.WRITIN.T6_SPELLING.a",
+      "ENGL.G1.WRITIN.T7_SPELLING.a",
+      "ENGL.G1.WRITIN.T8_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS"
+    ],
+    "mis": [
+      "M1_LW_FIRST",
+      "M1_LW_M_N",
+      "M1_LW_CAPITAL",
+      "M1_LW_B_D"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS": {
+    "name": "Build words from letters",
+    "sub": "ENGL.G1.READIN.T4_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T4_PRE_READING.b",
+    "outcomes": [
+      "ENGL.G1.READIN.T4_PRE_READING.b"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS"
+    ],
+    "mis": [
+      "M1_BW_ORDER",
+      "M1_BW_NO_VOWEL",
+      "M1_BW_EXTRA",
+      "M1_BW_A_E"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES": {
+    "name": "Make plurals by adding -s or -es",
+    "sub": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS",
+    "outcome": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.a",
+      "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M1_PL_S_FOR_ES",
+      "M1_PL_NUMBER_NO_S",
+      "M1_PL_ES_ALL",
+      "M1_PL_A_CUPS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P": {
+    "name": "Hear and pick out words with s, l, i and p",
+    "sub": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P"
+    ],
+    "mis": [
+      "M1_SL_S_SH",
+      "M1_SL_L_R",
+      "M1_SL_PIN_PEN",
+      "M1_SL_P_B"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL": {
+    "name": "Use facial expressions, eye contact and gestures in conversation",
+    "sub": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_NV_EYES_DOWN",
+      "M1_NV_FACE_MISMATCH",
+      "M1_NV_NOD_MEANING",
+      "M1_NV_SHOUT"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.READIN.T5_PRE_READING.MATCH_LETTER_SOUND": {
+    "name": "Match letters to their sounds",
+    "sub": "ENGL.G1.READIN.T5_PRE_READING",
+    "outcome": "ENGL.G1.READIN.T5_PRE_READING.a",
+    "outcomes": [
+      "ENGL.G1.READIN.T5_PRE_READING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P"
+    ],
+    "mis": [
+      "M1_ML_NAME",
+      "M1_ML_I_E",
+      "M1_ML_P_B",
+      "M1_ML_L_R"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE": {
+    "name": "Use the present simple for daily activities",
+    "sub": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE",
+    "outcome": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.a",
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES",
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG"
+    ],
+    "mis": [
+      "M1_PS_HE_NO_S",
+      "M1_PS_I_S",
+      "M1_PS_ING_ROUTINE",
+      "M1_PS_ES_SPELL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O": {
+    "name": "Hear and pick out words with f, n, h and the o sounds",
+    "sub": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T6_WORD_READING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_FH_F_P",
+      "M1_FH_N_M",
+      "M1_FH_POT_PORT",
+      "M1_FH_O_NAME"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.PRESENT_CONTINUOUS": {
+    "name": "Use the present continuous for what is happening now",
+    "sub": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT",
+    "outcome": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.a",
+      "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT",
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE"
+    ],
+    "mis": [
+      "M1_PC_NO_BE",
+      "M1_PC_NO_ING",
+      "M1_PC_SPELL",
+      "M1_PC_WRONG_BE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC": {
+    "name": "Spell three- to five-letter words",
+    "sub": "ENGL.G1.WRITIN.T6_SPELLING",
+    "outcome": "ENGL.G1.WRITIN.T6_SPELLING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T6_SPELLING.b",
+      "ENGL.G1.WRITIN.T7_SPELLING.c",
+      "ENGL.G1.WRITIN.T8_SPELLING.b"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T4_PRE_READING.BUILD_WORDS",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS"
+    ],
+    "mis": [
+      "M1_SV_NO_VOWEL",
+      "M1_SV_A_E",
+      "M1_SV_END_VOWEL",
+      "M1_SV_LETTER_NAME"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.SOUNDS_B_R_U_G": {
+    "name": "Hear and pick out words with b, r, u and g",
+    "sub": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T7_WORD_READING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z"
+    ],
+    "mis": [
+      "M1_BG_B_D",
+      "M1_BG_R_L",
+      "M1_BG_U_NAME",
+      "M1_BG_G_K"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T7_WORD_READING.SIGHT_WORDS": {
+    "name": "Read common words that cannot be sounded out",
+    "sub": "ENGL.G1.READIN.T7_WORD_READING",
+    "outcome": "ENGL.G1.READIN.T7_WORD_READING.b",
+    "outcomes": [
+      "ENGL.G1.READIN.T7_WORD_READING.b"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS"
+    ],
+    "mis": [
+      "M1_SW_SOUND_OUT",
+      "M1_SW_WAS_SAW",
+      "M1_SW_SAID",
+      "M1_SW_SWAP_SMALL"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.PAST_ED": {
+    "name": "Use the simple past with -ed and -d",
+    "sub": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE",
+    "outcome": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.a",
+      "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.PRESENT_SIMPLE",
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT"
+    ],
+    "mis": [
+      "M1_PA_NO_ED",
+      "M1_PA_SPELL",
+      "M1_PA_DID_ED",
+      "M1_PA_GOED"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T7_SPELLING.B_D_LETTERS": {
+    "name": "Write and choose b, d, p, q, u and n the right way round",
+    "sub": "ENGL.G1.WRITIN.T7_SPELLING",
+    "outcome": "ENGL.G1.WRITIN.T7_SPELLING.a",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T7_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G1.WRITIN.T3_HANDWRITING.FORMED_LETTERS",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_BD_B_D",
+      "M1_BD_P_Q",
+      "M1_BD_U_N",
+      "M1_BD_G_Q"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W": {
+    "name": "Hear and pick out words with k, d and w",
+    "sub": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T8_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.SOUNDS_B_R_U_G",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_KD_K_G",
+      "M1_KD_D_T",
+      "M1_KD_W_V",
+      "M1_KD_C_K_DIFFERENT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS": {
+    "name": "Know and use the words of the theme",
+    "sub": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+      "ENGL.G1.WRITIN.T14_GUIDED_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS"
+    ],
+    "mis": [
+      "M1_TW_SAME_GROUP",
+      "M1_TW_HOME_WORD",
+      "M1_TW_PICTURE_NEAR",
+      "M1_TW_SOUND_ALIKE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD": {
+    "name": "Read a short Grade 1 text aloud accurately with few hesitations",
+    "sub": "ENGL.G1.READIN.T8_FLUENCY",
+    "outcome": "ENGL.G1.READIN.T8_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G1.READIN.T8_FLUENCY.b",
+      "ENGL.G1.READIN.T9_FLUENCY.b",
+      "ENGL.G1.READIN.T10_FLUENCY.b",
+      "ENGL.G1.READIN.T11_FLUENCY.b",
+      "ENGL.G1.READIN.T12_FLUENCY.b",
+      "ENGL.G1.READIN.T14_FLUENCY.b",
+      "ENGL.G1.READIN.T15_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS",
+      "ENGL.G1.READIN.T7_WORD_READING.SIGHT_WORDS"
+    ],
+    "mis": [
+      "M1_RA_GUESS",
+      "M1_RA_SKIP",
+      "M1_RA_LONG_STOPS",
+      "M1_RA_LOST_PLACE"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.READIN.T8_FLUENCY.READ_WITH_FEELING": {
+    "name": "Show the right feeling when reading aloud",
+    "sub": "ENGL.G1.READIN.T8_FLUENCY",
+    "outcome": "ENGL.G1.READIN.T8_FLUENCY.c",
+    "outcomes": [
+      "ENGL.G1.READIN.T8_FLUENCY.c"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL"
+    ],
+    "mis": [
+      "M1_RF_FLAT",
+      "M1_RF_QUESTION",
+      "M1_RF_LOUD_ALL",
+      "M1_RF_NO_STOP"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.DEMONSTRATIVES": {
+    "name": "Use this, that, these and those",
+    "sub": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_",
+    "outcome": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.a",
+      "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.PLURAL_S_ES",
+      "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.VERB_BE_PRESENT"
+    ],
+    "mis": [
+      "M1_DM_THIS_MANY",
+      "M1_DM_NEAR_FAR",
+      "M1_DM_THESE_ONE",
+      "M1_DM_THEM"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S": {
+    "name": "Hear and pick out words with k, y, l and s",
+    "sub": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T9_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.SOUNDS_K_D_W",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z"
+    ],
+    "mis": [
+      "M1_KJ_Y_J",
+      "M1_KJ_Y_NAME",
+      "M1_KJ_L_R",
+      "M1_KJ_S_Z"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS": {
+    "name": "Name people, things and places (common and proper nouns)",
+    "sub": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO",
+    "outcome": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.a",
+      "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.b"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS"
+    ],
+    "mis": [
+      "M1_NN_PROPER_SMALL",
+      "M1_NN_COMMON_CAPITAL",
+      "M1_NN_ACTION",
+      "M1_NN_PEOPLE_ONLY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP": {
+    "name": "Use a capital letter to start and a full stop to end a sentence",
+    "sub": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_",
+    "outcome": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.a",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.a",
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.c"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+    ],
+    "mis": [
+      "M1_CF_NO_STOP",
+      "M1_CF_SMALL_START",
+      "M1_CF_LINE_END",
+      "M1_CF_CAPS_ALL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS": {
+    "name": "Hear and pick out words with the short a and the long vowel sounds",
+    "sub": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T10_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P",
+      "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O"
+    ],
+    "mis": [
+      "M1_VS_POOL_PULL",
+      "M1_VS_EE_I",
+      "M1_VS_OI_O",
+      "M1_VS_AY_E"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS": {
+    "name": "Use in, on, under, between, behind, in front of, inside and outside",
+    "sub": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_",
+    "outcome": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.a",
+      "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP"
+    ],
+    "mis": [
+      "M1_PP_IN_ON",
+      "M1_PP_UNDER_BEHIND",
+      "M1_PP_BETWEEN_ONE",
+      "M1_PP_IN_INSIDE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.QUESTION_MARK": {
+    "name": "Use a capital letter and a question mark for a question",
+    "sub": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_",
+    "outcome": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.a",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.a",
+      "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.b"
+    ],
+    "pre": [
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP",
+      "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS"
+    ],
+    "mis": [
+      "M1_QM_FULL_STOP",
+      "M1_QM_STATEMENT",
+      "M1_QM_BACKWARD",
+      "M1_QM_NO_CAPITAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH": {
+    "name": "Hear and pick out words with sh, ch and th",
+    "sub": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T11_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.SOUNDS_K_J_L_S",
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P"
+    ],
+    "mis": [
+      "M1_SC_SH_S",
+      "M1_SC_CH_SH",
+      "M1_SC_TH_T",
+      "M1_SC_THV_D"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T11_COMPREHENSION.PREDICT": {
+    "name": "Predict what a story will be about from the title and pictures",
+    "sub": "ENGL.G1.READIN.T11_COMPREHENSION",
+    "outcome": "ENGL.G1.READIN.T11_COMPREHENSION.a",
+    "outcomes": [
+      "ENGL.G1.READIN.T11_COMPREHENSION.a",
+      "ENGL.G1.READIN.T12_COMPREHENSION.a",
+      "ENGL.G1.READIN.T13_COMPREHENSION.a",
+      "ENGL.G1.READIN.T14_COMPREHENSION.a",
+      "ENGL.G1.READIN.T15_COMPREHENSION.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M1_PR_DESCRIBE",
+      "M1_PR_NO_CLUE",
+      "M1_PR_ALREADY",
+      "M1_PR_AFRAID"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS": {
+    "name": "Answer simple direct and indirect questions on a text",
+    "sub": "ENGL.G1.READIN.T11_COMPREHENSION",
+    "outcome": "ENGL.G1.READIN.T11_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G1.READIN.T11_COMPREHENSION.b",
+      "ENGL.G1.READIN.T12_COMPREHENSION.c",
+      "ENGL.G1.READIN.T13_COMPREHENSION.c",
+      "ENGL.G1.READIN.T14_COMPREHENSION.c",
+      "ENGL.G1.READIN.T15_COMPREHENSION.c"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD"
+    ],
+    "mis": [
+      "M1_AQ_OWN_LIFE",
+      "M1_AQ_WRONG_WORD",
+      "M1_AQ_YES",
+      "M1_AQ_NOT_SAID"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES": {
+    "name": "Use describing words for people, places and things",
+    "sub": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T",
+    "outcome": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.a",
+      "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.b",
+      "ENGL.G1.WRITIN.T15_GUIDED_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.NOUNS",
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M1_AJ_AFTER",
+      "M1_AJ_ACTION",
+      "M1_AJ_OPPOSITE",
+      "M1_AJ_PLURAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK": {
+    "name": "Say what a picture is about",
+    "sub": "ENGL.G1.WRITIN.T11_GUIDED_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.a",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.a",
+      "ENGL.G1.WRITIN.T12_GUIDED_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M1_PT_ONE_THING",
+      "M1_PT_OWN_STORY",
+      "M1_PT_WRONG_ACTION",
+      "M1_PT_HOME_WORD"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES": {
+    "name": "Write simple sentences with short words",
+    "sub": "ENGL.G1.WRITIN.T11_GUIDED_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T14_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC",
+      "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.CAPITALS_FULL_STOP",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+    ],
+    "mis": [
+      "M1_WS_NO_SPACES",
+      "M1_WS_NO_VERB",
+      "M1_WS_NO_MARKS",
+      "M1_WS_COPY"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR": {
+    "name": "Hear and pick out words with e, ee and air",
+    "sub": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T12_FLUENCY.a",
+      "ENGL.G1.READIN.T12_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS",
+      "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H"
+    ],
+    "mis": [
+      "M1_EA_BED_BEAD",
+      "M1_EA_SHIP_SHEEP",
+      "M1_EA_HAIR_HEAR",
+      "M1_EA_TWO_BEATS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.POSSESSIVES": {
+    "name": "Use my, our, her, his, their and its",
+    "sub": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H",
+    "outcome": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.a",
+      "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG",
+      "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS"
+    ],
+    "mis": [
+      "M1_PO_HIS_HER",
+      "M1_PO_ME",
+      "M1_PO_US",
+      "M1_PO_THEY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS": {
+    "name": "Fill gaps in simple sentences",
+    "sub": "ENGL.G1.WRITIN.T12_GUIDED_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T12_GUIDED_WRITING.b",
+      "ENGL.G1.WRITIN.T13_GUIDED_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T8_FLUENCY.READ_ALOUD",
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.PICTURE_TALK"
+    ],
+    "mis": [
+      "M1_FG_SOUND_ALIKE",
+      "M1_FG_WRONG_KIND",
+      "M1_FG_FIRST",
+      "M1_FG_A_PLURAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.OO_AY": {
+    "name": "Hear and pick out words with the short oo and long a sounds",
+    "sub": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.VOWEL_SOUNDS",
+      "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR"
+    ],
+    "mis": [
+      "M1_OA_BOOK_BOOT",
+      "M1_OA_OO_U",
+      "M1_OA_AY_A",
+      "M1_OA_AY_E"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.READIN.T13_COMPREHENSION.WORD_FROM_CONTEXT": {
+    "name": "Guess the meaning of a new word from the sentence and picture",
+    "sub": "ENGL.G1.READIN.T13_COMPREHENSION",
+    "outcome": "ENGL.G1.READIN.T13_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G1.READIN.T13_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G1.READIN.T11_COMPREHENSION.ANSWER_QUESTIONS",
+      "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M1_WC_LOOKS_LIKE",
+      "M1_WC_GIVE_UP",
+      "M1_WC_PICTURE_ONLY",
+      "M1_WC_USUAL_MEANING"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.YES_NO_QUESTIONS": {
+    "name": "Ask and answer yes or no questions with can, may and will",
+    "sub": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT",
+    "outcome": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.a",
+      "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+    ],
+    "mis": [
+      "M1_YN_ONE_WORD",
+      "M1_YN_CAN_ING",
+      "M1_YN_ORDER",
+      "M1_YN_WRONG_HELPER"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T13_GUIDED_WRITING.WORD_ORDER": {
+    "name": "Rearrange words to make a simple sentence",
+    "sub": "ENGL.G1.WRITIN.T13_GUIDED_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T13_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+    ],
+    "mis": [
+      "M1_WO_AS_GIVEN",
+      "M1_WO_ADJ_AFTER",
+      "M1_WO_CAPITAL",
+      "M1_WO_VERB_FIRST"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.J_S_NG": {
+    "name": "Hear and pick out words with j, s and ng",
+    "sub": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T14_FLUENCY.a",
+      "ENGL.G1.READIN.T14_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SOUNDS_I_P",
+      "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.SH_CH_TH"
+    ],
+    "mis": [
+      "M1_JS_J_Y",
+      "M1_JS_NG_G",
+      "M1_JS_NG_N",
+      "M1_JS_S_SH"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.ADVERBS_PLACE": {
+    "name": "Use adverbs of place: here, there, inside, outside, up, down, near, far",
+    "sub": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE",
+    "outcome": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.a",
+      "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.PREPOSITIONS",
+      "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP"
+    ],
+    "mis": [
+      "M1_AP_HERE_THERE",
+      "M1_AP_INSIDE_OUTSIDE",
+      "M1_AP_UP_DOWN",
+      "M1_AP_NEAR_FAR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.L_S_R": {
+    "name": "Hear and tell apart words with l, s and r",
+    "sub": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+      "ENGL.G1.READIN.T15_FLUENCY.a",
+      "ENGL.G1.READIN.T15_COMPREHENSION.a"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P",
+      "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.SOUNDS_B_R_U_G"
+    ],
+    "mis": [
+      "M1_LR_L_R",
+      "M1_LR_R_L",
+      "M1_LR_S_SH",
+      "M1_LR_END_VOWEL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.SURPRISE_WORDS": {
+    "name": "Use words that show surprise",
+    "sub": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR",
+    "outcome": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.a",
+    "outcomes": [
+      "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.a",
+      "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.b"
+    ],
+    "pre": [
+      "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL",
+      "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+    ],
+    "mis": [
+      "M1_SU_SAD",
+      "M1_SU_NO_MARK",
+      "M1_SU_HOME_WORD",
+      "M1_SU_OUCH"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G1.WRITIN.T15_GUIDED_WRITING.DESCRIBING_SENTENCES": {
+    "name": "Write short sentences with describing words",
+    "sub": "ENGL.G1.WRITIN.T15_GUIDED_WRITING",
+    "outcome": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G1.WRITIN.T15_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES",
+      "ENGL.G1.WRITIN.T11_GUIDED_WRITING.WRITE_SIMPLE_SENTENCES"
+    ],
+    "mis": [
+      "M1_DS_NONE",
+      "M1_DS_AFTER",
+      "M1_DS_LIST",
+      "M1_DS_NICE"
+    ],
+    "nofamily": "composition"
+  }
+};
+var MIS_FEEDBACK16 = {
+  "M1_LH_NAME_FOR_SOUND": "The name is bee; the sound is a short /b/, as in ball.",
+  "M1_LH_B_D": "Make a bed with your fists: b on the left, d on the right.",
+  "M1_LH_C_S": "C says /k/ in cup, cat and cow.",
+  "M1_LH_E_I": "E: mouth a little open, egg. I: smile, ink.",
+  "M1_SLS_NAME": "The sound is mmm, short and clean.",
+  "M1_SLS_UH": "Clip it short: b, not buh.",
+  "M1_SLS_L_R": "Tongue up for l, curled for r.",
+  "M1_SLS_END_VOWEL": "Stop at k.",
+  "M1_GR_TIME": "Morning before lunch, afternoon after lunch, evening at dusk.",
+  "M1_GR_REPLY_FINE": "Answer a greeting with the same greeting.",
+  "M1_GR_NIGHT": "Good night is for going to bed or leaving.",
+  "M1_GR_ELDER_HI": "Elders: Good morning, sir or madam.",
+  "M1_RP_SLOUCH": "Back straight, feet on the floor.",
+  "M1_RP_TOO_CLOSE": "Elbow to hand away.",
+  "M1_RP_UPSIDE": "People in the pictures stand up; start at the front.",
+  "M1_RP_DARK": "Read where there is light.",
+  "M1_DW_NO_BLEND": "Say the sounds faster and faster until they join: c-a-t, cat.",
+  "M1_DW_PICTURE": "Cover the picture: read the letters.",
+  "M1_DW_B_D": "Make a bed with your fists.",
+  "M1_DW_RIGHT_LEFT": "Start at the green dot on the left.",
+  "M1_BE_I_IS": "I am. He is. You are.",
+  "M1_BE_HE_ARE": "One person, he or she: is.",
+  "M1_BE_DROP": "I am Juma.",
+  "M1_BE_YOU_IS": "You are.",
+  "M1_WP_SLOUCH": "Sit up: back straight, feet down.",
+  "M1_WP_FIST": "Pinch with thumb and finger, rest it on the middle finger.",
+  "M1_WP_NO_HOLD": "Your helper hand holds the book.",
+  "M1_WP_FACE_ON_BOOK": "Sit back a little.",
+  "M1_PW_RIGHT_LEFT": "Start at the green dot on the left.",
+  "M1_PW_PRESS": "Hold the pencil lightly; let it glide.",
+  "M1_PW_LIFT": "Keep the pencil on the paper to the end.",
+  "M1_PW_OUTSIDE": "Slow down and watch the lines.",
+  "M1_IP_SHEEP_SHIP": "Sheep is long, with a smile.",
+  "M1_IP_I_NAME": "Short i: quick, as in sit and pin.",
+  "M1_IP_M_N": "For m the lips close: mmm.",
+  "M1_IP_P_B": "P puffs air; feel it on your hand.",
+  "M1_SS_ONE_WORD": "Start with I see ...",
+  "M1_SS_HOME_WORD": "Say it all in English.",
+  "M1_SS_NO_VERB": "I have a ...",
+  "M1_SS_ECHO": "Start with My name is ...",
+  "M1_CS_NOT_PAIRS": "A and a are the same letter: same sound.",
+  "M1_CS_B_D": "B and b both have the belly on the right.",
+  "M1_CS_BIG_SMALL": "Capitals have their own shapes.",
+  "M1_CS_P_Q": "Q has its tail on the right; small q too.",
+  "M1_SP_HE_SHE": "A girl: she. A boy: he.",
+  "M1_SP_ME_SUBJECT": "At the start: I.",
+  "M1_SP_DOUBLE": "One subject.",
+  "M1_SP_IT_PERSON": "People: he or she. Things: it.",
+  "M1_DD_HE_DO": "He, she, it: does.",
+  "M1_DD_I_DOES": "I: do.",
+  "M1_DD_DOES_S": "After does, the verb is plain.",
+  "M1_DD_NOT_NO_DO": "I do not like.",
+  "M1_QZ_NAME_FOR_SOUND": "The sound is short: /v/, as in van.",
+  "M1_QZ_V_B": "V: teeth on the lip and buzz.",
+  "M1_QZ_X_START": "X says ks at the end: box, six.",
+  "M1_QZ_R_L": "R: curl the tongue back.",
+  "M1_FO_COPY": "Listen with your eyes closed, then do it.",
+  "M1_FO_HALF": "Listen to the end before you move.",
+  "M1_FO_POSITION": "Under is below.",
+  "M1_FO_OPEN_CLOSE": "Close: shut it.",
+  "M1_LN_SOUND": "Name: ess. Sound: /s/.",
+  "M1_LN_SONG": "Know each letter on its own: tee.",
+  "M1_LN_V_B": "V: teeth on lip, vee.",
+  "M1_LN_U_W": "U is one cup; w is two.",
+  "M1_HH_SHE_HAVE": "He, she: has.",
+  "M1_HH_I_HAS": "I: have.",
+  "M1_HH_HAVING": "I have.",
+  "M1_HH_WITH": "Juma has a pencil.",
+  "M1_OP_I_ME": "After give: me.",
+  "M1_OP_HE_HIM": "After the verb: him.",
+  "M1_OP_HIM_HER": "A girl: her.",
+  "M1_OP_SHE_HER": "After the verb: her.",
+  "M1_FL_BACKWARDS": "S starts at the top like a c.",
+  "M1_FL_B_D": "Make a bed with your fists.",
+  "M1_FL_SIZE": "Short letters fill half the space.",
+  "M1_FL_OPEN": "Round letters close at the top.",
+  "M1_FM_BOTTOM_START": "Start at the top, go round like c.",
+  "M1_FM_REVERSE": "S starts like c at the top.",
+  "M1_FM_CAPS_MIX": "Small letters inside a word.",
+  "M1_FM_RIGHT_LEFT": "Start at the margin on the left.",
+  "M1_LW_FIRST": "Look at every letter, left to right.",
+  "M1_LW_M_N": "M has two humps; n has one.",
+  "M1_LW_CAPITAL": "Capital A is an a too.",
+  "M1_LW_B_D": "Make the bed.",
+  "M1_BW_ORDER": "Say it slowly: first sound first.",
+  "M1_BW_NO_VOWEL": "Every word needs a vowel: m-e-t.",
+  "M1_BW_EXTRA": "Tea: t-e-a.",
+  "M1_BW_A_E": "Mat: mouth wide, a.",
+  "M1_PL_S_FOR_ES": "After x, s, ch and sh: -es.",
+  "M1_PL_NUMBER_NO_S": "Two cups: keep the -s.",
+  "M1_PL_ES_ALL": "Most words take just -s.",
+  "M1_PL_A_CUPS": "A means one: no -s.",
+  "M1_SL_S_SH": "S: smile and hiss.",
+  "M1_SL_L_R": "L: tongue up behind the teeth.",
+  "M1_SL_PIN_PEN": "Pin: smile. Pen: mouth more open.",
+  "M1_SL_P_B": "P puffs.",
+  "M1_NV_EYES_DOWN": "With friends and in class, look at the person now and then.",
+  "M1_NV_FACE_MISMATCH": "Make your face match your words.",
+  "M1_NV_NOD_MEANING": "Nod is yes; shake is no.",
+  "M1_NV_SHOUT": "Partner talk: indoor voice.",
+  "M1_ML_NAME": "C says /k/; s says /s/.",
+  "M1_ML_I_E": "It: smile, i.",
+  "M1_ML_P_B": "P puffs.",
+  "M1_ML_L_R": "Tongue up: l.",
+  "M1_PS_HE_NO_S": "He or she: add -s or -es.",
+  "M1_PS_I_S": "I: no -s.",
+  "M1_PS_ING_ROUTINE": "Every day: I go.",
+  "M1_PS_ES_SPELL": "After sh: -es.",
+  "M1_FH_F_P": "F: teeth on lip, blow.",
+  "M1_FH_N_M": "N: lips open, tongue up.",
+  "M1_FH_POT_PORT": "Ball and door are long; dog is short.",
+  "M1_FH_O_NAME": "Short o: quick, as in hot and dog.",
+  "M1_PC_NO_BE": "Is before -ing.",
+  "M1_PC_NO_ING": "Is + -ing: is cooking.",
+  "M1_PC_SPELL": "Run, running.",
+  "M1_PC_WRONG_BE": "I am writing.",
+  "M1_SV_NO_VOWEL": "Say it slowly: b-e-d. Three sounds, three letters.",
+  "M1_SV_A_E": "Bag: mouth wide.",
+  "M1_SV_END_VOWEL": "Dog stops at g.",
+  "M1_SV_LETTER_NAME": "Write every letter: y-o-u.",
+  "M1_BG_B_D": "Make the bed: b first.",
+  "M1_BG_R_L": "Curl the tongue: red.",
+  "M1_BG_U_NAME": "Short u: uh, as in cup and sun.",
+  "M1_BG_G_K": "G buzzes in the throat.",
+  "M1_SW_SOUND_OUT": "Some words we know by sight: the.",
+  "M1_SW_WAS_SAW": "Start at the left: w.",
+  "M1_SW_SAID": "Said sounds like sed.",
+  "M1_SW_SWAP_SMALL": "Look at the word: the.",
+  "M1_PA_NO_ED": "Yesterday: add -ed.",
+  "M1_PA_SPELL": "It sounds like t but is spelt -ed.",
+  "M1_PA_DID_ED": "Just washed.",
+  "M1_PA_GOED": "Go is special: went.",
+  "M1_BD_B_D": "Make the bed: d on the right.",
+  "M1_BD_P_Q": "P has its stick on the left.",
+  "M1_BD_U_N": "U is a cup that holds water.",
+  "M1_BD_G_Q": "G has a hook; q has a straight tail.",
+  "M1_KD_K_G": "K: no buzz.",
+  "M1_KD_D_T": "D buzzes.",
+  "M1_KD_W_V": "W: round lips. V: teeth on lip.",
+  "M1_KD_C_K_DIFFERENT": "C and k can both say /k/.",
+  "M1_TW_SAME_GROUP": "What do we do with it? See: eyes.",
+  "M1_TW_HOME_WORD": "In English: chief.",
+  "M1_TW_PICTURE_NEAR": "Point at what is in her hand.",
+  "M1_TW_SOUND_ALIKE": "Say it in the sentence: does it make sense?",
+  "M1_RA_GUESS": "Read every letter: h-u-t.",
+  "M1_RA_SKIP": "Point under every word.",
+  "M1_RA_LONG_STOPS": "Read it twice: the second time smoother.",
+  "M1_RA_LOST_PLACE": "Keep your finger under the line.",
+  "M1_RF_FLAT": "How does Ali feel? Say it like him.",
+  "M1_RF_QUESTION": "The question mark says lift your voice.",
+  "M1_RF_LOUD_ALL": "Match your voice to the words.",
+  "M1_RF_NO_STOP": "Stop at the dot.",
+  "M1_DM_THIS_MANY": "Many, near: these.",
+  "M1_DM_NEAR_FAR": "Far: that.",
+  "M1_DM_THESE_ONE": "One: this.",
+  "M1_DM_THEM": "Those cows.",
+  "M1_KJ_Y_J": "Y: tongue up, no stop: yes, yam.",
+  "M1_KJ_Y_NAME": "The sound is short: y-y-yes.",
+  "M1_KJ_L_R": "Tongue up: lamp.",
+  "M1_KJ_S_Z": "S hisses, z buzzes.",
+  "M1_NN_PROPER_SMALL": "Names of people and places: capitals.",
+  "M1_NN_COMMON_CAPITAL": "Dog is a general name: small letter.",
+  "M1_NN_ACTION": "Can you touch it? Ball.",
+  "M1_NN_PEOPLE_ONLY": "People, things and places all have names.",
+  "M1_CF_NO_STOP": "Every sentence ends with a full stop.",
+  "M1_CF_SMALL_START": "Start with a capital.",
+  "M1_CF_LINE_END": "The full stop goes where the idea ends.",
+  "M1_CF_CAPS_ALL": "Only the first word and names.",
+  "M1_VS_POOL_PULL": "Pool is long.",
+  "M1_VS_EE_I": "Seat is long, with a smile.",
+  "M1_VS_OI_O": "Oi slides: o-ee.",
+  "M1_VS_AY_E": "Long a slides: e-ee.",
+  "M1_PP_IN_ON": "On top: on.",
+  "M1_PP_UNDER_BEHIND": "At the back: behind.",
+  "M1_PP_BETWEEN_ONE": "Between needs two things.",
+  "M1_PP_IN_INSIDE": "Rain: stay inside.",
+  "M1_QM_FULL_STOP": "Asking: question mark.",
+  "M1_QM_STATEMENT": "Telling: full stop.",
+  "M1_QM_BACKWARD": "The hook opens to the left, like a backwards c on top.",
+  "M1_QM_NO_CAPITAL": "Questions start with a capital too.",
+  "M1_SC_SH_S": "Round lips: shhh.",
+  "M1_SC_CH_SH": "Ch starts with a stop: t-sh.",
+  "M1_SC_TH_T": "Tongue between the teeth.",
+  "M1_SC_THV_D": "Tongue between the teeth, buzz.",
+  "M1_PR_DESCRIBE": "What will happen? Use will.",
+  "M1_PR_NO_CLUE": "Look at the title and picture.",
+  "M1_PR_ALREADY": "Next means after.",
+  "M1_PR_AFRAID": "Guess, then we check.",
+  "M1_AQ_OWN_LIFE": "What does the text say?",
+  "M1_AQ_WRONG_WORD": "Where wants a place.",
+  "M1_AQ_YES": "What wants a thing.",
+  "M1_AQ_NOT_SAID": "Crying shows sad.",
+  "M1_AJ_AFTER": "Describing word first: a red ball.",
+  "M1_AJ_ACTION": "It tells what something is like: tall.",
+  "M1_AJ_OPPOSITE": "Think of the elephant: big.",
+  "M1_AJ_PLURAL": "Describing words never take -s.",
+  "M1_PT_ONE_THING": "Who is in it and what are they doing?",
+  "M1_PT_OWN_STORY": "Say only what you can see.",
+  "M1_PT_WRONG_ACTION": "Look at her face.",
+  "M1_PT_HOME_WORD": "In English: a market.",
+  "M1_WS_NO_SPACES": "A finger space after each word.",
+  "M1_WS_NO_VERB": "Add the doing or being word: is.",
+  "M1_WS_NO_MARKS": "Capital first, full stop last.",
+  "M1_WS_COPY": "Change one word to make it yours.",
+  "M1_EA_BED_BEAD": "Bed is short; bead is long.",
+  "M1_EA_SHIP_SHEEP": "Sleep is long.",
+  "M1_EA_HAIR_HEAR": "Air starts with e: chair, hair.",
+  "M1_EA_TWO_BEATS": "Chair: one clap.",
+  "M1_PO_HIS_HER": "A girl: her.",
+  "M1_PO_ME": "Before a noun: my.",
+  "M1_PO_US": "Our classroom.",
+  "M1_PO_THEY": "Their house.",
+  "M1_FG_SOUND_ALIKE": "Read it: do you drink from a cap?",
+  "M1_FG_WRONG_KIND": "Read the sentence with it: does it make sense?",
+  "M1_FG_FIRST": "Try each word in the gap.",
+  "M1_FG_A_PLURAL": "A means one.",
+  "M1_OA_BOOK_BOOT": "Book and foot are short.",
+  "M1_OA_OO_U": "Put and foot: lips round.",
+  "M1_OA_AY_A": "Long a slides: game.",
+  "M1_OA_AY_E": "Late slides: e-ee.",
+  "M1_WC_LOOKS_LIKE": "Does it fit the sentence?",
+  "M1_WC_GIVE_UP": "Look at the picture and the words.",
+  "M1_WC_PICTURE_ONLY": "Read the words too.",
+  "M1_WC_USUAL_MEANING": "Which meaning fits the cave?",
+  "M1_YN_ONE_WORD": "Yes, I can. No, I cannot.",
+  "M1_YN_CAN_ING": "After can: plain verb.",
+  "M1_YN_ORDER": "Put can first.",
+  "M1_YN_WRONG_HELPER": "Answer with the word in the question.",
+  "M1_WO_AS_GIVEN": "Who? Start there.",
+  "M1_WO_ADJ_AFTER": "Describing word before the noun.",
+  "M1_WO_CAPITAL": "The word with a capital comes first.",
+  "M1_WO_VERB_FIRST": "Who first, then what.",
+  "M1_JS_J_Y": "J starts with a stop: d-zh.",
+  "M1_JS_NG_G": "Ng is one nose sound.",
+  "M1_JS_NG_N": "Ng: back of the tongue up.",
+  "M1_JS_S_SH": "S: smile and hiss.",
+  "M1_AP_HERE_THERE": "Near me: here.",
+  "M1_AP_INSIDE_OUTSIDE": "In the shed: inside.",
+  "M1_AP_UP_DOWN": "Climb up.",
+  "M1_AP_NEAR_FAR": "A long walk: far.",
+  "M1_LR_L_R": "Tongue up: light.",
+  "M1_LR_R_L": "Curl the tongue: rain.",
+  "M1_LR_S_SH": "S: smile.",
+  "M1_LR_END_VOWEL": "Bus stops at s: one clap.",
+  "M1_SU_SAD": "Oh or Wow for surprise.",
+  "M1_SU_NO_MARK": "An exclamation mark after Wow.",
+  "M1_SU_HOME_WORD": "In English: Oh! Wow!",
+  "M1_SU_OUCH": "Ouch is for pain.",
+  "M1_DS_NONE": "Add a word that tells what it is like.",
+  "M1_DS_AFTER": "Green leaf.",
+  "M1_DS_LIST": "Put them in a sentence.",
+  "M1_DS_NICE": "What does it look like? Choose a sharper word."
+};
+
+// src/ai-tutor/content/families/english_g1_signed.js
+var SIGNED16 = [];
+
+// src/ai-tutor/content/subjects/english_g1.js
+var english_g1_default = {
+  subject: "english",
+  grade: 1,
+  prefix: "ENGL",
+  order: 2,
+  name: "English",
+  shortName: "English",
+  icon: "book",
+  description: "Grade 1 English from the CBC design",
+  map: { skills: SKILLS17, substrands: SUBSTRANDS16, outcomes: OUTCOMES16, misFeedback: MIS_FEEDBACK16 },
+  families: [],
+  // none yet: add each family file you write, as Grades 4-9 do
+  familyFiles: [],
+  signed: SIGNED16,
+  signedFile: "english_g1_signed.js",
+  checks: "family",
+  idPrefix: "english1.",
+  marker: "text",
+  bank: false,
+  curriculumDir: "english",
+  misconceptionsFile: "engine/data/curriculum/english.g1.misconceptions.json",
+  reviewDoc: null,
+  // write one with node scripts/build-subject-review-doc.mjs english 1 when families exist
+  precheckLabel: "English 1"
+};
+
+// src/ai-tutor/content/curriculumMap.english.g2.js
+var SUBSTRANDS17 = {
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 1: School)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T1_FLUENCY": {
+    "name": "Fluency (Theme 1: School)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T1_FLUENCY.a",
+      "ENGL.G2.READIN.T1_FLUENCY.b",
+      "ENGL.G2.READIN.T1_FLUENCY.c"
+    ]
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION": {
+    "name": "Comprehension (Theme 1: School)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.a",
+      "ENGL.G2.READIN.T1_COMPREHENSION.b",
+      "ENGL.G2.READIN.T1_COMPREHENSION.c",
+      "ENGL.G2.READIN.T1_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS": {
+    "name": "Verb \u2018to be\u2019- Past Tense Objective Pronouns - Plural (Theme 1: School)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a",
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.b",
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING": {
+    "name": "Handwriting (Theme 1: School)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T1_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T1_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T1_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 2: Activities in the home)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T2_FLUENCY": {
+    "name": "Fluency (Theme 2: Activities in the home)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T2_FLUENCY.a",
+      "ENGL.G2.READIN.T2_FLUENCY.b",
+      "ENGL.G2.READIN.T2_FLUENCY.c",
+      "ENGL.G2.READIN.T2_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION": {
+    "name": "Comprehension (Theme 2: Activities in the home)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T2_COMPREHENSION.a",
+      "ENGL.G2.READIN.T2_COMPREHENSION.b",
+      "ENGL.G2.READIN.T2_COMPREHENSION.c",
+      "ENGL.G2.READIN.T2_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A": {
+    "name": "Verb \u2018to do\u2019- Present and past form Subjective Pronouns - Plural (Theme 2: Activities in the home)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a",
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.b",
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T2_HANDWRITING": {
+    "name": "Handwriting (Theme 2: Activities in the home)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T2_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T2_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T2_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 3: Transport)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T3_FLUENCY": {
+    "name": "Fluency (Theme 3: Transport)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T3_FLUENCY.a",
+      "ENGL.G2.READIN.T3_FLUENCY.b",
+      "ENGL.G2.READIN.T3_FLUENCY.c"
+    ]
+  },
+  "ENGL.G2.READIN.T3_COMPREHENSION": {
+    "name": "Comprehension (Theme 3: Transport)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T3_COMPREHENSION.a",
+      "ENGL.G2.READIN.T3_COMPREHENSION.b",
+      "ENGL.G2.READIN.T3_COMPREHENSION.c",
+      "ENGL.G2.READIN.T3_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT": {
+    "name": "Verbs \u2018to have\u2019 Objective pronouns-plural (Theme 3: Transport)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.a",
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.b",
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T3_HANDWRITING": {
+    "name": "Handwriting (Theme 3: Transport)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T3_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T3_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T3_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 4: Months of the year)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T4_FLUENCY": {
+    "name": "Fluency (Theme 4: Months of the year)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T4_FLUENCY.a",
+      "ENGL.G2.READIN.T4_FLUENCY.b",
+      "ENGL.G2.READIN.T4_FLUENCY.c"
+    ]
+  },
+  "ENGL.G2.READIN.T4_COMPREHENSION": {
+    "name": "Comprehension (Theme 4: Months of the year)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T4_COMPREHENSION.a",
+      "ENGL.G2.READIN.T4_COMPREHENSION.b",
+      "ENGL.G2.READIN.T4_COMPREHENSION.c",
+      "ENGL.G2.READIN.T4_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE": {
+    "name": "Simple Past Tense (Theme 4: Months of the year)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.a",
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.b",
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING": {
+    "name": "Handwriting (Theme 4: Months of the year)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T4_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T4_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T4_HANDWRITING.c",
+      "ENGL.G2.WRITIN.T4_HANDWRITING.d"
+    ]
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 5: Shopping)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T5_FLUENCY": {
+    "name": "Fluency (Theme 5: Shopping)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T5_FLUENCY.a",
+      "ENGL.G2.READIN.T5_FLUENCY.b",
+      "ENGL.G2.READIN.T5_FLUENCY.c",
+      "ENGL.G2.READIN.T5_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T5_COMPREHENSION": {
+    "name": "Comprehension (Theme 5: Shopping)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.a",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.b",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.c",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR": {
+    "name": "Nouns: Plurals of irregular nouns (Theme 5: Shopping)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.a",
+      "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.b",
+      "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T5_SPELLING": {
+    "name": "Spelling (Theme 5: Shopping)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T5_SPELLING.a",
+      "ENGL.G2.WRITIN.T5_SPELLING.b",
+      "ENGL.G2.WRITIN.T5_SPELLING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 6: The garden)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T6_FLUENCY": {
+    "name": "Fluency (Theme 6: The garden)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T6_FLUENCY.a",
+      "ENGL.G2.READIN.T6_FLUENCY.b",
+      "ENGL.G2.READIN.T6_FLUENCY.c",
+      "ENGL.G2.READIN.T6_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T6_COMPREHENSION": {
+    "name": "Comprehension (Theme 6: The garden)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T6_COMPREHENSION.a",
+      "ENGL.G2.READIN.T6_COMPREHENSION.b",
+      "ENGL.G2.READIN.T6_COMPREHENSION.c",
+      "ENGL.G2.READIN.T6_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU": {
+    "name": "Tense: Past Continuous Tense (Theme 6: The garden)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.a",
+      "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.b",
+      "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T6_SPELLING": {
+    "name": "Spelling (Theme 6: The garden)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T6_SPELLING.a",
+      "ENGL.G2.WRITIN.T6_SPELLING.b",
+      "ENGL.G2.WRITIN.T6_SPELLING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 7: Accidents)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T7_FLUENCY": {
+    "name": "Fluency (Theme 7: Accidents)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T7_FLUENCY.a",
+      "ENGL.G2.READIN.T7_FLUENCY.b",
+      "ENGL.G2.READIN.T7_FLUENCY.c"
+    ]
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION": {
+    "name": "Comprehension (Theme 7: Accidents)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T7_COMPREHENSION.a",
+      "ENGL.G2.READIN.T7_COMPREHENSION.b",
+      "ENGL.G2.READIN.T7_COMPREHENSION.c",
+      "ENGL.G2.READIN.T7_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS": {
+    "name": "Conjunctions (Theme 7: Accidents)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T7_CONJUNCTIONS.a",
+      "ENGL.G2.LANGUA.T7_CONJUNCTIONS.b",
+      "ENGL.G2.LANGUA.T7_CONJUNCTIONS.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T7_SPELLING": {
+    "name": "Spelling (Theme 7: Accidents)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T7_SPELLING.a",
+      "ENGL.G2.WRITIN.T7_SPELLING.b",
+      "ENGL.G2.WRITIN.T7_SPELLING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 8: Classroom)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T8_FLUENCY": {
+    "name": "Fluency (Theme 8: Classroom)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T8_FLUENCY.a",
+      "ENGL.G2.READIN.T8_FLUENCY.b",
+      "ENGL.G2.READIN.T8_FLUENCY.c",
+      "ENGL.G2.READIN.T8_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T8_COMPREHENSION": {
+    "name": "Comprehension (Theme 8: Classroom)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T8_COMPREHENSION.a",
+      "ENGL.G2.READIN.T8_COMPREHENSION.b",
+      "ENGL.G2.READIN.T8_COMPREHENSION.c",
+      "ENGL.G2.READIN.T8_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL": {
+    "name": "Cardinal and ordinal numbers Demonstratives-Plural (these, those) (Theme 8: Classroom)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.a",
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.b",
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.c",
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.d",
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.e"
+    ]
+  },
+  "ENGL.G2.WRITIN.T8_SPELLING": {
+    "name": "Spelling (Theme 8: Classroom)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T8_SPELLING.a",
+      "ENGL.G2.WRITIN.T8_SPELLING.b",
+      "ENGL.G2.WRITIN.T8_SPELLING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 9: The farm)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T9_FLUENCY": {
+    "name": "Fluency (Theme 9: The farm)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T9_FLUENCY.a",
+      "ENGL.G2.READIN.T9_FLUENCY.b",
+      "ENGL.G2.READIN.T9_FLUENCY.c"
+    ]
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION": {
+    "name": "Comprehension (Theme 9: The farm)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T9_COMPREHENSION.a",
+      "ENGL.G2.READIN.T9_COMPREHENSION.b",
+      "ENGL.G2.READIN.T9_COMPREHENSION.c",
+      "ENGL.G2.READIN.T9_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET": {
+    "name": "Word Sets (gender sets for animals/people) Opposites (Theme 9: The farm)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.a",
+      "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.b",
+      "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM": {
+    "name": "Punctuation (The comma) (Theme 9: The farm)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.a",
+      "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.b",
+      "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 10: Position and directions)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T10_FLUENCY": {
+    "name": "Fluency (Theme 10: Position and directions)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T10_FLUENCY.a",
+      "ENGL.G2.READIN.T10_FLUENCY.b",
+      "ENGL.G2.READIN.T10_FLUENCY.c"
+    ]
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION": {
+    "name": "Comprehension (Theme 10: Position and directions)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T10_COMPREHENSION.a",
+      "ENGL.G2.READIN.T10_COMPREHENSION.b",
+      "ENGL.G2.READIN.T10_COMPREHENSION.c",
+      "ENGL.G2.READIN.T10_COMPREHENSION.d",
+      "ENGL.G2.READIN.T10_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS": {
+    "name": "Prepositions (Theme 10: Position and directions)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T10_PREPOSITIONS.a",
+      "ENGL.G2.LANGUA.T10_PREPOSITIONS.b",
+      "ENGL.G2.LANGUA.T10_PREPOSITIONS.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL": {
+    "name": "Punctuation (The exclamation mark) (Theme 10: Position and directions)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.a",
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.b",
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 11: Environment)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T11_FLUENCY": {
+    "name": "Fluency (Theme 11: Environment)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T11_FLUENCY.a",
+      "ENGL.G2.READIN.T11_FLUENCY.b",
+      "ENGL.G2.READIN.T11_FLUENCY.c",
+      "ENGL.G2.READIN.T11_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T11_COMPREHENSION": {
+    "name": "Comprehension (Theme 11: Environment)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T11_COMPREHENSION.a",
+      "ENGL.G2.READIN.T11_COMPREHENSION.b",
+      "ENGL.G2.READIN.T11_COMPREHENSION.c",
+      "ENGL.G2.READIN.T11_COMPREHENSION.d",
+      "ENGL.G2.READIN.T11_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_": {
+    "name": "Regular comparative and superlative adjectives (Theme 11: Environment)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.a",
+      "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.b",
+      "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 11: Environment)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.b",
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 12: Technology)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G2.READIN.T12_FLUENCY": {
+    "name": "Fluency (Theme 12: Technology)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T12_FLUENCY.a",
+      "ENGL.G2.READIN.T12_FLUENCY.b",
+      "ENGL.G2.READIN.T12_FLUENCY.c",
+      "ENGL.G2.READIN.T12_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T12_COMPREHENSION": {
+    "name": "Comprehension (Theme 12: Technology)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T12_COMPREHENSION.a",
+      "ENGL.G2.READIN.T12_COMPREHENSION.b",
+      "ENGL.G2.READIN.T12_COMPREHENSION.c",
+      "ENGL.G2.READIN.T12_COMPREHENSION.d",
+      "ENGL.G2.READIN.T12_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS": {
+    "name": "Possessive Pronouns (Theme 12: Technology)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.a",
+      "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.b",
+      "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 12: Technology)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T12_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T12_GUIDED_WRITING.b",
+      "ENGL.G2.WRITIN.T12_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU": {
+    "name": "By the end of the Sub Strand, the Pronunciation and Vocabulary (Theme 13: Cultural activities)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.a",
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.b",
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.c",
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.d"
+    ]
+  },
+  "ENGL.G2.READIN.T13_FLUENCY": {
+    "name": "Fluency (Theme 13: Cultural activities)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T13_FLUENCY.a",
+      "ENGL.G2.READIN.T13_FLUENCY.b",
+      "ENGL.G2.READIN.T13_FLUENCY.c",
+      "ENGL.G2.READIN.T13_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T13_COMPREHENSION": {
+    "name": "Comprehension (Theme 13: Cultural activities)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T13_COMPREHENSION.a",
+      "ENGL.G2.READIN.T13_COMPREHENSION.b",
+      "ENGL.G2.READIN.T13_COMPREHENSION.c",
+      "ENGL.G2.READIN.T13_COMPREHENSION.d",
+      "ENGL.G2.READIN.T13_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS": {
+    "name": "Wh- questions (Theme 13: Cultural activities)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T13_WH_QUESTIONS.a",
+      "ENGL.G2.LANGUA.T13_WH_QUESTIONS.b",
+      "ENGL.G2.LANGUA.T13_WH_QUESTIONS.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 13: Cultural activities)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T13_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T13_GUIDED_WRITING.b",
+      "ENGL.G2.WRITIN.T13_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 14: Child labour)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T14_FLUENCY": {
+    "name": "Fluency (Theme 14: Child labour)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T14_FLUENCY.a",
+      "ENGL.G2.READIN.T14_FLUENCY.b",
+      "ENGL.G2.READIN.T14_FLUENCY.c",
+      "ENGL.G2.READIN.T14_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T14_COMPREHENSION": {
+    "name": "Comprehension (Theme 14: Child labour)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T14_COMPREHENSION.a",
+      "ENGL.G2.READIN.T14_COMPREHENSION.b",
+      "ENGL.G2.READIN.T14_COMPREHENSION.c",
+      "ENGL.G2.READIN.T14_COMPREHENSION.d",
+      "ENGL.G2.READIN.T14_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME": {
+    "name": "Adverbs of time (Theme 14: Child labour)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.a",
+      "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.b",
+      "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.c"
+    ]
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 14: Child labour)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.b",
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.c",
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.d"
+    ]
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 15: Caring for others)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G2.READIN.T15_FLUENCY": {
+    "name": "Fluency (Theme 15: Caring for others)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T15_FLUENCY.a",
+      "ENGL.G2.READIN.T15_FLUENCY.b",
+      "ENGL.G2.READIN.T15_FLUENCY.c",
+      "ENGL.G2.READIN.T15_FLUENCY.d"
+    ]
+  },
+  "ENGL.G2.READIN.T15_COMPREHENSION": {
+    "name": "Comprehension (Theme 15: Caring for others)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G2.READIN.T15_COMPREHENSION.a",
+      "ENGL.G2.READIN.T15_COMPREHENSION.b",
+      "ENGL.G2.READIN.T15_COMPREHENSION.c",
+      "ENGL.G2.READIN.T15_COMPREHENSION.d",
+      "ENGL.G2.READIN.T15_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS": {
+    "name": "Imperatives (commands) Interjections of excitement/joy (Theme 15: Caring for others)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.a",
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.b",
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.c",
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.d",
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.e"
+    ]
+  },
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 15: Caring for others)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T15_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T15_GUIDED_WRITING.b",
+      "ENGL.G2.WRITIN.T15_GUIDED_WRITING.c"
+    ]
+  }
+};
+var OUTCOMES17 = {
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T1_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T1_FLUENCY"
+  },
+  "ENGL.G2.READIN.T1_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T1_FLUENCY"
+  },
+  "ENGL.G2.READIN.T1_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T1_FLUENCY"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS"
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS"
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS"
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T1_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T1_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T1_HANDWRITING"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T2_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T2_FLUENCY"
+  },
+  "ENGL.G2.READIN.T2_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T2_FLUENCY"
+  },
+  "ENGL.G2.READIN.T2_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T2_FLUENCY"
+  },
+  "ENGL.G2.READIN.T2_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T2_FLUENCY"
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A"
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A"
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A"
+  },
+  "ENGL.G2.WRITIN.T2_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T2_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T2_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T2_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T2_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T2_HANDWRITING"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T3_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T3_FLUENCY"
+  },
+  "ENGL.G2.READIN.T3_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T3_FLUENCY"
+  },
+  "ENGL.G2.READIN.T3_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T3_FLUENCY"
+  },
+  "ENGL.G2.READIN.T3_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T3_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T3_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T3_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT"
+  },
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT"
+  },
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT"
+  },
+  "ENGL.G2.WRITIN.T3_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T3_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T3_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T4_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T4_FLUENCY"
+  },
+  "ENGL.G2.READIN.T4_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T4_FLUENCY"
+  },
+  "ENGL.G2.READIN.T4_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T4_FLUENCY"
+  },
+  "ENGL.G2.READIN.T4_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T4_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T4_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T4_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE"
+  },
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE"
+  },
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE"
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T5_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T5_FLUENCY"
+  },
+  "ENGL.G2.READIN.T5_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T5_FLUENCY"
+  },
+  "ENGL.G2.READIN.T5_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T5_FLUENCY"
+  },
+  "ENGL.G2.READIN.T5_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T5_FLUENCY"
+  },
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T5_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T5_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T5_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T5_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LANGUA.T5_COMPREHENSION"
+  },
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR"
+  },
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR"
+  },
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR"
+  },
+  "ENGL.G2.WRITIN.T5_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T5_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T5_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T5_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T5_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T5_SPELLING"
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T6_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T6_FLUENCY"
+  },
+  "ENGL.G2.READIN.T6_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T6_FLUENCY"
+  },
+  "ENGL.G2.READIN.T6_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T6_FLUENCY"
+  },
+  "ENGL.G2.READIN.T6_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T6_FLUENCY"
+  },
+  "ENGL.G2.READIN.T6_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T6_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T6_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T6_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU"
+  },
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU"
+  },
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU"
+  },
+  "ENGL.G2.WRITIN.T6_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T6_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T6_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T7_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T7_FLUENCY"
+  },
+  "ENGL.G2.READIN.T7_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T7_FLUENCY"
+  },
+  "ENGL.G2.READIN.T7_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T7_FLUENCY"
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T7_CONJUNCTIONS"
+  },
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T7_CONJUNCTIONS"
+  },
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T7_CONJUNCTIONS"
+  },
+  "ENGL.G2.WRITIN.T7_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T7_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T7_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T8_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T8_FLUENCY"
+  },
+  "ENGL.G2.READIN.T8_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T8_FLUENCY"
+  },
+  "ENGL.G2.READIN.T8_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T8_FLUENCY"
+  },
+  "ENGL.G2.READIN.T8_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T8_FLUENCY"
+  },
+  "ENGL.G2.READIN.T8_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T8_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T8_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T8_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL"
+  },
+  "ENGL.G2.WRITIN.T8_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T8_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G2.WRITIN.T8_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T9_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T9_FLUENCY"
+  },
+  "ENGL.G2.READIN.T9_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T9_FLUENCY"
+  },
+  "ENGL.G2.READIN.T9_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T9_FLUENCY"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET"
+  },
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET"
+  },
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET"
+  },
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM"
+  },
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM"
+  },
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM"
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T10_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T10_FLUENCY"
+  },
+  "ENGL.G2.READIN.T10_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T10_FLUENCY"
+  },
+  "ENGL.G2.READIN.T10_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T10_FLUENCY"
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T10_PREPOSITIONS"
+  },
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T10_PREPOSITIONS"
+  },
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T10_PREPOSITIONS"
+  },
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL"
+  },
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL"
+  },
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL"
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T11_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T11_FLUENCY"
+  },
+  "ENGL.G2.READIN.T11_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T11_FLUENCY"
+  },
+  "ENGL.G2.READIN.T11_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T11_FLUENCY"
+  },
+  "ENGL.G2.READIN.T11_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T11_FLUENCY"
+  },
+  "ENGL.G2.READIN.T11_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T11_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T11_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T11_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T11_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_"
+  },
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_"
+  },
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_"
+  },
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T12_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T12_FLUENCY"
+  },
+  "ENGL.G2.READIN.T12_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T12_FLUENCY"
+  },
+  "ENGL.G2.READIN.T12_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T12_FLUENCY"
+  },
+  "ENGL.G2.READIN.T12_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T12_FLUENCY"
+  },
+  "ENGL.G2.READIN.T12_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T12_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T12_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T12_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T12_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS"
+  },
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS"
+  },
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS"
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T12_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T12_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T12_GUIDED_WRITING"
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU"
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU"
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU"
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU"
+  },
+  "ENGL.G2.READIN.T13_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T13_FLUENCY"
+  },
+  "ENGL.G2.READIN.T13_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T13_FLUENCY"
+  },
+  "ENGL.G2.READIN.T13_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T13_FLUENCY"
+  },
+  "ENGL.G2.READIN.T13_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T13_FLUENCY"
+  },
+  "ENGL.G2.READIN.T13_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T13_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T13_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T13_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T13_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T13_WH_QUESTIONS"
+  },
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T13_WH_QUESTIONS"
+  },
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T13_WH_QUESTIONS"
+  },
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T14_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T14_FLUENCY"
+  },
+  "ENGL.G2.READIN.T14_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T14_FLUENCY"
+  },
+  "ENGL.G2.READIN.T14_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T14_FLUENCY"
+  },
+  "ENGL.G2.READIN.T14_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T14_FLUENCY"
+  },
+  "ENGL.G2.READIN.T14_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T14_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T14_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T14_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T14_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME"
+  },
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME"
+  },
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME"
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G2.READIN.T15_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T15_FLUENCY"
+  },
+  "ENGL.G2.READIN.T15_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T15_FLUENCY"
+  },
+  "ENGL.G2.READIN.T15_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T15_FLUENCY"
+  },
+  "ENGL.G2.READIN.T15_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T15_FLUENCY"
+  },
+  "ENGL.G2.READIN.T15_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T15_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T15_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T15_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G2.READIN.T15_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.d": {
+    "letter": "d",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.e": {
+    "letter": "e",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS"
+  },
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G2.WRITIN.T15_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G2.WRITIN.T15_GUIDED_WRITING"
+  },
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G2.WRITIN.T15_GUIDED_WRITING"
+  }
+};
+var SKILLS18 = {
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK": {
+    "name": "Hear and tell apart words with bl, sp, sc, sk and ck",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T1_FLUENCY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_SC_SK_DIFFERENT",
+      "M2_BL_TWO_BEATS",
+      "M2_SP_FIRST_LETTER",
+      "M2_CK_VOICED"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS": {
+    "name": "Know and choose the new words of the theme",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.c",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.READIN.T4_COMPREHENSION.a",
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_TW_SAME_GROUP",
+      "M2_TW_HOME_WORD",
+      "M2_TW_SOUND_ALIKE",
+      "M2_TW_PERSON_THING"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP": {
+    "name": "Listen to and carry out a two-step spoken instruction",
+    "sub": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.d",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_FI_LAST_ONLY",
+      "M2_FI_ORDER",
+      "M2_FI_LEFT_RIGHT",
+      "M2_FI_COPY"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY": {
+    "name": "Read a Grade 2 text aloud accurately and at the right speed",
+    "sub": "ENGL.G2.READIN.T1_FLUENCY",
+    "outcome": "ENGL.G2.READIN.T1_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G2.READIN.T1_FLUENCY.b",
+      "ENGL.G2.READIN.T3_FLUENCY.b",
+      "ENGL.G2.READIN.T4_FLUENCY.b",
+      "ENGL.G2.READIN.T6_FLUENCY.b",
+      "ENGL.G2.READIN.T6_FLUENCY.c",
+      "ENGL.G2.READIN.T8_FLUENCY.c",
+      "ENGL.G2.READIN.T9_FLUENCY.b",
+      "ENGL.G2.READIN.T11_FLUENCY.c",
+      "ENGL.G2.READIN.T13_FLUENCY.c",
+      "ENGL.G2.READIN.T14_FLUENCY.b",
+      "ENGL.G2.READIN.T14_FLUENCY.c"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK"
+    ],
+    "mis": [
+      "M2_RA_GUESS",
+      "M2_RA_B_D",
+      "M2_RA_SKIP",
+      "M2_RA_ADDS"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT": {
+    "name": "Predict what will happen in a story from the title, pictures and clues",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T1_COMPREHENSION.a",
+    "outcomes": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.a",
+      "ENGL.G2.READIN.T3_COMPREHENSION.a",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.a",
+      "ENGL.G2.READIN.T6_COMPREHENSION.a",
+      "ENGL.G2.READIN.T7_COMPREHENSION.b",
+      "ENGL.G2.READIN.T8_COMPREHENSION.a",
+      "ENGL.G2.READIN.T10_COMPREHENSION.a",
+      "ENGL.G2.READIN.T11_COMPREHENSION.a",
+      "ENGL.G2.READIN.T12_COMPREHENSION.b",
+      "ENGL.G2.READIN.T13_COMPREHENSION.a",
+      "ENGL.G2.READIN.T14_COMPREHENSION.a",
+      "ENGL.G2.READIN.T15_COMPREHENSION.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_PR_DESCRIBE",
+      "M2_PR_NO_CLUE",
+      "M2_PR_ALREADY",
+      "M2_PR_AFRAID"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT": {
+    "name": "Work out the meaning of a new word from the sentence and picture",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T1_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.b",
+      "ENGL.G2.READIN.T2_COMPREHENSION.a",
+      "ENGL.G2.READIN.T3_COMPREHENSION.b",
+      "ENGL.G2.READIN.T4_COMPREHENSION.b",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.b",
+      "ENGL.G2.READIN.T6_COMPREHENSION.b",
+      "ENGL.G2.READIN.T8_COMPREHENSION.b",
+      "ENGL.G2.READIN.T10_COMPREHENSION.b",
+      "ENGL.G2.READIN.T11_COMPREHENSION.c",
+      "ENGL.G2.READIN.T12_COMPREHENSION.d",
+      "ENGL.G2.READIN.T13_COMPREHENSION.c",
+      "ENGL.G2.READIN.T14_COMPREHENSION.c",
+      "ENGL.G2.READIN.T15_COMPREHENSION.c"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M2_WC_LOOKS_LIKE",
+      "M2_WC_GIVE_UP",
+      "M2_WC_PICTURE_ONLY",
+      "M2_WC_USUAL_MEANING"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS": {
+    "name": "Answer questions whose answers are stated in the text",
+    "sub": "ENGL.G2.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T1_COMPREHENSION.c",
+    "outcomes": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.c",
+      "ENGL.G2.READIN.T2_COMPREHENSION.b",
+      "ENGL.G2.READIN.T3_COMPREHENSION.c",
+      "ENGL.G2.READIN.T4_COMPREHENSION.c",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.c",
+      "ENGL.G2.READIN.T6_COMPREHENSION.c",
+      "ENGL.G2.READIN.T7_COMPREHENSION.c",
+      "ENGL.G2.READIN.T8_COMPREHENSION.c",
+      "ENGL.G2.READIN.T10_COMPREHENSION.c",
+      "ENGL.G2.READIN.T11_COMPREHENSION.d",
+      "ENGL.G2.READIN.T12_COMPREHENSION.c",
+      "ENGL.G2.READIN.T13_COMPREHENSION.d",
+      "ENGL.G2.READIN.T14_COMPREHENSION.d",
+      "ENGL.G2.READIN.T15_COMPREHENSION.d"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY"
+    ],
+    "mis": [
+      "M2_DQ_OWN_LIFE",
+      "M2_DQ_WRONG_WORD",
+      "M2_DQ_WORD_MATCH",
+      "M2_DQ_YES_NO"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE": {
+    "name": "Use was and were for the past",
+    "sub": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS",
+    "outcome": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a",
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS"
+    ],
+    "mis": [
+      "M2_WW_WE_WAS",
+      "M2_WW_I_WERE",
+      "M2_WW_IS_PAST",
+      "M2_WW_CHILDREN_WAS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS": {
+    "name": "Use us, you and them after a verb or a preposition",
+    "sub": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS",
+    "outcome": "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.a",
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.b",
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.a",
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS"
+    ],
+    "mis": [
+      "M2_OP_WE_FOR_US",
+      "M2_OP_THEY_FOR_THEM",
+      "M2_OP_US_SUBJECT",
+      "M2_OP_PREP_THEY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS": {
+    "name": "Know the letters whose tails hang below the line",
+    "sub": "ENGL.G2.WRITIN.T1_HANDWRITING",
+    "outcome": "ENGL.G2.WRITIN.T1_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T1_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T3_HANDWRITING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_DE_ON_LINE",
+      "M2_DE_TALL",
+      "M2_DE_J_I",
+      "M2_DE_CAPITAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT": {
+    "name": "Form letters, ascenders and descenders neatly in long words",
+    "sub": "ENGL.G2.WRITIN.T1_HANDWRITING",
+    "outcome": "ENGL.G2.WRITIN.T1_HANDWRITING.b",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T1_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T2_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T3_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T4_HANDWRITING.b",
+      "ENGL.G2.WRITIN.T7_SPELLING.b",
+      "ENGL.G2.WRITIN.T8_SPELLING.b"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T1_HANDWRITING.DESCENDERS",
+      "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS"
+    ],
+    "mis": [
+      "M2_HN_CAPS_INSIDE",
+      "M2_HN_SIZE",
+      "M2_HN_OPEN",
+      "M2_HN_RIGHT_TO_LEFT"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL": {
+    "name": "Hear and pick out words with ch, the long o sound, sh and cl",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T2_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK"
+    ],
+    "mis": [
+      "M2_CH_SH",
+      "M2_SH_S",
+      "M2_OA_SHORT_O",
+      "M2_CL_CR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_CONSONANT_SOUNDS": {
+    "name": "Say words with consonant blends and the th, sh and ch sounds clearly",
+    "sub": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.b",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.READIN.T5_FLUENCY.b",
+      "ENGL.G2.READIN.T13_FLUENCY.b",
+      "ENGL.G2.READIN.T15_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK"
+    ],
+    "mis": [
+      "M2_SCS_EXTRA_VOWEL",
+      "M2_SCS_L_R",
+      "M2_SCS_TH",
+      "M2_SCS_SH_S"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.READIN.T2_FLUENCY.READ_WITH_FEELING": {
+    "name": "Read aloud showing the right feelings and observing punctuation",
+    "sub": "ENGL.G2.READIN.T2_FLUENCY",
+    "outcome": "ENGL.G2.READIN.T2_FLUENCY.c",
+    "outcomes": [
+      "ENGL.G2.READIN.T2_FLUENCY.c",
+      "ENGL.G2.READIN.T5_FLUENCY.c",
+      "ENGL.G2.READIN.T7_FLUENCY.b",
+      "ENGL.G2.READIN.T10_FLUENCY.b",
+      "ENGL.G2.READIN.T12_FLUENCY.c",
+      "ENGL.G2.READIN.T15_FLUENCY.c"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY"
+    ],
+    "mis": [
+      "M2_RF_FLAT",
+      "M2_RF_NO_STOP",
+      "M2_RF_QUESTION",
+      "M2_RF_WRONG_FEELING"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS": {
+    "name": "Answer questions whose answers are shown by clues",
+    "sub": "ENGL.G2.READIN.T2_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T2_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G2.READIN.T2_COMPREHENSION.b",
+      "ENGL.G2.READIN.T1_COMPREHENSION.c",
+      "ENGL.G2.READIN.T3_COMPREHENSION.c",
+      "ENGL.G2.READIN.T4_COMPREHENSION.c",
+      "ENGL.G2.LANGUA.T5_COMPREHENSION.c",
+      "ENGL.G2.READIN.T6_COMPREHENSION.c",
+      "ENGL.G2.READIN.T7_COMPREHENSION.c",
+      "ENGL.G2.READIN.T8_COMPREHENSION.c",
+      "ENGL.G2.READIN.T10_COMPREHENSION.c",
+      "ENGL.G2.READIN.T11_COMPREHENSION.d",
+      "ENGL.G2.READIN.T12_COMPREHENSION.c",
+      "ENGL.G2.READIN.T13_COMPREHENSION.d",
+      "ENGL.G2.READIN.T14_COMPREHENSION.d",
+      "ENGL.G2.READIN.T15_COMPREHENSION.d"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M2_IQ_NOT_SAID",
+      "M2_IQ_GUESS",
+      "M2_IQ_TOO_FAR",
+      "M2_IQ_COPY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE": {
+    "name": "Connect a text to his or her own life",
+    "sub": "ENGL.G2.READIN.T2_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T2_COMPREHENSION.c",
+    "outcomes": [
+      "ENGL.G2.READIN.T2_COMPREHENSION.c",
+      "ENGL.G2.READIN.T11_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES"
+    ],
+    "mis": [
+      "M2_TL_OFF_TEXT",
+      "M2_TL_CHANGES_TEXT",
+      "M2_TL_SAME_ONLY",
+      "M2_TL_ONE_WORD"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS": {
+    "name": "Use we, you and they as the subject",
+    "sub": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A",
+    "outcome": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_SP_DOUBLE",
+      "M2_SP_HE_SHE",
+      "M2_SP_THEM_SUBJECT",
+      "M2_SP_US_SUBJECT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO": {
+    "name": "Use do, does and did",
+    "sub": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A",
+    "outcome": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.a",
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS"
+    ],
+    "mis": [
+      "M2_DO_HE_DO",
+      "M2_DO_DID_ED",
+      "M2_DO_DOES_PAST",
+      "M2_DO_THEY_DOES"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS": {
+    "name": "Know the tall letters that reach up",
+    "sub": "ENGL.G2.WRITIN.T2_HANDWRITING",
+    "outcome": "ENGL.G2.WRITIN.T2_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T2_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T3_HANDWRITING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_AS_SHORT",
+      "M2_AS_WHICH",
+      "M2_AS_CAPITAL",
+      "M2_AS_T_LIKE_L"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY": {
+    "name": "Hear and pick out words with s, l, fl and the long a sound",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T3_FLUENCY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_AY_SHORT_E",
+      "M2_FL_FR",
+      "M2_L_R",
+      "M2_S_SH"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES": {
+    "name": "Use new words in short spoken sentences",
+    "sub": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M2_UW_ONE_WORD",
+      "M2_UW_OPEN_LIGHT",
+      "M2_UW_WRONG_MEANING",
+      "M2_UW_ECHO"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.VERB_HAVE": {
+    "name": "Use have, has and had",
+    "sub": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT",
+    "outcome": "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.a",
+      "ENGL.G2.LANGUA.T3_VERBS_TO_HAVE_OBJECT.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO"
+    ],
+    "mis": [
+      "M2_HV_HE_HAVE",
+      "M2_HV_HAVING",
+      "M2_HV_PAST",
+      "M2_HV_WE_HAS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL": {
+    "name": "Hear and pick out words with ng, the long e sound, st and gl",
+    "sub": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T4_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY"
+    ],
+    "mis": [
+      "M2_NG_HARD_G",
+      "M2_EE_SHORT_I",
+      "M2_ST_TWO_BEATS",
+      "M2_GL_GR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS": {
+    "name": "Say short and long vowel sounds so the right word is heard",
+    "sub": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G2.READIN.T2_FLUENCY.b",
+      "ENGL.G2.READIN.T8_FLUENCY.b",
+      "ENGL.G2.READIN.T12_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL"
+    ],
+    "mis": [
+      "M2_SVS_SHIP_SHEEP",
+      "M2_SVS_CUP_CAP",
+      "M2_SVS_BIRD",
+      "M2_SVS_WEAK_FULL"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST": {
+    "name": "Use the simple past to talk about past activities",
+    "sub": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE",
+    "outcome": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.a",
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE"
+    ],
+    "mis": [
+      "M2_PA_GOED",
+      "M2_PA_PRESENT",
+      "M2_PA_SPELL",
+      "M2_PA_DID_PAST"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS": {
+    "name": "Know what makes handwriting good: shape, spacing, lines and capitals",
+    "sub": "ENGL.G2.WRITIN.T4_HANDWRITING",
+    "outcome": "ENGL.G2.WRITIN.T4_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T4_HANDWRITING.a",
+      "ENGL.G2.WRITIN.T5_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS"
+    ],
+    "mis": [
+      "M2_HA_NO_SPACE",
+      "M2_HA_FLOAT",
+      "M2_HA_CAPS",
+      "M2_HA_DARK"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS": {
+    "name": "Make theme words with gl and y",
+    "sub": "ENGL.G2.WRITIN.T4_HANDWRITING",
+    "outcome": "ENGL.G2.WRITIN.T4_HANDWRITING.c",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T4_HANDWRITING.c"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL"
+    ],
+    "mis": [
+      "M2_GY_IE_FOR_Y",
+      "M2_GY_GR_FOR_GL",
+      "M2_GY_EXTRA_VOWEL",
+      "M2_GY_JULY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK": {
+    "name": "Hear and pick out words with nt, sl, ar, nd and nk",
+    "sub": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T5_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL"
+    ],
+    "mis": [
+      "M2_AR_SHORT_A",
+      "M2_NT_ND",
+      "M2_NK_NG",
+      "M2_SL_S"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS": {
+    "name": "Use the plurals of irregular nouns",
+    "sub": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR",
+    "outcome": "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.a",
+      "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.b"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M2_PL_CHILDS",
+      "M2_PL_FEETS",
+      "M2_PL_SHEEPS",
+      "M2_PL_ONE_TEETH"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS": {
+    "name": "Spell Grade 2 words correctly",
+    "sub": "ENGL.G2.WRITIN.T5_SPELLING",
+    "outcome": "ENGL.G2.WRITIN.T5_SPELLING.b",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T5_SPELLING.b",
+      "ENGL.G2.WRITIN.T6_SPELLING.b",
+      "ENGL.G2.WRITIN.T8_SPELLING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_SG_SOUND",
+      "M2_SG_DROP_LETTER",
+      "M2_SG_SWAP",
+      "M2_SG_DOUBLE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW": {
+    "name": "Hear and pick out words with ear, the two th sounds, wh and tw",
+    "sub": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T6_FLUENCY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_TH_T",
+      "M2_THV_D",
+      "M2_WH_H",
+      "M2_EAR_TWO_BEATS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.PAST_CONTINUOUS": {
+    "name": "Use the past continuous tense",
+    "sub": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU",
+    "outcome": "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.a",
+      "ENGL.G2.LANGUA.T6_TENSE_PAST_CONTINUOU.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.WAS_WERE"
+    ],
+    "mis": [
+      "M2_PC_IS_ING",
+      "M2_PC_NO_BE",
+      "M2_PC_THEY_WAS",
+      "M2_PC_ING_SPELL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR": {
+    "name": "Spell words with th, wh, tw and ear",
+    "sub": "ENGL.G2.WRITIN.T6_SPELLING",
+    "outcome": "ENGL.G2.WRITIN.T6_SPELLING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T6_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW",
+      "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS"
+    ],
+    "mis": [
+      "M2_SWT_TH_T",
+      "M2_SWT_WH_W",
+      "M2_SWT_TW_TU",
+      "M2_SWT_EAR_IA"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE": {
+    "name": "Hear and pick out words with nd, nk and the long a, o and i sounds",
+    "sub": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T7_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL"
+    ],
+    "mis": [
+      "M2_IE_SHORT_I",
+      "M2_OE_SHORT_O",
+      "M2_ND_DROP",
+      "M2_AY_SHORT_A"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS": {
+    "name": "Name and describe the characters and events in a text",
+    "sub": "ENGL.G2.READIN.T7_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T7_COMPREHENSION.a",
+    "outcomes": [
+      "ENGL.G2.READIN.T7_COMPREHENSION.a",
+      "ENGL.G2.READIN.T12_COMPREHENSION.a",
+      "ENGL.G2.READIN.T13_COMPREHENSION.b",
+      "ENGL.G2.READIN.T15_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M2_CE_ANIMALS",
+      "M2_CE_MAIN_ONLY",
+      "M2_CE_LOOKS_ONLY",
+      "M2_CE_EVENT_PERSON"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T7_CONJUNCTIONS.CONJ_OR": {
+    "name": "Use or to give a choice",
+    "sub": "ENGL.G2.LANGUA.T7_CONJUNCTIONS",
+    "outcome": "ENGL.G2.LANGUA.T7_CONJUNCTIONS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T7_CONJUNCTIONS.a",
+      "ENGL.G2.LANGUA.T7_CONJUNCTIONS.b"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M2_OR_AND",
+      "M2_OR_YES",
+      "M2_OR_BOTH",
+      "M2_OR_POSITION"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T7_SPELLING.SPELL_NK_ND_AR": {
+    "name": "Spell words with nk, nd and ar",
+    "sub": "ENGL.G2.WRITIN.T7_SPELLING",
+    "outcome": "ENGL.G2.WRITIN.T7_SPELLING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T7_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK",
+      "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS"
+    ],
+    "mis": [
+      "M2_SNA_NK_NG",
+      "M2_SNA_ND_N",
+      "M2_SNA_AR_A",
+      "M2_SNA_AR_AA"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA": {
+    "name": "Hear and pick out words with br, the weak vowel and the long e, a and o sounds",
+    "sub": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T8_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T7_PRONUNCIATION_AND_VO.ND_NK_AY_OA_IE",
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL"
+    ],
+    "mis": [
+      "M2_SCHWA_FULL",
+      "M2_BR_BL",
+      "M2_EE_EA_DIFFERENT",
+      "M2_OA_OW_DIFFERENT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.CARDINAL_ORDINAL": {
+    "name": "Tell and use counting numbers and order numbers",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL",
+    "outcome": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.a",
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.b"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M2_CO_ONETH",
+      "M2_CO_FIVETH",
+      "M2_CO_POSITION_TWO",
+      "M2_CO_ORDINAL_COUNT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.THESE_THOSE": {
+    "name": "Use these and those for things near and far",
+    "sub": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL",
+    "outcome": "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.c",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T8_CARDINAL_AND_ORDINAL.c"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T5_NOUNS_PLURALS_OF_IRR.IRREGULAR_PLURALS"
+    ],
+    "mis": [
+      "M2_TT_THIS_PLURAL",
+      "M2_TT_NEAR_FAR",
+      "M2_TT_SINGULAR_NOUN",
+      "M2_TT_THEM"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T8_SPELLING.SPELL_VOWEL_TEAMS": {
+    "name": "Spell words with br and the long e, a and o sounds",
+    "sub": "ENGL.G2.WRITIN.T8_SPELLING",
+    "outcome": "ENGL.G2.WRITIN.T8_SPELLING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T8_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA",
+      "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS"
+    ],
+    "mis": [
+      "M2_SVT_ONE_LETTER",
+      "M2_SVT_BR_BL",
+      "M2_SVT_ER_A",
+      "M2_SVT_OA_O"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.CR_ER_Y_AR": {
+    "name": "Hear and pick out words with cr, er, the long a and i sounds, y as ee and ar",
+    "sub": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T9_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA",
+      "ENGL.G2.LISTEN.T5_PRONUNCIATION_AND_VO.NT_SL_AR_ND_NK"
+    ],
+    "mis": [
+      "M2_ER_A",
+      "M2_Y_LONG_I",
+      "M2_Y_CONSONANT",
+      "M2_CR_CL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.SETTING": {
+    "name": "Say where and when a story happens",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T9_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G2.READIN.T9_COMPREHENSION.b",
+      "ENGL.G2.READIN.T14_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS"
+    ],
+    "mis": [
+      "M2_SE_PERSON",
+      "M2_SE_NO_TIME",
+      "M2_SE_OWN_PLACE",
+      "M2_SE_PICTURE_WRONG"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA": {
+    "name": "Say what a text is mainly about",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T9_COMPREHENSION.a",
+    "outcomes": [
+      "ENGL.G2.READIN.T9_COMPREHENSION.a"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS",
+      "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M2_MI_DETAIL",
+      "M2_MI_TOO_WIDE",
+      "M2_MI_FIRST",
+      "M2_MI_STORY_ONLY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER": {
+    "name": "Retell the events of a text in order in his or her own words",
+    "sub": "ENGL.G2.READIN.T9_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T9_COMPREHENSION.c",
+    "outcomes": [
+      "ENGL.G2.READIN.T9_COMPREHENSION.c"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS",
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.USE_WORDS_SENTENCES"
+    ],
+    "mis": [
+      "M2_RO_ORDER",
+      "M2_RO_READS",
+      "M2_RO_NO_NAMES",
+      "M2_RO_ONE_EVENT"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS": {
+    "name": "Use male and female word pairs for people and animals",
+    "sub": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET",
+    "outcome": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.a",
+      "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_GP_SWAP",
+      "M2_GP_BOY_COW",
+      "M2_GP_SAME_WORD",
+      "M2_GP_UNCLE_AUNT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST": {
+    "name": "Use commas in a list",
+    "sub": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM",
+    "outcome": "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.a",
+      "ENGL.G2.WRITIN.T9_PUNCTUATION_THE_COMM.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_LC_NONE",
+      "M2_LC_AND_EVERY",
+      "M2_LC_FULL_STOP",
+      "M2_LC_AFTER_AND"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE": {
+    "name": "Hear and pick out words with ear, er, dr, oi and the long i sound",
+    "sub": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T10_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T6_PRONUNCIATION_AND_VO.EAR_TH_WH_TW",
+      "ENGL.G2.LISTEN.T9_PRONUNCIATION_AND_VO.CR_ER_Y_AR"
+    ],
+    "mis": [
+      "M2_OI_O",
+      "M2_DR_J",
+      "M2_ER_E",
+      "M2_EAR_AIR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T10_COMPREHENSION.MENTAL_PICTURE": {
+    "name": "Picture characters, places and events from the words",
+    "sub": "ENGL.G2.READIN.T10_COMPREHENSION",
+    "outcome": "ENGL.G2.READIN.T10_COMPREHENSION.d",
+    "outcomes": [
+      "ENGL.G2.READIN.T10_COMPREHENSION.d"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T7_COMPREHENSION.CHARACTERS_EVENTS"
+    ],
+    "mis": [
+      "M2_MP_ONE_DETAIL",
+      "M2_MP_OWN",
+      "M2_MP_WHO",
+      "M2_MP_NUMBER"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS": {
+    "name": "Use beside, above, over, below, across, to and at",
+    "sub": "ENGL.G2.LANGUA.T10_PREPOSITIONS",
+    "outcome": "ENGL.G2.LANGUA.T10_PREPOSITIONS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T10_PREPOSITIONS.a",
+      "ENGL.G2.LANGUA.T10_PREPOSITIONS.b"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+    ],
+    "mis": [
+      "M2_PP_ABOVE_ON",
+      "M2_PP_BELOW_BEHIND",
+      "M2_PP_ACROSS_ALONG",
+      "M2_PP_TO_AT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK": {
+    "name": "Recognise and use the exclamation mark",
+    "sub": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL",
+    "outcome": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.a",
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_XM_EVERY",
+      "M2_XM_NONE",
+      "M2_XM_MIDDLE",
+      "M2_XM_QUESTION"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.FR_OW_OR_SCHWA": {
+    "name": "Hear and pick out words with fr, ow, or and the weak vowel",
+    "sub": "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T11_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T3_PRONUNCIATION_AND_VO.S_L_FL_AY",
+      "ENGL.G2.LISTEN.T8_PRONUNCIATION_AND_VO.BR_SCHWA_EE_AY_OA"
+    ],
+    "mis": [
+      "M2_OW_O",
+      "M2_OR_SHORT_O",
+      "M2_FR_FL",
+      "M2_ER_END_FULL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.READIN.T11_FLUENCY.PHRASE_READING": {
+    "name": "Read in phrases instead of word by word",
+    "sub": "ENGL.G2.READIN.T11_FLUENCY",
+    "outcome": "ENGL.G2.READIN.T11_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G2.READIN.T11_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY"
+    ],
+    "mis": [
+      "M2_PH_WORD_BY_WORD",
+      "M2_PH_WRONG_SCOOP",
+      "M2_PH_TOO_FAST",
+      "M2_PH_FINGER_EVERY"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST": {
+    "name": "Compare with -er and -est",
+    "sub": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_",
+    "outcome": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.a",
+      "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.b"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS"
+    ],
+    "mis": [
+      "M2_CM_MORE_ER",
+      "M2_CM_ER_FOR_EST",
+      "M2_CM_BIGER",
+      "M2_CM_NO_THAN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES": {
+    "name": "Write simple sentences with theme words",
+    "sub": "ENGL.G2.WRITIN.T11_GUIDED_WRITING",
+    "outcome": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.b",
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M2_WS_NO_VERB",
+      "M2_WS_NO_CAPITAL",
+      "M2_WS_NO_STOP",
+      "M2_WS_RUN_ON"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.GR_PR_OI_OO_U": {
+    "name": "Hear and pick out words with gr, pr, oi and the long and short oo sounds",
+    "sub": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T12_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE"
+    ],
+    "mis": [
+      "M2_OO_SHORT_LONG",
+      "M2_GR_KR",
+      "M2_PR_PL",
+      "M2_OY_IE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.POSSESSIVE_PRONOUNS": {
+    "name": "Use mine, yours, ours, hers and his",
+    "sub": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS",
+    "outcome": "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.a",
+      "ENGL.G2.LANGUA.T12_POSSESSIVE_PRONOUNS.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T1_VERB_TO_BE_PAST_TENS.OBJECT_PRONOUNS"
+    ],
+    "mis": [
+      "M2_PO_HIS_HERS",
+      "M2_PO_MINE_NOUN",
+      "M2_PO_APOSTROPHE",
+      "M2_PO_US"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES": {
+    "name": "Name the objects in pictures",
+    "sub": "ENGL.G2.WRITIN.T12_GUIDED_WRITING",
+    "outcome": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T12_GUIDED_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M2_PN_HOME_WORD",
+      "M2_PN_NEAR",
+      "M2_PN_SOUND",
+      "M2_PN_PLURAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_SENTENCES": {
+    "name": "Write sentences from picture prompts",
+    "sub": "ENGL.G2.WRITIN.T12_GUIDED_WRITING",
+    "outcome": "ENGL.G2.WRITIN.T12_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T12_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T12_GUIDED_WRITING.PICTURE_NAMES",
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES"
+    ],
+    "mis": [
+      "M2_PS_LABEL",
+      "M2_PS_NOT_IN_PICTURE",
+      "M2_PS_NO_ING",
+      "M2_PS_THERE_IS"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.TR_SM_CH_OW_U": {
+    "name": "Hear and pick out words with tr, sm, ch, ow and the you sound",
+    "sub": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU",
+    "outcome": "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T13_BY_THE_END_OF_THE_SU.a",
+      "ENGL.G2.READIN.T13_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T11_PRONUNCIATION_AND_VO.FR_OW_OR_SCHWA",
+      "ENGL.G2.LISTEN.T2_PRONUNCIATION_AND_VO.CH_OA_SH_CL"
+    ],
+    "mis": [
+      "M2_TR_CH",
+      "M2_SM_SN",
+      "M2_U_YOU",
+      "M2_OU_OA"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T13_WH_QUESTIONS.WH_QUESTIONS": {
+    "name": "Ask questions with what, where, when and who",
+    "sub": "ENGL.G2.LANGUA.T13_WH_QUESTIONS",
+    "outcome": "ENGL.G2.LANGUA.T13_WH_QUESTIONS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T13_WH_QUESTIONS.a",
+      "ENGL.G2.LANGUA.T13_WH_QUESTIONS.b"
+    ],
+    "pre": [
+      "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M2_WH_WHERE_WHEN",
+      "M2_WH_WHO_WHAT",
+      "M2_WH_ORDER",
+      "M2_WH_NO_MARK"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER": {
+    "name": "Put jumbled words in order to make a sentence",
+    "sub": "ENGL.G2.WRITIN.T13_GUIDED_WRITING",
+    "outcome": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T13_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T13_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS"
+    ],
+    "mis": [
+      "M2_WO_AS_GIVEN",
+      "M2_WO_ADJ_AFTER",
+      "M2_WO_VERB_FIRST",
+      "M2_WO_CAPITAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.K_SN_SP_U": {
+    "name": "Hear and pick out words with the k sound, sn, sp and u",
+    "sub": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T14_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK"
+    ],
+    "mis": [
+      "M2_C_K_DIFFERENT",
+      "M2_SN_SM",
+      "M2_SP_S",
+      "M2_U_A"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.ADVERBS_TIME": {
+    "name": "Use adverbs of time: soon, late, now, today, tomorrow, early",
+    "sub": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME",
+    "outcome": "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.a",
+      "ENGL.G2.LANGUA.T14_ADVERBS_OF_TIME.b"
+    ],
+    "pre": [
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST"
+    ],
+    "mis": [
+      "M2_AT_TOMORROW_PAST",
+      "M2_AT_SOON_NOW",
+      "M2_AT_EARLY_LATE",
+      "M2_AT_TODAY_TENSE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS": {
+    "name": "Write a short sequence of three or four events from a story",
+    "sub": "ENGL.G2.WRITIN.T14_GUIDED_WRITING",
+    "outcome": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.c",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T14_GUIDED_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES",
+      "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER",
+      "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST"
+    ],
+    "mis": [
+      "M2_RC_ORDER",
+      "M2_RC_PRESENT",
+      "M2_RC_ONE",
+      "M2_RC_AND_THEN"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.SCR_SPR_STR_SW_ST": {
+    "name": "Hear and pick out words with scr, spr, str, sw and st",
+    "sub": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G2.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+      "ENGL.G2.READIN.T15_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T14_PRONUNCIATION_AND_VO.K_SN_SP_U",
+      "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL"
+    ],
+    "mis": [
+      "M2_STR_THREE_BEATS",
+      "M2_SCR_STR",
+      "M2_SW_TWO_BEATS",
+      "M2_STR_SPR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.COMMANDS": {
+    "name": "Recognise, follow and give simple commands",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS",
+    "outcome": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.a",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.a",
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.b",
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.c"
+    ],
+    "pre": [
+      "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.FOLLOW_TWO_STEP"
+    ],
+    "mis": [
+      "M2_IM_YOU",
+      "M2_IM_ING",
+      "M2_IM_NO_PLEASE",
+      "M2_IM_S"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.EXCITEMENT_WORDS": {
+    "name": "Use interjections of excitement and joy",
+    "sub": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS",
+    "outcome": "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.d",
+    "outcomes": [
+      "ENGL.G2.LANGUA.T15_IMPERATIVES_COMMANDS.d"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK"
+    ],
+    "mis": [
+      "M2_EX_SAD_WORD",
+      "M2_EX_NO_MARK",
+      "M2_EX_HOME_WORD",
+      "M2_EX_EVERY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES": {
+    "name": "Write well-punctuated sentences",
+    "sub": "ENGL.G2.WRITIN.T15_GUIDED_WRITING",
+    "outcome": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.a",
+    "outcomes": [
+      "ENGL.G2.WRITIN.T15_GUIDED_WRITING.a",
+      "ENGL.G2.WRITIN.T15_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK"
+    ],
+    "mis": [
+      "M2_PU_NAMES",
+      "M2_PU_SMALL_I",
+      "M2_PU_QUESTION_STOP",
+      "M2_PU_AFTER_STOP"
+    ],
+    "nofamily": "questions"
+  }
+};
+var MIS_FEEDBACK17 = {
+  "M2_SC_SK_DIFFERENT": "Sc and sk both say s-k: scarf, skirt.",
+  "M2_BL_TWO_BEATS": "B and l glued together: black, one clap.",
+  "M2_SP_FIRST_LETTER": "Listen for the second sound: s-p.",
+  "M2_CK_VOICED": "Ck is a click with no buzz: back.",
+  "M2_TW_SAME_GROUP": "Think what this one is used for.",
+  "M2_TW_HOME_WORD": "Say it in English.",
+  "M2_TW_SOUND_ALIKE": "Read the sentence with it: does it make sense?",
+  "M2_TW_PERSON_THING": "A person does it; a place is where it happens.",
+  "M2_FI_LAST_ONLY": "Hold up two fingers as you listen.",
+  "M2_FI_ORDER": "Then means after.",
+  "M2_FI_LEFT_RIGHT": "Hold both hands up, palms out, thumbs apart: the left hand makes an L.",
+  "M2_FI_COPY": "Listen with your eyes closed, then do it.",
+  "M2_RA_GUESS": "Look at every letter: g-ar-d-e-n.",
+  "M2_RA_B_D": "Make a bed with your fists: b first, d last.",
+  "M2_RA_SKIP": "Point under every word.",
+  "M2_RA_ADDS": "Read only what your finger touches.",
+  "M2_PR_DESCRIBE": "Say what will happen, with will.",
+  "M2_PR_NO_CLUE": "Use a word from the title.",
+  "M2_PR_ALREADY": "Next means after what we read.",
+  "M2_PR_AFRAID": "Guess, then check.",
+  "M2_WC_LOOKS_LIKE": "Does that meaning fit the sentence?",
+  "M2_WC_GIVE_UP": "Look for clues: after the rain.",
+  "M2_WC_PICTURE_ONLY": "Read the words.",
+  "M2_WC_USUAL_MEANING": "Which meaning fits here?",
+  "M2_DQ_OWN_LIFE": "Point to the answer in the text.",
+  "M2_DQ_WRONG_WORD": "When wants a time.",
+  "M2_DQ_WORD_MATCH": "Find the sentence about the cow.",
+  "M2_DQ_YES_NO": "What colour wants a colour.",
+  "M2_WW_WE_WAS": "We, you, they: were.",
+  "M2_WW_I_WERE": "One person: was.",
+  "M2_WW_IS_PAST": "Last week: was.",
+  "M2_WW_CHILDREN_WAS": "Children is more than one: were.",
+  "M2_OP_WE_FOR_US": "After the verb: us.",
+  "M2_OP_THEY_FOR_THEM": "After the verb: them.",
+  "M2_OP_US_SUBJECT": "At the start, doing the action: we.",
+  "M2_OP_PREP_THEY": "After with and to: them.",
+  "M2_DE_ON_LINE": "Tails hang below like roots.",
+  "M2_DE_TALL": "P hangs down; b reaches up.",
+  "M2_DE_J_I": "J has a tail with a hook.",
+  "M2_DE_CAPITAL": "Inside a word: small g with its tail.",
+  "M2_HN_CAPS_INSIDE": "All small letters inside a word.",
+  "M2_HN_SIZE": "Small letters fill half the space.",
+  "M2_HN_OPEN": "Start at the top like c, go round, close it.",
+  "M2_HN_RIGHT_TO_LEFT": "B starts with the stick, then the belly.",
+  "M2_CH_SH": "Ch starts with a stop: t-sh.",
+  "M2_SH_S": "Sh: round lips, shhh.",
+  "M2_OA_SHORT_O": "Long o slides: o-oo, coat.",
+  "M2_CL_CR": "Tongue up for l: clown.",
+  "M2_SCS_EXTRA_VOWEL": "Glue the consonants: blue, one beat.",
+  "M2_SCS_L_R": "Tongue up for l, curled back for r.",
+  "M2_SCS_TH": "Tongue between the teeth.",
+  "M2_SCS_SH_S": "Round lips: shhh.",
+  "M2_RF_FLAT": "How does Achieng feel? Say it like her.",
+  "M2_RF_NO_STOP": "A full stop means stop and breathe.",
+  "M2_RF_QUESTION": "The question mark says lift your voice.",
+  "M2_RF_WRONG_FEELING": "Look for the feeling word: sadly.",
+  "M2_IQ_NOT_SAID": "Smiling and clapping show happy.",
+  "M2_IQ_GUESS": "What does crying show?",
+  "M2_IQ_TOO_FAR": "Use the most likely reason.",
+  "M2_IQ_COPY": "The reason is in another sentence.",
+  "M2_TL_OFF_TEXT": "Say which part of the story is like your life.",
+  "M2_TL_CHANGES_TEXT": "The text says rice; at home you may eat ugali.",
+  "M2_TL_SAME_ONLY": "Find one thing the same and one different.",
+  "M2_TL_ONE_WORD": "Say when and what you did.",
+  "M2_SP_DOUBLE": "One subject: My mother cooks.",
+  "M2_SP_HE_SHE": "A girl: she. A boy: he.",
+  "M2_SP_THEM_SUBJECT": "At the start: they.",
+  "M2_SP_US_SUBJECT": "At the start: we.",
+  "M2_DO_HE_DO": "He, she, it: does.",
+  "M2_DO_DID_ED": "Did says past: the verb stays plain.",
+  "M2_DO_DOES_PAST": "Yesterday: did.",
+  "M2_DO_THEY_DOES": "They: do.",
+  "M2_AS_SHORT": "Tall letters touch the top line.",
+  "M2_AS_WHICH": "B, d, f, h, k, l and t reach up.",
+  "M2_AS_CAPITAL": "Small b is already tall.",
+  "M2_AS_T_LIKE_L": "T is a little shorter, crossed at the middle line.",
+  "M2_AY_SHORT_E": "Long a slides: e-ee, late.",
+  "M2_FL_FR": "Tongue up behind the teeth: fly.",
+  "M2_L_R": "Watch the tongue: up for l.",
+  "M2_S_SH": "S: smile and hiss. Sh: round lips.",
+  "M2_UW_ONE_WORD": "Say it in a sentence.",
+  "M2_UW_OPEN_LIGHT": "We switch on radios and lights.",
+  "M2_UW_WRONG_MEANING": "Early means before the time.",
+  "M2_UW_ECHO": "Start with My ... is ...",
+  "M2_HV_HE_HAVE": "He, she, it: has.",
+  "M2_HV_HAVING": "For what you own: I have.",
+  "M2_HV_PAST": "Last year: had.",
+  "M2_HV_WE_HAS": "We: have.",
+  "M2_NG_HARD_G": "Ng is one nose sound: sing, no g at the end.",
+  "M2_EE_SHORT_I": "Long e is longer, lips in a smile: sheep.",
+  "M2_ST_TWO_BEATS": "Ssss-t: one clap.",
+  "M2_GL_GR": "Tongue up: glass.",
+  "M2_SVS_SHIP_SHEEP": "Sheep is longer, lips in a smile.",
+  "M2_SVS_CUP_CAP": "Cup: short uh, mouth half open.",
+  "M2_SVS_BIRD": "Relax the lips and hold it: bird.",
+  "M2_SVS_WEAK_FULL": "Only one part is strong; the others are quick uh.",
+  "M2_PA_GOED": "Some verbs change: go, went.",
+  "M2_PA_PRESENT": "Last month: add -ed.",
+  "M2_PA_SPELL": "Short vowel, one consonant: double it, stopped.",
+  "M2_PA_DID_PAST": "In a statement: just played.",
+  "M2_HA_NO_SPACE": "A finger space between words.",
+  "M2_HA_FLOAT": "Every letter stands on the line.",
+  "M2_HA_CAPS": "Capitals only for starts and names.",
+  "M2_HA_DARK": "Light and even is neat.",
+  "M2_GY_IE_FOR_Y": "At the end of a long word, ee is often y.",
+  "M2_GY_GR_FOR_GL": "Glad: g-l.",
+  "M2_GY_EXTRA_VOWEL": "G and l sit together: gl.",
+  "M2_GY_JULY": "July: J-u-l-y.",
+  "M2_AR_SHORT_A": "Ar is long and open: car, star, market.",
+  "M2_NT_ND": "Bent ends with a puff.",
+  "M2_NK_NG": "Sink ends with a click.",
+  "M2_SL_S": "S-lll-ip.",
+  "M2_PL_CHILDS": "Child, children.",
+  "M2_PL_FEETS": "Feet is already plural.",
+  "M2_PL_SHEEPS": "One sheep, three sheep.",
+  "M2_PL_ONE_TEETH": "One tooth.",
+  "M2_SG_SOUND": "Look, cover, write, check.",
+  "M2_SG_DROP_LETTER": "Say every part: gar-den.",
+  "M2_SG_SWAP": "Said: s-a-i-d.",
+  "M2_SG_DOUBLE": "Shop ends with one p.",
+  "M2_TH_T": "Tongue between the teeth, blow: thin.",
+  "M2_THV_D": "Tongue between the teeth with a buzz: they.",
+  "M2_WH_H": "In wheel, white and when, wh says w.",
+  "M2_EAR_TWO_BEATS": "Ear glides in one beat: deer.",
+  "M2_PC_IS_ING": "Yesterday: was cooking.",
+  "M2_PC_NO_BE": "Was or were before -ing.",
+  "M2_PC_THEY_WAS": "They: were.",
+  "M2_PC_ING_SPELL": "Run, running: double the n.",
+  "M2_SWT_TH_T": "Thorn: t-h.",
+  "M2_SWT_WH_W": "Wheel has a silent h: w-h.",
+  "M2_SWT_TW_TU": "Tw: t then w.",
+  "M2_SWT_EAR_IA": "The sound eer is often spelt ear.",
+  "M2_IE_SHORT_I": "Long i slides: a-ee, kite.",
+  "M2_OE_SHORT_O": "Long o slides: o-oo, hope.",
+  "M2_ND_DROP": "Ban-d: listen for d.",
+  "M2_AY_SHORT_A": "Long a slides: e-ee, pain.",
+  "M2_CE_ANIMALS": "Anyone who acts or talks is a character.",
+  "M2_CE_MAIN_ONLY": "List everyone.",
+  "M2_CE_LOOKS_ONLY": "What does what he did tell us?",
+  "M2_CE_EVENT_PERSON": "What happened is an action.",
+  "M2_OR_AND": "One of two: or.",
+  "M2_OR_YES": "Choose one.",
+  "M2_OR_BOTH": "Or: pick one.",
+  "M2_OR_POSITION": "Or goes between the two choices.",
+  "M2_SNA_NK_NG": "Pink ends with k.",
+  "M2_SNA_ND_N": "Hand ends with d.",
+  "M2_SNA_AR_A": "Car: c-a-r.",
+  "M2_SNA_AR_AA": "Long a in park is spelt ar.",
+  "M2_SCHWA_FULL": "The end of teacher is a quick uh.",
+  "M2_BR_BL": "Curl the tongue: brush.",
+  "M2_EE_EA_DIFFERENT": "Ee and ea both say the long e.",
+  "M2_OA_OW_DIFFERENT": "Oa and ow in snow both say the long o.",
+  "M2_CO_ONETH": "First, second, third are special.",
+  "M2_CO_FIVETH": "Five, fifth: ve becomes f.",
+  "M2_CO_POSITION_TWO": "For a place in a line or race: second.",
+  "M2_CO_ORDINAL_COUNT": "How many: two. Which place: second.",
+  "M2_TT_THIS_PLURAL": "More than one near: these.",
+  "M2_TT_NEAR_FAR": "Far: those.",
+  "M2_TT_SINGULAR_NOUN": "Those trees: more than one.",
+  "M2_TT_THEM": "Those cups.",
+  "M2_SVT_ONE_LETTER": "Long e here is ea: read.",
+  "M2_SVT_BR_BL": "Brush: b-r.",
+  "M2_SVT_ER_A": "Teacher ends with er.",
+  "M2_SVT_OA_O": "Board: oa.",
+  "M2_ER_A": "Er, ir and ur say the same long sound: her, bird, turn.",
+  "M2_Y_LONG_I": "At the end of a long word y says ee: puppy, funny.",
+  "M2_Y_CONSONANT": "At the end y is a vowel: ee.",
+  "M2_CR_CL": "Curl the tongue: crash.",
+  "M2_SE_PERSON": "Setting is where and when.",
+  "M2_SE_NO_TIME": "Where and when.",
+  "M2_SE_OWN_PLACE": "Where in the story?",
+  "M2_SE_PICTURE_WRONG": "Morning means sun coming up.",
+  "M2_MI_DETAIL": "Which answer covers all of it?",
+  "M2_MI_TOO_WIDE": "Is the whole text about all animals?",
+  "M2_MI_FIRST": "Read it all first.",
+  "M2_MI_STORY_ONLY": "Characters, or facts?",
+  "M2_RO_ORDER": "First, next, then, last.",
+  "M2_RO_READS": "Close the book and tell it.",
+  "M2_RO_NO_NAMES": "Say the name first.",
+  "M2_RO_ONE_EVENT": "What happened next?",
+  "M2_GP_SWAP": "Hen is the mother; cock crows.",
+  "M2_GP_BOY_COW": "English has its own word: bull.",
+  "M2_GP_SAME_WORD": "Lion and lioness.",
+  "M2_GP_UNCLE_AUNT": "Aunt is a woman.",
+  "M2_LC_NONE": "A comma between each item.",
+  "M2_LC_AND_EVERY": "Commas, then and before the last.",
+  "M2_LC_FULL_STOP": "A comma has a tail.",
+  "M2_LC_AFTER_AND": "No comma right after and.",
+  "M2_OI_O": "Oi slides: o-ee, coin, boy.",
+  "M2_DR_J": "It starts with d, then r: dr-um.",
+  "M2_ER_E": "Turn has a long er: lips relaxed.",
+  "M2_EAR_AIR": "Ear starts with ee: hear. Air starts with e: hair.",
+  "M2_MP_ONE_DETAIL": "Check every word: small, brown, long tail.",
+  "M2_MP_OWN": "Only what the words say.",
+  "M2_MP_WHO": "Who is chasing?",
+  "M2_MP_NUMBER": "How many? Three.",
+  "M2_PP_ABOVE_ON": "On touches; above does not.",
+  "M2_PP_BELOW_BEHIND": "Behind: at the back.",
+  "M2_PP_ACROSS_ALONG": "Across: from one side to the other. Along: beside it.",
+  "M2_PP_TO_AT": "Moving: to. Already there: at.",
+  "M2_XM_EVERY": "Only strong feelings or warnings.",
+  "M2_XM_NONE": "A warning gets !",
+  "M2_XM_MIDDLE": "After ! a new sentence starts with a capital.",
+  "M2_XM_QUESTION": "Asking: question mark.",
+  "M2_OW_O": "Ow slides: a-oo, town, cow.",
+  "M2_OR_SHORT_O": "Or is long: port.",
+  "M2_FR_FL": "Curl the tongue: free.",
+  "M2_ER_END_FULL": "The end of water and flower is a quick uh.",
+  "M2_PH_WORD_BY_WORD": "Scoop the words together.",
+  "M2_PH_WRONG_SCOOP": "Keep the who together, then the what.",
+  "M2_PH_TOO_FAST": "Smooth, not a race.",
+  "M2_PH_FINGER_EVERY": "Slide your finger under the whole scoop.",
+  "M2_CM_MORE_ER": "Cleaner already means more clean.",
+  "M2_CM_ER_FOR_EST": "The whole group: the -est.",
+  "M2_CM_BIGER": "Big, bigger: double g.",
+  "M2_CM_NO_THAN": "Taller than.",
+  "M2_WS_NO_VERB": "Who does what?",
+  "M2_WS_NO_CAPITAL": "Start with a capital.",
+  "M2_WS_NO_STOP": "End with a full stop.",
+  "M2_WS_RUN_ON": "Read it aloud: stop where your voice stops.",
+  "M2_OO_SHORT_LONG": "Pool is long; pull is short.",
+  "M2_GR_KR": "G buzzes.",
+  "M2_PR_PL": "Curl the tongue: pray.",
+  "M2_OY_IE": "Toy starts with o; tie starts with a.",
+  "M2_PO_HIS_HERS": "A girl: hers.",
+  "M2_PO_MINE_NOUN": "My radio; the radio is mine.",
+  "M2_PO_APOSTROPHE": "No apostrophe in yours.",
+  "M2_PO_US": "Belongs to us: ours.",
+  "M2_PN_HOME_WORD": "In English: radio.",
+  "M2_PN_NEAR": "Point at the object first.",
+  "M2_PN_SOUND": "Look, cover, write, check.",
+  "M2_PN_PLURAL": "One thing: no -s.",
+  "M2_PS_LABEL": "Who is doing what?",
+  "M2_PS_NOT_IN_PICTURE": "Write only what you can see.",
+  "M2_PS_NO_ING": "Is or are before -ing.",
+  "M2_PS_THERE_IS": "Say what he is doing.",
+  "M2_TR_CH": "It starts with t, then r: t-rain.",
+  "M2_SM_SN": "Lips close for sm.",
+  "M2_U_YOU": "Cube says k-you-b.",
+  "M2_OU_OA": "Crowd: a-oo, like cow.",
+  "M2_WH_WHERE_WHEN": "When: time. Where: place.",
+  "M2_WH_WHO_WHAT": "Who: a person. What: a thing.",
+  "M2_WH_ORDER": "Swap: is Juma.",
+  "M2_WH_NO_MARK": "A question mark.",
+  "M2_WO_AS_GIVEN": "Who did it? Start there.",
+  "M2_WO_ADJ_AFTER": "In English the describing word comes first: red dress.",
+  "M2_WO_VERB_FIRST": "Who first, then what they did.",
+  "M2_WO_CAPITAL": "The word with the capital goes first.",
+  "M2_C_K_DIFFERENT": "C, k and ck can all say k.",
+  "M2_SN_SM": "Lips open for sn.",
+  "M2_SP_S": "S-p-ot.",
+  "M2_U_A": "Cup: short uh with the mouth half open.",
+  "M2_AT_TOMORROW_PAST": "Yesterday: past. Tomorrow: future.",
+  "M2_AT_SOON_NOW": "Now: this moment. Soon: in a short time.",
+  "M2_AT_EARLY_LATE": "After the time: late.",
+  "M2_AT_TODAY_TENSE": "Today and now: am helping.",
+  "M2_RC_ORDER": "First, next, then, last.",
+  "M2_RC_PRESENT": "It already happened: past.",
+  "M2_RC_ONE": "Count three sentences.",
+  "M2_RC_AND_THEN": "Full stops, then a time word.",
+  "M2_STR_THREE_BEATS": "Str glued: strong, one clap.",
+  "M2_SCR_STR": "Scr has k in the middle.",
+  "M2_SW_TWO_BEATS": "S and w together: sweep.",
+  "M2_STR_SPR": "Listen for the middle: p or t?",
+  "M2_IM_YOU": "A command starts with the verb.",
+  "M2_IM_ING": "Plain verb: close.",
+  "M2_IM_NO_PLEASE": "To adults: please.",
+  "M2_IM_S": "No -s: stand.",
+  "M2_EX_SAD_WORD": "Hurray is for joy.",
+  "M2_EX_NO_MARK": "An exclamation mark after Wow.",
+  "M2_EX_HOME_WORD": "In English: Wow, Hurray.",
+  "M2_EX_EVERY": "Only where the feeling is strong.",
+  "M2_PU_NAMES": "Names of people and places: capitals.",
+  "M2_PU_SMALL_I": "I alone is a capital.",
+  "M2_PU_QUESTION_STOP": "Asking: question mark.",
+  "M2_PU_AFTER_STOP": "After a full stop: capital."
+};
+
+// src/ai-tutor/content/families/english_g2_signed.js
+var SIGNED17 = [];
+
+// src/ai-tutor/content/subjects/english_g2.js
+var english_g2_default = {
+  subject: "english",
+  grade: 2,
+  prefix: "ENGL",
+  order: 2,
+  name: "English",
+  shortName: "English",
+  icon: "book",
+  description: "Grade 2 English from the CBC design",
+  map: { skills: SKILLS18, substrands: SUBSTRANDS17, outcomes: OUTCOMES17, misFeedback: MIS_FEEDBACK17 },
+  families: [],
+  // none yet: add each family file you write, as Grades 4-9 do
+  familyFiles: [],
+  signed: SIGNED17,
+  signedFile: "english_g2_signed.js",
+  checks: "family",
+  idPrefix: "english2.",
+  marker: "text",
+  bank: false,
+  curriculumDir: "english",
+  misconceptionsFile: "engine/data/curriculum/english.g2.misconceptions.json",
+  reviewDoc: null,
+  // write one with node scripts/build-subject-review-doc.mjs english 2 when families exist
+  precheckLabel: "English 2"
+};
+
+// src/ai-tutor/content/curriculumMap.english.g3.js
+var SUBSTRANDS18 = {
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 1: Activities at home and school)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T1_FLUENCY": {
+    "name": "Fluency (Theme 1: Activities at home and school)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_FLUENCY.a",
+      "ENGL.G3.READIN.T1_FLUENCY.b",
+      "ENGL.G3.READIN.T1_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION": {
+    "name": "Comprehension (Theme 1: Activities at home and school)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.a",
+      "ENGL.G3.READIN.T1_COMPREHENSION.b",
+      "ENGL.G3.READIN.T1_COMPREHENSION.c",
+      "ENGL.G3.READIN.T1_COMPREHENSION.d",
+      "ENGL.G3.READIN.T1_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME": {
+    "name": "Subject-verb agreement \u2013 Verb \u2018to be\u2019 (Theme 1: Activities at home and school)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.a",
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b",
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_": {
+    "name": "Handwriting: Letters of the alphabet (Theme 1: Activities at home and school)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.a",
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.b",
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 2: Sharing duties and responsibilities)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G3.READIN.T2_FLUENCY": {
+    "name": "Fluency (Theme 2: Sharing duties and responsibilities)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T2_FLUENCY.a",
+      "ENGL.G3.READIN.T2_FLUENCY.b",
+      "ENGL.G3.READIN.T2_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION": {
+    "name": "Comprehension (Theme 2: Sharing duties and responsibilities)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T2_COMPREHENSION.a",
+      "ENGL.G3.READIN.T2_COMPREHENSION.b",
+      "ENGL.G3.READIN.T2_COMPREHENSION.c",
+      "ENGL.G3.READIN.T2_COMPREHENSION.d",
+      "ENGL.G3.READIN.T2_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO": {
+    "name": "Forms of the verb \u2018to do\u2019 Subject- verb agreement (Theme 2: Sharing duties and responsibilities)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.a",
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.b",
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T2_HANDWRITING": {
+    "name": "Handwriting (Theme 2: Sharing duties and responsibilities)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T2_HANDWRITING.a",
+      "ENGL.G3.WRITIN.T2_HANDWRITING.b",
+      "ENGL.G3.WRITIN.T2_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 3: Etiquette)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G3.READIN.T3_FLUENCY": {
+    "name": "Fluency (Theme 3: Etiquette)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T3_FLUENCY.a",
+      "ENGL.G3.READIN.T3_FLUENCY.b",
+      "ENGL.G3.READIN.T3_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION": {
+    "name": "Comprehension (Theme 3: Etiquette)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.a",
+      "ENGL.G3.READIN.T3_COMPREHENSION.b",
+      "ENGL.G3.READIN.T3_COMPREHENSION.c",
+      "ENGL.G3.READIN.T3_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME": {
+    "name": "Subject-verb agreement \u2013 verb \u2018to have\u2019 (Theme 3: Etiquette)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.a",
+      "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.b",
+      "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T3_HANDWRITING": {
+    "name": "Handwriting (Theme 3: Etiquette)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T3_HANDWRITING.a",
+      "ENGL.G3.WRITIN.T3_HANDWRITING.b",
+      "ENGL.G3.WRITIN.T3_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 4: Child rights)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T4_FLUENCY": {
+    "name": "Fluency (Theme 4: Child rights)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T4_FLUENCY.a",
+      "ENGL.G3.READIN.T4_FLUENCY.b",
+      "ENGL.G3.READIN.T4_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T4_COMPREHENSION": {
+    "name": "Comprehension (Theme 4: Child rights)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T4_COMPREHENSION.a",
+      "ENGL.G3.READIN.T4_COMPREHENSION.b",
+      "ENGL.G3.READIN.T4_COMPREHENSION.c"
+    ]
+  },
+  "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS": {
+    "name": "Indefinite pronouns (Theme 4: Child rights)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.a",
+      "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.b",
+      "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T4_HANDWRITING": {
+    "name": "Handwriting (Theme 4: Child rights)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T4_HANDWRITING.a",
+      "ENGL.G3.WRITIN.T4_HANDWRITING.b",
+      "ENGL.G3.WRITIN.T4_HANDWRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 5: Occupations)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G3.READIN.T5_FLUENCY": {
+    "name": "Fluency (Theme 5: Occupations)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T5_FLUENCY.a",
+      "ENGL.G3.READIN.T5_FLUENCY.b",
+      "ENGL.G3.READIN.T5_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION": {
+    "name": "Comprehension (Theme 5: Occupations)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T5_COMPREHENSION.a",
+      "ENGL.G3.READIN.T5_COMPREHENSION.b",
+      "ENGL.G3.READIN.T5_COMPREHENSION.c",
+      "ENGL.G3.READIN.T5_COMPREHENSION.d",
+      "ENGL.G3.READIN.T5_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS": {
+    "name": "Singular and plurals of irregular nouns (Theme 5: Occupations)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.a",
+      "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.b",
+      "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T5_HAND_WRITING": {
+    "name": "Hand Writing (Theme 5: Occupations)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T5_HAND_WRITING.a",
+      "ENGL.G3.WRITIN.T5_HAND_WRITING.b",
+      "ENGL.G3.WRITIN.T5_HAND_WRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 6: Technology)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G3.READIN.T6_FLUENCY": {
+    "name": "Fluency (Theme 6: Technology)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T6_FLUENCY.a",
+      "ENGL.G3.READIN.T6_FLUENCY.b",
+      "ENGL.G3.READIN.T6_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T6_COMPREHENSION": {
+    "name": "Comprehension (Theme 6: Technology)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T6_COMPREHENSION.a",
+      "ENGL.G3.READIN.T6_COMPREHENSION.b",
+      "ENGL.G3.READIN.T6_COMPREHENSION.c"
+    ]
+  },
+  "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI": {
+    "name": "Tense: Future time (will/shall) (Theme 6: Technology)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.a",
+      "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.b",
+      "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T6_SPELLING": {
+    "name": "Spelling (Theme 6: Technology)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T6_SPELLING.a",
+      "ENGL.G3.WRITIN.T6_SPELLING.b",
+      "ENGL.G3.WRITIN.T6_SPELLING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 7: Safety)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T7_FLUENCY": {
+    "name": "Fluency (Theme 7: Safety)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T7_FLUENCY.a",
+      "ENGL.G3.READIN.T7_FLUENCY.b",
+      "ENGL.G3.READIN.T7_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T7_COMPREHENSION": {
+    "name": "Comprehension (Theme 7: Safety)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T7_COMPREHENSION.a",
+      "ENGL.G3.READIN.T7_COMPREHENSION.b",
+      "ENGL.G3.READIN.T7_COMPREHENSION.c",
+      "ENGL.G3.READIN.T7_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G3.LANGUA.T7_CONJUNCTIONS": {
+    "name": "Conjunctions (Theme 7: Safety)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.a",
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.b",
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T7_SPELLING": {
+    "name": "Spelling (Theme 7: Safety)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T7_SPELLING.a",
+      "ENGL.G3.WRITIN.T7_SPELLING.b",
+      "ENGL.G3.WRITIN.T7_SPELLING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 8: Domestic animals)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G3.READIN.T8_FLUENCY": {
+    "name": "Fluency (Theme 8: Domestic animals)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T8_FLUENCY.a",
+      "ENGL.G3.READIN.T8_FLUENCY.b",
+      "ENGL.G3.READIN.T8_FLUENCY.c",
+      "ENGL.G3.READIN.T8_FLUENCY.d"
+    ]
+  },
+  "ENGL.G3.READIN.T8_COMPREHENSION": {
+    "name": "Comprehension (Theme 8: Domestic animals)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T8_COMPREHENSION.a",
+      "ENGL.G3.READIN.T8_COMPREHENSION.b",
+      "ENGL.G3.READIN.T8_COMPREHENSION.c",
+      "ENGL.G3.READIN.T8_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G3.LANGUA.T8_QUANTIFIERS": {
+    "name": "Quantifiers (Theme 8: Domestic animals)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T8_QUANTIFIERS.a",
+      "ENGL.G3.LANGUA.T8_QUANTIFIERS.b",
+      "ENGL.G3.LANGUA.T8_QUANTIFIERS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T8_SPELLING": {
+    "name": "Spelling (Theme 8: Domestic animals)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T8_SPELLING.a",
+      "ENGL.G3.WRITIN.T8_SPELLING.b",
+      "ENGL.G3.WRITIN.T8_SPELLING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 9: Wild animals)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T9_FLUENCY": {
+    "name": "Fluency (Theme 9: Wild animals)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T9_FLUENCY.a",
+      "ENGL.G3.READIN.T9_FLUENCY.b",
+      "ENGL.G3.READIN.T9_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T9_COMPREHENSION": {
+    "name": "Comprehension (Theme 9: Wild animals)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T9_COMPREHENSION.a",
+      "ENGL.G3.READIN.T9_COMPREHENSION.b",
+      "ENGL.G3.READIN.T9_COMPREHENSION.c",
+      "ENGL.G3.READIN.T9_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G3.LANGUA.T9_OPPOSITES": {
+    "name": "Opposites (Theme 9: Wild animals)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T9_OPPOSITES.a",
+      "ENGL.G3.LANGUA.T9_OPPOSITES.b",
+      "ENGL.G3.LANGUA.T9_OPPOSITES.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM": {
+    "name": "Punctuation - The Comma (Theme 9: Wild animals)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.a",
+      "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.b",
+      "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 10: Festivals)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T10_FLUENCY": {
+    "name": "Fluency (Theme 10: Festivals)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T10_FLUENCY.a",
+      "ENGL.G3.READIN.T10_FLUENCY.b",
+      "ENGL.G3.READIN.T10_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T10_COMPREHENSION": {
+    "name": "Comprehension (Theme 10: Festivals)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T10_COMPREHENSION.a",
+      "ENGL.G3.READIN.T10_COMPREHENSION.b",
+      "ENGL.G3.READIN.T10_COMPREHENSION.c"
+    ]
+  },
+  "ENGL.G3.LANGUA.T10_PREPOSITIONS": {
+    "name": "Prepositions (Theme 10: Festivals)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T10_PREPOSITIONS.a",
+      "ENGL.G3.LANGUA.T10_PREPOSITIONS.b",
+      "ENGL.G3.LANGUA.T10_PREPOSITIONS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T10_PUNCTUATION": {
+    "name": "Punctuation (Theme 10: Festivals)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.a",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.b",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 11: Play time and sports)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T11_FLUENCY": {
+    "name": "Fluency (Theme 11: Play time and sports)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T11_FLUENCY.a",
+      "ENGL.G3.READIN.T11_FLUENCY.b",
+      "ENGL.G3.READIN.T11_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T11_COMPREHENSION": {
+    "name": "Comprehension (Theme 11: Play time and sports)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T11_COMPREHENSION.a",
+      "ENGL.G3.READIN.T11_COMPREHENSION.b",
+      "ENGL.G3.READIN.T11_COMPREHENSION.c",
+      "ENGL.G3.READIN.T11_COMPREHENSION.d",
+      "ENGL.G3.READIN.T11_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI": {
+    "name": "Adjectives: Comparatives and superlatives (Theme 11: Play time and sports)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.a",
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.b",
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T11_GUIDED_WRITING": {
+    "name": "Guided Writing (Theme 11: Play time and sports)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T11_GUIDED_WRITING.a",
+      "ENGL.G3.WRITIN.T11_GUIDED_WRITING.b",
+      "ENGL.G3.WRITIN.T11_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 12: Food and diseases)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T12_FLUENCY": {
+    "name": "Fluency (Theme 12: Food and diseases)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T12_FLUENCY.a",
+      "ENGL.G3.READIN.T12_FLUENCY.b",
+      "ENGL.G3.READIN.T12_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T12_COMPREHENSION": {
+    "name": "Comprehension (Theme 12: Food and diseases)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T12_COMPREHENSION.a",
+      "ENGL.G3.READIN.T12_COMPREHENSION.b",
+      "ENGL.G3.READIN.T12_COMPREHENSION.c",
+      "ENGL.G3.READIN.T12_COMPREHENSION.d",
+      "ENGL.G3.READIN.T12_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_": {
+    "name": "Pronouns: Possessive pronouns (Theme 12: Food and diseases)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.a",
+      "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.b",
+      "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T12_PARAGRAPHS": {
+    "name": "Paragraphs (Theme 12: Food and diseases)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.a",
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.b",
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and vocabulary (Theme 13: Savings)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G3.READIN.T13_FLUENCY": {
+    "name": "Fluency (Theme 13: Savings)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T13_FLUENCY.a",
+      "ENGL.G3.READIN.T13_FLUENCY.b",
+      "ENGL.G3.READIN.T13_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T13_COMPREHENSION": {
+    "name": "Comprehension (Theme 13: Savings)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T13_COMPREHENSION.a",
+      "ENGL.G3.READIN.T13_COMPREHENSION.b",
+      "ENGL.G3.READIN.T13_COMPREHENSION.c",
+      "ENGL.G3.READIN.T13_COMPREHENSION.d"
+    ]
+  },
+  "ENGL.G3.LANGUA.T13_WH_QUESTIONS": {
+    "name": "\u2018Wh\u2019 questions (Theme 13: Savings)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T13_WH_QUESTIONS.a",
+      "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b",
+      "ENGL.G3.LANGUA.T13_WH_QUESTIONS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T13_GUIDED_WRITING": {
+    "name": "Guided writing (Theme 13: Savings)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.a",
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.b",
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 14: Talents)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T14_FLUENCY": {
+    "name": "Fluency (Theme 14: Talents)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T14_FLUENCY.a",
+      "ENGL.G3.READIN.T14_FLUENCY.b",
+      "ENGL.G3.READIN.T14_FLUENCY.c"
+    ]
+  },
+  "ENGL.G3.READIN.T14_COMPREHENSION": {
+    "name": "Comprehension (Theme 14: Talents)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T14_COMPREHENSION.a",
+      "ENGL.G3.READIN.T14_COMPREHENSION.b",
+      "ENGL.G3.READIN.T14_COMPREHENSION.c",
+      "ENGL.G3.READIN.T14_COMPREHENSION.d",
+      "ENGL.G3.READIN.T14_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER": {
+    "name": "Adverbs of Manner (Theme 14: Talents)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.a",
+      "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.b",
+      "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T14_GUIDED_WRITING": {
+    "name": "Guided writing (Theme 14: Talents)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T14_GUIDED_WRITING.a",
+      "ENGL.G3.WRITIN.T14_GUIDED_WRITING.b",
+      "ENGL.G3.WRITIN.T14_GUIDED_WRITING.c"
+    ]
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 15: Environment)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G3.READIN.T15_FLUENCY": {
+    "name": "Fluency (Theme 15: Environment)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T15_FLUENCY.a",
+      "ENGL.G3.READIN.T15_FLUENCY.b",
+      "ENGL.G3.READIN.T15_FLUENCY.c",
+      "ENGL.G3.READIN.T15_FLUENCY.d"
+    ]
+  },
+  "ENGL.G3.READIN.T15_COMPREHENSION": {
+    "name": "Comprehension (Theme 15: Environment)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G3.READIN.T15_COMPREHENSION.a",
+      "ENGL.G3.READIN.T15_COMPREHENSION.b",
+      "ENGL.G3.READIN.T15_COMPREHENSION.c",
+      "ENGL.G3.READIN.T15_COMPREHENSION.d",
+      "ENGL.G3.READIN.T15_COMPREHENSION.e"
+    ]
+  },
+  "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS": {
+    "name": "Interjections of Displeasure (Theme 15: Environment)",
+    "strand": "Language Use",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.a",
+      "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.b",
+      "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.c"
+    ]
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU": {
+    "name": "Guided Writing - Factual Paragraph (Theme 15: Environment)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.a",
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.b",
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.c",
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.d"
+    ]
+  }
+};
+var OUTCOMES18 = {
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T1_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T1_FLUENCY"
+  },
+  "ENGL.G3.READIN.T1_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T1_FLUENCY"
+  },
+  "ENGL.G3.READIN.T1_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T1_FLUENCY"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME"
+  },
+  "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME"
+  },
+  "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME"
+  },
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_"
+  },
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_"
+  },
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T2_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T2_FLUENCY"
+  },
+  "ENGL.G3.READIN.T2_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T2_FLUENCY"
+  },
+  "ENGL.G3.READIN.T2_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T2_FLUENCY"
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T2_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO"
+  },
+  "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO"
+  },
+  "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO"
+  },
+  "ENGL.G3.WRITIN.T2_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T2_HANDWRITING"
+  },
+  "ENGL.G3.WRITIN.T2_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T2_HANDWRITING"
+  },
+  "ENGL.G3.WRITIN.T2_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T2_HANDWRITING"
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T3_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T3_FLUENCY"
+  },
+  "ENGL.G3.READIN.T3_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T3_FLUENCY"
+  },
+  "ENGL.G3.READIN.T3_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T3_FLUENCY"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME"
+  },
+  "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME"
+  },
+  "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME"
+  },
+  "ENGL.G3.WRITIN.T3_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G3.WRITIN.T3_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G3.WRITIN.T3_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T3_HANDWRITING"
+  },
+  "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T4_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T4_FLUENCY"
+  },
+  "ENGL.G3.READIN.T4_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T4_FLUENCY"
+  },
+  "ENGL.G3.READIN.T4_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T4_FLUENCY"
+  },
+  "ENGL.G3.READIN.T4_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T4_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T4_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T4_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS"
+  },
+  "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS"
+  },
+  "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS"
+  },
+  "ENGL.G3.WRITIN.T4_HANDWRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G3.WRITIN.T4_HANDWRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G3.WRITIN.T4_HANDWRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T4_HANDWRITING"
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T5_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T5_FLUENCY"
+  },
+  "ENGL.G3.READIN.T5_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T5_FLUENCY"
+  },
+  "ENGL.G3.READIN.T5_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T5_FLUENCY"
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T5_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T5_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T5_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T5_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T5_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS"
+  },
+  "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS"
+  },
+  "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS"
+  },
+  "ENGL.G3.WRITIN.T5_HAND_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T5_HAND_WRITING"
+  },
+  "ENGL.G3.WRITIN.T5_HAND_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T5_HAND_WRITING"
+  },
+  "ENGL.G3.WRITIN.T5_HAND_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T5_HAND_WRITING"
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T6_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T6_FLUENCY"
+  },
+  "ENGL.G3.READIN.T6_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T6_FLUENCY"
+  },
+  "ENGL.G3.READIN.T6_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T6_FLUENCY"
+  },
+  "ENGL.G3.READIN.T6_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T6_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T6_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T6_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI"
+  },
+  "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI"
+  },
+  "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI"
+  },
+  "ENGL.G3.WRITIN.T6_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G3.WRITIN.T6_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G3.WRITIN.T6_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T6_SPELLING"
+  },
+  "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T7_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T7_FLUENCY"
+  },
+  "ENGL.G3.READIN.T7_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T7_FLUENCY"
+  },
+  "ENGL.G3.READIN.T7_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T7_FLUENCY"
+  },
+  "ENGL.G3.READIN.T7_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T7_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T7_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T7_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T7_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T7_CONJUNCTIONS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T7_CONJUNCTIONS"
+  },
+  "ENGL.G3.LANGUA.T7_CONJUNCTIONS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T7_CONJUNCTIONS"
+  },
+  "ENGL.G3.LANGUA.T7_CONJUNCTIONS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T7_CONJUNCTIONS"
+  },
+  "ENGL.G3.WRITIN.T7_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G3.WRITIN.T7_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G3.WRITIN.T7_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T7_SPELLING"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T8_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T8_FLUENCY"
+  },
+  "ENGL.G3.READIN.T8_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T8_FLUENCY"
+  },
+  "ENGL.G3.READIN.T8_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T8_FLUENCY"
+  },
+  "ENGL.G3.READIN.T8_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T8_FLUENCY"
+  },
+  "ENGL.G3.READIN.T8_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T8_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T8_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T8_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T8_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T8_QUANTIFIERS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T8_QUANTIFIERS"
+  },
+  "ENGL.G3.LANGUA.T8_QUANTIFIERS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T8_QUANTIFIERS"
+  },
+  "ENGL.G3.LANGUA.T8_QUANTIFIERS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T8_QUANTIFIERS"
+  },
+  "ENGL.G3.WRITIN.T8_SPELLING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G3.WRITIN.T8_SPELLING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G3.WRITIN.T8_SPELLING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T8_SPELLING"
+  },
+  "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T9_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T9_FLUENCY"
+  },
+  "ENGL.G3.READIN.T9_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T9_FLUENCY"
+  },
+  "ENGL.G3.READIN.T9_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T9_FLUENCY"
+  },
+  "ENGL.G3.READIN.T9_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T9_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T9_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T9_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T9_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T9_OPPOSITES.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T9_OPPOSITES"
+  },
+  "ENGL.G3.LANGUA.T9_OPPOSITES.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T9_OPPOSITES"
+  },
+  "ENGL.G3.LANGUA.T9_OPPOSITES.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T9_OPPOSITES"
+  },
+  "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM"
+  },
+  "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM"
+  },
+  "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM"
+  },
+  "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T10_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T10_FLUENCY"
+  },
+  "ENGL.G3.READIN.T10_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T10_FLUENCY"
+  },
+  "ENGL.G3.READIN.T10_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T10_FLUENCY"
+  },
+  "ENGL.G3.READIN.T10_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T10_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T10_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T10_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T10_PREPOSITIONS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T10_PREPOSITIONS"
+  },
+  "ENGL.G3.LANGUA.T10_PREPOSITIONS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T10_PREPOSITIONS"
+  },
+  "ENGL.G3.LANGUA.T10_PREPOSITIONS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T10_PREPOSITIONS"
+  },
+  "ENGL.G3.WRITIN.T10_PUNCTUATION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T10_PUNCTUATION"
+  },
+  "ENGL.G3.WRITIN.T10_PUNCTUATION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T10_PUNCTUATION"
+  },
+  "ENGL.G3.WRITIN.T10_PUNCTUATION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T10_PUNCTUATION"
+  },
+  "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T11_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T11_FLUENCY"
+  },
+  "ENGL.G3.READIN.T11_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T11_FLUENCY"
+  },
+  "ENGL.G3.READIN.T11_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T11_FLUENCY"
+  },
+  "ENGL.G3.READIN.T11_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T11_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T11_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T11_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T11_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T11_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI"
+  },
+  "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI"
+  },
+  "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI"
+  },
+  "ENGL.G3.WRITIN.T11_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G3.WRITIN.T11_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G3.WRITIN.T11_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T11_GUIDED_WRITING"
+  },
+  "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T12_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T12_FLUENCY"
+  },
+  "ENGL.G3.READIN.T12_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T12_FLUENCY"
+  },
+  "ENGL.G3.READIN.T12_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T12_FLUENCY"
+  },
+  "ENGL.G3.READIN.T12_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T12_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T12_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T12_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T12_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T12_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_"
+  },
+  "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_"
+  },
+  "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_"
+  },
+  "ENGL.G3.WRITIN.T12_PARAGRAPHS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T12_PARAGRAPHS"
+  },
+  "ENGL.G3.WRITIN.T12_PARAGRAPHS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T12_PARAGRAPHS"
+  },
+  "ENGL.G3.WRITIN.T12_PARAGRAPHS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T12_PARAGRAPHS"
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T13_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T13_FLUENCY"
+  },
+  "ENGL.G3.READIN.T13_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T13_FLUENCY"
+  },
+  "ENGL.G3.READIN.T13_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T13_FLUENCY"
+  },
+  "ENGL.G3.READIN.T13_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T13_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T13_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T13_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T13_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T13_WH_QUESTIONS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T13_WH_QUESTIONS"
+  },
+  "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T13_WH_QUESTIONS"
+  },
+  "ENGL.G3.LANGUA.T13_WH_QUESTIONS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T13_WH_QUESTIONS"
+  },
+  "ENGL.G3.WRITIN.T13_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G3.WRITIN.T13_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G3.WRITIN.T13_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T13_GUIDED_WRITING"
+  },
+  "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T14_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T14_FLUENCY"
+  },
+  "ENGL.G3.READIN.T14_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T14_FLUENCY"
+  },
+  "ENGL.G3.READIN.T14_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T14_FLUENCY"
+  },
+  "ENGL.G3.READIN.T14_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T14_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T14_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T14_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T14_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T14_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER"
+  },
+  "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER"
+  },
+  "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER"
+  },
+  "ENGL.G3.WRITIN.T14_GUIDED_WRITING.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G3.WRITIN.T14_GUIDED_WRITING.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G3.WRITIN.T14_GUIDED_WRITING.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T14_GUIDED_WRITING"
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO"
+  },
+  "ENGL.G3.READIN.T15_FLUENCY.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T15_FLUENCY"
+  },
+  "ENGL.G3.READIN.T15_FLUENCY.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T15_FLUENCY"
+  },
+  "ENGL.G3.READIN.T15_FLUENCY.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T15_FLUENCY"
+  },
+  "ENGL.G3.READIN.T15_FLUENCY.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T15_FLUENCY"
+  },
+  "ENGL.G3.READIN.T15_COMPREHENSION.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T15_COMPREHENSION.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T15_COMPREHENSION.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T15_COMPREHENSION.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G3.READIN.T15_COMPREHENSION.e": {
+    "letter": "e",
+    "sub": "ENGL.G3.READIN.T15_COMPREHENSION"
+  },
+  "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS"
+  },
+  "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS"
+  },
+  "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.a": {
+    "letter": "a",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.b": {
+    "letter": "b",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.c": {
+    "letter": "c",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.d": {
+    "letter": "d",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU"
+  }
+};
+var SKILLS19 = {
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH": {
+    "name": "Hear and pick out words with bl, br, cl and ch",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T1_FLUENCY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_BL_BR_SWAP",
+      "M3_BL_FIRST_LETTER",
+      "M3_CH_SH",
+      "M3_CL_TWO_BEATS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS": {
+    "name": "Say words that begin with two or three consonants together",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.e",
+      "ENGL.G3.READIN.T15_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH"
+    ],
+    "mis": [
+      "M3_PSB_EXTRA_VOWEL",
+      "M3_PSB_L_R",
+      "M3_PSB_DROP",
+      "M3_PSB_TH_T"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS": {
+    "name": "Know and choose the new words of the theme",
+    "sub": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.READIN.T2_COMPREHENSION.a",
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_TW_COOKER",
+      "M3_TW_SAME_GROUP",
+      "M3_TW_SOUND_ALIKE",
+      "M3_TW_PICTURE_NEAR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY": {
+    "name": "Read a Grade 3 text aloud accurately and at the right speed",
+    "sub": "ENGL.G3.READIN.T1_FLUENCY",
+    "outcome": "ENGL.G3.READIN.T1_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_FLUENCY.b",
+      "ENGL.G3.READIN.T3_FLUENCY.b",
+      "ENGL.G3.READIN.T4_FLUENCY.b",
+      "ENGL.G3.READIN.T5_FLUENCY.b",
+      "ENGL.G3.READIN.T7_FLUENCY.b",
+      "ENGL.G3.READIN.T8_FLUENCY.c",
+      "ENGL.G3.READIN.T9_FLUENCY.b",
+      "ENGL.G3.READIN.T11_FLUENCY.b",
+      "ENGL.G3.READIN.T12_FLUENCY.b",
+      "ENGL.G3.READIN.T13_FLUENCY.b",
+      "ENGL.G3.READIN.T15_FLUENCY.c"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH"
+    ],
+    "mis": [
+      "M3_RA_GUESS_FIRST",
+      "M3_RA_B_D",
+      "M3_RA_SKIP_SMALL",
+      "M3_RA_WORD_BY_WORD"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT": {
+    "name": "Predict what will happen in a story from the title, pictures and clues",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T1_COMPREHENSION.a",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.a",
+      "ENGL.G3.READIN.T2_COMPREHENSION.b",
+      "ENGL.G3.READIN.T4_COMPREHENSION.a",
+      "ENGL.G3.READIN.T5_COMPREHENSION.b",
+      "ENGL.G3.READIN.T6_COMPREHENSION.a",
+      "ENGL.G3.READIN.T7_COMPREHENSION.b",
+      "ENGL.G3.READIN.T8_COMPREHENSION.b",
+      "ENGL.G3.READIN.T9_COMPREHENSION.a",
+      "ENGL.G3.READIN.T10_COMPREHENSION.a",
+      "ENGL.G3.READIN.T11_COMPREHENSION.a",
+      "ENGL.G3.READIN.T12_COMPREHENSION.a",
+      "ENGL.G3.READIN.T13_COMPREHENSION.a",
+      "ENGL.G3.READIN.T14_COMPREHENSION.a",
+      "ENGL.G3.READIN.T15_COMPREHENSION.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_PR_DESCRIBES",
+      "M3_PR_NO_CLUE",
+      "M3_PR_PAST_EVENT",
+      "M3_PR_FEAR_WRONG"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING": {
+    "name": "Name the characters and the setting of a story",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T1_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.b",
+      "ENGL.G3.READIN.T5_COMPREHENSION.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_CS_ANIMALS",
+      "M3_CS_SETTING_PERSON",
+      "M3_CS_NO_TIME",
+      "M3_CS_MAIN_ONLY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT": {
+    "name": "Work out the meaning of a new word from the words and pictures around it",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T1_COMPREHENSION.c",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.c",
+      "ENGL.G3.READIN.T2_COMPREHENSION.c",
+      "ENGL.G3.READIN.T5_COMPREHENSION.c",
+      "ENGL.G3.READIN.T11_COMPREHENSION.b",
+      "ENGL.G3.READIN.T12_COMPREHENSION.c",
+      "ENGL.G3.READIN.T14_COMPREHENSION.c",
+      "ENGL.G3.READIN.T15_COMPREHENSION.c"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M3_WC_LOOKS_LIKE",
+      "M3_WC_USUAL_MEANING",
+      "M3_WC_GIVES_UP",
+      "M3_WC_PICTURE_ONLY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS": {
+    "name": "Answer questions whose answers are stated in the text",
+    "sub": "ENGL.G3.READIN.T1_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T1_COMPREHENSION.d",
+    "outcomes": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.d",
+      "ENGL.G3.READIN.T4_COMPREHENSION.b",
+      "ENGL.G3.READIN.T5_COMPREHENSION.d",
+      "ENGL.G3.READIN.T6_COMPREHENSION.b",
+      "ENGL.G3.READIN.T7_COMPREHENSION.c",
+      "ENGL.G3.READIN.T8_COMPREHENSION.c",
+      "ENGL.G3.READIN.T9_COMPREHENSION.b",
+      "ENGL.G3.READIN.T11_COMPREHENSION.c",
+      "ENGL.G3.READIN.T12_COMPREHENSION.d",
+      "ENGL.G3.READIN.T13_COMPREHENSION.b",
+      "ENGL.G3.READIN.T14_COMPREHENSION.d",
+      "ENGL.G3.READIN.T15_COMPREHENSION.d"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY"
+    ],
+    "mis": [
+      "M3_DQ_OWN_LIFE",
+      "M3_DQ_WRONG_WORD",
+      "M3_DQ_WORD_MATCH",
+      "M3_DQ_YES_ONLY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE": {
+    "name": "Use am, is, are, was and were to agree with the subject",
+    "sub": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME",
+    "outcome": "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.a",
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_BE_CHILDREN_IS",
+      "M3_BE_WE_WAS",
+      "M3_BE_TIME",
+      "M3_BE_DROPPED"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS": {
+    "name": "Know which letters are tall (ascenders) and which hang below the line (descenders)",
+    "sub": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_",
+    "outcome": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_TL_SAME_HEIGHT",
+      "M3_TL_TAIL_ON_LINE",
+      "M3_TL_P_TALL",
+      "M3_TL_CAPS_FOR_TALL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE": {
+    "name": "Write words clearly and legibly in print",
+    "sub": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_",
+    "outcome": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.b",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.b",
+      "ENGL.G3.WRITIN.T2_HANDWRITING.b",
+      "ENGL.G3.WRITIN.T3_HANDWRITING.b",
+      "ENGL.G3.WRITIN.T4_HANDWRITING.b",
+      "ENGL.G3.WRITIN.T5_HAND_WRITING.b",
+      "ENGL.G3.WRITIN.T6_SPELLING.b",
+      "ENGL.G3.WRITIN.T8_SPELLING.b",
+      "ENGL.G3.WRITIN.T7_SPELLING.c"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS"
+    ],
+    "mis": [
+      "M3_HL_CAPS_INSIDE",
+      "M3_HL_SIZE",
+      "M3_HL_START_POINT",
+      "M3_HL_PRESS"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL": {
+    "name": "Hear and pick out words with dr, fl, fr and gl",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T2_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH"
+    ],
+    "mis": [
+      "M3_FL_FR_SWAP",
+      "M3_DR_DROP_R",
+      "M3_GL_CL_VOICE",
+      "M3_FR_F_ONLY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS": {
+    "name": "Listen to and carry out a three-step spoken instruction",
+    "sub": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_FI_LAST_ONLY",
+      "M3_FI_ORDER",
+      "M3_FI_POSITION",
+      "M3_FI_COPY"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.READIN.T2_FLUENCY.READ_WITH_EXPRESSION": {
+    "name": "Read aloud with expression: pausing at full stops and changing the voice for questions and speech",
+    "sub": "ENGL.G3.READIN.T2_FLUENCY",
+    "outcome": "ENGL.G3.READIN.T2_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G3.READIN.T2_FLUENCY.b",
+      "ENGL.G3.READIN.T6_FLUENCY.b",
+      "ENGL.G3.READIN.T10_FLUENCY.b",
+      "ENGL.G3.READIN.T14_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS"
+    ],
+    "mis": [
+      "M3_RE_FLAT",
+      "M3_RE_NO_PAUSE",
+      "M3_RE_QUESTION_FLAT",
+      "M3_RE_SAID_VOICE"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS": {
+    "name": "Answer questions whose answers are not stated but shown by clues",
+    "sub": "ENGL.G3.READIN.T2_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T2_COMPREHENSION.d",
+    "outcomes": [
+      "ENGL.G3.READIN.T2_COMPREHENSION.d",
+      "ENGL.G3.READIN.T1_COMPREHENSION.d",
+      "ENGL.G3.READIN.T4_COMPREHENSION.b",
+      "ENGL.G3.READIN.T5_COMPREHENSION.d",
+      "ENGL.G3.READIN.T6_COMPREHENSION.b",
+      "ENGL.G3.READIN.T7_COMPREHENSION.c",
+      "ENGL.G3.READIN.T8_COMPREHENSION.c",
+      "ENGL.G3.READIN.T9_COMPREHENSION.b",
+      "ENGL.G3.READIN.T11_COMPREHENSION.c",
+      "ENGL.G3.READIN.T12_COMPREHENSION.d",
+      "ENGL.G3.READIN.T13_COMPREHENSION.b",
+      "ENGL.G3.READIN.T14_COMPREHENSION.d",
+      "ENGL.G3.READIN.T15_COMPREHENSION.d"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M3_IQ_NOT_THERE",
+      "M3_IQ_FEELING_GUESS",
+      "M3_IQ_TOO_FAR",
+      "M3_IQ_COPY_LINE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO": {
+    "name": "Use do, does and did to agree with the subject",
+    "sub": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO",
+    "outcome": "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.a",
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.b"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE"
+    ],
+    "mis": [
+      "M3_DO_HE_DO",
+      "M3_DO_DID_ED",
+      "M3_DO_DOES_PAST",
+      "M3_DO_I_DOES"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T2_HANDWRITING.WORD_SPACING": {
+    "name": "Leave a finger space between words and none inside a word",
+    "sub": "ENGL.G3.WRITIN.T2_HANDWRITING",
+    "outcome": "ENGL.G3.WRITIN.T2_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T2_HANDWRITING.a",
+      "ENGL.G3.WRITIN.T5_HAND_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS"
+    ],
+    "mis": [
+      "M3_WS_RUN_TOGETHER",
+      "M3_WS_INSIDE_WORD",
+      "M3_WS_HUGE",
+      "M3_WS_COUNT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN": {
+    "name": "Hear and pick out words with cr, pl, st and sn",
+    "sub": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T3_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL"
+    ],
+    "mis": [
+      "M3_PL_BL_VOICE",
+      "M3_CR_CL_SWAP",
+      "M3_SN_SM",
+      "M3_ST_TWO_BEATS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA": {
+    "name": "Say what a text is mainly about and why it was written",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T3_COMPREHENSION.a",
+    "outcomes": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.a",
+      "ENGL.G3.READIN.T7_COMPREHENSION.a",
+      "ENGL.G3.READIN.T14_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M3_MI_DETAIL",
+      "M3_MI_TOO_WIDE",
+      "M3_MI_FIRST_LINE",
+      "M3_MI_PURPOSE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.SUMMARISE": {
+    "name": "Summarise a short text in two or three sentences",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T3_COMPREHENSION.b",
+    "outcomes": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.b",
+      "ENGL.G3.READIN.T11_COMPREHENSION.d",
+      "ENGL.G3.READIN.T13_COMPREHENSION.c"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA",
+      "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS"
+    ],
+    "mis": [
+      "M3_SU_EVERYTHING",
+      "M3_SU_ONE_DETAIL",
+      "M3_SU_OPINION",
+      "M3_SU_ORDER"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS": {
+    "name": "Put the events of a text in the order they happened",
+    "sub": "ENGL.G3.READIN.T3_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T3_COMPREHENSION.c",
+    "outcomes": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.c",
+      "ENGL.G3.READIN.T8_COMPREHENSION.a",
+      "ENGL.G3.READIN.T12_COMPREHENSION.b",
+      "ENGL.G3.READIN.T15_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M3_SE_ORDER_TOLD",
+      "M3_SE_ENDS_ONLY",
+      "M3_SE_AFTER_BEFORE",
+      "M3_SE_PICTURE_PLACE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE": {
+    "name": "Use have, has and had to agree with the subject",
+    "sub": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME",
+    "outcome": "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.a",
+      "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.b"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO"
+    ],
+    "mis": [
+      "M3_HV_SHE_HAVE",
+      "M3_HV_HAVING",
+      "M3_HV_I_HAS",
+      "M3_HV_PAST"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE": {
+    "name": "Sit letters on the line and keep to the margin",
+    "sub": "ENGL.G3.WRITIN.T3_HANDWRITING",
+    "outcome": "ENGL.G3.WRITIN.T3_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T3_HANDWRITING.a"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS"
+    ],
+    "mis": [
+      "M3_LL_FLOAT",
+      "M3_LL_SLOPE",
+      "M3_LL_TAIL_UP",
+      "M3_LL_MARGIN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST": {
+    "name": "Hear and pick out words with wr, pr, sm and st",
+    "sub": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T4_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T3_PRONUNCIATION_AND_VO.BLENDS_CR_PL_ST_SN"
+    ],
+    "mis": [
+      "M3_WR_W_SOUND",
+      "M3_PR_BR_VOICE",
+      "M3_SM_SN",
+      "M3_ST_DROP_S"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.INDEFINITE_PRONOUNS": {
+    "name": "Use nobody, anybody and somebody in sentences",
+    "sub": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS",
+    "outcome": "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.a",
+      "ENGL.G3.LANGUA.T4_INDEFINITE_PRONOUNS.b"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE"
+    ],
+    "mis": [
+      "M3_IN_DOUBLE_NEG",
+      "M3_IN_PLURAL_VERB",
+      "M3_IN_ANY_SOME",
+      "M3_IN_ANYBODY_STATEMENT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T4_HANDWRITING.B_D_P_Q": {
+    "name": "Write b, d, p and q the right way round",
+    "sub": "ENGL.G3.WRITIN.T4_HANDWRITING",
+    "outcome": "ENGL.G3.WRITIN.T4_HANDWRITING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T4_HANDWRITING.a"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T3_HANDWRITING.LETTERS_ON_LINE"
+    ],
+    "mis": [
+      "M3_BD_B_D",
+      "M3_BD_P_Q",
+      "M3_BD_B_P",
+      "M3_BD_WAS_SAW"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR": {
+    "name": "Hear and pick out words with sl, st, sw, sp and thr",
+    "sub": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T5_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST"
+    ],
+    "mis": [
+      "M3_THR_TR",
+      "M3_SW_TWO_BEATS",
+      "M3_SP_ST_S_ONLY",
+      "M3_SL_DROP_L"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T5_COMPREHENSION.RETELL_TEXT": {
+    "name": "Tell others about a text read, in his or her own words",
+    "sub": "ENGL.G3.READIN.T5_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T5_COMPREHENSION.e",
+    "outcomes": [
+      "ENGL.G3.READIN.T5_COMPREHENSION.e"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS",
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING"
+    ],
+    "mis": [
+      "M3_RT_READS_AGAIN",
+      "M3_RT_MIDDLE",
+      "M3_RT_NO_NAMES",
+      "M3_RT_ONE_SENTENCE"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS": {
+    "name": "Use the singular and plural of irregular nouns",
+    "sub": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS",
+    "outcome": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.a",
+      "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.b"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T1_SUBJECT_VERB_AGREEME.VERB_TO_BE"
+    ],
+    "mis": [
+      "M3_PL_ADD_S",
+      "M3_PL_DOUBLE",
+      "M3_PL_SHEEPS",
+      "M3_PL_SINGULAR_WRONG"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR": {
+    "name": "Hear and pick out words with dr, gr and shr",
+    "sub": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T6_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL"
+    ],
+    "mis": [
+      "M3_SHR_S",
+      "M3_GR_GL",
+      "M3_DR_TR_VOICE",
+      "M3_GR_TWO_BEATS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.FUTURE_WILL_SHALL": {
+    "name": "Talk about the future with will and shall",
+    "sub": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI",
+    "outcome": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.a",
+      "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.b"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO"
+    ],
+    "mis": [
+      "M3_FU_WILL_ED",
+      "M3_FU_WILL_S",
+      "M3_FU_WILL_TO",
+      "M3_FU_SHALL_HE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR": {
+    "name": "Spell words with dr, gr and shr",
+    "sub": "ENGL.G3.WRITIN.T6_SPELLING",
+    "outcome": "ENGL.G3.WRITIN.T6_SPELLING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T6_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR"
+    ],
+    "mis": [
+      "M3_SP_SHR_SR",
+      "M3_SP_DR_JR",
+      "M3_SP_GR_GL",
+      "M3_SP_EXTRA_VOWEL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ": {
+    "name": "Hear and pick out words with dw, tw, nk and sq",
+    "sub": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T7_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR"
+    ],
+    "mis": [
+      "M3_NK_NG",
+      "M3_SQ_SK",
+      "M3_TW_TWO_BEATS",
+      "M3_DW_DR"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE": {
+    "name": "Join ideas with but and because",
+    "sub": "ENGL.G3.LANGUA.T7_CONJUNCTIONS",
+    "outcome": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.a",
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.b",
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_CJ_AND_FOR_BUT",
+      "M3_CJ_REASON_SWAP",
+      "M3_CJ_BECAUSE_ALONE",
+      "M3_CJ_BUT_AGREE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ": {
+    "name": "Spell words with dw, tw, nk and squ",
+    "sub": "ENGL.G3.WRITIN.T7_SPELLING",
+    "outcome": "ENGL.G3.WRITIN.T7_SPELLING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T7_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ",
+      "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR"
+    ],
+    "mis": [
+      "M3_SP_SQ_NO_U",
+      "M3_SP_NK_NG",
+      "M3_SP_TW_TU",
+      "M3_SP_SQ_SKW"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES": {
+    "name": "Write simple sentences about the theme",
+    "sub": "ENGL.G3.WRITIN.T7_SPELLING",
+    "outcome": "ENGL.G3.WRITIN.T7_SPELLING.b",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T7_SPELLING.b"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M3_WT_NO_VERB",
+      "M3_WT_RUN_ON",
+      "M3_WT_LIST",
+      "M3_WT_NO_CAPITAL"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD": {
+    "name": "Hear and pick out words that end in ft, ct, lt and rd",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T8_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T7_PRONUNCIATION_AND_VO.BLENDS_DW_TW_NK_SQ"
+    ],
+    "mis": [
+      "M3_LT_DROP_T",
+      "M3_FT_END_VOWEL",
+      "M3_CT_RHYME_K",
+      "M3_RD_D_T"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS": {
+    "name": "Say words that end in two or three consonants together",
+    "sub": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD",
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS"
+    ],
+    "mis": [
+      "M3_PEB_END_VOWEL",
+      "M3_PEB_DROP_LAST",
+      "M3_PEB_DEVOICE",
+      "M3_PEB_SILENT_SOUNDED"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.READIN.T8_FLUENCY.SELF_CORRECT": {
+    "name": "Notice and fix a word misread while reading aloud",
+    "sub": "ENGL.G3.READIN.T8_FLUENCY",
+    "outcome": "ENGL.G3.READIN.T8_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G3.READIN.T8_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_FLUENCY.READ_ACCURATELY",
+      "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT"
+    ],
+    "mis": [
+      "M3_SC_NO_NOTICE",
+      "M3_SC_RESTART_ALL",
+      "M3_SC_SOUND_SIGHT_WORD",
+      "M3_SC_WAIT"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS": {
+    "name": "Use some, many, much, a few and a lot of correctly",
+    "sub": "ENGL.G3.LANGUA.T8_QUANTIFIERS",
+    "outcome": "ENGL.G3.LANGUA.T8_QUANTIFIERS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T8_QUANTIFIERS.a",
+      "ENGL.G3.LANGUA.T8_QUANTIFIERS.b",
+      "ENGL.G3.LANGUA.T8_QUANTIFIERS.c"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS"
+    ],
+    "mis": [
+      "M3_QT_MANY_UNCOUNT",
+      "M3_QT_MUCH_COUNT",
+      "M3_QT_LOT_NO_OF",
+      "M3_QT_FEW_UNCOUNT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T8_SPELLING.SPELL_FT_CT_LT_RD": {
+    "name": "Spell words that end in ft, ct, lt and rd",
+    "sub": "ENGL.G3.WRITIN.T8_SPELLING",
+    "outcome": "ENGL.G3.WRITIN.T8_SPELLING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T8_SPELLING.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD",
+      "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ"
+    ],
+    "mis": [
+      "M3_SP_DROP_LAST",
+      "M3_SP_CT_CK",
+      "M3_SP_END_VOWEL",
+      "M3_SP_RD_RT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP": {
+    "name": "Hear and pick out words that end in lk, lf, lm and mp",
+    "sub": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T9_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD"
+    ],
+    "mis": [
+      "M3_LK_SILENT_L",
+      "M3_LF_DROP_F",
+      "M3_LM_EXTRA_VOWEL",
+      "M3_MP_MB"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.READIN.T9_COMPREHENSION.VISUALISE": {
+    "name": "Picture characters, places and events from the words of a text",
+    "sub": "ENGL.G3.READIN.T9_COMPREHENSION",
+    "outcome": "ENGL.G3.READIN.T9_COMPREHENSION.c",
+    "outcomes": [
+      "ENGL.G3.READIN.T9_COMPREHENSION.c",
+      "ENGL.G3.READIN.T10_COMPREHENSION.b"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING"
+    ],
+    "mis": [
+      "M3_VI_ONE_DETAIL",
+      "M3_VI_OWN_DETAIL",
+      "M3_VI_TIME",
+      "M3_VI_WHO_DOES"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES": {
+    "name": "Give and use the opposites of words",
+    "sub": "ENGL.G3.LANGUA.T9_OPPOSITES",
+    "outcome": "ENGL.G3.LANGUA.T9_OPPOSITES.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T9_OPPOSITES.a",
+      "ENGL.G3.LANGUA.T9_OPPOSITES.b"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M3_OP_NOT",
+      "M3_OP_NEAR",
+      "M3_OP_SAME",
+      "M3_OP_OLD"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.COMMA_LIST": {
+    "name": "Use commas to separate items in a list",
+    "sub": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM",
+    "outcome": "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.a",
+      "ENGL.G3.WRITIN.T9_PUNCTUATION_THE_COMM.b"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS"
+    ],
+    "mis": [
+      "M3_CO_NONE",
+      "M3_CO_AND_EVERY",
+      "M3_CO_FULL_STOPS",
+      "M3_CO_AFTER_AND"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH": {
+    "name": "Hear and pick out words that end in mb, nt, nd and nch",
+    "sub": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T10_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP",
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.BLENDS_BL_BR_CL_CH"
+    ],
+    "mis": [
+      "M3_MB_B_SOUNDED",
+      "M3_NT_ND_VOICE",
+      "M3_NCH_NSH",
+      "M3_ND_DROP_D"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T10_PREPOSITIONS.PREPOSITIONS": {
+    "name": "Use prepositions to say where things are and where they go",
+    "sub": "ENGL.G3.LANGUA.T10_PREPOSITIONS",
+    "outcome": "ENGL.G3.LANGUA.T10_PREPOSITIONS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T10_PREPOSITIONS.a",
+      "ENGL.G3.LANGUA.T10_PREPOSITIONS.b"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+    ],
+    "mis": [
+      "M3_PP_IN_ON",
+      "M3_PP_BETWEEN_ONE",
+      "M3_PP_BEHIND_FRONT",
+      "M3_PP_ABOVE_ON"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS": {
+    "name": "Use capital letters for sentence starts, names and I",
+    "sub": "ENGL.G3.WRITIN.T10_PUNCTUATION",
+    "outcome": "ENGL.G3.WRITIN.T10_PUNCTUATION.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.a",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_CA_NAMES",
+      "M3_CA_SMALL_I",
+      "M3_CA_EXTRA",
+      "M3_CA_AFTER_STOP"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS": {
+    "name": "End sentences with a full stop, question mark or exclamation mark",
+    "sub": "ENGL.G3.WRITIN.T10_PUNCTUATION",
+    "outcome": "ENGL.G3.WRITIN.T10_PUNCTUATION.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.a",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M3_EM_QUESTION_STOP",
+      "M3_EM_NONE",
+      "M3_EM_EXCLAIM_ALL",
+      "M3_EM_LINE_END"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.BLENDS_NKL_PT_NTH_ND": {
+    "name": "Hear and pick out words with nkl, pt, nth and nd",
+    "sub": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T11_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T10_PRONUNCIATION_AND_VO.ENDS_MB_NT_ND_NCH",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR"
+    ],
+    "mis": [
+      "M3_NKL_NGL",
+      "M3_PT_DROP_T",
+      "M3_NTH_NT",
+      "M3_ND_NG"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST": {
+    "name": "Compare with -er and -est",
+    "sub": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI",
+    "outcome": "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.a",
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.b",
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.c"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES"
+    ],
+    "mis": [
+      "M3_CM_MORE_ER",
+      "M3_CM_ER_FOR_EST",
+      "M3_CM_NO_DOUBLE",
+      "M3_CM_Y_TO_I"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T11_GUIDED_WRITING.PICTURE_WORDS": {
+    "name": "Name and write the objects in pictures",
+    "sub": "ENGL.G3.WRITIN.T11_GUIDED_WRITING",
+    "outcome": "ENGL.G3.WRITIN.T11_GUIDED_WRITING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T11_GUIDED_WRITING.a",
+      "ENGL.G3.WRITIN.T11_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+    ],
+    "mis": [
+      "M3_PW_SOUND_SPELL",
+      "M3_PW_NEAR_THING",
+      "M3_PW_PLURAL",
+      "M3_PW_HOME_WORD"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.BLENDS_GR_PR_EW": {
+    "name": "Hear and pick out words with gr, pr and ew",
+    "sub": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T12_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T6_PRONUNCIATION_AND_VO.BLENDS_DR_GR_SHR",
+      "ENGL.G3.LISTEN.T4_PRONUNCIATION_AND_VO.BLENDS_WR_PR_SM_ST"
+    ],
+    "mis": [
+      "M3_EW_E_SOUND",
+      "M3_GR_CR_VOICE",
+      "M3_PR_PL",
+      "M3_EW_OW"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.POSSESSIVE_PRONOUNS": {
+    "name": "Use mine, yours, his, hers, ours and theirs",
+    "sub": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_",
+    "outcome": "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.a",
+      "ENGL.G3.LANGUA.T12_PRONOUNS_POSSESSIVE_.b"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T3_SUBJECT_VERB_AGREEME.VERB_TO_HAVE"
+    ],
+    "mis": [
+      "M3_PO_HIS_HER",
+      "M3_PO_MINE_NOUN",
+      "M3_PO_APOSTROPHE",
+      "M3_PO_OBJECT_FORM"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA": {
+    "name": "Find the general idea in jumbled sentences",
+    "sub": "ENGL.G3.WRITIN.T12_PARAGRAPHS",
+    "outcome": "ENGL.G3.WRITIN.T12_PARAGRAPHS.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.a"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA"
+    ],
+    "mis": [
+      "M3_JM_FIRST",
+      "M3_JM_DETAIL",
+      "M3_JM_ODD_ONE",
+      "M3_JM_TOO_WIDE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES": {
+    "name": "Put jumbled sentences in order to make a paragraph",
+    "sub": "ENGL.G3.WRITIN.T12_PARAGRAPHS",
+    "outcome": "ENGL.G3.WRITIN.T12_PARAGRAPHS.b",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.b"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.JUMBLED_MAIN_IDEA",
+      "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS"
+    ],
+    "mis": [
+      "M3_OS_AS_GIVEN",
+      "M3_OS_END_FIRST",
+      "M3_OS_PRONOUN_FIRST",
+      "M3_OS_ONE_PER_LINE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL": {
+    "name": "Hear and tell apart words with lf, rf and spl",
+    "sub": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T13_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T9_PRONUNCIATION_AND_VO.ENDS_LK_LF_LM_MP",
+      "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR"
+    ],
+    "mis": [
+      "M3_SPL_SPR",
+      "M3_LF_RF_SWAP",
+      "M3_SPL_EXTRA_VOWELS",
+      "M3_LF_SILENT_L"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW": {
+    "name": "Ask questions with why, whom and how",
+    "sub": "ENGL.G3.LANGUA.T13_WH_QUESTIONS",
+    "outcome": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T13_WH_QUESTIONS.a",
+      "ENGL.G3.LANGUA.T13_WH_QUESTIONS.b",
+      "ENGL.G3.LANGUA.T13_WH_QUESTIONS.c"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T2_FORMS_OF_THE_VERB_TO.VERB_TO_DO",
+      "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE"
+    ],
+    "mis": [
+      "M3_WH_NO_INVERSION",
+      "M3_WH_WHOM_SUBJECT",
+      "M3_WH_WRONG_WORD",
+      "M3_WH_NO_MARK"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH": {
+    "name": "Write a simple paragraph on the theme",
+    "sub": "ENGL.G3.WRITIN.T13_GUIDED_WRITING",
+    "outcome": "ENGL.G3.WRITIN.T13_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T12_PARAGRAPHS.ORDER_SENTENCES",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS",
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS"
+    ],
+    "mis": [
+      "M3_WP_AND_THEN",
+      "M3_WP_OFF_TOPIC",
+      "M3_WP_SAME_START",
+      "M3_WP_LIST_LINES"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR": {
+    "name": "Hear and pick out words with spr and str",
+    "sub": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T14_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.BLENDS_LF_RF_SPL"
+    ],
+    "mis": [
+      "M3_STR_EXTRA_VOWELS",
+      "M3_SPR_SPL",
+      "M3_STR_SPR_SWAP",
+      "M3_STR_DROP_R"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER": {
+    "name": "Use adverbs of manner to describe how something is done",
+    "sub": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER",
+    "outcome": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.a",
+      "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.b",
+      "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.c"
+    ],
+    "pre": [
+      "ENGL.G3.LANGUA.T11_ADJECTIVES_COMPARATI.COMPARE_ER_EST"
+    ],
+    "mis": [
+      "M3_AD_ADJECTIVE",
+      "M3_AD_GOOD",
+      "M3_AD_SPELL",
+      "M3_AD_NOUN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS": {
+    "name": "Know the steps of writing: plan, draft, revise, edit and publish",
+    "sub": "ENGL.G3.WRITIN.T14_GUIDED_WRITING",
+    "outcome": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T14_GUIDED_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH"
+    ],
+    "mis": [
+      "M3_PRC_SKIP_PLAN",
+      "M3_PRC_REVISE_EDIT",
+      "M3_PRC_ORDER",
+      "M3_PRC_DRAFT_FINAL"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T14_GUIDED_WRITING.SHORT_NARRATIVE": {
+    "name": "Write a short story following the steps of writing",
+    "sub": "ENGL.G3.WRITIN.T14_GUIDED_WRITING",
+    "outcome": "ENGL.G3.WRITIN.T14_GUIDED_WRITING.b",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T14_GUIDED_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T14_GUIDED_WRITING.WRITING_STEPS",
+      "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS",
+      "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING"
+    ],
+    "mis": [
+      "M3_NA_NO_END",
+      "M3_NA_TENSE_MIX",
+      "M3_NA_NO_WHO",
+      "M3_NA_DAY_LIST"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.BLENDS_SCR_QUE": {
+    "name": "Hear and pick out words with scr and qu",
+    "sub": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+      "ENGL.G3.READIN.T15_FLUENCY.a"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T14_PRONUNCIATION_AND_VO.BLENDS_SPR_STR"
+    ],
+    "mis": [
+      "M3_QU_K_ONLY",
+      "M3_SCR_STR",
+      "M3_SCR_EXTRA_VOWELS",
+      "M3_QUEUE_RHYME"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING": {
+    "name": "Use new words in spoken sentences and short conversations",
+    "sub": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+      "ENGL.G3.LISTEN.T13_PRONUNCIATION_AND_VO.d",
+      "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+      "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS"
+    ],
+    "mis": [
+      "M3_UW_ONE_WORD",
+      "M3_UW_BORROW_LEND",
+      "M3_UW_OPEN_LIGHT",
+      "M3_UW_ECHO"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.DISPLEASURE_WORDS": {
+    "name": "Use words that show displeasure",
+    "sub": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS",
+    "outcome": "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.a",
+    "outcomes": [
+      "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.a",
+      "ENGL.G3.LANGUA.T15_INTERJECTIONS_OF_DIS.b"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS"
+    ],
+    "mis": [
+      "M3_DS_HAPPY_WORD",
+      "M3_DS_PAIN_DISGUST",
+      "M3_DS_NO_MARK",
+      "M3_DS_HOME_WORD"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES": {
+    "name": "Tell facts from opinions and story sentences",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU",
+    "outcome": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.a",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.a"
+    ],
+    "pre": [
+      "ENGL.G3.READIN.T3_COMPREHENSION.MAIN_IDEA",
+      "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+    ],
+    "mis": [
+      "M3_FA_OPINION",
+      "M3_FA_STORY",
+      "M3_FA_NO_I_THINK",
+      "M3_FA_FALSE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS": {
+    "name": "Order facts about a process logically",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU",
+    "outcome": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.b",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.b"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACT_SENTENCES",
+      "ENGL.G3.READIN.T3_COMPREHENSION.SEQUENCE_EVENTS"
+    ],
+    "mis": [
+      "M3_OF_SKIP",
+      "M3_OF_LAST_FIRST",
+      "M3_OF_INTEREST",
+      "M3_OF_TIME_WORDS"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.FACTUAL_PARAGRAPH": {
+    "name": "Write a paragraph of facts",
+    "sub": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU",
+    "outcome": "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.c",
+    "outcomes": [
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.c"
+    ],
+    "pre": [
+      "ENGL.G3.WRITIN.T15_GUIDED_WRITING_FACTU.ORDER_FACTS",
+      "ENGL.G3.WRITIN.T13_GUIDED_WRITING.WRITE_PARAGRAPH"
+    ],
+    "mis": [
+      "M3_FP_STORY",
+      "M3_FP_OPINION",
+      "M3_FP_NO_ORDER",
+      "M3_FP_NO_OPENING"
+    ],
+    "nofamily": "composition"
+  }
+};
+var MIS_FEEDBACK18 = {
+  "M3_BL_BR_SWAP": "Watch the tongue: up behind the teeth for l, curled back for r.",
+  "M3_BL_FIRST_LETTER": "Say it slowly: b-l-ack. Bag has b, then a.",
+  "M3_CH_SH": "Ch starts with a stop, like a sneeze: t-sh, chin.",
+  "M3_CL_TWO_BEATS": "C and l are glued together: one clap, clap.",
+  "M3_PSB_EXTRA_VOWEL": "Glue the two consonants: b-l, blue, one beat.",
+  "M3_PSB_L_R": "Tongue up for l, curled back for r.",
+  "M3_PSB_DROP": "Start with the hiss, then t: sss-top.",
+  "M3_PSB_TH_T": "Tongue between the teeth, blow, then r.",
+  "M3_TW_COOKER": "A cook is a person; a cooker is the stove.",
+  "M3_TW_SAME_GROUP": "Think about what makes this one different: wool comes from sheep.",
+  "M3_TW_SOUND_ALIKE": "Say the sentence with the word: does it make sense?",
+  "M3_TW_PICTURE_NEAR": "Point at the thing in her hand, then name it.",
+  "M3_RA_GUESS_FIRST": "Look at every letter, left to right: h-ou-se.",
+  "M3_RA_B_D": "Make a bed with your fists: b first (left), d last (right).",
+  "M3_RA_SKIP_SMALL": "Point under every word as you read it.",
+  "M3_RA_WORD_BY_WORD": "Read it once in your head, then read it in two scoops.",
+  "M3_PR_DESCRIBES": "Ask: what will happen next? Use will.",
+  "M3_PR_NO_CLUE": "Find a word in the title or picture that helps you.",
+  "M3_PR_PAST_EVENT": "Next means after what we have read.",
+  "M3_PR_FEAR_WRONG": "Good readers guess, then check.",
+  "M3_CS_ANIMALS": "Anyone who acts or talks in a story is a character.",
+  "M3_CS_SETTING_PERSON": "Setting is where and when.",
+  "M3_CS_NO_TIME": "Setting has two parts: where and when.",
+  "M3_CS_MAIN_ONLY": "Read again and list every person or animal.",
+  "M3_WC_LOOKS_LIKE": "Read the sentence again: what fits?",
+  "M3_WC_USUAL_MEANING": "Some words have two meanings: which one fits here?",
+  "M3_WC_GIVES_UP": "Look for clues: after rain, walked slowly.",
+  "M3_WC_PICTURE_ONLY": "The words tell you more than the picture.",
+  "M3_DQ_OWN_LIFE": "Find the answer in the text and point to it.",
+  "M3_DQ_WRONG_WORD": "Where wants a place, when wants a time, who wants a person.",
+  "M3_DQ_WORD_MATCH": "Find the sentence about the cow.",
+  "M3_DQ_YES_ONLY": "Why wants a reason: because ...",
+  "M3_BE_CHILDREN_IS": "More than one: are. Children are, the boys are.",
+  "M3_BE_WE_WAS": "I was, he was; we were, they were, you were.",
+  "M3_BE_TIME": "Yesterday means past: was or were.",
+  "M3_BE_DROPPED": "Every sentence needs a verb: My mother is a teacher.",
+  "M3_TL_SAME_HEIGHT": "Tall letters touch the top line: b, d, f, h, k, l, t.",
+  "M3_TL_TAIL_ON_LINE": "Tails hang below the line like roots.",
+  "M3_TL_P_TALL": "B reaches up; p hangs down.",
+  "M3_TL_CAPS_FOR_TALL": "Small b is already tall; capitals are only for names and starts.",
+  "M3_HL_CAPS_INSIDE": "Inside a word, all small letters.",
+  "M3_HL_SIZE": "Short letters fill half the space, all the same.",
+  "M3_HL_START_POINT": "Start at the top, go round anticlockwise like c, then close it.",
+  "M3_HL_PRESS": "Hold the pencil lightly; cross out once and go on.",
+  "M3_FL_FR_SWAP": "Look at the tongue: up for fly, curled back for fry.",
+  "M3_DR_DROP_R": "Stretch it: d-rrr-ip. Did you hear the r?",
+  "M3_GL_CL_VOICE": "Hand on the throat: g buzzes, k does not.",
+  "M3_FR_F_ONLY": "Fr is two sounds: f-r-og. Fan is f then a.",
+  "M3_FI_LAST_ONLY": "Hold up a finger for each step as you listen.",
+  "M3_FI_ORDER": "Do them in the order you heard: first, then, last.",
+  "M3_FI_POSITION": "Under is below; on is on top. Show with your hands.",
+  "M3_FI_COPY": "Close your eyes, listen, then do it.",
+  "M3_RE_FLAT": "Ask: how would Juma say it? Say it like him.",
+  "M3_RE_NO_PAUSE": "A full stop means stop and breathe.",
+  "M3_RE_QUESTION_FLAT": "The question mark says lift your voice at the end.",
+  "M3_RE_SAID_VOICE": "Inside the marks a person is talking: become that person.",
+  "M3_IQ_NOT_THERE": "The writer shows, not tells: crying shows sad.",
+  "M3_IQ_FEELING_GUESS": "What does jumping up and down show?",
+  "M3_IQ_TOO_FAR": "Use only what the clues show.",
+  "M3_IQ_COPY_LINE": "The answer is in another sentence: the clouds.",
+  "M3_DO_HE_DO": "He, she, it: does.",
+  "M3_DO_DID_ED": "Did already says past: the verb stays plain.",
+  "M3_DO_DOES_PAST": "Last week: did.",
+  "M3_DO_I_DOES": "I and you: do.",
+  "M3_WS_RUN_TOGETHER": "Put a finger after each word.",
+  "M3_WS_INSIDE_WORD": "A word is one block: no gap inside.",
+  "M3_WS_HUGE": "One finger, no more.",
+  "M3_WS_COUNT": "Count the gaps, then add one.",
+  "M3_PL_BL_VOICE": "Hold paper in front of your lips: p puffs, b does not.",
+  "M3_CR_CL_SWAP": "Curl the tongue back for crown.",
+  "M3_SN_SM": "For sn the lips stay open; for sm they close.",
+  "M3_ST_TWO_BEATS": "Ssss-t: hiss straight into t, one clap.",
+  "M3_MI_DETAIL": "Which answer covers every part of the text?",
+  "M3_MI_TOO_WIDE": "Is the whole text about that, or a bit of it?",
+  "M3_MI_FIRST_LINE": "Read it all, then decide.",
+  "M3_MI_PURPOSE": "Does it have characters, facts, or steps?",
+  "M3_SU_EVERYTHING": "Keep only what you need to understand the story.",
+  "M3_SU_ONE_DETAIL": "Who, what happened, how did it end?",
+  "M3_SU_OPINION": "A summary says what happened, not what you think.",
+  "M3_SU_ORDER": "Beginning, middle, end.",
+  "M3_SE_ORDER_TOLD": "Before tells you which came first.",
+  "M3_SE_ENDS_ONLY": "Find each event in the text and number it.",
+  "M3_SE_AFTER_BEFORE": "After means later.",
+  "M3_SE_PICTURE_PLACE": "Ask: what must happen first?",
+  "M3_HV_SHE_HAVE": "He, she, it: has.",
+  "M3_HV_HAVING": "For what you own, say I have.",
+  "M3_HV_I_HAS": "I, you, we, they: have.",
+  "M3_HV_PAST": "Yesterday: had.",
+  "M3_LL_FLOAT": "The line is the floor: every letter stands on it.",
+  "M3_LL_SLOPE": "Check the line after every word.",
+  "M3_LL_TAIL_UP": "Tails go down, under the floor.",
+  "M3_LL_MARGIN": "Start next to the red line.",
+  "M3_WR_W_SOUND": "In wr the w is silent: write starts with r.",
+  "M3_PR_BR_VOICE": "P puffs air: feel it on your hand.",
+  "M3_SM_SN": "Small: the lips close for m.",
+  "M3_ST_DROP_S": "Listen for the hiss first: sss-top.",
+  "M3_IN_DOUBLE_NEG": "Nobody already means not anybody: Nobody came.",
+  "M3_IN_PLURAL_VERB": "Somebody, anybody, nobody: one, so is.",
+  "M3_IN_ANY_SOME": "After not and in questions: anybody.",
+  "M3_IN_ANYBODY_STATEMENT": "One person we do not know, in a statement: somebody.",
+  "M3_BD_B_D": "Make a bed with your fists: b at the start, d at the end.",
+  "M3_BD_P_Q": "Q always has u after it; p has its stick on the left.",
+  "M3_BD_B_P": "B reaches up; p hangs down.",
+  "M3_BD_WAS_SAW": "Say each sound as you write it, left to right: w-a-s.",
+  "M3_THR_TR": "Th has the tongue between the teeth: look at the mouth.",
+  "M3_SW_TWO_BEATS": "S and w together: sweep, one clap.",
+  "M3_SP_ST_S_ONLY": "Listen for the second sound: s-p or s-t?",
+  "M3_SL_DROP_L": "Stretch it: s-lll-ow.",
+  "M3_RT_READS_AGAIN": "Close the book and tell it your way.",
+  "M3_RT_MIDDLE": "Start with who and what the problem was.",
+  "M3_RT_NO_NAMES": "Say the name first, then he or she.",
+  "M3_RT_ONE_SENTENCE": "Tell who, what happened and how it ended.",
+  "M3_PL_ADD_S": "Some nouns change: child, children.",
+  "M3_PL_DOUBLE": "Children is already plural: no -s.",
+  "M3_PL_SHEEPS": "Sheep stays sheep: one sheep, ten sheep.",
+  "M3_PL_SINGULAR_WRONG": "One tooth, many teeth. One foot, two feet.",
+  "M3_SHR_S": "Round lips for sh, then r: sh-r-ink.",
+  "M3_GR_GL": "Tongue curled back: grass.",
+  "M3_DR_TR_VOICE": "Hand on the throat: d buzzes.",
+  "M3_GR_TWO_BEATS": "G and r glued: grow, one clap.",
+  "M3_FU_WILL_ED": "After will, the verb is plain.",
+  "M3_FU_WILL_S": "After will, no -s.",
+  "M3_FU_WILL_TO": "Will make, never will to make.",
+  "M3_FU_SHALL_HE": "Shall goes with I and we; use will with he, she and they.",
+  "M3_SP_SHR_SR": "Shrub starts with sh, then r.",
+  "M3_SP_DR_JR": "It sounds like j, but we write d-r.",
+  "M3_SP_GR_GL": "Grass: g-r.",
+  "M3_SP_EXTRA_VOWEL": "G and r sit together: gr.",
+  "M3_NK_NG": "Sink ends with a click of k at the back of the mouth.",
+  "M3_SQ_SK": "Sq-u: s, k, then round lips for w.",
+  "M3_TW_TWO_BEATS": "T and w together: twin.",
+  "M3_DW_DR": "For dw the lips go round; for dr the tongue curls.",
+  "M3_CJ_AND_FOR_BUT": "Do the ideas agree? If not, but.",
+  "M3_CJ_REASON_SWAP": "Because comes before the reason.",
+  "M3_CJ_BECAUSE_ALONE": "Join it to the main idea.",
+  "M3_CJ_BUT_AGREE": "Ideas that agree: and.",
+  "M3_SP_SQ_NO_U": "Q never goes without u: squ.",
+  "M3_SP_NK_NG": "Bank ends with k.",
+  "M3_SP_TW_TU": "Tw: t then w.",
+  "M3_SP_SQ_SKW": "The sound skw is spelt squ.",
+  "M3_WT_NO_VERB": "Who does what? Every sentence needs a doing word.",
+  "M3_WT_RUN_ON": "Read it aloud; put a full stop where your voice stops.",
+  "M3_WT_LIST": "Put each word into a sentence.",
+  "M3_WT_NO_CAPITAL": "Every sentence starts with a capital.",
+  "M3_LT_DROP_T": "Listen to the very end: bel-t.",
+  "M3_FT_END_VOWEL": "Gift stops at t: no extra sound.",
+  "M3_CT_RHYME_K": "Fact: k then t. Back ends at k.",
+  "M3_RD_D_T": "Card ends with a buzz; cart ends with a puff.",
+  "M3_PEB_END_VOWEL": "Stop at k: close your mouth.",
+  "M3_PEB_DROP_LAST": "Touch the tongue up for d at the end: han-d.",
+  "M3_PEB_DEVOICE": "Keep the buzz on at the end: bir-d.",
+  "M3_PEB_SILENT_SOUNDED": "Lamb, thumb, walk, half: the b, l and l are silent.",
+  "M3_SC_NO_NOTICE": "Ask yourself: does that make sense?",
+  "M3_SC_RESTART_ALL": "Go back only to the start of that sentence.",
+  "M3_SC_SOUND_SIGHT_WORD": "Some words we just know by sight: the, said, was.",
+  "M3_SC_WAIT": "Try first: break it into beats.",
+  "M3_QT_MANY_UNCOUNT": "Can you count it? Milk, no: much or a lot of.",
+  "M3_QT_MUCH_COUNT": "Goats can be counted: many.",
+  "M3_QT_LOT_NO_OF": "A lot of: three words.",
+  "M3_QT_FEW_UNCOUNT": "Water cannot be counted: some or a little.",
+  "M3_SP_DROP_LAST": "Gift ends with f and t.",
+  "M3_SP_CT_CK": "Insect ends with c then t.",
+  "M3_SP_END_VOWEL": "Belt stops at t.",
+  "M3_SP_RD_RT": "Bird ends with d.",
+  "M3_LK_SILENT_L": "Milk, silk: l heard. Walk, talk, chalk: l silent.",
+  "M3_LF_DROP_F": "Listen to the end: shel-f.",
+  "M3_LM_EXTRA_VOWEL": "Film is one beat: fi-lm.",
+  "M3_MP_MB": "Lamp ends with a puff: p.",
+  "M3_VI_ONE_DETAIL": "Check every describing word: tall, thin, red hat.",
+  "M3_VI_OWN_DETAIL": "Picture only what the words say.",
+  "M3_VI_TIME": "Moon means night.",
+  "M3_VI_WHO_DOES": "Who is doing the chasing? Picture that.",
+  "M3_OP_NOT": "Some opposites are a new word: big and small.",
+  "M3_OP_NEAR": "The opposite is as far away as you can go: cold.",
+  "M3_OP_SAME": "Opposite means the other way: wild animals, tame animals.",
+  "M3_OP_OLD": "Living things: old and young. Things: old and new.",
+  "M3_CO_NONE": "A comma between each item, and before the last.",
+  "M3_CO_AND_EVERY": "Commas in place of and, except the last.",
+  "M3_CO_FULL_STOPS": "A comma has a tail and keeps the sentence going.",
+  "M3_CO_AFTER_AND": "No comma right after and.",
+  "M3_MB_B_SOUNDED": "Thumb, lamb, comb, climb: the b is silent.",
+  "M3_NT_ND_VOICE": "Bent ends with a puff, bend with a buzz.",
+  "M3_NCH_NSH": "Lunch ends with a stop: t-sh.",
+  "M3_ND_DROP_D": "Listen for the d: ban-d.",
+  "M3_PP_IN_ON": "On the top of it: on. Inside: in.",
+  "M3_PP_BETWEEN_ONE": "Between needs two things, one on each side.",
+  "M3_PP_BEHIND_FRONT": "Behind: the tree hides you.",
+  "M3_PP_ABOVE_ON": "Above does not touch; on touches.",
+  "M3_CA_NAMES": "Names of people, places, days and festivals get capitals.",
+  "M3_CA_SMALL_I": "I on its own is always a capital.",
+  "M3_CA_EXTRA": "Only starts and names.",
+  "M3_CA_AFTER_STOP": "After every full stop, a capital.",
+  "M3_EM_QUESTION_STOP": "Asking? Question mark.",
+  "M3_EM_NONE": "Every sentence ends with a mark.",
+  "M3_EM_EXCLAIM_ALL": "Only strong feelings get !",
+  "M3_EM_LINE_END": "The mark goes where the idea ends.",
+  "M3_NKL_NGL": "Ankle has a click of k: an-kle.",
+  "M3_PT_DROP_T": "Kept: p then t.",
+  "M3_NTH_NT": "Tenth ends with the tongue between the teeth.",
+  "M3_ND_NG": "Sand: the tongue tip touches behind the teeth for d.",
+  "M3_CM_MORE_ER": "Taller already means more tall.",
+  "M3_CM_ER_FOR_EST": "Two things: -er. The whole group: the -est.",
+  "M3_CM_NO_DOUBLE": "Big, bigger, biggest: double the g.",
+  "M3_CM_Y_TO_I": "Change y to i: happier, happiest.",
+  "M3_PW_SOUND_SPELL": "Look at the word, cover, write, check.",
+  "M3_PW_NEAR_THING": "Point at the object first, then name it.",
+  "M3_PW_PLURAL": "One thing: no -s.",
+  "M3_PW_HOME_WORD": "Say it in English: ball.",
+  "M3_EW_E_SOUND": "E and w together say oo or you: new, few, grew.",
+  "M3_GR_CR_VOICE": "G buzzes in the throat.",
+  "M3_PR_PL": "Pray: curl the tongue.",
+  "M3_EW_OW": "Grew says oo; grow says oh.",
+  "M3_PO_HIS_HER": "Amina is a girl: her. Juma is a boy: his.",
+  "M3_PO_MINE_NOUN": "My goes before a noun; mine stands alone: the book is mine.",
+  "M3_PO_APOSTROPHE": "Yours, hers, ours, theirs: no apostrophe.",
+  "M3_PO_OBJECT_FORM": "It belongs to me: it is mine.",
+  "M3_JM_FIRST": "Read all of them; what do most share?",
+  "M3_JM_DETAIL": "Which answer covers every sentence?",
+  "M3_JM_ODD_ONE": "Does it fit the main idea?",
+  "M3_JM_TOO_WIDE": "Does the title fit all and only these sentences?",
+  "M3_OS_AS_GIVEN": "Find the first one by its clue word.",
+  "M3_OS_END_FIRST": "Finally belongs at the end.",
+  "M3_OS_PRONOUN_FIRST": "The name comes first; then she.",
+  "M3_OS_ONE_PER_LINE": "Keep writing on the same line until the paragraph ends.",
+  "M3_SPL_SPR": "Tongue up for l: spl-ash.",
+  "M3_LF_RF_SWAP": "Self: tongue up for l before f.",
+  "M3_SPL_EXTRA_VOWELS": "S-p-l glued: splash, one clap.",
+  "M3_LF_SILENT_L": "Shelf, self: l heard. Half, calf: l silent.",
+  "M3_WH_NO_INVERSION": "After why, swap: are you.",
+  "M3_WH_WHOM_SUBJECT": "The doer: who. The one the action is done to: whom did you call?",
+  "M3_WH_WRONG_WORD": "How asks the way; why asks the reason.",
+  "M3_WH_NO_MARK": "A question ends with a question mark.",
+  "M3_WP_AND_THEN": "Use full stops, and try after, next and so.",
+  "M3_WP_OFF_TOPIC": "Check each sentence: is it about saving?",
+  "M3_WP_SAME_START": "Start some sentences with a time word or a name.",
+  "M3_WP_LIST_LINES": "Keep going on the same line.",
+  "M3_STR_EXTRA_VOWELS": "Str glued: street, one clap.",
+  "M3_SPR_SPL": "Curl the tongue: spr-ing.",
+  "M3_STR_SPR_SWAP": "Listen for the middle: s-t-r or s-p-r?",
+  "M3_STR_DROP_R": "Stretch it: st-rrr-ay.",
+  "M3_AD_ADJECTIVE": "How does she sing? Add -ly: beautifully.",
+  "M3_AD_GOOD": "Good describes a thing; well describes how you do it.",
+  "M3_AD_SPELL": "Careful + ly = carefully, two l's.",
+  "M3_AD_NOUN": "The adverb tells how the action was done.",
+  "M3_PRC_SKIP_PLAN": "First plan: who, where, what happens.",
+  "M3_PRC_REVISE_EDIT": "Revise the ideas; edit the spelling and marks.",
+  "M3_PRC_ORDER": "Think, write, improve, fix, share.",
+  "M3_PRC_DRAFT_FINAL": "A draft is a first try.",
+  "M3_NA_NO_END": "How did it end? Add one sentence.",
+  "M3_NA_TENSE_MIX": "Stories are told in the past: went, sang.",
+  "M3_NA_NO_WHO": "Who, where and when in the first sentence.",
+  "M3_NA_DAY_LIST": "A story needs a problem and how it was solved.",
+  "M3_QU_K_ONLY": "Qu says k-w: round the lips, queen.",
+  "M3_SCR_STR": "Scr has k in the middle: s-k-r.",
+  "M3_SCR_EXTRA_VOWELS": "Scr glued: scrub, one clap.",
+  "M3_QUEUE_RHYME": "Queue says kyoo, like the letter name Q.",
+  "M3_UW_ONE_WORD": "Answer in a full sentence and add one more thing.",
+  "M3_UW_BORROW_LEND": "You borrow from someone; someone lends to you.",
+  "M3_UW_OPEN_LIGHT": "We switch on lights and open doors.",
+  "M3_UW_ECHO": "Start with My ... is ...",
+  "M3_DS_HAPPY_WORD": "Hurray is for joy; Oh no is for bad news.",
+  "M3_DS_PAIN_DISGUST": "Ouch is for pain; yuck is for something nasty.",
+  "M3_DS_NO_MARK": "A strong feeling: an exclamation mark after it.",
+  "M3_DS_HOME_WORD": "In English writing use Oh no, Ugh, Alas.",
+  "M3_FA_OPINION": "Can everyone check it? Then it is a fact.",
+  "M3_FA_STORY": "Facts are true in real life.",
+  "M3_FA_NO_I_THINK": "Words like ugly, best and nice show opinions.",
+  "M3_FA_FALSE": "A fact must be true.",
+  "M3_OF_SKIP": "Can you cover the roots before the seedling is in?",
+  "M3_OF_LAST_FIRST": "What must happen before anything else?",
+  "M3_OF_INTEREST": "Ask what has to be done first.",
+  "M3_OF_TIME_WORDS": "Finally means last.",
+  "M3_FP_STORY": "Facts, no characters: tell how it is done.",
+  "M3_FP_OPINION": "Keep only what can be checked.",
+  "M3_FP_NO_ORDER": "Number the steps first, then write.",
+  "M3_FP_NO_OPENING": "The first sentence tells what the paragraph is about."
+};
+
+// src/ai-tutor/content/families/english_g3_signed.js
+var SIGNED18 = [];
+
+// src/ai-tutor/content/subjects/english_g3.js
+var english_g3_default = {
+  subject: "english",
+  grade: 3,
+  prefix: "ENGL",
+  order: 2,
+  name: "English",
+  shortName: "English",
+  icon: "book",
+  description: "Grade 3 English from the CBC design",
+  map: { skills: SKILLS19, substrands: SUBSTRANDS18, outcomes: OUTCOMES18, misFeedback: MIS_FEEDBACK18 },
+  families: [],
+  // none yet: add each family file you write, as Grades 4-9 do
+  familyFiles: [],
+  signed: SIGNED18,
+  signedFile: "english_g3_signed.js",
+  checks: "family",
+  idPrefix: "english3.",
+  marker: "text",
+  bank: false,
+  curriculumDir: "english",
+  misconceptionsFile: "engine/data/curriculum/english.g3.misconceptions.json",
+  reviewDoc: null,
+  // write one with node scripts/build-subject-review-doc.mjs english 3 when families exist
+  precheckLabel: "English 3"
+};
+
+// src/ai-tutor/content/curriculumMap.english.g4.js
+var SUBSTRANDS19 = {
   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO": {
     "name": "Pronunciation and Vocabulary (Theme 1: The family)",
     "strand": "Listening and Speaking",
@@ -35116,7 +45195,7 @@ var SUBSTRANDS16 = {
     ]
   }
 };
-var OUTCOMES16 = {
+var OUTCOMES19 = {
   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a": {
     "letter": "a",
     "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO"
@@ -35826,7 +45905,7 @@ var OUTCOMES16 = {
     "sub": "ENGL.G4.WRITIN.T13_SPELLING"
   }
 };
-var SKILLS17 = {
+var SKILLS20 = {
   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
     "name": "Say the target sounds of English clearly in words",
     "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
@@ -37192,7 +47271,7 @@ var SKILLS17 = {
     ]
   }
 };
-var MIS_FEEDBACK16 = {
+var MIS_FEEDBACK19 = {
   "M4_PS_L_R": "Tongue tip up behind the teeth for /l/; tongue curled back, not touching, for /r/.",
   "M4_PS_SH_S": "Round the lips and push them forward for sh: shhh.",
   "M4_PS_CH_SH": "Ch starts with a stop: t then sh, as in t-shair, chair.",
@@ -37513,10 +47592,10 @@ var MIS_FEEDBACK16 = {
 };
 
 // src/ai-tutor/content/families/english_g4_signed.js
-var SIGNED16 = [];
+var SIGNED19 = [];
 
 // src/ai-tutor/content/families/english_g4_lib.js
-var MIS_FEEDBACK_E5 = new Proxy({}, { get: (_, skill2) => Object.fromEntries((SKILLS17[skill2]?.mis || []).map((c19) => [c19, MIS_FEEDBACK16[c19]])) });
+var MIS_FEEDBACK_E5 = new Proxy({}, { get: (_, skill2) => Object.fromEntries((SKILLS20[skill2]?.mis || []).map((c19) => [c19, MIS_FEEDBACK19[c19]])) });
 var shuffle2 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
@@ -37527,19 +47606,19 @@ var shuffle2 = (a) => {
 };
 var skillCode = (cs) => {
   const [a, b, id5] = cs.split(".");
-  const hit = Object.keys(SKILLS17).filter((c19) => c19.startsWith(`ENGL.G4.${a}.${b}_`) && c19.endsWith(`.${id5}`));
+  const hit = Object.keys(SKILLS20).filter((c19) => c19.startsWith(`ENGL.G4.${a}.${b}_`) && c19.endsWith(`.${id5}`));
   if (hit.length !== 1) throw new Error(`no English Grade 4 skill ${cs}`);
   return hit[0];
 };
 var outcomeLetters = (cs, n) => {
-  const L16 = SKILLS17[skillCode(cs)].outcomes.map((o) => o.split(".").pop());
+  const L16 = SKILLS20[skillCode(cs)].outcomes.map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf = (cskill, code) => {
   const own = MIS_FEEDBACK_E5[cskill]?.[code];
   if (own) return own;
-  const sub = SKILLS17[cskill].sub;
-  for (const [c19, k] of Object.entries(SKILLS17)) if (k.sub === sub && MIS_FEEDBACK_E5[c19]?.[code]) return MIS_FEEDBACK_E5[c19][code];
+  const sub = SKILLS20[cskill].sub;
+  for (const [c19, k] of Object.entries(SKILLS20)) if (k.sub === sub && MIS_FEEDBACK_E5[c19]?.[code]) return MIS_FEEDBACK_E5[c19][code];
   throw new Error(`${cskill}: no misconception ${code} in its sub-strand`);
 };
 var mc = (right, wrongs) => {
@@ -37552,7 +47631,7 @@ var eng = (d) => {
   const cskill = skillCode(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS17[cskill];
+  const k = SKILLS20[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
   const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`));
   if (!outcome) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
@@ -37560,7 +47639,7 @@ var eng = (d) => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  return family({ reviewed: SIGNED16.includes(d.id), draft: !SIGNED16.includes(d.id), subject: "english", grade: 4, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
+  return family({ reviewed: SIGNED19.includes(d.id), draft: !SIGNED19.includes(d.id), subject: "english", grade: 4, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse2 = (cskill, it) => {
   const last = it[it.length - 1];
@@ -38631,10 +48710,10 @@ var english_g4_default = {
   shortName: "English",
   icon: "book",
   description: "Grade 4 English from the CBC design",
-  map: { skills: SKILLS17, substrands: SUBSTRANDS16, outcomes: OUTCOMES16, misFeedback: MIS_FEEDBACK16 },
+  map: { skills: SKILLS20, substrands: SUBSTRANDS19, outcomes: OUTCOMES19, misFeedback: MIS_FEEDBACK19 },
   families: [...FAMILIES43, ...FAMILIES44, ...FAMILIES45, ...FAMILIES46],
   familyFiles: ["english_g4_lang.js", "english_g4_write.js", "english_g4_vocab.js", "english_g4_reading.js"],
-  signed: SIGNED16,
+  signed: SIGNED19,
   signedFile: "english_g4_signed.js",
   checks: "text",
   coverageScript: "scripts/coverage-english-g4.mjs",
@@ -42589,7 +52668,7 @@ var english_g5_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.english.g6.js
-var SUBSTRANDS17 = {
+var SUBSTRANDS20 = {
   "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI": {
     "name": "Pronunciation and Listening (Theme 1: Child labour)",
     "strand": "Listening and Speaking",
@@ -43097,7 +53176,7 @@ var SUBSTRANDS17 = {
     ]
   }
 };
-var OUTCOMES17 = {
+var OUTCOMES20 = {
   "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.a": {
     "letter": "a",
     "sub": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI"
@@ -43875,7 +53954,7 @@ var OUTCOMES17 = {
     "sub": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING"
   }
 };
-var SKILLS18 = {
+var SKILLS21 = {
   "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED": {
     "name": "Know idioms and fixed phrases",
     "sub": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI",
@@ -45161,7 +55240,7 @@ var SKILLS18 = {
     ]
   }
 };
-var MIS_FEEDBACK17 = {
+var MIS_FEEDBACK20 = {
   "M_IDM_LITERAL": "An idiom means something different from its words. Dog tired means extremely tired.",
   "M_IDM_WORD_CHANGED": "An idiom is a fixed phrase. You cannot change its words: work like a dog.",
   "M_IDM_OPPOSITE": "A piece of cake means very easy.",
@@ -45467,7 +55546,7 @@ var MIS_FEEDBACK17 = {
 };
 
 // src/ai-tutor/content/families/english_g6_signed.js
-var SIGNED17 = [];
+var SIGNED20 = [];
 
 // src/ai-tutor/content/families/english_g6_lib.js
 var shuffle4 = (a) => {
@@ -45480,16 +55559,16 @@ var shuffle4 = (a) => {
 };
 var skillCode3 = (cs) => {
   const [a, b, id5] = cs.split(".");
-  const hit = Object.keys(SKILLS18).filter((c19) => c19.startsWith(`ENGL.G6.${a}.${b}_`) && c19.endsWith(`.${id5}`));
+  const hit = Object.keys(SKILLS21).filter((c19) => c19.startsWith(`ENGL.G6.${a}.${b}_`) && c19.endsWith(`.${id5}`));
   if (hit.length !== 1) throw new Error(`no English Grade 6 skill ${cs}`);
   return hit[0];
 };
 var outcomeLetters3 = (cs, n) => {
-  const L16 = SKILLS18[skillCode3(cs)].outcomes.map((o) => o.split(".").pop());
+  const L16 = SKILLS21[skillCode3(cs)].outcomes.map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf3 = (cskill, code) => {
-  const f = MIS_FEEDBACK17[code];
+  const f = MIS_FEEDBACK20[code];
   if (!f) throw new Error(`${cskill}: no misconception ${code}`);
   return f;
 };
@@ -45503,7 +55582,7 @@ var eng3 = (d) => {
   const cskill = skillCode3(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS18[cskill];
+  const k = SKILLS21[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
   const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`));
   if (!outcome) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
@@ -45511,7 +55590,7 @@ var eng3 = (d) => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  return family({ reviewed: SIGNED17.includes(d.id), draft: !SIGNED17.includes(d.id), subject: "english", grade: 6, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
+  return family({ reviewed: SIGNED20.includes(d.id), draft: !SIGNED20.includes(d.id), subject: "english", grade: 6, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse4 = (cskill, it) => {
   const last = it[it.length - 1];
@@ -46711,10 +56790,10 @@ var english_g6_default = {
   shortName: "English",
   icon: "book",
   description: "Grade 6 English from the CBC design",
-  map: { skills: SKILLS18, substrands: SUBSTRANDS17, outcomes: OUTCOMES17, misFeedback: MIS_FEEDBACK17 },
+  map: { skills: SKILLS21, substrands: SUBSTRANDS20, outcomes: OUTCOMES20, misFeedback: MIS_FEEDBACK20 },
   families: [...FAMILIES50, ...FAMILIES51, ...FAMILIES52, ...FAMILIES53, ...FAMILIES54],
   familyFiles: ["english_g6_lang.js", "english_g6_write.js", "english_g6_vocab.js", "english_g6_reading.js", "english_g6_listening.js"],
-  signed: SIGNED17,
+  signed: SIGNED20,
   signedFile: "english_g6_signed.js",
   checks: "text",
   idPrefix: "english6.",
@@ -46732,7 +56811,7 @@ var english_g6_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.english.g7.js
-var SUBSTRANDS18 = {
+var SUBSTRANDS21 = {
   "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL": {
     "name": "Conversational Skills: Polite Language (Theme 1: Personal responsibility)",
     "strand": "Listening and Speaking",
@@ -47438,7 +57517,7 @@ var SUBSTRANDS18 = {
     ]
   }
 };
-var OUTCOMES18 = {
+var OUTCOMES21 = {
   "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a": {
     "letter": "a",
     "sub": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL"
@@ -48456,7 +58535,7 @@ var OUTCOMES18 = {
     "sub": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N"
   }
 };
-var SKILLS19 = {
+var SKILLS22 = {
   "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE": {
     "name": "Use polite expressions to introduce yourself and others",
     "sub": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL",
@@ -50065,7 +60144,7 @@ var SKILLS19 = {
     "nofamily": "composition"
   }
 };
-var MIS_FEEDBACK18 = {
+var MIS_FEEDBACK21 = {
   "M7_IP_BLUNT": "A polite introduction uses words such as may I introduce and a title for an older person: Madam, may I introduce my friend, Juma?",
   "M7_IP_ORDER": "We introduce the younger or less senior person to the older or senior one: name the headteacher first, then your friend.",
   "M7_IP_REPLY": "A polite reply to an introduction is Pleased to meet you or How do you do.",
@@ -50466,7 +60545,7 @@ var MIS_FEEDBACK18 = {
 };
 
 // src/ai-tutor/content/families/english_g7_signed.js
-var SIGNED18 = [];
+var SIGNED21 = [];
 
 // src/ai-tutor/content/families/english_g7_lib.js
 var shuffle5 = (a) => {
@@ -50484,16 +60563,16 @@ var skillCode4 = (cs) => {
     const key = `ENGL.G7.${a}.${b}`;
     return sub === key || sub.startsWith(`${key}_`) || b.includes("_") && sub.startsWith(key);
   };
-  const hit = Object.keys(SKILLS19).filter((c19) => subOk(c19) && c19.endsWith(`.${id5}`));
+  const hit = Object.keys(SKILLS22).filter((c19) => subOk(c19) && c19.endsWith(`.${id5}`));
   if (hit.length !== 1) throw new Error(`no English Grade 7 skill ${cs}`);
   return hit[0];
 };
 var outcomeLetters4 = (cs, n) => {
-  const L16 = SKILLS19[skillCode4(cs)].outcomes.map((o) => o.split(".").pop());
+  const L16 = SKILLS22[skillCode4(cs)].outcomes.map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf4 = (cskill, code) => {
-  const f = MIS_FEEDBACK18[code];
+  const f = MIS_FEEDBACK21[code];
   if (!f) throw new Error(`${cskill}: no misconception ${code}`);
   return f;
 };
@@ -50507,15 +60586,15 @@ var eng4 = (d) => {
   const cskill = skillCode4(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS19[cskill];
+  const k = SKILLS22[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
-  const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`)) || k.outcomes.find((o) => OUTCOMES18[o]?.letter === letter);
+  const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`)) || k.outcomes.find((o) => OUTCOMES21[o]?.letter === letter);
   if (!outcome) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
   const draw = () => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  return family({ reviewed: SIGNED18.includes(d.id), draft: !SIGNED18.includes(d.id), subject: "english", grade: 7, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
+  return family({ reviewed: SIGNED21.includes(d.id), draft: !SIGNED21.includes(d.id), subject: "english", grade: 7, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse5 = (cskill, it) => {
   const last = it[it.length - 1];
@@ -52205,10 +62284,10 @@ var english_g7_default = {
   shortName: "English",
   icon: "book",
   description: "Grade 7 English from the CBC design",
-  map: { skills: SKILLS19, substrands: SUBSTRANDS18, outcomes: OUTCOMES18, misFeedback: MIS_FEEDBACK18 },
+  map: { skills: SKILLS22, substrands: SUBSTRANDS21, outcomes: OUTCOMES21, misFeedback: MIS_FEEDBACK21 },
   families: [...FAMILIES55, ...FAMILIES56, ...FAMILIES57, ...FAMILIES58],
   familyFiles: ["english_g7_lang.js", "english_g7_write.js", "english_g7_vocab.js", "english_g7_reading.js"],
-  signed: SIGNED18,
+  signed: SIGNED21,
   signedFile: "english_g7_signed.js",
   checks: "text",
   idPrefix: "english7.",
@@ -52226,7 +62305,7 @@ var english_g7_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.english.g8.js
-var SUBSTRANDS19 = {
+var SUBSTRANDS22 = {
   "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE": {
     "name": "Polite Language: Telephone Etiquette (Theme 1: Human rights)",
     "strand": "Listening and Speaking",
@@ -52932,7 +63011,7 @@ var SUBSTRANDS19 = {
     ]
   }
 };
-var OUTCOMES19 = {
+var OUTCOMES22 = {
   "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.a": {
     "letter": "a",
     "sub": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE"
@@ -53950,7 +64029,7 @@ var OUTCOMES19 = {
     "sub": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P"
   }
 };
-var SKILLS20 = {
+var SKILLS23 = {
   "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE": {
     "name": "Use polite words and expressions in a telephone conversation",
     "sub": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE",
@@ -55199,7 +65278,7 @@ var SKILLS20 = {
     "nofamily": "composition"
   }
 };
-var MIS_FEEDBACK19 = {
+var MIS_FEEDBACK22 = {
   "M8_X_TE_WHO_ARE_YOU": "Greet and say who you are first.",
   "M8_X_TE_DEMAND_PERSON": "Ask: May I speak to ...?",
   "M8_X_TE_NO_MESSAGE": "Offer to take a message.",
@@ -55489,7 +65568,7 @@ var MIS_FEEDBACK19 = {
 };
 
 // src/ai-tutor/content/families/english_g8_signed.js
-var SIGNED19 = [];
+var SIGNED22 = [];
 
 // src/ai-tutor/content/families/english_g8_lib.js
 var shuffle6 = (a) => {
@@ -55507,16 +65586,16 @@ var skillCode5 = (cs) => {
     const key = `ENGL.G8.${a}.${b}`;
     return sub === key || sub.startsWith(`${key}_`) || b.includes("_") && sub.startsWith(key);
   };
-  const hit = Object.keys(SKILLS20).filter((c19) => subOk(c19) && c19.endsWith(`.${id5}`));
+  const hit = Object.keys(SKILLS23).filter((c19) => subOk(c19) && c19.endsWith(`.${id5}`));
   if (hit.length !== 1) throw new Error(`no English Grade 8 skill ${cs}`);
   return hit[0];
 };
 var outcomeLetters5 = (cs, n) => {
-  const L16 = SKILLS20[skillCode5(cs)].outcomes.map((o) => o.split(".").pop());
+  const L16 = SKILLS23[skillCode5(cs)].outcomes.map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf5 = (cskill, code) => {
-  const f = MIS_FEEDBACK19[code];
+  const f = MIS_FEEDBACK22[code];
   if (!f) throw new Error(`${cskill}: no misconception ${code}`);
   return f;
 };
@@ -55530,15 +65609,15 @@ var eng5 = (d) => {
   const cskill = skillCode5(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS20[cskill];
+  const k = SKILLS23[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
-  const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`)) || k.outcomes.find((o) => OUTCOMES19[o]?.letter === letter);
+  const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`)) || k.outcomes.find((o) => OUTCOMES22[o]?.letter === letter);
   if (!outcome) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
   const draw = () => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  return family({ reviewed: SIGNED19.includes(d.id), draft: !SIGNED19.includes(d.id), subject: "english", grade: 8, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
+  return family({ reviewed: SIGNED22.includes(d.id), draft: !SIGNED22.includes(d.id), subject: "english", grade: 8, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse6 = (cskill, it) => {
   const last = it[it.length - 1];
@@ -56334,12 +66413,12 @@ var english_g8_default = {
   shortName: "English",
   icon: "book",
   description: "Grade 8 English from the CBC design",
-  map: { skills: SKILLS20, substrands: SUBSTRANDS19, outcomes: OUTCOMES19, misFeedback: MIS_FEEDBACK19 },
+  map: { skills: SKILLS23, substrands: SUBSTRANDS22, outcomes: OUTCOMES22, misFeedback: MIS_FEEDBACK22 },
   families: [...FAMILIES59, ...FAMILIES60, ...FAMILIES61],
   // add each family file you write: [...A, ...B]
   familyFiles: ["english_g8_lang.js", "english_g8_write.js", "english_g8_reading.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED19,
+  signed: SIGNED22,
   signedFile: "english_g8_signed.js",
   checks: "text",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -56358,7 +66437,7 @@ var english_g8_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.english.g9.js
-var SUBSTRANDS20 = {
+var SUBSTRANDS23 = {
   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE": {
     "name": "Polite Language (Theme 1: Citizenship)",
     "strand": "Listening and Speaking",
@@ -57061,7 +67140,7 @@ var SUBSTRANDS20 = {
     ]
   }
 };
-var OUTCOMES20 = {
+var OUTCOMES23 = {
   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.a": {
     "letter": "a",
     "sub": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE"
@@ -58067,7 +68146,7 @@ var OUTCOMES20 = {
     "sub": "ENGL.G9.WRITIN.T15_EMAILS"
   }
 };
-var SKILLS21 = {
+var SKILLS24 = {
   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM": {
     "name": "Use euphemisms to show politeness",
     "sub": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
@@ -59393,7 +69472,7 @@ var SKILLS21 = {
     "nofamily": "composition"
   }
 };
-var MIS_FEEDBACK20 = {
+var MIS_FEEDBACK23 = {
   "M9_EU_BLUNT": "Choose a gentle expression: passed away.",
   "M9_EU_LITERAL": "A euphemism softens a hard fact.",
   "M9_EU_OVERUSE": "Be gentle, but give facts plainly when people need them.",
@@ -59701,15 +69780,15 @@ var MIS_FEEDBACK20 = {
 };
 
 // src/ai-tutor/content/families/english_g9_signed.js
-var SIGNED20 = [];
+var SIGNED23 = [];
 
 // src/ai-tutor/content/families/english_g9_lib.js
 var { choose: choose21, typed: typed16, spot: spot21, sfam: sfam16 } = makeKit({
   subject: "english",
   grade: 9,
   prefix: "ENGL",
-  signed: SIGNED20,
-  map: { skills: SKILLS21, outcomes: OUTCOMES20, misFeedback: MIS_FEEDBACK20 }
+  signed: SIGNED23,
+  map: { skills: SKILLS24, outcomes: OUTCOMES23, misFeedback: MIS_FEEDBACK23 }
 });
 var fam13 = (tag, cs, form, rung2, gen2, oc, extra) => sfam16({ id: `english9.${tag}`, cs, form, rung: rung2, gen: gen2, marker: "text", ...oc ? { oc } : {}, ...extra || {} });
 var m7 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -60620,12 +70699,12 @@ var english_g9_default = {
   shortName: "English",
   icon: "book",
   description: "Grade 9 English from the CBC design",
-  map: { skills: SKILLS21, substrands: SUBSTRANDS20, outcomes: OUTCOMES20, misFeedback: MIS_FEEDBACK20 },
+  map: { skills: SKILLS24, substrands: SUBSTRANDS23, outcomes: OUTCOMES23, misFeedback: MIS_FEEDBACK23 },
   families: [...FAMILIES62, ...FAMILIES63, ...FAMILIES64],
   // add each family file you write: [...A, ...B]
   familyFiles: ["english_g9_a.js", "english_g9_b.js", "english_g9_reading.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED20,
+  signed: SIGNED23,
   signedFile: "english_g9_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -60644,7 +70723,7 @@ var english_g9_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.integratedscience.g7.js
-var SUBSTRANDS21 = {
+var SUBSTRANDS24 = {
   "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT": {
     "name": "Introduction to Integrated Science",
     "strand": "Scientific Investigation",
@@ -60738,7 +70817,7 @@ var SUBSTRANDS21 = {
     ]
   }
 };
-var OUTCOMES21 = {
+var OUTCOMES24 = {
   "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.a": {
     "letter": "a",
     "sub": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT"
@@ -60892,7 +70971,7 @@ var OUTCOMES21 = {
     "sub": "INTE.G7.FORCE_.MAGNETISM"
   }
 };
-var SKILLS22 = {
+var SKILLS25 = {
   "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS": {
     "name": "Name the components of Integrated Science: biology, chemistry and physics",
     "sub": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT",
@@ -61435,7 +71514,7 @@ var SKILLS22 = {
     ]
   }
 };
-var MIS_FEEDBACK21 = {
+var MIS_FEEDBACK24 = {
   "M_SC_SEPARATE": "Integrated Science joins the three branches. Many topics, such as digestion or cooking, use all three.",
   "M_SC_BIO_PLANTS": "Biology studies all living things, including the human body.",
   "M_SC_CHEM_LAB": "Chemistry studies what things are made of and how they change, in the kitchen as well as in the laboratory.",
@@ -61567,15 +71646,15 @@ var MIS_FEEDBACK21 = {
 };
 
 // src/ai-tutor/content/families/integratedscience_g7_signed.js
-var SIGNED21 = [];
+var SIGNED24 = [];
 
 // src/ai-tutor/content/families/integratedscience_g7_lib.js
 var { choose: choose22, typed: typed17, spot: spot22, sfam: sfam17 } = makeKit({
   subject: "integratedscience",
   grade: 7,
   prefix: "INTE",
-  signed: SIGNED21,
-  map: { skills: SKILLS22, outcomes: OUTCOMES21, misFeedback: MIS_FEEDBACK21 }
+  signed: SIGNED24,
+  map: { skills: SKILLS25, outcomes: OUTCOMES24, misFeedback: MIS_FEEDBACK24 }
 });
 var fam14 = (tag, cs, form, rung2, gen2, oc) => sfam17({ id: `integratedscience7.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m8 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -62316,12 +72395,12 @@ var integratedscience_g7_default = {
   shortName: "Integrated Science",
   icon: "book",
   description: "Grade 7 Integrated Science from the CBC design",
-  map: { skills: SKILLS22, substrands: SUBSTRANDS21, outcomes: OUTCOMES21, misFeedback: MIS_FEEDBACK21 },
+  map: { skills: SKILLS25, substrands: SUBSTRANDS24, outcomes: OUTCOMES24, misFeedback: MIS_FEEDBACK24 },
   families: [...FAMILIES65, ...FAMILIES66, ...FAMILIES67],
   // add each family file you write: [...A, ...B]
   familyFiles: ["integratedscience_g7_a.js", "integratedscience_g7_b.js", "integratedscience_g7_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED21,
+  signed: SIGNED24,
   signedFile: "integratedscience_g7_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -62340,7 +72419,7 @@ var integratedscience_g7_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.integratedscience.g8.js
-var SUBSTRANDS22 = {
+var SUBSTRANDS25 = {
   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS": {
     "name": "Elements and Compounds",
     "strand": "Mixtures, Elements and Compounds",
@@ -62427,7 +72506,7 @@ var SUBSTRANDS22 = {
     ]
   }
 };
-var OUTCOMES22 = {
+var OUTCOMES25 = {
   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.a": {
     "letter": "a",
     "sub": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS"
@@ -62577,7 +72656,7 @@ var OUTCOMES22 = {
     "sub": "INTE.G8.FORCE_.PRESSURE"
   }
 };
-var SKILLS23 = {
+var SKILLS26 = {
   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT": {
     "name": "Tell an atom, an element, a molecule and a compound apart",
     "sub": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS",
@@ -62917,7 +72996,7 @@ var SKILLS23 = {
     ]
   }
 };
-var MIS_FEEDBACK22 = {
+var MIS_FEEDBACK25 = {
   "M_G8_AE_ATOM_MOLECULE": "An atom is one particle. A molecule is two or more atoms joined.",
   "M_G8_AE_ELEMENT_COMPOUND": "An element has one kind of atom. A compound has different elements joined.",
   "M_G8_AE_MIXTURE": "The elements in a compound are joined chemically. In a mixture they are only mixed.",
@@ -63001,15 +73080,15 @@ var MIS_FEEDBACK22 = {
 };
 
 // src/ai-tutor/content/families/integratedscience_g8_signed.js
-var SIGNED22 = [];
+var SIGNED25 = [];
 
 // src/ai-tutor/content/families/integratedscience_g8_lib.js
 var { choose: choose23, typed: typed18, spot: spot23, sfam: sfam18 } = makeKit({
   subject: "integratedscience",
   grade: 8,
   prefix: "INTE",
-  signed: SIGNED22,
-  map: { skills: SKILLS23, outcomes: OUTCOMES22, misFeedback: MIS_FEEDBACK22 }
+  signed: SIGNED25,
+  map: { skills: SKILLS26, outcomes: OUTCOMES25, misFeedback: MIS_FEEDBACK25 }
 });
 var OC = {
   "ec.eu.label": "e",
@@ -63466,12 +73545,12 @@ var integratedscience_g8_default = {
   shortName: "Integrated Science",
   icon: "book",
   description: "Grade 8 Integrated Science from the CBC design",
-  map: { skills: SKILLS23, substrands: SUBSTRANDS22, outcomes: OUTCOMES22, misFeedback: MIS_FEEDBACK22 },
+  map: { skills: SKILLS26, substrands: SUBSTRANDS25, outcomes: OUTCOMES25, misFeedback: MIS_FEEDBACK25 },
   families: [...FAMILIES68, ...FAMILIES69, ...FAMILIES70],
   // add each family file you write: [...A, ...B]
   familyFiles: ["integratedscience_g8_a.js", "integratedscience_g8_b.js", "integratedscience_g8_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED22,
+  signed: SIGNED25,
   signedFile: "integratedscience_g8_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -63490,7 +73569,7 @@ var integratedscience_g8_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.integratedscience.g9.js
-var SUBSTRANDS23 = {
+var SUBSTRANDS26 = {
   "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM": {
     "name": "Structure of the atom",
     "strand": "Mixtures, Elements and Compounds",
@@ -63592,7 +73671,7 @@ var SUBSTRANDS23 = {
     ]
   }
 };
-var OUTCOMES23 = {
+var OUTCOMES26 = {
   "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.a": {
     "letter": "a",
     "sub": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM"
@@ -63778,7 +73857,7 @@ var OUTCOMES23 = {
     "sub": "INTE.G9.FORCE_.WAVES"
   }
 };
-var SKILLS24 = {
+var SKILLS27 = {
   "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS": {
     "name": "Name the particles of an atom and where they are",
     "sub": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM",
@@ -64187,7 +74266,7 @@ var SKILLS24 = {
     ]
   }
 };
-var MIS_FEEDBACK23 = {
+var MIS_FEEDBACK26 = {
   "M_IS9_AP_ELECTRON": "Electrons move in shells around the nucleus.",
   "M_IS9_AP_CHARGE": "Neutrons have no charge.",
   "M_IS9_AP_PROTON": "Protons are positive.",
@@ -64287,15 +74366,15 @@ var MIS_FEEDBACK23 = {
 };
 
 // src/ai-tutor/content/families/integratedscience_g9_signed.js
-var SIGNED23 = [];
+var SIGNED26 = [];
 
 // src/ai-tutor/content/families/integratedscience_g9_lib.js
 var { choose: choose24, typed: typed19, spot: spot24, sfam: sfam19 } = makeKit({
   subject: "integratedscience",
   grade: 9,
   prefix: "INTE",
-  signed: SIGNED23,
-  map: { skills: SKILLS24, outcomes: OUTCOMES23, misFeedback: MIS_FEEDBACK23 }
+  signed: SIGNED26,
+  map: { skills: SKILLS27, outcomes: OUTCOMES26, misFeedback: MIS_FEEDBACK26 }
 });
 var fam16 = (tag, cs, form, rung2, gen2, oc) => sfam19({ id: `integratedscience9.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m10 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -64756,12 +74835,12 @@ var integratedscience_g9_default = {
   shortName: "Integrated Science",
   icon: "book",
   description: "Grade 9 Integrated Science from the CBC design",
-  map: { skills: SKILLS24, substrands: SUBSTRANDS23, outcomes: OUTCOMES23, misFeedback: MIS_FEEDBACK23 },
+  map: { skills: SKILLS27, substrands: SUBSTRANDS26, outcomes: OUTCOMES26, misFeedback: MIS_FEEDBACK26 },
   families: [...FAMILIES71, ...FAMILIES72],
   // add each family file you write: [...A, ...B]
   familyFiles: ["integratedscience_g9_a.js", "integratedscience_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED23,
+  signed: SIGNED26,
   signedFile: "integratedscience_g9_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -64780,7 +74859,7 @@ var integratedscience_g9_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g1.js
-var SUBSTRANDS24 = {
+var SUBSTRANDS27 = {
   "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO": {
     "name": "Maamkuzi na Maagano (Theme 1: Darasani)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -65180,7 +75259,7 @@ var SUBSTRANDS24 = {
     ]
   }
 };
-var OUTCOMES24 = {
+var OUTCOMES27 = {
   "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.a": {
     "letter": "a",
     "sub": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO"
@@ -65814,7 +75893,7 @@ var OUTCOMES24 = {
     "sub": "KISW.G1.SARUFI.T10_VINYUME_VYA_VITENDO"
   }
 };
-var SKILLS25 = {
+var SKILLS28 = {
   "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI": {
     "name": "Tumia maamkuzi na maagano yafaayo na majibu yake",
     "sub": "KISW.G1.KUSIKI.T1_MAAMKUZI_NA_MAAGANO",
@@ -66608,7 +76687,7 @@ var SKILLS25 = {
     ]
   }
 };
-var MIS_FEEDBACK24 = {
+var MIS_FEEDBACK27 = {
   "M1_SAL_REPLY_T1": 'Ukiulizwa "Hujambo?" unajibu "Sijambo," maana yake sina tatizo.',
   "M1_SAL_ELDER_T1": "Mzee husalimiwa kwa heshima: Shikamoo babu!",
   "M1_SAL_MARAHABA_T1": "Mtoto anasema Shikamoo; mzee anajibu Marahaba.",
@@ -66797,7 +76876,7 @@ var MIS_FEEDBACK24 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g1_signed.js
-var SIGNED24 = [];
+var SIGNED27 = [];
 
 // src/ai-tutor/content/families/kiswahili_g1_awaiting.js
 var AWAITING6 = [
@@ -66853,12 +76932,12 @@ var kiswahili_g1_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 1 Kiswahili from the CBC design",
-  map: { skills: SKILLS25, substrands: SUBSTRANDS24, outcomes: OUTCOMES24, misFeedback: MIS_FEEDBACK24 },
+  map: { skills: SKILLS28, substrands: SUBSTRANDS27, outcomes: OUTCOMES27, misFeedback: MIS_FEEDBACK27 },
   families: [],
   // none yet: add each family file you write, [...A, ...B]
   familyFiles: [],
   // the same files by name
-  signed: SIGNED24,
+  signed: SIGNED27,
   signedFile: "kiswahili_g1_signed.js",
   awaiting: AWAITING6,
   // every skill (no family yet): build-kiswahili-grade.mjs writes it
@@ -66872,7 +76951,7 @@ var kiswahili_g1_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g2.js
-var SUBSTRANDS25 = {
+var SUBSTRANDS28 = {
   "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO": {
     "name": "Maamkuzi na Maagano (Theme 1: Shuleni)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -67269,7 +77348,7 @@ var SUBSTRANDS25 = {
     ]
   }
 };
-var OUTCOMES25 = {
+var OUTCOMES28 = {
   "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.a": {
     "letter": "a",
     "sub": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO"
@@ -67891,7 +77970,7 @@ var OUTCOMES25 = {
     "sub": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO"
   }
 };
-var SKILLS26 = {
+var SKILLS29 = {
   "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI": {
     "name": "Tumia maamkuzi na maagano yafaayo na majibu yake",
     "sub": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO",
@@ -68668,7 +78747,7 @@ var SKILLS26 = {
     ]
   }
 };
-var MIS_FEEDBACK25 = {
+var MIS_FEEDBACK28 = {
   "M2_SAL_REPLY_T1": 'Ukiulizwa "Hujambo?" unajibu "Sijambo," maana yake sina tatizo.',
   "M2_SAL_ELDER_T1": "Mzee husalimiwa kwa heshima: Shikamoo babu!",
   "M2_SAL_MARAHABA_T1": "Mtoto anasema Shikamoo; mzee anajibu Marahaba.",
@@ -68861,7 +78940,7 @@ var MIS_FEEDBACK25 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g2_signed.js
-var SIGNED25 = [];
+var SIGNED28 = [];
 
 // src/ai-tutor/content/families/kiswahili_g2_awaiting.js
 var AWAITING7 = [
@@ -68917,12 +78996,12 @@ var kiswahili_g2_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 2 Kiswahili from the CBC design",
-  map: { skills: SKILLS26, substrands: SUBSTRANDS25, outcomes: OUTCOMES25, misFeedback: MIS_FEEDBACK25 },
+  map: { skills: SKILLS29, substrands: SUBSTRANDS28, outcomes: OUTCOMES28, misFeedback: MIS_FEEDBACK28 },
   families: [],
   // none yet: add each family file you write, [...A, ...B]
   familyFiles: [],
   // the same files by name
-  signed: SIGNED25,
+  signed: SIGNED28,
   signedFile: "kiswahili_g2_signed.js",
   awaiting: AWAITING7,
   // every skill (no family yet): build-kiswahili-grade.mjs writes it
@@ -68936,7 +79015,7 @@ var kiswahili_g2_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g3.js
-var SUBSTRANDS26 = {
+var SUBSTRANDS29 = {
   "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO": {
     "name": "Maamkuzi na Maagano (Theme 1: Uzalendo)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -69334,7 +79413,7 @@ var SUBSTRANDS26 = {
     ]
   }
 };
-var OUTCOMES26 = {
+var OUTCOMES29 = {
   "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.a": {
     "letter": "a",
     "sub": "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO"
@@ -69960,7 +80039,7 @@ var OUTCOMES26 = {
     "sub": "KISW.G3.SARUFI.T10_VINYUME_VYA_VITENDO"
   }
 };
-var SKILLS27 = {
+var SKILLS30 = {
   "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.MAAMKUZI": {
     "name": "Tumia maamkuzi na maagano yafaayo na majibu yake",
     "sub": "KISW.G3.KUSIKI.T1_MAAMKUZI_NA_MAAGANO",
@@ -70740,7 +80819,7 @@ var SKILLS27 = {
     ]
   }
 };
-var MIS_FEEDBACK26 = {
+var MIS_FEEDBACK29 = {
   "M3_SAL_REPLY_T1": 'Ukiulizwa "Hujambo?" unajibu "Sijambo," maana yake sina tatizo.',
   "M3_SAL_ELDER_T1": "Mzee husalimiwa kwa heshima: Shikamoo babu!",
   "M3_SAL_MARAHABA_T1": "Mtoto anasema Shikamoo; mzee anajibu Marahaba.",
@@ -70935,7 +81014,7 @@ var MIS_FEEDBACK26 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g3_signed.js
-var SIGNED26 = [];
+var SIGNED29 = [];
 
 // src/ai-tutor/content/families/kiswahili_g3_awaiting.js
 var AWAITING8 = [
@@ -70991,12 +81070,12 @@ var kiswahili_g3_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 3 Kiswahili from the CBC design",
-  map: { skills: SKILLS27, substrands: SUBSTRANDS26, outcomes: OUTCOMES26, misFeedback: MIS_FEEDBACK26 },
+  map: { skills: SKILLS30, substrands: SUBSTRANDS29, outcomes: OUTCOMES29, misFeedback: MIS_FEEDBACK29 },
   families: [],
   // none yet: add each family file you write, [...A, ...B]
   familyFiles: [],
   // the same files by name
-  signed: SIGNED26,
+  signed: SIGNED29,
   signedFile: "kiswahili_g3_signed.js",
   awaiting: AWAITING8,
   // every skill (no family yet): build-kiswahili-grade.mjs writes it
@@ -71010,7 +81089,7 @@ var kiswahili_g3_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g4.js
-var SUBSTRANDS27 = {
+var SUBSTRANDS30 = {
   "KISW.G4.KUSIKI.T1_MATAMSHI_BORA": {
     "name": "Matamshi Bora (Theme 1: Nyumbani)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -71534,7 +81613,7 @@ var SUBSTRANDS27 = {
     ]
   }
 };
-var OUTCOMES27 = {
+var OUTCOMES30 = {
   "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.a": {
     "letter": "a",
     "sub": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA"
@@ -72376,7 +82455,7 @@ var OUTCOMES27 = {
     "sub": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO"
   }
 };
-var SKILLS28 = {
+var SKILLS31 = {
   "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI": {
     "name": "Tofautisha sauti p/b, t/d, k/g na ch/j katika silabi, maneno na vitanzandimi",
     "sub": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA",
@@ -73515,7 +83594,7 @@ var SKILLS28 = {
     ]
   }
 };
-var MIS_FEEDBACK27 = {
+var MIS_FEEDBACK30 = {
   "M4_MAT_SWAP_T1": 'Sikiliza tena: "tamu" ina sauti /t/. "damu" ni neno lingine lenye maana nyingine.',
   "M4_MAT_SPELL_T1": 'Neno lenye maana ya "a coat" ni "koti". "goti" lina maana ya "a knee".',
   "M4_MAT_SAME_T1": 'Hapana. "koti" ni a coat, na "goti" ni a knee.',
@@ -73771,7 +83850,7 @@ var MIS_FEEDBACK27 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g4_signed.js
-var SIGNED27 = [];
+var SIGNED30 = [];
 
 // src/ai-tutor/content/families/kiswahili_g4_lib.js
 var shuffle7 = (a) => {
@@ -73784,19 +83863,19 @@ var shuffle7 = (a) => {
 };
 var skillCode6 = (cs) => {
   const code = `KISW.G4.${cs}`;
-  if (!SKILLS28[code]) throw new Error(`no Kiswahili Grade 4 skill ${cs}`);
+  if (!SKILLS31[code]) throw new Error(`no Kiswahili Grade 4 skill ${cs}`);
   return code;
 };
 var outcomeLetters6 = (cs, n) => {
-  const k = SKILLS28[skillCode6(cs)];
+  const k = SKILLS31[skillCode6(cs)];
   const L16 = k.outcomes.filter((o) => o.startsWith(`${k.sub}.`)).map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf6 = (cskill, code) => {
-  const f = MIS_FEEDBACK27[code];
-  if (!f || !SKILLS28[cskill].mis.includes(code)) {
-    const sub = SKILLS28[cskill].sub;
-    const near4 = Object.values(SKILLS28).some((k) => k.sub === sub && k.mis.includes(code));
+  const f = MIS_FEEDBACK30[code];
+  if (!f || !SKILLS31[cskill].mis.includes(code)) {
+    const sub = SKILLS31[cskill].sub;
+    const near4 = Object.values(SKILLS31).some((k) => k.sub === sub && k.mis.includes(code));
     if (!f || !near4) throw new Error(`${cskill}: no misconception ${code} in its skill or sub-strand`);
   }
   return f;
@@ -73811,15 +83890,15 @@ var kw = (d) => {
   const cskill = skillCode6(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS28[cskill];
+  const k = SKILLS31[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
   const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`) && o.startsWith(`${k.sub}.`)) || k.outcomes.find((o) => o.endsWith(`.${letter}`));
-  if (!outcome || !OUTCOMES27[outcome]) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
+  if (!outcome || !OUTCOMES30[outcome]) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
   const draw = () => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  const reviewed = SIGNED27.includes(d.id);
+  const reviewed = SIGNED30.includes(d.id);
   return family({ reviewed, draft: !reviewed, native: true, subject: "kiswahili", grade: 4, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse7 = (cskill, it) => {
@@ -75045,12 +85124,12 @@ var kiswahili_g4_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 4 Kiswahili from the CBC design",
-  map: { skills: SKILLS28, substrands: SUBSTRANDS27, outcomes: OUTCOMES27, misFeedback: MIS_FEEDBACK27 },
+  map: { skills: SKILLS31, substrands: SUBSTRANDS30, outcomes: OUTCOMES30, misFeedback: MIS_FEEDBACK30 },
   families: [...FAMILIES73, ...FAMILIES74, ...FAMILIES75, ...FAMILIES76, ...FAMILIES77, ...FAMILIES78],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g4_a.js", "kiswahili_g4_b.js", "kiswahili_g4_c.js", "kiswahili_g4_d.js", "kiswahili_g4_e.js", "kiswahili_g4_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED27,
+  signed: SIGNED30,
   signedFile: "kiswahili_g4_signed.js",
   awaiting: AWAITING9,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
@@ -75071,7 +85150,7 @@ var kiswahili_g4_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g5.js
-var SUBSTRANDS28 = {
+var SUBSTRANDS31 = {
   "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_": {
     "name": "Matamshi Bora Sauti f/v, s/z, l/r/ na th/dh (Theme 1: Mapishi)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -75565,7 +85644,7 @@ var SUBSTRANDS28 = {
     ]
   }
 };
-var OUTCOMES28 = {
+var OUTCOMES31 = {
   "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.a": {
     "letter": "a",
     "sub": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_"
@@ -76311,7 +86390,7 @@ var OUTCOMES28 = {
     "sub": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2"
   }
 };
-var SKILLS29 = {
+var SKILLS32 = {
   "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI": {
     "name": "Tofautisha sauti f/v, s/z, l/r na th/dh katika silabi, maneno na vitanzandimi",
     "sub": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_",
@@ -77348,7 +87427,7 @@ var SKILLS29 = {
     ]
   }
 };
-var MIS_FEEDBACK28 = {
+var MIS_FEEDBACK31 = {
   "M5_MAT_SWAP_T1": 'Sikiliza tena: "kula" ina sauti /l/. "kura" ni neno lingine lenye maana nyingine.',
   "M5_MAT_SPELL_T1": 'Neno lenye maana ya "to wash clothes" ni "fua". "vua" lina maana ya "to take off or to fish".',
   "M5_MAT_SAME_T1": 'Hapana. "fua" ni to wash clothes, na "vua" ni to take off or to fish.',
@@ -77602,7 +87681,7 @@ var MIS_FEEDBACK28 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g5_signed.js
-var SIGNED28 = [];
+var SIGNED31 = [];
 
 // src/ai-tutor/content/families/kiswahili_g5_lib.js
 var shuffle8 = (a) => {
@@ -77615,19 +87694,19 @@ var shuffle8 = (a) => {
 };
 var skillCode7 = (cs) => {
   const code = `KISW.G5.${cs}`;
-  if (!SKILLS29[code]) throw new Error(`no Kiswahili Grade 5 skill ${cs}`);
+  if (!SKILLS32[code]) throw new Error(`no Kiswahili Grade 5 skill ${cs}`);
   return code;
 };
 var outcomeLetters7 = (cs, n) => {
-  const k = SKILLS29[skillCode7(cs)];
+  const k = SKILLS32[skillCode7(cs)];
   const L16 = k.outcomes.filter((o) => o.startsWith(`${k.sub}.`)).map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf7 = (cskill, code) => {
-  const f = MIS_FEEDBACK28[code];
-  if (!f || !SKILLS29[cskill].mis.includes(code)) {
-    const sub = SKILLS29[cskill].sub;
-    const near4 = Object.values(SKILLS29).some((k) => k.sub === sub && k.mis.includes(code));
+  const f = MIS_FEEDBACK31[code];
+  if (!f || !SKILLS32[cskill].mis.includes(code)) {
+    const sub = SKILLS32[cskill].sub;
+    const near4 = Object.values(SKILLS32).some((k) => k.sub === sub && k.mis.includes(code));
     if (!f || !near4) throw new Error(`${cskill}: no misconception ${code} in its skill or sub-strand`);
   }
   return f;
@@ -77642,15 +87721,15 @@ var kw2 = (d) => {
   const cskill = skillCode7(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS29[cskill];
+  const k = SKILLS32[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
   const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`) && o.startsWith(`${k.sub}.`)) || k.outcomes.find((o) => o.endsWith(`.${letter}`));
-  if (!outcome || !OUTCOMES28[outcome]) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
+  if (!outcome || !OUTCOMES31[outcome]) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
   const draw = () => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  const reviewed = SIGNED28.includes(d.id);
+  const reviewed = SIGNED31.includes(d.id);
   return family({ reviewed, draft: !reviewed, native: true, subject: "kiswahili", grade: 5, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse8 = (cskill, it) => {
@@ -78464,12 +88543,12 @@ var kiswahili_g5_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 5 Kiswahili from the CBC design",
-  map: { skills: SKILLS29, substrands: SUBSTRANDS28, outcomes: OUTCOMES28, misFeedback: MIS_FEEDBACK28 },
+  map: { skills: SKILLS32, substrands: SUBSTRANDS31, outcomes: OUTCOMES31, misFeedback: MIS_FEEDBACK31 },
   families: [...FAMILIES79, ...FAMILIES80, ...FAMILIES81, ...FAMILIES82, ...FAMILIES83, ...FAMILIES84],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g5_a.js", "kiswahili_g5_b.js", "kiswahili_g5_c.js", "kiswahili_g5_d.js", "kiswahili_g5_e.js", "kiswahili_g5_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED28,
+  signed: SIGNED31,
   signedFile: "kiswahili_g5_signed.js",
   awaiting: AWAITING10,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
@@ -78490,7 +88569,7 @@ var kiswahili_g5_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g6.js
-var SUBSTRANDS29 = {
+var SUBSTRANDS32 = {
   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA": {
     "name": "Matamshi Bora (Theme 1: Viungo vya mwili vya ndani)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -79003,7 +89082,7 @@ var SUBSTRANDS29 = {
     ]
   }
 };
-var OUTCOMES29 = {
+var OUTCOMES32 = {
   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.a": {
     "letter": "a",
     "sub": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA"
@@ -79777,7 +89856,7 @@ var OUTCOMES29 = {
     "sub": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2"
   }
 };
-var SKILLS30 = {
+var SKILLS33 = {
   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI": {
     "name": "Tofautisha sauti d/nd, ch/sh, j/nj na g/ng katika silabi, maneno na vitanzandimi",
     "sub": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA",
@@ -80854,7 +90933,7 @@ var SKILLS30 = {
     ]
   }
 };
-var MIS_FEEDBACK29 = {
+var MIS_FEEDBACK32 = {
   "M6_MAT_SWAP_T1": 'Sikiliza tena: "jaa" ina sauti /j/. "njaa" ni neno lingine lenye maana nyingine.',
   "M6_MAT_SPELL_T1": 'Neno lenye maana ya "a chart" ni "chati". "shati" lina maana ya "a shirt".',
   "M6_MAT_SAME_T1": 'Hapana. "chati" ni a chart, na "shati" ni a shirt.',
@@ -81118,7 +91197,7 @@ var MIS_FEEDBACK29 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g6_signed.js
-var SIGNED29 = [];
+var SIGNED32 = [];
 
 // src/ai-tutor/content/families/kiswahili_g6_lib.js
 var shuffle9 = (a) => {
@@ -81131,19 +91210,19 @@ var shuffle9 = (a) => {
 };
 var skillCode8 = (cs) => {
   const code = `KISW.G6.${cs}`;
-  if (!SKILLS30[code]) throw new Error(`no Kiswahili Grade 6 skill ${cs}`);
+  if (!SKILLS33[code]) throw new Error(`no Kiswahili Grade 6 skill ${cs}`);
   return code;
 };
 var outcomeLetters8 = (cs, n) => {
-  const k = SKILLS30[skillCode8(cs)];
+  const k = SKILLS33[skillCode8(cs)];
   const L16 = k.outcomes.filter((o) => o.startsWith(`${k.sub}.`)).map((o) => o.split(".").pop());
   return Array.from({ length: n }, (_, i) => L16[i] || L16[0]);
 };
 var feedbackOf8 = (cskill, code) => {
-  const f = MIS_FEEDBACK29[code];
-  if (!f || !SKILLS30[cskill].mis.includes(code)) {
-    const sub = SKILLS30[cskill].sub;
-    const near4 = Object.values(SKILLS30).some((k) => k.sub === sub && k.mis.includes(code));
+  const f = MIS_FEEDBACK32[code];
+  if (!f || !SKILLS33[cskill].mis.includes(code)) {
+    const sub = SKILLS33[cskill].sub;
+    const near4 = Object.values(SKILLS33).some((k) => k.sub === sub && k.mis.includes(code));
     if (!f || !near4) throw new Error(`${cskill}: no misconception ${code} in its skill or sub-strand`);
   }
   return f;
@@ -81158,15 +91237,15 @@ var kw3 = (d) => {
   const cskill = skillCode8(cs);
   const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
   if (!kind) throw new Error(`${d.id}: needs a kind`);
-  const k = SKILLS30[cskill];
+  const k = SKILLS33[cskill];
   const letter = oc || k.outcomes[0].split(".").pop();
   const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`) && o.startsWith(`${k.sub}.`)) || k.outcomes.find((o) => o.endsWith(`.${letter}`));
-  if (!outcome || !OUTCOMES29[outcome]) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
+  if (!outcome || !OUTCOMES32[outcome]) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
   const draw = () => {
     const x = gen2(cskill);
     return x && x.options !== null ? x : null;
   };
-  const reviewed = SIGNED29.includes(d.id);
+  const reviewed = SIGNED32.includes(d.id);
   return family({ reviewed, draft: !reviewed, native: true, subject: "kiswahili", grade: 6, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
 };
 var parse9 = (cskill, it) => {
@@ -82019,12 +92098,12 @@ var kiswahili_g6_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 6 Kiswahili from the CBC design",
-  map: { skills: SKILLS30, substrands: SUBSTRANDS29, outcomes: OUTCOMES29, misFeedback: MIS_FEEDBACK29 },
+  map: { skills: SKILLS33, substrands: SUBSTRANDS32, outcomes: OUTCOMES32, misFeedback: MIS_FEEDBACK32 },
   families: [...FAMILIES85, ...FAMILIES86, ...FAMILIES87, ...FAMILIES88, ...FAMILIES89, ...FAMILIES90],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g6_a.js", "kiswahili_g6_b.js", "kiswahili_g6_c.js", "kiswahili_g6_d.js", "kiswahili_g6_e.js", "kiswahili_g6_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED29,
+  signed: SIGNED32,
   signedFile: "kiswahili_g6_signed.js",
   awaiting: AWAITING11,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
@@ -82045,7 +92124,7 @@ var kiswahili_g6_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g7.js
-var SUBSTRANDS30 = {
+var SUBSTRANDS33 = {
   "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU": {
     "name": "Kusikiliza na Kujibu (Theme 1: Usafi wa kibinafsi)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -82663,7 +92742,7 @@ var SUBSTRANDS30 = {
     ]
   }
 };
-var OUTCOMES30 = {
+var OUTCOMES33 = {
   "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.a": {
     "letter": "a",
     "sub": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU"
@@ -83689,7 +93768,7 @@ var OUTCOMES30 = {
     "sub": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM"
   }
 };
-var SKILLS31 = {
+var SKILLS34 = {
   "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO": {
     "name": "Sikiliza na ujibu mazungumzo ipasavyo",
     "sub": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
@@ -84925,7 +95004,7 @@ var SKILLS31 = {
     ]
   }
 };
-var MIS_FEEDBACK30 = {
+var MIS_FEEDBACK33 = {
   "M7_ORL_REPLY_T1": "Jibu kikamilifu na umrudishie mwenzako swali.",
   "M7_ORL_INTERRUPT_T1": "Msikilize mzungumzaji hadi amalize.",
   "M7_ORL_EYES_T1": "Mwangalie mzungumzaji ili aone unamsikiliza.",
@@ -85198,15 +95277,15 @@ var MIS_FEEDBACK30 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g7_signed.js
-var SIGNED30 = [];
+var SIGNED33 = [];
 
 // src/ai-tutor/content/families/kiswahili_g7_lib.js
 var { choose: choose28, typed: typed20, spot: spot28, sfam: sfam20 } = makeKit({
   subject: "kiswahili",
   grade: 7,
   prefix: "KISW",
-  signed: SIGNED30,
-  map: { skills: SKILLS31, outcomes: OUTCOMES30, misFeedback: MIS_FEEDBACK30 }
+  signed: SIGNED33,
+  map: { skills: SKILLS34, outcomes: OUTCOMES33, misFeedback: MIS_FEEDBACK33 }
 });
 var fam17 = (tag, cs, form, rung2, gen2, oc, extra) => sfam20({ id: `kiswahili7.${tag}`, cs, form, rung: rung2, gen: gen2, native: true, ...oc ? { oc } : {}, ...extra || {} });
 var m11 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -85955,12 +96034,12 @@ var kiswahili_g7_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 7 Kiswahili from the CBC design",
-  map: { skills: SKILLS31, substrands: SUBSTRANDS30, outcomes: OUTCOMES30, misFeedback: MIS_FEEDBACK30 },
+  map: { skills: SKILLS34, substrands: SUBSTRANDS33, outcomes: OUTCOMES33, misFeedback: MIS_FEEDBACK33 },
   families: [...FAMILIES91, ...FAMILIES92, ...FAMILIES93, ...FAMILIES94],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g7_a.js", "kiswahili_g7_b.js", "kiswahili_g7_c.js", "kiswahili_g7_reading.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED30,
+  signed: SIGNED33,
   signedFile: "kiswahili_g7_signed.js",
   awaiting: AWAITING12,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
@@ -85981,7 +96060,7 @@ var kiswahili_g7_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g8.js
-var SUBSTRANDS31 = {
+var SUBSTRANDS34 = {
   "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU": {
     "name": "Kusikiliza na Kujibu (Theme 1: Usafi wa sehemu za umma)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -86584,7 +96663,7 @@ var SUBSTRANDS31 = {
     ]
   }
 };
-var OUTCOMES31 = {
+var OUTCOMES34 = {
   "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.a": {
     "letter": "a",
     "sub": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU"
@@ -87550,7 +97629,7 @@ var OUTCOMES31 = {
     "sub": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM"
   }
 };
-var SKILLS32 = {
+var SKILLS35 = {
   "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO": {
     "name": "Sikiliza na ujibu mahojiano ipasavyo",
     "sub": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
@@ -88763,7 +98842,7 @@ var SKILLS32 = {
     ]
   }
 };
-var MIS_FEEDBACK31 = {
+var MIS_FEEDBACK34 = {
   "M8_ORL_CLOSEDQ_T1": "Uliza maswali yanayomfanya mhojiwa aeleze.",
   "M8_ORL_NOINTRO_T1": "Anza kwa salamu, jitambulishe, eleza lengo.",
   "M8_ORL_INTERRUPT_T1": "Msikilize mzungumzaji hadi amalize.",
@@ -89041,15 +99120,15 @@ var MIS_FEEDBACK31 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g8_signed.js
-var SIGNED31 = [];
+var SIGNED34 = [];
 
 // src/ai-tutor/content/families/kiswahili_g8_lib.js
 var { choose: choose29, typed: typed21, spot: spot29, sfam: sfam21 } = makeKit({
   subject: "kiswahili",
   grade: 8,
   prefix: "KISW",
-  signed: SIGNED31,
-  map: { skills: SKILLS32, outcomes: OUTCOMES31, misFeedback: MIS_FEEDBACK31 }
+  signed: SIGNED34,
+  map: { skills: SKILLS35, outcomes: OUTCOMES34, misFeedback: MIS_FEEDBACK34 }
 });
 var fam18 = (tag, cs, form, rung2, gen2, oc, extra) => sfam21({ id: `kiswahili8.${tag}`, cs, form, rung: rung2, gen: gen2, native: true, ...oc ? { oc } : {}, ...extra || {} });
 var m12 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -89760,12 +99839,12 @@ var kiswahili_g8_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 8 Kiswahili from the CBC design",
-  map: { skills: SKILLS32, substrands: SUBSTRANDS31, outcomes: OUTCOMES31, misFeedback: MIS_FEEDBACK31 },
+  map: { skills: SKILLS35, substrands: SUBSTRANDS34, outcomes: OUTCOMES34, misFeedback: MIS_FEEDBACK34 },
   families: [...FAMILIES95, ...FAMILIES96, ...FAMILIES97],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g8_a.js", "kiswahili_g8_b.js", "kiswahili_g8_reading.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED31,
+  signed: SIGNED34,
   signedFile: "kiswahili_g8_signed.js",
   awaiting: AWAITING13,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
@@ -89786,7 +99865,7 @@ var kiswahili_g8_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.kiswahili.g9.js
-var SUBSTRANDS32 = {
+var SUBSTRANDS35 = {
   "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU": {
     "name": "Kusikiliza na Kujibu (Theme 1: Usafi wa mazingira)",
     "strand": "Kusikiliza na Kuzungumza",
@@ -90398,7 +100477,7 @@ var SUBSTRANDS32 = {
     ]
   }
 };
-var OUTCOMES32 = {
+var OUTCOMES35 = {
   "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.a": {
     "letter": "a",
     "sub": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU"
@@ -91400,7 +101479,7 @@ var OUTCOMES32 = {
     "sub": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM"
   }
 };
-var SKILLS33 = {
+var SKILLS36 = {
   "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA": {
     "name": "Sikiliza na uchangie mjadala ipasavyo",
     "sub": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
@@ -92680,7 +102759,7 @@ var SKILLS33 = {
     ]
   }
 };
-var MIS_FEEDBACK32 = {
+var MIS_FEEDBACK35 = {
   "M9_ORL_NOREASON_T1": "Toa hoja, sababu na mfano.",
   "M9_ORL_ATTACK_T1": "Pinga hoja kwa heshima, si mtu.",
   "M9_ORL_INTERRUPT_T1": "Msikilize mzungumzaji hadi amalize.",
@@ -92970,15 +103049,15 @@ var MIS_FEEDBACK32 = {
 };
 
 // src/ai-tutor/content/families/kiswahili_g9_signed.js
-var SIGNED32 = [];
+var SIGNED35 = [];
 
 // src/ai-tutor/content/families/kiswahili_g9_lib.js
 var { choose: choose30, typed: typed22, spot: spot30, sfam: sfam22 } = makeKit({
   subject: "kiswahili",
   grade: 9,
   prefix: "KISW",
-  signed: SIGNED32,
-  map: { skills: SKILLS33, outcomes: OUTCOMES32, misFeedback: MIS_FEEDBACK32 }
+  signed: SIGNED35,
+  map: { skills: SKILLS36, outcomes: OUTCOMES35, misFeedback: MIS_FEEDBACK35 }
 });
 var fam19 = (tag, cs, form, rung2, gen2, oc, extra) => sfam22({ id: `kiswahili9.${tag}`, cs, form, rung: rung2, gen: gen2, native: true, ...oc ? { oc } : {}, ...extra || {} });
 var m13 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -93772,12 +103851,12 @@ var kiswahili_g9_default = {
   shortName: "Kiswahili",
   icon: "book",
   description: "Grade 9 Kiswahili from the CBC design",
-  map: { skills: SKILLS33, substrands: SUBSTRANDS32, outcomes: OUTCOMES32, misFeedback: MIS_FEEDBACK32 },
+  map: { skills: SKILLS36, substrands: SUBSTRANDS35, outcomes: OUTCOMES35, misFeedback: MIS_FEEDBACK35 },
   families: [...FAMILIES98, ...FAMILIES99, ...FAMILIES100],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g9_a.js", "kiswahili_g9_b.js", "kiswahili_g9_reading.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED32,
+  signed: SIGNED35,
   signedFile: "kiswahili_g9_signed.js",
   awaiting: AWAITING14,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
@@ -93798,7 +103877,7 @@ var kiswahili_g9_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.pretechnical.g7.js
-var SUBSTRANDS33 = {
+var SUBSTRANDS36 = {
   "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH": {
     "name": "Introduction to Pre-Technical Studies",
     "strand": "Foundations of Pre -Technical Studies",
@@ -93942,7 +104021,7 @@ var SUBSTRANDS33 = {
     ]
   }
 };
-var OUTCOMES33 = {
+var OUTCOMES36 = {
   "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.a": {
     "letter": "a",
     "sub": "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH"
@@ -94176,7 +104255,7 @@ var OUTCOMES33 = {
     "sub": "PRE_.G7.ENTREP.FINANCIAL_GOALS"
   }
 };
-var SKILLS34 = {
+var SKILLS37 = {
   "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO": {
     "name": "Name the strands of Pre-Technical Studies and say how it is used in daily life",
     "sub": "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH",
@@ -94798,7 +104877,7 @@ var SKILLS34 = {
     ]
   }
 };
-var MIS_FEEDBACK33 = {
+var MIS_FEEDBACK36 = {
   "M_PI_TOOLS_ONLY": "Pre-Technical Studies also covers safety, drawing, materials, computers and entrepreneurship, not only tools.",
   "M_PI_BOYS": "Everybody uses it: girls and boys, in homes, shops, farms, offices and workshops.",
   "M_PI_SCHOOL_ONLY": "Safety, tools, drawings and small businesses are part of daily life everywhere.",
@@ -94951,15 +105030,15 @@ var MIS_FEEDBACK33 = {
 };
 
 // src/ai-tutor/content/families/pretechnical_g7_signed.js
-var SIGNED33 = [];
+var SIGNED36 = [];
 
 // src/ai-tutor/content/families/pretechnical_g7_lib.js
 var { choose: choose31, typed: typed23, spot: spot31, sfam: sfam23 } = makeKit({
   subject: "pretechnical",
   grade: 7,
   prefix: "PRET",
-  signed: SIGNED33,
-  map: { skills: SKILLS34, outcomes: OUTCOMES33, misFeedback: MIS_FEEDBACK33 }
+  signed: SIGNED36,
+  map: { skills: SKILLS37, outcomes: OUTCOMES36, misFeedback: MIS_FEEDBACK36 }
 });
 var fam20 = (tag, cs, form, rung2, gen2, oc) => sfam23({ id: `pretechnical7.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m14 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -95739,12 +105818,12 @@ var pretechnical_g7_default = {
   shortName: "Pre-Technical Studies",
   icon: "book",
   description: "Grade 7 Pre-Technical Studies from the CBC design",
-  map: { skills: SKILLS34, substrands: SUBSTRANDS33, outcomes: OUTCOMES33, misFeedback: MIS_FEEDBACK33 },
+  map: { skills: SKILLS37, substrands: SUBSTRANDS36, outcomes: OUTCOMES36, misFeedback: MIS_FEEDBACK36 },
   families: [...FAMILIES101, ...FAMILIES102, ...FAMILIES103],
   // add each family file you write: [...A, ...B]
   familyFiles: ["pretechnical_g7_a.js", "pretechnical_g7_b.js", "pretechnical_g7_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED33,
+  signed: SIGNED36,
   signedFile: "pretechnical_g7_signed.js",
   awaiting: AWAITING15,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
@@ -95765,7 +105844,7 @@ var pretechnical_g7_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.pretechnical.g8.js
-var SUBSTRANDS34 = {
+var SUBSTRANDS37 = {
   "PRE_.G8.FOUNDA.FIRE_SAFETY": {
     "name": "Fire Safety",
     "strand": "Foundations of Pre-Technical Studies",
@@ -95911,7 +105990,7 @@ var SUBSTRANDS34 = {
     ]
   }
 };
-var OUTCOMES34 = {
+var OUTCOMES37 = {
   "PRE_.G8.FOUNDA.FIRE_SAFETY.a": {
     "letter": "a",
     "sub": "PRE_.G8.FOUNDA.FIRE_SAFETY"
@@ -96153,7 +106232,7 @@ var OUTCOMES34 = {
     "sub": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN"
   }
 };
-var SKILLS35 = {
+var SKILLS38 = {
   "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES": {
     "name": "Name the causes of fire outbreaks at home, school and in the community",
     "sub": "PRE_.G8.FOUNDA.FIRE_SAFETY",
@@ -96588,7 +106667,7 @@ var SKILLS35 = {
     ]
   }
 };
-var MIS_FEEDBACK34 = {
+var MIS_FEEDBACK37 = {
   "M_PT8_FC_NATURE_ONLY": "Most fires at home start from careless human acts such as an unattended candle or stove.",
   "M_PT8_FC_WIRING": "Overloaded sockets and damaged wires get hot and can start a fire.",
   "M_PT8_FC_FUEL": "Fuels burn easily, so they are stored away from heat.",
@@ -96695,15 +106774,15 @@ var MIS_FEEDBACK34 = {
 };
 
 // src/ai-tutor/content/families/pretechnical_g8_signed.js
-var SIGNED34 = [];
+var SIGNED37 = [];
 
 // src/ai-tutor/content/families/pretechnical_g8_lib.js
 var { choose: choose32, typed: typed24, spot: spot32, sfam: sfam24 } = makeKit({
   subject: "pretechnical",
   grade: 8,
   prefix: "PRET",
-  signed: SIGNED34,
-  map: { skills: SKILLS35, outcomes: OUTCOMES34, misFeedback: MIS_FEEDBACK34 }
+  signed: SIGNED37,
+  map: { skills: SKILLS38, outcomes: OUTCOMES37, misFeedback: MIS_FEEDBACK37 }
 });
 var fam21 = (tag, cs, form, rung2, gen2, oc) => sfam24({ id: `pretechnical8.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m15 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -97111,12 +107190,12 @@ var pretechnical_g8_default = {
   shortName: "Pre-Technical Studies",
   icon: "book",
   description: "Grade 8 Pre-Technical Studies from the CBC design",
-  map: { skills: SKILLS35, substrands: SUBSTRANDS34, outcomes: OUTCOMES34, misFeedback: MIS_FEEDBACK34 },
+  map: { skills: SKILLS38, substrands: SUBSTRANDS37, outcomes: OUTCOMES37, misFeedback: MIS_FEEDBACK37 },
   families: [...FAMILIES104, ...FAMILIES105],
   // add each family file you write: [...A, ...B]
   familyFiles: ["pretechnical_g8_a.js", "pretechnical_g8_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED34,
+  signed: SIGNED37,
   signedFile: "pretechnical_g8_signed.js",
   awaiting: AWAITING16,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
@@ -97137,7 +107216,7 @@ var pretechnical_g8_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.pretechnical.g9.js
-var SUBSTRANDS35 = {
+var SUBSTRANDS38 = {
   "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR": {
     "name": "Safety on Raised Platforms",
     "strand": "Foundations of Pre-Technical Studies",
@@ -97272,7 +107351,7 @@ var SUBSTRANDS35 = {
     ]
   }
 };
-var OUTCOMES35 = {
+var OUTCOMES38 = {
   "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.a": {
     "letter": "a",
     "sub": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR"
@@ -97494,7 +107573,7 @@ var OUTCOMES35 = {
     "sub": "PRE_.G9.ENTREP.BUSINESS_PLAN"
   }
 };
-var SKILLS36 = {
+var SKILLS39 = {
   "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS": {
     "name": "Name raised platforms and the risks of working on them",
     "sub": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR",
@@ -97903,7 +107982,7 @@ var SKILLS36 = {
     ]
   }
 };
-var MIS_FEEDBACK35 = {
+var MIS_FEEDBACK38 = {
   "M_PT9_RP_SAFE": "Work at height needs a trained adult and a helper.",
   "M_PT9_RP_RISK": "Falling is the main risk at height.",
   "M_PT9_RP_TYPE": "A scaffold is a raised platform.",
@@ -98007,15 +108086,15 @@ var MIS_FEEDBACK35 = {
 };
 
 // src/ai-tutor/content/families/pretechnical_g9_signed.js
-var SIGNED35 = [];
+var SIGNED38 = [];
 
 // src/ai-tutor/content/families/pretechnical_g9_lib.js
 var { choose: choose33, typed: typed25, spot: spot33, sfam: sfam25 } = makeKit({
   subject: "pretechnical",
   grade: 9,
   prefix: "PRET",
-  signed: SIGNED35,
-  map: { skills: SKILLS36, outcomes: OUTCOMES35, misFeedback: MIS_FEEDBACK35 }
+  signed: SIGNED38,
+  map: { skills: SKILLS39, outcomes: OUTCOMES38, misFeedback: MIS_FEEDBACK38 }
 });
 var fam22 = (tag, cs, form, rung2, gen2, oc) => sfam25({ id: `pretechnical9.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m16 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -98396,12 +108475,12 @@ var pretechnical_g9_default = {
   shortName: "Pre-Technical Studies",
   icon: "book",
   description: "Grade 9 Pre-Technical Studies from the CBC design",
-  map: { skills: SKILLS36, substrands: SUBSTRANDS35, outcomes: OUTCOMES35, misFeedback: MIS_FEEDBACK35 },
+  map: { skills: SKILLS39, substrands: SUBSTRANDS38, outcomes: OUTCOMES38, misFeedback: MIS_FEEDBACK38 },
   families: [...FAMILIES106, ...FAMILIES107],
   // add each family file you write: [...A, ...B]
   familyFiles: ["pretechnical_g9_a.js", "pretechnical_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED35,
+  signed: SIGNED38,
   signedFile: "pretechnical_g9_signed.js",
   awaiting: AWAITING17,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
@@ -98422,7 +108501,7 @@ var pretechnical_g9_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.science.g4.js
-var SUBSTRANDS36 = {
+var SUBSTRANDS39 = {
   "SCIE.G4.LIVING.PLANTS": {
     "name": "Plants",
     "strand": "Living Things and their Environment",
@@ -98510,7 +108589,7 @@ var SUBSTRANDS36 = {
     ]
   }
 };
-var OUTCOMES36 = {
+var OUTCOMES39 = {
   "SCIE.G4.LIVING.PLANTS.a": {
     "letter": "a",
     "sub": "SCIE.G4.LIVING.PLANTS"
@@ -98640,7 +108719,7 @@ var OUTCOMES36 = {
     "sub": "SCIE.G4.FORCE_.HEAT"
   }
 };
-var SKILLS37 = {
+var SKILLS40 = {
   "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS": {
     "name": "Identify the characteristics of plants as living things",
     "sub": "SCIE.G4.LIVING.PLANTS",
@@ -99052,7 +109131,7 @@ var SKILLS37 = {
     ]
   }
 };
-var MIS_FEEDBACK36 = {
+var MIS_FEEDBACK39 = {
   "M_PL_NOT_ALIVE": "Plants are alive even though they do not walk. They grow, make seeds, remove waste, respond to their surroundings and die.",
   "M_PL_NO_WASTE": "Plants also remove waste. They give out waste gases and water through the leaves, and old leaves fall.",
   "M_PL_NO_RESPOND": "Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.",
@@ -99156,15 +109235,15 @@ var MIS_FEEDBACK36 = {
 };
 
 // src/ai-tutor/content/families/science_g4_signed.js
-var SIGNED36 = [];
+var SIGNED39 = [];
 
 // src/ai-tutor/content/families/science_g4_lib.js
 var { choose: choose34, typed: typed26, spot: spot34, sfam: sfam26 } = makeKit({
   subject: "science",
   grade: 4,
   prefix: "SCIE",
-  signed: SIGNED36,
-  map: { skills: SKILLS37, outcomes: OUTCOMES36, misFeedback: MIS_FEEDBACK36 }
+  signed: SIGNED39,
+  map: { skills: SKILLS40, outcomes: OUTCOMES39, misFeedback: MIS_FEEDBACK39 }
 });
 var fam23 = (tag, cs, form, rung2, gen2, oc) => sfam26({ id: `science4.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m17 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -99900,12 +109979,12 @@ var science_g4_default = {
   shortName: "Science and Technology",
   icon: "zap",
   description: "Grade 4 Science and Technology from the CBC design",
-  map: { skills: SKILLS37, substrands: SUBSTRANDS36, outcomes: OUTCOMES36, misFeedback: MIS_FEEDBACK36 },
+  map: { skills: SKILLS40, substrands: SUBSTRANDS39, outcomes: OUTCOMES39, misFeedback: MIS_FEEDBACK39 },
   families: [...FAMILIES108, ...FAMILIES109, ...FAMILIES110],
   // add each family file you write: [...A, ...B]
   familyFiles: ["science_g4_a.js", "science_g4_b.js", "science_g4_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED36,
+  signed: SIGNED39,
   signedFile: "science_g4_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -99924,7 +110003,7 @@ var science_g4_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.science.g5.js
-var SUBSTRANDS37 = {
+var SUBSTRANDS40 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS": {
     "name": "Classification of Plants",
     "strand": "Living Things and their Environment",
@@ -100006,7 +110085,7 @@ var SUBSTRANDS37 = {
     ]
   }
 };
-var OUTCOMES37 = {
+var OUTCOMES40 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a": {
     "letter": "a",
     "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS"
@@ -100136,7 +110215,7 @@ var OUTCOMES37 = {
     "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER"
   }
 };
-var SKILLS38 = {
+var SKILLS41 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT": {
     "name": "Classify plants as flowering or non-flowering",
     "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
@@ -100694,7 +110773,7 @@ var SKILLS38 = {
     ]
   }
 };
-var MIS_FEEDBACK37 = {
+var MIS_FEEDBACK40 = {
   "M_FL_SMALL_FLOWER_NOT_FLOWER": "Many flowers are small and not bright. Maize has flowers too: the tassel at the top and the silk on the cob. A plant that makes seeds inside fruits or grains is a flowering plant.",
   "M_FL_ALL_TREES_FLOWER": "Cypress and pine are trees, but they make cones, not flowers and fruits. That makes them non-flowering plants.",
   "M_FL_ALL_PLANTS_FLOWER": "Ferns and mosses never make flowers. They make tiny spores instead. They are non-flowering plants.",
@@ -100830,9 +110909,9 @@ var MIS_FEEDBACK37 = {
   "M_HU_BLACK_POT_SLOW": "Black surfaces take in more of the sun's heat. Shiny ones reflect it.",
   "M_HS_HANDLE_TURNED_OUT": "Turn pan handles inwards so nobody knocks the hot pan over."
 };
-var SKILLS_SCI_G5 = SKILLS38;
-var SUBSTRANDS_SCI_G5 = SUBSTRANDS37;
-var OUTCOMES_SCI_G5 = OUTCOMES37;
+var SKILLS_SCI_G5 = SKILLS41;
+var SUBSTRANDS_SCI_G5 = SUBSTRANDS40;
+var OUTCOMES_SCI_G5 = OUTCOMES40;
 
 // src/ai-tutor/content/families/sci_signed.js
 var SIGNED_SCIENCE = [];
@@ -100843,7 +110922,7 @@ var { choose: choose35, typed: typed27, spot: spot35, sfam: sfam27 } = makeKit({
   grade: 5,
   prefix: "SCIE",
   signed: SIGNED_SCIENCE,
-  map: { skills: SKILLS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK37 }
+  map: { skills: SKILLS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK40 }
 });
 
 // src/ai-tutor/content/families/sci_g5_living.js
@@ -102237,7 +112316,7 @@ var science_g5_default = {
   icon: "zap",
   description: "Grade 5 Science and Technology from the CBC design",
   // The curriculum map (generated by scripts/build-subject-map.mjs) and the families written from it.
-  map: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK37 },
+  map: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK40 },
   families: [...FAMILIES111, ...FAMILIES112, ...FAMILIES113],
   // The files that hold the families (basenames in content/families/): a phone build drops them while the signed list is empty.
   familyFiles: ["sci_g5_living.js", "sci_g5_matter.js", "sci_g5_force.js"],
@@ -102260,7 +112339,7 @@ var science_g5_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.science.g6.js
-var SUBSTRANDS38 = {
+var SUBSTRANDS41 = {
   "SCIE.G6.LIVING.FUNGI": {
     "name": "Fungi",
     "strand": "Living things and their Environment",
@@ -102344,7 +112423,7 @@ var SUBSTRANDS38 = {
     ]
   }
 };
-var OUTCOMES38 = {
+var OUTCOMES41 = {
   "SCIE.G6.LIVING.FUNGI.a": {
     "letter": "a",
     "sub": "SCIE.G6.LIVING.FUNGI"
@@ -102482,7 +112561,7 @@ var OUTCOMES38 = {
     "sub": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE"
   }
 };
-var SKILLS39 = {
+var SKILLS42 = {
   "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY": {
     "name": "Identify common fungi: mushrooms, toadstools, puffballs, yeast and moulds",
     "sub": "SCIE.G6.LIVING.FUNGI",
@@ -103066,7 +113145,7 @@ var SKILLS39 = {
     ]
   }
 };
-var MIS_FEEDBACK38 = {
+var MIS_FEEDBACK41 = {
   "M_FI_PLANT": "A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.",
   "M_FI_MOULD_DIRT": "The green fuzz is mould, a fungus. It grows and spreads, so it is alive.",
   "M_FI_YEAST_NOT_LIVING": "Yeast is a tiny living fungus. The dry grains wake up when they get warmth, water and food.",
@@ -103210,15 +113289,15 @@ var MIS_FEEDBACK38 = {
 };
 
 // src/ai-tutor/content/families/science_g6_signed.js
-var SIGNED37 = [];
+var SIGNED40 = [];
 
 // src/ai-tutor/content/families/science_g6_lib.js
 var { choose: choose36, typed: typed28, spot: spot36, sfam: sfam28 } = makeKit({
   subject: "science",
   grade: 6,
   prefix: "SCIE",
-  signed: SIGNED37,
-  map: { skills: SKILLS39, outcomes: OUTCOMES38, misFeedback: MIS_FEEDBACK38 }
+  signed: SIGNED40,
+  map: { skills: SKILLS42, outcomes: OUTCOMES41, misFeedback: MIS_FEEDBACK41 }
 });
 var fam24 = (tag, cs, form, rung2, gen2, oc) => sfam28({ id: `science6.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m18 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -104025,12 +114104,12 @@ var science_g6_default = {
   shortName: "Science and Technology",
   icon: "zap",
   description: "Grade 6 Science and Technology from the CBC design",
-  map: { skills: SKILLS39, substrands: SUBSTRANDS38, outcomes: OUTCOMES38, misFeedback: MIS_FEEDBACK38 },
+  map: { skills: SKILLS42, substrands: SUBSTRANDS41, outcomes: OUTCOMES41, misFeedback: MIS_FEEDBACK41 },
   families: [...FAMILIES114, ...FAMILIES115, ...FAMILIES116],
   // add each family file you write: [...A, ...B]
   familyFiles: ["science_g6_a.js", "science_g6_b.js", "science_g6_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED37,
+  signed: SIGNED40,
   signedFile: "science_g6_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -104049,7 +114128,7 @@ var science_g6_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g4.js
-var SUBSTRANDS39 = {
+var SUBSTRANDS42 = {
   "SOCI.G4.NATURA.COMPASS_DIRECTION": {
     "name": "Compass Direction",
     "strand": "Natural and Historic Built Environments",
@@ -104237,7 +114316,7 @@ var SUBSTRANDS39 = {
     ]
   }
 };
-var OUTCOMES39 = {
+var OUTCOMES42 = {
   "SOCI.G4.NATURA.COMPASS_DIRECTION.a": {
     "letter": "a",
     "sub": "SOCI.G4.NATURA.COMPASS_DIRECTION"
@@ -104527,7 +114606,7 @@ var OUTCOMES39 = {
     "sub": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I"
   }
 };
-var SKILLS40 = {
+var SKILLS43 = {
   "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS": {
     "name": "Name the four cardinal points, their order and their opposites",
     "sub": "SOCI.G4.NATURA.COMPASS_DIRECTION",
@@ -105185,7 +115264,7 @@ var SKILLS40 = {
     ]
   }
 };
-var MIS_FEEDBACK39 = {
+var MIS_FEEDBACK42 = {
   "M_CD_OPPOSITE": "North and south are opposite, and east and west are opposite. The opposite point is straight across the compass.",
   "M_CD_LEFT_RIGHT": "Face north and east is on your right hand. West is on your left hand.",
   "M_CD_SUN": "The sun rises in the east and sets in the west.",
@@ -105345,15 +115424,15 @@ var MIS_FEEDBACK39 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g4_signed.js
-var SIGNED38 = [];
+var SIGNED41 = [];
 
 // src/ai-tutor/content/families/socialstudies_g4_lib.js
 var { choose: choose37, typed: typed29, spot: spot37, sfam: sfam29 } = makeKit({
   subject: "socialstudies",
   grade: 4,
   prefix: "SOCI",
-  signed: SIGNED38,
-  map: { skills: SKILLS40, outcomes: OUTCOMES39, misFeedback: MIS_FEEDBACK39 }
+  signed: SIGNED41,
+  map: { skills: SKILLS43, outcomes: OUTCOMES42, misFeedback: MIS_FEEDBACK42 }
 });
 var fam25 = (tag, cs, form, rung2, gen2, oc) => sfam29({ id: `socialstudies4.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var Q5 = (q, right, wrongs, why, extra) => [q, right, wrongs.map((x) => {
@@ -106285,12 +116364,12 @@ var socialstudies_g4_default = {
   shortName: "Social Studies",
   icon: "globe",
   description: "Grade 4 Social Studies from the CBC design",
-  map: { skills: SKILLS40, substrands: SUBSTRANDS39, outcomes: OUTCOMES39, misFeedback: MIS_FEEDBACK39 },
+  map: { skills: SKILLS43, substrands: SUBSTRANDS42, outcomes: OUTCOMES42, misFeedback: MIS_FEEDBACK42 },
   families: [...FAMILIES117, ...FAMILIES118, ...FAMILIES119, ...FAMILIES120, ...FAMILIES121],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g4_a.js", "socialstudies_g4_b.js", "socialstudies_g4_c.js", "socialstudies_g4_d.js", "socialstudies_g4_e.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED38,
+  signed: SIGNED41,
   signedFile: "socialstudies_g4_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -106309,7 +116388,7 @@ var socialstudies_g4_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g5.js
-var SUBSTRANDS40 = {
+var SUBSTRANDS43 = {
   "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP": {
     "name": "Elements of a Map",
     "strand": "Natural and the Built Environments",
@@ -106529,7 +116608,7 @@ var SUBSTRANDS40 = {
     ]
   }
 };
-var OUTCOMES40 = {
+var OUTCOMES43 = {
   "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a": {
     "letter": "a",
     "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP"
@@ -106875,7 +116954,7 @@ var OUTCOMES40 = {
     "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
   }
 };
-var SKILLS41 = {
+var SKILLS44 = {
   "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS": {
     "name": "Name the elements of a map and say what each is for",
     "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP",
@@ -107697,7 +117776,7 @@ var SKILLS41 = {
     ]
   }
 };
-var MIS_FEEDBACK40 = {
+var MIS_FEEDBACK43 = {
   "M_EM_SCALE_KEY": "The key tells what each symbol means. The scale tells how far a distance on the map is on the ground.",
   "M_EM_FRAME_TITLE": "The title says what the map is about. The frame is the border line around the map.",
   "M_EM_COMPASS_ROLE": "The compass shows direction. It tells you which way is north, south, east and west on the map.",
@@ -107893,15 +117972,15 @@ var MIS_FEEDBACK40 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g5_signed.js
-var SIGNED39 = [];
+var SIGNED42 = [];
 
 // src/ai-tutor/content/families/socialstudies_g5_lib.js
 var { choose: choose38, typed: typed30, spot: spot38, sfam: sfam30 } = makeKit({
   subject: "socialstudies",
   grade: 5,
   prefix: "SOCI",
-  signed: SIGNED39,
-  map: { skills: SKILLS41, outcomes: OUTCOMES40, misFeedback: MIS_FEEDBACK40 }
+  signed: SIGNED42,
+  map: { skills: SKILLS44, outcomes: OUTCOMES43, misFeedback: MIS_FEEDBACK43 }
 });
 var fam26 = (tag, cs, form, rung2, gen2, oc) => sfam30({ id: `socialstudies5.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 
@@ -109028,12 +119107,12 @@ var socialstudies_g5_default = {
   shortName: "Social Studies",
   icon: "globe",
   description: "Grade 5 Social Studies from the CBC design",
-  map: { skills: SKILLS41, substrands: SUBSTRANDS40, outcomes: OUTCOMES40, misFeedback: MIS_FEEDBACK40 },
+  map: { skills: SKILLS44, substrands: SUBSTRANDS43, outcomes: OUTCOMES43, misFeedback: MIS_FEEDBACK43 },
   families: [...FAMILIES122, ...FAMILIES123, ...FAMILIES124, ...FAMILIES125],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g5_a.js", "socialstudies_g5_b.js", "socialstudies_g5_c.js", "socialstudies_g5_d.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED39,
+  signed: SIGNED42,
   signedFile: "socialstudies_g5_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -109052,7 +119131,7 @@ var socialstudies_g5_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g6.js
-var SUBSTRANDS41 = {
+var SUBSTRANDS44 = {
   "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU": {
     "name": "Position and Size of Countries in Eastern Africa",
     "strand": "Natural and the Built Environments",
@@ -109280,7 +119359,7 @@ var SUBSTRANDS41 = {
     ]
   }
 };
-var OUTCOMES41 = {
+var OUTCOMES44 = {
   "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.a": {
     "letter": "a",
     "sub": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU"
@@ -109658,7 +119737,7 @@ var OUTCOMES41 = {
     "sub": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS"
   }
 };
-var SKILLS42 = {
+var SKILLS45 = {
   "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES": {
     "name": "Name the countries of Eastern Africa and tell them from other regions",
     "sub": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU",
@@ -110661,7 +120740,7 @@ var SKILLS42 = {
     ]
   }
 };
-var MIS_FEEDBACK41 = {
+var MIS_FEEDBACK44 = {
   "M_PS_ADD_NEIGHBOUR": "Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.",
   "M_PS_MISS_HORN": "Ethiopia, Somalia, Djibouti and Eritrea are also in Eastern Africa. The region is bigger than the first countries a child learns.",
   "M_PS_NORTH_AFRICA": "Egypt is in North Africa. Burundi is in Eastern Africa.",
@@ -110901,15 +120980,15 @@ var MIS_FEEDBACK41 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g6_signed.js
-var SIGNED40 = [];
+var SIGNED43 = [];
 
 // src/ai-tutor/content/families/socialstudies_g6_lib.js
 var { choose: choose39, typed: typed31, spot: spot39, sfam: sfam31 } = makeKit({
   subject: "socialstudies",
   grade: 6,
   prefix: "SOCI",
-  signed: SIGNED40,
-  map: { skills: SKILLS42, outcomes: OUTCOMES41, misFeedback: MIS_FEEDBACK41 }
+  signed: SIGNED43,
+  map: { skills: SKILLS45, outcomes: OUTCOMES44, misFeedback: MIS_FEEDBACK44 }
 });
 var fam27 = (tag, cs, form, rung2, gen2, oc) => sfam31({ id: `socialstudies6.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var Q6 = (q, right, wrongs, why, extra) => [q, right, wrongs.map((x) => {
@@ -112459,12 +122538,12 @@ var socialstudies_g6_default = {
   shortName: "Social Studies",
   icon: "book",
   description: "Grade 6 Social Studies from the CBC design",
-  map: { skills: SKILLS42, substrands: SUBSTRANDS41, outcomes: OUTCOMES41, misFeedback: MIS_FEEDBACK41 },
+  map: { skills: SKILLS45, substrands: SUBSTRANDS44, outcomes: OUTCOMES44, misFeedback: MIS_FEEDBACK44 },
   families: [...FAMILIES126, ...FAMILIES127, ...FAMILIES128, ...FAMILIES129, ...FAMILIES130, ...FAMILIES131],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g6_a.js", "socialstudies_g6_b.js", "socialstudies_g6_c.js", "socialstudies_g6_d.js", "socialstudies_g6_e.js", "socialstudies_g6_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED40,
+  signed: SIGNED43,
   signedFile: "socialstudies_g6_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -112483,7 +122562,7 @@ var socialstudies_g6_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g7.js
-var SUBSTRANDS42 = {
+var SUBSTRANDS45 = {
   "SOCI.G7.SOCIAL.SELF_EXPLORATION": {
     "name": "Self-Exploration",
     "strand": "Social Studies Personal Development",
@@ -112689,7 +122768,7 @@ var SUBSTRANDS42 = {
     ]
   }
 };
-var OUTCOMES42 = {
+var OUTCOMES45 = {
   "SOCI.G7.SOCIAL.SELF_EXPLORATION.a": {
     "letter": "a",
     "sub": "SOCI.G7.SOCIAL.SELF_EXPLORATION"
@@ -113027,7 +123106,7 @@ var OUTCOMES42 = {
     "sub": "SOCI.G7.POLITI.CITIZENSHIP"
   }
 };
-var SKILLS43 = {
+var SKILLS46 = {
   "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES": {
     "name": "Tell a personal ability, talent or interest and how to use it well",
     "sub": "SOCI.G7.SOCIAL.SELF_EXPLORATION",
@@ -113933,7 +124012,7 @@ var SKILLS43 = {
     ]
   }
 };
-var MIS_FEEDBACK42 = {
+var MIS_FEEDBACK45 = {
   "M_SE_TALENT_ONLY": "Abilities are many: listening, counting, fixing things, leading and caring all count, not only prizes.",
   "M_SE_INTEREST_ABILITY": "An interest is what you like. An ability is what you can do. You can grow an interest into an ability by practising.",
   "M_SE_VALUES_THINGS": "A value is a belief about what is right, such as honesty. It is not something you own.",
@@ -114155,15 +124234,15 @@ var MIS_FEEDBACK42 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g7_signed.js
-var SIGNED41 = [];
+var SIGNED44 = [];
 
 // src/ai-tutor/content/families/socialstudies_g7_lib.js
 var { choose: choose40, typed: typed32, spot: spot40, sfam: sfam32 } = makeKit({
   subject: "socialstudies",
   grade: 7,
   prefix: "SOCI",
-  signed: SIGNED41,
-  map: { skills: SKILLS43, outcomes: OUTCOMES42, misFeedback: MIS_FEEDBACK42 }
+  signed: SIGNED44,
+  map: { skills: SKILLS46, outcomes: OUTCOMES45, misFeedback: MIS_FEEDBACK45 }
 });
 var fam28 = (tag, cs, form, rung2, gen2, oc) => sfam32({ id: `socialstudies7.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var Q7 = (q, right, wrongs, why, extra) => [q, right, wrongs.map((x) => {
@@ -115328,12 +125407,12 @@ var socialstudies_g7_default = {
   shortName: "Social Studies",
   icon: "book",
   description: "Grade 7 Social Studies from the CBC design",
-  map: { skills: SKILLS43, substrands: SUBSTRANDS42, outcomes: OUTCOMES42, misFeedback: MIS_FEEDBACK42 },
+  map: { skills: SKILLS46, substrands: SUBSTRANDS45, outcomes: OUTCOMES45, misFeedback: MIS_FEEDBACK45 },
   families: [...FAMILIES132, ...FAMILIES133, ...FAMILIES134, ...FAMILIES135, ...FAMILIES136, ...FAMILIES137, ...FAMILIES138],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g7_a.js", "socialstudies_g7_b.js", "socialstudies_g7_c.js", "socialstudies_g7_d.js", "socialstudies_g7_e.js", "socialstudies_g7_f.js", "socialstudies_g7_g.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED41,
+  signed: SIGNED44,
   signedFile: "socialstudies_g7_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -115352,7 +125431,7 @@ var socialstudies_g7_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g8.js
-var SUBSTRANDS43 = {
+var SUBSTRANDS46 = {
   "SOCI.G8.SOCIAL.SELF_IMPROVEMENT": {
     "name": "Self-Improvement",
     "strand": "Social Studies and Personal Management",
@@ -115529,7 +125608,7 @@ var SUBSTRANDS43 = {
     ]
   }
 };
-var OUTCOMES43 = {
+var OUTCOMES46 = {
   "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.a": {
     "letter": "a",
     "sub": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT"
@@ -115847,7 +125926,7 @@ var OUTCOMES43 = {
     "sub": "SOCI.G8.POLITI.CITIZENSHIP"
   }
 };
-var SKILLS44 = {
+var SKILLS47 = {
   "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY": {
     "name": "Describe personality traits and how values shape them",
     "sub": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT",
@@ -116191,7 +126270,7 @@ var SKILLS44 = {
     ]
   }
 };
-var MIS_FEEDBACK43 = {
+var MIS_FEEDBACK46 = {
   "M_G8_PT_TRAIT_FEELING": "A trait is how a person usually is (patient). A feeling comes and goes (angry today).",
   "M_G8_PT_TRAIT_FIXED": "Traits can grow and change with effort, good values and practice.",
   "M_G8_PT_VALUE_TRAIT": "Values guide actions, and repeated actions shape traits.",
@@ -116275,15 +126354,15 @@ var MIS_FEEDBACK43 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g8_signed.js
-var SIGNED42 = [];
+var SIGNED45 = [];
 
 // src/ai-tutor/content/families/socialstudies_g8_lib.js
 var { choose: choose41, typed: typed33, spot: spot41, sfam: sfam33 } = makeKit({
   subject: "socialstudies",
   grade: 8,
   prefix: "SOCI",
-  signed: SIGNED42,
-  map: { skills: SKILLS44, outcomes: OUTCOMES43, misFeedback: MIS_FEEDBACK43 }
+  signed: SIGNED45,
+  map: { skills: SKILLS47, outcomes: OUTCOMES46, misFeedback: MIS_FEEDBACK46 }
 });
 var OC2 = {
   "sa.se.effects": "b",
@@ -116765,12 +126844,12 @@ var socialstudies_g8_default = {
   shortName: "Social Studies",
   icon: "book",
   description: "Grade 8 Social Studies from the CBC design",
-  map: { skills: SKILLS44, substrands: SUBSTRANDS43, outcomes: OUTCOMES43, misFeedback: MIS_FEEDBACK43 },
+  map: { skills: SKILLS47, substrands: SUBSTRANDS46, outcomes: OUTCOMES46, misFeedback: MIS_FEEDBACK46 },
   families: [...FAMILIES139, ...FAMILIES140, ...FAMILIES141],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g8_a.js", "socialstudies_g8_b.js", "socialstudies_g8_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED42,
+  signed: SIGNED45,
   signedFile: "socialstudies_g8_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -116789,7 +126868,7 @@ var socialstudies_g8_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g9.js
-var SUBSTRANDS44 = {
+var SUBSTRANDS47 = {
   "SOCI.G9.SOCIAL.PATHWAY_CHOICES": {
     "name": "Pathway Choices",
     "strand": "Social Studies and Career Development",
@@ -116985,7 +127064,7 @@ var SUBSTRANDS44 = {
     ]
   }
 };
-var OUTCOMES44 = {
+var OUTCOMES47 = {
   "SOCI.G9.SOCIAL.PATHWAY_CHOICES.a": {
     "letter": "a",
     "sub": "SOCI.G9.SOCIAL.PATHWAY_CHOICES"
@@ -117331,7 +127410,7 @@ var OUTCOMES44 = {
     "sub": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION"
   }
 };
-var SKILLS45 = {
+var SKILLS48 = {
   "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS": {
     "name": "Name the senior school pathways and what to weigh in choosing one",
     "sub": "SOCI.G9.SOCIAL.PATHWAY_CHOICES",
@@ -117742,7 +127821,7 @@ var SKILLS45 = {
     ]
   }
 };
-var MIS_FEEDBACK44 = {
+var MIS_FEEDBACK47 = {
   "M_SS9_PW_NUMBER": "There are three pathways: STEM, Social Sciences, and Arts and Sports Science.",
   "M_SS9_PW_FACTOR": "Choose by interests, abilities and career goals.",
   "M_SS9_PW_NAME": "Social Sciences is a pathway.",
@@ -117843,15 +127922,15 @@ var MIS_FEEDBACK44 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g9_signed.js
-var SIGNED43 = [];
+var SIGNED46 = [];
 
 // src/ai-tutor/content/families/socialstudies_g9_lib.js
 var { choose: choose42, typed: typed34, spot: spot42, sfam: sfam34 } = makeKit({
   subject: "socialstudies",
   grade: 9,
   prefix: "SOCI",
-  signed: SIGNED43,
-  map: { skills: SKILLS45, outcomes: OUTCOMES44, misFeedback: MIS_FEEDBACK44 }
+  signed: SIGNED46,
+  map: { skills: SKILLS48, outcomes: OUTCOMES47, misFeedback: MIS_FEEDBACK47 }
 });
 var fam30 = (tag, cs, form, rung2, gen2, oc) => sfam34({ id: `socialstudies9.${tag}`, cs, form, rung: rung2, gen: gen2, ...oc ? { oc } : {} });
 var m19 = (code, ...texts) => texts.map((t) => [t, code]);
@@ -118245,12 +128324,12 @@ var socialstudies_g9_default = {
   shortName: "Social Studies",
   icon: "book",
   description: "Grade 9 Social Studies from the CBC design",
-  map: { skills: SKILLS45, substrands: SUBSTRANDS44, outcomes: OUTCOMES44, misFeedback: MIS_FEEDBACK44 },
+  map: { skills: SKILLS48, substrands: SUBSTRANDS47, outcomes: OUTCOMES47, misFeedback: MIS_FEEDBACK47 },
   families: [...FAMILIES142, ...FAMILIES143],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g9_a.js", "socialstudies_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED43,
+  signed: SIGNED46,
   signedFile: "socialstudies_g9_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -118285,6 +128364,9 @@ var ENTRIES = [
   creativearts_g6_default,
   creativearts_g7_default,
   creativearts_g8_default,
+  english_g1_default,
+  english_g2_default,
+  english_g3_default,
   english_g4_default,
   english_g5_default,
   english_g6_default,
@@ -123062,7 +133144,7 @@ var SKILLS_G4 = {
 };
 
 // src/ai-tutor/content/families/g4c_signed.js
-var SIGNED44 = [];
+var SIGNED47 = [];
 
 // src/ai-tutor/content/families/g4c_lib.js
 var shuffle11 = (a) => {
@@ -123124,7 +133206,7 @@ var fam34 = (d) => {
     return x;
   };
   return family({
-    reviewed: SIGNED44.includes(id5),
+    reviewed: SIGNED47.includes(id5),
     ...rest,
     id: id5,
     form,
@@ -127190,7 +137272,7 @@ var FAMILIES154 = [
 ];
 
 // src/ai-tutor/content/families/g5c_signed.js
-var SIGNED45 = [];
+var SIGNED48 = [];
 
 // src/ai-tutor/content/families/g5c_lib.js
 var farFrom = (answer, ...coded) => coded.every((v) => !Number.isInteger(v) || !Number.isInteger(answer) || Math.abs(v - answer) > 2);
@@ -127278,7 +137360,7 @@ var fam36 = (d) => {
     return x;
   };
   return family({
-    reviewed: SIGNED45.includes(id5),
+    reviewed: SIGNED48.includes(id5),
     ...rest,
     id: id5,
     form,
@@ -140270,7 +150352,7 @@ var SKILLS_G6 = {
 };
 
 // src/ai-tutor/content/families/g6d_signed.js
-var SIGNED46 = [];
+var SIGNED49 = [];
 
 // src/ai-tutor/content/families/g6d_lib.js
 var clean4 = (wrong, answer, need2, neg2) => {
@@ -140312,7 +150394,7 @@ var fam38 = (d) => {
     return x;
   };
   return family({
-    reviewed: SIGNED46.includes(id5),
+    reviewed: SIGNED49.includes(id5),
     draft: true,
     ...rest,
     id: id5,

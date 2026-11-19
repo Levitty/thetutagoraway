@@ -1,0 +1,183 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_",
+ "title": "Handwriting: Letters of the alphabet (Theme 1: Activities at home and school)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child sorts letters into tall, short and tail letters and checks each word against the lines.",
+   "floor": {
+    "prerequisite": "Writes all small letters.",
+    "question": "Write: l, a, g",
+    "answer": "l a g"
+   },
+   "steps": [
+    "Sort letters into three houses.",
+    "Trace on four-line paper.",
+    "Spot wrong sizes.",
+    "Write theme words."
+   ],
+   "contexts": [
+    "writing duties on a chart",
+    "labels in the classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hill / bread / yes"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which letters are tall? Which have tails?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS.M3_TL_SAME_HEIGHT",
+     "listen_for": [
+      "all letters the same height"
+     ],
+     "ask": "Do h and l touch the top line?",
+     "repair": "Tall letters reach up."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS.M3_TL_TAIL_ON_LINE",
+     "listen_for": [
+      "on the line"
+     ],
+     "ask": "Where does the tail go?",
+     "repair": "Below the line."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS.M3_TL_P_TALL",
+     "listen_for": [
+      "p"
+     ],
+     "ask": "Up or down?",
+     "repair": "P hangs down."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.TALL_LETTERS.M3_TL_CAPS_FOR_TALL",
+     "listen_for": [
+      "Bread with a capital in the middle: brEad or BRead"
+     ],
+     "ask": "Is a capital needed?",
+     "repair": "Small b is tall already."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which letter hangs below the line: b, g, h?",
+     "answer": "g",
+     "shows": "descender"
+    },
+    {
+     "question": "Which letter is tall: a, k, p?",
+     "answer": "k",
+     "shows": "ascender"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE",
+   "assessed_by": "teacher",
+   "key_step": "The child starts each letter at the right point, keeps sizes even and uses small letters inside words.",
+   "floor": {
+    "prerequisite": "Knows tall and tail letters.",
+    "question": "Which letters are tall in \"bed\"?",
+    "answer": "b, d"
+   },
+   "steps": [
+    "Model the letter strokes.",
+    "Copy a word.",
+    "Check size and starts.",
+    "Copy a sentence; self-check."
+   ],
+   "contexts": [
+    "a duty chart",
+    "a class notice",
+    "a card for a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: sweeping, in neat print."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the start of s.",
+     "say": "Start here, at the top."
+    },
+    {
+     "beat": "pause",
+     "do": "The child copies the word."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the best letter."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE.M3_HL_CAPS_INSIDE",
+     "listen_for": [
+      "My DuTies at hoMe"
+     ],
+     "ask": "Is it a name?",
+     "repair": "Small letters inside words."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE.M3_HL_SIZE",
+     "listen_for": [
+      "swEEPing with big and small letters"
+     ],
+     "ask": "Are the short letters the same size?",
+     "repair": "Half space each."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE.M3_HL_START_POINT",
+     "listen_for": [
+      "a d that looks like cl and an open g"
+     ],
+     "ask": "Where does d start?",
+     "repair": "At the top, round like c."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE.M3_HL_PRESS",
+     "listen_for": [
+      "dark grooves and holes from rubbing out"
+     ],
+     "ask": "Is your grip tight?",
+     "repair": "Hold it lightly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Copy: We share duties at home.",
+     "answer": "even, readable, no capitals inside words",
+     "shows": "legibility"
+    },
+    {
+     "question": "Copy: dog and girl",
+     "answer": "closed d, o and g, tails below",
+     "shows": "letter formation"
+    }
+   ]
+  }
+ ]
+}

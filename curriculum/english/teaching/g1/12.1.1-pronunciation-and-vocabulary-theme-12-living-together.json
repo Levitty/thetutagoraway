@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 12: Living together)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (e, ee, air), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"bed\" start like \"bead\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "living together: sharing a chair",
+    "sleeping in bed"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: bed, bead."
+    },
+    {
+     "beat": "point",
+     "do": "Say bed.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write bed and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR.M1_EA_BED_BEAD",
+     "listen_for": [
+      "bead"
+     ],
+     "ask": "Short or long?",
+     "repair": "Bed short."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR.M1_EA_SHIP_SHEEP",
+     "listen_for": [
+      "slip"
+     ],
+     "ask": "Long?",
+     "repair": "Sleep."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR.M1_EA_HAIR_HEAR",
+     "listen_for": [
+      "hear"
+     ],
+     "ask": "Starts with e?",
+     "repair": "Hair."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.E_EE_AIR.M1_EA_TWO_BEATS",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many claps?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has ee: see, set, sit?",
+     "answer": "see",
+     "shows": "ee"
+    },
+    {
+     "question": "Which word has air: hair, hear, her?",
+     "answer": "hair",
+     "shows": "air"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

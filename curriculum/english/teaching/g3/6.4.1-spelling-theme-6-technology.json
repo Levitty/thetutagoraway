@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T6_SPELLING",
+ "title": "Spelling (Theme 6: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter for every sound in the blend, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the blend.",
+    "question": "Which word did you hear: shrub or srub?",
+    "answer": "shrub"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the blend letters first.",
+    "Look, cover, write, check.",
+    "Use the word in a sentence."
+   ],
+   "contexts": [
+    "theme words: drive, grass, shrub, shrink"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: srub / shrub"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR.M3_SP_SHR_SR",
+     "listen_for": [
+      "srub"
+     ],
+     "ask": "Is there an h?",
+     "repair": "Sh-r."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR.M3_SP_DR_JR",
+     "listen_for": [
+      "jrive"
+     ],
+     "ask": "How is dr written?",
+     "repair": "D-r."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR.M3_SP_GR_GL",
+     "listen_for": [
+      "glass"
+     ],
+     "ask": "L or r?",
+     "repair": "Grass: r."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T6_SPELLING.SPELL_DR_GR_SHR.M3_SP_EXTRA_VOWEL",
+     "listen_for": [
+      "garass"
+     ],
+     "ask": "Is there a vowel between g and r?",
+     "repair": "No: gr."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: grow, glow, gow (what plants do)",
+     "answer": "grow",
+     "shows": "gr"
+    },
+    {
+     "question": "Fill: ___ink (get smaller)",
+     "answer": "shr",
+     "shows": "shr"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE"
+ ]
+}

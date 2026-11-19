@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T10_PREPOSITIONS",
+ "title": "Prepositions (Theme 10: Position and directions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS",
+   "assessed_by": "questions",
+   "key_step": "The child acts the word with an object, then says it.",
+   "floor": {
+    "prerequisite": "Uses in, on and under.",
+    "question": "The ball is ___ the box. (inside)",
+    "answer": "in"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "directions to the market",
+    "a bird over the house"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The cup is ___ the table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "above or on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: The cup is on the table."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M2_PP_ABOVE_ON",
+     "listen_for": [
+      "above"
+     ],
+     "ask": "Does it touch?",
+     "repair": "On."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M2_PP_BELOW_BEHIND",
+     "listen_for": [
+      "below"
+     ],
+     "ask": "At the back?",
+     "repair": "Behind."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M2_PP_ACROSS_ALONG",
+     "listen_for": [
+      "across"
+     ],
+     "ask": "Side to side or beside?",
+     "repair": "Along."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T10_PREPOSITIONS.PREPOSITIONS.M2_PP_TO_AT",
+     "listen_for": [
+      "at"
+     ],
+     "ask": "Moving?",
+     "repair": "To."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We walked ___ the road to the shop.",
+     "answer": "across",
+     "shows": "across"
+    },
+    {
+     "question": "We are going ___ church.",
+     "answer": "to",
+     "shows": "to"
+    }
+   ]
+  }
+ ]
+}

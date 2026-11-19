@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T",
+ "title": "Adjectives: (one and two-syllable adjectives) (Theme 11: Community leaders)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES",
+   "assessed_by": "questions",
+   "key_step": "The child puts the describing word before the noun and never adds -s to it.",
+   "floor": {
+    "prerequisite": "Names nouns.",
+    "question": "What is this? (a ball)",
+    "answer": "a ball"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "community leaders",
+    "a clean market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: a ball ___ (red)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Where does red go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: a red ball"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES.M1_AJ_AFTER",
+     "listen_for": [
+      "a ball red"
+     ],
+     "ask": "Where does red go?",
+     "repair": "First."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES.M1_AJ_ACTION",
+     "listen_for": [
+      "jump"
+     ],
+     "ask": "Does it tell what it is like?",
+     "repair": "Tall."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES.M1_AJ_OPPOSITE",
+     "listen_for": [
+      "small"
+     ],
+     "ask": "Elephant?",
+     "repair": "Big."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.ADJECTIVES.M1_AJ_PLURAL",
+     "listen_for": [
+      "two reds balls"
+     ],
+     "ask": "Any -s on red?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word describes: tall, jump, the?",
+     "answer": "tall",
+     "shows": "adjective"
+    },
+    {
+     "question": "Say: two (red) balls.",
+     "answer": "two red balls",
+     "shows": "no -s"
+    }
+   ]
+  }
+ ]
+}

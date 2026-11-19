@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T5_COMPREHENSION",
+ "title": "Comprehension (Theme 5: Occupations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T5_COMPREHENSION.RETELL_TEXT",
+   "assessed_by": "voice",
+   "key_step": "The child closes the book and tells the title, who, what happened in order and the end.",
+   "floor": {
+    "prerequisite": "Puts events in order.",
+    "question": "What happened first in the story?",
+    "answer": "the calf got lost"
+   },
+   "steps": [
+    "Read the story.",
+    "Close the book.",
+    "Tell it with a story map: who, problem, end.",
+    "Tell a partner."
+   ],
+   "contexts": [
+    "a book from the class library",
+    "a story about talents",
+    "a story about food"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a story map: Who? Problem? End?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Who.",
+     "say": "Who was in your story?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to tell it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills in the map."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T5_COMPREHENSION.RETELL_TEXT.M3_RT_READS_AGAIN",
+     "listen_for": [
+      "reads the book aloud again"
+     ],
+     "ask": "Can you tell it with the book closed?",
+     "repair": "Your own words."
+    },
+    {
+     "code": "ENGL.G3.READIN.T5_COMPREHENSION.RETELL_TEXT.M3_RT_MIDDLE",
+     "listen_for": [
+      "And then the calf was found."
+     ],
+     "ask": "How did it start?",
+     "repair": "Who and the problem first."
+    },
+    {
+     "code": "ENGL.G3.READIN.T5_COMPREHENSION.RETELL_TEXT.M3_RT_NO_NAMES",
+     "listen_for": [
+      "She went and he said and she took it."
+     ],
+     "ask": "Who is she?",
+     "repair": "Say the name first."
+    },
+    {
+     "code": "ENGL.G3.READIN.T5_COMPREHENSION.RETELL_TEXT.M3_RT_ONE_SENTENCE",
+     "listen_for": [
+      "A hare."
+     ],
+     "ask": "What happened next?",
+     "repair": "Who, what, end."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tell your friend about the Hare story.",
+     "answer": "title, who, events in order, end",
+     "shows": "retell"
+    },
+    {
+     "question": "What was your book about?",
+     "answer": "three or more sentences with names",
+     "shows": "detail"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.READIN.T1_COMPREHENSION.CHARACTERS_SETTING",
+  "ENGL.G3.READIN.T1_COMPREHENSION.PREDICT",
+  "ENGL.G3.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+  "ENGL.G3.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+  "ENGL.G3.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

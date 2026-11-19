@@ -1,0 +1,191 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T2_COMPREHENSION",
+ "title": "Comprehension (Theme 2: Activities in the home)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds two clues and joins them: because ...",
+   "floor": {
+    "prerequisite": "Answers stated questions.",
+    "question": "Tom clapped. What did Tom do?",
+    "answer": "He clapped."
+   },
+   "steps": [
+    "Read the text.",
+    "Ask how or why.",
+    "Find two clues.",
+    "Answer with because."
+   ],
+   "contexts": [
+    "a story about a lost shilling",
+    "an accident at play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Tom smiled and clapped his hands."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "How did Tom feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: happy, because he smiled and clapped"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M2_IQ_NOT_SAID",
+     "listen_for": [
+      "It does not say."
+     ],
+     "ask": "What do smiling and clapping show?",
+     "repair": "Happy."
+    },
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M2_IQ_GUESS",
+     "listen_for": [
+      "sleepy"
+     ],
+     "ask": "Which clue tells you?",
+     "repair": "Crying."
+    },
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M2_IQ_TOO_FAR",
+     "listen_for": [
+      "A lorry poured water."
+     ],
+     "ask": "What is most likely?",
+     "repair": "Rain."
+    },
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS.M2_IQ_COPY",
+     "listen_for": [
+      "Ben took an umbrella."
+     ],
+     "ask": "Where is the reason?",
+     "repair": "The grey sky."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Amina cried after she fell. How did she feel?",
+     "answer": "hurt or sad",
+     "shows": "feeling"
+    },
+    {
+     "question": "There were puddles in the morning. What happened at night?",
+     "answer": "It rained.",
+     "shows": "inference"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE",
+   "assessed_by": "questions",
+   "key_step": "The child names one part of the text that is like his or her life and one that is different.",
+   "floor": {
+    "prerequisite": "Answers questions on a text.",
+    "question": "What does the boy do?",
+    "answer": "He helps cook."
+   },
+   "steps": [
+    "Read the text.",
+    "Ask: is this like your life?",
+    "Find one same, one different.",
+    "Say it in sentences."
+   ],
+   "contexts": [
+    "helping at home",
+    "a market day",
+    "a farm visit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Juma helps his mother cook rice every evening."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Is this like your life?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: I also help my mother, but we cook ugali."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE.M2_TL_OFF_TEXT",
+     "listen_for": [
+      "I went to Mombasa."
+     ],
+     "ask": "Which part of the story?",
+     "repair": "Link it to the text."
+    },
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE.M2_TL_CHANGES_TEXT",
+     "listen_for": [
+      "ugali, like us"
+     ],
+     "ask": "What does the text say?",
+     "repair": "Rice."
+    },
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE.M2_TL_SAME_ONLY",
+     "listen_for": [
+      "It is the same."
+     ],
+     "ask": "Anything different?",
+     "repair": "Name one."
+    },
+    {
+     "code": "ENGL.G2.READIN.T2_COMPREHENSION.TEXT_TO_LIFE.M2_TL_ONE_WORD",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "Tell me more.",
+     "repair": "When and what."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The story is about a family going to church. Name one thing like your life.",
+     "answer": "any true link in a sentence",
+     "shows": "connection"
+    },
+    {
+     "question": "Name one thing different.",
+     "answer": "a difference in a sentence",
+     "shows": "difference"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+  "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS"
+ ]
+}

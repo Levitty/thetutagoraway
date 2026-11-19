@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T13_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 13: Cultural activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child finds the capital-letter word and who did it first, then what they did, then the rest, then the full stop.",
+   "floor": {
+    "prerequisite": "Writes simple sentences.",
+    "question": "Write: We danced.",
+    "answer": "We danced."
+   },
+   "steps": [
+    "Cut a sentence into word cards.",
+    "Find the first word.",
+    "Order the cards.",
+    "Read it: does it make sense?"
+   ],
+   "contexts": [
+    "cultural activities"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: drum / beat / Juma / the"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Put the words in order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M2_WO_AS_GIVEN",
+     "listen_for": [
+      "drum beat Juma the"
+     ],
+     "ask": "Who did it?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M2_WO_ADJ_AFTER",
+     "listen_for": [
+      "She wore a dress red."
+     ],
+     "ask": "Where does red go?",
+     "repair": "Before dress."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M2_WO_VERB_FIRST",
+     "listen_for": [
+      "Danced the girls."
+     ],
+     "ask": "Who first?",
+     "repair": "The girls."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M2_WO_CAPITAL",
+     "listen_for": [
+      "went We to the market"
+     ],
+     "ask": "Which has a capital?",
+     "repair": "We."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order: a / dress / red / wore / she",
+     "answer": "She wore a red dress.",
+     "shows": "describing word"
+    },
+    {
+     "question": "Order: danced / the / girls",
+     "answer": "The girls danced.",
+     "shows": "who first"
+    }
+   ]
+  }
+ ]
+}

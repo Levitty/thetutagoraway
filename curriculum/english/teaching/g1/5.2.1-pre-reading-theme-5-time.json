@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T5_PRE_READING",
+ "title": "Pre- reading (Theme 5: Time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T5_PRE_READING.MATCH_LETTER_SOUND",
+   "assessed_by": "questions",
+   "key_step": "The child hears the sound, then finds the letter that makes it.",
+   "floor": {
+    "prerequisite": "Hears sounds in words.",
+    "question": "Which word starts with /s/: sun, pen?",
+    "answer": "sun"
+   },
+   "steps": [
+    "Say a sound.",
+    "The child points to the letter.",
+    "Swap roles.",
+    "Match cards."
+   ],
+   "contexts": [
+    "time words: six, late"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: s l i p"
+    },
+    {
+     "beat": "point",
+     "do": "Say /l/.",
+     "say": "Which letter makes it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles l."
+    },
+    {
+     "beat": "reveal",
+     "do": "L, tongue up."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.MATCH_LETTER_SOUND.M1_ML_NAME",
+     "listen_for": [
+      "c (see)"
+     ],
+     "ask": "Sound or name?",
+     "repair": "S for sun."
+    },
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.MATCH_LETTER_SOUND.M1_ML_I_E",
+     "listen_for": [
+      "e"
+     ],
+     "ask": "Smile?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.MATCH_LETTER_SOUND.M1_ML_P_B",
+     "listen_for": [
+      "b"
+     ],
+     "ask": "Puff?",
+     "repair": "P."
+    },
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.MATCH_LETTER_SOUND.M1_ML_L_R",
+     "listen_for": [
+      "r"
+     ],
+     "ask": "Tongue up?",
+     "repair": "L."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which letter makes the sound in \"it\"?",
+     "answer": "i",
+     "shows": "i"
+    },
+    {
+     "question": "Which letter makes the sound in \"pot\"?",
+     "answer": "p",
+     "shows": "p"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS"
+ ]
+}

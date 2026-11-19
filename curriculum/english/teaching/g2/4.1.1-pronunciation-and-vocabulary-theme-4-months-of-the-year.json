@@ -1,0 +1,187 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 4: Months of the year)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (ng, long e, st, gl) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"sheep\" and \"ship\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "days of the week",
+    "a glad birthday in June"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: sheep, ship."
+    },
+    {
+     "beat": "point",
+     "do": "Say sheep.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in sheep."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL.M2_NG_HARD_G",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do you hear g?",
+     "repair": "No: sing."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL.M2_EE_SHORT_I",
+     "listen_for": [
+      "ship"
+     ],
+     "ask": "Short or long?",
+     "repair": "Long: sheep."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL.M2_ST_TWO_BEATS",
+     "listen_for": [
+      "2 (si-tar)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: star."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.NG_EE_ST_GL.M2_GL_GR",
+     "listen_for": [
+      "grass"
+     ],
+     "ask": "Tongue up?",
+     "repair": "Glass."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has long e: bit, beat, bat?",
+     "answer": "beat",
+     "shows": "long e"
+    },
+    {
+     "question": "Which word ends with ng: sing, sin, sit?",
+     "answer": "sing",
+     "shows": "ng"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child says the pair of vowels side by side, feels the difference (long or short, smile or round), then says the word in a sentence.",
+   "floor": {
+    "prerequisite": "Says the letter-sounds of the vowels.",
+    "question": "Say the sound of a in \"cat\".",
+    "answer": "/æ/"
+   },
+   "steps": [
+    "Say the pair: ship, sheep.",
+    "Show the mouth for each.",
+    "The child says one; the teacher points.",
+    "Say both in a sentence."
+   ],
+   "contexts": [
+    "a sheep on the farm",
+    "a cup of tea",
+    "a bird in the tree"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ship, sheep."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sheep.",
+     "say": "Long and smiling: sheep. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say both."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a ship and a sheep and says each."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: ship short, sheep long."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS.M2_SVS_SHIP_SHEEP",
+     "listen_for": [
+      "both as ship"
+     ],
+     "ask": "Short or long?",
+     "repair": "Sheep is long."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS.M2_SVS_CUP_CAP",
+     "listen_for": [
+      "a cap of tea"
+     ],
+     "ask": "Uh or a?",
+     "repair": "Cup: uh."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS.M2_SVS_BIRD",
+     "listen_for": [
+      "The bad is on the branch."
+     ],
+     "ask": "Lips relaxed?",
+     "repair": "Bird."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS.M2_SVS_WEAK_FULL",
+     "listen_for": [
+      "ba-NA-NA with three full a sounds"
+     ],
+     "ask": "Which part is strong?",
+     "repair": "NA: the rest is quick."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: a cup and a cap",
+     "answer": "two different vowels",
+     "shows": "cup and cap"
+    },
+    {
+     "question": "Say: The bird is on the branch.",
+     "answer": "bird with er, not bad",
+     "shows": "er"
+    }
+   ]
+  }
+ ]
+}

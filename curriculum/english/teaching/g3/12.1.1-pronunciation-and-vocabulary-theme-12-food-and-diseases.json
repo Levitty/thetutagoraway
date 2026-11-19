@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 12: Food and diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.BLENDS_GR_PR_EW",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (gr-, pr-, -ew), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"grow\" start like \"crow\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "grains for good food",
+    "the price of fruit",
+    "a new cup"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: grow, crow."
+    },
+    {
+     "beat": "point",
+     "do": "Say grow.",
+     "say": "Listen: gr or cr?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the gr in grow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.BLENDS_GR_PR_EW.M3_EW_E_SOUND",
+     "listen_for": [
+      "net"
+     ],
+     "ask": "Short e or oo?",
+     "repair": "Oo: new, few."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.BLENDS_GR_PR_EW.M3_GR_CR_VOICE",
+     "listen_for": [
+      "crow"
+     ],
+     "ask": "Buzz?",
+     "repair": "Buzz: grow."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.BLENDS_GR_PR_EW.M3_PR_PL",
+     "listen_for": [
+      "play"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Curled: pray."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T12_PRONUNCIATION_AND_VO.BLENDS_GR_PR_EW.M3_EW_OW",
+     "listen_for": [
+      "grow"
+     ],
+     "ask": "Oo or oh?",
+     "repair": "Oo: grew."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word ends like new: few, net, now?",
+     "answer": "few",
+     "shows": "ew"
+    },
+    {
+     "question": "Which word starts with pr: play, pray, ray?",
+     "answer": "pray",
+     "shows": "pr"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

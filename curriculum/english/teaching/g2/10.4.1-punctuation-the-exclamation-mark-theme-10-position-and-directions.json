@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL",
+ "title": "Punctuation (The exclamation mark) (Theme 10: Position and directions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Strong feeling or warning?\" and only then uses !",
+   "floor": {
+    "prerequisite": "Uses full stops.",
+    "question": "Fix: We sang",
+    "answer": "We sang."
+   },
+   "steps": [
+    "Show sentences with ! and .",
+    "Read them aloud.",
+    "Choose marks.",
+    "Write a warning."
+   ],
+   "contexts": [
+    "road signs",
+    "a fire at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Look out"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which mark?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK.M2_XM_EVERY",
+     "listen_for": [
+      "!"
+     ],
+     "ask": "Strong feeling?",
+     "repair": "No: full stop."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK.M2_XM_NONE",
+     "listen_for": [
+      "."
+     ],
+     "ask": "A warning?",
+     "repair": "!"
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK.M2_XM_MIDDLE",
+     "listen_for": [
+      "Stop! the car is coming."
+     ],
+     "ask": "After !?",
+     "repair": "A capital."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T10_PUNCTUATION_THE_EXCL.EXCLAMATION_MARK.M2_XM_QUESTION",
+     "listen_for": [
+      "!"
+     ],
+     "ask": "Asking?",
+     "repair": "?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which mark: Help",
+     "answer": "!",
+     "shows": "exclamation"
+    },
+    {
+     "question": "Which mark: We walked home",
+     "answer": ".",
+     "shows": "full stop"
+    }
+   ]
+  }
+ ]
+}

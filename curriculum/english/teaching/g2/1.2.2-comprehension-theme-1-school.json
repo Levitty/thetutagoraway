@@ -1,0 +1,280 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T1_COMPREHENSION",
+ "title": "Comprehension (Theme 1: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child finds a clue in the title or picture and says what will happen and why.",
+   "floor": {
+    "prerequisite": "Says what is in a picture.",
+    "question": "What is the girl doing?",
+    "answer": "She is calling."
+   },
+   "steps": [
+    "Read the title; look at the pictures.",
+    "Ask what will happen and why.",
+    "Read on and check.",
+    "Say if the guess was right."
+   ],
+   "contexts": [
+    "The Lost Goat",
+    "Our New Garden",
+    "a story about a market day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Title: The Broken Pot. Picture: a boy holding pieces."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What will the story be about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: A boy breaks a pot and may say sorry."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT.M2_PR_DESCRIBE",
+     "listen_for": [
+      "A girl is calling."
+     ],
+     "ask": "What will happen?",
+     "repair": "Use will."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT.M2_PR_NO_CLUE",
+     "listen_for": [
+      "a football match"
+     ],
+     "ask": "Which clue?",
+     "repair": "A word in the title."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT.M2_PR_ALREADY",
+     "listen_for": [
+      "Ali fell off his bicycle."
+     ],
+     "ask": "Has it happened already?",
+     "repair": "Next means after."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.PREDICT.M2_PR_AFRAID",
+     "listen_for": [
+      "Yes, it is wrong."
+     ],
+     "ask": "Is a guess fine?",
+     "repair": "Guess, then check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Title: Juma Goes Shopping. What might happen?",
+     "answer": "Juma buys things at a shop",
+     "shows": "title"
+    },
+    {
+     "question": "The sky is dark. Mama takes the clothes in. What next?",
+     "answer": "It will rain.",
+     "shows": "clue"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT",
+   "assessed_by": "questions",
+   "key_step": "The child reads the sentence around the word, finds a clue, and tests a meaning in the gap.",
+   "floor": {
+    "prerequisite": "Knows the theme words.",
+    "question": "A baby cow is a ...",
+    "answer": "calf"
+   },
+   "steps": [
+    "Read the sentence.",
+    "Cover the word.",
+    "Find the clue.",
+    "Put the meaning in and reread."
+   ],
+   "contexts": [
+    "a farm story",
+    "directions to the market",
+    "a garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The road was muddy after the rain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What does muddy mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: wet and dirty with soil"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M2_WC_LOOKS_LIKE",
+     "listen_for": [
+      "a cliff"
+     ],
+     "ask": "Does it fit?",
+     "repair": "Read it with your meaning."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M2_WC_GIVE_UP",
+     "listen_for": [
+      "I do not know."
+     ],
+     "ask": "What clue is near?",
+     "repair": "After the rain."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M2_WC_PICTURE_ONLY",
+     "listen_for": [
+      "happy"
+     ],
+     "ask": "What do the words say?",
+     "repair": "Afraid."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.WORD_FROM_CONTEXT.M2_WC_USUAL_MEANING",
+     "listen_for": [
+      "went away"
+     ],
+     "ask": "Which meaning fits here?",
+     "repair": "The side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The children giggled at the funny clown. Giggled means ...",
+     "answer": "laughed",
+     "shows": "clue: funny"
+    },
+    {
+     "question": "Turn left at the gate. Left means ...",
+     "answer": "the side opposite right",
+     "shows": "meaning here"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child reads the question word, finds the sentence and points to it.",
+   "floor": {
+    "prerequisite": "Knows who, what, where.",
+    "question": "Where is your bag?",
+    "answer": "on my desk"
+   },
+   "steps": [
+    "Read the text.",
+    "Circle the question word.",
+    "Find the sentence.",
+    "Answer and point."
+   ],
+   "contexts": [
+    "a story about shopping",
+    "a text about the classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Akinyi ate an orange at break time."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "When did Akinyi eat the orange?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: at break time"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M2_DQ_OWN_LIFE",
+     "listen_for": [
+      "a mango"
+     ],
+     "ask": "What does the text say?",
+     "repair": "Point to it."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M2_DQ_WRONG_WORD",
+     "listen_for": [
+      "to the farm"
+     ],
+     "ask": "What does when want?",
+     "repair": "A time."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M2_DQ_WORD_MATCH",
+     "listen_for": [
+      "The hen laid an egg."
+     ],
+     "ask": "Is that about the cow?",
+     "repair": "Find the cow."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_COMPREHENSION.DIRECT_QUESTIONS.M2_DQ_YES_NO",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "What colour?",
+     "repair": "Red."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Akinyi eat?",
+     "answer": "an orange",
+     "shows": "what"
+    },
+    {
+     "question": "Who ate the orange?",
+     "answer": "Akinyi",
+     "shows": "who"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.READIN.T2_COMPREHENSION.INDIRECT_QUESTIONS"
+ ]
+}

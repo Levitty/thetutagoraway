@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T4_HANDWRITING",
+ "title": "Handwriting (Theme 4: Child rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T4_HANDWRITING.B_D_P_Q",
+   "assessed_by": "questions",
+   "key_step": "The child uses a check (the bed for b and d, the u after q, tall b and hanging p) before writing.",
+   "floor": {
+    "prerequisite": "Writes letters on the line.",
+    "question": "Write: c",
+    "answer": "c"
+   },
+   "steps": [
+    "Make the bed with fists.",
+    "Trace b starting with the stick, d starting with c.",
+    "Sort words.",
+    "Fix reversed words."
+   ],
+   "contexts": [
+    "child rights posters",
+    "a story about a dog"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: deb / bed / ded"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which is the bed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T4_HANDWRITING.B_D_P_Q.M3_BD_B_D",
+     "listen_for": [
+      "ded"
+     ],
+     "ask": "Make the bed: which side is b?",
+     "repair": "B first, d last."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T4_HANDWRITING.B_D_P_Q.M3_BD_P_Q",
+     "listen_for": [
+      "pueen"
+     ],
+     "ask": "Is u next?",
+     "repair": "Then it is q."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T4_HANDWRITING.B_D_P_Q.M3_BD_B_P",
+     "listen_for": [
+      "big"
+     ],
+     "ask": "Up or down?",
+     "repair": "B up, p down."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T4_HANDWRITING.B_D_P_Q.M3_BD_WAS_SAW",
+     "listen_for": [
+      "saw"
+     ],
+     "ask": "Say each sound as you write.",
+     "repair": "W-a-s."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fix: The bog barked.",
+     "answer": "The dog barked.",
+     "shows": "b and d"
+    },
+    {
+     "question": "Fill: ..ueen",
+     "answer": "queen",
+     "shows": "q"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE"
+ ]
+}

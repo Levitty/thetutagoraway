@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T8_QUANTIFIERS",
+ "title": "Quantifiers (Theme 8: Domestic animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Can I count it?\" then chooses many or a few, much or a little, or a lot of or some.",
+   "floor": {
+    "prerequisite": "Knows plural nouns.",
+    "question": "One cow, five ___",
+    "answer": "cows"
+   },
+   "steps": [
+    "Sort pictures: count and not count.",
+    "Match quantifiers.",
+    "Fill gaps.",
+    "Talk about caring for animals."
+   ],
+   "contexts": [
+    "feeding hens",
+    "milking cows",
+    "giving water to the calf"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: There are ___ goats on the farm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? much or many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: There are many goats on the farm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS.M3_QT_MANY_UNCOUNT",
+     "listen_for": [
+      "many"
+     ],
+     "ask": "Can you count milk?",
+     "repair": "No: a lot of."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS.M3_QT_MUCH_COUNT",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Can you count goats?",
+     "repair": "Yes: many."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS.M3_QT_LOT_NO_OF",
+     "listen_for": [
+      "(nothing): a lot hens"
+     ],
+     "ask": "A lot ...?",
+     "repair": "A lot of."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T8_QUANTIFIERS.QUANTIFIERS.M3_QT_FEW_UNCOUNT",
+     "listen_for": [
+      "a few"
+     ],
+     "ask": "Can you count water?",
+     "repair": "No: some."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The cow gives ___ milk.",
+     "answer": "a lot of",
+     "shows": "not counted"
+    },
+    {
+     "question": "We have a ___ hens.",
+     "answer": "few",
+     "shows": "counted"
+    }
+   ]
+  }
+ ]
+}

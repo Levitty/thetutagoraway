@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T2_HANDWRITING",
+ "title": "Handwriting (Theme 2: Activities in the home)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the tall letters and checks that each reaches the top line.",
+   "floor": {
+    "prerequisite": "Writes small letters.",
+    "question": "Write: l",
+    "answer": "l"
+   },
+   "steps": [
+    "Sort letters: tall and short.",
+    "Trace on lines.",
+    "Spot mistakes.",
+    "Write long words."
+   ],
+   "contexts": [
+    "activities in the home: kitchen, table"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hat / little / bed"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which letters are tall?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS.M2_AS_SHORT",
+     "listen_for": [
+      "all the same height"
+     ],
+     "ask": "Does it touch the top line?",
+     "repair": "Tall letters reach up."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS.M2_AS_WHICH",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Is a tall?",
+     "repair": "No: k is."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS.M2_AS_CAPITAL",
+     "listen_for": [
+      "Bed (in the middle of a sentence)"
+     ],
+     "ask": "Is a capital needed?",
+     "repair": "Small b is tall."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T2_HANDWRITING.ASCENDERS.M2_AS_T_LIKE_L",
+     "listen_for": [
+      "t as tall as l, crossed at the top"
+     ],
+     "ask": "Is t as tall as l?",
+     "repair": "A little shorter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which letter is tall: o, d, m?",
+     "answer": "d",
+     "shows": "ascender"
+    },
+    {
+     "question": "Which \"kite\" is right?",
+     "answer": "k and t taller than i and e",
+     "shows": "height"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT"
+ ]
+}

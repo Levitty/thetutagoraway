@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T15_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 15: Caring for others)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES",
+   "assessed_by": "questions",
+   "key_step": "The child checks each sentence: capital at the start, capitals for names and I, the right end mark.",
+   "floor": {
+    "prerequisite": "Uses full stops and capitals.",
+    "question": "Fix: we ran",
+    "answer": "We ran."
+   },
+   "steps": [
+    "Show the marks.",
+    "Correct sentences.",
+    "Choose end marks.",
+    "Write own sentences."
+   ],
+   "contexts": [
+    "caring for others",
+    "a visit to a sick friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: mary visited grandma in kisumu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which words need capitals? Which mark at the end?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES.M2_PU_NAMES",
+     "listen_for": [
+      "Mary visited grandma in kisumu."
+     ],
+     "ask": "Names?",
+     "repair": "Capitals."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES.M2_PU_SMALL_I",
+     "listen_for": [
+      "Tom and i helped."
+     ],
+     "ask": "I alone?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES.M2_PU_QUESTION_STOP",
+     "listen_for": [
+      "."
+     ],
+     "ask": "Asking?",
+     "repair": "?"
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T15_GUIDED_WRITING.PUNCTUATE_SENTENCES.M2_PU_AFTER_STOP",
+     "listen_for": [
+      "We helped. we cared."
+     ],
+     "ask": "After a full stop?",
+     "repair": "Capital."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: tom and i helped",
+     "answer": "Tom and I helped.",
+     "shows": "capitals"
+    },
+    {
+     "question": "Which mark: Are you better",
+     "answer": "?",
+     "shows": "question"
+    }
+   ]
+  }
+ ]
+}

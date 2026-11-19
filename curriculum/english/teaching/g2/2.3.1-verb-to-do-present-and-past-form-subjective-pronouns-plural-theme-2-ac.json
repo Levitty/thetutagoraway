@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A",
+ "title": "Verb ‘to do’- Present and past form Subjective Pronouns - Plural (Theme 2: Activities in the home)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child puts one subject at the start: we, you or they, or a name.",
+   "floor": {
+    "prerequisite": "Uses I, he and she.",
+    "question": "___ is a girl. (Amina)",
+    "answer": "She"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "duties at home",
+    "friends at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: My mother she cooks rice."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word is extra?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: My mother cooks rice."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS.M2_SP_DOUBLE",
+     "listen_for": [
+      "My mother she cooks rice."
+     ],
+     "ask": "How many subjects?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS.M2_SP_HE_SHE",
+     "listen_for": [
+      "He"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "Girl: she."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS.M2_SP_THEM_SUBJECT",
+     "listen_for": [
+      "Them"
+     ],
+     "ask": "At the start?",
+     "repair": "They."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.SUBJECT_PRONOUNS.M2_SP_US_SUBJECT",
+     "listen_for": [
+      "Us"
+     ],
+     "ask": "At the start?",
+     "repair": "We."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Amina sweeps. ___ is kind.",
+     "answer": "She",
+     "shows": "she"
+    },
+    {
+     "question": "Tom and I play. ___ are friends.",
+     "answer": "We",
+     "shows": "we"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO",
+   "assessed_by": "questions",
+   "key_step": "The child uses does for he, she, it, do for the rest, did for the past, and a plain verb after did.",
+   "floor": {
+    "prerequisite": "Uses he and she.",
+    "question": "___ is my brother.",
+    "answer": "He"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "chores at home",
+    "what we did on Saturday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Baba ___ the shopping."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "do or does?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Baba does the shopping."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO.M2_DO_HE_DO",
+     "listen_for": [
+      "do"
+     ],
+     "ask": "He or she?",
+     "repair": "Does."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO.M2_DO_DID_ED",
+     "listen_for": [
+      "made"
+     ],
+     "ask": "Did says past already.",
+     "repair": "Make."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO.M2_DO_DOES_PAST",
+     "listen_for": [
+      "does"
+     ],
+     "ask": "Yesterday?",
+     "repair": "Did."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T2_VERB_TO_DO_PRESENT_A.VERB_DO.M2_DO_THEY_DOES",
+     "listen_for": [
+      "does"
+     ],
+     "ask": "They takes?",
+     "repair": "Do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Did you ___ your bed? (make)",
+     "answer": "make",
+     "shows": "plain"
+    },
+    {
+     "question": "They ___ their homework.",
+     "answer": "do",
+     "shows": "they"
+    }
+   ]
+  }
+ ]
+}

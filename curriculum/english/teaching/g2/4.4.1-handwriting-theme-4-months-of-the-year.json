@@ -1,0 +1,189 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T4_HANDWRITING",
+ "title": "Handwriting (Theme 4: Months of the year)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS",
+   "assessed_by": "questions",
+   "key_step": "The child checks four things: letter shape, spaces, line, capitals.",
+   "floor": {
+    "prerequisite": "Knows tall and tail letters.",
+    "question": "Which letter has a tail?",
+    "answer": "g"
+   },
+   "steps": [
+    "Show good and poor writing.",
+    "List four checks.",
+    "Judge writing.",
+    "Check own writing."
+   ],
+   "contexts": [
+    "a class display",
+    "a card for a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Weplayedfootball. / We played football."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which is better? Why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS.M2_HA_NO_SPACE",
+     "listen_for": [
+      "Weplayedfootball."
+     ],
+     "ask": "Spaces?",
+     "repair": "Finger space."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS.M2_HA_FLOAT",
+     "listen_for": [
+      "letters above the line"
+     ],
+     "ask": "On the line?",
+     "repair": "Stand on it."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS.M2_HA_CAPS",
+     "listen_for": [
+      "MY HOME IS NICE"
+     ],
+     "ask": "Capitals everywhere?",
+     "repair": "Only starts and names."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.HANDWRITING_ASPECTS.M2_HA_DARK",
+     "listen_for": [
+      "thick, dark, pressed letters"
+     ],
+     "ask": "Neat means dark?",
+     "repair": "Light and even."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which writing is best: \"MY HOME\" or \"My home\"?",
+     "answer": "My home",
+     "shows": "capitals"
+    },
+    {
+     "question": "What is wrong: \"Iliketea.\"?",
+     "answer": "no spaces",
+     "shows": "spacing"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child builds the word from letter cards: gl together, y at the end for ee.",
+   "floor": {
+    "prerequisite": "Spells three-letter words.",
+    "question": "Spell: sun",
+    "answer": "sun"
+   },
+   "steps": [
+    "Say the word.",
+    "Find the gl or y.",
+    "Build with cards.",
+    "Write it."
+   ],
+   "contexts": [
+    "months: January, July",
+    "glad, glue"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: gulue / glue"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS.M2_GY_IE_FOR_Y",
+     "listen_for": [
+      "sunni"
+     ],
+     "ask": "Long word ending in ee?",
+     "repair": "Y."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS.M2_GY_GR_FOR_GL",
+     "listen_for": [
+      "grad"
+     ],
+     "ask": "L or r?",
+     "repair": "Glad."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS.M2_GY_EXTRA_VOWEL",
+     "listen_for": [
+      "gulue"
+     ],
+     "ask": "Vowel between g and l?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T4_HANDWRITING.GL_Y_WORDS.M2_GY_JULY",
+     "listen_for": [
+      "Julai"
+     ],
+     "ask": "English spelling?",
+     "repair": "July."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fill: sunn_",
+     "answer": "y",
+     "shows": "y"
+    },
+    {
+     "question": "Make the word for happy: _ad",
+     "answer": "glad",
+     "shows": "gl"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.WRITIN.T1_HANDWRITING.HANDWRITING_NEAT"
+ ]
+}

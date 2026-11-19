@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T14_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 14: Child labour)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS",
+   "assessed_by": "composition",
+   "key_step": "The child lists the events on fingers, then writes one sentence each with first, next, then, last, in the past.",
+   "floor": {
+    "prerequisite": "Retells in order.",
+    "question": "What happened first?",
+    "answer": "Tom's friend fell sick."
+   },
+   "steps": [
+    "Read the story.",
+    "List the events.",
+    "Write a sentence for each.",
+    "Check order and tense."
+   ],
+   "contexts": [
+    "a story about child labour",
+    "helping at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four boxes: first, next, then, last."
+    },
+    {
+     "beat": "point",
+     "do": "Point at first.",
+     "say": "What happened first?"
+    },
+    {
+     "beat": "pause",
+     "do": "The child writes the sentences."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child numbers the sentences."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS.M2_RC_ORDER",
+     "listen_for": [
+      "Tom visited. His friend was sick. He gave him water."
+     ],
+     "ask": "What came first?",
+     "repair": "First, next, then."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS.M2_RC_PRESENT",
+     "listen_for": [
+      "Tom visits his friend."
+     ],
+     "ask": "Did it already happen?",
+     "repair": "Past."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS.M2_RC_ONE",
+     "listen_for": [
+      "Tom visited his friend."
+     ],
+     "ask": "How many sentences?",
+     "repair": "Three."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T14_GUIDED_WRITING.RECOUNT_EVENTS.M2_RC_AND_THEN",
+     "listen_for": [
+      "Tom went and then he gave and then he read"
+     ],
+     "ask": "Can you use a full stop?",
+     "repair": "Then a new sentence."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write what happened in the story in three sentences.",
+     "answer": "three past sentences in order",
+     "shows": "recount"
+    },
+    {
+     "question": "Fix: Tom visits his friend.",
+     "answer": "Tom visited his friend.",
+     "shows": "tense"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES"
+ ]
+}

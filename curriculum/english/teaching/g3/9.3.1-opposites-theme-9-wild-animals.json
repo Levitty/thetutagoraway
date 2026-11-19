@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T9_OPPOSITES",
+ "title": "Opposites (Theme 9: Wild animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES",
+   "assessed_by": "questions",
+   "key_step": "The child goes to the far end of the meaning, and checks old: living or thing?",
+   "floor": {
+    "prerequisite": "Knows describing words.",
+    "question": "An elephant is ___ (big or small)?",
+    "answer": "big"
+   },
+   "steps": [
+    "Show picture pairs.",
+    "Say the pair.",
+    "Play the opposites game.",
+    "Use both in a sentence."
+   ],
+   "contexts": [
+    "wild animals in the park",
+    "fast and slow animals",
+    "a tame dog and a wild dog"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A cheetah is fast. A tortoise is ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? slow or quick?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: A tortoise is slow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES.M3_OP_NOT",
+     "listen_for": [
+      "unbig"
+     ],
+     "ask": "Is there a word for it?",
+     "repair": "Small."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES.M3_OP_NEAR",
+     "listen_for": [
+      "warm"
+     ],
+     "ask": "Is that the far end?",
+     "repair": "Cold."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES.M3_OP_SAME",
+     "listen_for": [
+      "fierce"
+     ],
+     "ask": "Same or opposite?",
+     "repair": "Tame."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T9_OPPOSITES.OPPOSITES.M3_OP_OLD",
+     "listen_for": [
+      "new"
+     ],
+     "ask": "Living or a thing?",
+     "repair": "Living: old and young."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Opposite of tame?",
+     "answer": "wild",
+     "shows": "opposite"
+    },
+    {
+     "question": "The calf is young; the cow is ___.",
+     "answer": "old",
+     "shows": "old and young"
+    }
+   ]
+  }
+ ]
+}

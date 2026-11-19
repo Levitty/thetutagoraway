@@ -1,0 +1,271 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 1: Greetings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H",
+   "assessed_by": "questions",
+   "key_step": "The child says the letter's sound, not its name, and finds a picture that starts with it.",
+   "floor": {
+    "prerequisite": "Hears first sounds (pre-primary).",
+    "question": "What does \"ball\" start with?",
+    "answer": "/b/"
+   },
+   "steps": [
+    "Show the letter; say its sound.",
+    "Show a picture that starts with it.",
+    "The child finds another.",
+    "Match letters to pictures."
+   ],
+   "contexts": [
+    "greeting friends in the morning",
+    "a cup and a ball at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: b d"
+    },
+    {
+     "beat": "point",
+     "do": "Point at b.",
+     "say": "This says /b/, as in ball."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say /b/."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child traces b and draws a ball."
+    },
+    {
+     "beat": "reveal",
+     "do": "Make a bed with your fists: b first."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H.M1_LH_NAME_FOR_SOUND",
+     "listen_for": [
+      "bee"
+     ],
+     "ask": "Is that the name or the sound?",
+     "repair": "Sound: /b/."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H.M1_LH_B_D",
+     "listen_for": [
+      "b"
+     ],
+     "ask": "Make the bed: which side?",
+     "repair": "B on the left."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H.M1_LH_C_S",
+     "listen_for": [
+      "sun"
+     ],
+     "ask": "What does cup start with?",
+     "repair": "/k/."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.LETTERS_A_H.M1_LH_E_I",
+     "listen_for": [
+      "ink"
+     ],
+     "ask": "Mouth open or smiling?",
+     "repair": "Open: egg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which letter does \"cup\" start with?",
+     "answer": "c",
+     "shows": "c"
+    },
+    {
+     "question": "What sound does d make?",
+     "answer": "/d/",
+     "shows": "sound"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child clips each sound short and clean, then says a word that starts with it.",
+   "floor": {
+    "prerequisite": "Hears first sounds.",
+    "question": "Which picture starts with /m/: mat or cat?",
+    "answer": "mat"
+   },
+   "steps": [
+    "Say the sound; the child echoes.",
+    "Clip it short.",
+    "Say a word with it.",
+    "Play a sound game."
+   ],
+   "contexts": [
+    "greetings",
+    "things at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: m"
+    },
+    {
+     "beat": "point",
+     "do": "Point at m.",
+     "say": "Mmm, short and clean. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "count",
+     "do": "The child says three m words."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: mat, man, mug."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS.M1_SLS_NAME",
+     "listen_for": [
+      "em"
+     ],
+     "ask": "Name or sound?",
+     "repair": "Sound."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS.M1_SLS_UH",
+     "listen_for": [
+      "buh"
+     ],
+     "ask": "Can you clip it?",
+     "repair": "B, not buh."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS.M1_SLS_L_R",
+     "listen_for": [
+      "led rolly"
+     ],
+     "ask": "Up or curled?",
+     "repair": "Up for l."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS.M1_SLS_END_VOWEL",
+     "listen_for": [
+      "booki"
+     ],
+     "ask": "Any sound after k?",
+     "repair": "Stop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say the sound of b.",
+     "answer": "/b/ short, not buh",
+     "shows": "clean sound"
+    },
+    {
+     "question": "Say: book",
+     "answer": "book, with no vowel after k",
+     "shows": "no end vowel"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS",
+   "assessed_by": "questions",
+   "key_step": "The child checks the time of day and who is being greeted, then chooses the greeting and the answer.",
+   "floor": {
+    "prerequisite": "Speaks short phrases.",
+    "question": "What do you say when you meet a friend?",
+    "answer": "Hello"
+   },
+   "steps": [
+    "Act greetings at different times.",
+    "Practise answering.",
+    "Greet elders and friends.",
+    "Play a greeting game."
+   ],
+   "contexts": [
+    "arriving at school",
+    "visiting grandparents"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sun rising, high, setting."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rising sun.",
+     "say": "What do we say now?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Good morning."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child greets a partner for each picture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS.M1_GR_TIME",
+     "listen_for": [
+      "Good morning"
+     ],
+     "ask": "Is it morning?",
+     "repair": "After lunch: afternoon."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS.M1_GR_REPLY_FINE",
+     "listen_for": [
+      "Fine."
+     ],
+     "ask": "What did the teacher say?",
+     "repair": "Say it back."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS.M1_GR_NIGHT",
+     "listen_for": [
+      "Good night"
+     ],
+     "ask": "Is she going to bed?",
+     "repair": "Good evening."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.GREETINGS.M1_GR_ELDER_HI",
+     "listen_for": [
+      "Hi!"
+     ],
+     "ask": "Is the head teacher a friend?",
+     "repair": "Good morning, madam."
+    }
+   ],
+   "checks": [
+    {
+     "question": "It is evening. Your aunt arrives. You say ...",
+     "answer": "Good evening",
+     "shows": "time"
+    },
+    {
+     "question": "Teacher: \"How are you?\" You say ...",
+     "answer": "I am fine, thank you.",
+     "shows": "answer"
+    }
+   ]
+  }
+ ]
+}

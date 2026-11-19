@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T1_PRE_READING",
+ "title": "Pre-reading (Theme 1: Greetings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE",
+   "assessed_by": "questions",
+   "key_step": "The child checks four things: back straight, feet down, book on the desk an arm away, good light.",
+   "floor": {
+    "prerequisite": "Holds a book the right way up.",
+    "question": "Show me the front of the book.",
+    "answer": "points to the cover"
+   },
+   "steps": [
+    "Show pictures of good and poor posture.",
+    "Act them.",
+    "Choose the good one.",
+    "Check posture before reading."
+   ],
+   "contexts": [
+    "reading at home",
+    "reading in class"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child sitting well and one slouching."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Which child can read well?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sits like the good picture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE.M1_RP_SLOUCH",
+     "listen_for": [
+      "the child with the head on the desk"
+     ],
+     "ask": "Is your back straight?",
+     "repair": "Sit up."
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE.M1_RP_TOO_CLOSE",
+     "listen_for": [
+      "touching my nose"
+     ],
+     "ask": "How far is the book?",
+     "repair": "Elbow to hand."
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE.M1_RP_UPSIDE",
+     "listen_for": [
+      "the one with the pictures upside down"
+     ],
+     "ask": "Are the people standing?",
+     "repair": "Turn it."
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE.M1_RP_DARK",
+     "listen_for": [
+      "in the dark corner"
+     ],
+     "ask": "Is there light?",
+     "repair": "Near the window."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where should the book be?",
+     "answer": "on the desk, an arm away",
+     "shows": "distance"
+    },
+    {
+     "question": "Which is better: a dark corner or near the window?",
+     "answer": "near the window",
+     "shows": "light"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS",
+   "assessed_by": "voice",
+   "key_step": "The child says each sound left to right, then says them faster until they join into a word.",
+   "floor": {
+    "prerequisite": "Says letter-sounds.",
+    "question": "Say the sound of c.",
+    "answer": "/k/"
+   },
+   "steps": [
+    "Say each sound, touching each letter.",
+    "Slide the finger and blend.",
+    "Say the word.",
+    "Read it in a sentence."
+   ],
+   "contexts": [
+    "greetings",
+    "things at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: cat"
+    },
+    {
+     "beat": "point",
+     "do": "Point at c.",
+     "say": "Say the sounds with me, then read it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child traces under the word while reading."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS.M1_DW_NO_BLEND",
+     "listen_for": [
+      "says c, a, t, then \"cup\""
+     ],
+     "ask": "Say them faster.",
+     "repair": "C-a-t, cat."
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS.M1_DW_PICTURE",
+     "listen_for": [
+      "cat"
+     ],
+     "ask": "Cover the picture: what do the letters say?",
+     "repair": "Kitten."
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS.M1_DW_B_D",
+     "listen_for": [
+      "dad"
+     ],
+     "ask": "Make the bed.",
+     "repair": "Bad."
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS.M1_DW_RIGHT_LEFT",
+     "listen_for": [
+      "tip"
+     ],
+     "ask": "Where do we start?",
+     "repair": "On the left."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: sit",
+     "answer": "sit",
+     "shows": "blend"
+    },
+    {
+     "question": "Read: bed",
+     "answer": "bed, b first",
+     "shows": "b and d"
+    }
+   ]
+  }
+ ]
+}

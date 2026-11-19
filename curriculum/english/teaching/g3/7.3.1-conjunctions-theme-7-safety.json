@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T7_CONJUNCTIONS",
+ "title": "Conjunctions (Theme 7: Safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Do the ideas agree, pull apart, or give a reason?\" and chooses and, but or because.",
+   "floor": {
+    "prerequisite": "Joins with or.",
+    "question": "Tea ___ milk?",
+    "answer": "or"
+   },
+   "steps": [
+    "Show two sentence strips.",
+    "Ask how they connect.",
+    "Join with but or because.",
+    "Write own sentences about safety."
+   ],
+   "contexts": [
+    "crossing the road",
+    "wearing a helmet",
+    "playing safely"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The road was busy ___ we crossed safely."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? and, but or because?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: The road was busy but we crossed safely."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE.M3_CJ_AND_FOR_BUT",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Do the ideas agree?",
+     "repair": "No: but."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE.M3_CJ_REASON_SWAP",
+     "listen_for": [
+      "I was hungry because I ate."
+     ],
+     "ask": "Which is the reason?",
+     "repair": "Because + reason."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE.M3_CJ_BECAUSE_ALONE",
+     "listen_for": [
+      "Because it was raining. (written alone as the sentence)"
+     ],
+     "ask": "Is that a whole sentence?",
+     "repair": "Join it to the main idea."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T7_CONJUNCTIONS.CONJ_BUT_BECAUSE.M3_CJ_BUT_AGREE",
+     "listen_for": [
+      "but"
+     ],
+     "ask": "Do they pull apart?",
+     "repair": "No: and."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I wore a helmet ___ it keeps me safe.",
+     "answer": "because",
+     "shows": "reason"
+    },
+    {
+     "question": "Join: I was tired. I finished my work. (but)",
+     "answer": "I was tired but I finished my work.",
+     "shows": "but"
+    }
+   ]
+  }
+ ]
+}

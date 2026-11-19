@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 6: Weather and our environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (f, n, h, o), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"fan\" start like \"pan\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "weather: wind and sun",
+    "a hat on a hot day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: fan, pan."
+    },
+    {
+     "beat": "point",
+     "do": "Say fan.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write fan and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O.M1_FH_F_P",
+     "listen_for": [
+      "pan"
+     ],
+     "ask": "Teeth on lip?",
+     "repair": "Fan."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O.M1_FH_N_M",
+     "listen_for": [
+      "m"
+     ],
+     "ask": "Lips open?",
+     "repair": "Nose."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O.M1_FH_POT_PORT",
+     "listen_for": [
+      "dog"
+     ],
+     "ask": "Long or short?",
+     "repair": "Ball: long."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS_F_N_H_O.M1_FH_O_NAME",
+     "listen_for": [
+      "nose"
+     ],
+     "ask": "Quick o?",
+     "repair": "Dog."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with h: hat, cat, at?",
+     "answer": "hat",
+     "shows": "h"
+    },
+    {
+     "question": "Which word has the sound in \"ball\": dog, door, dot?",
+     "answer": "door",
+     "shows": "or"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS",
+  "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP"
+ ]
+}

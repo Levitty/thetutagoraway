@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T1_FLUENCY",
+ "title": "Fluency (Theme 1: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY",
+   "assessed_by": "voice",
+   "key_step": "The child points under each word, reads every letter left to right, and sounds out a new word instead of guessing.",
+   "floor": {
+    "prerequisite": "Reads three- and four-letter words.",
+    "question": "Read: duck",
+    "answer": "duck"
+   },
+   "steps": [
+    "Read the text to the child.",
+    "Read together.",
+    "The child reads alone, pointing.",
+    "Read again."
+   ],
+   "contexts": [
+    "a story about school",
+    "a text about transport",
+    "a farm story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The goat is in the garden."
+    },
+    {
+     "beat": "point",
+     "do": "Point at garden.",
+     "say": "Read with me, then on your own."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the word that was hard."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together once more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY.M2_RA_GUESS",
+     "listen_for": [
+      "The goat is in the grass."
+     ],
+     "ask": "Look at all the letters: does it say grass?",
+     "repair": "Garden."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY.M2_RA_B_D",
+     "listen_for": [
+      "The bog has a done."
+     ],
+     "ask": "Which way does the belly face?",
+     "repair": "Make the bed."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY.M2_RA_SKIP",
+     "listen_for": [
+      "We go market Saturday."
+     ],
+     "ask": "Did your finger touch every word?",
+     "repair": "Read it again."
+    },
+    {
+     "code": "ENGL.G2.READIN.T1_FLUENCY.READ_ACCURATELY.M2_RA_ADDS",
+     "listen_for": [
+      "My mama bought some tomatoes."
+     ],
+     "ask": "Is that word on the page?",
+     "repair": "Read only what is there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: The dog dug a big hole.",
+     "answer": "dog, dug and big read right",
+     "shows": "b and d"
+    },
+    {
+     "question": "Read: We go to the market on Saturday.",
+     "answer": "every word, none skipped",
+     "shows": "accuracy"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.BL_SP_SC_SK_CK"
+ ]
+}

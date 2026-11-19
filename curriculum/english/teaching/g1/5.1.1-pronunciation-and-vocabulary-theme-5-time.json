@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 5: Time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the sound (s, l, i, p), says it back, and matches it to the right word or picture.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"pin\" start like \"pen\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone.",
+    "Say it in three words with pictures.",
+    "Say two words that differ by one sound; the child points.",
+    "Sort pictures by sound."
+   ],
+   "contexts": [
+    "time: day and night",
+    "a clock on the wall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two pictures: pin, pen."
+    },
+    {
+     "beat": "point",
+     "do": "Say pin.",
+     "say": "Which one did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the word back and traces its first letter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write pin and underline the sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P.M1_SL_S_SH",
+     "listen_for": [
+      "shun"
+     ],
+     "ask": "Smile?",
+     "repair": "Sun."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P.M1_SL_L_R",
+     "listen_for": [
+      "r"
+     ],
+     "ask": "Tongue up?",
+     "repair": "Leg."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P.M1_SL_PIN_PEN",
+     "listen_for": [
+      "pen"
+     ],
+     "ask": "Smile or open?",
+     "repair": "Smile: pin."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.SOUNDS_S_L_I_P.M1_SL_P_B",
+     "listen_for": [
+      "bot"
+     ],
+     "ask": "Puff?",
+     "repair": "Pot."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with l: leg, red, peg?",
+     "answer": "leg",
+     "shows": "l"
+    },
+    {
+     "question": "The teacher says \"sit\". Sit or set?",
+     "answer": "sit",
+     "shows": "i"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL",
+   "assessed_by": "voice",
+   "key_step": "The child matches face and hands to the words and looks at the speaker.",
+   "floor": {
+    "prerequisite": "Talks with others.",
+    "question": "Say hello to a friend.",
+    "answer": "Hello"
+   },
+   "steps": [
+    "Show faces and gestures.",
+    "Act them.",
+    "Partner talk using them.",
+    "Talk about what fits where."
+   ],
+   "contexts": [
+    "saying sorry",
+    "saying thank you"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a happy face and a sorry face."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sorry face.",
+     "say": "Which face for sorry?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows the face while saying sorry."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL.M1_NV_EYES_DOWN",
+     "listen_for": [
+      "looks at the floor"
+     ],
+     "ask": "Where do you look when talking to a friend?",
+     "repair": "At the face now and then."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL.M1_NV_FACE_MISMATCH",
+     "listen_for": [
+      "says sorry while laughing"
+     ],
+     "ask": "Does your face match?",
+     "repair": "Sorry face."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL.M1_NV_NOD_MEANING",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Nod or shake for no?",
+     "repair": "Shake."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.NONVERBAL.M1_NV_SHOUT",
+     "listen_for": [
+      "shouts across the desk"
+     ],
+     "ask": "Indoor voice?",
+     "repair": "Speak softly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a nod mean?",
+     "answer": "yes",
+     "shows": "gesture"
+    },
+    {
+     "question": "Show your face for thank you.",
+     "answer": "a smile",
+     "shows": "face"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.SAY_SENTENCES"
+ ]
+}

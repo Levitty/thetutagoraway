@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI",
+ "title": "Tense: Future time (will/shall) (Theme 6: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.FUTURE_WILL_SHALL",
+   "assessed_by": "questions",
+   "key_step": "The child puts will or shall before a plain verb when the time is later.",
+   "floor": {
+    "prerequisite": "Uses a plain verb after did.",
+    "question": "Did you ___? (go)",
+    "answer": "go"
+   },
+   "steps": [
+    "Underline time words.",
+    "Show will + plain verb.",
+    "Fill gaps.",
+    "Talk about tomorrow."
+   ],
+   "contexts": [
+    "using a phone tomorrow",
+    "plans for the holiday",
+    "a visit next week"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Tomorrow I ___ visit my aunt."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? will or visited?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Tomorrow I will visit my aunt."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.FUTURE_WILL_SHALL.M3_FU_WILL_ED",
+     "listen_for": [
+      "visited"
+     ],
+     "ask": "What comes after will?",
+     "repair": "A plain verb."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.FUTURE_WILL_SHALL.M3_FU_WILL_S",
+     "listen_for": [
+      "uses"
+     ],
+     "ask": "Any -s after will?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.FUTURE_WILL_SHALL.M3_FU_WILL_TO",
+     "listen_for": [
+      "to make"
+     ],
+     "ask": "Will to or will?",
+     "repair": "Will make."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T6_TENSE_FUTURE_TIME_WI.FUTURE_WILL_SHALL.M3_FU_SHALL_HE",
+     "listen_for": [
+      "shall"
+     ],
+     "ask": "Shall goes with ...?",
+     "repair": "I and we."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She will ___ the radio. (switch)",
+     "answer": "switch",
+     "shows": "plain verb"
+    },
+    {
+     "question": "We ___ go to the cyber cafe.",
+     "answer": "shall (or will)",
+     "shows": "we"
+    }
+   ]
+  }
+ ]
+}

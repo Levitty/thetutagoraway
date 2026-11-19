@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER",
+ "title": "Adverbs of Manner (Theme 14: Talents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"How was it done?\" and adds -ly to the describing word (good becomes well).",
+   "floor": {
+    "prerequisite": "Knows describing words.",
+    "question": "She is a ___ singer (beautiful).",
+    "answer": "beautiful"
+   },
+   "steps": [
+    "Act verbs quickly and slowly.",
+    "Turn adjectives into adverbs.",
+    "Underline adverbs in a text.",
+    "Describe a talent show."
+   ],
+   "contexts": [
+    "a talent show",
+    "a drummer",
+    "a dancer"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wanjiku sings ___ (beautiful)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? beautiful or beautifully?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Wanjiku sings beautifully."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER.M3_AD_ADJECTIVE",
+     "listen_for": [
+      "beautiful"
+     ],
+     "ask": "How does she sing?",
+     "repair": "Beautifully."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER.M3_AD_GOOD",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Thing or how?",
+     "repair": "How: well."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER.M3_AD_SPELL",
+     "listen_for": [
+      "carefuly"
+     ],
+     "ask": "Careful + ly?",
+     "repair": "Carefully."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T14_ADVERBS_OF_MANNER.ADVERBS_MANNER.M3_AD_NOUN",
+     "listen_for": [
+      "quick"
+     ],
+     "ask": "Which word tells how he ran?",
+     "repair": "Slowly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "He ran ___ (quick).",
+     "answer": "quickly",
+     "shows": "-ly"
+    },
+    {
+     "question": "She plays the guitar ___ (good).",
+     "answer": "well",
+     "shows": "well"
+    }
+   ]
+  }
+ ]
+}

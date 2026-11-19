@@ -1,0 +1,187 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 15: Environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.BLENDS_SCR_QUE",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (scr-, qu), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"queen\" start like \"keen\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "scrubbing a dirty pot",
+    "a quiet forest",
+    "a queue at the water point"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: queen, keen."
+    },
+    {
+     "beat": "point",
+     "do": "Say queen.",
+     "say": "Listen: qu or k?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the qu in queen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.BLENDS_SCR_QUE.M3_QU_K_ONLY",
+     "listen_for": [
+      "keen"
+     ],
+     "ask": "Round lips after k?",
+     "repair": "Yes: queen."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.BLENDS_SCR_QUE.M3_SCR_STR",
+     "listen_for": [
+      "strap"
+     ],
+     "ask": "Middle k or t?",
+     "repair": "K: scrap."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.BLENDS_SCR_QUE.M3_SCR_EXTRA_VOWELS",
+     "listen_for": [
+      "3 (si-ku-rub)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: scrub."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.BLENDS_SCR_QUE.M3_QUEUE_RHYME",
+     "listen_for": [
+      "quick"
+     ],
+     "ask": "Does queue say kyoo?",
+     "repair": "Yes, like few."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with scr: screen, seen, green?",
+     "answer": "screen",
+     "shows": "scr"
+    },
+    {
+     "question": "Which word rhymes with queue: few, quick, cue?",
+     "answer": "few and cue",
+     "shows": "queue"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING",
+   "assessed_by": "voice",
+   "key_step": "The child answers in a full sentence with the new word, then adds one more idea.",
+   "floor": {
+    "prerequisite": "Says a simple sentence.",
+    "question": "Say what you can see.",
+    "answer": "I can see a tree."
+   },
+   "steps": [
+    "Say the word and its meaning.",
+    "Model a sentence.",
+    "The child says a new sentence.",
+    "Talk with a partner."
+   ],
+   "contexts": [
+    "talking about talents",
+    "a conversation about the environment",
+    "saving money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: borrow, lend."
+    },
+    {
+     "beat": "point",
+     "do": "Point at lend.",
+     "say": "I give my pencil to you: I lend. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's sentence."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child asks a partner to lend something."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING.M3_UW_ONE_WORD",
+     "listen_for": [
+      "Sweep."
+     ],
+     "ask": "Can you say it in a sentence?",
+     "repair": "I sweep the house."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING.M3_UW_BORROW_LEND",
+     "listen_for": [
+      "Borrow me your pencil."
+     ],
+     "ask": "Who gives and who takes?",
+     "repair": "You lend; I borrow."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING.M3_UW_OPEN_LIGHT",
+     "listen_for": [
+      "Open the light."
+     ],
+     "ask": "What do we do to lights?",
+     "repair": "Switch on."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T15_PRONUNCIATION_AND_VO.USE_WORDS_SPEAKING.M3_UW_ECHO",
+     "listen_for": [
+      "What is my talent."
+     ],
+     "ask": "Start with My ...",
+     "repair": "My talent is ..."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ask a friend for a ruler, politely.",
+     "answer": "Please lend me your ruler.",
+     "shows": "lend"
+    },
+    {
+     "question": "Tell me about your talent.",
+     "answer": "My talent is ... I ...",
+     "shows": "full sentences"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T10_PUNCTUATION",
+ "title": "Punctuation (Theme 10: Festivals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child checks each word: sentence start, name or I gets a capital; nothing else does.",
+   "floor": {
+    "prerequisite": "Writes small and capital letters.",
+    "question": "Write capital M.",
+    "answer": "M"
+   },
+   "steps": [
+    "Sort words: names and others.",
+    "Find the starts.",
+    "Correct sentences.",
+    "Write about a festival."
+   ],
+   "contexts": [
+    "Eid, Christmas and Diwali",
+    "Jamhuri Day in Nairobi"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: juma went to mombasa for eid."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which words need capitals?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS.M3_CA_NAMES",
+     "listen_for": [
+      "Juma went to mombasa for eid."
+     ],
+     "ask": "Is it a name of a place or person?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS.M3_CA_SMALL_I",
+     "listen_for": [
+      "My friend and i danced."
+     ],
+     "ask": "Is I alone?",
+     "repair": "Capital I."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS.M3_CA_EXTRA",
+     "listen_for": [
+      "My Mother cooked Rice."
+     ],
+     "ask": "Is mother a name here?",
+     "repair": "No: small."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.CAPITAL_LETTERS.M3_CA_AFTER_STOP",
+     "listen_for": [
+      "We sang. we danced."
+     ],
+     "ask": "What comes after a full stop?",
+     "repair": "Capital."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: on monday i went to kisumu.",
+     "answer": "On Monday I went to Kisumu.",
+     "shows": "names, I"
+    },
+    {
+     "question": "Which is right: My Mother or My mother?",
+     "answer": "My mother",
+     "shows": "no extra"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Telling, asking or a strong feeling?\" and puts the mark where the sentence ends.",
+   "floor": {
+    "prerequisite": "Knows the full stop.",
+    "question": "Fix: We sang",
+    "answer": "We sang."
+   },
+   "steps": [
+    "Show the three marks.",
+    "Read sentences aloud.",
+    "Choose marks.",
+    "Write one of each."
+   ],
+   "contexts": [
+    "a festival day",
+    "a dance at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Where is the festival"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which mark goes at the end?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS.M3_EM_QUESTION_STOP",
+     "listen_for": [
+      "."
+     ],
+     "ask": "Is it asking?",
+     "repair": "Question mark."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS.M3_EM_NONE",
+     "listen_for": [
+      "The drums were loud"
+     ],
+     "ask": "Has the sentence ended?",
+     "repair": "Add a mark."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS.M3_EM_EXCLAIM_ALL",
+     "listen_for": [
+      "!"
+     ],
+     "ask": "Is it a strong feeling?",
+     "repair": "No: full stop."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T10_PUNCTUATION.END_MARKS.M3_EM_LINE_END",
+     "listen_for": [
+      "at the end of the first line"
+     ],
+     "ask": "Where does the idea end?",
+     "repair": "Mark there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which mark: What a loud drum",
+     "answer": "!",
+     "shows": "exclamation"
+    },
+    {
+     "question": "Which mark: Did you see the dancers",
+     "answer": "?",
+     "shows": "question"
+    }
+   ]
+  }
+ ]
+}

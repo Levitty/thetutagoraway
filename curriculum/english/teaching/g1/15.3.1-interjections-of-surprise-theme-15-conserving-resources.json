@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR",
+ "title": "Interjections of surprise (Theme 15: Conserving resources)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.SURPRISE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child names the feeling (surprise) and chooses Oh or Wow, then an exclamation mark.",
+   "floor": {
+    "prerequisite": "Shows feelings with the face.",
+    "question": "Show me a surprised face.",
+    "answer": "shows it"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "conserving water",
+    "seeing something new"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: A big elephant! \"___!\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Wow or Ouch?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Wow!"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.SURPRISE_WORDS.M1_SU_SAD",
+     "listen_for": [
+      "Oh no"
+     ],
+     "ask": "Surprise or bad news?",
+     "repair": "Oh!"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.SURPRISE_WORDS.M1_SU_NO_MARK",
+     "listen_for": [
+      "Wow a big cake."
+     ],
+     "ask": "After Wow?",
+     "repair": "!"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.SURPRISE_WORDS.M1_SU_HOME_WORD",
+     "listen_for": [
+      "Kumbe!"
+     ],
+     "ask": "In English?",
+     "repair": "Wow."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.SURPRISE_WORDS.M1_SU_OUCH",
+     "listen_for": [
+      "Ouch"
+     ],
+     "ask": "Pain?",
+     "repair": "No: Wow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word shows surprise: Oh, Ouch, Ugh?",
+     "answer": "Oh",
+     "shows": "surprise"
+    },
+    {
+     "question": "Write: Wow a big cake",
+     "answer": "Wow! A big cake!",
+     "shows": "mark"
+    }
+   ]
+  }
+ ]
+}

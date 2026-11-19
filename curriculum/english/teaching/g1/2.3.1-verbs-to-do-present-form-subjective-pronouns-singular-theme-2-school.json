@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_",
+ "title": "Verbs ‘to do’- Present form Subjective Pronouns-Singular (Theme 2: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Boy, girl or thing?\" and chooses he, she or it.",
+   "floor": {
+    "prerequisite": "Names people.",
+    "question": "Who is this? (Juma)",
+    "answer": "Juma"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "people at school",
+    "my classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: This is Amina. ___ is my sister."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "He or She?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: She is my sister."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG.M1_SP_HE_SHE",
+     "listen_for": [
+      "He"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "She."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG.M1_SP_ME_SUBJECT",
+     "listen_for": [
+      "Me"
+     ],
+     "ask": "At the start?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG.M1_SP_DOUBLE",
+     "listen_for": [
+      "Juma he plays."
+     ],
+     "ask": "How many subjects?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.SUBJECT_PRONOUNS_SG.M1_SP_IT_PERSON",
+     "listen_for": [
+      "It"
+     ],
+     "ask": "Person or thing?",
+     "repair": "She."
+    }
+   ],
+   "checks": [
+    {
+     "question": "This is Juma. ___ is tall.",
+     "answer": "He",
+     "shows": "he"
+    },
+    {
+     "question": "This is my bag. ___ is red.",
+     "answer": "It",
+     "shows": "it"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES",
+   "assessed_by": "questions",
+   "key_step": "The child uses does with he, she, it and do with I, you, and keeps the next verb plain.",
+   "floor": {
+    "prerequisite": "Uses he and she.",
+    "question": "___ is a girl.",
+    "answer": "She"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "school jobs",
+    "homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Baba ___ the cooking."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "do or does?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Baba does the cooking."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES.M1_DD_HE_DO",
+     "listen_for": [
+      "do"
+     ],
+     "ask": "He takes?",
+     "repair": "Does."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES.M1_DD_I_DOES",
+     "listen_for": [
+      "does"
+     ],
+     "ask": "I takes?",
+     "repair": "Do."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES.M1_DD_DOES_S",
+     "listen_for": [
+      "likes"
+     ],
+     "ask": "After does?",
+     "repair": "Like."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.DO_DOES.M1_DD_NOT_NO_DO",
+     "listen_for": [
+      "not"
+     ],
+     "ask": "What goes before not?",
+     "repair": "Do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does she ___ milk? (like)",
+     "answer": "like",
+     "shows": "plain"
+    },
+    {
+     "question": "I ___ my work.",
+     "answer": "do",
+     "shows": "I"
+    }
+   ]
+  }
+ ]
+}

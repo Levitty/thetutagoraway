@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and vocabulary (Theme 3: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z",
+   "assessed_by": "questions",
+   "key_step": "The child says the letter's sound, not its name, and matches it to a picture.",
+   "floor": {
+    "prerequisite": "Knows letters a to p.",
+    "question": "What sound does p make?",
+    "answer": "/p/"
+   },
+   "steps": [
+    "Show the letter; say its sound.",
+    "Show pictures.",
+    "The child matches.",
+    "Play I spy."
+   ],
+   "contexts": [
+    "family members",
+    "a van and a yam"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: v"
+    },
+    {
+     "beat": "point",
+     "do": "Point at v.",
+     "say": "This says /v/, as in van."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say /v/."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child traces v and draws a van."
+    },
+    {
+     "beat": "reveal",
+     "do": "Teeth on the lip and buzz: v."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z.M1_QZ_NAME_FOR_SOUND",
+     "listen_for": [
+      "vee"
+     ],
+     "ask": "Name or sound?",
+     "repair": "Sound: /v/."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z.M1_QZ_V_B",
+     "listen_for": [
+      "b"
+     ],
+     "ask": "Teeth on the lip?",
+     "repair": "V."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z.M1_QZ_X_START",
+     "listen_for": [
+      "start"
+     ],
+     "ask": "Start or end?",
+     "repair": "End: box."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.LETTERS_Q_Z.M1_QZ_R_L",
+     "listen_for": [
+      "l"
+     ],
+     "ask": "Curled tongue?",
+     "repair": "R."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which letter does \"van\" start with?",
+     "answer": "v",
+     "shows": "v"
+    },
+    {
+     "question": "Where is the x sound in \"six\"?",
+     "answer": "at the end",
+     "shows": "x"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP",
+   "assessed_by": "voice",
+   "key_step": "The child listens to the whole instruction, then does it once.",
+   "floor": {
+    "prerequisite": "Carries out simple requests.",
+    "question": "Come here.",
+    "answer": "comes"
+   },
+   "steps": [
+    "Say the instruction once.",
+    "The child does it.",
+    "Swap roles.",
+    "Simon says."
+   ],
+   "contexts": [
+    "classroom routines",
+    "tidying up"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chair and a ball."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chair.",
+     "say": "Put the ball under the chair."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child does it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws where the ball is."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP.M1_FO_COPY",
+     "listen_for": [
+      "touches the ear a friend touched"
+     ],
+     "ask": "What did you hear?",
+     "repair": "Eyes closed, then do it."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP.M1_FO_HALF",
+     "listen_for": [
+      "picks up the book and holds it"
+     ],
+     "ask": "Did you finish?",
+     "repair": "On the table."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP.M1_FO_POSITION",
+     "listen_for": [
+      "puts it on the chair"
+     ],
+     "ask": "On or under?",
+     "repair": "Under."
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.FOLLOW_ONE_STEP.M1_FO_OPEN_CLOSE",
+     "listen_for": [
+      "opens the door"
+     ],
+     "ask": "Open or close?",
+     "repair": "Close."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Stand on one leg.",
+     "answer": "does it",
+     "shows": "action"
+    },
+    {
+     "question": "Put the pencil in the box.",
+     "answer": "pencil in the box",
+     "shows": "position"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.SAY_LETTER_SOUNDS"
+ ]
+}

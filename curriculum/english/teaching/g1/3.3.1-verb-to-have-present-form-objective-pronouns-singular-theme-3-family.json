@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT",
+ "title": "Verb ‘to have’ – present form Objective Pronouns- Singular (Theme 3: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS",
+   "assessed_by": "questions",
+   "key_step": "The child uses has with he, she, it and have with I, you.",
+   "floor": {
+    "prerequisite": "Uses does and do.",
+    "question": "She ___ (do) her work.",
+    "answer": "does"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "my family",
+    "my things"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Amina ___ a doll."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "have or has?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Amina has a doll."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS.M1_HH_SHE_HAVE",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "She takes?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS.M1_HH_I_HAS",
+     "listen_for": [
+      "has"
+     ],
+     "ask": "I takes?",
+     "repair": "Have."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS.M1_HH_HAVING",
+     "listen_for": [
+      "am having"
+     ],
+     "ask": "Do you own it?",
+     "repair": "I have."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.HAVE_HAS.M1_HH_WITH",
+     "listen_for": [
+      "is with"
+     ],
+     "ask": "English way?",
+     "repair": "Has."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I ___ a brother.",
+     "answer": "have",
+     "shows": "I"
+    },
+    {
+     "question": "Juma ___ a pencil.",
+     "answer": "has",
+     "shows": "not is with"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.OBJECT_PRONOUNS_SG",
+   "assessed_by": "questions",
+   "key_step": "The child uses me, him, her or it after the verb.",
+   "floor": {
+    "prerequisite": "Uses I, he and she.",
+    "question": "___ am a boy.",
+    "answer": "I"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "family members",
+    "helping at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Give ___ the ball. (I)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "I or me?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: Give me the ball."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.OBJECT_PRONOUNS_SG.M1_OP_I_ME",
+     "listen_for": [
+      "I"
+     ],
+     "ask": "After give?",
+     "repair": "Me."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.OBJECT_PRONOUNS_SG.M1_OP_HE_HIM",
+     "listen_for": [
+      "he"
+     ],
+     "ask": "After the verb?",
+     "repair": "Him."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.OBJECT_PRONOUNS_SG.M1_OP_HIM_HER",
+     "listen_for": [
+      "him"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "Her."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.OBJECT_PRONOUNS_SG.M1_OP_SHE_HER",
+     "listen_for": [
+      "she"
+     ],
+     "ask": "After the verb?",
+     "repair": "Her."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mama called ___ (he).",
+     "answer": "him",
+     "shows": "him"
+    },
+    {
+     "question": "I helped ___ (she).",
+     "answer": "her",
+     "shows": "her"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE",
+ "title": "Tense: Simple Past Tense (Adding -ed / -d) (Theme 7: Hygiene)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.PAST_ED",
+   "assessed_by": "questions",
+   "key_step": "The child hears the time word and adds -ed to the verb.",
+   "floor": {
+    "prerequisite": "Uses the present simple.",
+    "question": "Every day I ___ (wash).",
+    "answer": "wash"
+   },
+   "steps": [
+    "Model the pattern with real things or pictures.",
+    "Say it together.",
+    "The child fills the gap.",
+    "The child makes a sentence."
+   ],
+   "contexts": [
+    "washing hands yesterday",
+    "a game we played"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write or say: Yesterday I ___ football. (play)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "play or played?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the whole sentence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: I played football."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.PAST_ED.M1_PA_NO_ED",
+     "listen_for": [
+      "play"
+     ],
+     "ask": "Yesterday?",
+     "repair": "Add -ed."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.PAST_ED.M1_PA_SPELL",
+     "listen_for": [
+      "washt"
+     ],
+     "ask": "How is it spelt?",
+     "repair": "-ed."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.PAST_ED.M1_PA_DID_ED",
+     "listen_for": [
+      "did washed"
+     ],
+     "ask": "Need did?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.PAST_ED.M1_PA_GOED",
+     "listen_for": [
+      "goed"
+     ],
+     "ask": "Is go special?",
+     "repair": "Went."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Yesterday we ___ (clean) the room.",
+     "answer": "cleaned",
+     "shows": "-ed"
+    },
+    {
+     "question": "Write the past of wash.",
+     "answer": "washed",
+     "shows": "spelling"
+    }
+   ]
+  }
+ ]
+}

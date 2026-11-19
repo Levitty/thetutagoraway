@@ -1,0 +1,188 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T7_SPELLING",
+ "title": "Spelling (Theme 7: Safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter for every sound in the blend, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the blend.",
+    "question": "Which word did you hear: square or sqare?",
+    "answer": "square"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the blend letters first.",
+    "Look, cover, write, check.",
+    "Use the word in a sentence."
+   ],
+   "contexts": [
+    "theme words: dwell, twins, bank, square"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: sqare / square"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ.M3_SP_SQ_NO_U",
+     "listen_for": [
+      "sqare"
+     ],
+     "ask": "What follows q?",
+     "repair": "U."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ.M3_SP_NK_NG",
+     "listen_for": [
+      "bang"
+     ],
+     "ask": "Does it end with k?",
+     "repair": "Bank."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ.M3_SP_TW_TU",
+     "listen_for": [
+      "tuins"
+     ],
+     "ask": "T then ...?",
+     "repair": "W."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.SPELL_DW_TW_NK_SQ.M3_SP_SQ_SKW",
+     "listen_for": [
+      "skwiz"
+     ],
+     "ask": "How is skw spelt?",
+     "repair": "Squ."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: tuelve, twelve",
+     "answer": "twelve",
+     "shows": "tw"
+    },
+    {
+     "question": "Fill: thi___ (use your mind)",
+     "answer": "nk",
+     "shows": "nk"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES",
+   "assessed_by": "composition",
+   "key_step": "The child says the sentence aloud, checks it has who and a doing word, then writes it with a capital and a full stop.",
+   "floor": {
+    "prerequisite": "Spells theme words.",
+    "question": "Write: helmet",
+    "answer": "helmet"
+   },
+   "steps": [
+    "Say a sentence aloud.",
+    "Check who and doing word.",
+    "Write it.",
+    "Check capital and full stop."
+   ],
+   "contexts": [
+    "safety on the road",
+    "safety at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A helmet on the head."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Is it a full sentence? What is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES.M3_WT_NO_VERB",
+     "listen_for": [
+      "A helmet on the head."
+     ],
+     "ask": "Who does what?",
+     "repair": "Add the doing word."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES.M3_WT_RUN_ON",
+     "listen_for": [
+      "I stop I look left I look right I cross"
+     ],
+     "ask": "Where does your voice stop?",
+     "repair": "Full stop there."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES.M3_WT_LIST",
+     "listen_for": [
+      "helmet, road, zebra crossing"
+     ],
+     "ask": "Can you put it in a sentence?",
+     "repair": "We cross at ..."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T7_SPELLING.WRITE_THEME_SENTENCES.M3_WT_NO_CAPITAL",
+     "listen_for": [
+      "we walk on the left."
+     ],
+     "ask": "How does a sentence start?",
+     "repair": "Capital."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a sentence with \"zebra crossing\".",
+     "answer": "a full sentence, capital, full stop",
+     "shows": "sentence"
+    },
+    {
+     "question": "Fix: we look left",
+     "answer": "We look left.",
+     "shows": "capital and stop"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE"
+ ]
+}

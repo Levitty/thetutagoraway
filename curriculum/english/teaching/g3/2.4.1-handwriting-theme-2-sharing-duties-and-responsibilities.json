@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G3.WRITIN.T2_HANDWRITING",
+ "title": "Handwriting (Theme 2: Sharing duties and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.WRITIN.T2_HANDWRITING.WORD_SPACING",
+   "assessed_by": "questions",
+   "key_step": "The child puts a finger after each word and writes the next word after it.",
+   "floor": {
+    "prerequisite": "Writes words legibly.",
+    "question": "Copy: we",
+    "answer": "we"
+   },
+   "steps": [
+    "Show spaced and unspaced writing.",
+    "Use a spacer stick.",
+    "Count words.",
+    "Write a sentence."
+   ],
+   "contexts": [
+    "a note about etiquette",
+    "a sentence on the board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wesharetheduties."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Where do the spaces go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.WRITIN.T2_HANDWRITING.WORD_SPACING.M3_WS_RUN_TOGETHER",
+     "listen_for": [
+      "Wesharetheduties."
+     ],
+     "ask": "Where does each word end?",
+     "repair": "Finger space."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T2_HANDWRITING.WORD_SPACING.M3_WS_INSIDE_WORD",
+     "listen_for": [
+      "class room work"
+     ],
+     "ask": "Is it one word?",
+     "repair": "No gap inside."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T2_HANDWRITING.WORD_SPACING.M3_WS_HUGE",
+     "listen_for": [
+      "We      share      duties"
+     ],
+     "ask": "How many fingers?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G3.WRITIN.T2_HANDWRITING.WORD_SPACING.M3_WS_COUNT",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "How many gaps?",
+     "repair": "Gaps plus one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many words: \"Please sit down.\"",
+     "answer": "3",
+     "shows": "words"
+    },
+    {
+     "question": "Fix: Thankyou forthe food.",
+     "answer": "Thank you for the food.",
+     "shows": "spacing"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.WRITIN.T1_HANDWRITING_LETTERS_.HANDWRITING_LEGIBLE"
+ ]
+}

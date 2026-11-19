@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T13_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 13: Technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.WORD_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child finds the capital word and the who first, then the doing word, then the rest.",
+   "floor": {
+    "prerequisite": "Fills gaps.",
+    "question": "I ___ a ball. (have)",
+    "answer": "have"
+   },
+   "steps": [
+    "Cut a sentence into word cards.",
+    "Find the first word.",
+    "Order the cards.",
+    "Read it."
+   ],
+   "contexts": [
+    "technology",
+    "my home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ball / I / a / have"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Put the words in order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M1_WO_AS_GIVEN",
+     "listen_for": [
+      "ball I a have"
+     ],
+     "ask": "Who?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M1_WO_ADJ_AFTER",
+     "listen_for": [
+      "I see a tree tall."
+     ],
+     "ask": "Where does tall go?",
+     "repair": "Before tree."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M1_WO_CAPITAL",
+     "listen_for": [
+      "run We fast"
+     ],
+     "ask": "Which has a capital?",
+     "repair": "We."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.WORD_ORDER.M1_WO_VERB_FIRST",
+     "listen_for": [
+      "Sings Mama."
+     ],
+     "ask": "Who first?",
+     "repair": "Mama."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order: tree / tall / a / see / I",
+     "answer": "I see a tall tree.",
+     "shows": "describing word"
+    },
+    {
+     "question": "Order: sings / Mama",
+     "answer": "Mama sings.",
+     "shows": "who first"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.WRITIN.T12_GUIDED_WRITING.FILL_GAPS"
+ ]
+}

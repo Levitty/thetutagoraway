@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE",
+ "title": "Simple Past Tense (Theme 4: Months of the year)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST",
+   "assessed_by": "questions",
+   "key_step": "The child finds the time word, then adds -ed or uses the irregular form.",
+   "floor": {
+    "prerequisite": "Uses -ed for regular verbs.",
+    "question": "Yesterday I ___ (play).",
+    "answer": "played"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "the months of the year",
+    "what we did in April"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Yesterday we ___ to Kisumu. (go)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "goed or went?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Yesterday we went to Kisumu."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST.M2_PA_GOED",
+     "listen_for": [
+      "goed"
+     ],
+     "ask": "Is go a special verb?",
+     "repair": "Went."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST.M2_PA_PRESENT",
+     "listen_for": [
+      "visit"
+     ],
+     "ask": "Is there a time word?",
+     "repair": "Add -ed."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST.M2_PA_SPELL",
+     "listen_for": [
+      "stoped"
+     ],
+     "ask": "Short vowel, one consonant?",
+     "repair": "Double it."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T4_SIMPLE_PAST_TENSE.SIMPLE_PAST.M2_PA_DID_PAST",
+     "listen_for": [
+      "did played"
+     ],
+     "ask": "Statement or question?",
+     "repair": "Just played."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Last week I ___ my aunt. (visit)",
+     "answer": "visited",
+     "shows": "-ed"
+    },
+    {
+     "question": "The bus ___ at the gate. (stop)",
+     "answer": "stopped",
+     "shows": "spelling"
+    }
+   ]
+  }
+ ]
+}

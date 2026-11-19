@@ -1,0 +1,192 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 8: Domestic animals)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (-ft, -ct, -lt, -rd), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"belt\" start like \"bell\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a bird in the cowshed",
+    "a gift of milk",
+    "an insect on the calf"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: belt, bell."
+    },
+    {
+     "beat": "point",
+     "do": "Say belt.",
+     "say": "Listen: lt or l?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the lt in belt."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD.M3_LT_DROP_T",
+     "listen_for": [
+      "bell"
+     ],
+     "ask": "What was the last sound?",
+     "repair": "T: belt."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD.M3_FT_END_VOWEL",
+     "listen_for": [
+      "2 (gif-ti)"
+     ],
+     "ask": "Any sound after t?",
+     "repair": "No: gift."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD.M3_CT_RHYME_K",
+     "listen_for": [
+      "back"
+     ],
+     "ask": "K then what?",
+     "repair": "T: fact, act."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.ENDS_FT_CT_LT_RD.M3_RD_D_T",
+     "listen_for": [
+      "cart"
+     ],
+     "ask": "Buzz or puff at the end?",
+     "repair": "Buzz: card."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word ends with ft: lift, lip, life?",
+     "answer": "lift",
+     "shows": "ft"
+    },
+    {
+     "question": "Which word ends with rd: cart, card, car?",
+     "answer": "card",
+     "shows": "rd"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS",
+   "assessed_by": "voice",
+   "key_step": "The child says the vowel, then closes the word with every sounded consonant and nothing after.",
+   "floor": {
+    "prerequisite": "Says words with one final consonant.",
+    "question": "Say: hat",
+    "answer": "hat"
+   },
+   "steps": [
+    "Say the word without the last sound.",
+    "Add the last sound.",
+    "Stop: no vowel after.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "milk from the cow",
+    "a lamp at night",
+    "lunch at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: han + d = hand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at d.",
+     "say": "Close the word with d and stop. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say hand."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child crosses out the silent b in lamb."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: hand, lam(b), milk."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS.M3_PEB_END_VOWEL",
+     "listen_for": [
+      "milki"
+     ],
+     "ask": "Did you add a sound at the end?",
+     "repair": "Stop at k: milk."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS.M3_PEB_DROP_LAST",
+     "listen_for": [
+      "han"
+     ],
+     "ask": "What is the last sound?",
+     "repair": "D: hand."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS.M3_PEB_DEVOICE",
+     "listen_for": [
+      "birt"
+     ],
+     "ask": "Buzz at the end?",
+     "repair": "Bir-d."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T8_PRONUNCIATION_AND_VO.PRONOUNCE_END_BLENDS.M3_PEB_SILENT_SOUNDED",
+     "listen_for": [
+      "lamb with a b at the end"
+     ],
+     "ask": "Is that letter silent?",
+     "repair": "Lam, no b."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: I drink milk at lunch.",
+     "answer": "milk and lunch with no extra vowel",
+     "shows": "endings"
+    },
+    {
+     "question": "Say: The lamb is in the camp.",
+     "answer": "lam(b) silent b, camp with p",
+     "shows": "silent letters"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T11_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 11: Environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES",
+   "assessed_by": "composition",
+   "key_step": "The child says the sentence, checks who and a doing word, then writes it with a capital and a full stop.",
+   "floor": {
+    "prerequisite": "Spells theme words.",
+    "question": "Write: tree",
+    "answer": "tree"
+   },
+   "steps": [
+    "Say the sentence aloud.",
+    "Check who and doing word.",
+    "Write it.",
+    "Check capital and full stop."
+   ],
+   "contexts": [
+    "the environment",
+    "planting trees"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Clean river."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Is it a sentence?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES.M2_WS_NO_VERB",
+     "listen_for": [
+      "Clean river."
+     ],
+     "ask": "Who does what?",
+     "repair": "Add the doing word."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES.M2_WS_NO_CAPITAL",
+     "listen_for": [
+      "we plant trees."
+     ],
+     "ask": "How does it start?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES.M2_WS_NO_STOP",
+     "listen_for": [
+      "I pick litter"
+     ],
+     "ask": "How does it end?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T11_GUIDED_WRITING.WRITE_SENTENCES.M2_WS_RUN_ON",
+     "listen_for": [
+      "Trees give shade we plant them"
+     ],
+     "ask": "Where does your voice stop?",
+     "repair": "Full stop there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a sentence with \"litter\".",
+     "answer": "a full sentence",
+     "shows": "sentence"
+    },
+    {
+     "question": "Fix: we plant trees",
+     "answer": "We plant trees.",
+     "shows": "marks"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

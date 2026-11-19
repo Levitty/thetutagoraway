@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T13_WH_QUESTIONS",
+ "title": "‘Wh’ questions (Theme 13: Savings)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the word for the answer wanted, swaps the helping verb before the subject, and ends with a question mark.",
+   "floor": {
+    "prerequisite": "Asks what, where, when, who questions.",
+    "question": "Ask where Ali lives.",
+    "answer": "Where does Ali live?"
+   },
+   "steps": [
+    "Show answers; ask which word gets them.",
+    "Swap the verb: you are, are you.",
+    "Write questions.",
+    "Interview a partner about savings."
+   ],
+   "contexts": [
+    "saving money",
+    "a visit to the bank",
+    "a school savings club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ did you travel? By bus."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? Why or How?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: How did you travel?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW.M3_WH_NO_INVERSION",
+     "listen_for": [
+      "Why you are late?"
+     ],
+     "ask": "Which word comes after why?",
+     "repair": "Are you."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW.M3_WH_WHOM_SUBJECT",
+     "listen_for": [
+      "Whom"
+     ],
+     "ask": "Did that person do it?",
+     "repair": "Who came."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW.M3_WH_WRONG_WORD",
+     "listen_for": [
+      "Why"
+     ],
+     "ask": "Way or reason?",
+     "repair": "Way: how."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T13_WH_QUESTIONS.WH_WHY_WHOM_HOW.M3_WH_NO_MARK",
+     "listen_for": [
+      "How did you save the money."
+     ],
+     "ask": "How does a question end?",
+     "repair": "Question mark."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order: late / you / why / are",
+     "answer": "Why are you late?",
+     "shows": "order"
+    },
+    {
+     "question": "___ did you call? I called my aunt.",
+     "answer": "Whom",
+     "shows": "whom"
+    }
+   ]
+  }
+ ]
+}

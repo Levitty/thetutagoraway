@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G3.READIN.T2_FLUENCY",
+ "title": "Fluency (Theme 2: Sharing duties and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.READIN.T2_FLUENCY.READ_WITH_EXPRESSION",
+   "assessed_by": "voice",
+   "key_step": "The child reads the marks: stop at a full stop, lift at a question mark, raise the voice at an exclamation mark, become the speaker inside quotation marks.",
+   "floor": {
+    "prerequisite": "Reads a sentence accurately.",
+    "question": "Read: The dog runs.",
+    "answer": "The dog runs."
+   },
+   "steps": [
+    "Model reading with and without expression.",
+    "Point at each mark and say what the voice does.",
+    "The child reads one line.",
+    "Read a dialogue in parts."
+   ],
+   "contexts": [
+    "a dialogue between Hare and Lion",
+    "a story read at assembly",
+    "a poem about technology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Is that my phone?\" asked Mama. \"Yes!\" said Ali."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question mark.",
+     "say": "Read with me, then on your own."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait while the child reads."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the word he or she found hard."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read it together once more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.READIN.T2_FLUENCY.READ_WITH_EXPRESSION.M3_RE_FLAT",
+     "listen_for": [
+      "flat voice, no excitement"
+     ],
+     "ask": "How would the character say it?",
+     "repair": "Say it like the character."
+    },
+    {
+     "code": "ENGL.G3.READIN.T2_FLUENCY.READ_WITH_EXPRESSION.M3_RE_NO_PAUSE",
+     "listen_for": [
+      "It rained we stayed inside."
+     ],
+     "ask": "What does a full stop tell you?",
+     "repair": "Stop and breathe."
+    },
+    {
+     "code": "ENGL.G3.READIN.T2_FLUENCY.READ_WITH_EXPRESSION.M3_RE_QUESTION_FLAT",
+     "listen_for": [
+      "voice falls at clean"
+     ],
+     "ask": "What does the question mark tell your voice?",
+     "repair": "Lift at the end."
+    },
+    {
+     "code": "ENGL.G3.READIN.T2_FLUENCY.READ_WITH_EXPRESSION.M3_RE_SAID_VOICE",
+     "listen_for": [
+      "same voice for both parts"
+     ],
+     "ask": "Who is talking inside the marks?",
+     "repair": "Become Grandmother."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: Is the door open?",
+     "answer": "voice rises at open",
+     "shows": "question"
+    },
+    {
+     "question": "Read: \"Run!\" shouted Grandfather.",
+     "answer": "loud, urgent voice",
+     "shows": "exclamation"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.BLENDS_DR_FL_FR_GL"
+ ]
+}

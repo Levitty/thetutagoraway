@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET",
+ "title": "Word Sets (gender sets for animals/people) Opposites (Theme 9: The farm)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS",
+   "assessed_by": "questions",
+   "key_step": "The child learns each pair as its own two words.",
+   "floor": {
+    "prerequisite": "Uses he and she.",
+    "question": "A boy: he. A girl: ___",
+    "answer": "she"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "animals on the farm",
+    "people at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A female chicken is a ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "cock or hen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: hen"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS.M2_GP_SWAP",
+     "listen_for": [
+      "cock"
+     ],
+     "ask": "Which one lays eggs?",
+     "repair": "Hen."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS.M2_GP_BOY_COW",
+     "listen_for": [
+      "boy cow"
+     ],
+     "ask": "Is there an English word?",
+     "repair": "Bull."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS.M2_GP_SAME_WORD",
+     "listen_for": [
+      "lion"
+     ],
+     "ask": "The female word?",
+     "repair": "Lioness."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T9_WORD_SETS_GENDER_SET.GENDER_PAIRS.M2_GP_UNCLE_AUNT",
+     "listen_for": [
+      "uncle"
+     ],
+     "ask": "Man or woman?",
+     "repair": "Aunt."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A male cow is a ___",
+     "answer": "bull",
+     "shows": "pair"
+    },
+    {
+     "question": "A female lion is a ___",
+     "answer": "lioness",
+     "shows": "pair"
+    }
+   ]
+  }
+ ]
+}

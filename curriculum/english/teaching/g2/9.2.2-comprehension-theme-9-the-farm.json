@@ -1,0 +1,271 @@
+{
+ "sub_strand": "ENGL.G2.READIN.T9_COMPREHENSION",
+ "title": "Comprehension (Theme 9: The farm)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.READIN.T9_COMPREHENSION.SETTING",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"Where?\" and \"When?\" and finds the words that tell.",
+   "floor": {
+    "prerequisite": "Uses place words.",
+    "question": "Where is the cat? (under the table)",
+    "answer": "under the table"
+   },
+   "steps": [
+    "Read the story.",
+    "Underline where and when words.",
+    "Say the setting.",
+    "Draw it."
+   ],
+   "contexts": [
+    "a farm in the morning",
+    "a market on Saturday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Early in the morning, the farmer milked the cow in the shed."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Where and when?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: in the shed, early in the morning"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.SETTING.M2_SE_PERSON",
+     "listen_for": [
+      "Grandma"
+     ],
+     "ask": "Where?",
+     "repair": "Under the tree."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.SETTING.M2_SE_NO_TIME",
+     "listen_for": [
+      "in the kitchen"
+     ],
+     "ask": "And when?",
+     "repair": "On a rainy night."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.SETTING.M2_SE_OWN_PLACE",
+     "listen_for": [
+      "at my home"
+     ],
+     "ask": "Where in the story?",
+     "repair": "At a lake."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.SETTING.M2_SE_PICTURE_WRONG",
+     "listen_for": [
+      "a farm at night with the moon"
+     ],
+     "ask": "Morning or night?",
+     "repair": "Morning."
+    }
+   ],
+   "checks": [
+    {
+     "question": "On Sunday we went to the lake. When?",
+     "answer": "on Sunday",
+     "shows": "when"
+    },
+    {
+     "question": "Where?",
+     "answer": "to the lake",
+     "shows": "where"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA",
+   "assessed_by": "questions",
+   "key_step": "The child tests each answer: does it cover the whole text?",
+   "floor": {
+    "prerequisite": "Answers direct questions.",
+    "question": "What did they plant?",
+    "answer": "beans"
+   },
+   "steps": [
+    "Read the text.",
+    "Say what each part is about.",
+    "Find what they share.",
+    "Choose a title."
+   ],
+   "contexts": [
+    "a text about the farm",
+    "a text about the months"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Children help at home. They sweep, cook and fetch water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "What is it about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer and the clue."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the clue."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: how children help at home"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA.M2_MI_DETAIL",
+     "listen_for": [
+      "fetching water"
+     ],
+     "ask": "Does it cover all?",
+     "repair": "Find the one that does."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA.M2_MI_TOO_WIDE",
+     "listen_for": [
+      "animals"
+     ],
+     "ask": "All animals?",
+     "repair": "A goat."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA.M2_MI_FIRST",
+     "listen_for": [
+      "It was Saturday."
+     ],
+     "ask": "Read it all?",
+     "repair": "Then decide."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.MAIN_IDEA.M2_MI_STORY_ONLY",
+     "listen_for": [
+      "to tell a story"
+     ],
+     "ask": "Characters or facts?",
+     "repair": "Facts."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Best title for a text about planting beans?",
+     "answer": "Planting Beans",
+     "shows": "title"
+    },
+    {
+     "question": "Story or facts: a list of the months?",
+     "answer": "facts",
+     "shows": "purpose"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER",
+   "assessed_by": "voice",
+   "key_step": "The child tells the events with first, next, then, last, with names, from memory.",
+   "floor": {
+    "prerequisite": "Names the characters.",
+    "question": "Who was in the story?",
+    "answer": "Akinyi"
+   },
+   "steps": [
+    "Read the story.",
+    "Hold up a finger for each event.",
+    "Retell with order words.",
+    "Retell to a partner."
+   ],
+   "contexts": [
+    "a farm story",
+    "a story about a lost goat"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four boxes: first, next, then, last."
+    },
+    {
+     "beat": "point",
+     "do": "Point at first.",
+     "say": "What happened first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to retell."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws one event in each box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER.M2_RO_ORDER",
+     "listen_for": [
+      "Ali went to school. He woke up."
+     ],
+     "ask": "What happened first?",
+     "repair": "Use first, next, last."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER.M2_RO_READS",
+     "listen_for": [
+      "reads the page aloud"
+     ],
+     "ask": "Can you tell it without the book?",
+     "repair": "Your words."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER.M2_RO_NO_NAMES",
+     "listen_for": [
+      "He went and she said."
+     ],
+     "ask": "Who is he?",
+     "repair": "Say the name."
+    },
+    {
+     "code": "ENGL.G2.READIN.T9_COMPREHENSION.RETELL_IN_ORDER.M2_RO_ONE_EVENT",
+     "listen_for": [
+      "The goat ran away."
+     ],
+     "ask": "What happened next?",
+     "repair": "Tell more."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Retell the story of the lost goat.",
+     "answer": "three or more events in order with names",
+     "shows": "order"
+    },
+    {
+     "question": "What happened last?",
+     "answer": "the right last event",
+     "shows": "last"
+    }
+   ]
+  }
+ ]
+}

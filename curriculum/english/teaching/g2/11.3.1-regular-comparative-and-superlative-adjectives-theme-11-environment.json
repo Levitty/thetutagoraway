@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_",
+ "title": "Regular comparative and superlative adjectives (Theme 11: Environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST",
+   "assessed_by": "questions",
+   "key_step": "The child counts what is compared: two takes -er than, all takes the -est.",
+   "floor": {
+    "prerequisite": "Knows describing words.",
+    "question": "The tree is ___ (tall).",
+    "answer": "tall"
+   },
+   "steps": [
+    "Show the pattern on the board.",
+    "Read examples together.",
+    "Fill gaps.",
+    "Make own sentences."
+   ],
+   "contexts": [
+    "a clean environment",
+    "trees and rivers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The river is ___ than the pond."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "more cleaner or cleaner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: cleaner"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST.M2_CM_MORE_ER",
+     "listen_for": [
+      "more cleaner"
+     ],
+     "ask": "Does -er mean more?",
+     "repair": "Cleaner."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST.M2_CM_ER_FOR_EST",
+     "listen_for": [
+      "taller"
+     ],
+     "ask": "Two or all?",
+     "repair": "Tallest."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST.M2_CM_BIGER",
+     "listen_for": [
+      "biger"
+     ],
+     "ask": "Double?",
+     "repair": "Bigger."
+    },
+    {
+     "code": "ENGL.G2.LANGUA.T11_REGULAR_COMPARATIVE_.COMPARE_ER_EST.M2_CM_NO_THAN",
+     "listen_for": [
+      "(nothing): Ali is taller Juma"
+     ],
+     "ask": "What comes after taller?",
+     "repair": "Than."
+    }
+   ],
+   "checks": [
+    {
+     "question": "This is the ___ tree. (tall)",
+     "answer": "tallest",
+     "shows": "est"
+    },
+    {
+     "question": "A cow is ___ than a goat. (big)",
+     "answer": "bigger",
+     "shows": "spelling"
+    }
+   ]
+  }
+ ]
+}

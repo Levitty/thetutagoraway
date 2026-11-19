@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G2.WRITIN.T6_SPELLING",
+ "title": "Spelling (Theme 6: The garden)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter or letter team for every sound, then looks, covers, writes and checks.",
+   "floor": {
+    "prerequisite": "Hears the sound.",
+    "question": "Which word did you hear: wheel or weel?",
+    "answer": "wheel"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Write the target letters first.",
+    "Look, cover, write, check.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "theme words: thorn, there, wheel, twig, near"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: weel / wheel"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which spelling is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR.M2_SWT_TH_T",
+     "listen_for": [
+      "torn"
+     ],
+     "ask": "T or th?",
+     "repair": "Thorn."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR.M2_SWT_WH_W",
+     "listen_for": [
+      "weel"
+     ],
+     "ask": "Silent h?",
+     "repair": "Wheel."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR.M2_SWT_TW_TU",
+     "listen_for": [
+      "tuig"
+     ],
+     "ask": "T then?",
+     "repair": "W."
+    },
+    {
+     "code": "ENGL.G2.WRITIN.T6_SPELLING.SPELL_TH_WH_TW_EAR.M2_SWT_EAR_IA",
+     "listen_for": [
+      "nia"
+     ],
+     "ask": "How is eer spelt?",
+     "repair": "Ear."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Choose: torn, thorn (on a plant)",
+     "answer": "thorn",
+     "shows": "th"
+    },
+    {
+     "question": "Choose: nia, near",
+     "answer": "near",
+     "shows": "ear"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.WRITIN.T5_SPELLING.SPELL_GRADE_WORDS"
+ ]
+}

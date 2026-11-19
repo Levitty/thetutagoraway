@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 10: Position and directions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the target sound (ear, er, dr, oi, long i) in the whole word, not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Do \"coin\" and \"cone\" sound the same?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "turning left and right",
+    "pointing to the road"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: coin, cone."
+    },
+    {
+     "beat": "point",
+     "do": "Say coin.",
+     "say": "Which word did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sound in coin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE.M2_OI_O",
+     "listen_for": [
+      "cone"
+     ],
+     "ask": "Does it slide to ee?",
+     "repair": "Coin."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE.M2_DR_J",
+     "listen_for": [
+      "j"
+     ],
+     "ask": "D then r?",
+     "repair": "Drum."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE.M2_ER_E",
+     "listen_for": [
+      "ten"
+     ],
+     "ask": "Long er?",
+     "repair": "Turn."
+    },
+    {
+     "code": "ENGL.G2.LISTEN.T10_PRONUNCIATION_AND_VO.EAR_ER_DR_OI_IE.M2_EAR_AIR",
+     "listen_for": [
+      "hair"
+     ],
+     "ask": "Starts with ee?",
+     "repair": "Hear."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has oi: boy, bow, buy?",
+     "answer": "boy",
+     "shows": "oi"
+    },
+    {
+     "question": "The teacher says \"hear\". Hear or hair?",
+     "answer": "hear",
+     "shows": "ear"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G2.LISTEN.T4_PRONUNCIATION_AND_VO.SAY_VOWEL_SOUNDS",
+  "ENGL.G2.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS"
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G1.READIN.T2_PRE_READING",
+ "title": "Pre-reading (Theme 2: School)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child matches each capital to its small letter by sound, not only by shape.",
+   "floor": {
+    "prerequisite": "Knows some letters.",
+    "question": "Show me a letter in your name.",
+    "answer": "points"
+   },
+   "steps": [
+    "Show pairs.",
+    "Match cards.",
+    "Find capitals in a text.",
+    "Sort capital and small."
+   ],
+   "contexts": [
+    "names of children in class",
+    "a short story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A B G and a b g in a different order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at A.",
+     "say": "Which small letter is its partner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a line from each capital to its small letter."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS.M1_CS_NOT_PAIRS",
+     "listen_for": [
+      "b"
+     ],
+     "ask": "Do they make the same sound?",
+     "repair": "Same letter."
+    },
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS.M1_CS_B_D",
+     "listen_for": [
+      "d"
+     ],
+     "ask": "Where is the belly?",
+     "repair": "Right: b."
+    },
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS.M1_CS_BIG_SMALL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is it a new shape?",
+     "repair": "Capitals have their own."
+    },
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.CAPITAL_SMALL_LETTERS.M1_CS_P_Q",
+     "listen_for": [
+      "p"
+     ],
+     "ask": "Tail on which side?",
+     "repair": "Q right."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which small letter goes with G?",
+     "answer": "g",
+     "shows": "pair"
+    },
+    {
+     "question": "Circle the capital: a, A",
+     "answer": "A",
+     "shows": "capital"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.READIN.T1_PRE_READING.READING_POSTURE",
+  "ENGL.G1.READIN.T1_PRE_READING.DECODE_WORDS"
+ ]
+}

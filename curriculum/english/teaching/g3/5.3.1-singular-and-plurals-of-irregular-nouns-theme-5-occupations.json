@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS",
+ "title": "Singular and plurals of irregular nouns (Theme 5: Occupations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS",
+   "assessed_by": "questions",
+   "key_step": "The child knows the irregular pairs by heart and never adds -s to them.",
+   "floor": {
+    "prerequisite": "Makes regular plurals.",
+    "question": "One cup, two ___",
+    "answer": "cups"
+   },
+   "steps": [
+    "Show picture pairs.",
+    "Say one and many.",
+    "Sort regular and irregular.",
+    "Use in sentences about occupations."
+   ],
+   "contexts": [
+    "workers in our community",
+    "a visit to the dentist",
+    "sheep on a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Two ___ are fixing the road. (man)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word fits? mans or men?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the word in the gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read: Two men are fixing the road."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS.M3_PL_ADD_S",
+     "listen_for": [
+      "childs"
+     ],
+     "ask": "Is child a regular noun?",
+     "repair": "Children."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS.M3_PL_DOUBLE",
+     "listen_for": [
+      "childrens"
+     ],
+     "ask": "Is children already plural?",
+     "repair": "No -s."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS.M3_PL_SHEEPS",
+     "listen_for": [
+      "sheeps"
+     ],
+     "ask": "Does sheep change?",
+     "repair": "No: sheep."
+    },
+    {
+     "code": "ENGL.G3.LANGUA.T5_SINGULAR_AND_PLURALS.IRREGULAR_PLURALS.M3_PL_SINGULAR_WRONG",
+     "listen_for": [
+      "teeth"
+     ],
+     "ask": "One or many?",
+     "repair": "One tooth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One tooth, many ___",
+     "answer": "teeth",
+     "shows": "irregular"
+    },
+    {
+     "question": "Ten ___ in the field. (sheep)",
+     "answer": "sheep",
+     "shows": "no change"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 5: Occupations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the whole sound group (sl, st, sw, sp, thr), not only the first letter, and picks the word that has it.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"three\" start like \"tree\"?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the target sound alone, then in words.",
+    "Say two words that differ by one sound; the child picks one.",
+    "Find the sound in a short sentence.",
+    "Sort picture cards by sound."
+   ],
+   "contexts": [
+    "a sweeper in the market",
+    "a spoon in the kitchen",
+    "three workers at the clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: three, tree."
+    },
+    {
+     "beat": "point",
+     "do": "Say three.",
+     "say": "Listen: thr or tr?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word that was said and says it back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the thr in three."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR.M3_THR_TR",
+     "listen_for": [
+      "tree"
+     ],
+     "ask": "Tongue between the teeth?",
+     "repair": "Yes: three."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR.M3_SW_TWO_BEATS",
+     "listen_for": [
+      "2 (su-weep)"
+     ],
+     "ask": "How many claps?",
+     "repair": "One: sweep."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR.M3_SP_ST_S_ONLY",
+     "listen_for": [
+      "stick"
+     ],
+     "ask": "What came after s?",
+     "repair": "S-p: spoon."
+    },
+    {
+     "code": "ENGL.G3.LISTEN.T5_PRONUNCIATION_AND_VO.BLENDS_SL_SW_SP_THR.M3_SL_DROP_L",
+     "listen_for": [
+      "sow"
+     ],
+     "ask": "Did you hear l?",
+     "repair": "S-l-ow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word starts with sw: sweet, seat, wet?",
+     "answer": "sweet",
+     "shows": "sw"
+    },
+    {
+     "question": "Which word starts with sl: slow, sow, low?",
+     "answer": "slow",
+     "shows": "sl"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_START_BLENDS",
+  "ENGL.G3.LISTEN.T1_PRONUNCIATION_AND_VO.THEME_WORDS",
+  "ENGL.G3.LISTEN.T2_PRONUNCIATION_AND_VO.FOLLOW_INSTRUCTIONS"
+ ]
+}

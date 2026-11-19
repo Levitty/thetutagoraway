@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G1.WRITIN.T6_SPELLING",
+ "title": "Spelling (Theme 6: Weather and our environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes a letter for each sound, then reads it back.",
+   "floor": {
+    "prerequisite": "Builds words from cards.",
+    "question": "Make \"mat\".",
+    "answer": "mat"
+   },
+   "steps": [
+    "Say the word slowly.",
+    "Count the sounds.",
+    "Write a letter for each.",
+    "Read it back."
+   ],
+   "contexts": [
+    "weather words: fan, hot",
+    "parts of the body"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bd / bed"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part to look at.",
+     "say": "Which is right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes or fixes it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the right version beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC.M1_SV_NO_VOWEL",
+     "listen_for": [
+      "bd"
+     ],
+     "ask": "How many sounds?",
+     "repair": "Three: b-e-d."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC.M1_SV_A_E",
+     "listen_for": [
+      "beg"
+     ],
+     "ask": "Mouth wide?",
+     "repair": "Bag."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC.M1_SV_END_VOWEL",
+     "listen_for": [
+      "dogi"
+     ],
+     "ask": "Any sound after g?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.SPELL_CVC.M1_SV_LETTER_NAME",
+     "listen_for": [
+      "u"
+     ],
+     "ask": "Every letter?",
+     "repair": "Y-o-u."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write: hen",
+     "answer": "hen",
+     "shows": "three sounds"
+    },
+    {
+     "question": "Write: you",
+     "answer": "you, not u",
+     "shows": "sight word"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G1.READIN.T4_PRE_READING.LETTER_IN_WORD"
+ ]
+}
