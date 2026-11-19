@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.CREATI.STRETCHING",
+ "title": "Stretching",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Stretch slowly to calm music. No bouncing. Show each position: standing, sitting, kneeling, lying.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.STRETCHING.STRETCH",
+   "key_step": "The child names the body parts, directions and positions of stretching and stretches slowly without bouncing.",
+   "floor": {
+    "prerequisite": "Names body parts (pre-primary).",
+    "question": "Point to your back.",
+    "answer": "points to the back"
+   },
+   "representations": [
+    "calm music",
+    "picture cards of positions",
+    "a mat"
+   ],
+   "steps": [
+    "Choose a position.",
+    "Stretch the body part slowly.",
+    "Hold and count.",
+    "Relax."
+   ],
+   "contexts": [
+    "a PE warm-up",
+    "a morning stretch in class"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Reach both arms up high.",
+     "say": "Which direction?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: upwards."
+    },
+    {
+     "beat": "predict",
+     "do": "Do we bounce?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: we hold still."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_BOUNCE",
+     "listen_for": [
+      "bounce up and down"
+     ],
+     "ask": "How do you stretch your legs safely?",
+     "repair": "Reach slowly, count to five and hold."
+    },
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_SIDEWAYS",
+     "listen_for": [
+      "in front of me"
+     ],
+     "ask": "Stretch sideways. Which way do your arms go?",
+     "repair": "Stand between two friends and reach towards each."
+    },
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_STANDING_ONLY",
+     "listen_for": [
+      "no, only standing"
+     ],
+     "ask": "Can you stretch while sitting or lying down?",
+     "repair": "Do one stretch in each position."
+    },
+    {
+     "code": "CREA.G1.CREATI.STRETCHING.STRETCH.M_CAC1_SR_HURT",
+     "listen_for": [
+      "yes, it must hurt"
+     ],
+     "ask": "Should a stretch hurt?",
+     "repair": "Stretch until you feel a gentle pull, then stop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a direction of stretching.",
+     "answer": "any of: upwards, forward, backwards, sideways",
+     "shows": "directions"
+    },
+    {
+     "question": "Should you bounce when you stretch?",
+     "answer": "no",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

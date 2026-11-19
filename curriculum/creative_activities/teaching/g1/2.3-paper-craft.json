@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.PAPER_CRAFT",
+ "title": "Paper Craft",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use coloured or textured paper, or old magazines. Show pleating (fan) and folding (boat) step by step.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+   "key_step": "The child names paper craft items and says pleating is folding forward and back, and folding is creasing paper over to make a shape.",
+   "floor": {
+    "prerequisite": "Folds paper in half (pre-primary).",
+    "question": "Fold this paper in half.",
+    "answer": "folds the paper"
+   },
+   "representations": [
+    "coloured paper",
+    "a paper fan and a paper boat",
+    "old magazines"
+   ],
+   "steps": [
+    "Pleat: fold forward, then back, again and again.",
+    "Fold: crease the paper over.",
+    "Press each fold.",
+    "Play with the item."
+   ],
+   "contexts": [
+    "a fan on a hot day",
+    "paper boats in a puddle at home"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a fan.",
+     "say": "How was it made?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: pleating."
+    },
+    {
+     "beat": "predict",
+     "do": "And a boat?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Folding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_PLEAT_ROLL",
+     "listen_for": [
+      "roll it into a tube"
+     ],
+     "ask": "How do you pleat paper?",
+     "repair": "Make a paper fan by folding forward and back."
+    },
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_CREASE",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "After you fold paper, what do you do?",
+     "repair": "Fold without pressing, then with pressing, and compare."
+    },
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_TEAR",
+     "listen_for": [
+      "by tearing"
+     ],
+     "ask": "Is a paper boat made by tearing or by folding?",
+     "repair": "Make a boat by folding only."
+    },
+    {
+     "code": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS.M_CAC1_PA_FAN_FOLD",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A fan is made by pleating. Is a paper boat made by pleating?",
+     "repair": "Put a fan and a boat side by side and look at the folds."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an item made by paper craft.",
+     "answer": "any of: a fan, a boat, a hat, a flower",
+     "shows": "items"
+    },
+    {
+     "question": "How do you pleat paper?",
+     "answer": "fold forward and back again and again",
+     "shows": "pleating"
+    }
+   ]
+  }
+ ]
+}

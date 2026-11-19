@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G1.APPREC.MUSICAL_SOUNDS",
+ "title": "Musical Sounds",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Go outside and listen. Use songs that are clearly fast or slow, loud or soft, high or low, happy or sad.",
+ "skills": [
+  {
+   "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+   "key_step": "The child names the source of sounds in the local environment and sorts them into birds, animals, people and objects.",
+   "floor": {
+    "prerequisite": "Names familiar sounds (pre-primary).",
+    "question": "What makes this sound: woof?",
+    "answer": "a dog"
+   },
+   "representations": [
+    "a listening walk",
+    "sound picture cards",
+    "a sorting mat"
+   ],
+   "steps": [
+    "Close your eyes and listen.",
+    "Name the sound.",
+    "Say its source.",
+    "Sort it."
+   ],
+   "contexts": [
+    "the school compound at break",
+    "a market day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Listen: a bell rings.",
+     "say": "What is the source?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the school bell."
+    },
+    {
+     "beat": "predict",
+     "do": "Animal, person or object?"
+    },
+    {
+     "beat": "reveal",
+     "do": "An object."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_HUMAN",
+     "listen_for": [
+      "a bird"
+     ],
+     "ask": "Juma whistles a tune. What is the source of the sound?",
+     "repair": "Whistle and then play a bird call."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_OBJECT_ANIMAL",
+     "listen_for": [
+      "an animal"
+     ],
+     "ask": "Is a car hooter the sound of an animal or an object?",
+     "repair": "Sort picture cards into animals, people and objects."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_RAIN",
+     "listen_for": [
+      "the roof by itself"
+     ],
+     "ask": "What makes the sound when it rains on the roof?",
+     "repair": "Drop water on a tin and listen."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES.M_CAC1_SS_ONE_SOURCE",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "In a market, how many sources of sound can you hear?",
+     "repair": "Close your eyes and count the sounds you hear."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a crowing cock an animal or an object?",
+     "answer": "an animal",
+     "shows": "sources"
+    },
+    {
+     "question": "Name an object that makes a sound.",
+     "answer": "any of: a bell, a car, a radio",
+     "shows": "objects"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS",
+   "key_step": "The child tells loud from soft, fast from slow and high from low in a song, without mixing them.",
+   "floor": {
+    "prerequisite": "Says loud or soft (pre-primary).",
+    "question": "Is this loud or soft?",
+    "answer": "loud or soft, as heard"
+   },
+   "representations": [
+    "songs",
+    "cards: loud/soft, fast/slow, high/low",
+    "body signs: reach up for high"
+   ],
+   "steps": [
+    "Listen to the song.",
+    "Ask one question at a time.",
+    "Loud or soft? Fast or slow? High or low?"
+   ],
+   "contexts": [
+    "songs at assembly",
+    "a lullaby at home"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing a low note loudly.",
+     "say": "Loud or soft?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: loud."
+    },
+    {
+     "beat": "predict",
+     "do": "High or low?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Low."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_LOUD_HIGH",
+     "listen_for": [
+      "high, because it is loud"
+     ],
+     "ask": "A man sings a low note loudly. Is it high or low?",
+     "repair": "Sing a low note loudly and a high note softly."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_FAST_LOUD",
+     "listen_for": [
+      "yes, it is fast"
+     ],
+     "ask": "A song is sung quickly and softly. Is it loud?",
+     "repair": "Sing fast and soft, like a whisper race."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_BIG_LOW",
+     "listen_for": [
+      "a chick"
+     ],
+     "ask": "Which makes a lower sound: a cow or a chick?",
+     "repair": "Moo low and cheep high."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MUSIC_ELEMENTS.M_CAC1_ME_SLOW_SOFT",
+     "listen_for": [
+      "yes, because it is slow"
+     ],
+     "ask": "A song is slow and loud. Is it soft?",
+     "repair": "Sing slowly but strongly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A chick cheeps. High or low?",
+     "answer": "high",
+     "shows": "pitch"
+    },
+    {
+     "question": "A song is sung quickly. Is it fast or slow?",
+     "answer": "fast",
+     "shows": "speed"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+   "key_step": "The child says if a song is happy, sad, calm or exciting and gives a reason from the music or words.",
+   "floor": {
+    "prerequisite": "Tells fast from slow and loud from soft.",
+    "question": "Is this song fast or slow?",
+    "answer": "fast or slow, as heard"
+   },
+   "representations": [
+    "songs with clear moods",
+    "face cards",
+    "movement"
+   ],
+   "steps": [
+    "Listen.",
+    "How does it make you feel?",
+    "Say why: fast or slow, loud or soft, the words."
+   ],
+   "contexts": [
+    "a lullaby at home",
+    "a celebration song"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Sing a slow, soft lullaby.",
+     "say": "How does it feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: calm."
+    },
+    {
+     "beat": "predict",
+     "do": "Why?"
+    },
+    {
+     "beat": "reveal",
+     "do": "It is slow and soft."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_FAST_ANGRY",
+     "listen_for": [
+      "angry"
+     ],
+     "ask": "A fast, bouncy song is about playing. What mood is it?",
+     "repair": "Dance to the song: does it feel angry or happy?"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_WORDS_ONLY",
+     "listen_for": [
+      "yes, the sun is fun"
+     ],
+     "ask": "A slow, soft song has the word \"sun\" in it. Is it exciting?",
+     "repair": "Listen with eyes closed: how does the music make you feel?"
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_SLOW_SAD",
+     "listen_for": [
+      "sad"
+     ],
+     "ask": "A slow, soft lullaby. Is it sad or calm?",
+     "repair": "Sing a lullaby to a baby doll and ask how it feels."
+    },
+    {
+     "code": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD.M_CAC1_MD_NO_REASON",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "Why does this song sound happy?",
+     "repair": "Ask: is it fast or slow? loud or soft?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What mood is a fast, bouncy song often?",
+     "answer": "happy",
+     "shows": "mood"
+    },
+    {
+     "question": "Give a reason a song sounds calm.",
+     "answer": "it is slow and soft",
+     "shows": "reason"
+    }
+   ]
+  }
+ ]
+}

@@ -99,8 +99,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.JUMPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jumping in different ways (Grade 1) comes before hopping on one foot in named directions. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -294,15 +294,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The materials and tools for colouring (Grade 1), crayons among them, are used to take rubbings. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.DRAWING.b",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.DRAWING.LINES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Drawing lines in different directions (Grade 1) is how texture is added to drawn shapes. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -339,8 +339,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.c",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_WAYS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Painting shapes with a brush (Grade 1) comes before painting regular shapes neatly. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -603,15 +603,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.RHYTHM.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.RHYTHM.BEAT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Keeping a steady beat (Grade 1) is the ground every rhythm is made on. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.RHYTHM.c",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Body percussion (Grade 1) gives clapping, tapping and stamping as ways to make rhythm. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -647,8 +647,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.RHYTHM.c",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.RHYTHM.BODY_PERCUSSION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Clapping with body percussion (Grade 1) comes before clapping the parts of words. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -692,8 +692,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.PATTERN_MAKING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.PATTERN_MAKING.LETTER_NUMERAL_PATTERNS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Recognising patterns (Grade 1) comes before printing shape patterns. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -993,15 +993,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.STRETCHING.b",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.STRETCHING.STRETCH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Stretching in named directions (Grade 1) comes before turning the whole body in named directions. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.JUMPING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Jumping forward, backward, right and left (Grade 1) gives the direction words used for turns. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1178,8 +1178,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The materials and tools of art work (Grade 1) come before the pasting materials of a mosaic. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1370,15 +1370,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.CREATI.MELODY.b",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.MELODY.LIKE_UNLIKE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Hearing like and unlike passages in short melodies (Grade 1) comes before naming similar and different tunes. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.MELODY.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.MELODY.MELODIC_SOUNDS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Telling melodic from non-melodic sounds (Grade 1) is the first step in listening to tunes. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1412,8 +1412,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.PERFOR.SONGS.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Saying the message of an action song (Grade 1) helps the new words make sense. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1663,15 +1663,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Kenyan singing games and their props (Grade 1) come before Western-style singing games. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.PERFOR.SONGS.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Saying the message of an action song (Grade 1) is the start of understanding what a singing game is about. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -1840,15 +1840,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.THROWING_AND_CATCHING.c",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Throwing and catching a ball (Grade 1) is the first ball skill before kicking. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.PERFOR.THROWING_AND_CATCHING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "The materials of an improvised ball (Grade 1) make the ball that is kicked. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2018,8 +2018,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.PAPER_CRAFT.b",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.PAPER_CRAFT.PAPER_ITEMS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Pleating paper (Grade 1) trains the fingers to fold and cross in a fixed order. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2215,15 +2215,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The log roll (Grade 1) is the first sideways roll; the egg roll curls the body tight. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.STRETCHING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.STRETCHING.STRETCH",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Knowing the body parts used in stretching (Grade 1) is needed to name the parts that tuck in a roll. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2260,15 +2260,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The T-balance (Grade 1) is the first one-leg balance; the swan leans further forward. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.STRETCHING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.STRETCHING.STRETCH",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Stretching the arms and legs (Grade 1) is needed to stretch out in the swan. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2508,15 +2508,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming percussion instruments (Grade 1) is the first sorting of instruments by how they make sound. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.APPREC.MUSICAL_SOUNDS.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.APPREC.MUSICAL_SOUNDS.SOUND_SOURCES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Hearing sounds in the environment (Grade 1) comes before telling how a wind instrument sounds. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2683,8 +2683,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.MODELLING.c",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.MODELLING.PINCH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Modelling by the pinch method (Grade 1) comes before building a pot from coils. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2871,15 +2871,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.SONGS.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of an action song (Grade 1) comes before saying the message of a topical song. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.APPREC.MUSICAL_SOUNDS.d",
-       "kind": "outcome",
+       "requires": "CREA.G1.APPREC.MUSICAL_SOUNDS.MOOD",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Describing the mood of a song (Grade 1) helps say what the song is telling us. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2906,15 +2906,15 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.PERFOR.SONGS.b",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Singing action songs with performance techniques (Grade 1) is where these techniques were first used. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.MELODY.c",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.MELODY.ECHO",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Echoing a melodic pattern accurately (Grade 1) is the start of singing the right tune. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -3171,8 +3171,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SINGING_GAMES_KENYAN_STY.KENYAN_GAMES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Naming props in Kenyan singing games (Grade 1) is the same skill for Western games. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -3206,8 +3206,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.PERFOR.SONGS.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.SONGS.ACTION_SONG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Saying the message of an action song (Grade 1) is how the message of a game song is found. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -3433,8 +3433,8 @@
      "horeb_skill_ids": [],
      "prerequisites": [
       {
-       "requires": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Water points at home (Grade 1) come before water points at school. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -3475,8 +3475,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.d",
-       "kind": "outcome",
+       "requires": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Water safety at home (Grade 1) grows into water safety at school. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"

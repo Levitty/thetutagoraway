@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS",
+ "title": "Water safety awareness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Talk about water points the children have at home. A montage: pictures of water points cut out and pasted together.",
+ "skills": [
+  {
+   "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME",
+   "key_step": "The child names water points around the home and their dangers.",
+   "floor": {
+    "prerequisite": "Stays near a trusted adult (pre-primary).",
+    "question": "Who do you call when you are hurt?",
+    "answer": "a trusted adult"
+   },
+   "representations": [
+    "pictures of home water points",
+    "a montage",
+    "danger cards"
+   ],
+   "steps": [
+    "Name the water point.",
+    "Say what could go wrong.",
+    "Say who could be hurt."
+   ],
+   "contexts": [
+    "fetching water at home",
+    "bath time"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a bucket of water.",
+     "say": "Can it be dangerous?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: yes."
+    },
+    {
+     "beat": "predict",
+     "do": "For whom?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A baby or a small child."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_BUCKET_SAFE",
+     "listen_for": [
+      "no, it is too small"
+     ],
+     "ask": "Can a baby be in danger near a bucket of water?",
+     "repair": "Talk about why a baby must never be left near a bucket."
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_NOT_POINT",
+     "listen_for": [
+      "no, only rivers are"
+     ],
+     "ask": "Is a drum full of water at home a water point?",
+     "repair": "Count all the places water is kept at home."
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_WET_FLOOR",
+     "listen_for": [
+      "there is none"
+     ],
+     "ask": "Water is spilt on the kitchen floor. What is the danger?",
+     "repair": "Walk carefully on a wet floor in role play."
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_HOME.M_CAC1_WH_WELL_OPEN",
+     "listen_for": [
+      "yes, I can see the water"
+     ],
+     "ask": "Is an open well safe to play near?",
+     "repair": "Look at a picture of a covered and an open well."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a water point at home.",
+     "answer": "any of: a tap, a tank, a drum, a basin, a well",
+     "shows": "points"
+    },
+    {
+     "question": "Why is a wet floor dangerous?",
+     "answer": "someone can slip",
+     "shows": "danger"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME",
+   "key_step": "The child names ways to keep safe around water at home: an adult near, covers on, basins emptied, walk on wet floors, call an adult.",
+   "floor": {
+    "prerequisite": "Names water points at home.",
+    "question": "Name a water point in your home.",
+    "answer": "any of: a tap, a tank, a drum, a basin"
+   },
+   "representations": [
+    "role play",
+    "rule cards",
+    "a covered and an uncovered container"
+   ],
+   "steps": [
+    "Play in water only with an adult.",
+    "Keep containers covered.",
+    "Empty basins after use.",
+    "Call an adult if a little child goes near water."
+   ],
+   "contexts": [
+    "washing day at home",
+    "helping fetch water"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "A drum has no lid.",
+     "say": "What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: put the lid on."
+    },
+    {
+     "beat": "predict",
+     "do": "Why?"
+    },
+    {
+     "beat": "reveal",
+     "do": "So no one falls in."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_PLAY_ALONE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Can a small child play in water without an adult?",
+     "repair": "Role play asking an adult before water play."
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_UNCOVERED",
+     "listen_for": [
+      "leave the lid off"
+     ],
+     "ask": "You take water from the drum. What do you do after?",
+     "repair": "Ask: who could fall in or what could get in?"
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_RUN",
+     "listen_for": [
+      "run quickly"
+     ],
+     "ask": "The bathroom floor is wet. How do you walk?",
+     "repair": "Watch a toy slide on a wet tray."
+    },
+    {
+     "code": "CREA.G1.APPREC.WATER_SAFETY_AWARENESS.WATER_SAFE_HOME.M_CAC1_WS_TELL",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Your baby brother crawls to a basin of water. What do you do?",
+     "repair": "Role play calling an adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Can a small child play in water alone?",
+     "answer": "no",
+     "shows": "adult"
+    },
+    {
+     "question": "What do you do after taking water from a drum?",
+     "answer": "put the lid back on",
+     "shows": "cover"
+    }
+   ]
+  }
+ ]
+}

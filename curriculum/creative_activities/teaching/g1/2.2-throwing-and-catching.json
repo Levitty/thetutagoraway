@@ -1,0 +1,187 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.THROWING_AND_CATCHING",
+ "title": "Throwing and Catching",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make paper and polythene balls tied with string. Throw gently to a partner a few steps away.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS",
+   "key_step": "The child names local materials for a ball and says a good ball is round, firm and soft.",
+   "floor": {
+    "prerequisite": "Rolls and squeezes materials (pre-primary).",
+    "question": "Roll this paper into a ball.",
+    "answer": "rolls the paper"
+   },
+   "representations": [
+    "old paper, polythene, cloth",
+    "string",
+    "a finished ball"
+   ],
+   "steps": [
+    "Collect soft materials.",
+    "Roll them into a round ball.",
+    "Tie with string.",
+    "Check: round, firm, soft."
+   ],
+   "contexts": [
+    "a ball made at home for play",
+    "a class game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a stone and a paper ball.",
+     "say": "Which is good for a game?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the paper ball."
+    },
+    {
+     "beat": "predict",
+     "do": "Why not the stone?"
+    },
+    {
+     "beat": "reveal",
+     "do": "It can hurt."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_STONE",
+     "listen_for": [
+      "stones"
+     ],
+     "ask": "Which can you use to make a ball?",
+     "repair": "Feel a stone and a paper ball: which is safe to catch?"
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_NO_TIE",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What do you do after rolling paper into a ball?",
+     "repair": "Throw an untied ball: it opens."
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_FLAT",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "What shape should your ball be?",
+     "repair": "Roll the paper between your hands."
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.BALL_MATERIALS.M_CAC1_BM_HARD",
+     "listen_for": [
+      "very hard"
+     ],
+     "ask": "Should your ball be very hard or firm but soft?",
+     "repair": "Catch a hard ball and a soft ball."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a material for making a ball.",
+     "answer": "any of: old paper, polythene, cloth, banana fibre",
+     "shows": "materials"
+    },
+    {
+     "question": "What do you tie the ball with?",
+     "answer": "string",
+     "shows": "tie"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH",
+   "key_step": "The child says how to throw (look, swing, gently underarm) and catch (eyes on the ball, cupped hands, pull in).",
+   "floor": {
+    "prerequisite": "Rolls and tosses a ball (pre-primary).",
+    "question": "Roll the ball to me.",
+    "answer": "rolls the ball"
+   },
+   "representations": [
+    "soft balls",
+    "a partner",
+    "markers for distance"
+   ],
+   "steps": [
+    "Look at your partner.",
+    "Throw gently underarm.",
+    "Watch the ball.",
+    "Catch with cupped hands and pull in."
+   ],
+   "contexts": [
+    "a game at break",
+    "a PE lesson"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show cupped hands.",
+     "say": "What are these ready for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: catching."
+    },
+    {
+     "beat": "predict",
+     "do": "Where do your eyes look?"
+    },
+    {
+     "beat": "reveal",
+     "do": "At the ball."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_EYES_CLOSED",
+     "listen_for": [
+      "I close my eyes"
+     ],
+     "ask": "When a ball comes to you, where do you look?",
+     "repair": "Use a soft ball and count as it comes."
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_FLAT_HANDS",
+     "listen_for": [
+      "flat and stiff"
+     ],
+     "ask": "How do you hold your hands to catch?",
+     "repair": "Make a cup with your hands and catch a bean bag."
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_HARD_THROW",
+     "listen_for": [
+      "as hard as I can"
+     ],
+     "ask": "Your partner is close. How do you throw?",
+     "repair": "Throw gently underarm to a partner two steps away."
+    },
+    {
+     "code": "CREA.G1.PERFOR.THROWING_AND_CATCHING.THROW_CATCH.M_CAC1_TC_LOOK_AWAY",
+     "listen_for": [
+      "anywhere"
+     ],
+     "ask": "Before you throw, where do you look?",
+     "repair": "Say your partner's name and look at them, then throw."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How do you hold your hands to catch?",
+     "answer": "like a cup",
+     "shows": "catch"
+    },
+    {
+     "question": "How do you throw to a partner close by?",
+     "answer": "gently, underarm",
+     "shows": "throw"
+    }
+   ]
+  }
+ ]
+}

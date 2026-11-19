@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G1.CREATI.DRAWING",
+ "title": "Drawing",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk the shapes of the lines on the floor before drawing them. Use the board, the window and the door to show directions.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.DRAWING.LINES",
+   "key_step": "The child names straight, wavy, zigzag and curved lines and the directions vertical, horizontal and diagonal.",
+   "floor": {
+    "prerequisite": "Tells straight from curved lines (Grade 1 Maths).",
+    "question": "Is a ruler edge straight or curved?",
+    "answer": "straight"
+   },
+   "representations": [
+    "crayons and paper",
+    "string and sticks",
+    "objects with lines"
+   ],
+   "steps": [
+    "Look at the line.",
+    "Smooth or with points?",
+    "Standing, lying or slanting?",
+    "Name it."
+   ],
+   "contexts": [
+    "a fence and a road on the way to school",
+    "drawing a picture of home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line with sharp points."
+    },
+    {
+     "beat": "predict",
+     "do": "What is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for zigzag."
+    },
+    {
+     "beat": "reveal",
+     "do": "A zigzag line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_WAVY_ZIGZAG",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A line goes up and down smoothly like water. Is it a zigzag?",
+     "repair": "Draw both: the zigzag has sharp points, the wavy line is smooth."
+    },
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_VERTICAL",
+     "listen_for": [
+      "vertical"
+     ],
+     "ask": "A line lies flat like the floor. What is it?",
+     "repair": "Stand up straight (vertical), then lie down flat (horizontal)."
+    },
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_DIAGONAL",
+     "listen_for": [
+      "vertical"
+     ],
+     "ask": "A line slants like a ladder against a wall. What is it?",
+     "repair": "Lean a ruler against a box and compare with a ruler standing up."
+    },
+    {
+     "code": "CREA.G1.CREATI.DRAWING.LINES.M_CAC1_LN_CURVED_STRAIGHT",
+     "listen_for": [
+      "straight"
+     ],
+     "ask": "Is the edge of a ball a straight line or a curved line?",
+     "repair": "Run a finger round a ball and along a ruler."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a line lying flat called?",
+     "answer": "horizontal",
+     "shows": "direction"
+    },
+    {
+     "question": "Name a line with sharp points.",
+     "answer": "zigzag",
+     "shows": "kind"
+    }
+   ]
+  }
+ ]
+}

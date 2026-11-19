@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR",
+ "title": "Percussion Musical Instruments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Show real drums, shakers and jingles. Improvise shakers from bottles and seeds; seal the lid.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+   "key_step": "The child names percussion instruments (drums, shakers, jingles, rattles) and says they are played by hitting, shaking or scraping.",
+   "floor": {
+    "prerequisite": "Knows body percussion.",
+    "question": "Clap and stamp.",
+    "answer": "claps and stamps"
+   },
+   "representations": [
+    "drums, shakers, jingles",
+    "bottles and seeds",
+    "a ridged gourd or bottle"
+   ],
+   "steps": [
+    "Look at the instrument.",
+    "Is it hit, shaken or scraped?",
+    "Name it.",
+    "Play it."
+   ],
+   "contexts": [
+    "a cultural day",
+    "drums at a church or a wedding"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a shaker.",
+     "say": "How is it played?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: shaking."
+    },
+    {
+     "beat": "predict",
+     "do": "And a drum?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Hitting."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_SHAKE_DRUM",
+     "listen_for": [
+      "by shaking it"
+     ],
+     "ask": "How is a drum played?",
+     "repair": "Shake a drum (no sound), then hit it."
+    },
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_FLUTE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a flute a percussion instrument?",
+     "repair": "Sort instruments: hit or shake, and blow."
+    },
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_EMPTY_SHAKER",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What do you put inside a bottle to make a shaker?",
+     "repair": "Shake an empty bottle and a bottle of seeds."
+    },
+    {
+     "code": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION.M_CAC1_PC_SCRAPE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Can an instrument be played by scraping?",
+     "repair": "Scrape a stick along a ridged bottle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a percussion instrument.",
+     "answer": "any of: drum, shaker, jingle, rattle",
+     "shows": "names"
+    },
+    {
+     "question": "How is a shaker played?",
+     "answer": "by shaking",
+     "shows": "methods"
+    }
+   ]
+  }
+ ]
+}

@@ -290,8 +290,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Knowing paints, brushes and sponges (Grade 1) is the start of colour work. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"
@@ -2443,8 +2443,8 @@
        "status": "proposed"
       },
       {
-       "requires": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.a",
-       "kind": "outcome",
+       "requires": "CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Naming percussion instruments (Grade 1) begins sorting instruments by how they make sound. Proposed, to confirm by a CBC Creative Activities teacher.",
        "status": "proposed"

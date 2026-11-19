@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE",
+ "title": "Log Roll and T-Balance",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mats or soft grass. Markers from bottle tops or leaves. The teacher shows and supports every roll and balance.",
+ "skills": [
+  {
+   "skill": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T",
+   "key_step": "The child says a log roll is a straight sideways roll and a T-balance is standing on one leg with the body and arms making a T.",
+   "floor": {
+    "prerequisite": "Names body parts (pre-primary).",
+    "question": "Touch your feet.",
+    "answer": "touches feet"
+   },
+   "representations": [
+    "mats",
+    "markers",
+    "a letter T card"
+   ],
+   "steps": [
+    "Log roll: lie straight, arms up, roll sideways.",
+    "T-balance: stand on one leg.",
+    "Lean forward, lift the other leg back.",
+    "Arms out."
+   ],
+   "contexts": [
+    "a gymnastics display",
+    "a PE lesson"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a letter T.",
+     "say": "Where do the arms go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: out to the sides."
+    },
+    {
+     "beat": "predict",
+     "do": "How many feet on the ground?"
+    },
+    {
+     "beat": "reveal",
+     "do": "One."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_LR_CURLED",
+     "listen_for": [
+      "curled up"
+     ],
+     "ask": "In a log roll, is your body straight or curled?",
+     "repair": "Lie straight like a log and roll."
+    },
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_LR_FORWARD",
+     "listen_for": [
+      "forward over the head"
+     ],
+     "ask": "Which way does a log roll go?",
+     "repair": "Roll a real log or a bottle along the floor."
+    },
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_TB_TWO_FEET",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "In a T-balance, how many feet are on the ground?",
+     "repair": "Hold a wall and lift one leg back."
+    },
+    {
+     "code": "CREA.G1.PERFOR.LOG_ROLL_AND_T_BALANCE.ROLL_T.M_CAC1_TB_ARMS_UP",
+     "listen_for": [
+      "up above my head"
+     ],
+     "ask": "In a T-balance, where are your arms?",
+     "repair": "Make a letter T with your arms out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which way does a log roll go?",
+     "answer": "sideways",
+     "shows": "roll"
+    },
+    {
+     "question": "How many feet do you stand on in a T-balance?",
+     "answer": "one",
+     "shows": "balance"
+    }
+   ]
+  }
+ ]
+}

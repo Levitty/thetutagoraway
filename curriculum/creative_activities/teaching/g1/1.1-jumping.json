@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G1.CREATI.JUMPING",
+ "title": "Jumping",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1 Creative Activities; not yet checked by a CBC Creative Activities teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Jump on grass or sand. Use ropes, sticks or chalk lines as improvised objects to jump over.",
+ "skills": [
+  {
+   "skill": "CREA.G1.CREATI.JUMPING.JUMP_WAYS",
+   "key_step": "The child names ways and directions of jumping, jumps on two feet with soft knees and keeps space.",
+   "floor": {
+    "prerequisite": "Jumps on two feet in play (pre-primary).",
+    "question": "Show me a jump.",
+    "answer": "jumps on two feet"
+   },
+   "representations": [
+    "ropes and chalk lines",
+    "a leaf or a mark up high",
+    "a jumping song"
+   ],
+   "steps": [
+    "Stand with feet together.",
+    "Bend the knees.",
+    "Jump the way you are told.",
+    "Land softly on two feet."
+   ],
+   "contexts": [
+    "jumping over a rope at break",
+    "a jumping game with a song"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Jump to the line far away.",
+     "say": "Was that high or far?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: far."
+    },
+    {
+     "beat": "predict",
+     "do": "What kind of jump is it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A jump for distance."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_ONE_FOOT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is hopping on one foot the same as jumping on two feet?",
+     "repair": "Jump on two feet, then hop on one, and look at the feet."
+    },
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_STIFF_LEGS",
+     "listen_for": [
+      "straight and stiff"
+     ],
+     "ask": "How should your knees be when you land from a jump?",
+     "repair": "Land like a cat, quietly, with bent knees."
+    },
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_HEIGHT_DIST",
+     "listen_for": [
+      "for height"
+     ],
+     "ask": "You jump as far forward as you can. Is that a jump for height or for distance?",
+     "repair": "Jump up to touch a leaf (height), then jump to a line far away (distance)."
+    },
+    {
+     "code": "CREA.G1.CREATI.JUMPING.JUMP_WAYS.M_CAC1_JU_CLOSE",
+     "listen_for": [
+      "close to my friends"
+     ],
+     "ask": "Where should you stand when many children jump?",
+     "repair": "Stretch arms out: no one should be inside your space."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many feet do you land on in a jump?",
+     "answer": "two",
+     "shows": "jump"
+    },
+    {
+     "question": "How are your knees when you land?",
+     "answer": "bent",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

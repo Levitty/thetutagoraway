@@ -1,5 +1,5 @@
 // Creative Activities Grade 3, built in the depth pass (19 Nov 2026) from the KICD outcomes in curriculum/creative_activities/g3.json:
-// the skills (SKILLS), and for each sub-strand prerequisites (Grade 2 Creative Activities skills, Grade 1 outcomes, Grade 2-3 Maths skills, Grade 2-3
+// the skills (SKILLS), and for each sub-strand prerequisites (Grade 2 and Grade 1 Creative Activities skills, Grade 2-3 Maths skills, Grade 2-3
 // Environmental Activities outcomes), four misconceptions per skill (real errors of seven and eight year olds: colour names and
 // mixing, long and short sounds, shapes in pictures, directions of movement, the order of a round, song and game rules), the teaching
 // pack and the practical outcomes each knowledge skill supports (marked by the teacher with the KICD rubric, never a phone question).
@@ -68,7 +68,7 @@ export const SUBS = [
     packNotes: 'Use three primaries only and let the children find the secondaries. Spray and blow outside or over newspaper; wash hands and brushes after.',
     rubric: { COLOUR_MIXING: ['b', 'd'], SHAPES_PICTURE: ['c'] },
     pre: {
-      COLOUR_MIXING: [[`${G2}CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING`, 'Painting with a brush (Grade 2) comes before mixing paint by spraying and blowing.'], ['CREA.G1.CREATI.PAINTING_AND_COLOURING.a', 'Knowing paints, brushes and sponges (Grade 1) is the start of colour work.', 'helpful']],
+      COLOUR_MIXING: [[`${G2}CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING`, 'Painting with a brush (Grade 2) comes before mixing paint by spraying and blowing.'], ['CREA.G1.CREATI.PAINTING_AND_COLOURING.PAINT_TOOLS', 'Knowing paints, brushes and sponges (Grade 1) is the start of colour work.', 'helpful']],
       SHAPES_PICTURE: [['MATH.G3.GEOMET.SHAPES.NAME_SHAPES', 'Naming the basic shapes (Grade 3 Maths) is how regular shapes are picked out in a picture.'], [`${G2}CREATI.DRAWING_AND_PAINTING.BRUSH_PAINTING`, 'Painting regular shapes with a brush (Grade 2) comes before drawing a picture from regular and irregular shapes.']],
     },
     mis: [
@@ -319,7 +319,7 @@ export const SUBS = [
     key: SI,
     packNotes: 'Show real instruments or clear pictures. The teacher prepares the wire or string and the bow for improvised instruments.',
     rubric: { STRING_INSTR: ['b', 'c'] },
-    pre: { STRING_INSTR: [[`${G2}PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND`, 'Naming indigenous wind instruments (Grade 2) comes before naming string instruments.'], ['CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.a', 'Naming percussion instruments (Grade 1) begins sorting instruments by how they make sound.', 'helpful']] },
+    pre: { STRING_INSTR: [[`${G2}PERFOR.WIND_MUSICAL_INSTRUMENTS.WIND`, 'Naming indigenous wind instruments (Grade 2) comes before naming string instruments.'], ['CREA.G1.PERFOR.PERCUSSION_MUSICAL_INSTR.PERCUSSION', 'Naming percussion instruments (Grade 1) begins sorting instruments by how they make sound.', 'helpful']] },
     mis: [
       ['STRING_INSTR', 'M_CAC3_SI_ORUTU_DRUM', 'Calls the orutu a drum because it has a skin.', 'The orutu has a string and a bow. What kind of instrument is it?', 'a drum', 'a string instrument (a fiddle)', 'The orutu has a skin-covered resonator like a drum.', 'Bow the string and listen: the string makes the sound.', 'The orutu is a fiddle. Its sound comes from a string.', TCI],
       ['STRING_INSTR', 'M_CAC3_SI_BOW_PLUCK', 'Thinks a fiddle is played by plucking with the fingers.', 'How is a fiddle such as the wandindi played?', 'by plucking', 'by bowing: rubbing a bow across the string', 'Guitars, which are plucked, are the string instrument the child knows.', 'Rub a bow across a string and then pluck it.', 'A fiddle is played by bowing across its string.', TCI],
