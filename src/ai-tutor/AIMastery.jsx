@@ -9,7 +9,7 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT, subjectsForGrade } from './subjects.js';
 import { gradeNumber } from '../learner/subject.js';
 import PassageCard from './PassageCard.jsx';
-import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, learnerGrade, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
 import { selectQuestion, computePlacement, buildPlacementPool, nextAfterAnswer, explainPlacement, questionCap } from './placement.js';
@@ -901,7 +901,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
     // Four-choice (KPSEA style) on a minority of questions, never for the young
     // tap-to-answer flow, which has its own buttons.
-    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const lg = learnerGrade(progress, ctx) ?? 99;
     const youngUI = young && lg <= 3;
     // Now and then a special question: a Kenyan word problem with a bar model,
     // a step-marked question (Grades 7-9), or reasoning (spot the mistake,
@@ -1114,7 +1114,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // clean first-attempt correct — a capable child proves a foundation once and
     // moves on, instead of grinding six trivial reps. A wrong first try drops them
     // straight back into normal practice (they clearly need it after all).
-    const tgLearnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const tgLearnerGrade = learnerGrade(progress, ctx) ?? 99;
     // "First attempt" means the first try on the first problem of this sitting.
     // It used to test newAttempts === 1 — the skill's lifetime count — which
     // (a) ignored attemptNo, so a hinted third try could test out, and (b) was
@@ -1215,7 +1215,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
   const nextProblem = () => {
     stopSpeaking();
-    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const lg = learnerGrade(progress, ctx) ?? 99;
     // A won quick check is over. The learner proved the foundation once and
     // moves on — serving a second question here put a fresh problem under a
     // "1/1 quick check" header, which is the contradiction the header fix was
@@ -1567,7 +1567,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   if (view === 'lesson' && activeSkill) {
     const skill = SKILLS[activeSkill];
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false };
-    const learnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const lessonGrade = learnerGrade(progress, ctx) ?? 99;
     // Test-out: a skill well below the learner's own grade only needs ONE clean
     // correct answer to master — a capable child shouldn't grind six trivial reps
     // just because the diagnostic never confirmed a foundation it couldn't reach.
@@ -1575,7 +1575,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // landed and the skill isn't mastered, the chance has passed and this is
     // normal practice — the header must say so, or it reads "1/1 quick check"
     // while serving a sixth question.
-    const gapOk = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
+    const gapOk = Number.isFinite(skill?.grade) && (lessonGrade - skill.grade) >= 2;
     // Live while it can still be earned: first problem, first try, and not a
     // generated four-choice (recognising isn't producing — those never master).
     const quickCheckLive = gapOk && session.total === 0 && attemptCount === 0 && !(problem?.mc && !problem?.mcOwn);
@@ -1610,7 +1610,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // grade), not only the skill's grade. An older student rebuilding a Grade-1
     // foundation gets the normal UI — not a toddler duck; genuine lower-primary
     // learners (declared grade ≤ 3) keep the read-aloud / tap-to-answer experience.
-    if ((skill.grade || 99) <= 4 && problem && learnerGrade <= 3) {
+    if ((skill.grade || 99) <= 4 && problem && lessonGrade <= 3) {
       const cbc = skill.curricula?.cbc;
       const shared = {
         problem,
@@ -2227,14 +2227,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   const path = getRecommendedPath(progress, ctx);
   const gaps = findGaps(progress, ctx);
   const reviews = getReviews(progress, ctx);
-  const jsGrade = getEstimatedGradeLevel(progress, ctx);
-
-  // The level shown is anchored on the diagnostic placement — a floor, so it
-  // never drops to the conservative mastery-count estimate — and is walked
-  // DOWN by getEffectivePlacement after sustained struggle and UP once a grade
-  // is genuinely outgrown.
-  const effectivePlacement = getEffectivePlacement(progress, ctx);
-  const estimatedGrade = effectivePlacement != null ? Math.max(effectivePlacement, jsGrade) : jsGrade;
+  // Where the learner is solid to. getEstimatedGradeLevel already takes the
+  // diagnostic placement as its floor — so it never drops to the conservative
+  // mastery-count estimate — and getEffectivePlacement walks that floor DOWN
+  // after sustained struggle and UP once a grade is genuinely outgrown.
+  const estimatedGrade = getEstimatedGradeLevel(progress, ctx);
+  // The grade the learner is IN: the one number the card, the strand tiles,
+  // the plan and the reviews all use (adaptiveEngine.js, learnerGrade).
+  const homeGrade = learnerGrade(progress, ctx);
 
   // Progress-dashboard views are scoped to the active curriculum and exclude
   // out-of-scope "enrichment" skills, so a CBC/Cambridge learner's in-scope
@@ -2308,8 +2308,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   // "Grade 5 skills mastered, 24 of 35" — counted at the learner's own grade,
   // not across the whole graph, for the same reason the strand blocks are.
   const gradeMastered = (() => {
-    const g = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx);
-    const here = Object.values(sub.skills).filter(k => gradeOf(k, curriculum) === g);
+    const here = Object.values(sub.skills).filter(k => gradeOf(k, curriculum) === homeGrade);
     const done = here.filter(k => progress.skills[k.id]?.mastered).length;
     return { done, total: here.length, pct: here.length ? Math.round((done / here.length) * 100) : 0 };
   })();
@@ -2613,7 +2612,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 // Both the in-reach count and the "needs work" rule live in
                 // adaptiveEngine.js, so tests/strand-focus.test.mjs holds the
                 // same implementation the dashboard draws.
-                const blocks = strandsInReach(scopedStrandStats, progress, declaredG);
+                const blocks = strandsInReach(scopedStrandStats, progress, homeGrade, curriculum);
                 const worst = weakestStrand(blocks);
                 return (
                 <div className="grid grid-cols-2 xl:grid-cols-3 gap-2.5 xl:gap-3.5">{blocks.map(({ s, done, total }, i) => {
@@ -2894,7 +2893,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 <div className="mt-3.5 text-[19px] font-extrabold tracking-tight text-slate-900 truncate">
                   {(activeLearner?.name || studentName || 'You').trim()}
                 </div>
-                <div className="mt-0.5 text-[13px] font-medium text-slate-500">{gradeLabel(declaredG ?? estimatedGrade)}</div>
+                <div className="mt-0.5 text-[13px] font-medium text-slate-500">{gradeLabel(homeGrade)}</div>
 
                 {/* Level, read at a glance. The bars are decoration and say so
                     to a screen reader; the number is the thing. */}
@@ -2917,7 +2916,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
                 <div className="mt-5 text-left">
                   <div className="flex justify-between text-[12px] font-bold text-slate-500 mb-1.5">
-                    <span>{gradeLabel(declaredG ?? estimatedGrade)} skills mastered</span>
+                    <span>{gradeLabel(homeGrade)} skills mastered</span>
                     <span className="text-slate-900 tabular-nums">{gradeMastered.done} of {gradeMastered.total}</span>
                   </div>
                   <div className="h-2 rounded-full bg-slate-100 overflow-hidden">

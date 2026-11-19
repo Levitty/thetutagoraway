@@ -17,7 +17,7 @@ import { supabase } from '../supabase.js';
 import { SUBJECTS } from './subjects.js';
 import {
   getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps,
-  getNextToLearn, strandsInReach,
+  getNextToLearn, strandsInReach, learnerGrade,
 } from './adaptiveEngine.js';
 import { assignmentRoster, assignedLearners, audienceLabel, dueLabel, isoDay } from './assignments.js';
 import { assignmentStruggles, answerPattern, patternInfo } from './struggles.js';
@@ -64,7 +64,8 @@ const jsSnapshot = (progress, baseCtx) => {
   // every skill from Grade 1 to Grade 12 — work a Grade 5 is years from
   // meeting. A teacher learns nothing from a number that is 1% for the child
   // who is struggling and 5% for the child who is flying.
-  const declared = progress.declaredGrade ?? grade;
+  // The grade the child is IN, as their own home page reads it.
+  const declared = learnerGrade(progress, ctx);
   const all = Object.values(SUBJECTS[SUBJECT_ID]?.skills || {});
   const inReach = all.filter(s => !Number.isFinite(s.grade) || s.grade <= declared);
   const masteredInReach = inReach.filter(s => progress.skills?.[s.id]?.mastered).length;
@@ -82,7 +83,7 @@ const jsSnapshot = (progress, baseCtx) => {
     // never produced, so a strand the check had never reached drew an empty
     // bar instead of saying "not assessed". Every child looked as though they
     // had failed geometry when they had simply never met it.
-    strands: strandsInReach(strands, progress, declared).map(b => ({
+    strands: strandsInReach(strands, progress, declared, ctx.curriculum).map(b => ({
       name: b.s.name,
       assessed: !!b.s.assessed,
       accuracy: b.s.accuracy,

@@ -42,12 +42,17 @@ const checkedAt = (ids, days, extra = {}) => {
 
 const ids = (rs) => rs.map((r) => r.id);
 
+/** These tests are about a Grade 5. The review ceiling is the grade the
+ *  learner is in (learnerGrade), so they say so: without a declared grade a
+ *  handful of skills reads as Grade 1 and the Grade 5 work is above them. */
+const grade5 = (progress) => ({ ...progress, declaredGrade: 5 });
+
 test('a Grade 5 is not sent back to pre-number sorting', () => {
   // The exact shape of the live dashboard: foundations credited by the check
   // alongside work at the learner's own level.
-  const progress = checkedAt(
+  const progress = grade5(checkedAt(
     ['G1_PRENUMBER', 'G1_COUNTING', 'G1_ADD', 'G5_PLACE_VALUE', 'G5_ADDITION'], 5,
-  );
+  ));
   const top3 = getReviews(progress, undefined).slice(0, 3);
 
   assert.ok(
@@ -67,9 +72,9 @@ test('equal urgency is broken by grade, not by position in the skill list', () =
   // fell through to the skill list, which is ascending grade.
   const sameSession = (id) => [id, {
     attempts: 8, correct: 8, mastered: true, repNum: 2, learningSpeed: 1.0,
-    lastPractice: ago(40), consecutiveFailures: 0,
+    lastPractice: ago(40), consecutiveFailures: 0, practisedHere: true,
   }];
-  const progress = { skills: Object.fromEntries([sameSession('G1_COUNTING'), sameSession('G5_ADDITION')]) };
+  const progress = grade5({ skills: Object.fromEntries([sameSession('G1_COUNTING'), sameSession('G5_ADDITION')]) });
 
   const rs = getReviews(progress, undefined);
   assert.equal(rs.length, 2, 'both should be due after 40 days');
@@ -82,7 +87,7 @@ test('equal urgency is broken by grade, not by position in the skill list', () =
 
 test('a checked skill far below the frontier is not due in three days', () => {
   // Grade 1 work under a Grade 5 frontier: consolidated years before this app.
-  const progress = checkedAt(['G1_PRENUMBER', 'G5_ADDITION'], 5);
+  const progress = grade5(checkedAt(['G1_PRENUMBER', 'G5_ADDITION'], 5));
   const due = ids(getReviews(progress, undefined));
   assert.ok(due.includes('G5_ADDITION'), 'the frontier skill is still due');
   assert.ok(!due.includes('G1_PRENUMBER'), 'the long-secure one is not');
@@ -90,7 +95,7 @@ test('a checked skill far below the frontier is not due in three days', () => {
 
 test('the stretch does not reach skills near the frontier', () => {
   // One grade below is ordinary recent work; it must stay on the normal rung.
-  const progress = checkedAt(['G4_PLACE_VALUE', 'G5_ADDITION'], 5);
+  const progress = grade5(checkedAt(['G4_PLACE_VALUE', 'G5_ADDITION'], 5));
   const due = ids(getReviews(progress, undefined));
   assert.ok(due.includes('G4_PLACE_VALUE'), 'one grade below is still reviewed normally');
   assert.ok(due.includes('G5_ADDITION'));
@@ -129,8 +134,8 @@ test('the working level is the grade they are IN, not the top of what they have 
     ids(getReviews(progress, undefined)), [],
     'nothing Grade 1-2 should be served to a declared Grade 5 five days after the check',
   );
-  // Without the declared grade there is nothing better to go on, so the
-  // highest-mastered reading stands and the skills are served as before.
+  // Without the declared grade the estimate stands in for it (learnerGrade),
+  // and a guest still gets the reviews at and below it.
   const guest = checkedAt(['G1_PRENUMBER', 'G1_COUNTING', 'G2_COUNTING'], 5);
   assert.ok(ids(getReviews(guest, undefined)).length > 0, 'a guest with no declared grade still gets reviews');
 });

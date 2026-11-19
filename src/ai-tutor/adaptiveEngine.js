@@ -102,6 +102,37 @@ const topMasteredGrade = (progress, c) => {
   return top;
 };
 
+// ==================== THE LEARNER'S GRADE ====================
+//
+// The one answer to "which grade is this learner in?", for every place the
+// home page says or acts on it: the profile card, the strand tiles, the plan
+// and the reviews. Until Nov 2026 the page used three answers at once — the
+// card fell back to the estimate, the tiles skipped their filter when no grade
+// was declared (so a Grade 1 was counted against the whole Grade 1-12 graph,
+// Algebra and all), and the reviews took the highest grade ever mastered — so
+// one account read "Grade 1" on the card beside a Grade 7 review.
+//
+// The declared grade — the class the learner or parent said they are in — and
+// otherwise the estimate, which already takes the placement as its floor and
+// walks it on evidence after the check (getEstimatedGradeLevel). The declared
+// grade is a floor, not a cap: a Grade 1 placed at Grade 2 who has finished
+// Grade 2 is working in Grade 3, and capping them at their class would leave
+// them nothing to learn (tests/grade-fit.test.mjs). A learner behind their
+// class still reads as the class they are in. Null only for an empty graph.
+// In the active curriculum's grades.
+export const learnerGrade = (progress, ctx) => {
+  const est = getEstimatedGradeLevel(progress || { skills: {} }, ctx);
+  const declared = progress?.declaredGrade;
+  if (Number.isFinite(declared)) return Number.isFinite(est) ? Math.max(declared, est) : declared;
+  return Number.isFinite(est) ? est : null;
+};
+
+// A skill above the learner's grade, in the active curriculum's grades.
+const aboveGrade = (skill, grade, c) => {
+  const g = gradeOf(skill, c.curriculum);
+  return Number.isFinite(g) && g > grade;
+};
+
 const longSecure = (skill, progress) => {
   const lvl = Math.max(progress?.placementGrade ?? 0, progress?.declaredGrade ?? 0);
   if (!lvl || !Number.isFinite(skill?.grade)) return false;
@@ -285,29 +316,22 @@ export const getReviews = (progress, ctx) => {
   const now = Date.now();
   const reviews = [];
 
-  // The learner's working level, used below to tell "secure long before they
-  // met us" apart from "just learned".
+  // The grade the learner is IN — the same number the profile card, the strand
+  // tiles and the plan use (learnerGrade). It does two jobs here: it is the
+  // ceiling, and it is the frontier the below-grade stretch is measured from.
   //
-  // This must come from the grade they are IN, not from the highest grade
-  // they have mastered here. Those are the same number only for a learner who
-  // is already up to date. A Grade 5 placed on foundations has mastered
-  // nothing above Grade 2 yet, so a highest-mastered reading returns 2 and
-  // every Grade 1-2 skill then looks like it is AT their level — which is
-  // exactly how "What number comes just after 35?" kept reaching a Grade 5.
-  // learnerLevel() is placementGrade ?? declaredGrade, which the diagnostic
-  // and sign-up both set. Fall back to highest-mastered only when neither is
-  // known (a guest who skipped the check).
-  let masteredTop = 0;
-  for (const skill of c.skillList) {
-    if (progress.skills[skill.id]?.mastered && Number.isFinite(skill.grade)) {
-      masteredTop = Math.max(masteredTop, skill.grade);
-    }
-  }
-  const workingGrade = Math.max(learnerLevel(progress) ?? 0, masteredTop);
+  // It used to be max(placement ?? declared, highest grade ever mastered).
+  // On an account with no declared grade that made a skill mastered long ago
+  // in a higher grade the frontier: the owner's own account, read as Grade 1
+  // on the card with Grade 1 tiles, opened its evening on "Keep it fresh:
+  // Prime Factorization". A skill above the learner's grade is not a review
+  // for them — it is work they have not reached, whenever it was once done.
+  const grade = learnerGrade(progress, c);
 
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
     if (!sp?.mastered || !sp.lastPractice) continue;
+    if (grade != null && aboveGrade(skill, grade, c)) continue;
 
     const daysSince = (now - new Date(sp.lastPractice).getTime()) / 86400000;
     const repNum = sp.repNum || 0;
@@ -336,7 +360,8 @@ export const getReviews = (progress, ctx) => {
     // Between that floor and the frontier, delay rather than exclude: a skill
     // two grades down is plausibly still worth a look, just not on the same
     // three-day rung as genuinely new work.
-    const below = Number.isFinite(skill.grade) ? workingGrade - skill.grade : 0;
+    const g = gradeOf(skill, c.curriculum);
+    const below = (grade != null && Number.isFinite(g)) ? grade - g : 0;
     if (sp.fromDiagnostic && !sp.practisedHere && below >= 2) interval *= 1 + below;
 
     const memoryStrength = Math.exp(-daysSince / Math.max(interval, 1));
@@ -413,6 +438,7 @@ export const recentMastery = (recent = [], minProblems = 6) => {
 
 export const getNextToLearn = (progress, ctx) => {
   const c = resolveCtx(ctx);
+  const grade = learnerGrade(progress, c);
   return c.skillList
     .filter(s => {
       const sp = progress.skills[s.id];
@@ -434,9 +460,15 @@ export const getNextToLearn = (progress, ctx) => {
       // this from capping anyone: it rises as they master work, so the
       // ceiling rises with them and an advanced learner is never stalled by a
       // placement taken months ago.
+      //
+      // And never more than that one grade above the grade the learner is IN
+      // (learnerGrade), which is what the card and the tiles say. Without
+      // this, an account with old high-grade mastery and no declared grade
+      // read "Grade 1" on the card while the plan offered Grade 8 work.
       if (Number.isFinite(s.grade)) {
         const shown = Math.max(learnerLevel(progress) ?? 0, topMasteredGrade(progress, c));
-        if (shown && s.grade > shown + 1) return false;
+        const ceiling = grade != null ? Math.min(shown || grade, grade) : shown;
+        if (ceiling && gradeOf(s, c.curriculum) > ceiling + 1) return false;
       }
       return true;
     })
@@ -753,13 +785,19 @@ export const getStrandStats = (progress, ctx, { excludeEnrichment = false } = {}
  * they are nowhere — the denominator is work they are years from meeting.
  * Their own grade and below is the set that means "what I should have by now".
  */
-export const strandsInReach = (strandStats, progress, declaredGrade) => (strandStats || []).map((s) => {
-  const inReach = declaredGrade == null
+//
+// `grade` is learnerGrade(), the number the profile card shows, and grades are
+// read in `curriculum` (the active view) as the card's are. A strand with
+// nothing in reach is left out: Algebra is not a Grade 1 strand, and a tile
+// reading "0 of 0" — or "0 of 42" — tells a Grade 1 child they are failing
+// at work they will not meet for years.
+export const strandsInReach = (strandStats, progress, grade, curriculum = NATIVE) => (strandStats || []).map((s) => {
+  const inReach = grade == null
     ? s.skills
-    : s.skills.filter(k => !Number.isFinite(k.grade) || k.grade <= declaredGrade);
+    : s.skills.filter(k => !Number.isFinite(gradeOf(k, curriculum)) || gradeOf(k, curriculum) <= grade);
   const done = inReach.filter(k => progress?.skills?.[k.id]?.mastered).length;
   return { s, done, total: inReach.length, pct: inReach.length ? done / inReach.length : null };
-});
+}).filter(b => b.total > 0);
 
 /**
  * The one strand to badge "needs work", or null when no such claim is honest.
@@ -912,8 +950,11 @@ export const selectReviewProblems = (progress, count = 12, ctx) => {
     // Same tie, too: everything the check credited carries one timestamp, so
     // least-recently-practised ties across all of it and the sort falls
     // through to skill-list order, which is ascending grade.
+    // And the same ceiling: nothing above the grade the learner is in.
+    const grade = learnerGrade(progress, c);
     const filler = c.skillList
       .filter(s => progress.skills[s.id]?.mastered && !inBag.has(s.id))
+      .filter(s => grade == null || !aboveGrade(s, grade, c))
       .filter(s => progress.skills[s.id].practisedHere || !longSecure(s, progress))
       .sort((a, b) =>
         (new Date(progress.skills[a.id].lastPractice || 0) - new Date(progress.skills[b.id].lastPractice || 0))
@@ -943,6 +984,7 @@ export default {
   getStrandStats,
   getGradeStats,
   getEstimatedGradeLevel,
+  learnerGrade,
   calculateXP,
   getTotalXP,
   getLevel,
