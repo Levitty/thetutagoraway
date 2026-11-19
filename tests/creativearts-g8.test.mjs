@@ -9,8 +9,8 @@ import { SIGNED } from '../src/ai-tutor/content/families/creativearts_g8_signed.
 import { creativeArtsDepthTests } from './helpers/creativeArtsDepth.mjs';
 
 // The depth pass of 18 Nov 2026 (Grade 5 Maths standard): two prerequisites and four misconceptions per skill, teaching pack.
-// THREE_FOUR (Rhythm 2.2 a) and ANALYSIS (3.1 b and d) were added in that pass and have no question family yet.
-creativeArtsDepthTests({ grade: 8, outcomes: 71, noFamilies: ['CREA.G8.CREATI.RHYTHM.THREE_FOUR', 'CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS'] });
+// THREE_FOUR (Rhythm 2.2 a) and ANALYSIS (3.1 b and d) were added in that pass; their families followed on 19 Nov 2026 (creativearts_g8_b.js).
+creativeArtsDepthTests({ grade: 8, outcomes: 71, noFamilies: [] });
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/creative_arts/g8.json', import.meta.url), 'utf8'));
 const subs = source.sub_strands;
