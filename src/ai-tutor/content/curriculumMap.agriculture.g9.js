@@ -246,8 +246,7 @@ export const SKILLS = {
    "M_AG9_HM_STANDING",
    "M_AG9_HM_STOVER",
    "M_AG9_HM_LOSS"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING": {
   "name": "Say how hay is made, baled or stacked and stored",
@@ -264,8 +263,7 @@ export const SKILLS = {
    "M_AG9_HK_OPEN",
    "M_AG9_HK_WET",
    "M_AG9_HK_GROUND"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY": {
   "name": "Explain why leftover food should be conserved and kept safe",
@@ -280,8 +278,7 @@ export const SKILLS = {
    "M_AG9_LW_SMELL",
    "M_AG9_LW_WASTE",
    "M_AG9_LW_DAYS"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP": {
   "name": "Say how leftover food is reheated safely or made into a new dish",
@@ -298,8 +295,7 @@ export const SKILLS = {
    "M_AG9_LP_MIXOLD",
    "M_AG9_LP_TWICE",
    "M_AG9_LP_RECIPE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS": {
   "name": "Describe the components of integrated farming and how each conserves resources",
@@ -314,8 +310,7 @@ export const SKILLS = {
    "M_AG9_IP_DUNG",
    "M_AG9_IP_POND",
    "M_AG9_IP_LAND"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL": {
   "name": "Say how an integrated farming model is designed to show the links between its parts",
@@ -332,8 +327,7 @@ export const SKILLS = {
    "M_AG9_IM_LABEL",
    "M_AG9_IM_PLACE",
    "M_AG9_IM_SKETCH"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES": {
   "name": "Explain organic gardening practices in crop production",
@@ -348,8 +342,7 @@ export const SKILLS = {
    "M_AG9_OP_YIELD",
    "M_AG9_OP_HEALTH",
    "M_AG9_OP_ROTATE"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS": {
   "name": "Say how organic inputs are prepared and used on a crop",
@@ -366,8 +359,7 @@ export const SKILLS = {
    "M_AG9_OI_SOAK",
    "M_AG9_OI_NOON",
    "M_AG9_OI_FRESHMANURE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP": {
   "name": "Say how a storage structure is prepared before crop produce is stored",
@@ -383,8 +375,7 @@ export const SKILLS = {
    "M_AG9_SP_ROOF",
    "M_AG9_SP_RAT",
    "M_AG9_SP_BAGS"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE": {
   "name": "Say how stored crop produce is managed to reduce spoilage",
@@ -401,8 +392,7 @@ export const SKILLS = {
    "M_AG9_SM_HEAT",
    "M_AG9_SM_SPOILT",
    "M_AG9_SM_AIR"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES": {
   "name": "Identify the types of flour mixtures used in food production",
@@ -417,8 +407,7 @@ export const SKILLS = {
    "M_AG9_FM_RATIO",
    "M_AG9_FM_MANDAZI",
    "M_AG9_FM_ONLY"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP": {
   "name": "Say how batters and doughs are prepared",
@@ -435,8 +424,7 @@ export const SKILLS = {
    "M_AG9_MP_KNEAD",
    "M_AG9_MP_LUMPS",
    "M_AG9_MP_NOMEASURE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS": {
   "name": "Say how products are made from flour mixtures and tell when they are cooked",
@@ -453,8 +441,7 @@ export const SKILLS = {
    "M_AG9_FP_TURN",
    "M_AG9_FP_THICK",
    "M_AG9_FP_OILTEMP"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY": {
   "name": "Explain why waste disposal facilities must be kept clean",
@@ -469,8 +456,7 @@ export const SKILLS = {
    "M_AG9_WF_LID",
    "M_AG9_WF_DISEASE",
    "M_AG9_WF_SINK"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN": {
   "name": "Say how bins, sinks and open drains are cleaned and kept clean",
@@ -487,8 +473,7 @@ export const SKILLS = {
    "M_AG9_WC_WET",
    "M_AG9_WC_SILT",
    "M_AG9_WC_STRAINER"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS": {
   "name": "Describe the methods of disinfecting clothing and household articles",
@@ -503,8 +488,7 @@ export const SKILLS = {
    "M_AG9_DM_BOILALL",
    "M_AG9_DM_SUN",
    "M_AG9_DM_IRON"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE": {
   "name": "Say how clothing and household articles are disinfected safely",
@@ -521,8 +505,7 @@ export const SKILLS = {
    "M_AG9_DP_STRONG",
    "M_AG9_DP_SHORT",
    "M_AG9_DP_SHADE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING": {
   "name": "Describe grafting as a method of plant propagation",
@@ -537,8 +520,7 @@ export const SKILLS = {
    "M_AG9_GM_ANY",
    "M_AG9_GM_SEED",
    "M_AG9_GM_UNION"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS": {
   "name": "Say the steps of carrying out a graft",
@@ -555,8 +537,7 @@ export const SKILLS = {
    "M_AG9_GS_BLUNT",
    "M_AG9_GS_LOOSE",
    "M_AG9_GS_DRY"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE": {
   "name": "Say how a grafted plant is cared for until the union succeeds",
@@ -573,8 +554,7 @@ export const SKILLS = {
    "M_AG9_GC_TAPE",
    "M_AG9_GC_SUN",
    "M_AG9_GC_KNOCK"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  },
  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES": {
   "name": "Appraise grafting for repair, aesthetics, improvement and rejuvenation",
@@ -591,8 +571,7 @@ export const SKILLS = {
    "M_AG9_GP_OLD",
    "M_AG9_GP_LOOKS",
    "M_AG9_GP_IMPROVE"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN": {
   "name": "Describe how a homemade sun dryer for vegetables is made and how it works",
@@ -607,8 +586,7 @@ export const SKILLS = {
    "M_AG9_SD_HOLES",
    "M_AG9_SD_COVER",
    "M_AG9_SD_WHY"
-  ],
-  "nofamily": true
+  ]
  },
  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE": {
   "name": "Say how a sun dryer is built, placed and used to dry vegetables",
@@ -625,8 +603,7 @@ export const SKILLS = {
    "M_AG9_SU_SHADE",
    "M_AG9_SU_CLEAN",
    "M_AG9_SU_STORE"
-  ],
-  "nofamily": "teacher marks the practical with the KICD rubric"
+  ]
  }
 };
 export const MIS_FEEDBACK = {

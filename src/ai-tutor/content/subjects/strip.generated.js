@@ -16,6 +16,8 @@ export default {
   'agriculture_g7_b.js': 'agriculture_g7_signed.js',
   'agriculture_g8_a.js': 'agriculture_g8_signed.js',
   'agriculture_g8_b.js': 'agriculture_g8_signed.js',
+  'agriculture_g9_a.js': 'agriculture_g9_signed.js',
+  'agriculture_g9_b.js': 'agriculture_g9_signed.js',
   'cre_g4_a.js': 'cre_g4_signed.js',
   'cre_g4_b.js': 'cre_g4_signed.js',
   'cre_g4_c.js': 'cre_g4_signed.js',
