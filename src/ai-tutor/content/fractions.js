@@ -482,7 +482,7 @@ export function buildCompareFractions() {
     solution: {
       steps: [
         { text: 'Cross-multiply.', expr: `${a}×${d} = ${a * d},  ${c}×${b} = ${c * b}` },
-        { text: 'Compare the two products.', expr: `${a / b} ${sym} ${c / d}` },
+        { text: 'Compare the two products: the larger product goes with the larger fraction.', expr: `${a * d} ${sym} ${c * b}, so ${a}/${b} ${sym} ${c}/${d}` },
       ],
       answer: sym,
     },

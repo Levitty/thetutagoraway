@@ -1832,6 +1832,17 @@ const tidy = (p, skillId) => {
   if (Array.isArray(p.accepts)) p.accepts = p.accepts.map(tidyNum);
   if (Array.isArray(p.hints)) p.hints = p.hints.map(tidyNum);
   if (p.solution && typeof p.solution.answer === 'string') p.solution.answer = tidyNum(p.solution.answer);
+  // Help a child reads (feedback F12): solution steps and the worked example
+  // get the same last clean-up as the question, so float noise from any
+  // builder or family never reaches the screen.
+  const tidyStep = (s) => (s && typeof s === 'object' ? { ...s, text: tidyNum(s.text), expr: tidyNum(s.expr) } : tidyNum(s));
+  if (Array.isArray(p.solution?.steps)) p.solution.steps = p.solution.steps.map(tidyStep);
+  if (Array.isArray(p.solutionSteps)) p.solutionSteps = p.solutionSteps.map(tidyStep);
+  if (p.workedExample && typeof p.workedExample === 'object') {
+    const w = p.workedExample;
+    p.workedExample = { ...w, problem: tidyNum(w.problem), solution: tidyNum(w.solution),
+      ...(Array.isArray(w.steps) ? { steps: w.steps.map(tidyStep) } : {}) };
+  }
   // Common-mistake catalogue (mistakes.js) adds what the authored list misses,
   // after it, so authored feedback always wins on the same wrong answer.
   if (!p.placeholder) {

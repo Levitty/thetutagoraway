@@ -960,7 +960,7 @@ export function buildAngleConstruction() {
         'Every angle in that family is a multiple of the same small step — work out what that step is and test the angle against it.'),
       solution: { steps: [
         { text: 'Halving 90° and 60° repeatedly reaches 45°, 30°, 22.5°, 15°, 7.5°.', expr: 'the smallest step is 7.5°' },
-        { text: 'Test the angle against that step.', expr: `${ang} ÷ 7.5 = ${ang / 7.5}${Number.isInteger(ang / 7.5) ? '' : '…'}` },
+        { text: 'Test the angle against that step.', expr: Number.isInteger(ang / 7.5) ? `${ang} ÷ 7.5 = ${ang / 7.5}` : `${ang} ÷ 7.5 = ${Math.floor(ang / 7.5)} remainder ${ang - 7.5 * Math.floor(ang / 7.5)}` },
         { text: Number.isInteger(ang / 7.5) ? 'It is a whole number of steps.' : 'It is not a whole number of steps.', expr: value }], answer: value },
       misconceptions: [
         { when: yes ? 'no' : 'yes', feedback: 'Test the angle against the smallest step that repeated bisection reaches — anything that is a whole number of those steps can be built.' },
