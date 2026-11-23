@@ -2,7 +2,7 @@
 // the lowest skill their child is missing, what it rests on, and what rests on
 // it. Pure, so it can be tested without the app.
 import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
-import { NATIVE, gradeOf } from '../ai-tutor/curricula.js';
+import { NATIVE, gradeOf, outsideCurriculum } from '../ai-tutor/curricula.js';
 
 const passed = (sp) => !!sp && sp.passed === true;
 const failed = (sp) => !!sp && sp.fromDiagnostic === true && sp.passed === false;
@@ -45,18 +45,23 @@ export function findMissingStep(progress, skills = SKILLS, curriculum = progress
 
   let missing = ranked[0] || null;
   let allClear = false;
-  // Nothing failed: the next step is the first not-yet-passed skill just above
-  // where they placed.
+  // Nothing failed: the next step is what they reached for and missed, or else
+  // the first not-yet-passed skill just above where they placed. The child's
+  // own curriculum comes first in both: a strong CBC Grade 8 child who missed
+  // one Grade 10 vectors probe was led with vectors for every sitting, past
+  // all of CBC Grade 9 (feedback F10).
   if (!missing) {
     allClear = true;
-    // What they reached for and missed is the natural next step.
-    if (stretch.length) missing = stretch[0];
-  }
-  if (!missing) {
     const from = (placement || declared || 1) + 1;
-    missing = Object.values(skills)
-      .filter(s => gradeOf(s, curr) >= from && !passed(sk[s.id]) && (s.prerequisites || []).every(p => passed(sk[p]) || !skills[p]))
-      .sort((a, b) => gradeOf(a, curr) - gradeOf(b, curr) || (b.critical ? 1 : 0) - (a.critical ? 1 : 0))[0]?.id || null;
+    const openFrom = (g) => Object.values(skills)
+      .filter(s => gradeOf(s, curr) >= g && !passed(sk[s.id]) && (s.prerequisites || []).every(p => passed(sk[p]) || !skills[p]))
+      .sort((a, b) => gradeOf(a, curr) - gradeOf(b, curr) || (b.critical ? 1 : 0) - (a.critical ? 1 : 0))
+      .map(s => s.id);
+    const inside = (id) => !outsideCurriculum(skills[id], curr);
+    const open = openFrom(from);
+    // Placed at the curriculum's last grade, nothing in it lies above: the
+    // grade's own unpassed work comes before anything outside the curriculum.
+    missing = stretch.find(inside) || open.find(inside) || openFrom(from - 1).find(inside) || stretch[0] || open[0] || null;
   }
   if (!missing) return { missing: null, solid: [], next: [], otherGaps: [], placement, declared, allClear };
 

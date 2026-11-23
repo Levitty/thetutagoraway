@@ -23,10 +23,18 @@ const clearedNine = () => ({
   },
 });
 
-test('a child who cleared their grade is all clear, with the stretch skill next', () => {
+// CBC's own unpassed Grade 9 work (logarithms, which the graph files under
+// Grade 10) comes before the missed probe outside CBC (feedback F10); once the
+// CBC work is passed, the stretch skill is next.
+test('a child who cleared their grade is all clear, with CBC work next and then the stretch skill', () => {
   const r = findMissingStep(clearedNine());
   assert.equal(r.allClear, true);
-  assert.equal(r.missing, 'G10_SEQUENCES_ADV');
+  assert.equal(r.missing, 'G10_LOGARITHMS_INTRO');
+  const p = clearedNine();
+  for (const s of Object.values(SKILLS)) if (s.curricula?.cbc && s.curricula.cbc.inScope !== false) p.skills[s.id] = pass;
+  const after = findMissingStep(p);
+  assert.equal(after.allClear, true);
+  assert.equal(after.missing, 'G10_SEQUENCES_ADV');
 });
 
 test('the missed stretch skill does not turn its prerequisites into gaps', () => {

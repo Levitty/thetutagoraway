@@ -6,7 +6,7 @@
 
 import { findMissingStep } from '../site/missingStep.js';
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
-import { NATIVE, gradeOf, strandOf, isEnrichment } from './curricula.js';
+import { NATIVE, gradeOf, strandOf, isEnrichment, outsideCurriculum } from './curricula.js';
 import { isFluent, calculateMemoryStrength } from './spacedRepetition.js';
 
 // Default context (math) for backward compatibility
@@ -97,7 +97,11 @@ const assumedKnown = (skill, progress) => {
 const topMasteredGrade = (progress, c) => {
   let top = 0;
   for (const s of c.skillList) {
-    if (progress?.skills?.[s.id]?.mastered && Number.isFinite(s.grade)) top = Math.max(top, s.grade);
+    // In the learner's own curriculum's grades: CBC puts 35 skills in another
+    // grade than the graph does, and every ceiling this feeds is compared in
+    // curriculum grades (feedback F10).
+    const g = gradeOf(s, c.curriculum);
+    if (progress?.skills?.[s.id]?.mastered && Number.isFinite(g)) top = Math.max(top, g);
   }
   return top;
 };
@@ -465,10 +469,11 @@ export const getNextToLearn = (progress, ctx) => {
       // (learnerGrade), which is what the card and the tiles say. Without
       // this, an account with old high-grade mastery and no declared grade
       // read "Grade 1" on the card while the plan offered Grade 8 work.
-      if (Number.isFinite(s.grade)) {
+      const sg = gradeOf(s, c.curriculum);
+      if (Number.isFinite(sg)) {
         const shown = Math.max(learnerLevel(progress) ?? 0, topMasteredGrade(progress, c));
         const ceiling = grade != null ? Math.min(shown || grade, grade) : shown;
-        if (ceiling && gradeOf(s, c.curriculum) > ceiling + 1) return false;
+        if (ceiling && sg > ceiling + 1) return false;
       }
       return true;
     })
@@ -480,9 +485,13 @@ export const getNextToLearn = (progress, ctx) => {
       const criticalBonus = s.critical ? 12 : 0;
       const gradeProximity = Math.max(0, 8 - 2 * Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx))) * 2;
 
+      // Work outside the learner's curriculum comes after the curriculum's own
+      // (feedback F10). The penalty is larger than every other term added
+      // together can make up (12 + 10 + 8 + 16).
+      const outside = outsideCurriculum(s, c.curriculum) ? -50 : 0;
       return {
         ...s,
-        priority: criticalBonus + Math.min(dependents, 5) * 2 + inProgress + gradeProximity,
+        priority: criticalBonus + Math.min(dependents, 5) * 2 + inProgress + gradeProximity + outside,
         type: 'learn',
       };
     })

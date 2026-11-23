@@ -81,6 +81,13 @@ export const isEnrichment = (skill, curr) => {
   return !!t && t.inScope === false;
 };
 
+// Outside the learner's curriculum: marked out of scope, or (for any curriculum
+// but the graph's own) not tagged at all, as Grade 10-11 skills are under CBC
+// today. Such work still opens, there is no ceiling, but only after the
+// curriculum's own work (feedback F10).
+export const outsideCurriculum = (skill, curr) =>
+  isEnrichment(skill, curr) || (!!curr && curr !== NATIVE && !(skill && skill.curricula && skill.curricula[curr]));
+
 // Display label for a band, e.g. "Grade 7" / "Stage 8 — Intermediate".
 export const bandLabel = (curr, grade, gradeNames) => {
   const c = getCurriculum(curr);
