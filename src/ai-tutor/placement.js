@@ -23,6 +23,9 @@
 //      skill stands on, a grade or more below. Wrong again, and the thread goes
 //      one rung further. Every thread gets its first follow-up before any gets
 //      its second, so the cap trims the deepest probes, never a whole thread.
+//   A failed opening (six topics, at most one right) moves the sweep down a
+//   grade instead of finishing it; see sweptGrade. Before it does, a deep step
+//   the misses share is asked directly, because one such gap looks like a grade.
 //   3. A near-flawless sweep earns a short stretch above the declared grade —
 //      five questions across its strands, four right to count. Never more than one grade.
 //
@@ -147,13 +150,54 @@ const ancestors = (byId, id) => {
 // Reading the answers so far.
 // ---------------------------------------------------------------------------
 const accuracy = (rows) => (rows.length ? rows.filter(a => a.correct).length / rows.length : null);
-const sweepRows = (asked, grade) => asked.filter(a => a.grade === grade && !a.probeFor);
+const sweepRows = (asked, grade) => asked.filter(a => a.grade === grade && !a.probeFor && !a.hunt);
+
+/**
+ * The grade being swept: the declared one, unless its opening showed the child
+ * is working below it.
+ *
+ * Until 25 Nov 2026 the whole declared grade was swept however it went. A
+ * Grade 7 child working at Grade 5 was asked all nineteen Grade 7 topics, got
+ * every one wrong, each was asked twice, and the questions ran out before the
+ * check reached work the child can do (F15). Now STEP_OPENING questions with at
+ * most STEP_RIGHT right moves the sweep down a grade, and again from there.
+ *
+ * Read from the answers alone, like everything here. Once a question at the
+ * lower grade has been asked the step stands, even if a later re-ask turns one
+ * of the opening misses right.
+ */
+export const STEP_OPENING = 6;
+export const STEP_RIGHT = 1;
+export const STEP_LIMIT = 10;
+export const sweptGrade = (asked, declared, pool) => {
+  const start = clampGrade(pool, declared);
+  if (start == null) return null;
+  const grades = gradesIn(pool);
+  let g = start;
+  // A miss that stands on a deep step already found missing (asked directly,
+  // two grades or more down) says that step is missing, not that the grade is.
+  const byId = new Map(pool.map(s => [s.id, s]));
+  const deep = asked.filter(a => a.hunt && !a.correct);
+  const explained = (a) => !a.correct && deep.some(d => d.grade <= a.grade - 2 && ancestors(byId, a.id).some(p => p.id === d.id));
+  while (g > grades[0] && unitsAt(pool, g - 1).length) {
+    const opening = sweepRows(asked, g).filter(a => !explained(a)).slice(0, STEP_OPENING);
+    const stepped = sweepRows(asked, g - 1).length > 0;
+    // However well one deep step explains them, ten topics are enough: a child
+    // is not walked through a whole year they are getting wrong.
+    const long = sweepRows(asked, g).slice(0, STEP_LIMIT);
+    const fails = (rows, n) => rows.length === n && rows.filter(a => a.correct).length <= STEP_RIGHT;
+    const failed = fails(opening, STEP_OPENING) || fails(long, STEP_LIMIT);
+    if (!stepped && !failed) break;
+    g -= 1;
+  }
+  return g;
+};
 
 export const gradeAccuracy = (asked, grade) => accuracy(asked.filter(a => a.grade === grade));
 
-/** Sub-strands of the declared grade not yet asked — the part of the test that must not be squeezed out. */
+/** Sub-strands of the grade being swept not yet asked — the part of the test that must not be squeezed out. */
 export const sweepRemaining = (asked, declared, pool) => {
-  const start = clampGrade(pool, declared);
+  const start = sweptGrade(asked, declared, pool);
   if (start == null) return 0;
   const done = new Set(sweepRows(asked, start).map(unitOf));
   return unitsAt(pool, start).filter(u => !done.has(u)).length;
@@ -203,11 +247,19 @@ const probeBelow = (pool, byId, rec, answered, balances) => {
 // ---------------------------------------------------------------------------
 export const selectQuestion = (asked, declared, pool, balances = {}) => {
   if (asked.length >= questionCap(asked, declared, pool)) return null;
-  const start = clampGrade(pool, declared);
+  const start = sweptGrade(asked, declared, pool);
   if (start == null) return null;
   const answered = new Set(asked.map(a => a.id));
 
-  // 1. Every sub-strand of the declared grade.
+  // 0. Before the sweep steps down on a failed opening: if the misses share a
+  // step far below, ask that first. One deep gap looks like a whole grade.
+  const byId = new Map(pool.map(s => [s.id, s]));
+  if (start < clampGrade(pool, declared) && sweepRows(asked, start).length === 0) {
+    const hunt = huntSharedRoot(asked, pool, byId, start + 1, start - 1);
+    if (hunt) return hunt;
+  }
+
+  // 1. Every sub-strand of the declared grade (or of the grade it stepped down to).
   const sweep = sweepRows(asked, start);
   const sweptUnits = new Set(sweep.map(unitOf));
   for (const u of unitsAt(pool, start)) {
@@ -217,7 +269,6 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
   }
 
   // 2. Follow each miss down the ladder, breadth first.
-  const byId = new Map(pool.map(s => [s.id, s]));
   const misses = sweep.filter(a => !a.correct);
   for (let depth = 1; depth <= MAX_PROBE_DEPTH; depth++) {
     // After every thread has its first follow-up: go straight for a missing
@@ -238,7 +289,7 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
 
   // 3. A near-flawless sweep earns a short stretch, stopping once it cannot count.
   const gmax = gradesIn(pool).slice(-1)[0];
-  if ((accuracy(sweep) ?? 0) >= STRETCH_GATE && start + 1 <= gmax) {
+  if (start === clampGrade(pool, declared) && (accuracy(sweep) ?? 0) >= STRETCH_GATE && start + 1 <= gmax) {
     // One grade, and only one. A climb that let each cleared stretch earn the
     // next (18 Oct) placed a Grade 6 child who knows everything at Grade 12 and
     // showed them surds and logarithms. The ceiling is deliberate: the check
@@ -283,16 +334,16 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
  * skill right is evidence for everything it stands on.
  */
 export const MAX_HUNTS = 4;
-const huntSharedRoot = (asked, pool, byId, start) => {
+const huntSharedRoot = (asked, pool, byId, start, top = start - 1) => {
   if (asked.filter(a => a.hunt).length >= MAX_HUNTS) return null;
   const answered = new Set(asked.map(a => a.id));
-  const wrong = asked.filter(a => !a.correct);
+  const wrong = asked.filter(a => !a.correct && a.grade <= start);
   const vouched = new Set();
   for (const a of asked) if (a.correct) for (const p of ancestors(byId, a.id)) vouched.add(p.id);
   const counts = new Map();
   for (const w of wrong) {
     for (const p of ancestors(byId, w.id)) {
-      if (p.grade >= start || answered.has(p.id) || vouched.has(p.id)) continue;
+      if (p.grade > top || answered.has(p.id) || vouched.has(p.id)) continue;
       counts.set(p.id, (counts.get(p.id) || 0) + 1);
     }
   }
@@ -362,7 +413,7 @@ export const roomForAnother = (totalAsked, asked, declared, pool) =>
  */
 export const questionCap = (asked, declared, pool) => {
   if (!asked || !pool) return BASE_QUESTIONS;
-  const start = clampGrade(pool, declared);
+  const start = sweptGrade(asked, declared, pool);
   if (start == null) return BASE_QUESTIONS;
   const sweep = sweepRows(asked, start);
   if (!sweep.length || sweepRemaining(asked, declared, pool) > 0) return BASE_QUESTIONS;
@@ -427,7 +478,9 @@ export const nextAfterAnswer = ({ skill, total, record, pending, declared, pool,
 export const MAX_SHARED_ROOTS = 2;
 const singleRootGap = (asked, sweep, start, pool) => {
   const byId = new Map(pool.map(s => [s.id, s]));
-  const wrongIds = new Set(asked.filter(a => !a.correct).map(a => a.id));
+  // Misses above the swept grade are the opening it stepped down from: they
+  // are what "a grade behind" looks like, not roots of their own.
+  const wrongIds = new Set(asked.filter(a => !a.correct && a.grade <= start).map(a => a.id));
   if (!wrongIds.size) return false;
   const anc = new Map();
   const ancOf = (id) => {
@@ -482,8 +535,17 @@ const stretchCleared = (asked, pool, grade) => {
   return rows.length >= need && rows.filter((a) => !a.correct).length <= stretchAllowance(need);
 };
 
+//
+// And never above the highest grade the child answered something right at:
+// a place nobody has seen the child work at is a guess in the wrong direction.
 export const computePlacement = (asked, declared, pool) => {
-  const start = clampGrade(pool, declared);
+  const at = placeFrom(asked, declared, pool);
+  const right = (asked || []).filter(a => a.correct).map(a => a.grade).filter(Number.isFinite);
+  return right.length && Number.isFinite(at) ? Math.min(at, Math.max(...right)) : at;
+};
+
+const placeFrom = (asked, declared, pool) => {
+  const start = sweptGrade(asked, declared, pool);
   if (start == null) return declared ?? null;
   const grades = gradesIn(pool), gmin = grades[0];
   const sweep = sweepRows(asked, start);
@@ -491,7 +553,7 @@ export const computePlacement = (asked, declared, pool) => {
 
   if (accuracy(sweep) >= CLEAR) {
     // At most one grade above the declared one; see the selector.
-    return start + 1 <= grades[grades.length - 1] && stretchCleared(asked, pool, start + 1) ? start + 1 : start;
+    return start === clampGrade(pool, declared) && start + 1 <= grades[grades.length - 1] && stretchCleared(asked, pool, start + 1) ? start + 1 : start;
   }
   // Each sub-strand of the sweep "holds" at some grade: the declared grade if
   // it was answered right; otherwise the first rung down its follow-ups found
@@ -551,7 +613,7 @@ export const worthConfirming = () => true;
 // A plain-language account of what the test concluded, for the result screen.
 export const explainPlacement = (asked, declared, pool) => {
   const placement = computePlacement(asked, declared, pool);
-  const start = clampGrade(pool, declared);
+  const start = sweptGrade(asked, declared, pool);
   const sweep = start == null ? [] : sweepRows(asked, start);
   const byStrand = {};
   for (const a of asked) {
@@ -577,6 +639,6 @@ export const explainPlacement = (asked, declared, pool) => {
 
 export default {
   CLEAR, STRETCH_GATE, BASE_QUESTIONS, MAX_QUESTIONS, STRUGGLING, questionCap, STRETCH_PROBE, STRETCH_MISSES, MAX_PROBE_DEPTH,
-  buildPlacementPool, gradesIn, unitsAt, nextToSettle, nextAfterAnswer, MAX_HUNTS, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
+  buildPlacementPool, gradesIn, unitsAt, nextToSettle, nextAfterAnswer, MAX_HUNTS, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming, STEP_OPENING, STEP_RIGHT, STEP_LIMIT, sweptGrade,
   selectQuestion, isComplete, computePlacement, explainPlacement,
 };

@@ -8,7 +8,7 @@
 //   node qa/classroom.mjs --seed 3 --json qa/report.json
 //
 // For each grade 4..9 a strong, an average and a struggling child sit the free
-// check (placement.js, as the app runs it, without the re-ask), then practise
+// check (placement.js, as the app runs it), then practise
 // the recommended path for several sittings. Every question served is checked:
 //
 //   fit       the skill is at or near the child's grade; a strong child never
@@ -27,6 +27,8 @@
 //   wording   no empty fields, "{x}" placeholders, undefined/NaN
 //   scope     a CBC child is taught only skills in the CBC design
 //   gaps      nothing above where the child placed is called a gap (F9)
+//   stepdown  a child failing the declared grade is moved down early, and is
+//             never placed above a grade they answered right (F15)
 //   help      the worked example is for the same kind of question; no
 //             computer noise (0.8333333333333334) in hints or solutions
 //
@@ -360,11 +362,15 @@ function runChild(child) {
   // The free check, as handleDiagnosticAnswer runs it: a wrong (not skipped)
   // answer is re-asked once; right the second time counts as right.
   let balances = {}, record = [], asked = 0, pending = null;
+  // What comes next is the function the app itself calls (nextAfterAnswer), so
+  // the cap, the re-ask and the final ask cannot drift from the real check.
   let current = PL.selectQuestion([], child.grade, POOL, {});
   const checkSitting = { seen: new Set(), last: null };
-  while (current && asked < PL.MAX_QUESTIONS) {
+  while (current) {
     asked++;
     const p = generateProblem(current.id);
+    const before = { id: current.id, balances, record };
+    let newPending = null;
     // A re-ask is allowed to repeat the question text.
     if (pending && pending.id === current.id) checkSitting.seen.delete(`${p.instruction || ''}|${p.question}`);
     inspect(child, current.id, p, checkSitting);
@@ -376,25 +382,34 @@ function runChild(child) {
         balances = propagateCredit(pending.balances, current.id, true, 1.0, ctx);
         record = pending.record.map(r => r.id === current.id ? { ...r, correct: true, confirmed: true } : r);
       } else record = record.map(r => r.id === current.id ? { ...r, confirmed: true } : r);
-      pending = null;
     } else if (record.some(r => r.id === current.id)) {
       if (correct) {
         balances = propagateCredit(withdrawMiss(balances, current.id, 1.0, ctx), current.id, true, 1.0, ctx);
         record = record.map(r => r.id === current.id ? { ...r, correct: true, settled: true } : r);
       } else record = record.map(r => r.id === current.id ? { ...r, settled: true } : r);
     } else {
-      const before = { id: current.id, balances, record };
       balances = propagateCredit(balances, current.id, correct, 1.0, ctx);
       record = [...record, rec];
-      const room = (PL.sweepRemaining ? asked + PL.sweepRemaining(record, child.grade, POOL) < PL.MAX_QUESTIONS : asked < PL.MAX_QUESTIONS)
-        && (!PL.worthConfirming || PL.worthConfirming(record));
-      if (!correct && room) { pending = before; continue; }
+      if (!correct) newPending = before;
     }
-    current = !PL.roomForAnother || PL.roomForAnother(asked) ? PL.selectQuestion(record, child.grade, POOL, balances)
-      : PL.nextToSettle && asked < PL.MAX_QUESTIONS ? PL.nextToSettle(record, POOL) : null;
+    pending = newPending;
+    current = PL.nextAfterAnswer({ skill: current, total: asked, record, pending, declared: child.grade, pool: POOL, balances }).next;
   }
   const checkGrades = record.map(r => `${r.grade}${r.correct ? '' : 'x'}`);
   const placementGrade = PL.computePlacement(record, child.grade, POOL);
+  // stepdown (F15): a child getting the declared grade wrong is moved down
+  // early, and is never placed above a grade they answered right.
+  const declaredRows = record.filter(r => r.grade === child.grade && !r.probeFor && !r.hunt);
+  const run = declaredRows.findIndex(r => r.correct);
+  if (declaredRows.length >= 6 && (run < 0 || run >= 6)) {
+    const ok = (run < 0 ? declaredRows.length : run) <= 10; tally('stepdown', ok);
+    if (!ok) fail('stepdown', child, null, null, `${run < 0 ? declaredRows.length : run} Grade ${child.grade} topics in a row wrong`);
+  }
+  const rightGrades = record.filter(r => r.correct).map(r => r.grade);
+  if (rightGrades.length) {
+    const ok = placementGrade <= Math.max(...rightGrades); tally('stepdown', ok);
+    if (!ok) fail('stepdown', child, null, null, `placed at Grade ${placementGrade}, highest grade answered right is ${Math.max(...rightGrades)}`);
+  }
   const progress = { declaredGrade: child.grade, placementGrade, diagnosed: true, skills: processDiagnosticResults(balances, ctx) };
   // Practice sittings.
   const practiceGrades = [];

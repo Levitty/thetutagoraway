@@ -15,7 +15,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
 import { SKILLS, getPostRequisites, getPrerequisiteChain, getPostRequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
-import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, questionCap, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
+import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, sweptGrade, STEP_OPENING, questionCap, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
 import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
@@ -202,13 +202,16 @@ test('a child who knows their grade is not kept long', () => {
 });
 
 test('every miss is followed down before the check ends', () => {
-  // A Grade 5 child working at Grade 4 misses the sweep, and each thread should
-  // find Grade 4 holding where the budget allows.
-  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 4);
+  // A Grade 5 child who misses every other topic keeps the full sweep (the
+  // opening is not failed) and each miss is followed below the grade.
+  let n = 0;
+  const asked = sitCheck(5, q => q.grade < 5 || n++ % 2 === 0);
   const followUps = asked.filter(a => a.probeFor);
   assert.ok(followUps.length >= 5, `only ${followUps.length} follow-ups`);
   assert.ok(followUps.every(a => a.grade < 5), 'a follow-up is always below the miss it chases');
-  assert.equal(computePlacement(asked, 5, CBC_POOL), 4);
+  // A Grade 5 child working at Grade 4 is moved to Grade 4 and placed there.
+  const behind = sitCheck(5, q => SKILLS[q.id].grade <= 4);
+  assert.equal(computePlacement(behind, 5, CBC_POOL), 4);
 });
 
 test('the check never asks a topic the design leaves out of the grade', () => {
@@ -279,10 +282,51 @@ test('the check places a child at most one grade above the one they declared', (
   assert.ok(asked.every(a => a.grade <= 6), 'a question was asked above Grade 6');
 });
 
-test('a child missing most of their grade gets a longer check, and no one else does', () => {
-  // Forty questions ran out before the check could show the grade below holds.
+test('only a child missing most of a grade they partly know gets a longer check', () => {
+  // Two of the first six right keeps the sweep; under half of it right, and
+  // forty questions can run out before the grade below is shown to hold.
+  let n = 0;
+  const partly = sitCheck(5, q => q.grade < 5 || n++ % 3 === 0);
+  assert.equal(questionCap(partly, 5, CBC_POOL), 50);
+  // A child well behind is moved down early instead, and stays under forty (F15).
   const behind = sitCheck(5, q => SKILLS[q.id].grade <= 3);
-  assert.ok(behind.length > 40 && behind.length <= 50, `asked ${behind.length}`);
+  assert.ok(behind.length <= 40, `asked ${behind.length}`);
   const onGrade = sitCheck(5, q => SKILLS[q.id].grade <= 5);
   assert.equal(questionCap(onGrade, 5, CBC_POOL), 40);
+});
+
+// F15 (21 Oct 2026): a Grade 7 child working at Grade 5 was asked all nineteen
+// Grade 7 topics, twice each, and the check ran out before work they can do.
+test('a child failing the declared grade is moved down early', () => {
+  for (const [declared, level] of [[4, 2], [5, 3], [6, 4], [7, 5], [8, 6], [9, 7]]) {
+    const asked = sitCheck(declared, q => SKILLS[q.id].curricula?.cbc?.grade ? SKILLS[q.id].curricula.cbc.grade <= level : SKILLS[q.id].grade <= level);
+    const atDeclared = asked.filter(a => a.grade === declared && !a.probeFor && !a.hunt);
+    assert.equal(atDeclared.length, STEP_OPENING, `Grade ${declared}: ${atDeclared.length} questions at the declared grade`);
+    const placed = computePlacement(asked, declared, CBC_POOL);
+    assert.ok(placed <= Math.max(...asked.filter(a => a.correct).map(a => a.grade)), `Grade ${declared} placed at ${placed}`);
+    assert.ok(Math.abs(placed - level) <= 1, `Grade ${declared} child working at ${level} placed at ${placed}`);
+  }
+});
+
+test('the step down stands when a later re-ask turns an opening miss right', () => {
+  const asked = sitCheck(7, q => q.grade <= 5);
+  assert.equal(sweptGrade(asked, 7, CBC_POOL), 5);
+  const openers = new Set(asked.filter(a => a.grade === 7).slice(0, 3).map(a => a.id));
+  const flipped = asked.map(a => openers.has(a.id) ? { ...a, correct: true } : a);
+  assert.equal(sweptGrade(flipped, 7, CBC_POOL), 5);
+});
+
+test('a child who gets two of the first six right keeps the full sweep of their grade', () => {
+  const asked = [];
+  while (asked.length < STEP_OPENING) {
+    const q = selectQuestion(asked, 7, CBC_POOL);
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, correct: asked.length < 2 });
+  }
+  assert.equal(sweptGrade(asked, 7, CBC_POOL), 7);
+});
+
+test('no placement above the highest grade answered right', () => {
+  const row = (id, grade, correct, extra) => ({ id, grade, strand: 'Numbers', unit: 'x', correct, ...extra });
+  const asked = [row('a', 9, false), row('b', 7, true, { probeFor: 'y' })];
+  assert.ok(computePlacement(asked, 9, CBC_POOL) <= 7);
 });

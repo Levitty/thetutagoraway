@@ -793,7 +793,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     setFeedback(correct ? 'correct' : 'incorrect');
 
     // A wrong answer is re-asked first; otherwise placement.js decides what
-    // comes next — finish sweeping the declared grade across every strand, then
+    // comes next — sweep the declared grade, or the one below if its opening fails, then
     // step down a grade at a time until one clears.
     const pool = diagPool();
     const declared = progress.declaredGrade;
