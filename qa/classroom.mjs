@@ -35,6 +35,7 @@
 // ============================================================================
 import { SKILLS, getPrerequisiteChain, getPostRequisiteChain, getPostRequisites } from '../src/ai-tutor/knowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
+import { freshProblem } from '../src/ai-tutor/fresh.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { propagateCredit, withdrawMiss, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 import { getRecommendedPath } from '../src/ai-tutor/adaptiveEngine.js';
@@ -413,11 +414,12 @@ function runChild(child) {
       if (!ok) fail('drills', child, x.id, null, `Grade ${G(x.id)} fluency drill for a ${child.kind} child at Grade ${anchor}`);
     }
     if (process.env.QA_TRACE === `${child.grade}${child.kind}`) console.error(`sitting ${s + 1}: ` + path.slice(0, 3).map(x => `${x.id}(${x.type}${progress.skills[x.id]?.mastered ? ',mastered' : ''})`).join(', '));
-    const sitting = { seen: new Set(), last: null };
+    // served: the app's own sitting memory (F14); seen: the check's own record.
+    const sitting = { seen: new Set(), served: new Set(), last: null };
     for (const step of path.slice(0, 3)) {
       let right = 0;
       for (let q = 0; q < 8; q++) {
-        const p = generateProblem(step.id, { kp: Math.min(q >> 2, 3) });
+        const p = freshProblem(() => generateProblem(step.id, { lesson: true, kp: Math.min(q >> 2, 3) }), sitting.served);
         inspect(child, step.id, p, sitting);
         const ok = answers(child, step.id, p);
         right += ok;

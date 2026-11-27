@@ -970,6 +970,11 @@ export function buildCompoundInterest() {
     { P: 10000, r: 10, n: 2 }, { P: 20000, r: 10, n: 2 }, { P: 5000, r: 10, n: 3 },
     { P: 10000, r: 10, n: 3 }, { P: 8000, r: 5, n: 2 }, { P: 40000, r: 5, n: 2 },
     { P: 2500, r: 20, n: 2 }, { P: 5000, r: 20, n: 2 },
+    // More amounts so a sitting does not repeat (F14); every year's interest is whole shillings.
+    { P: 4000, r: 10, n: 2 }, { P: 30000, r: 10, n: 2 }, { P: 50000, r: 10, n: 2 },
+    { P: 1000, r: 10, n: 3 }, { P: 2000, r: 10, n: 3 }, { P: 6000, r: 5, n: 2 },
+    { P: 12000, r: 5, n: 2 }, { P: 20000, r: 5, n: 2 }, { P: 10000, r: 20, n: 2 },
+    { P: 15000, r: 20, n: 2 },
   ]);
   const { P, r, n } = combo;
   const years = [];

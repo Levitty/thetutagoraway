@@ -22,6 +22,7 @@ import { questionHeadingClass } from './questionHeading.js';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
 import { computeSteps, diagnoseError, genericNudge, hintRungs } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
+import { freshProblem } from './fresh.js';
 import { dueRechecks, shouldServeRecheck, pickRecheck } from '../learner/recheck.js';
 import { openForLearner } from './assignments.js';
 import { SchoolHome } from '../school/SchoolHome.jsx';
@@ -236,6 +237,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   // evidence log, and how many this lesson has served. Best effort: no rows, no re-checks, practice unchanged.
   const dueRecheckRef = useRef([]);
   const recheckServedRef = useRef([]);
+  // The questions shown in this sitting (F14); a new lesson starts a new sitting.
+  const sittingSeenRef = useRef(new Set());
   useEffect(() => {
     dueRecheckRef.current = [];
     if (!userId || guest || !subjectId) return undefined;
@@ -906,8 +909,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // Now and then a special question: a Kenyan word problem with a bar model,
     // a step-marked question (Grades 7-9), or reasoning (spot the mistake,
     // always/sometimes/never) once the child has this skill right twice.
-    const special = youngUI ? null : specialItemFor(skillId, { correctSoFar: progress.skills[skillId]?.correct || 0 });
-    const raw = special || generateProblem(skillId, { level, kp: kpIndexRef.current, lesson: true, correctSoFar: progress.skills[skillId]?.correct || 0, young: youngUI });
+    // Never the same question twice in one sitting (F14): draw again if shown.
+    const raw = freshProblem(() => (youngUI ? null : specialItemFor(skillId, { correctSoFar: progress.skills[skillId]?.correct || 0 }))
+      || generateProblem(skillId, { level, kp: kpIndexRef.current, lesson: true, correctSoFar: progress.skills[skillId]?.correct || 0, young: youngUI }), sittingSeenRef.current);
     const p = youngUI ? raw : maybeChoices(raw);
     setStruckChoices([]);
     scaffoldableRef.current = !young && !!completionPlan(p, SUPPORT.FULL);
@@ -921,6 +925,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // while the paywall is off, so this changes nothing until launch.
     if (onPaywall && !canPractice(subscription, progress)) { onPaywall(); return; }
     setActiveSkill(skillId);
+    sittingSeenRef.current = new Set();
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setInterleave(null);
     interleaveCountRef.current = 0;
@@ -1242,11 +1247,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
       recheckServedRef.current = [...recheckServedRef.current, rc.key];
       // Written under the skill being re-checked: the curriculum code when that is the key, else no code (the HOREB id is the key).
       setInterleave({ skillId, name: SKILLS[skillId]?.name || rc.label, recheck: true, cskill: rc.key === skillId ? undefined : rc.key });
-      setProblem(ownChoicesOnly(generateProblem(skillId)));
+      setProblem(ownChoicesOnly(freshProblem(() => generateProblem(skillId), sittingSeenRef.current)));
     } else if (due) {
       interleaveCountRef.current += 1;
       setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
-      setProblem(ownChoicesOnly(generateProblem(due.id)));
+      setProblem(ownChoicesOnly(freshProblem(() => generateProblem(due.id), sittingSeenRef.current)));
     } else {
       setInterleave(null);
       setProblem(serveLessonProblem(activeSkill, modalityLevel));
@@ -1271,7 +1276,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     if (problems.length === 0) return;
     setReviewProblems(problems);
     setReviewIndex(0);
-    setProblem(ownChoicesOnly(generateProblem(problems[0])));
+    sittingSeenRef.current = new Set();
+    setProblem(ownChoicesOnly(freshProblem(() => generateProblem(problems[0]), sittingSeenRef.current)));
     setAnswer('');
     setFeedback(null);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
@@ -1319,7 +1325,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
       if (reviewIndex < reviewProblems.length - 1) {
         const next = reviewIndex + 1;
         setReviewIndex(next);
-        setProblem(ownChoicesOnly(generateProblem(reviewProblems[next])));
+        setProblem(ownChoicesOnly(freshProblem(() => generateProblem(reviewProblems[next]), sittingSeenRef.current)));
         setAnswer('');
         setFeedback(null);
         setVisualAnswer(null);

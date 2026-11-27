@@ -157,10 +157,34 @@ export function buildCongruenceTest() {
     { desc: 'two angles and the side between them match', test: 'ASA', trap: null },
     { desc: 'both are right-angled, with equal hypotenuses and one other pair of equal sides', test: 'RHS', trap: ['SAS', 'with a right angle, hypotenuse and a side, the test has its own name'] },
   ];
-  const c = pick(cases);
+  // Half the time the same four tests are given as two named triangles with
+  // their measurements, so a sitting has many different questions (F14).
+  const [A, B, C] = pick([['A', 'B', 'C'], ['D', 'E', 'F'], ['K', 'L', 'M'], ['X', 'Y', 'Z']]);
+  const [P, Q, R] = pick([['P', 'Q', 'R'], ['L', 'M', 'N'], ['S', 'T', 'U']].filter(t => !t.includes(A) && !t.includes(B) && !t.includes(C)));
+  const pair = (x, y, v, u) => `${x} = ${y} = ${v}${u}`;
+  const measured = () => {
+    const test = pick(['SSS', 'SAS', 'ASA', 'RHS']);
+    const named = `In triangles ${A}${B}${C} and ${P}${Q}${R}`;
+    if (test === 'SSS') {
+      const a = randInt(4, 9); let b = randInt(4, 9); while (b === a) b = randInt(4, 9);
+      let c = randInt(Math.abs(a - b) + 1, a + b - 1); while (c === a || c === b) c = randInt(Math.abs(a - b) + 1, a + b - 1);
+      return { test, desc: `${named}, ${pair(A + B, P + Q, a, ' cm')}, ${pair(B + C, Q + R, b, ' cm')} and ${pair(C + A, R + P, c, ' cm')}`, trap: null };
+    }
+    if (test === 'SAS') {
+      const a = randInt(4, 9), b = randInt(4, 9), t = pick([40, 50, 65, 70, 110, 120]);
+      return { test, desc: `${named}, ${pair(A + B, P + Q, a, ' cm')}, angle ${B} = angle ${Q} = ${t}° and ${pair(B + C, Q + R, b, ' cm')}`, trap: ['SSA', 'the angle must be INCLUDED — between the two sides — for this test'] };
+    }
+    if (test === 'ASA') {
+      const x = pick([35, 40, 50, 55, 60, 70]), y = pick([45, 65, 75, 80]), a = randInt(4, 9);
+      return { test, desc: `${named}, angle ${A} = angle ${P} = ${x}°, ${pair(A + B, P + Q, a, ' cm')} and angle ${B} = angle ${Q} = ${y}°`, trap: null };
+    }
+    const h = randInt(10, 15), l = randInt(5, h - 2);
+    return { test, desc: `${named}, angle ${C} = angle ${R} = 90°, the hypotenuses ${pair(A + B, P + Q, h, ' cm')} and ${pair(B + C, Q + R, l, ' cm')}`, trap: ['SAS', 'with a right angle, hypotenuse and a side, the test has its own name'] };
+  };
+  const c = Math.random() < 0.5 ? pick(cases) : measured();
   return {
     type: 'congruence-test', instruction: 'Answer with the test name (SSS, SAS, ASA or RHS).',
-    question: `Two triangles are such that ${c.desc}. Which congruence test proves they are congruent?`,
+    question: c.desc.startsWith('In triangles') ? `${c.desc}. Which congruence test proves they are congruent?` : `Two triangles are such that ${c.desc}. Which congruence test proves they are congruent?`,
     answer: c.test, accepts: accepts(c.test),
     hints: hintLadder('The four tests are SSS, SAS, ASA and RHS.',
       'Match what is given — Sides and Angles, in the order they appear.',
